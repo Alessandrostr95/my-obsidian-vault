@@ -1,0 +1,113 @@
+{
+  "main": {
+    "id": "17f39c9a9995d626",
+    "type": "split",
+    "children": [
+      {
+        "id": "f620512664b957d7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "AGT/5 - Revenue-Maximizing Auctions.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6e2486be0bbaf067",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c35371ffd62b05e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31832b411d1e8af5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "5f24f734f8ac04f1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 253
+  },
+  "right": {
+    "id": "cd71f91ddb1a2186",
+    "type": "split",
+    "children": [
+      {
+        "id": "cef09804f6e6b77d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "71c66af03272cefd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AGT/5 - Revenue-Maximizing Auctions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4a27bf7dd538ee7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AGT/5 - Revenue-Maximizing Auctions.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "f620512664b957d7",
+  "lastOpenFiles": [
+    "AGT/5 - Revenue-Maximizing Auctions.md",
+    "AGT/0 - Algorithmic game theory.md",
+    "AGT/4 -  Knapsack Auctions.md",
+    "AGT/3 - Myerson’s Lemma.md",
+    "AR/1 - Erdos-Renyi Random Graph.md",
+    "Senza nome.md",
+    "AR/0 -Analisi di reti.md",
+    "AR/13 - Sistemi di voto - Part 1.md",
+    "AR/14 - Sistemi di voto - Part 2.md",
+    "AR/9 - Processi di diffusione - Part 1.md"
+  ]
+}
