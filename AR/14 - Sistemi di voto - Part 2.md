@@ -1,72 +1,47 @@
-Sistemi di Voto Posizionali
-===========================
+# Sistemi di Voto Posizionali
 
-Supponiamo che i voti individuali siano espressi sotto forma di
-[ranking]{.underline} $(r_1, ..., r_k) \in \Pi(\left[ n \right])^k$. Una
-classe diversa di sistemi di voto cerca di produrre un ranking di gruppo
-$r$ [direttamente]{.underline} dalle classifiche individuali
-$r_1, ..., r_k$, piuttosto che costruire $r$ da confronti tra coppie di
-alternative.\
-In un sistema di voto **posizionale** a ciascun ranking $r_h$ viene
-assegnata una **funzione peso** $w_h$ la quale associa un valore
-numerico a ciascuna alternativa [dipendentemente]{.underline} dalla sua
-posizione nel ranking $r_h$. Tale funzione $w_h$ per essere sensata è
-tipicamente decrescente, ovvero se un\'alternativa $a$ sta in una
-posizione bassa (tra i primi posti) rispetto a $r_h$ avrà un peso
-$w_h(a)$ alto, viceversa se $a$ sta verso gli ultimi posti allora
-$w_h(a)$ assumerà un valore più basso.\
-Un esempio di funzione peso $w_h$ per il ranking
-$r_h = \langle a_{h1}, ..., a_{hn} \rangle$ è la seguente $$
-  w_h(a_{hi}) = \frac{1}{i} \;\; \forall i \in \left[ n \right]
-  $$
+Supponiamo che i voti individuali siano espressi sotto forma di <u>ranking</u> $(r_1, ..., r_k) \in \Pi(\left[ n \right])^k$.
 
-Una volta associata una funzione peso ad ogni ranking si calcola il
-**peso collettivo** di un\'alternativa $a$ semplicemente sommando i pesi
-dei seingoli rankingk, ovvero $$
-  w(a) = \sum_{h = 1}^{k} w_h(a)
-  $$ Infine le alternative vengono quindi ordinate in base al loro peso
-totale, e in base ad esse definito un ranking collettibo $r$.
+Una classe diversa di sistemi di voto cerca di produrre un ranking di gruppo $r$ **direttamente** dalle classifiche individuali $r_1, ..., r_k$, piuttosto che costruire $r$ da confronti tra coppie di alternative.
 
-Il **Borda Count** è un particolare sistema di *voto posizionale* nel
-quale per ogni votante $h \in \left[ k \right]$ la funzione di peso
-associata al ranking $r_h$ è definita come segue $$
-  \rho_h(a_{hi}) = n - i \;\;\; \forall i \in \left[ n \right]
-  $$
+In un sistema di voto **posizionale** a ciascun ranking $r_h$ viene assegnata una **funzione peso** $w_h$ la quale associa un valore numerico a ciascuna alternativa **dipendentemente** dalla sua posizione nel ranking $r_h$.
 
-Problema dell ex aequo
-----------------------
+Tale funzione $w_h$ per essere sensata è tipicamente decrescente, ovvero se un'alternativa $a$ sta in una posizione bassa (tra i primi posti) rispetto a $r_h$ avrà un peso $w_h(a)$ alto, viceversa se $a$ sta verso gli ultimi posti allora $w_h(a)$ assumerà un valore più basso.
 
-Anche nei sistemi posizionali si manigesta il *paradosso di Condorcet*
-sotto forma di **ex aequo** (pareggio).
+Un esempio di funzione peso $w_h$ per il ranking $r_h = \langle a_{h1}, ..., a_{hn} \rangle$ è la seguente
+$$w_h(a_{hi}) = \frac{1}{i} \;\; \forall i \in \left[ n \right]$$
 
-Consideriamo ancora una volta l\'esempio dei tre amici che devono andare
-in campeggio, visto nella [lezione precedente](./13.html). Le tre
-classifiche erano
+Una volta associata una funzione peso ad ogni ranking si calcola il **peso collettivo** di un\'alternativa $a$ semplicemente sommando i pesi dei singoli ranking, ovvero
+$$w(a) = \sum_{h = 1}^{k} w_h(a)$$
+Infine le alternative vengono quindi ordinate in base al loro peso totale, e in base ad esse definito un ranking collettibo $r$.
 
--   `A`: $\langle$🍫, 🍒, 🍯$\rangle$.
--   `B`: $\langle$🍒, 🍯, 🍫$\rangle$.
--   `C`: $\langle$🍯, 🍫, 🍒$\rangle$.
+Il **Borda Count** è un particolare sistema di *voto posizionale* nel quale per ogni votante $h \in \left[ k \right]$ la funzione di peso associata al ranking $r_h$ è definita come segue
+$$\rho_h(a_{hi}) = n - i \;\;\; \forall i \in \left[ n \right]$$
+
+## Problema dell ex aequo
+Anche nei sistemi posizionali si manigesta il *paradosso di Condorcet* sotto forma di **ex aequo** (pareggio).
+
+Consideriamo ancora una volta l'[[13 - Sistemi di voto - Part 1#Sistema di Voto a Maggioranza|esempio dei tre amici]] che devono andare in campeggio.
+Le tre classifiche erano
+- `A`: $\langle$🍫, 🍒, 🍯$\rangle$.
+- `B`: $\langle$🍒, 🍯, 🍫$\rangle$.
+- `C`: $\langle$🍯, 🍫, 🍒$\rangle$.
 
 Applichiamo ora il Borda Count, ottendo le seguenti funzioni peso
-\\begin{array}{ccc} ρ~A~(🍫) = 2 & ρ~A~(🍒) = 1 & ρ~A~(🍯) = 0\
-ρ~B~(🍒) = 2 & ρ~B~(🍯) = 1 & ρ~B~(🍫) = 0\
-ρ~C~(🍯) = 2 & ρ~C~(🍫) = 1 & ρ~C~(🍒) = 0 \\end{array}
+- $\rho_A$(🍫) = 2; $\rho_A$(🍒) = 1; $\rho_A$(🍯) = 0
+- $\rho_B$(🍒) = 2; $\rho_B$(🍯) = 1; $\rho_B$(🍫) = 0
+- $\rho_C$(🍯) = 2; $\rho_C$(🍫) = 1; $\rho_C$(🍒) = 0
 
-Alla fine otteremo un pareggio tra i pesi finali $$
-   \rho(🍫) = \rho(🍒) = \rho(🍯) = 3
-   $$ Perciò è necessario supporre che se due alternative ricevono lo
-stesso peso totale, allora viene utilizzato un sistema di **spareggio**
-organizzato in anticipo per decidere quale di queste due alternative
-posizionare di fronte all\'altra.
+Alla fine otteremo un pareggio tra i pesi finali
+$$\rho(🍫) = \rho(🍒) = \rho(🍯) = 3$$
+Perciò è necessario supporre che se due alternative ricevono lo stesso peso totale, allora viene utilizzato un sistema di **spareggio** organizzato in anticipo per decidere quale di queste due alternative posizionare di fronte all'altra.
 
-Rilevanza delle Alternative Irrilevanti
----------------------------------------
+## Rilevanza delle Alternative Irrilevanti
+Consideriamo una rassegna cinematografica, in cui una giuria composta da cinque critici `A`, `B`, `C`, `D`, `E` deve eleggere un vincitore tra i
+film *"Via col Vento"** (alternativa `VV`) e *"Il Padrino"* (alternativa `IP`).
 
-Consideriamo una rassegna cinematografica, in cui una giuria composta da
-cinque critici `A`, `B`, `C`, `D`, `E` deve eleggere un vincitore tra i
-film *\"Via col Vento\"* (alternativa `VV`) e *\"Il Padrino\"*
-(alternativa `IP`). Tre guidici su 5 ritengono che `VV` sia il film che
-debba vincere. Le classifiche riultano quindi essere
+Tre guidici su 5 ritengono che `VV` sia il film che debba vincere.
+Le classifiche riultano quindi essere
 
   Giudici   1° posto          2° posto
   --------- ----------------- -----------------
