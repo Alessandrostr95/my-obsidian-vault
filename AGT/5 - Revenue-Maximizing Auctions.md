@@ -141,13 +141,19 @@ $$\mathbb{E}_{v_i \sim F_i} \left[ p_i(\mathbf{v}) \right] = \int_0^{v_{\max}} \
 ### Step 4
 Definiamo la **valutazione virtuale** (**virtual valuation**) $\varphi_i(v_i)$ del player $i$ con valutazione $v_i \sim F_i$
 $$\varphi_i(v_i) := v_i - \frac{1-F_i(v_i)}{f_i(v_i)}$$
-Notare che tale *valutazione virtuale* dipende **solamente** dalla valutazione privata del relativo player, e non da quelle degli altri.
+Notare che tale *valutazione virtuale* dipende **solamente** dalla valutazione privata del relativo player, e non da quelle degli altri. ^9edaa0
 
 Osservare che
 $$\mathbb{E}_{v_i \sim F_i} \left[ \varphi_i(v_i) \right] = \int_0^{v_{\max}} \varphi_i(z) \cdot f_i(z)\, dz $$
 perciò possiamo semplificare il tutto e dire che per ogni $i$ e per ogni $\mathbf{v}_{-i}$ **fissato** avremo che il pagamento medio di $i$ campionando la sua valutazione privata $v_i \sim F_i$ sarà
 
 $$\mathbb{E}_{v_i \sim F_i} \left[ p_i(\mathbf{v}) \right] = \int_0^{v_{\max}} \varphi_i(z) \cdot x_i(z,\mathbf{b}_{-i}) \cdot f_i(z)\, dz = \mathbb{E}_{v_i \sim F_i} \left[ \varphi_i(v_i) \cdot x_i(\mathbf{v}) \right]$$ ^2b6eca
+
+#### Esempio
+Supponiamo che $v_i \sim U\left[ 0,1 \right]$.
+Avremo quindi che $F_i(z) = z$ e $f_i(z) = F'_i(z) = 1$.
+Perciò $$\varphi_i(z) = z - \frac{1-z}{1} = 2z - 1$$ per ogni $z \in \left[ 0, v_{\max} \right]$.
+Osserviamo inoltre che $\varphi_i(z) \in \left[ -1, 1 \right]$.
 
 #### Interpretazione della valutazione virtuale
 La *valutazione virtuale* gioca un ruolo importante nella progettazione di aste bayesiane ottimali.
@@ -181,11 +187,68 @@ $$\mathbb{E}_{\mathbf{v}} \left[ \mathbf{p}(\mathbf{v}) \right] = \mathbb{E}_{\m
 Osserviamo che nella formula appena trovata, se rimovessimo la funzione $\Phi$ ci ritroveremmo con il **social-surplus atteso**, ovvero
 $$\text{EXPECTED SURPLUS} = \mathbb{E}_{\mathbf{v}}\left[\sum_{i=1}^{n} v_i \cdot x_i(\mathbf{v})\right] $$
 perciò (analogamente a prima) ci riferiremo alla quantità $\sum_{i=1}^{n} \varphi_i(v_i) \cdot x_i(\mathbf{v})$ con il termine **virtual surplus**
-$$\text{VIRTUAL SURPLUS} = \sum_{i=1}^{n} \varphi_i(v_i) \cdot x_i(\mathbf{v})$$
+
+$$\text{VIRTUAL SURPLUS} = \sum_{i=1}^{n} \varphi_i(v_i) \cdot x_i(\mathbf{v})$$ ^7b8481
 
 In conclusione possiamo dire che massimizzare i guadagni attesi (<u>nello spazio dei meccanismi DSIC</u>) equivale a massimizzare il virtual surplus atteso
 
 > **EXPECTED REVENUE = EXPECTED VIRTUAL WELFARE**
 
+^c86ff2
+
 --------------------
-## Bayesian Optimal Auctions
+# Bayesian Optimal Auctions
+Il [[#^c86ff2|risultato]] appena trovato è molto comodo, in quanto ci consente di trascurare i pagamenti e concentrarci solamente su un problema di ottimizzazione che riguarda solamente la regola di allocazione.
+
+## Maximizing Expected Virtual Welfare
+Prima di cercare di caratterizzare l'asta *"ottima"* (in termini di ricompense) per un <u>qualsiasi</u> problema a singolo parametro, partiamo da casi più semplici e restrittivi.
+
+Innanzitutto partiamo col considerare un'asta a singolo oggetto.
+Dopodiché, assumiamo che le valutazioni private siano **i.i.d**, ovvero $F_1 = F_2 = ... F_n = F$.
+
+Così facendo avremo anche che $f_1 = f_2 = ... = f_n = f$ e quindi $\varphi_1 = \varphi_2 = ... = \varphi_n = \varphi$.
+
+Indichiamo con $\mathbf{F}$ la distribuzione congiunta $F_1 \times ... \times F_n \equiv F^n$.
+
+In questo contesto e con queste assunzioni, come possiamo scegliere un $\mathbf{x}$ (DSIC) che massimizzi <u>in media</u> il [[#^7b8481|virtual surplus]]?
+
+$$\mathbf{x} = \arg \max_{(x_1,...,x_n) \in X} \; \mathbb{E}_{\mathbf{v} \sim \mathbf{F}} \left[ \sum_{i=1}^{n} \varphi(v_i) x_i(\mathbf{v}) \right]$$ ^8ee749
+
+Purtroppo non abbiamo controllo sulla distribuzione $\mathbf{F}$, perciò su $\mathbf{v}$ e $\varphi$.
+
+Il modo più semplice è quello di massimizzare il *virtual surplus* separatamente per ogni input $\mathbf{v}$ (*pointwise*).
+
+Nell'asta a singolo oggetto abbiamo che $\mathbf{x}(\mathbf{v}) \in \{0,1\}^n$ con la costrizione che *al più* una sola entry deve essere $1$.
+Perciò la regola di allocazione $\mathbf{x}$ che massimizza il *virtual surplus* equivale semplicemente alla regola che elegge come vincitore il player $i$ con **[[#^9edaa0|valutazione virtuale]]** $\varphi(v_i)$, massima.
+
+> Ricordiamo che la valutazione virtuale può anche assumere valori **negativi** ([[#Esempio|vedi esempio]]).
+> Perciò, nel caso in cui tutti i $\varphi(v_i)$ siano $< 0$, la regola $\mathbf{x}$ che massimizza il *virtual surplus* è quella che non dichiara nessun vincitore.
+
+Trovare un $\mathbf{x}$ che massimizza il *[[#^7b8481|virtual surplus]]* per separatamente per ogni $\mathbf{v}$ definisce una regola di allocazione che lo massimizza anche in [[#^8ee749|media]] tra tutte le possibili regole di allocazione possibili in $X$ (monotone o no).
+
+Noi però vorremmo anche che tale regola di allocazione $\mathbf{x}$ che massimizza il *virtual surplus* abbia una *strategia dominante*.
+Per il [[4 -  Knapsack Auctions#^ec0935|principio di rivelazione]] sappiamo che possiamo estendere $\mathbf{x}$ ad essere [[2 - Mechanism Design Basics#^a63f67|DSIC]], e per il [[3 - Myerson’s Lemma#Theorem Mayerson's Lemma|Mayerson's Lemma]] ciò equivale a dire che $\mathbf{x}$ è [[3 - Myerson’s Lemma#^3c29c4|monotona]].
+In fine sappiamo che se $\mathbf{x}$ è monotona allora tale meccanismo che massimizza il *virtual surplus* (in media) massimizzerebbe anche i *guadagni medi* (vedi [[#Step 6]]).
+
+La risposta a tale domanda chiave dipende dalla distribuzione $F$.
+Infatti si può dimostrare che se $F$ è tale che la [[#^9edaa0|valutazione virtuale]] $\varphi$ è **strettamente crescente**, allora la regola di allocazione $\mathbf{x}$ che abbiamo trovato che massimizza il *virtual surplus* allora è **monotona** (e quindi massimizza anche il *guadagno atteso*).
+
+> **Def.** Una distribuzione $F$ è **regolare** se la corrispondente [[#^9edaa0|valutazione virtuale]] $v - \frac{1-F(v)}{f(v)}$ è **strettamente crescente**.
+
+Per esempio la distribuzione uniformo vista nell'[[#Esempio]] è *regolre*.
+Anche altre distribuzioni lo sono, come per esempio quella [esponenziale](https://en.wikipedia.org/wiki/Exponential_distribution) o quella [log-normale](https://en.wikipedia.org/wiki/Log-normal_distribution).
+
+Perciò possiamo dire che nell'asta a singolo oggetto con distribuzioni i.i.d. e con l'assunzione di *regolarità* delle distribuzioni, la regola di allocazione $\mathbf{x}$ che elegge vincitore il partecipante con massima (<u>non negativa</u>) *valutazione virtuale* $\varphi(v_i)$ (se esiste), è *monotona* e quindi induce in un'asta *"ottima"* che **massimizza il social-surplus e il guadagno atteso**.
+
+Osservare inoltre che dato che tutti i partecipanti condividono la stesso funzione di *valutazione virtuale* $\varphi$, e dato che stiamo assumendo che $F$ è regolare, allora il player con $\varphi(v_i)$ più alto equivale al player con valutazione privata $v_i$ più alta.
+
+Notare che l'unica differenza tra la [[2 - Mechanism Design Basics#Vickrey's Second-Price Auctions|Vickrey's second-price auctions]] che elegge il partecipante con offerta (o valutazione dato che è DSIC) maggiore e la regola $\mathbf{x}$ appena descritta che elegge il partecipante con *valutazione virtuale* $\varphi$ massima, è che nella seconda possono capitare casi in cui non viene eletto nessun vincitore (ovvero quando $\max \varphi(v_i) < 0$).
+
+In poche parole la regola $\mathbf{x}$ appena trovata equivale sostanzialmente alla [[2 - Mechanism Design Basics#Vickrey's Second-Price Auctions|Vickrey's second-price auctions]] con **prezzo minimo** $r = \varphi^{-1}(0)$.
+Infatti se la valutazione massima $v^* \geq r = \varphi^{-1}(0)$ allora avremo una *valutazione virtuale*
+$$\varphi(v^*) \geq \varphi(r) = \varphi(\varphi^{-1}(0)) = 0 \implies \varphi(v^*) \geq 0$$
+e quindi esiste un vincitore.
+
+In maniera pià generale vedremo che in un qualsiasi ambiente a singolo parametro con distribuzioni $F_1,...,F_n$, se tali distribuzioni sono **tutte regolari** allora la regola di allocazione $\mathbf{x}$ che massimizza (dipendentemente da $\mathbf{v}$) il [[#^7b8481|surplus virtuale]] è **monotona**, perciò avremo trovato un meccanismo DSIC e che massimizza in valore atteso i guadagni.
+
+In questo senso possiamo dire di aver risolto le aste Bayesiane per ogni ambiente a singolo parametro a patto di avere distribuzioni regolari.

@@ -1,5 +1,4 @@
-d revenue of an auction, and
-we should be pleased# Myerson’s Lemma
+# Myerson’s Lemma
 Negli [[2 - Mechanism Design Basics|appunti precedenti]] è stata introdotta la [[2 - Mechanism Design Basics#Vickrey's Second-Price Auctions|Vickrey's Second-Price Auctions]] e provato che essa garantisce le [[2 - Mechanism Design Basics#^e83fd1|tre proprietà desiderabili]].
 
 Per estendere la garanzia di queste proprietà desiderabili ad aste più complesse, come la [[2 - Mechanism Design Basics#Sponsored Search Auctions|sponsored search auctions]], abbiamo introdotto [[2 - Mechanism Design Basics#Our Design Approach|l'approccio da adottare]].

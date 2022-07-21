@@ -4,5 +4,6 @@
 - [[3 - Myerson’s Lemma]]
 - [[4 -  Knapsack Auctions]]
 - [[5 - Revenue-Maximizing Auctions]]
+- [[6 - Simple Near-Optimal Auctions]]
 - Problem sets:
 	- [[Exercise Set 2]]
