@@ -4,14 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "f620512664b957d7",
+        "id": "cca6176b6a247b0d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diff-view",
           "state": {
-            "file": "AGT/5 - Revenue-Maximizing Auctions.md",
-            "mode": "source",
-            "source": false
+            "file": ".obsidian/plugins/obsidian-git/main.js",
+            "staged": false
           }
         }
       }
@@ -53,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253
+    "width": 327.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -89,25 +88,33 @@
                 "file": "AGT/5 - Revenue-Maximizing Auctions.md"
               }
             }
+          },
+          {
+            "id": "5ea6e3d7a465e6a1",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 272.5
   },
-  "active": "f620512664b957d7",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "AGT/5 - Revenue-Maximizing Auctions.md",
-    "AGT/0 - Algorithmic game theory.md",
+    "AGT/6 - Simple Near-Optimal Auctions.md",
+    "AGT/2 - Mechanism Design Basics.md",
     "AGT/4 -  Knapsack Auctions.md",
     "AGT/3 - Myerson’s Lemma.md",
-    "AR/1 - Erdos-Renyi Random Graph.md",
-    "Senza nome.md",
-    "AR/0 -Analisi di reti.md",
-    "AR/13 - Sistemi di voto - Part 1.md",
+    "AGT/0 - Algorithmic game theory.md",
     "AR/14 - Sistemi di voto - Part 2.md",
-    "AR/9 - Processi di diffusione - Part 1.md"
+    "AR/13 - Sistemi di voto - Part 1.md",
+    "AR/15.md",
+    "AR/1 - Erdos-Renyi Random Graph.md"
   ]
 }

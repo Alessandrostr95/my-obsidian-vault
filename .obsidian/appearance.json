@@ -1,5 +1,6 @@
 {
   "theme": "moonstone",
   "translucency": false,
-  "cssTheme": ""
+  "cssTheme": "",
+  "interfaceFontFamily": "TeX Gyre Termes"
 }
