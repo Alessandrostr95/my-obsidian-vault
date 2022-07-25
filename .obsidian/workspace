@@ -7,8 +7,11 @@
         "id": "64c964aaa9a62e8c",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "diff-view",
+          "state": {
+            "file": ".obsidian/workspace",
+            "staged": false
+          }
         }
       }
     ],
@@ -98,7 +101,7 @@
     "direction": "horizontal",
     "width": 272.5
   },
-  "active": "64c964aaa9a62e8c",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "AGT/5 - Revenue-Maximizing Auctions.md",
     "AGT/6 - Simple Near-Optimal Auctions.md",
