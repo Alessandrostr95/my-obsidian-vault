@@ -1,77 +1,50 @@
-Dimostrazione Teorema di Arrow
-==============================
+# Dimostrazione Teorema di Arrow
+Riassumendo, il teorema di Arrow ci diceva che **per ogni** insieme $\left[ k \right]$ di votanti esiste un $j \in \left[ k \right]$ tale che **indipendentemente** dalle $n > 2$ alternative avremo che l'unico sistema di voto che rispetta `U` e `IIA` condurrà ad un voto collettivo $r$ esattamente uguale al voto individuale $r_j$.
+In altri termini, l'unico sistema di voto che rispetta sia `U` che `IIA` è la "dittatura".
 
-Riassumendo, il teorema di Arrow ci diceva che [per ogni]{.underline}
-insieme $\left[ k \right]$ di votanti esiste un $j \in \left[ k \right]$
-tale che [indipendentemente]{.underline} dalle $n > 2$ alternative
-avremo che l\'unico sistema di voto che rispetta `U` e `IIA` condurrà ad
-un voto collettivo $r$ esattamente uguale al voto individuale $r_j$. In
-altri termini, l\'unico sistema di voto che rispetta sia `U` che `IIA` è
-la \"dittatura\".\
-Nella [lezione precedente](./14.html) è stata dimostrata la prima delle
-tre parti della dimostrazione del teorema. In questa prima fase è stato
-dimostrato che se un\'alternatica $x$ è **polarizzante** per un profilo
-$P = \langle r_1, ..., r_k \rangle$ allora o $\rho(x) = 0$ oppure
-$rho(x) = n-1$ (ovvero o $x$ si trova all\'ultimo posto nel voto
-collettivo $r$, oppure all\'utlimo).\
+Nella [[14 - Sistemi di voto - Part 2|lezione precedente]] è stata dimostrata la prima delle tre parti della dimostrazione del teorema.
+In questa prima fase è stato dimostrato che se un'alternatica $x$ è **polarizzante** per un profilo $P = \langle r_1, ..., r_k \rangle$ allora o $\rho(x) = 0$ oppure
+$\rho(x) = n-1$ (ovvero o $x$ si trova all'ultimo posto nel voto collettivo $r$, oppure all'utlimo).
 
-Parte 2 dimostrazione
----------------------
+## Parte 2 dimostrazione
+Definiamo una successione di $k+1$ profili $P^{(0)}, P^{(1)}, P^{(k)} \in \Pi(\left[ n \right])^k$, dove in
+ciascuno dei quali una stessa alternativa $x \in \left[ n \right]$ è [[14 - Sistemi di voto - Part 2#^f53418|polarizzante]].
+Tramite essi individueremo un *dittatore potenziale*.
 
-Definiamo una successione di $k+1$ profili
-$P^{(0)}, P^{(1)}, P^{(k)} \in \Pi(\left[ n \right])^k$, dove in
-ciascuno dei quali una stessa alternativa $x \in \left[ n \right]$ è
-[polarizzante]{.underline}. Tramite essi individueremo un *dittatore
-potenziale*.
+![](ar-lesson15-img1.png) ^49e899
 
-![](../images/ar-lesson15-img1.png){width="100%"}
+Consideriamo tali profili ordinati in modo tale che nel profilo $P^{(h)} = \langle r^h_1, ..., r^h_k \rangle$ l'alternativa $x$ è al primo posto nei primi $h$ ranking, ed ultima nei restainti (come in [[#^49e899|figura]]).
 
-Consideriamo tali profili ordinati in modo tale che nel profilo
-$P^{(h)} = \langle r^h_1, ..., r^h_k \rangle$ l\'alternativa $x$ è al
-primo posto nei primi $h$ ranking, ed ultima nei restainti (come in
-figura). Più precisamente $$
-   \rho^{(h)}_i(x) = \begin{cases}
-     n-1 &\forall i \leq h\\
-     0   &\forall i > h
-   \end{cases}
-   $$
+Più precisamente
+$$\rho^{(h)}_i(x) = \begin{cases}
+n-1 &\forall i \leq h\\
+0   &\forall i > h
+\end{cases}$$
 
-È facile osservare che i due profili $P^{(h-1)}$ e $P^{(h)}$
-differiscono l\'uno dall\'altro solo per il modo in cui l\'$h$-esimo
-votante giudica l\'alternativa $x$:
+È facile osservare che i due profili $P^{(h-1)}$ e $P^{(h)}$ differiscono l\'uno dall\'altro solo per il modo in cui l'$h$-esimo votante giudica l'alternativa $x$:
 
--   nel profilo $P^{(h-1)}$ il votante $h$ giudica $x$ **ultimo**,
-    ovvero $\rho^{(h-1)}_h(x) = 0$
--   nel profilo $P^{(h)}$ il votante $h$ giudica $x$ **primo**, ovvero
-    $\rho^{(h)}_h(x) = n-1$
+- nel profilo $P^{(h-1)}$ il votante $h$ giudica $x$ **ultimo**, ovvero $\rho^{(h-1)}_h(x) = 0$
+- nel profilo $P^{(h)}$ il votante $h$ giudica $x$ **primo**, ovvero $\rho^{(h)}_h(x) = n-1$
 
-![](../images/ar-lesson15-img2.png){width="100%"}
+![](ar-lesson15-img2.png)
 
-Dato che nel primo profilo tutti i votanti hanno $x$ in ultima
-posizione, mentre nell\'ultimo profilo hanno tutti $x$ in prima
-posizione, avremo per **principio di unanimità** `U` che $$
-   \rho^{(0)}(x) = 0\\
-   \rho^{(k)}(x) = n-1
-   $$
+Dato che nel primo profilo tutti i votanti hanno $x$ in ultima posizione, mentre nell'ultimo profilo hanno tutti $x$ in prima posizione, avremo per **principio di unanimità** `U` che
+$$\begin{align*}
+\rho^{(0)}(x) &= 0\\
+\rho^{(k)}(x) &= n-1
+\end{align*}$$
 
-Dato che dal profilo 0 al profilo $k$ l\'alternativa $x$ passa da essere
-all\'utlimo posto fino al primo, esisterà certamente un
-[primo]{.underline} profilo $j \in \left[ k \right]$ per il quale $x$
-non è più all\'ultimo posto. Ovvero, per ogni $h < j$ avremo che
-$\rho^{(h)}(x) = 0$ mentre nel profilo $j$ avremo $\rho^{(j)}(x) > 0$.\
-Inoltre, per quanto visto nella [prima parte della
-dimostrazione]{.underline}, dato che $x$ è polarizzante per $P^{(j)}$
-avremo che o $\rho^{(j)}(x) = 0$ o $\rho^{(j)}(x) = n-1$. Però visto che
-abbiamo definito $j$ in modo tale che $\rho^{(j)}(x) > 0$ allora
-necessariamente avremo che $\rho^{(j)}(x) = n-1$.\
-Notiamo che il votante $j$ ha un ruolo decisivo nel posizionare $x$
-nella graduatoria finale del profilo $P^{(j)}$, perché lo fa passare da
-essere all\'ultimo posto al primo. Perciò possiamo dire che il votante
-$j$ è il **dittatore potenziale**.
+Dato che dal profilo 0 al profilo $k$ l\'alternativa $x$ passa da essere all'utlimo posto fino al primo, esisterà certamente un **primo** profilo $j \in \left[ k \right]$ per il quale $x$ non è più all'ultimo posto.
+Ovvero, per ogni $h < j$ avremo che $\rho^{(h)}(x) = 0$ mentre nel profilo $j$ avremo $\rho^{(j)}(x) > 0$.
 
-Parte 3 dimostrazione
----------------------
+Inoltre, per quanto visto nella [[14 - Sistemi di voto - Part 2#Parte 1|prima parte della dimostrazione]], dato che $x$ è polarizzante per $P^{(j)}$ avremo che o $\rho^{(j)}(x) = 0$ o $\rho^{(j)}(x) = n-1$.
+Però visto che abbiamo definito $j$ in modo tale che $\rho^{(j)}(x) > 0$ allora necessariamente avremo che $\rho^{(j)}(x) = n-1$.
 
+Notiamo che il votante $j$ ha un ruolo decisivo nel posizionare $x$ nella graduatoria finale del profilo $P^{(j)}$, perché lo fa passare da essere all'ultimo posto al primo.
+Perciò possiamo dire che il votante $j$ è il **dittatore potenziale**.
+
+------------------------------
+## Parte 3 dimostrazione
 In questa ulitma parte dimostreremo che il dittatore potenziale $j$
 trovato nella seconda parte è effettivamente il dittatore del sistema di
 voto affidabile che rispetta `U` e `IIA`.\

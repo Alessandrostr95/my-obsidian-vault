@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "64c964aaa9a62e8c",
+        "id": "057f6ba9986a90ea",
         "type": "leaf",
         "state": {
-          "type": "diff-view",
-          "state": {
-            "file": ".obsidian/workspace",
-            "staged": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -103,15 +100,15 @@
   },
   "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "AGT/5 - Revenue-Maximizing Auctions.md",
+    "AR/0 -Analisi di reti.md",
+    "AR/15 - Sistemi di voto - Part 3.md",
+    "AR/14 - Sistemi di voto - Part 2.md",
     "AGT/6 - Simple Near-Optimal Auctions.md",
-    "AGT/4 -  Knapsack Auctions.md",
-    "AGT/Exercise/Exercise Set 2.md",
-    "AGT/3 - Myerson’s Lemma.md",
-    "AGT/2 - Mechanism Design Basics.md",
-    "APL/Senza nome 1.md",
     "AGT/0 - Algorithmic game theory.md",
     "root.md",
-    "AR/14 - Sistemi di voto - Part 2.md"
+    "AR/19.md",
+    "AR/18.md",
+    "AR/17.md",
+    "AR/16.md"
   ]
 }
