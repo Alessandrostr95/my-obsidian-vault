@@ -15,7 +15,7 @@ Introduciamo l'*environment* che sarà utile a dimostrare il *lemma di Myerson*.
 Abbiamo $n$ partecipanti ad un'asta, ognuno dei quali possiede una **valutazione privata** $v_i$ del valore che otterrebbe dalla vincita dell'asta.
 
 Sia $X$ l'insieme delle **soluzioni ammissibili**.
-Tale insieme $X$ è composto da vettori $n$-dimensionali $\underline{x} = (x_1, ..., x_n) \in \mathbb{R}^n$ che indica una sorta di *"ammontare"* dato al partecipante $i$-esimo. ^43b362
+Tale insieme $X$ è composto da vettori $n$-dimensionali $\underline{x} = (x_1, ..., x_n) \in \mathbb{R}^n$, dove $x_i$ indica una sorta di *"ammontare"* dato al partecipante $i$-esimo. ^43b362
 
 Per esempio, nell'asta a [[2 - Mechanism Design Basics#Single item auction|asta a signolo oggetto]] $X$ è formato da vettori di 0-1 con **al più** un 1, nella posizione corrispondente al vincitore.
 Per esempio, se abbiamo $n=6$ partecipanti e il vincitore dell'asta risulta essere il player $i = 4$ il corrispondente vettore in $X$ risulta essere $(0,0,0,1,0,0)$.

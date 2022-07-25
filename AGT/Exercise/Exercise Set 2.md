@@ -162,9 +162,108 @@ dove $\alpha_{k+1} = 0$ $\square$.
 
 --------------------------------
 ### Exercise 14
-Consider an arbitrary single-parameter environment, with feasible set $X$.
+Consider an arbitrary [[3 - Myerson’s Lemma#Single-Parameter Environments|single-parameter environment]], with feasible set $X$.
 The surplus-maximizing allocation rule is $\mathbf{x}(\mathbf{b}) = arg \max_{(x_1,...,x_n) \in X} \sum_{i=1}^{n}b_ix_i$.
 Prove that this allocation rule is monotone.
 *\[You should assume that ties are broken in a deterministic and consistent way, such as lexicographically.\]*
 
 #### Solution
+Assumiamo per assurdo che la regola di allocazione $\mathbf{x}(\mathbf{b}) = arg \max_{(x_1,...,x_n) \in X} \sum_{i=1}^{n}b_ix_i$ che massimizza il *surplus* sia **non monotona**.
+
+Perciò $\mathbf{x}$ è **non monotona** se esiste un $i$ tale che la funzione $x_i = x_i(z, \mathbf{b}_{-i})$ è **non non-decrescente**, ovvero tale che esistono due $z,y$ tali che $z < y$ e $x_i(z) > x_i(y)$.
+
+Se $\mathbf{x}(\mathbf{b})$ massimizza $\sum_{i=1}b_ix_i$ allora certamente massimizza $\mathbf{x}(c \cdot \mathbf{b})$ per ogni $c > 1$.
+Più precisamente avremo che $\mathbf{x}(c \cdot \mathbf{b}) = c \cdot \mathbf{x}(\mathbf{b})$.
+
+Se però $\mathbf{x}$ è non monotona allora esiste certamente un $\hat{c} > 1$ tale $x_i(\hat{c} \cdot b_i) < x_i(b_i)$.
+
+Consideriamo ora una $\mathbf{x^*}$ **monotona** totalmente simile ad $\mathbf{x}$ con la differenza che $x^*_i(\cdot)$ è **non decrescente**.
+
+Allora avremo che per un $\hat{c}$ sufficientemente grande
+$$\mathbf{x^*}(\hat{c} \cdot \mathbf{b}) > \mathbf{x}(\hat{c} \cdot \mathbf{b}) \implies \hat{c} \cdot \mathbf{x^*}(\mathbf{b}) > \hat{c} \cdot \mathbf{x}(\mathbf{b}) \implies \mathbf{x^*}(\mathbf{b}) > \mathbf{x}(\mathbf{b})$$
+ovvero $\mathbf{x}$ non massimizzava $\sum_{i=1}b_ix_i$ $\square$.
+
+-----------------
+### Exercise 15
+Continuing the previous exercise, restrict now to feasible sets $X$ that contain only $0$-$1$ vectors – that is, each bidder either wins or loses.
+We can thus identify each feasible outcome with a *"feasible set"* of bidders (the winners in that outcome).
+Assume further that the environment is *"downward closed"*, meaning that subsets of a feasible set are again feasible.
+
+Recall from lecture that [[3 - Myerson’s Lemma#^232507|Myerson’s payment formula]] dictates that a winning bidder pays its *"critical bid"* $\theta_i$ — the lowest bid at which it would continue to win.
+
+Prove that, when $S^*$ is the set of winning bidders and $i \in S^*$, $i$’s critical bid $\theta_i$'s equals the difference between:
+(i) the maximum surplus of a feasible set that excludes $i$ (you should assume there is at least one such set); and
+(ii) the surplus $\sum_{j \in S^*\setminus\{i\}} v_j$ of the bidders other than $i$ in the chosen outcome $S^*$.
+
+Also, is this dfference always **non-negative**? ^23a43f
+
+**Remark:** In the above sense, a winning bidder pays its *"externality"* — the surplus loss it imposes on others.
+
+#### Solution
+Dalla  [[3 - Myerson’s Lemma#^232507|formula dei pagamenti]] sappiamo che il pagamento di un player $i \in S$ sarà
+$$p_i(b_i) = \theta_i \cdot \left[ \text{salto in } \theta_i \right] = \theta_i$$
+o più in generale
+$$p_i(b_i, \mathbf{b}_{-i}) = \begin{cases}
+0 &b_i < \theta_i\\
+\theta_i &b_i \geq \theta_i
+\end{cases}$$
+
+Si vule dimostrare che
+$$p_i(b_i, \mathbf{b}_{-i}) = \theta_i = \left[ \max_{(x_1,...,x_n)}\sum_{j \neq i}v_j \cdot x_j(\mathbf{b}_{-i}) \right] - \sum_{j \in S^* \setminus \{i\}}v_j$$ ^fd6c21
+
+Osserviamo innanzitutto che tale differenza è sempre **[[#^23a43f|non negativa]]**.
+Infatti, supponiamo che nell'insieme delle soluzioni ammissibili $X$ ci siano vettori $\mathbf{x}$ con <u>al più</u> $k$ $1$.
+Allora nel primo elemento della sottrazione avremo le $k-1$ *valutazioni* più alte (esclusa $v_i$) mentre nel secondo elemento avremo semplicemente <u>al più</u> $k-1$ valutazioni qualasiasi (sempre esclusa $v_i$).
+Ciò garantisce sempre che $p_i \geq 0$.
+
+DA FINIRE...
+
+--------
+### Exercise 16
+Continuing the [[#Exercise 15|previous exercise]], consider a $0$-$1$ downward-closed single-parameter environment.
+
+Suppose you are given a *"black box"* that can compute the surplus-maximizing allocation rule $\mathbf{x}(\mathbf{b})$ for an arbitrary input $\mathbf{b}$.
+
+Explain how to compute the payments identified in the previous exercise by invoking this black box multiple times.
+
+#### Solution
+Indichiamo con $\phi$ tale *"black box"*.
+Avremo quindi che dando "in pasto" un qualsiasi $\mathbf{b}$ a $\phi$ 
+$$\mathbf{b} \; \xrightarrow{\text{input}} \; \phi \; \xrightarrow{\text{output}} \; \mathbf{x}(\mathbf{b}) = \arg \max_{(x_1,...,x_n)} \sum_{i=1}^{n} v_ix_i$$
+Per brevità indichiamo con $\phi(\mathbf{b})$ il nostro output.
+
+Dall'[[#^fd6c21|esercizio 15]] abbiamo quindi che data una **qualsiasi soluzione ammissibile** $\mathbf{x}(\mathbf{b}) \in X$, il relativo schema di pagamenti sarà
+$$p_i = \phi(\mathbf{b}_{-i}) - \mathbf{x}_{-i} \cdot \mathbf{v}_{-i} \;\; \square$$
+
+--------------
+### Exercise 17
+Review the Knapsack problem and what one learns about it in an undergraduate algorithms class.
+
+Specifically:
+(i) it is NP-hard;
+(ii) with integer values and/or item sizes, it can be solved in pseudopolynomial time via dynamic programming;
+(iii) a simple greedy algorithm gives a $\frac12$-approximation in near-linear time;
+(iv) rounding and dynamic programming gives a ($1 - \varepsilon$)-approximation in time polynomial in the number $n$ of items and in $\frac{1}{\varepsilon}$ .
+
+Refer to your favorite algorithms textbook or to the videos by the instructor on the course site.
+
+--------------------------
+### Exercise 18
+Prove that the Knapsack auction allocation rule induced by the greedy $\frac12$-[[4 -  Knapsack Auctions#^adfe61|approximation algorithm covered in lecture]] is monotone.
+
+#### Solution
+Sappiamo che i player sono ordinati nel seguente ordine
+$$\frac{b_1}{w_1} \geq ... \geq \frac{b_i}{w_i} \geq ... \geq \frac{b_n}{w_n}$$
+Ordinati in questa maniera, avremo come soluzione ammissibile il vettore
+$$\mathbf{x}(\mathbf{b}) = (\underbrace{1 \; 1 ... 1}_k \; \underbrace{0 \; 0 ... 0}_{n-k})$$
+Perciò, fissato un generico $i$ e un generico $\mathbf{b}_{-i}$ avremo che $\mathbf{x}$ è monotona, infatti
+$$x_i(b_i, \mathbf{b}_{-i}) = \begin{cases}
+0 &\text{se } b_i < w_i \cdot \frac{b_k}{w_k}\\
+1 &\text{se } b_i \geq w_i \cdot \frac{b_k}{w_k}
+\end{cases}$$
+
+-------------------------
+### Exercise 19
+The [[4 -  Knapsack Auctions#^ec0935|Revelation Principle]] states that direct-revelation DSIC mechanisms can simulate all other mechanisms in which bidders always have dominant strategies.
+Critique the Revelation Principle from a practical perspective.
+Name at least one situation in which you might prefer a non-direct-revelation DSIC mechanism over a direct-revelation one.

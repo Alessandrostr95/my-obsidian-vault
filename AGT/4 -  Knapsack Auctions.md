@@ -84,6 +84,8 @@ function greedy_knapsack(bids::Vector{Float64}, weights::Vector{Float64}, W::Flo
 end
 ```
 
+^adfe61
+
 Quello appena descritto è un algoritmo $\frac{1}{2}$-approssimante per il problema del Knapsack, ovvero garantisce che (nel caso peggiore) il risultato trovato è almeno la metà del valore del risultato ottimo.
 
 > **Theorem** Assumendo che le offerte sia sincere, ovvero che $b_i = v_i$ per ogni partecipante, allora il *social surplus* ottenuto tramite l'algoritmo greedy è *almeno* il 50% del *massimo social surplus*.
@@ -93,11 +95,11 @@ Quello appena descritto è un algoritmo $\frac{1}{2}$-approssimante per il probl
 Questo approccio greedy funziona anche meglio sotto certe assunzioni.
 Per esempio, se per ogni partecipante $i$ abbiamo che $w_i \leq \alpha W$, con $0 < \alpha \leq \frac12$, allora l'algoritmo garantisce un'approssimazione di $1-\alpha$ (anche omettendo il terzo punto).
 
-Si può dimostrare che massimizzare il social surplus induce in un algoritmo $\mathbf{x}$ [[3 - Myerson’s Lemma#^3c29c4|monotono]] (vedi [esercizio 14]), il quale a sua volta implica l'**esistenza** di uno schema di pagamento $\mathbf{p}$ tale che il meccanismo $(\mathbf{x},\mathbf{p})$ è DSIC.
+Si può dimostrare che massimizzare il social surplus induce in un algoritmo $\mathbf{x}$ [[3 - Myerson’s Lemma#^3c29c4|monotono]] (vedi [[Exercise Set 2#Exercise 14|esercizio 14]]), il quale a sua volta implica l'**esistenza** di uno schema di pagamento $\mathbf{p}$ tale che il meccanismo $(\mathbf{x},\mathbf{p})$ è DSIC.
 $$
 \text{exact surplus-maximization} \implies \text{DSIC/monotone "for free"}
 $$
-Cosa possiamo dire invece riguardo l'**approssimazione** del social surplus? Si può garantire la *monotonia*? (vedi [esercizio 18])
+Cosa possiamo dire invece riguardo l'**approssimazione** del social surplus? Si può garantire la *monotonia*? (vedi [[Exercise Set 2#Exercise 18|esercizio 18]])
 
 ## Black-Box Reductions
 Verrebbe da pensare che qualsiasi regola di allocazione ragionevole è necessariamente anche *monotona*.

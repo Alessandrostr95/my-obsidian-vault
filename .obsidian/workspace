@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cca6176b6a247b0d",
+        "id": "64c964aaa9a62e8c",
         "type": "leaf",
         "state": {
-          "type": "diff-view",
-          "state": {
-            "file": ".obsidian/plugins/obsidian-git/main.js",
-            "staged": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -52,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5
+    "width": 320.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AGT/5 - Revenue-Maximizing Auctions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "AGT/5 - Revenue-Maximizing Auctions.md"
-              }
+              "state": {}
             }
           },
           {
@@ -104,17 +98,17 @@
     "direction": "horizontal",
     "width": 272.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "64c964aaa9a62e8c",
   "lastOpenFiles": [
     "AGT/5 - Revenue-Maximizing Auctions.md",
     "AGT/6 - Simple Near-Optimal Auctions.md",
-    "AGT/2 - Mechanism Design Basics.md",
     "AGT/4 -  Knapsack Auctions.md",
+    "AGT/Exercise/Exercise Set 2.md",
     "AGT/3 - Myerson’s Lemma.md",
+    "AGT/2 - Mechanism Design Basics.md",
+    "APL/Senza nome 1.md",
     "AGT/0 - Algorithmic game theory.md",
-    "AR/14 - Sistemi di voto - Part 2.md",
-    "AR/13 - Sistemi di voto - Part 1.md",
-    "AR/15.md",
-    "AR/1 - Erdos-Renyi Random Graph.md"
+    "root.md",
+    "AR/14 - Sistemi di voto - Part 2.md"
   ]
 }
