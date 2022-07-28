@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "057f6ba9986a90ea",
+        "id": "1a0ae99f435f2de6",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -98,8 +98,10 @@
     "direction": "horizontal",
     "width": 272.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "1a0ae99f435f2de6",
   "lastOpenFiles": [
+    "AR/12 - Herding.md",
+    "AR/9 - Processi di diffusione - Part 1.md",
     "AR/0 -Analisi di reti.md",
     "AR/15 - Sistemi di voto - Part 3.md",
     "AR/14 - Sistemi di voto - Part 2.md",
@@ -107,8 +109,6 @@
     "AGT/0 - Algorithmic game theory.md",
     "root.md",
     "AR/19.md",
-    "AR/18.md",
-    "AR/17.md",
-    "AR/16.md"
+    "AR/18.md"
   ]
 }
