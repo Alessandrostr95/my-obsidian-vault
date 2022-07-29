@@ -7,8 +7,7 @@ In questa prima fase è stato dimostrato che se un'alternatica $x$ è **polarizz
 $\rho(x) = n-1$ (ovvero o $x$ si trova all'ultimo posto nel voto collettivo $r$, oppure all'utlimo).
 
 ## Parte 2 dimostrazione
-Definiamo una successione di $k+1$ profili $P^{(0)}, P^{(1)}, P^{(k)} \in \Pi(\left[ n \right])^k$, dove in
-ciascuno dei quali una stessa alternativa $x \in \left[ n \right]$ è [[14 - Sistemi di voto - Part 2#^f53418|polarizzante]].
+Definiamo una successione di $k+1$ profili $P^{(0)}, P^{(1)}, P^{(k)} \in \Pi(\left[ n \right])^k$, dove in ciascuno dei quali una stessa alternativa $x \in \left[ n \right]$ è [[14 - Sistemi di voto - Part 2#^f53418|polarizzante]].
 Tramite essi individueremo un *dittatore potenziale*.
 
 ![](ar-lesson15-img1.png) ^49e899
@@ -45,31 +44,20 @@ Perciò possiamo dire che il votante $j$ è il **dittatore potenziale**.
 
 ------------------------------
 ## Parte 3 dimostrazione
-In questa ulitma parte dimostreremo che il dittatore potenziale $j$
-trovato nella seconda parte è effettivamente il dittatore del sistema di
-voto affidabile che rispetta `U` e `IIA`.\
-Il il profilo $Q = \langle r^Q_1, ..., r^Q_k \rangle $ con $k$ votanti
-su $n$ alternative. Come prima, per ogni votante
-$h \in \left[ k \right]$ indichiamo con $\rho^Q_h$ la funzione peso
-associata al ranking $r^Q_h$ del votante $h$. Infine indichiamo che
-$r^Q$ il voto collettivo finale (che soddisfa $\sigma$ e con $\rho^Q$ la
-funzione di peso collettiva associata a $r^Q$.\
-Vogliamo dismotrare che [qualunque sia]{.underline} $Q$ allora
-$r^Q = r^Q_j$. Più precisamente, [qualunque sia]{.underline} $Q$,
-comunque si scelgano due alternative $y,z \in \left[ n \right]$ allora
-$$
-   \rho^Q(y) > \rho^Q(z) \iff \rho^Q_j(y) > \rho^Q_j(z)
-   $$
+In questa ulitma parte dimostreremo che il dittatore potenziale $j$ trovato nella [[#Parte 2 dimostrazione|seconda parte]] è effettivamente il dittatore del sistema di voto affidabile che rispetta `U` e `IIA`.
+
+Il il profilo $Q = \langle r^Q_1, ..., r^Q_k \rangle$ con $k$ votanti su $n$ alternative.
+Come prima, per ogni votante $h \in \left[ k \right]$ indichiamo con $\rho^Q_h$ la funzione peso associata al ranking $r^Q_h$ del votante $h$. Infine indichiamo che $r^Q$ il voto collettivo finale (che soddisfa $\sigma$ e con $\rho^Q$ la funzione di peso collettiva associata a $r^Q$).
+
+Vogliamo dismotrare che **qualunque sia** $Q$ allora $r^Q = r^Q_j$.
+Più precisamente, **qualunque sia** $Q$, comunque si scelgano due alternative $y,z \in \left[ n \right]$ allora
+$$\rho^Q(y) > \rho^Q(z) \iff \rho^Q_j(y) > \rho^Q_j(z)$$
 
 Tale affermazione verrà dimostrata in due sottofasi:
-
-1.  dimostriamo che se $y \neq x$ e $z \neq x$ allora
-    $\rho^Q(y) > \rho^Q(z) \iff \rho^Q_j(y) > \rho^Q_j(z)$.
-2.  dimostriamo che se $y \neq x$ allora
-    $\rho^Q(y) > \rho^Q(x) \iff \rho^Q_j(y) > \rho^Q_j(x)$.
+1. dimostriamo che se $y \neq x$ e $z \neq x$ allora $\rho^Q(y) > \rho^Q(z) \iff \rho^Q_j(y) > \rho^Q_j(z)$.
+2. dimostriamo che se $y \neq x$ allora $\rho^Q(y) > \rho^Q(x) \iff \rho^Q_j(y) > \rho^Q_j(x)$.
 
 ### Sottofase 3.1
-
 Supponiamo di avere che $y \neq x$ e $z \neq x$, e senza perdita di
 generalità supponiamo che $\rho^Q_j(y) > \rho^Q_j(z)$.\
 A questo punto costruiamo a partire da $Q$ un nuovo profilo
