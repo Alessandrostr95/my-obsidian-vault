@@ -7,8 +7,12 @@
         "id": "1a0ae99f435f2de6",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "AGT/5 - Revenue-Maximizing Auctions.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AGT/5 - Revenue-Maximizing Auctions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "AGT/5 - Revenue-Maximizing Auctions.md"
+              }
             }
           },
           {
@@ -98,17 +105,17 @@
     "direction": "horizontal",
     "width": 272.5
   },
-  "active": "1a0ae99f435f2de6",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
+    "AGT/6 - Simple Near-Optimal Auctions.md",
+    "AR/15 - Sistemi di voto - Part 3.md",
+    "ISTI/Trasformazioni Bivariate.md",
+    "ISTI/Trasformazioni Univariate.md",
+    "ISTI/Distribuzioni Multivariate.md",
+    "img.md",
+    "AGT/Exercise/Exercise Set 2.md",
     "AR/12 - Herding.md",
     "AR/9 - Processi di diffusione - Part 1.md",
-    "AR/0 -Analisi di reti.md",
-    "AR/15 - Sistemi di voto - Part 3.md",
-    "AR/14 - Sistemi di voto - Part 2.md",
-    "AGT/6 - Simple Near-Optimal Auctions.md",
-    "AGT/0 - Algorithmic game theory.md",
-    "root.md",
-    "AR/19.md",
-    "AR/18.md"
+    "AR/0 -Analisi di reti.md"
   ]
 }
