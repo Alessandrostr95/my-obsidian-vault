@@ -1,30 +1,20 @@
-World Wide Web
-==============
+# World Wide Web
+Se stai leggendo questi appunti certamente hai usato (e sai usare) il **Web**.
 
-Se stai leggendo questi appunti certamente hai usato (e sai usare) il
-**Web**. Il Web è un\'appicazione sviluppata da *Tim Berners-Lee* nel
-periodo 1989-1991 per consentire alle persone di condividere
-informazioni tramite internet.\
-L\'architettura del web è di tipo **client-server** e il suo
-funzionamento può essere descritto in due principi:
+Il Web è un'appicazione sviluppata da *[Tim Berners-Lee](https://it.wikipedia.org/wiki/Tim_Berners-Lee)* nel periodo 1989-1991 per consentire alle persone di condividere informazioni tramite internet.
 
--   delle informazioni sono salvate su delle macchine **server** e resi
-    disponibili tramite *internet* sotto forma di **pagine web**.
--   un\'applicazione **client** (per esempio un *browser*) richiede tali
-    pagine Web pubblicamente accessibili.
+L'architettura del web è di tipo **client-server** e il suo funzionamento può essere descritto in due principi:
+- delle informazioni sono salvate su delle macchine **server** e resi disponibili tramite *internet* sotto forma di **pagine web**.
+- un'applicazione **client** (per esempio un *browser*) richiede tali pagine Web pubblicamente accessibili.
 
-Questa in sintesi è la [struttura fisica]{.underline} del web.\
-Ciò che è interessante è invece l\' [organizzazione logica]{.underline}
-delle pagine web. Le pagine web possono **referenziare** in maniera
-[diretta]{.underline} altre pagine web, tramite dei **riferimenti** o
-**link**. Perciò possiamo pensare al web come un grafo diretto in cui i
-nodi sono le pagine web, e gli archi sono i riferimenti tra una pagina e
-un\'altra. Per questo motivo una pagina web viene anche detta
-**ipertesto**.
+Questa in sintesi è la **struttura fisica** del web.
 
-Precursori dell\'ipertesto
---------------------------
+Ciò che è interessante è invece l'**organizzazione logica** delle pagine web.
+Le pagine web possono **referenziare** in maniera <u>diretta</u> altre pagine web, tramite dei **riferimenti** o **link**.
+Perciò possiamo pensare al web come un grafo diretto in cui i nodi sono le pagine web, e gli archi sono i riferimenti tra una pagina e un'altra.
+Per questo motivo una pagina web viene anche detta **ipertesto**.
 
+## Precursori dell'ipertesto
 Un primo precursore *intelletuale* del concetto di ipertesto è il
 concetto di **reference**. Negli articoli o nei libri, quando si
 necessità indirizzare a informazioni supplementari o semplicemente

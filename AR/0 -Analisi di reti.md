@@ -12,4 +12,6 @@
 - [[12 - Herding]]
 - [[13 - Sistemi di voto - Part 1]]
 - [[14 - Sistemi di voto - Part 2]]
--  [[15 - Sistemi di voto - Part 3]]
+- [[15 - Sistemi di voto - Part 3]]
+- [[16 - Sistemi di voto - Part 4]]
+- [[17 - Web Search - Part 1]]

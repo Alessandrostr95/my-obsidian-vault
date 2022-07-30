@@ -58,142 +58,88 @@ Tale affermazione verrà dimostrata in due sottofasi:
 2. dimostriamo che se $y \neq x$ allora $\rho^Q(y) > \rho^Q(x) \iff \rho^Q_j(y) > \rho^Q_j(x)$.
 
 ### Sottofase 3.1
-Supponiamo di avere che $y \neq x$ e $z \neq x$, e senza perdita di
-generalità supponiamo che $\rho^Q_j(y) > \rho^Q_j(z)$.\
-A questo punto costruiamo a partire da $Q$ un nuovo profilo
-$T = \langle r^T_1, ..., r^T_k \rangle$ nella seguente maniera:
+Supponiamo di avere che $y \neq x$ e $z \neq x$, e senza perdita di generalità supponiamo che $\rho^Q_j(y) > \rho^Q_j(z)$.
 
--   Per ogni votante $h \leq j$ poniamo $x$ in testa alla graduatoria.
--   Per ogni votante $h > j$ poniamo $x$ in ultima posizione della
-    graduatoria.
--   Infine, considerando solamente il votante $j$, poniamo l\'aternativa
-    $y$ in testa la ranking $r^T_j$.
+A questo punto costruiamo a partire da $Q$ un nuovo profilo $T = \langle r^T_1, ..., r^T_k \rangle$ nella seguente maniera:
+- Per ogni votante $h \leq j$ poniamo $x$ in testa alla graduatoria.
+- Per ogni votante $h > j$ poniamo $x$ in ultima posizione della graduatoria.
+- Infine, considerando solamente il votante $j$, poniamo l'aternativa $y$ in testa la ranking $r^T_j$.
 
-![Transformazione dal profilo $Q$ al profilo
-$T$.](../images/ar-lesson15-img3.png "Q2T"){width="100%"}
+![Transformazione dal profilo $Q$ al profilo $T$.](ar-lesson15-img3.png "Q2T") ^d3593a
 
-Osserviamo che il profilo appena costruito $T$ è molto simile al profilo
-$P^{(j)}$ trovato nella fase 2.
+Osserviamo che il profilo appena costruito $T$ è molto simile al profilo $P^{(j)}$ trovato nella fase 2.
 
-![](../images/ar-lesson15-img4.png){width="100%"}
+![](ar-lesson15-img4.png)
 
-Dalle parti 1 e 2 della dimostrazione sappiamo che
-$\rho^{(j)}(x) = n-1$, perciò è vero che
-$\rho^{(j)}(x) > \rho^{(j)}(z)$. Inoltre poiché l\'oride relativo tra
-$x$ e $z$ rimane invariato sia in $P^{(j)}$ sia in $T$, allora per il
-principio dell\'indipendenza dalle alternative irrilevanti `IIA` avremo
-che $\rho^{T}(x) > \rho^{T}(z)$.\
-Analogamente possiamo osservare che $T$ è molto simile anche al profilo
-$P^{(j-1)}$.
+Dalle parti 1 e 2 della dimostrazione sappiamo che $\rho^{(j)}(x) = n-1$, perciò è vero che
+$\rho^{(j)}(x) > \rho^{(j)}(z)$.
+Inoltre poiché l'oride relativo tra $x$ e $z$ rimane invariato sia in $P^{(j)}$ sia in $T$, allora per il principio dell\'indipendenza dalle alternative irrilevanti `IIA` avremo che $\rho^{T}(x) > \rho^{T}(z)$.
 
-![](../images/ar-lesson15-img5.png){width="100%"}
+Analogamente possiamo osservare che $T$ è molto simile anche al profilo $P^{(j-1)}$.
 
-Come prima, dalla parte 2 della dimostrazione abbiamo trovato un $j$ in
-modo tale che $\rho^{(j-1)}(x) = 0$, perciò avremo che
-$\rho^{(j-1)}(x) < \rho^{(j-1)}(y)$. Inoltre poiché l\'oride relativo
-tra $x$ e $y$ rimane invariato sia in $P^{(j-1)}$ sia in $T$, allora per
-il principio dell\'indipendenza dalle alternative irrilevanti `IIA`
-avremo che $\rho^{T}(x) < \rho^{T}(y)$.\
-Osserviamo ora la figura [fig:Q2T](fig:Q2T). L\'ordine relativo tra $y$
-e $z$ rimane invariato sia in $Q$ che in $T$, perciò ancora una volta
-per il principio `IIA` avremo che $\rho^Q(y) > \rho^Q(z)$.\
-Ricapitolando, siamo partiti dall\'assunzione che
-$\rho^Q_j(y) > \rho^Q_j(z)$, e costruendo il profilo $T$ abbiamo
-dimostrato che tale assunzione implica che $\rho^Q(y) > \rho^Q(z)$.
+![](ar-lesson15-img5.png)
+
+Come prima, dalla parte 2 della dimostrazione abbiamo trovato un $j$ in modo tale che $\rho^{(j-1)}(x) = 0$, perciò avremo che $\rho^{(j-1)}(x) < \rho^{(j-1)}(y)$.
+Inoltre poiché l'oride relativo tra $x$ e $y$ rimane invariato sia in $P^{(j-1)}$ sia in $T$, allora per il principio dell\'indipendenza dalle alternative irrilevanti `IIA` avremo che $\rho^{T}(x) < \rho^{T}(y)$.
+
+Osserviamo ora la [[#^d3593a|figura ]].
+L'ordine relativo tra $y$ e $z$ rimane invariato sia in $Q$ che in $T$, perciò ancora una volta per il principio `IIA` avremo che $\rho^Q(y) > \rho^Q(z)$.
+
+Ricapitolando, siamo partiti dall'assunzione che $\rho^Q_j(y) > \rho^Q_j(z)$, e costruendo il profilo $T$ abbiamo dimostrato che tale assunzione implica che $\rho^Q(y) > \rho^Q(z)$.
 Ovvero abbiamo mostrato che
 
-```{=latex}
-\begin{equation}
-    \rho^Q_j(y) > \rho^Q_j(z) \implies \rho^Q(y) > \rho^Q(z)
-\end{equation}
-```
-Dato che $y$ e $z$ sono **variabili mute** (ovvero interscambiabili),
-possiamo dimostrare alla stessa meniera che
+$$\begin{equation}
+\rho^Q_j(y) > \rho^Q_j(z) \implies \rho^Q(y) > \rho^Q(z)
+\end{equation}$$
 
-```{=latex}
-\begin{equation}
-    \rho^Q_j(y) < \rho^Q_j(z) \implies \rho^Q(y) < \rho^Q(z)
-\end{equation}
-```
-Le due euqaioni (1) e (2) implicano l\'ipotesi della sottofase, ovvero
-$$
-    \left[ (1) \land (2) \right]
-    \implies
-    \left[ (y \neq x \land z \neq x) \implies (\rho^Q(y) > \rho^Q(z) \iff \rho^Q_j(y) > \rho^Q_j(z)) \right]
-    $$
+^4afe65
+
+Dato che $y$ e $z$ sono **variabili mute** (ovvero interscambiabili), possiamo dimostrare alla stessa meniera che
+
+$$\begin{equation}
+\rho^Q_j(y) < \rho^Q_j(z) \implies \rho^Q(y) < \rho^Q(z)
+\end{equation}$$
+
+^cab5c8
+
+Le due euqaioni [[#^4afe65|(1)]] e [[#^cab5c8|(2)]] implicano l'ipotesi della corrente sottofase, ovvero
+$$\left[ (1) \land (2) \right] \implies \left[ (y \neq x \land z \neq x) \implies (\rho^Q(y) > \rho^Q(z) \iff \rho^Q_j(y) > \rho^Q_j(z)) \right]$$
 
 ### Sottofase 3.2
+In questa sottofase si vuole dimostrare che se $y \neq x$ allora $\rho^Q(y) > \rho^Q(x) \iff \rho^Q_j(y) > \rho^Q_j(x)$.
 
-In questa sottofase si vuole dimostrare che se $y \neq x$ allora
-$\rho^Q(y) > \rho^Q(x) \iff \rho^Q_j(y) > \rho^Q_j(x)$.\
-Iniziamo con l\'osserva che dato che ci sono [più di due
-alternative]{.underline}, ovvero $n > 2$, allora certamente esisterà
-un\'altra alternativa $z \neq y$ e $z \neq x$.\
-Deriviamo ora dai profili $P^{(0)}, P^{(1)}, ..., P^{(k)}$ una nuova
-sequenza di profili $T^{(0)}, T^{(1)}, ..., T^{(k)}$ spostando la
-posizione di $z$:
+Iniziamo con lìosserva che dato che ci sono **più di due alternative**, ovvero $n > 2$, allora certamente esisterà un'altra alternativa $z \neq y$ e $z \neq x$.
 
--   $T^{(0)}$ è ottenuta da $P^{(0)}$ semplicemente spostando $z$ in
-    ultima posizione per tutti i ranking $r^{(0)}_1, ..., r^{(0)}_k$.
--   Per $h > 0$, $T^{(h)}$ è ottenuta da $P^{(h)}$ spostando $z$ in
-    prima posizione per tutti i ranking $i \leq h$, e in ultima per
-    tutti gli altri, ovvero $$
-     \rho^{T^{(h)}}_i(x) = \begin{cases}
-      n-1 &\forall i \leq h\\
-      0   &\forall i > h
-    \end{cases}
-    $$
+Deriviamo ora dai profili $P^{(0)}, P^{(1)}, ..., P^{(k)}$ una nuova sequenza di profili $T^{(0)}, T^{(1)}, ..., T^{(k)}$ spostando la posizione di $z$:
+- $T^{(0)}$ è ottenuta da $P^{(0)}$ semplicemente spostando $z$ in ultima posizione per tutti i ranking $r^{(0)}_1, ..., r^{(0)}_k$.
+-   Per $h > 0$, $T^{(h)}$ è ottenuta da $P^{(h)}$ spostando $z$ in prima posizione per tutti i ranking $i \leq h$, e in ultima per tutti gli altri, ovvero $$\rho^{T^{(h)}}_i(x) = \begin{cases}
+n-1 &\forall i \leq h\\
+0   &\forall i > h
+\end{cases}$$
 
-![Sequenza di profili
-$T^{(0)}, T^{(1)}, ..., T^{(k)}$.](../images/ar-lesson15-img6.png "profiliT"){width="100%"}
+![Sequenza di profili $T^{(0)}, T^{(1)}, ..., T^{(k)}$.](ar-lesson15-img6.png "profiliT")
 
-Per comodità, per ogni $h \in \lbrace 0 \rbrace \cup \left[ k \right]$
-indichiamo con $t^h$ il ranking collettivo del profilo $T^{(h)}$, e con
-$\rho^{T^{(h)}}$ la funzione di pesso ad esso associata.\
-Esattamente come per i profili $P^{(0)}, P^{(1)}, ..., P^{(k)}$ (vedi
-punto 2), esiste un $\ell \in \left[ k \right]$ tale che
-$\rho^{T^{(h)}}(z) = 0$ per ogni $h < \ell$, mentre
-$\rho^{T^{(\ell)}}(z) = n-1$.\
-Ancora una volta, esattamente come dimostrato nel punto 3.1, per ogni
-profilo $Q$, dato che $y \neq z$ e dato che $x \neq z$ allora $$
-    \rho^Q(y) > \rho^Q(x) \iff \rho^Q_{\ell}(y) > \rho^Q_{\ell}(x)
-    $$ Per concludere la dimostrazione basta dimostrare che $\ell = j$.\
+Per comodità, per ogni $h \in \lbrace 0 \rbrace \cup \left[ k \right]$ indichiamo con $t^h$ il ranking collettivo del profilo $T^{(h)}$, e con $\rho^{T^{(h)}}$ la funzione di pesso ad esso associata.
 
-Caso $\ell < j$
+Esattamente come per i profili $P^{(0)}, P^{(1)}, ..., P^{(k)}$ (vedi [[#Parte 2 dimostrazione|parte 2]]), esiste un $\ell \in \left[ k \right]$ tale che $\rho^{T^{(h)}}(z) = 0$ per ogni $h < \ell$, mentre $\rho^{T^{(\ell)}}(z) = n-1$.
 
-:   Dimostriamo che esiste almeno un profilo $P$ tale che
-    $\rho^P \neq \rho^{P}_{\ell}$. Ricordiamo che nel punto 2 abbiamo
-    scelto $j$ in modo tale che $\rho^{(j-1)}(x) = 0$, ovver che $$
-     \rho^{(j-1)}(x) < \rho^{(j-1)}(y)
-     $$ Ma per come è definita la sequenza
-    $P^{(0)}, P^{(1)}, ..., P^{(k)}$ sappiamo che per ogni profilo $h$ e
-    per ogni $i \leq h$ abbiamo che $\rho^{h}_i(x) = n-1$, perciò avremo
-    che $\rho^{(j-1)}_{\ell}(x) = n-1$ dato che
-    $\ell < j \implies \ell \leq j-1$.\
-    Perciò avremo che nel ranking $\ell$ del profilo profilo $P^{(j-1)}$
-    che $$
-     \rho^{(j-1)}_{\ell}(x) > \rho^{(j-1)}_{\ell}(y)
-     $$ Quindi certamente $\rho^{(j-1)} \neq \rho^{(j-1)}_{\ell}$.\
+Ancora una volta, esattamente come dimostrato nel [[#Sottofase 3 1|punto 3.1]], per ogni profilo $Q$, dato che $y \neq z$ e dato che $x \neq z$ allora $$\rho^Q(y) > \rho^Q(x) \iff \rho^Q_{\ell}(y) > \rho^Q_{\ell}(x)$$ Per concludere la dimostrazione basta dimostrare che $\ell = j$.
 
-    ![](../images/ar-lesson15-img7.png){width="100%"
-    style="max-width: 300px;"}
+#### Caso $\ell < j$
+Dimostriamo che esiste almeno un profilo $P$ tale che $\rho^P \neq \rho^{P}_{\ell}$.
+Ricordiamo che nel [[#Parte 2 dimostrazione|punto 2]] abbiamo scelto $j$ in modo tale che $\rho^{(j-1)}(x) = 0$, ovver che $$\rho^{(j-1)}(x) < \rho^{(j-1)}(y)$$
+Ma per come è definita la sequenza $P^{(0)}, P^{(1)}, ..., P^{(k)}$ sappiamo che per ogni profilo $h$ e per ogni $i \leq h$ abbiamo che $\rho^{h}_i(x) = n-1$, perciò avremo che $\rho^{(j-1)}_{\ell}(x) = n-1$ dato che $\ell < j \implies \ell \leq j-1$.
 
-    Questo stesso ragionamento si può applicare per ogni profilo minore
-    di $j$, perciò per forza non può essere vero che $\ell < j$.
+Perciò avremo che nel ranking $\ell$ del profilo profilo $P^{(j-1)}$ che $$\rho^{(j-1)}_{\ell}(x) > \rho^{(j-1)}_{\ell}(y)$$
+Quindi certamente $\rho^{(j-1)} \neq \rho^{(j-1)}_{\ell}$.
 
-Caso $\ell > j$
+![](ar-lesson15-img7.png)
 
-:   Per come abbiamo scelto $j$ sappiamo che $\rho^{(j)}(x) = n-1$ e che
-    quindi $$
-     \rho^{(j)}(x) > \rho^{(j)}(y)
-     $$ Però per come abbiamo definito la sequenza di profili
-    $P^{(0)}, P^{(1)}, ..., P^{(k)}$, sappiamo che per ogni $i > h$
-    abbiamo che $\rho^{h}_i(x) = 0$. Perciò dato che $\ell > j$ allora
-    $$
-     \rho^{(j)}_{\ell}(x) < \rho^{(j)}_{\ell}(y)
-     $$ quindi non può essere vero che $\ell > j$.
+Questo stesso ragionamento si può applicare per ogni profilo minore di $j$, perciò per forza non può essere vero che $\ell < j$.
 
-In conclusione, se non è vero che $\ell < j$ e non è vero che $\ell > j$
-deve necessariamente essere vero che $\ell = j$ $\square$.
+#### Caso $\ell > j$
+Per come abbiamo scelto $j$ sappiamo che $\rho^{(j)}(x) = n-1$ e che quindi $$\rho^{(j)}(x) > \rho^{(j)}(y)$$
+Però per come abbiamo definito la sequenza di profili $P^{(0)}, P^{(1)}, ..., P^{(k)}$, sappiamo che per ogni $i > h$ abbiamo che $\rho^{h}_i(x) = 0$.
+Perciò dato che $\ell > j$ allora $$\rho^{(j)}_{\ell}(x) < \rho^{(j)}_{\ell}(y)$$ quindi non può essere vero che $\ell > j$.
 
-------------------------------------------------------------------------
+In conclusione, se non è vero che $\ell < j$ e non è vero che $\ell > j$ deve necessariamente essere vero che $\ell = j$ $\square$.
