@@ -15,39 +15,25 @@ Perciò possiamo pensare al web come un grafo diretto in cui i nodi sono le pagi
 Per questo motivo una pagina web viene anche detta **ipertesto**.
 
 ## Precursori dell'ipertesto
-Un primo precursore *intelletuale* del concetto di ipertesto è il
-concetto di **reference**. Negli articoli o nei libri, quando si
-necessità indirizzare a informazioni supplementari o semplicemente
-citare il proprietario intelletuale di una informazione, si fanno dei
-**riferimenti** ad altri libri o articoli. Anche in questo caso si crea
-un grafo diretto i cui nodi sono i libri o gli articoli e gli archi sono
-i riferimenti.\
-La differenza sostanziale però con l\'ipertesto è la linea temporale
-nella quale si fanno i riferimenti. Se un libro `X` fa una citazione a
-un articolo `Y` vuol dire che `Y` è stato scritto e pubblicato prima di
-`X`, perciò non ci potranno essere riferimenti ad `X` nell\'articolo
-`Y`. Invece nel rete del Web abbiamo degli archi bidirezionali, ovvero
-capita spesso di trovare due pagine che si referenziano reciprocamente.\
-Un altro precursore dell\'ipertesto sono le cosidette
-**crossing-references**, o **riferimenti incrociati**. Tale tipo di
-organizzazione la troviamo per esempio in una enciclopedia, e consente
-di collegare argomenti differenti attraverso una catena di collegamenti
-semantici o riferimenti tra altri arogmenti.
+Un primo precursore *intelletuale* del concetto di ipertesto è il concetto di **reference**.
+Negli articoli o nei libri, quando si necessità indirizzare a informazioni supplementari o semplicemente citare il proprietario intelletuale di una informazione, si fanno dei **riferimenti** ad altri libri o articoli.
+Anche in questo caso si crea un grafo diretto i cui nodi sono i libri o gli articoli e gli archi sono i riferimenti.
 
-![Cross-references.](../images/ar-lesson17-img1.png "cross-references"){width="100%"
-style="max-width: 500px;"}
+La differenza sostanziale però con l'ipertesto è la linea temporale nella quale si fanno i riferimenti.
+Se un libro `X` fa una citazione a un articolo `Y` vuol dire che `Y` è stato scritto e pubblicato prima di `X`, perciò non ci potranno essere riferimenti ad `X` nell'articolo `Y`.
 
-Per esempio la [Figura 1](fig:cross-references) mostra come tramite
-riferimenti incrociati di *Wikipedia* possiamo connettere gli Equilibri
-di Nash con la Nasa.
+Invece nel rete del Web abbiamo degli archi bidirezionali, ovvero capita spesso di trovare due pagine che si referenziano reciprocamente.
+
+Un altro precursore dell'ipertesto sono le cosidette **crossing-references**, o **riferimenti incrociati**.
+Tale tipo di organizzazione la troviamo per esempio in una enciclopedia, e consente di collegare argomenti differenti attraverso una catena di collegamenti semantici o riferimenti tra altri arogmenti.
+
+![Cross-references.](ar-lesson17-img1.png "cross-references") ^b6ec61
+
+Per esempio la [[#^b6ec61|figura]] mostra come tramite riferimenti incrociati di *Wikipedia* possiamo connettere gli Equilibri di Nash con la Nasa.
 
 ### MEMEX
+Vannevar Bush nel suo articolo *"As we may think"* del 1945 cercò di immaginare come le moderne tecnologie di comunizaione emergenti all'epoca avrebbero influenzato il mondo, grazie alle rivoluzionarie tecniche di **archiviazione**, **scambio** e **accesso** di informazioni.
 
-Vannevar Bush nel suo articolo *\"As we may think\"* del 1945 cercò di
-immaginare come le moderne tecnologie di comunizaione emergenti
-all\'epoca avrebbero influenzato il mondo, grazie alle rivoluzionarie
-tecniche di [archiviazione]{.underline}, [scambio]{.underline} e
-[accesso]{.underline} di informazioni.\
 In particolare Bush osservò che i metodi tradizionali per archiviare le
 informazioni in un libro, in una biblioteca o nella memoria di un
 computer erano altamente **lineari**. Basta pensare a un dizionario
