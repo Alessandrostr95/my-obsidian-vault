@@ -5,11 +5,48 @@ $$N(\mu, \sigma^2)$$
 - **media** $\mu$
 - **varianza** $\sigma^2$
 
+### CDF
+$$X \sim N(\mu, \sigma^2) \implies F_X(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{x}e^{-\dfrac{1}{2}\left( \dfrac{t-\mu}{\sigma} \right)^2} \,dt$$
+
+
 ### PDF
 $$X \sim N(\mu, \sigma^2) \implies f_X(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{- \dfrac{1}{2}\left( \dfrac{x-\mu}{\sigma}\right)^2}$$
 
 ### MGF
 $$X \sim N(\mu, \sigma^2) \implies M_X(t) = \exp{\left( \mu t + \sigma^2 \frac{t^2}{2} \right)}$$
+
+## Normale Standard
+Una **normale standard** è un normale con parametri $\mu = 0$ e $\sigma^2 = 1$, ovvero $N(0,1)$.
+Avremo quindi
+- Supporto $\mathbb{R}$
+- Media $\mu = 0$
+- Varianza $\sigma^2 = 1$
+- cdf $$\Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{x}e^{-t^2/2} \,dt$$
+- pdf $$\phi(x) = \frac{1}{\sqrt{2\pi}}e^{-x^2/2}$$
+- mgf $M_X(t) = e^{t^2/2}$
+
+Osserviamo che $X \sim N(\mu, \sigma^2)$ avra *pdf* $$f_X(x) = \frac{1}{\sigma} \cdot \phi\left( \frac{x - \mu}{\sigma} \right)$$ e *cdf* $$f_X(x) = \Phi\left( \frac{x - \mu}{\sigma} \right)$$
+
+## Proprietà importanti
+Sia $X \sim N(\mu, \sigma^2)$
+1. La v.a. $aX + b$ equivlae a una normale $N(a\mu + b, |a|\sigma)$.
+2. Caso particolare del predente: sia $Z \sim N(0, 1)$. Allora la v.a. $\sigma^2 Z + \mu$ è una normale $N(\mu, \sigma^2)$. 
+3. $e^X \sim \ln{(N(\mu, \sigma^2))}$.
+4. La v.a. $\vert X - \mu \vert / \sigma$ avrà distribuzione **chi** con 1 grado di libertà: $\vert X - \mu \vert / \sigma \sim \chi_1$.
+5. La v.a. $(X/\sigma)^2$ ha distribuzione **chi quadro non centrata** con $1$ grado di libertà: $$\left( \frac{X}{\sigma}\right)^2 \sim \chi_1^2\left( \frac{\mu^2}{\sigma^2} \right)$$
+   Nel caso in cui $\mu = 0$ avremo semplicemente una **chi quadro** $\chi_1^2$
+6. La [[Random Sample#Media campionaria|media campionaria]] $\overline{X}_n$ di $n$ normali **indipendenti** ha una distribuzione $N(\mu, \sigma^2/n)$.
+7. La sommma di $n$ normali **indipendenti** ha distribuzione $N(n\mu, n\sigma^2)$.
+
+
+### Bin(n,p) $\to$ N(np, np(1-p))
+Sia $X \sim \text{Bin}(n,p)$ con media $\mu = np$ e varianza $\sigma^2 = np(1-p)$.
+Possiamo approssimare $X$ con una normale $Y \sim N(np, np(1-p))$.
+
+![|400](isti-distr-1.png)
+
+
+
 
 ----------------------
 # Cauchy
