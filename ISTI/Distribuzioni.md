@@ -42,3 +42,27 @@ Integrando accuratamente per *decomposizioni parziali* e qualche *antidifferenzi
 ovvero $Z$ è una $\text{Cauchy}(0, \sigma + \tau)$.
 
 ----------------------------
+
+# Esponenziale
+## Notazione
+$$\text{Exp}(\lambda)$$
+
+## Parametri
+$$\lambda > 0$$
+## Supporto
+$$\mathbb{R}^+$$
+
+## Funzione di ripartizione
+$$F(x) = 1 - e^{-\lambda x}$$
+
+## Funzione di densità
+$$f(x) = \lambda e^{-\lambda x}$$
+
+## Media
+$$\frac{1}{\lambda}$$
+
+## Varianza
+$$\frac{1}{\lambda^2}$$
+
+## Funzione generatrice dei momenti
+$$\left(1 - \frac{t}{\lambda}\right)^{-1}$$
