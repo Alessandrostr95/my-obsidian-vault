@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1a0ae99f435f2de6",
+        "id": "ae7721d84e9337de",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "AGT/5 - Revenue-Maximizing Auctions.md",
+            "file": "ISTI/Convergenza.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AGT/5 - Revenue-Maximizing Auctions.md",
+                "file": "ISTI/Convergenza.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AGT/5 - Revenue-Maximizing Auctions.md"
+                "file": "ISTI/Convergenza.md"
               }
             }
           },
@@ -105,17 +105,17 @@
     "direction": "horizontal",
     "width": 272.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "ae7721d84e9337de",
   "lastOpenFiles": [
-    "AGT/6 - Simple Near-Optimal Auctions.md",
-    "AR/15 - Sistemi di voto - Part 3.md",
-    "ISTI/Trasformazioni Bivariate.md",
-    "ISTI/Trasformazioni Univariate.md",
+    "ISTI/Delta Method.md",
+    "ISTI/CLT - Central Limit Theorem.md",
+    "ISTI/Distribuzioni.md",
+    "ISTI/Convergenza.md",
+    "ISTI/Random Sample.md",
     "ISTI/Distribuzioni Multivariate.md",
-    "img.md",
     "AGT/Exercise/Exercise Set 2.md",
-    "AR/12 - Herding.md",
-    "AR/9 - Processi di diffusione - Part 1.md",
-    "AR/0 -Analisi di reti.md"
+    "AGT/5 - Revenue-Maximizing Auctions.md",
+    "ISTI/Trasformazioni Univariate.md",
+    "ISTI/Trasformazioni Bivariate.md"
   ]
 }
