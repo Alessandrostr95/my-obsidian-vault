@@ -5,7 +5,7 @@ Per convenzione scriveremo che $X_n \xrightarrow{p} X$.
 ### Teorema Debole dei Grandi Numeri - Weak LLN
 Siano $X_1, X_2, ...$ v.a. **i.i.d.** con media $\mu$ e varianza **finita** $\sigma^2 < \infty$.
 Sia $$\overline{X}_n = \dfrac{\sum_{i=1}^n X_i}{n}$$ la [[Random Sample#Media campionaria|media campionaria]] dei primi $n$ elementi.
-Allora per ogni $\varepsilon > 0$ $$\lim_{n \to \infty}P(\vert \overline{X}_n - \mu \vert < \varepsilon) = 1$$ ovvero  $\overline{X}_n$ **converge in distribuzione** a $\mu$.
+Allora per ogni $\varepsilon > 0$ $$\lim_{n \to \infty}P(\vert \overline{X}_n - \mu \vert < \varepsilon) = 1$$ ovvero  $\overline{X}_n$ **converge in probabilità** a $\mu$.
 
 #### Proof
 Basta applicare la [[Disuguaglianza di Chebyschev]].
