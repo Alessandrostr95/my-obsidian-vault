@@ -103,3 +103,34 @@ $$\frac{1}{\lambda^2}$$
 
 ## Funzione generatrice dei momenti
 $$\left(1 - \frac{t}{\lambda}\right)^{-1}$$
+
+--------------------
+# Poisson
+## Notazione
+$$\text{Poisson}(\lambda)$$
+
+## Parametri
+$$\lambda > 0$$
+## Supporto
+$$\mathbb{N}^+$$
+
+## Funzione di ripartizione
+$$F(x) = \frac{\Gamma(n+1, \lambda)}{x!}$$
+
+## Funzione di densità
+$$f(x) = \frac{\lambda^x}{x!} e^{-\lambda}$$
+
+## Media
+$$\lambda$$
+
+## Varianza
+$$\lambda$$
+
+## Funzione generatrice dei momenti
+$$e^{\lambda(e^t - 1)}$$
+
+## Proprietà
+Siano $Y_1 \sim \text{Poisson}(\lambda_1)$ e $Y_2 \sim \text{Poisson}(\lambda_2)$ **indipendenti**.
+Allora avremo che
+- $Y = Y_1 + Y_2$ è una poisson di parametro $\lambda = \lambda_1 + \lambda_2$.
+- La distribuzione di $Y_1$ **condizionata** al fatto che $Y = n$ è una **binomiale** di parametri $n$ e $\lambda_1/\lambda$.

@@ -222,3 +222,24 @@ Scoponendo tale risultato avremo che
 $$f_{U,V}(u,v) = \left( \frac{1}{\sqrt{2\pi}\sqrt{2}}e^{-u^2/4} \right) \cdot \left( \frac{1}{\sqrt{2\pi}\sqrt{2}}e^{-v^2/4} \right)$$
 Ovvero $U = X+Y \sim N(0, 2)$ e $V = X-Y \sim N(0,2)$, infatti
 $$N(\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}\exp{\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right]}$$
+
+
+------------------------
+### Trasformazione Polare di due Normali Standard Indipendenti
+Siano $X, Y \sim N(0, 1)$ **indipendenti**, e siano $(R, \theta)$ le **coordinate polari** del punot $(X,Y)$.
+
+Quindi avremo che $R = \sqrt{X^2 + Y^2}$ e $\theta = \tan^{-1}{\left( \frac{Y}{X} \right)}$.
+Le funzione inverse sarrano invece $X = R \cos{\theta}$ e $Y = R \sin{\theta}$.
+$$
+J = \left\vert \begin{array}{cc}
+\dfrac{\partial}{\partial R} R\cos{\theta} & \dfrac{\partial}{\partial \theta} R\cos{\theta}\\
+\dfrac{\partial}{\partial R} R\sin{\theta} & \dfrac{\partial}{\partial \theta} R\sin{\theta}
+\end{array} \right\vert =
+\left\vert \begin{array}{cc}
+\cos{\theta} & -R\sin{\theta}\\
+\sin{\theta} & R\cos{\theta}
+\end{array} \right\vert =
+R(\cos^2{\theta} + \sin^2{\theta}) = R
+$$
+
+La densità di $(X,Y)$ è $$f_{X,Y}(x,y) = \frac{1}{\sqrt{2\pi}}e^{-(x^2+y^2)/2}$$ perciò la densità di $(R, \theta)$ risulterà essere $$f_{R,\theta}(r, \vartheta) = f_{X,Y}(r\cos{\vartheta}, r \sin{\vartheta}) \cdot r = \frac{r}{\sqrt{2\pi}} e^{-r^2/2}$$
