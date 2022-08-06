@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ae7721d84e9337de",
+        "id": "51083f551c99cc8d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ISTI/Convergenza.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ISTI/Convergenza.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ISTI/Convergenza.md"
-              }
+              "state": {}
             }
           },
           {
@@ -105,17 +98,17 @@
     "direction": "horizontal",
     "width": 272.5
   },
-  "active": "ae7721d84e9337de",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "ISTI/Delta Method.md",
-    "ISTI/CLT - Central Limit Theorem.md",
-    "ISTI/Distribuzioni.md",
+    "ISTI/Statistiche Sufficienti.md",
+    "ISTI/Stimatori Puntuali.md",
+    "Senza nome.md",
+    "root.md",
+    "Disuguaglianza di Chebyschev.md",
+    "pdf.md",
     "ISTI/Convergenza.md",
-    "ISTI/Random Sample.md",
-    "ISTI/Distribuzioni Multivariate.md",
-    "AGT/Exercise/Exercise Set 2.md",
-    "AGT/5 - Revenue-Maximizing Auctions.md",
-    "ISTI/Trasformazioni Univariate.md",
-    "ISTI/Trasformazioni Bivariate.md"
+    "ISTI/Distribuzioni.md",
+    "ISTI/Trasformazioni Bivariate.md",
+    "ISTI/Random Sample.md"
   ]
 }
