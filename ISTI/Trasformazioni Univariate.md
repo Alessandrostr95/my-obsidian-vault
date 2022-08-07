@@ -1,5 +1,5 @@
 ## Trasformazioni Univariate
-Sia una v.a. $X$ con [[pdf]] $f_X(x)$.
+Sia una v.a. $X$ con pdf $f_X(x)$.
 Sia $S$ il **supporto** di $X$, ovvero l'insieme di tutte le $x$ per le quali $f_X(x) > 0$.
 $$S \equiv \{x \in \mathbb{R} : f_X(x) > 0\}$$
 

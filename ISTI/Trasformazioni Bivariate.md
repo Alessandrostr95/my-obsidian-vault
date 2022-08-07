@@ -95,7 +95,7 @@ Perciò avremo che la [[Distribuzioni Multivariate#Joint PDF|densità marginale]
 $$f_{U,V}(u,v) = f_{X,Y}\left( h_1(u,v), h_2(u,v) \right) \cdot \vert J \vert$$
 
 ### Prodotto di variabili Beta
-Siano $X \sim \text{Beta}(\alpha, \beta)$ e $Y \sim \text{Beta}(\alpha + \beta, \gamma)$ v.a. **indipendenti** con [[pdf]]
+Siano $X \sim \text{Beta}(\alpha, \beta)$ e $Y \sim \text{Beta}(\alpha + \beta, \gamma)$ v.a. **indipendenti** con pdf
 $$f_X(x) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha - 1}(1-x)^{\beta - 1}$$
 $$f_Y(y) = \frac{\Gamma(\alpha+\beta+\gamma)}{\Gamma(\alpha+\beta)\Gamma(\gamma)}y^{\alpha + \beta - 1}(1-y)^{\gamma - 1}$$
 Per indipendenza la loro [[Distribuzioni Multivariate#Joint PDF|densità congiunta]] sarà quindi
