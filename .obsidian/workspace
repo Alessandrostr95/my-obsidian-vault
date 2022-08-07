@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "51083f551c99cc8d",
+        "id": "c1a660f7f467899b",
         "type": "leaf",
         "state": {
           "type": "graph",
@@ -96,19 +96,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 272.5
+    "width": 256.4999084472656
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "c1a660f7f467899b",
   "lastOpenFiles": [
-    "ISTI/Statistiche Sufficienti.md",
+    "ISTI/Massima Verosimiglianza.md",
+    "ISTI/Metodo dei Momenti.md",
     "ISTI/Stimatori Puntuali.md",
-    "Senza nome.md",
-    "root.md",
-    "Disuguaglianza di Chebyschev.md",
-    "pdf.md",
-    "ISTI/Convergenza.md",
+    "Senza nome 1.md",
+    "AR/0 -Analisi di reti.md",
+    "AR/17 - Web Search - Part 1.md",
+    "AR/18 - Web Search - Part 2.md",
+    "ISTI/Distribuzioni Multivariate.md",
     "ISTI/Distribuzioni.md",
-    "ISTI/Trasformazioni Bivariate.md",
     "ISTI/Random Sample.md"
   ]
 }
