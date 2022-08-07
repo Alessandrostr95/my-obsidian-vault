@@ -134,3 +134,34 @@ Siano $Y_1 \sim \text{Poisson}(\lambda_1)$ e $Y_2 \sim \text{Poisson}(\lambda_2)
 Allora avremo che
 - $Y = Y_1 + Y_2$ è una poisson di parametro $\lambda = \lambda_1 + \lambda_2$.
 - La distribuzione di $Y_1$ **condizionata** al fatto che $Y = n$ è una **binomiale** di parametri $n$ e $\lambda_1/\lambda$.
+
+
+-----------------------
+# Chi Quadro
+La **distribuzione chi quadrato** è la distribuzione della somma dei quadrati di variabili aleatorie normali **indeipendenti**.
+## Notazione
+$$\chi^2_{k}$$
+
+## Parametri
+- **Gradi di lebertà** $$k \in \mathbb{N} \setminus \{ 0 \}$$
+## Supporto
+$$\left[ 0, \infty \right]$$
+
+## Funzione di ripartizione
+$$F(x) = \frac{1}{\Gamma\left( \frac{k}{2} \right)} \cdot \gamma\left( \frac{k}{2}, \frac{x}{2} \right)$$ dove $$\gamma(s,x) = \int_{0}^{x}t^{s-1}e^{-t} \, dt$$
+
+## Funzione di densità
+$$f(x) = \frac{1}{ 2^{k/2} \cdot \Gamma\left( \frac{k}{2} \right)} x^{k/2 - 1} e^{-x/2}$$
+
+## Media
+$$k$$
+
+## Varianza
+$$2k$$
+
+## Funzione generatrice dei momenti
+$$M_X(t) = (1 - 2t)^{}-k/2 \;\; \forall t \in \left[ -\frac{1}{2}, \frac{1}{2} \right]$$
+
+## Proprietà
+- La somma di due v.a. $\chi^2_n, \chi^2_m$ è una $\chi^2_{n+m}$
+- Sia $X_1, ..., X_n$ un campione di normali $N(\mu, \sigma^2)$. Allora lo stimatore $S^2$ segue una distribuzione $$S^2 \sim \frac{\sigma^2}{n-1}\chi^2_{n-1} \iff (n-1)\frac{S^2}{\sigma^2} \sim \chi^2_{n-1}$$
