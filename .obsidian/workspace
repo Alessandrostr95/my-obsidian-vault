@@ -4,10 +4,10 @@
     "type": "split",
     "children": [
       {
-        "id": "c1a660f7f467899b",
+        "id": "7de4bc0537580a04",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -98,17 +98,17 @@
     "direction": "horizontal",
     "width": 256.4999084472656
   },
-  "active": "c1a660f7f467899b",
+  "active": "7de4bc0537580a04",
   "lastOpenFiles": [
-    "ISTI/Massima Verosimiglianza.md",
-    "ISTI/Metodo dei Momenti.md",
     "ISTI/Stimatori Puntuali.md",
+    "ISTI/Statistiche Sufficienti.md",
+    "AR/18 - Web Search - Part 2.md",
+    "ISTI/Metodo dei Momenti.md",
+    "ISTI/Random Sample.md",
+    "ISTI/Massima Verosimiglianza.md",
     "Senza nome 1.md",
     "AR/0 -Analisi di reti.md",
     "AR/17 - Web Search - Part 1.md",
-    "AR/18 - Web Search - Part 2.md",
-    "ISTI/Distribuzioni Multivariate.md",
-    "ISTI/Distribuzioni.md",
-    "ISTI/Random Sample.md"
+    "ISTI/Distribuzioni Multivariate.md"
   ]
 }
