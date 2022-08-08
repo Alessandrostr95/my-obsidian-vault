@@ -1,122 +1,77 @@
-Link Analysis and Web Search
-============================
+# Link Analysis and Web Search
 
-HITS: Hubs and Authorities
---------------------------
+## HITS: Hubs and Authorities
+Ricapitolando, una volta individuato un sottoinsieme di pagine inerenti alla nostra ricerca, consideriamo maggiormente rilevanti quelle pagine che sono molto puntate (o **indicizzate**) all'interno dell'insieme.
 
-Ricapitolando, una volta individuato un sottoinsieme di pagine inerenti
-alla nostra ricerca, consideriamo maggiormente rilevanti quelle pagine
-che sono molto puntate (o **indicizzate**) all\'interno dell\'insieme.\
-Purtroppo però potrebbe capitare che una pagina venga puntata da
-tantissime pagine che in realtà sono molto poco rilevanti ai fini della
-ricerca. Oppure ancora, un utente malevolo a scopi egoistici potrebbe
-creare tante pagine fittizie che puntano alle sue pagine per avere più
-rilevanza.\
+Purtroppo però potrebbe capitare che una pagina venga puntata da tantissime pagine che in realtà sono molto poco rilevanti ai fini della ricerca.
+Oppure ancora, un utente malevolo a scopi egoistici potrebbe creare tante pagine fittizie che puntano alle sue pagine per avere più rilevanza.
 Perciò è utile porsi il seguente questio:
 
-> *quando e quanto una pagina è **autorevole** nel conferire rilevanza
-> ad un\'altra pagina che punta?*
+> *quando e quanto una pagina è **autorevole** nel conferire rilevanza ad un'altra pagina che punta?*
 
-L\'algoritmo **Hyperlink-Induced Topic Search** (o **HITS**, noto anche
-come **Hubs & Authorities**) proposto da [Jon
-Kleinberg](https://it.wikipedia.org/wiki/Jon_Kleinberg) consente di
-valutare la rilevanza delle pagine in funzione dei link che la puntano.\
+L'algoritmo **Hyperlink-Induced Topic Search** (o **HITS**, noto anche come **Hubs & Authorities**) proposto da [Jon Kleinberg](https://it.wikipedia.org/wiki/Jon_Kleinberg) consente di valutare la rilevanza delle pagine in funzione dei link che la puntano.
+
 Iniziamo con l\'associare ad ogni pagina due **indici**:
+- un indice di **autorità** che esprime la **rilevanza** della pagina ai fini della ricerca.
+- un indice di **hub** che invece esprime l\'attitudine della pagina a **conferire autorità** alle pagine alle quali punta.
 
--   un indice di **autorità** che esprime la [rilevanza]{.underline}
-    della pagina ai fini della ricerca.
--   un indice di **hub** che invece esprime l\'attitudine della pagina a
-    [conferire autorità]{.underline} alle pagine alle quali punta.
+Per ogni pagina $i$ della rete indichiamo con $a_i$ il suo valore di **autorità**, come il numero di pagine (nell\'insieme di pagine attinenti alla ricerca) che puntano ad $i$.
+$$a_i = \vert \{ j : j \mbox{ è attinente alla ricerca} \land j \rightarrow i \} \vert$$
+Con $j \rightarrow i$ stiamo ad indicare che la pagina $j$ punta alla pagina $i$.
 
-Per ogni pagina $i$ della rete indichiamo con $a_i$ il suo valore di
-**autorità**, come il numero di pagine (nell\'insieme di pagine
-attinenti alla ricerca) che puntano ad $i$. $$
-   a_i = \vert \{ j : j \mbox{ è attinente alla ricerca} \land j \rightarrow i \} \vert
-   $$ Con $j \rightarrow i$ stiamo ad indicare che la pagina $j$ punta
-alla pagina $i$.\
-Assumiamo che a fronte di una ricerca otteniamo un sottoinsieme di $n$
-pagine, indichiamo con $M$ la [matrice di adiacenza]{.underline} del
-sottografo indotto dalle $n$ pagine inerenti alla ricerca. $$
-   M\left[i,j \right] = \begin{cases}
-     1 &\mbox{se } i \rightarrow j\\
-     0 &\mbox{altrimenti}
-   \end{cases}\;\;
-   \forall 1 \leq i < j \leq n
-   $$ Definendo in questa maniera $M$ avremo che $$
-   a_i = \sum_{j = 1}^{n} M\left[j,i \right]
-   $$
+Assumiamo che a fronte di una ricerca otteniamo un sottoinsieme di $n$ pagine, indichiamo con $M$ la **matrice di adiacenza** del sottografo indotto dalle $n$ pagine inerenti alla ricerca.
+$$M\left[i,j \right] = \begin{cases}
+1 &\mbox{se } i \rightarrow j\\
+0 &\mbox{altrimenti}
+\end{cases}\;\;
+\forall 1 \leq i < j \leq n$$
+Definendo in questa maniera $M$ avremo che $$a_i = \sum_{j = 1}^{n} M\left[j,i \right]$$
 
-Indichiamo invece con $h_i$ l\'indice di hub di una pagina $i$. Tale
-indice potremmo definirlo come il numero di pagine (sempre all\'interno
-del sottoinsieme di nodi inerenti alla ricerca) alle quali $i$ punta.
+Indichiamo invece con $h_i$ l'indice di hub di una pagina $i$.
+Tale indice potremmo definirlo come il numero di pagine (sempre all'interno del sottoinsieme di nodi inerenti alla ricerca) alle quali $i$ punta.
 Ovvero
 
-```{=latex}
-\begin{align*}
-     h_i &= \vert \{ j : j \mbox{ è attinente alla ricerca} \land j \leftarrow i \} \vert\\
-     h_i &= \sum_{j = 1}^{n} M\left[i,j \right]
-\end{align*}
-```
-Partiamo con l\'osservare che possiamo *raffinare* i due indici appena
-definiti tramite le seguenti idee:
+$$\begin{align*}
+h_i &= \vert \{ j : j \mbox{ è attinente alla ricerca} \land j \leftarrow i \} \vert\\
+h_i &= \sum_{j = 1}^{n} M\left[i,j \right]
+\end{align*}$$
 
--   il valore di autorità di una pagina $i$ dovrebbe essere tanto più
-    eleveto quanto più sono **autorevoli** le pagine $j$ che la puntano.
--   simmetricamente, il valore di hub di una pagina $i$ dovrebbe essere
-    tanto più elevato quanto più è elevata la **rilevanza** delle pagine
-    $j$ a cui punta.
+Partiamo con l'osservare che possiamo *raffinare* i due indici appena definiti tramite le seguenti idee:
+- il valore di autorità di una pagina $i$ dovrebbe essere tanto più eleveto quanto più sono **autorevoli** le pagine $j$ che la puntano.
+- simmetricamente, il valore di hub di una pagina $i$ dovrebbe essere tanto più elevato quanto più è elevata la **rilevanza** delle pagine $j$ a cui punta.
 
-Se in qualche modo ci venisse suggerito un valore di hub iniziale
-$h^{(0)}_i$ potremmo raffinare il valore $a_i$ visto in precedenza nella
-seguente maniera $$
-     a^{(1)}_i = \sum_{j = 1}^{n} M\left[j,i \right] \cdot h^{(0)}_j
-   $$ Ovvero l\'autorità $a^{(1)}_i$ è influenzata dall\'autorevolezza
-delle $j$ che la puntano.
+Se in qualche modo ci venisse suggerito un valore di hub iniziale $h^{(0)}_i$ potremmo raffinare il valore $a_i$ visto in precedenza nella seguente maniera $$a^{(1)}_i = \sum_{j = 1}^{n} M\left[j,i \right] \cdot h^{(0)}_j$$
+Ovvero l'autorità $a^{(1)}_i$ è influenzata dall\'autorevolezza delle $j$ che la puntano.
 
-Dato che quindi l\'indice di autorità è modificato, possiamo raffinare
-anche $h^{(0)}_i$ alla stessa maniera. $$
-     h^{(1)}_i = \sum_{j = 1}^{n} M\left[i,j \right] \cdot a^{(1)}_j
-   $$
+Dato che quindi l'indice di autorità è modificato, possiamo raffinare anche $h^{(0)}_i$ alla stessa maniera $$h^{(1)}_i = \sum_{j = 1}^{n} M\left[i,j \right] \cdot a^{(1)}_j$$
 
-Possiamo quindi applicare questo **metodo iterativo** per raffinare al
-meglio gli indici di autorità e di hub
+Possiamo quindi applicare questo **metodo iterativo** per raffinare al meglio gli indici di autorità e di hub
 
-```{=latex}
-\begin{align*}
-     a^{(k+1)}_i &= \sum_{j = 1}^{n} M\left[j,i \right] \cdot h^{(k)}_j\\
-     h^{(k+1)}_i &= \sum_{j = 1}^{n} M\left[i,j \right] \cdot a^{(k+1)}_j
-\end{align*}
-```
+$$\begin{align*}
+a^{(k+1)}_i &= \sum_{j = 1}^{n} M\left[j,i \right] \cdot h^{(k)}_j\\
+h^{(k+1)}_i &= \sum_{j = 1}^{n} M\left[i,j \right] \cdot a^{(k+1)}_j
+\end{align*}$$
+
 oppure in forma compatta
 
-```{=latex}
-\begin{align*}
-     a^{(k+1)}_i &= M^T h^{(k)}\\
-     h^{(k+1)}_i &= M a^{(k+1)}
-\end{align*}
-```
-e ponendo (in maniera del tutto convenzionale)
-$h^{(0)} = \underline{1}$.\
-Ciò che vogliamo è ottenere ad ongi iterazione che i valori di autorità
-e di hub descrivano [meglio rispetto all\'iterazione
-precedente]{.underline} la rilevanza di una pagina nella ricerca. Ciò
-che cerchiamo è quindi una sorta di \"convergenza\" ai valori reali di
-autorità e di hub.\
-Innanzitutto non possiamo parlare di convergenza vera e propria in
-quanto ogni volta sommiamo valori non negativi. Perciò considereremo una
-convergenza in presenza di una **opportuna normalizzazione**.\
-Poi, per ottenere convergenza, è necessario che ad ogni iterazione si
-ottiene un risultato sempre migliore rispetto a quella precedente.
-Perciò non vogliamo che accada una situazione del tipo $$
-   \exists i,j : a^{(k)}_i > a^{(k)}_j, \;\; a^{(k+1)}_i < a^{(k+1)}_j, \;\; a^{(k+2)}_i > a^{(k+2)}_j, \;\; ...
-   $$
+$$\begin{align*}
+a^{(k+1)}_i &= M^T h^{(k)}\\
+h^{(k+1)}_i &= M a^{(k+1)}
+\end{align*}$$
 
-> \*THM\*\
-> Comunque si scelga un vettore iniziale $h^{(0)}$ con valori
-> [positivi]{.underline}, esiste un valore $c \in \mathbb{R}^+$ e un
-> vettore $z \in \mathbb{R}^n$ [non nullo]{.underline} tali che $$
-> \lim_{k \rightarrow \infty} \frac{h^{(k)}}{c^k} = z
-> $$ Analogamente per $a^{(k)}$.
+e ponendo (in maniera del tutto convenzionale) $h^{(0)} = \underline{1}$.
+
+Ciò che vogliamo è ottenere ad ongi iterazione che i valori di autorità e di hub descrivano **meglio rispetto all'iterazione precedente** la rilevanza di una pagina nella ricerca.
+Ciò che cerchiamo è quindi una sorta di "convergenza" ai valori reali di autorità e di hub.
+
+Innanzitutto non possiamo parlare di convergenza vera e propria in quanto ogni volta sommiamo valori non negativi.
+Perciò considereremo una convergenza in presenza di una **opportuna normalizzazione**.
+
+Poi, per ottenere convergenza, è necessario che ad ogni iterazione si ottiene un risultato sempre migliore rispetto a quella precedente.
+Perciò non vogliamo che accada una situazione del tipo $$\exists i,j : a^{(k)}_i > a^{(k)}_j, \;\; a^{(k+1)}_i < a^{(k+1)}_j, \;\; a^{(k+2)}_i > a^{(k+2)}_j, \;\; ...$$
+
+> **THM**
+> Comunque si scelga un vettore iniziale $h^{(0)}$ con valori **positivi**, esiste un valore $c \in \mathbb{R}^+$ e un vettore $z \in \mathbb{R}^n$ **non nullo** tali che $$\lim_{k \rightarrow \infty} \frac{h^{(k)}}{c^k} = z$$ Analogamente per $a^{(k)}$.
 
 > **Proof**: per definizione di $a^{(1)}$ abbiamo che $$
 > h^{(1)} = M a^{(1)} = MM^T h^{(0)}
