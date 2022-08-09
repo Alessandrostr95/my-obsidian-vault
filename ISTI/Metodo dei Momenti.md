@@ -77,3 +77,4 @@ $$\implies
 \hat{p} &= \dfrac{\overline{X}}{\hat{N}}
 \end{align*}$$
 
+
