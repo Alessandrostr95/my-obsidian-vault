@@ -62,5 +62,5 @@ Perciò uno stimatore consistente non è per forza non distorto, ma lo si può c
 -------------------
 # Metodi frequentisti per trovare stimatori
 Vedi:
-- [[Metodo dei Momenti]]
-- [[Massima Verosimiglianza]]
+- [[Metodo dei Momenti|Metodo dei Momenti]]
+- [[Stimatore di Massima Verosimiglianza|Stimatore di Massima Verosimiglianza]]

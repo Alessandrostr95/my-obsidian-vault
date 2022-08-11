@@ -7,8 +7,12 @@
         "id": "7de4bc0537580a04",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "ISTI/Trasformazioni Univariate.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ISTI/Trasformazioni Univariate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ISTI/Trasformazioni Univariate.md"
+              }
             }
           },
           {
@@ -101,14 +108,14 @@
   "active": "7de4bc0537580a04",
   "lastOpenFiles": [
     "ISTI/Stimatori Puntuali.md",
+    "ISTI/Stimatore di Massima Verosimiglianza.md",
+    "ISTI/Massima Verosimiglianza.md",
+    "ISTI/Trasformazioni Univariate.md",
+    "ISTI/Trasformazioni Bivariate.md",
+    "ISTI/Metodo dei Momenti.md",
     "ISTI/Statistiche Sufficienti.md",
     "AR/18 - Web Search - Part 2.md",
-    "ISTI/Metodo dei Momenti.md",
     "ISTI/Random Sample.md",
-    "ISTI/Massima Verosimiglianza.md",
-    "Senza nome 1.md",
-    "AR/0 -Analisi di reti.md",
-    "AR/17 - Web Search - Part 1.md",
-    "ISTI/Distribuzioni Multivariate.md"
+    "AR/0 -Analisi di reti.md"
   ]
 }
