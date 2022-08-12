@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "7de4bc0537580a04",
+        "id": "cb2f7cfcf5b6dae9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ISTI/Stimatori Puntuali.md",
+            "file": "ISTI/Informazione di Fisher.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ISTI/Stimatori Puntuali.md",
+                "file": "ISTI/Informazione di Fisher.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ISTI/Stimatori Puntuali.md"
+                "file": "ISTI/Informazione di Fisher.md"
               }
             }
           },
@@ -103,19 +103,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.4999084472656
+    "width": 326.5
   },
-  "active": "7de4bc0537580a04",
+  "active": "cb2f7cfcf5b6dae9",
   "lastOpenFiles": [
-    "ISTI/Stimatori Puntuali.md",
-    "ISTI/Stimatore di Massima Verosimiglianza.md",
+    "ISTI/Rao-Blakwell Theorem.md",
     "ISTI/Statistiche Sufficienti.md",
+    "ISTI/Informazione di Fisher.md",
+    "ISTI/Stimatori Puntuali.md",
+    "ISTI/Verosimiglianza.md",
+    "ISTI/Stimatore di Massima Verosimiglianza.md",
     "ISTI/Trasformazioni Univariate.md",
-    "ISTI/Massima Verosimiglianza.md",
     "ISTI/Trasformazioni Bivariate.md",
     "ISTI/Metodo dei Momenti.md",
-    "AR/18 - Web Search - Part 2.md",
-    "ISTI/Random Sample.md",
-    "AR/0 -Analisi di reti.md"
+    "AR/18 - Web Search - Part 2.md"
   ]
 }
