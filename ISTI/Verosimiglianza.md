@@ -1,5 +1,4 @@
-# Massima Verosimiglianza
-
+# Verosimiglianza
 ## Likelihood function
 Sia un [[Random Sample#Random Sample|campione]] $\mathbf{X} = (X_1, ..., X_n)$ dipendente da una serie di parametri $\theta_1, ..., \theta_k$, con [[Distribuzioni Multivariate#Joint PDF|densità congiunta]] $f_{\mathbf{X}}(\mathbf{x} \vert \theta_1, ..., \theta_k)$.
 Supponiamo che il **campione osservato** sia $\mathbf{X} = \mathbf{x}$, allora la **funzione di verosimiglianza** (o **likelihood function**) è una funzione definita come $$L(\theta_1, ..., \theta_k \vert \mathbf{x}) = f_{\mathbf{X}}(\mathbf{x} \vert \theta_1, ..., \theta_k) = \prod_{i=1}^{n}f_{X_i}(x_i \vert \theta_1, ..., \theta_k)$$
