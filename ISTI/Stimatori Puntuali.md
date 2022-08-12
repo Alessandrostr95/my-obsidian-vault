@@ -22,7 +22,7 @@ Perciò si vuole minimizzare la sua varianza $$\text{minimize Var}_{\theta}(T(\m
 Più in generale uno stiamtore è detto **UMVUE** (**uniformly minimum variance unbiased estimator**) se è **un-biased** e se per ogni $\theta$ possibile abbia una varianza più piccola rispetto a tutti gli altri stimatori (ovvero la minimizza).
 
 Altri termini utili sono:
-- il **bias** o **distorsione** $$\text{bias}(T) = \mathbb{E}_{\theta} \left[ T(\mathbf{X}) \right] - \theta$$ Ovviamente se $\text{bias}(T) = 0$ allora $T$ è non distorto.
+- il **bias** o **distorsione** $$\text{bias}(T) = \mathbb{E}_{\theta} \left[ T(\mathbf{X}) \right] - \theta$$ Ovviamente se $\text{bias}(T) = 0$ allora $T$ è non distorto. ^401481
 - L'**errore quadratico medio** $$\text{MSE}(T) = \mathbb{E}\left[ \left(T(\mathbf{X}) - \theta \right)^2 \right] = \text{Var}_{\theta}(T(\mathbf{X})) + \text{bias}(T)^2$$
 ### Esempio
 Richiamando il [[Random Sample#Teorema 5 2 6 - Proprietà importanti]], si può dimostrare che $\overline{X}$ e $S^2$ sono entrambi **stimatori non distorti** per $\mu$ e $\sigma^2$, ovvero

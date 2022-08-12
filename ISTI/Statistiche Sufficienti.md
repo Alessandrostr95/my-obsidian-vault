@@ -204,4 +204,3 @@ Con questa statistica, se troviamo due punti $\mathbf{x}, \mathbf{y}$ tali che $
 È facile anche dimostrare (tramite il [[#Teorema di Fattorizzazione]]) che $T$ è anche una statistia sufficiente per $\lambda$, infatti basta porre
 $$g(T(\mathbf{x}) \vert \lambda) = \lambda^n \exp{(-\lambda T(\mathbf{x}))}$$ e $$h(\mathbf{x}) = 1$$
 Dimostrando così che $T$ è una **statistica sufficiente minimale** per $\lambda$.
-
