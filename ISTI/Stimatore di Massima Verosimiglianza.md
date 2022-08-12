@@ -1,6 +1,6 @@
 # Stimatore di Massima Verosimiglianza - MLE
 Sia un [[Random Sample#Random Sample|campionamento]] $\mathbf{X} = (X_1, ..., X_n)$.
-Per ogni possibile valore osservabile $\mathbf{x}$, sia $\hat{\theta}(\mathbf{x})$ un **parametro** che **massimizza** la [[Massima Verosimiglianza#Likelihood function|funzione di massima verosimiglianza]] $L(\theta \vert \mathbf{x})$ (notare $\mathbf{x}$ fissato), ovvero
+Per ogni possibile valore osservabile $\mathbf{x}$, sia $\hat{\theta}(\mathbf{x})$ un **parametro** che **massimizza** la [[Verosimiglianza#Likelihood function|funzione di massima verosimiglianza]] $L(\theta \vert \mathbf{x})$ (notare $\mathbf{x}$ fissato), ovvero
 $$\hat{\theta}(\mathbf{x}) = \arg \max_{\theta \in \Theta} L(\theta \vert \mathbf{x})$$
 
 Allora uno **stimatore di massima verosimiglianza** (o **MLE - maximum likelihood estimator**) del parametro $\theta$ basato sul campione $\mathbf{X}$ è $\hat{\theta}(\mathbf{X})$.
