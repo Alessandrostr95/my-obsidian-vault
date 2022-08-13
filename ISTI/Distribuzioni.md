@@ -35,7 +35,7 @@ Sia $X \sim N(\mu, \sigma^2)$
 4. La v.a. $\vert X - \mu \vert / \sigma$ avrà distribuzione **chi** con 1 grado di libertà: $\vert X - \mu \vert / \sigma \sim \chi_1$.
 5. La v.a. $(X/\sigma)^2$ ha distribuzione **chi quadro non centrata** con $1$ grado di libertà: $$\left( \frac{X}{\sigma}\right)^2 \sim \chi_1^2\left( \frac{\mu^2}{\sigma^2} \right)$$
    Nel caso in cui $\mu = 0$ avremo semplicemente una **chi quadro** $\chi_1^2$
-6. La [[Random Sample#Media campionaria|media campionaria]] $\overline{X}_n$ di $n$ normali **indipendenti** ha una distribuzione $N(\mu, \sigma^2/n)$.
+6. La [[Random Sample#Media campionaria|media campionaria]] $\overline{X}_n$ di $n$ normali **indipendenti** ha una distribuzione $N(\mu, \sigma^2/n)$. ^50a917
 7. La sommma di $n$ normali **indipendenti** ha distribuzione $N(n\mu, n\sigma^2)$.
 
 
