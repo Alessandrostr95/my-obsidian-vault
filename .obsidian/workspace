@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cb2f7cfcf5b6dae9",
+        "id": "58f107abdf559a75",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ISTI/Informazione di Fisher.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ISTI/Informazione di Fisher.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ISTI/Informazione di Fisher.md"
-              }
+              "state": {}
             }
           },
           {
@@ -105,17 +98,17 @@
     "direction": "horizontal",
     "width": 326.5
   },
-  "active": "cb2f7cfcf5b6dae9",
+  "active": "58f107abdf559a75",
   "lastOpenFiles": [
-    "ISTI/Rao-Blakwell Theorem.md",
-    "ISTI/Statistiche Sufficienti.md",
-    "ISTI/Informazione di Fisher.md",
+    "ISTI/Cramér-Rao Inequality.md",
+    "ISTI/Delta Method.md",
     "ISTI/Stimatori Puntuali.md",
-    "ISTI/Verosimiglianza.md",
+    "ISTI/CLT - Central Limit Theorem.md",
+    "ISTI/Distribuzioni.md",
+    "ISTI/Distribuzioni Multivariate.md",
+    "ISTI/Random Sample.md",
+    "ISTI/Statistiche Sufficienti.md",
     "ISTI/Stimatore di Massima Verosimiglianza.md",
-    "ISTI/Trasformazioni Univariate.md",
-    "ISTI/Trasformazioni Bivariate.md",
-    "ISTI/Metodo dei Momenti.md",
-    "AR/18 - Web Search - Part 2.md"
+    "ISTI/Informazione di Fisher.md"
   ]
 }
