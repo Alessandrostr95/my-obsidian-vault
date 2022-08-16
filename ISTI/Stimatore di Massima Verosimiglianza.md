@@ -8,6 +8,11 @@ Allora uno **stimatore di massima verosimiglianza** (o **MLE - maximum likelihoo
 Dato che nel caso multivariato $L$ è uguale al prodotto delle singole densità, conviene calcolare il massimo della **log-verosimiglianza**, ovvero il logaritmo di $L(\theta \vert \mathbf{x})$.
 Per via della **monotonia** del logaritmo, un punto di massimo per $L$ equivale a un punto di massimo anche per $\ln{L}$.
 
+Perciò *derivando* in $\theta$ la *log-verosimiglianza* e ponendola pari a $0$ troveremo un potenziale punto di massimo.
+Per assicurarci che tale punto è di massimo e non di minimo, servirà fare la seconda derivata e virificare che sia **minore** di $0$.
+
+Ci riferiremo alla derivata della log-verosimiglianza con **score function** $$S(\theta, \mathbf{X}) = \frac{d}{d \theta}\ln{L(\theta \vert \mathbf{X})} = \sum_{i=1}^{n} \frac{d}{d \theta}\ln{f(x_i \vert \theta)}$$
+
 ## Esempio - Normale
 Sia un campionamento $X_1, ..., X_n$ di $N(\theta,1)$.
 Avremo quindi che la verosimiglianza sarà pari a $$L(\theta \vert \mathbf{x}) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x_i - \theta)^2} = (2\pi)^{-n/2}e^{-\frac{1}{2}\sum_i (x_i - \theta)^2}$$ 
