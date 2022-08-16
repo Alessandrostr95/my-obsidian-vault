@@ -25,11 +25,7 @@ Altri termini utili sono:
 - il **bias** o **distorsione** $$\text{bias}(T) = \mathbb{E}_{\theta} \left[ T(\mathbf{X}) \right] - \theta$$ Ovviamente se $\text{bias}(T) = 0$ allora $T$ è non distorto. ^401481
 - L'**errore quadratico medio** $$\text{MSE}(T) = \mathbb{E}\left[ \left(T(\mathbf{X}) - \theta \right)^2 \right] = \text{Var}_{\theta}(T(\mathbf{X})) + \text{bias}(T)^2$$
 ### Esempio
-Richiamando il [[Random Sample#Teorema 5 2 6 - Proprietà importanti]], si può dimostrare che $\overline{X}$ e $S^2$ sono entrambi **stimatori non distorti** per $\mu$ e $\sigma^2$, ovvero
-
-$$\text{bias}(\overline{X}) = 0$$
-
-$$\text{bias}(S^2) = 0$$
+Richiamando il [[Random Sample#Teorema 5 2 6 - Proprietà importanti]], si può dimostrare che $\overline{X}$ e $S^2$ sono entrambi **stimatori non distorti** per $\mu$ e $\sigma^2$, ovvero $$\text{bias}(\overline{X}) = 0$$ $$\text{bias}(S^2) = 0$$
 
 Invece sappiamo che la v.a. $(n-1)S^2/\sigma^2 \sim \chi^2_{n-1}$ ([[Distribuzioni#Chi Quadro#Proprietà|vedi]]) con media $n-1$ e varianza $2(n-1)$.
 Perciò $$\text{Var}(S^2) = \text{Var}(\sigma^2 \chi^2_{n-1}/(n-1)) = \left(\frac{\sigma^2}{n-1}\right)^2 \cdot \text{Var}(\chi^2_{n-1}) = 2\frac{\sigma^4}{n-1}$$ e quindi $$\text{MSE}(S^2) = \text{Var}(S^2) + \underbrace{\text{bias}(S^2)}_{=0} = 2\frac{\sigma^4}{n-1}$$
@@ -37,8 +33,7 @@ Perciò $$\text{Var}(S^2) = \text{Var}(\sigma^2 \chi^2_{n-1}/(n-1)) = \left(\fra
 Consideriamo ora un nuovo stimatore della varianza, un pochino più distorto $$\hat{\sigma}^2 = \frac{\sum_{i=1}^{n}(X_i - \overline{X})^2}{n} = \frac{n-1}{n}S^2$$
 
 Calcoliamo la sua media $$\mathbb{E}\left[ \hat{\sigma}^2 \right] = \mathbb{E}\left[ \frac{n-1}{n}S^2 \right] = \frac{n-1}{n}\sigma^2$$ e il suo bias $$\text{bias}(\hat{\sigma}^2) = \sigma^2 - \frac{n-1}{n}\sigma^2 = -\frac{\sigma^2}{n}$$
-Calcoliamo ora l'errore di tale stimatore
-$$\begin{align*}
+Calcoliamo ora l'errore di tale stimatore $$\begin{align*}
 \text{MSE}(\hat{\sigma}^2)
 &= \text{Var}(\hat{\sigma}^2) - \frac{\sigma^2}{n}\\
 &= \left( \frac{n-1}{n} \right)^2 \text{Var}(S^2) - \frac{\sigma^2}{n}\\

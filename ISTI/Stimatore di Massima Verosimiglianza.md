@@ -11,7 +11,7 @@ Per via della **monotonia** del logaritmo, un punto di massimo per $L$ equivale 
 Perciò *derivando* in $\theta$ la *log-verosimiglianza* e ponendola pari a $0$ troveremo un potenziale punto di massimo.
 Per assicurarci che tale punto è di massimo e non di minimo, servirà fare la seconda derivata e virificare che sia **minore** di $0$.
 
-Ci riferiremo alla derivata della log-verosimiglianza con **score function** $$S(\theta, \mathbf{X}) = \frac{d}{d \theta}\ln{L(\theta \vert \mathbf{X})} = \sum_{i=1}^{n} \frac{d}{d \theta}\ln{f(x_i \vert \theta)}$$
+Ci riferiremo alla derivata della log-verosimiglianza con **score function** $$S(\theta, \mathbf{X}) = \frac{d}{d \theta}\ln{L(\theta \vert \mathbf{X})} = \sum_{i=1}^{n} \frac{d}{d \theta}\ln{f(x_i \vert \theta)}$$ ^03be6d
 
 ## Esempio - Normale
 Sia un campionamento $X_1, ..., X_n$ di $N(\theta,1)$.
@@ -35,8 +35,7 @@ Perciò la verosimiglianza risulta essere $$L(\theta \vert \mathbf{x}) = \prod_{
 
 La *log-verosimiglianza* risulta invece $$\ln{(L(\theta \vert \mathbf{x}))} = s\log(\theta) + (n-s)\log(1-\theta)$$ con derivarte $$\frac{d}{d\theta} \ln{(L(\theta \vert \mathbf{x}))} = \frac{s}{\theta} - \frac{n-s}{1 - \theta}$$ e $$\frac{d^2}{d\theta^2} \ln{(L(\theta \vert \mathbf{x}))} = -\frac{s}{\theta^2} - \frac{n-s}{(1 - \theta)^2}$$
 
-La derivata prima è nulla quando
-$$\begin{align*}
+La derivata prima è nulla quando $$\begin{align*}
 \frac{s}{\theta} - \frac{n-s}{1 - \theta} &= 0\\
 (1-\theta)s - \theta(n-s) &= 0\\
 s - \cancel{s\theta} - n\theta + \cancel{s\theta} &= 0\\
@@ -46,6 +45,18 @@ s - \cancel{s\theta} - n\theta + \cancel{s\theta} &= 0\\
 È possibile verificare che tale punto è anche un punto di massimo **globale**, perciò avremo che $\hat{p} = \overline{X}$ è uno stimatore di massima verosimiglianza.
 
 ------------------------
-# Proprietà di invarianza di un MLE
+# Proprietà di un MLE
+
+## Invarianza di uno MLE
 Sia $\hat{\theta}$ uno **stimatore di massima verosimiglianza** di un parametro $\theta$.
 Allora per ogni funzione $\tau(\theta)$ avremo che $\tau(\hat{\theta})$ è uno stimatore di massima verosimiglianza per $\tau(\theta)$.
+
+## Proprietà asintotiche (molto importanti)
+Gli stimatori di massima verosimiglianza possono essere distorti ma, sotto condizioni abbastanza generali, sono però **consistenti** e, per $n$ che tende ad infinito, risultano **asintoticamente corretti** e **massimamente efficienti**.
+Inoltre, sempre per $n$ che tende ad infinito, la loro distribuzione tende ad una normale.
+
+In termini tecnici, uno MLE $\hat\theta_{ML}$ per un parametro $\theta$ è:
+1. **Asintoticamente corretto (non distorto)**: anche se $\hat\theta_{ML}$ risulta **distorto**, asintoticamente avremo sempre che $$\lim_{n \to \infty} \mathbb{E}\left[ \hat\theta_{ML} \right] = \theta$$
+2. **Consistente**: ovvero che $\hat\theta_{ML}$ **[[Convergenza#Convergenza in probabilità|converge in probabilità]]** a $\theta$ $$\hat{\theta}_{ML} \xrightarrow{p} \theta$$
+3. **Asintoticamente efficiente**: la varianza di $\hat{\theta}_{ML}$ tende asintoticamente la suo **[[Cramér-Rao Inequality#Cramér-Rao Inequality|limite inferiore]]**, ed essendo $\hat{\theta}_{ML}$ asintoticamente non distorto avremo che $$\lim_{n \to \infty} \text{Var}(\hat\theta_{ML}) = \frac{1}{I(\theta)}$$
+4. **Asintoticamente normale**: per $n \to \infty$ avremo che $$\hat\theta_{ML} \sim N\left(\theta, \frac{1}{I(\theta)}\right)$$ oppure normalizzando $$\sqrt{n}(\hat\theta_{ML} - \theta) \approx \frac{S(\theta \vert \mathbf{X})}{nI(\theta)} \sim N\left(0, \frac{1}{I(\theta)}\right)$$
