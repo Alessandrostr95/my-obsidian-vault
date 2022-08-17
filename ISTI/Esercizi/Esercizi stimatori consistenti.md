@@ -23,9 +23,10 @@ Ricordiamo che $$\hat\theta_{ML} = \arg \max_{\theta \in (-1,1)} \ln{L(\theta \v
 Ricordiamo inoltre che $\hat\theta_{ML}$ è uno dei punti in cui la [[Stimatore di Massima Verosimiglianza#^03be6d|score funcion]] si annulla $$S(\hat\theta \vert \mathbf{x}) = \sum_{i=1}^{n} \frac{d}{d\theta}\ln{(1 + \theta x_i)} = \sum_{i=1}^{n} \frac{x_i}{1 + \theta x_i} = 0$$
 Calcolare il reale punto di massima può risultare complesso, possiamo però calcolare la **varianza asintotica** grazie alle [[Stimatore di Massima Verosimiglianza#Proprietà asintotiche molto importanti|proprietà asintotiche di un MLE]] $$\lim_{n \to \infty} \text{Var}(\hat\theta_{ML}) = \frac{1}{I(\theta)}$$ con $$\begin{align*}
 I(\theta)
-&= \cdot \mathbb{E}_{\theta}\left[ \left( \frac{d}{d \theta} \ln{f(X \vert \theta)} \right)^2 \right]\\
+&= \mathbb{E}_{\theta}\left[ \left( \frac{d}{d \theta} \ln{f(X \vert \theta)} \right)^2 \right]\\
 &= \mathbb{E}_{\theta}\left[ \left( \frac{X}{1 + \theta X}\right)^2 \right]\\
 &= \int_{-1}^{1}\frac{x^2}{(1+ \theta x)^2} \cdot \frac{1}{2}(1+ \theta x) \, dx\\
 &= \frac{1}{2}\int_{-1}^{1}\frac{x^2}{1+ \theta x} \, dx\\
 &= \frac{1}{2\theta^3}\log{\frac{1+\theta}{1-\theta}} - \frac{1}{\theta^2}
 \end{align*}$$
+

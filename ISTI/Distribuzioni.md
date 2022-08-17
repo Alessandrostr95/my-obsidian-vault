@@ -165,3 +165,42 @@ $$M_X(t) = (1 - 2t)^{}-k/2 \;\; \forall t \in \left[ -\frac{1}{2}, \frac{1}{2} \
 ## Proprietà
 - La somma di due v.a. $\chi^2_n, \chi^2_m$ è una $\chi^2_{n+m}$
 - Sia $X_1, ..., X_n$ un campione di normali $N(\mu, \sigma^2)$. Allora lo stimatore $S^2$ segue una distribuzione $$S^2 \sim \frac{\sigma^2}{n-1}\chi^2_{n-1} \iff (n-1)\frac{S^2}{\sigma^2} \sim \chi^2_{n-1}$$
+
+--------------
+# Gamma
+## Notazione
+$$\Gamma(k, \theta)$$
+
+## Parametri
+$$k, \theta \in \mathbb{R}^+$$
+
+## Funzione di ripartizione
+$$P(k,x) = \frac{\gamma(k, x/\theta)}{\Gamma(k)}$$ dove $$\gamma(a,x) = \int_0^x e^{-t}t^{a-1} \, dt$$ e
+$$\Gamma(x) =
+\begin{cases}\int_0^{\infty}e^{-t}t^{x-1} \, dt &\mbox{per } x \in \mathbb{R}\\
+x-1! &\mbox{per } x \in \mathbb{N}
+\end{cases}$$
+
+## Funzione di densità
+$$f(x) = \frac{\theta^{-k}}{\Gamma(k)} x^{k-1}e^{-x/\theta}$$
+
+## Media
+$$k\theta$$
+
+## Varianza
+$$k \theta^2$$
+
+## Funzione generatrice dei momenti
+$$M_X(t) = (1-t\theta)^{-k} \;\; \forall t  < \theta^{-1}$$
+
+## Proprietà
+### Cambiamento di scala
+Sia $X \sim \Gamma(k, \theta)$ allora $aX \sim \Gamma(k, a\theta)$.
+
+### Somme di Gamma
+Siano $X_1, ..., X_n$ **indipendenti** tali che $X_i \sim \Gamma(k_i, \theta)$, allora $X_1 + ... + X_n \sim \Gamma(k_1 + ... + k_n, \theta)$.
+
+### Altre proprietà importanti
+1. $$\Gamma(1, \theta) = \text{Exp}(1/\theta)$$
+2. $$X \sim N(0,1) \implies X^2 \sim \Gamma\left(\frac{1}{2}, \frac{1}{2}\right)$$
+3. Siano $X_1, ..., X_n \sim N(0,1)$ *i.i.d*, allora $$\sum_{i=1}^{n}X_i^2 \sim \chi_n^2 = \Gamma\left(\frac{n}{2}, \frac{1}{2} \right)$$
