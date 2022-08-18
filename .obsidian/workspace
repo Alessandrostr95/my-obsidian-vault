@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "58f107abdf559a75",
+        "id": "b7270e4b014eb02b",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "ISTI/Hypothesis Testing.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 313.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ISTI/Hypothesis Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ISTI/Hypothesis Testing.md"
+              }
             }
           },
           {
@@ -96,19 +103,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 288.5
   },
-  "active": "58f107abdf559a75",
+  "active": "b7270e4b014eb02b",
   "lastOpenFiles": [
-    "ISTI/Cramér-Rao Inequality.md",
-    "ISTI/Delta Method.md",
-    "ISTI/Stimatori Puntuali.md",
-    "ISTI/CLT - Central Limit Theorem.md",
+    "ISTI/img/isti_test_ipotesi_3.png",
+    "ISTI/Hypothesis Testing.md",
     "ISTI/Distribuzioni.md",
     "ISTI/Distribuzioni Multivariate.md",
-    "ISTI/Random Sample.md",
-    "ISTI/Statistiche Sufficienti.md",
+    "ISTI/Trasformazioni Univariate.md",
+    "isti.md",
+    "ISTI/Cramér-Rao Inequality.md",
     "ISTI/Stimatore di Massima Verosimiglianza.md",
-    "ISTI/Informazione di Fisher.md"
+    "ISTI/Verosimiglianza.md",
+    "ISTI/Stimatori Puntuali.md"
   ]
 }
