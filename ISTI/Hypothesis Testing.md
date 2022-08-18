@@ -5,7 +5,7 @@ Dato che $\theta$ appartiene ad uno *spazio di parametri* $\Theta$, un'ipotesi �
 
 Rifiutare l'ipotesi nulla equivale semplicemente nell'accettare il suo complemento, chiameremo **ipotesi alternativa** e la indicheremo con $H_A$ o $H_1$, e sono del tipo $$\theta \in \Theta_0^c \equiv \Theta \setminus \Theta_0$$
 
-Un test d'ipotesi è quindi semplicemente una **regola** che, per ogni possibile campione $\mathbf{X}$, ci dice se **rifiutare o no** l'ipotesi nulla $H_0$.
+Un test d'ipotesi è quindi semplicemente una **regola** che, per ogni possibile campione $\mathbf{X}$, ci dice se **rifiutare o no** l'ipotesi nulla $H_0$. ^349ec3
 > **Esempio**
 > Prendiamo un campione $X_1,...,X_n$ di una popolazione $N(\theta, \sigma^2)$, con $\theta$ sconosciuto.
 > Consideriamo una ipotesi $$H_0: \theta \leq 17$$
