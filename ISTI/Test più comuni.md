@@ -24,4 +24,4 @@ $$\begin{align*}
 &= 1 - (\Phi(c) - \Phi(-c))
 \end{align*}$$
 ovvero risolvendo $$0.975 = \Phi(c) - \Phi(-c)$$
-Nel nostro caso, un buon $c$ è $2.25$.
+Perciò nel nostro caso, con $c = 2.25$ avremo all'incirca il $2.5\%$ che il test commetta un errore.
