@@ -22,6 +22,9 @@ Per esempio, dire a una persona malata che in realtà è in salute è un errore 
 Distinguiamo quindi:
 - **Errore di I tipo**: rifiutare $H_0$ quando in realtà $H_0$ è vera. In termini di eventi avremo $$\mathbf{X} \in C \;\vert\; \theta \in \Theta_0$$
 - **Errore di II tipo**: accettare $H_0$ quando in realtà $H_0$ è falsa. In termini di eventi avremo $$\mathbf{X} \in C^c \;\vert\; \theta \in \Theta^c_0$$
+
+![|600](isti_test_ipotesi_errors.png)
+
 Per comodità, indicheremo
 $$\alpha = P(\mathbf{X} \in C \;\vert\; \theta \in \Theta_0)$$
 $$\beta = P(\mathbf{X} \in C^c \;\vert\; \theta \in \Theta^c_0)$$
