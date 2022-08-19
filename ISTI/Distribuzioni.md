@@ -218,6 +218,7 @@ $$(-\infty, \infty)$$
 
 ## Funzione di densità
 $$f(x) = \frac{\Gamma\left( \frac{\nu +1}{2} \right)}{\sqrt{\nu \pi} \; \Gamma\left( \frac{\nu}{2} \right)} \left( 1 + \frac{x^2}{\nu} \right)^{-\dfrac{\nu +1}{2}}$$ 
+![|400](isti-distr-2.png)
 
 ## Media
 $$\mu = \begin{cases}
