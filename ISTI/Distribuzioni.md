@@ -204,3 +204,33 @@ Siano $X_1, ..., X_n$ **indipendenti** tali che $X_i \sim \Gamma(k_i, \theta)$, 
 1. $$\Gamma(1, \theta) = \text{Exp}(1/\theta)$$
 2. $$X \sim N(0,1) \implies X^2 \sim \Gamma\left(\frac{1}{2}, \frac{1}{2}\right)$$
 3. Siano $X_1, ..., X_n \sim N(0,1)$ *i.i.d*, allora $$\sum_{i=1}^{n}X_i^2 \sim \chi_n^2 = \Gamma\left(\frac{n}{2}, \frac{1}{2} \right)$$
+--------------
+# Distribuzione $t$ di Stundet
+## Notazione
+$$t(\nu)$$
+
+## Parametri
+- **Gradi di libertà** $$\nu \in \mathbb{R}^+$$
+
+## Supporto
+$$(-\infty, \infty)$$
+
+
+## Funzione di densità
+$$f(x) = \frac{\Gamma\left( \frac{\nu +1}{2} \right)}{\sqrt{\nu \pi} \; \Gamma\left( \frac{\nu}{2} \right)} \left( 1 + \frac{x^2}{\nu} \right)^{-\dfrac{\nu +1}{2}}$$ 
+
+## Media
+$$\mu = \begin{cases}
+0 &\mbox{se } \nu > 0\\
+\texttt{undefined} &\mbox{altrimenti}
+\end{cases}$$
+
+## Varianza
+$$\sigma^2 = \begin{cases}
+\dfrac{\nu}{\nu-2} &\mbox{se } \nu > 2\\
+\infty &\mbox{se } 1 < \nu \leq 2\\
+\texttt{undefined} &\mbox{altrimenti}
+\end{cases}$$
+
+## Funzione generatrice dei momenti
+INDEFINITA
