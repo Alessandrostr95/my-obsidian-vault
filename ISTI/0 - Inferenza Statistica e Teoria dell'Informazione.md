@@ -1,4 +1,14 @@
 # Inferenza Statistica e Teoria dell'Informazione
+--------------
+## Info corso
+- **Docente**: Scalia Tomba
+- **A.A.**: 2021/2022
+- **Semestre**: 2°
+- **CFU**: 6
+- **Università**: Tor Vergata
+
+
+-------------------------
 ## Table of contents
 1. [[Distribuzioni]]
 2. [[Trasformazioni Univariate]]

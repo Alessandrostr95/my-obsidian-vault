@@ -1,4 +1,13 @@
 # Analisi di Reti
+--------------------------
+## Info corso
+- **Docente**: Miriam Di Ianni
+- **A.A.**: 2021/2022
+- **Semestre**: 1°
+- **CFU**: 6
+- **Università**: Tor Vergata
+
+---------------------
 ## Table of contents
 - [[1 - Erdos-Renyi Random Graph]]
 - [[2 - Power Law]]
