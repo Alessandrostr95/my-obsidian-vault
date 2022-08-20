@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "01aee95d15494cbe",
+        "id": "ecbd3f1433487549",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -98,17 +98,17 @@
     "direction": "horizontal",
     "width": 288.5
   },
-  "active": "01aee95d15494cbe",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "ISTI/Delta Method.md",
+    "Senza nome.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "ISTI/p-value - Livello di Significatività di un Test.md",
     "ISTI/Test più comuni.md",
+    "ISTI/Hypothesis Testing.md",
+    "root.md",
+    "ISTI/Delta Method.md",
     "ISTI/Random Sample.md",
     "ISTI/Statistiche Sufficienti.md",
-    "ISTI/Stimatori Puntuali.md",
-    "ISTI/Distribuzioni.md",
-    "ISTI/Metodo dei Momenti.md",
-    "AR/0 -Analisi di reti.md",
-    "AGT/0 - Algorithmic game theory.md"
+    "ISTI/Stimatori Puntuali.md"
   ]
 }
