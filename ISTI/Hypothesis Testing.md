@@ -40,14 +40,14 @@ Dato un test, definiamo la **potenza del test** come la probabilità di rifiutar
 $$\beta(\theta) = P(\mathbf{X} \in C \vert \theta)$$
 Alcune volte ci si riferisce alla potenza di un test con $\Pi(\theta)$.
 
-> **Esempio**
+> **Esempio - Bernoulli trials**
 > Supponiamo di aver lanciato una moneta per $10$ volte, e vogliamo sapere se è equilibrata $p=1/2$ oppure no.
 > Per esempio un test può essere quello di accettare o rifiutare l'ipotesi nulla $$H_0: p = \frac{1}{2}$$
 > Consideriamo un test banale, per esempio il test che rifiuta $H_0$ se si ottengono *nessuna* oppure *tutte* teste, ovvero $$\text{rifiuto } H_0 \iff \sum_{i=1}^{10}X_i \in \{0, 10\}$$
 > Avremo quindi che la potenza di questo test sarà $$\beta(p) = (1-p)^{10} + p^{10}$$
 > ![|500](isti_test_ipotesi_1.png)
 
-> **Esempio**
+> **Esempio - Normale**
 > Consideriamo ancora una volta un [[Distribuzioni#Normale|densità normale]] del tipo $$f(x \vert \theta) = N(\theta, 25)$$ con <u>media ignota</u>.
 > Sia l'*ipotesi nulla* $$H_0: \theta \leq 17$$ e il test $$\text{rifiuto } H_0 \iff \overline{X}_n > 17 + \frac{5}{\sqrt{n}}$$
 > Tale test avrà potenza $$\beta(\theta) = P(\overline{X}_n > 17 + 5/\sqrt{n})$$
