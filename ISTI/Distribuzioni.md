@@ -104,6 +104,24 @@ $$\frac{1}{\lambda^2}$$
 ## Funzione generatrice dei momenti
 $$\left(1 - \frac{t}{\lambda}\right)^{-1}$$
 
+## Proprietà
+1. Siano $X_1,...,X_n$ v.a. **indipendenti** esponenziali di parametri $\lambda_1, ..., \lambda_n$. Allora la v.a. $\min{\{X_1, ..., X_n\}}$ è anch'essa una esponenziale di paramtro $\lambda = \lambda_1 + ... + \lambda_n$
+2. Siano $X_1,X_2$ due v.a. esponenziali **indipendenti** e di parametri $\lambda_1, \lambda_2$. Allora la v.a. $Z = X_1 + X_2$ avrà densità $$\begin{align*}
+f_Z(z)
+&= \int_{0}^{z}f_{X_1}(w)f_{X_2}(z-w) \, dw\\
+&=\int_{0}^{z}\lambda_1e^{-\lambda_1w}\lambda_2e^{-\lambda_2(z-w)} \, dw\\
+&= \lambda_1\lambda_2e^{-\lambda_2z}\int_{0}^{z}e^{(\lambda_2 - \lambda_2)w}\,dw\\
+&= \begin{cases}
+\lambda^2ze^{-\lambda z} &\mbox{se } \lambda_1 = \lambda_2 = \lambda\\
+\frac{\lambda_1\lambda_2}{\lambda_2-\lambda_1}(e^{-\lambda_1 z} - e^{-\lambda_2 z}) &\mbox{se } \lambda_1 \neq \lambda_2
+\end{cases}
+\end{align*}$$
+3. Siano $X_1, ..., X_n$ **i.i.d.** $U\left[ 0,1 \right]$, allora $$\lim_{n \to \infty} n \min{\{X_1, ..., X_n\}} \sim \text{Exp}(1)$$
+4.  Sia $X \sim \text{Exp}(\lambda)$, allora $kX \sim \text{Exp}(\lambda / k)$. Un caso particolare è $\lambda X \sim \text{Exp}(1)$.
+5. Sino $X_1, ..., X_n$ **i.i.d.** $\text{Exp}(\lambda)$, allora $X_1 + ... + X_n \sim \Gamma(n, 1/\lambda)$ (vedi [[#Gamma]]).
+6. $\hat\lambda_{ML} = 1/\overline{X}$, con *bias* $b = \lambda/(n-1)$. Perciò lo stimatore di massima verosimiglianza non distorto sarà $\hat\lambda^*_{ML} = \hat\lambda_{ML} - b$ .
+7. $I(\lambda) = \lambda^{-2}$
+
 --------------------
 # Poisson
 ## Notazione
