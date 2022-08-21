@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "ecbd3f1433487549",
+        "id": "356a1f0a30b63580",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "diff-view",
+          "state": {
+            "file": "ISTI/Stimatore di Massima Verosimiglianza.md",
+            "staged": false
+          }
         }
       }
     ],
@@ -96,19 +99,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 288.5
+    "width": 274.4999084472656
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "356a1f0a30b63580",
   "lastOpenFiles": [
-    "Senza nome.md",
-    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "ISTI/p-value - Livello di Significatività di un Test.md",
+    "ISTI/Test chi-quadro.md",
+    "ISTI/quantili.pdf",
+    "ISTI/Tabelle dei Quantili.md",
+    "ISTI/Altri Test.md",
     "ISTI/Test più comuni.md",
+    "ISTI/Distribuzioni.md",
+    "ISTI/Stimatore di Massima Verosimiglianza.md",
+    "ISTI/Verosimiglianza.md",
     "ISTI/Hypothesis Testing.md",
-    "root.md",
-    "ISTI/Delta Method.md",
-    "ISTI/Random Sample.md",
-    "ISTI/Statistiche Sufficienti.md",
-    "ISTI/Stimatori Puntuali.md"
+    "ISTI/p-value - Livello di Significatività di un Test.md"
   ]
 }
