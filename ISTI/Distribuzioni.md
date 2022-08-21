@@ -187,10 +187,13 @@ $$M_X(t) = (1 - 2t)^{}-k/2 \;\; \forall t \in \left[ -\frac{1}{2}, \frac{1}{2} \
 --------------
 # Gamma
 ## Notazione
-$$\Gamma(k, \theta)$$
+- **Shape-Scale** $$\Gamma(k, \theta)$$
+- **Shape-Rate** $$\Gamma(\alpha, \beta)$$
 
 ## Parametri
-$$k, \theta \in \mathbb{R}^+$$
+- **Shape**: $k = \alpha \in \mathbb{R}^+$
+- **Scale**: $\theta = \beta^{-1} \in \mathbb{R}^+$
+- **Rate**: $\beta = \theta^{-1} \in \mathbb{R}^+$
 
 ## Funzione di ripartizione
 $$P(k,x) = \frac{\gamma(k, x/\theta)}{\Gamma(k)}$$ dove $$\gamma(a,x) = \int_0^x e^{-t}t^{a-1} \, dt$$ e
@@ -203,10 +206,10 @@ x-1! &\mbox{per } x \in \mathbb{N}
 $$f(x) = \frac{\theta^{-k}}{\Gamma(k)} x^{k-1}e^{-x/\theta}$$
 
 ## Media
-$$k\theta$$
+$$k\theta = \frac{\alpha}{\beta}$$
 
 ## Varianza
-$$k \theta^2$$
+$$k \theta^2 = \frac{\alpha}{\beta^2}$$
 
 ## Funzione generatrice dei momenti
 $$M_X(t) = (1-t\theta)^{-k} \;\; \forall t  < \theta^{-1}$$
@@ -214,6 +217,7 @@ $$M_X(t) = (1-t\theta)^{-k} \;\; \forall t  < \theta^{-1}$$
 ## Proprietà
 ### Cambiamento di scala
 Sia $X \sim \Gamma(k, \theta)$ allora $aX \sim \Gamma(k, a\theta)$.
+Oppure espresso con notazione **shapre-rate** avremo che se $X \sim \Gamma(\alpha, \beta)$ allora $aX \sim \Gamma(\alpha, \beta/c)$.
 
 ### Somme di Gamma
 Siano $X_1, ..., X_n$ **indipendenti** tali che $X_i \sim \Gamma(k_i, \theta)$, allora $X_1 + ... + X_n \sim \Gamma(k_1 + ... + k_n, \theta)$.
@@ -222,6 +226,10 @@ Siano $X_1, ..., X_n$ **indipendenti** tali che $X_i \sim \Gamma(k_i, \theta)$, 
 1. $$\Gamma(1, \theta) = \text{Exp}(1/\theta)$$
 2. $$X \sim N(0,1) \implies X^2 \sim \Gamma\left(\frac{1}{2}, \frac{1}{2}\right)$$
 3. Siano $X_1, ..., X_n \sim N(0,1)$ *i.i.d*, allora $$\sum_{i=1}^{n}X_i^2 \sim \chi_n^2 = \Gamma\left(\frac{n}{2}, \frac{1}{2} \right)$$
+4. Il momento $n$-esimo di una gamma è $$\mathbb{E}\left[ X^n \right] = \theta^n\frac{\Gamma(n+k)}{\Gamma(k)}$$
+5. La somma $X_1, ..., X_n$ v.a. $\Gamma(k_i, \theta)$ **indipententi** ha distribuzione $$X_1 + ... + X_n \sim \Gamma(k_1 + ... + k_n, \theta)$$
+6. Per valori di $k$ abbastanza grandi avremo che la distribuzione gamma converge ad una normale con $\mu = k\theta$ e $\sigma = k \theta^2$.
+
 --------------
 # Distribuzione $t$ di Stundet
 ## Notazione
