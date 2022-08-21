@@ -1,3 +1,4 @@
+# Continue
 # Normale
 ### Notazione
 $$N(\mu, \sigma^2)$$
@@ -118,7 +119,7 @@ f_Z(z)
 \end{align*}$$
 3. Siano $X_1, ..., X_n$ **i.i.d.** $U\left[ 0,1 \right]$, allora $$\lim_{n \to \infty} n \min{\{X_1, ..., X_n\}} \sim \text{Exp}(1)$$
 4.  Sia $X \sim \text{Exp}(\lambda)$, allora $kX \sim \text{Exp}(\lambda / k)$. Un caso particolare è $\lambda X \sim \text{Exp}(1)$.
-5. Sino $X_1, ..., X_n$ **i.i.d.** $\text{Exp}(\lambda)$, allora $X_1 + ... + X_n \sim \Gamma(n, 1/\lambda)$ (vedi [[#Gamma]]).
+5. Sino $X_1, ..., X_n$ **i.i.d.** $\text{Exp}(\lambda)$, allora $X_1 + ... + X_n \sim \Gamma(n, 1/\lambda)$ (vedi [[#Gamma]]). ^9fe8ff
 6. $\hat\lambda_{ML} = 1/\overline{X}$, con *bias* $b = \lambda/(n-1)$. Perciò lo stimatore di massima verosimiglianza non distorto sarà $\hat\lambda^*_{ML} = \hat\lambda_{ML} - b$ .
 7. $I(\lambda) = \lambda^{-2}$
 
@@ -261,3 +262,50 @@ $$\sigma^2 = \begin{cases}
 
 ## Funzione generatrice dei momenti
 INDEFINITA
+
+---------------
+------------------
+# Discrete
+# Uniforme
+
+----------
+# Bernoulli
+
+----------
+# Geometrica
+
+---------------
+# Ipergeometrica
+
+------------
+# Binomiale
+
+------------------
+# Multinomiale (multivariata)
+La distribuzione multinomiale è una *generalizzazione* di una binomiale.
+## Notazione
+$$\text{Multi}(n,k,(p_1,...,p_k))$$
+
+## Parametri
+- **Numero di tentativi** $$n \in \mathbb{N}^+$$
+- **Numero di possibili eventi (mutualmente disgiunti)** $$k \in \mathbb{N}^+$$
+- **Probabilità dei signoli eventi** $$(p_1,...,p_n) \in \left[ 0,1 \right]^n : \sum_{i=1}^{n} p_i = 1$$
+
+## Supporto
+$$\bigg\{ \mathbf{X} \in \{0,1,...,n\}^k : \sum_{i=1}^{k}X_i = n\bigg\} \subset \mathbb{N}^k$$
+
+Osservare che il numero di elementi nel supporto è $$\binom{n+k-1}{k-1}$$
+
+## Distribuzione
+$$P(X_1 =x_1 ,..., X_k = x_k) = \frac{n!}{x_1! \cdots x_k!}p_1^{x_1} \cdots p_k^{x_k}$$
+
+## Media
+$$\mathbb{E}\left[ X_i \right] = np_i$$
+
+## Varianza
+$$\text{Var}(X_i) = np_i(1-p_i)$$
+$$\text{Cov}(X_i, X_j) = -np_ip_j$$
+
+## Proprietà
+1. $$\text{Multi}(1,2,(p, 1-p)) \equiv \text{Bernoulli}(p)$$
+2.  $$n > 2 \implies \text{Multi}(n,2,(p, 1-p)) \equiv \text{Binom}(n, p)$$
