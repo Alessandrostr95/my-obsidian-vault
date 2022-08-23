@@ -97,4 +97,40 @@ $c_j$  |162 | 298 | 254 | $n = 714$
 Approssimiamo quindi il valore atteso come $$\mathbb{E}\left[ X_{ij} \right] = np_{ij} \approx n \cdot \frac{r_i}{n} \cdot \frac{c_j}{n} = \frac{r_i c_j}{n}$$
 A questo punto, definiamo la statistica $$T = \sum_{i,j} \frac{\left(X_{ij} - \dfrac{r_ic_j}{n}\right)^2}{\dfrac{r_ic_j}{n}}$$
 Sotto ipotesi nulla $H_0$ avremo che $T \sim \chi^2_{(r-1)(c-1)}$ ovvero segue una [[Distribuzioni#Chi Quadro|distribuzione chi-quadro]] con $(r-1) \cdot (c-1)$ **gradi di libertà**.
-Perciò, sotto 
+Perciò noi avremo
+$$T = \frac{(40 - 31.99)^2}{31.99} + ... + \frac{(38 - 51.938)^2}{51.938} = 203.277$$
+
+Nel nostro caso, la probabilità che $T$ assuma il valore osservato è pressoche nulla sotto ipotesi $H_0$, perciò troppo rilevante per essere solamente un caso.
+
+Possiamo rifiutare $H_0$, e supporre che invece esista qualche dipendenza tra i gusti e la nazionalità.
+
+## Esempio semplice
+Supponiamo di aver testato due antibiotici, e di aver contato i guariti alla fine della cura sperimentale.
+Raccogliamo tutti i dati, e otteniamo la seguente tabella di contingenza.
+
+Trattamento \ Esito | Guariti | Non guariti | Totale
+:-|:-:|:-:|:-:
+Antibiotico 1 | 52 | 10 | 62
+Antibiotico 2 | 40 | 21 | 61
+**Totale** | 92 |  31 | 123
+
+Stimiamo i valori attesi con la formula 
+$$np_{ij} = \frac{r_ic_j}{n}$$
+Trattamento \ Esito Atteso | Guariti Attesi | Non guariti Attesi
+:-|:-:|:-:
+Antibiotico 1 | 46.37 | 15.63
+Antibiotico 2 | 45.63 | 15.37
+
+Ci si chiede quindi se effeticamente il primo trattamento è migliore del primo oppure no, ovvero se il numero dei guarti dipende dal trattamento (la nostra **ipotesi nulla** $H_0$).
+
+Sotto $H_0$ avremo quindi
+$$T = \frac{(52-46.37)^2}{46.37} + \frac{(10-15.63)^2}{15.63} + \frac{(40-45.63)^2}{45.63}+ \frac{(21-15.37)^2}{15.37} = 5.46$$
+
+Sotto ipotesi nulla $T \sim \chi^2_1$ e quindi la probabilità che abbia assunto il valore osservato $5.46$ è compresa tra il $2.5\%$ e l'$1\%$ (ovvero è poco probabile che $H_0$ sia vero).
+
+Possiamo rifiutare $H_0$, e affermare che 
+> **Antibiotico 1 è migliore di Antibiotico 2 con una certezza del 97.5\%**
+
+Infatti, osservando le [[quantili.pdf|tabelle]] avremo che 
+$$P(T \geq 5.46) \leq P(T \geq 5.024) = 0.025$$
+$$P(T \geq 5.46) \geq P(T \geq 6.635) = 0.01$$
