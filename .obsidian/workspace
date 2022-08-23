@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 101.5
+    "width": 326.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -107,7 +107,7 @@
     "direction": "horizontal",
     "width": 328.4999084472656
   },
-  "active": "c2329b408a645889",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "ISTI/quantili.pdf",
     "ISTI/Test chi-quadro.md",
