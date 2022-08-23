@@ -35,3 +35,66 @@ Un modo più semplice ed empirico per vedere questo test è il seguente:
 > 
 >Allora la nostra statistica sarà $$T = \sum_{i=1}^{k}\frac{(O_i - E_i)^2}{E_i} \sim \chi^2_{k-1}$$
 
+## Esempio
+Un dado viene lanciato 2000 volte e i vari risultati escono con le seguenti sequenze
+Esito | Occorrenza
+-|-
+1|388
+2|322
+3|314
+4|316
+5|344
+6|316
+
+Si può affermare che il dado è non equo?
+Consideriamo come *ipotesi nulla* $$H_0: p_i = 1/6 \; \forall i =1,...,6$$ ovvero che il dado sia equo.
+
+Sotto ipotesi nulla avremo la seguente statistica $$T = \sum_{i=1}^{6}\frac{(Esito_i - 2000/6)^2}{2000/6} = 12.616$$
+Sappiamo che $T$ segue una distribuzione $\chi^2$ con $6-1 = 5$ gradi di libertà.
+
+Supponiamo di voler avere un errore $\alpha = 0.05 = 5\%$.
+Dando uno sguardo alle [[quantili.pdf|tabelle dei quantili]] abbiamo che
+$$P(T \leq 11.070) = 0.95 \implies P(T = 12.616) \leq P(T > 11.070) = 1 - 0.95 = \alpha$$
+Ovvero la probabilità che $T$ abbia assunto tale valore, sotto ipotesi $H_0$ è minore di $\alpha$, dobbaimo perciò **rifiutare** $H_0$.
+
+------------------
+# Test del chi quadro per tabelle di contingenza
+Un altro tipo di test $\chi^2$ è quello per **tabelle di contingenza**.
+Supponiamo di avere un campione di $n$ elementi, classificabili due **differenti criteri**.
+Per esempio, supponiamo di aver campionato da 5 differenti stati dell'unione europea $n$ persone, e di aver chiesto che frutto preferiscono mangiare d'estate tra cocco 🥥, anguria 🍉 o ananas 🍍.
+
+Possiamo rappresentare tali dati come una tabella dove abbiamo $r$ righe che rappresentano le classi del primo criterio, e $c$ colonne che rappresentano le classi del secondo criterio.
+\ | 🥥 | 🍉 | 🍍
+-|-|-|-
+🇮🇹| 40 | 80 | 21
+🇫🇷 | 45 | 67 | 35
+🇩🇪 | 58 | 17 | 69
+🇪🇸 | 12 | 33 | 91
+🇵🇹| 7 | 101 | 38
+
+Il test $\chi^2$ per **tabelle di contingenza** serve per verificare l'**ipotesi di indipendenza tra i due criteri di valutazione** (nel nostro caso voglia valutare l'indipendenza tra nazionalità e gusti).
+
+Possiamo modellare i nostri dati come una [[Distribuzioni#Multinomiale multivariata|multinomiale]] $\{X_{ij} : 1 \leq i \leq r \land 1 \leq j \leq c\}$ dove ogni evento $(i,j)$ avviene con probabilità $p_{ij}$.
+Se c'è indipendenza tra i due criteri allora avremo che esistono due vettori $\underline{\alpha} = (\alpha_1, ..., \alpha_r)$ e $\underline{\beta} = (\beta_1, ..., \beta_c)$ tali che $$\forall i,j \; p_{ij} = \alpha_i \cdot \beta_{j}$$
+Questa sarà la nostra **ipotesi nulla**.
+
+Per stimare $\underline{\alpha}, \underline{\beta}$ iniziamo col fare le **somme marginali** di righe e colonne, ovvero
+
+
+
+$$r_i = \sum_{j=1}^{c} X_{ij}$$
+$$c_j = \sum_{i=1}^{r} X_{ij}$$
+Osserviamo che $$n = \sum_{i=1}^{r} r_i = \sum_{j=1}^{c} c_j$$
+\ | 🥥 | 🍉 | 🍍 | $r_i$ 
+-|-|-|-|-
+🇮🇹 | 40 | 80  | 21 | 141
+🇫🇷 | 45 | 67  | 35 | 147
+🇩🇪 | 58 | 17  | 69 | 144
+🇪🇸 | 12 | 33  | 91 | 136
+🇵🇹 | 7  | 101 | 38 | 146
+$c_j$  |162 | 298 | 254 | $n = 714$
+
+Approssimiamo quindi il valore atteso come $$\mathbb{E}\left[ X_{ij} \right] = np_{ij} \approx n \cdot \frac{r_i}{n} \cdot \frac{c_j}{n} = \frac{r_i c_j}{n}$$
+A questo punto, definiamo la statistica $$T = \sum_{i,j} \frac{\left(X_{ij} - \dfrac{r_ic_j}{n}\right)^2}{\dfrac{r_ic_j}{n}}$$
+Sotto ipotesi nulla $H_0$ avremo che $T \sim \chi^2_{(r-1)(c-1)}$ ovvero segue una [[Distribuzioni#Chi Quadro|distribuzione chi-quadro]] con $(r-1) \cdot (c-1)$ **gradi di libertà**.
+Perciò, sotto 
