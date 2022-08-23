@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "7902819dc93711f0",
+        "id": "c2329b408a645889",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 101.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -107,10 +107,10 @@
     "direction": "horizontal",
     "width": 328.4999084472656
   },
-  "active": "7902819dc93711f0",
+  "active": "c2329b408a645889",
   "lastOpenFiles": [
-    "ISTI/Test chi-quadro.md",
     "ISTI/quantili.pdf",
+    "ISTI/Test chi-quadro.md",
     "ISTI/Tabelle dei Quantili.md",
     "ISTI/Altri Test.md",
     "ISTI/Test più comuni.md",
