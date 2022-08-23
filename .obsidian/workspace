@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "356a1f0a30b63580",
+        "id": "7902819dc93711f0",
         "type": "leaf",
         "state": {
-          "type": "diff-view",
+          "type": "markdown",
           "state": {
-            "file": "ISTI/Stimatore di Massima Verosimiglianza.md",
-            "staged": false
+            "file": "ISTI/Test chi-quadro.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -68,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ISTI/Test chi-quadro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,15 +85,19 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ISTI/Test chi-quadro.md"
+              }
             }
           },
           {
             "id": "5ea6e3d7a465e6a1",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "pinned": true
             }
           }
         ],
@@ -99,9 +105,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.4999084472656
+    "width": 328.4999084472656
   },
-  "active": "356a1f0a30b63580",
+  "active": "7902819dc93711f0",
   "lastOpenFiles": [
     "ISTI/Test chi-quadro.md",
     "ISTI/quantili.pdf",
