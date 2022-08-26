@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c2329b408a645889",
+        "id": "773dc2b8c7999b40",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ISTI/Test chi-quadro.md",
+            "file": "ISTI/I test \"migliori\".md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 336.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ISTI/Test chi-quadro.md",
+                "file": "ISTI/I test \"migliori\".md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ISTI/Test chi-quadro.md"
+                "file": "ISTI/I test \"migliori\".md"
               }
             }
           },
@@ -109,15 +109,15 @@
   },
   "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "ISTI/quantili.pdf",
-    "ISTI/Test chi-quadro.md",
-    "ISTI/Tabelle dei Quantili.md",
-    "ISTI/Altri Test.md",
-    "ISTI/Test più comuni.md",
     "ISTI/Distribuzioni.md",
-    "ISTI/Stimatore di Massima Verosimiglianza.md",
-    "ISTI/Verosimiglianza.md",
+    "ISTI/I test \"migliori\".md",
     "ISTI/Hypothesis Testing.md",
-    "ISTI/p-value - Livello di Significatività di un Test.md"
+    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "ISTI/Processo empirico e Statistiche d'ordine.md",
+    "ISTI/Delta Method.md",
+    "ISTI/Test più comuni.md",
+    "ISTI/Test chi-quadro.md",
+    "ISTI/quantili.pdf",
+    "ISTI/Tabelle dei Quantili.md"
   ]
 }
