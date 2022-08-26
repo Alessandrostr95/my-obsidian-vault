@@ -20,7 +20,7 @@ Può capitare che un test dia un risultato errato.
 Bisogna distinguere gli errori di un test di ipotesi, perché spesso nella realtà i diversi tipi di errori hanno gravità differenti.
 Per esempio, dire a una persona malata che in realtà è in salute è un errore molto più grave del dire a una persona in salute che in realtà ha una malattia.
 Distinguiamo quindi:
-- **Errore di I tipo**: rifiutare $H_0$ quando in realtà $H_0$ è vera. In termini di eventi avremo $$\mathbf{X} \in C \;\vert\; \theta \in \Theta_0$$
+- **Errore di I tipo**: rifiutare $H_0$ quando in realtà $H_0$ è vera. In termini di eventi avremo $$\mathbf{X} \in C \;\vert\; \theta \in \Theta_0$$ ^361948
 - **Errore di II tipo**: accettare $H_0$ quando in realtà $H_0$ è falsa. In termini di eventi avremo $$\mathbf{X} \in C^c \;\vert\; \theta \in \Theta^c_0$$
 
 ![|600](isti_test_ipotesi_errors.png)
@@ -78,3 +78,9 @@ Alcune volte ci si riferisce alla potenza di un test con $\Pi(\theta)$.
 > Osserivamo però, che al crescere del numero di campioni $n$, la funzione potenza $\beta(\theta)$ tende sempre di più ad approssimare la funsione ideale
 > ![|500](isti_test_ipotesi_3.png)
 
+## Ampiezza di un test
+Da prima abbiamo visto che la **potenza di un test** è una funzione che calcola la probabilità di *rifiutare* $H_0$ al variare del parametro incognito $\theta$.
+
+Consideriamo un'ipotesi nulla generica, del tipo $$H_0 : \theta \in \Theta_0$$ e un test $T$ che indica qunado rifiutare $H_0$.
+
+Allora averemo che l'**ampiezza** del test $T$ è la quantità definita come $$\sup_{\theta \in \Theta_0} \beta(\theta)$$ ovvero la probabilità pià alta che abbiamo di commettere un **[[#^361948|errore di I tipo]]**.
