@@ -84,3 +84,5 @@ Da prima abbiamo visto che la **potenza di un test** è una funzione che calcola
 Consideriamo un'ipotesi nulla generica, del tipo $$H_0 : \theta \in \Theta_0$$ e un test $T$ che indica qunado rifiutare $H_0$.
 
 Allora averemo che l'**ampiezza** del test $T$ è la quantità definita come $$\sup_{\theta \in \Theta_0} \beta(\theta)$$ ovvero la probabilità pià alta che abbiamo di commettere un **[[#^361948|errore di I tipo]]**.
+
+Perciò, più è piccola l'ampiezza di un test, più è *qualitativamente* migliore.
