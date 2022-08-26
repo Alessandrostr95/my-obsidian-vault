@@ -35,7 +35,7 @@ Ricordando che $\beta$ è il **valore atteso** di $\text{Exp}(\beta)$ (in questo
 ## Somme di variabili aleatorie di un campionamento
 Sia $X_1, ..., X_n$ un [[Random Sample#Random Sample|random sample]] di dimensione $n$ di una generica popolazione, e sia $T(x_1, ..., x_n)$ una funzione il cui dominio è lo spazio di campionamento di $(X_1, ..., X_n)$.
 
-La v.a. (o vettore) $Y \sim T(X_1, ..., X_n)$ è chiamata **statistica**.
+La v.a. (o vettore) $Y \sim T(X_1, ..., X_n)$ è chiamata **statistica**. ^46a026
 
 La distribuzione di probabilità di una statistica $Y$ è anche chiamata **distribuzione campionaria** (o **sampling distribution**).
 

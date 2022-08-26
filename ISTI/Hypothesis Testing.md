@@ -11,7 +11,7 @@ Un test d'ipotesi è quindi semplicemente una **regola** che, per ogni possibile
 > Consideriamo una ipotesi $$H_0: \theta \leq 17$$
 > Un test famoso consiste nel <u>rifutare</u> $H_0$ se e solo se $\overline{X} > 17 + \sigma/\sqrt{n}$.
 
-Il sottoinsieme $C$ dei dati che portano al **rifuto** di $H_0$ è detta **regione critica**.
+Il sottoinsieme $C$ dei dati che portano al **rifuto** di $H_0$ è detta **regione critica**. ^6568cf
 > Nell'esempio precedente, la regione critca equivale al sottoinsieme di $\mathbb{R}^n$ di tutti quei $n$-uple $\mathbf{x}$ tali che $$\frac{1}{n}\sum_{i=1}^{n}x_i > 17 + \frac{\sigma}{\sqrt{n}}$$
 
 La probabilità quindi che $H_0$ sia rifiutata equivale quindi alla probabilità di campionare all'interno della regione critica, e tale probabilità è nota come **funzione critica** $$\psi(\mathbf{X}) = P(\text{rifiuto } H_0) = P(\mathbf{X} \in C)$$
@@ -21,7 +21,7 @@ Bisogna distinguere gli errori di un test di ipotesi, perché spesso nella realt
 Per esempio, dire a una persona malata che in realtà è in salute è un errore molto più grave del dire a una persona in salute che in realtà ha una malattia.
 Distinguiamo quindi:
 - **Errore di I tipo**: rifiutare $H_0$ quando in realtà $H_0$ è vera. In termini di eventi avremo $$\mathbf{X} \in C \;\vert\; \theta \in \Theta_0$$ ^361948
-- **Errore di II tipo**: accettare $H_0$ quando in realtà $H_0$ è falsa. In termini di eventi avremo $$\mathbf{X} \in C^c \;\vert\; \theta \in \Theta^c_0$$
+- **Errore di II tipo**: accettare $H_0$ quando in realtà $H_0$ è falsa. In termini di eventi avremo $$\mathbf{X} \in C^c \;\vert\; \theta \in \Theta^c_0$$ ^f0afe5
 
 ![|600](isti_test_ipotesi_errors.png)
 
@@ -86,3 +86,8 @@ Consideriamo un'ipotesi nulla generica, del tipo $$H_0 : \theta \in \Theta_0$$ e
 Allora averemo che l'**ampiezza** del test $T$ è la quantità definita come $$\sup_{\theta \in \Theta_0} \beta(\theta)$$ ovvero la probabilità pià alta che abbiamo di commettere un **[[#^361948|errore di I tipo]]**.
 
 Perciò, più è piccola l'ampiezza di un test, più è *qualitativamente* migliore.
+
+### Osservazione
+Osservare che quando siamo in un contesto con **ipotesi semplici** del tipo $$H_0: \theta = \theta_0$$ avremo che spazio dei parametri che soddisfano $H_0$ è composto da un solo elemento $$\Theta_0 = \{ \theta_0\}$$
+Perciò avremo che l'ampiezza del test corrisponde alla potenza calcolata in $\theta_0$
+$$\sup_{\theta \in \Theta_0} \beta(\theta) = \beta(\theta_0)$$
