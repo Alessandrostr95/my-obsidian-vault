@@ -1,7 +1,7 @@
 # Inferenza Statistica e Teoria dell'Informazione
 --------------
 ## Info corso
-- **Docente**: Scalia Tomba
+- **Docente**: Giampaolo Scalia Tomba
 - **A.A.**: 2021/2022
 - **Semestre**: 2°
 - **CFU**: 6
@@ -32,3 +32,4 @@
 	2. [[p-value - Livello di Significatività di un Test]]
 	3. [[Test chi-quadro]]
 	4. [[I test "migliori"]]
+17. [[Stima per intervalli di confidenza]]
