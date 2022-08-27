@@ -54,6 +54,13 @@ Consideriamo ora il caso più generale di ipotesi del tipo $$H_0: \theta \in \Th
 
 Il **rapporto di verosimiglianza generalizzato** è la quantità $$\lambda_n = \frac{\sup_{\theta \in \Theta_0} L(\theta \vert X_1, ..., X_n)}{\sup_{\theta \in \Theta} L(\theta \vert X_1, ..., X_n)}$$ ovvero il rapporto del superiore della verosimiglianza per $\theta \in \Theta_0$ (ovvero nell'ipotesi nulla) e il superiore di <u>tutti</u> i valori possibili di $\theta$.
 
+```ad-important
+title: Osservazione importante!
+Osservare che il valore di $\theta$ che massimizza il denominatore di $\lambda_n$ equivale al [[Stimatore di Massima Verosimiglianza#Stimatore di Massima Verosimiglianza - MLE|MLE]] $\hat\theta_{ML}$.
+
+```
+
+
 Il **test del rapporto di verosimiglianza (generalizzato)** (o **LRT**) è definito come $$\text{rifiuto } H_0 \iff\lambda_n \leq k^*$$ dove $k^*$ è definito dall'[[Hypothesis Testing#Ampiezza di un test|ampiezza]] $\alpha$ del test (come prima).
 
 Ossevare che dato che la [[Verosimiglianza#Likelihood function|funzione di verosimiglianza]] dipende da delle distribuzioni, allora avremo che anche $\lambda_n$ seguirà una distribuzione in fuzione dei dati $X_1, ..., X_n$.
@@ -62,3 +69,35 @@ In genere non è sempre facile studiare $\lambda_n$ però esistono dei risultati
 Si può infatti dimostrare che $$-2\log{\Lambda_n} \sim \chi^2$$ per $n$ grande (ma *"non troppo"*).
 
 Pericò, fissando un **quantile** $\phi_{1-\alpha}$ della $\chi^2$, possiamo definire il test $$\text{rifiuto } H_0 \iff -2\log{\lambda_n} > \phi_{1-\alpha}$$ dove $\alpha$ è l'ampiezza del test.
+
+### Esempio - Normal LRT
+Sia un campione [[Distribuzioni#Normale|normale]] $X_1, ..., X_n$ da una popolazione $N(\theta, 1)$
+Consideriamo le ipotesi $$H_0: \theta = \theta_0; \; H_1: \theta \neq \theta_0$$
+Avremo quindi $\Theta_0 \equiv \{\theta_0\}$ e $\Theta_1 \equiv \Theta \setminus \{\theta_0\}$.
+
+Calcoliamo il **rapporto di verosimiglianza generalizzato** $$\lambda_n = \frac{\sup_{\theta \in \Theta_0} L(\theta \vert X_1, ..., X_n)}{\sup_{\theta \in \Theta} L(\theta \vert X_1, ..., X_n)}$$
+
+Osserviamo che essendo $\theta_0$ l'<u>unico</u> elemento di $\Theta_0$ avremo come numeratore $L(\theta_0 \vert X_1, ..., X_n)$.
+Invece al denominatore avremo che il $\theta$ che lo massimizza è il [[Stimatore di Massima Verosimiglianza#Stimatore di Massima Verosimiglianza - MLE|MLE]] $\hat\theta_{ML}$ di una normale.
+Sappiamo da [[Stimatore di Massima Verosimiglianza#Esempio - Normale]] che lo stimatore di ML di una normale è la sua [[Random Sample#Media campionaria|media campionaria]] $$\hat\theta_{ML} = \overline{X}$$
+Perciò avremo che
+$$\begin{align*}
+\lambda_n
+&= \frac{L(\theta_0 \vert X_1,..., X_n)}{L(\overline{X} \vert X_1, ..., X_n)}\\
+&= \frac{(2\pi)^{-n/2}\exp\left[ -\sum_{i=1}^{n}(x_i - \theta_0)^2/2 \right]}{(2\pi)^{-n/2}\exp\left[ -\sum_{i=1}^{n}(x_i - \overline{x})^2/2 \right]}\\
+&= \exp\left[ \frac{1}{2}\left( \sum_{i=1}^{n}(x_i - \overline{x})^2 -\sum_{i=1}^{n}(x_i - \theta_0)^2\right) \right]
+\end{align*}$$
+
+Semplifichiamo ora
+$$\begin{align*}
+\sum_{i=1}^{n}(x_i - \theta_0)^2
+&= \sum_{i=1}^{n}((x_i - \overline{x})  + (\overline{x} - \theta_0))^2\\
+&= \sum_{i=1}^{n}(x_i - \overline{x})^2 + 2(\overline{x}-\theta_0)\sum_{i=1}^{n}(x_i - \overline{x}) + \sum_{i=1}^{n}(\overline{x} - \theta_0)^2\\
+&= \sum_{i=1}^{n}(x_i - \overline{x})^2 + 2(\overline{x}-\theta_0)(\underbrace{(x_1 + ... + x_n)}_{n\overline{x}} - n\overline{x}) + n(\overline{x} - \theta_0)^2\\
+&= \sum_{i=1}^{n}(x_i - \overline{x})^2 + n(\overline{x} - \theta_0)^2
+\end{align*}$$
+
+Perciò $$\lambda_n = \exp\left[ -\frac{1}{2}n(\overline{x} - \theta_0)^2 \right]$$
+
+Definiamo quindi la [[Hypothesis Testing#^6568cf|regione critica]] $$C \equiv \{\mathbf{x} \in \mathbb{R}^n : \lambda_n \leq k\} \equiv \Bigg\{\mathbf{x} \in \mathbb{R}^n : \vert \overline{x} - \theta_0 \vert \geq  \sqrt{-2\frac{\log{k}}{n}} \Bigg\}$$
+Dato che $0 < k \leq 1$ avremo che $\log{k} \leq 0$, perciò l'*argomento* della radice sarà positivo (ottenendo un valore reale a destra della disuguaglianza).
