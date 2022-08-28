@@ -112,7 +112,7 @@ $$T = \frac{\left(\overline{X}_1 - \overline{X}_2\right) - (\mu_1 - \mu_2)}{\sqr
 **non** segue una distribuzione $t$ di Student, come nel [[Test più comuni#Distribuzione normale varianza e media sconosciute|caso precedente]].
 
 In questo caso possiamo applicare 2 approcci:
-1. Se $n_1, n_2$ sono molto grandi (per esempio $\geq 30$ o $\geq 60$ a seconda dei libri) allora possiamo dire che $T$ segue una distribuzione che *approssima* una $t$ di Student. Questo perché al crescere della grandezza del campione, l'approssimazione $S^2$ stima sempre meglio $\sigma^2$.
+1. Se $n_1, n_2$ sono molto grandi (per esempio $\geq 30$ o $\geq 60$ a seconda dei libri) allora possiamo dire che $T$ segue una distribuzione che *approssima* una $t$ di Student con $n_1 + n_2 - 2$ gradi di libertà. Questo perché al crescere della grandezza del campione, l'approssimazione $S^2$ stima sempre meglio $\sigma^2$.
 2. se si può supporre che la distribuzione dei dati sia <u>normale</u> e che le due varianze ignote siano comunque <u>uguali</u>, $\sigma_1 = \sigma_2 = \sigma$, allora è possibile trovare una stima di $\sigma$ basata sulle due varianze campionarie $S^2_1$ e $S^2_2$.
    Tale stima è nota come **pooled variance stimate** ed è definita come $$S^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{(n_1 - 1) + (n_2 - 1)}$$
    In tal modo avremo che $$T = \frac{\left(\overline{X}_1 - \overline{X}_2\right) - (\mu_1 - \mu_2)}{\sqrt{S_1^2/n_1 + S_2^2/n_2}} = \frac{\left(\overline{X}_1 - \overline{X}_2\right) - (\mu_1 - \mu_2)}{S\sqrt{1/n_1 + 1/n_2}}$$ avrà un distribuzione [[Distribuzioni#Distribuzione t di Stundet|t di Student]] con $n_1 + n_2 - 2$ gradi di libertà.

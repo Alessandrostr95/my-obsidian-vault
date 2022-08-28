@@ -65,7 +65,7 @@ $$\begin{align*}
 &= \left[ g'(p) \right]^2 \cdot \text{Var}(\hat{p})\\
 &= \left[ g'(p) \right]^2 \cdot \frac{\text{Var}(p)}{n}\\
 &= \frac{1}{(1-p)^4} \cdot \frac{p(1-p)}{n}\\
-&= \frac{p}{n(1-p)^2}
+&= \frac{p}{n(1-p)^3}
 \end{align*}$$
 
 ----------------------------

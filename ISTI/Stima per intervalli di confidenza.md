@@ -39,7 +39,7 @@ Nel caso di distribuzioni **simmetriche**, come la normale standard, è possibil
 Sia un campione [[Distribuzioni#Normale|normale]] $X_1, ..., X_n \sim N(\mu, \sigma^2)$ con $\mu$ e $\sigma$ **sconosciuti**.
 
 Consideriamo le ipotesi $$H_0: \mu = \mu_0; \; H_1: \mu \neq \mu_1$$
-Non conoscendo $\sigma$ potremmo pensare di **stimarlo**, per esempio con la [[Random Sample#Varianza campionaria|carianza campionaria]] $S = \sqrt{S^2}$.
+Non conoscendo $\sigma$ potremmo pensare di **stimarlo**, per esempio con la [[Random Sample#Varianza campionaria|varianza campionaria]] $S = \sqrt{S^2}$.
 
 Purtroppo però la statistica $$T = \frac{\overline{X} - \mu_0}{S/\sqrt{n}}$$ non segue una [[Distribuzioni#Normale Standard|normale standardizzata]] $N(0,1)$, nemmeno sotto ipotesi nulla $H_0$.
 

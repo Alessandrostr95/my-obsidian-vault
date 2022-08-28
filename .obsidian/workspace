@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e733d07752cc00e6",
+        "id": "e465502fd91a4367",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ISTI/Stima per intervalli di confidenza.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ISTI/Stima per intervalli di confidenza.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ISTI/Stima per intervalli di confidenza.md"
-              }
+              "state": {}
             }
           },
           {
@@ -107,17 +100,17 @@
     "direction": "horizontal",
     "width": 328.4999084472656
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "e465502fd91a4367",
   "lastOpenFiles": [
-    "ISTI/Stimatore di Massima Verosimiglianza.md",
-    "ISTI/Stima per intervalli di confidenza.md",
-    "ISTI/quantili.pdf",
+    "ISTI/Delta Method.md",
+    "Proprietà utili.md",
+    "ISTI/Distribuzioni.md",
+    "ISTI/Distribuzioni Multivariate.md",
     "ISTI/Test più comuni.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "AR/0 -Analisi di reti.md",
-    "AGT/0 - Algorithmic game theory.md",
-    "ISTI/I test \"migliori\".md",
+    "ISTI/Stimatore di Massima Verosimiglianza.md",
     "ISTI/Verosimiglianza.md",
-    "ISTI/Trasformazioni Bivariate.md"
+    "ISTI/Informazione di Fisher.md",
+    "ISTI/Test chi-quadro.md"
   ]
 }
