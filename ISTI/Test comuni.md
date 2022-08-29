@@ -109,7 +109,7 @@ Come prima, consideriamo due **campioni indipendenti** $\mathbf{X}_1$ e $\mathbf
 
 Sostituendo $\sigma_1^2$ e $\sigma_2^2$ con le reispetive varianze campionarie $S_1^2$ e $S_2^2$ questa volta non si ottiene che
 $$T = \frac{\left(\overline{X}_1 - \overline{X}_2\right) - (\mu_1 - \mu_2)}{\sqrt{S_1^2/n_1 + S_2^2/n_2}}$$
-**non** segue una distribuzione $t$ di Student, come nel [[Test più comuni#Distribuzione normale varianza e media sconosciute|caso precedente]].
+**non** segue una distribuzione $t$ di Student, come nel [[Test comuni#Distribuzione normale varianza e media sconosciute|caso precedente]].
 
 In questo caso possiamo applicare 2 approcci:
 1. Se $n_1, n_2$ sono molto grandi (per esempio $\geq 30$ o $\geq 60$ a seconda dei libri) allora possiamo dire che $T$ segue una distribuzione che *approssima* una $t$ di Student con $n_1 + n_2 - 2$ gradi di libertà. Questo perché al crescere della grandezza del campione, l'approssimazione $S^2$ stima sempre meglio $\sigma^2$.

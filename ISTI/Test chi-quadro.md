@@ -18,7 +18,7 @@ Definiamo ora la statistica $$T = \sum_{i=1}^{k}\frac{(Y_i - np^{(0)}_i)^2}{np^{
 È possibile dimostrare ([TO DO]) che (**sotto ipotesi nulla**) *asintoticamente* $T \sim \chi^2_{k-1}$ segue una distribuzione [[Distribuzioni#Chi Quadro|chi-quadro]] con $k-1$ gradi di libertà.
 Il numero di gradi di libertà è $k-1$ perché siamo vincolati dal fatto che $p_1 + ... + p_k = 1$.
 
-Riconducendoci quindi ad una distribuzione *chi-quadro* siamo in gradi di eseguire uno [[Test più comuni#t-test di Student|t-test]].
+Riconducendoci quindi ad una distribuzione *chi-quadro* siamo in gradi di eseguire uno [[Test comuni#t-test di Student|t-test]].
 Consultando quindi la [[tabella dei quinatili di una chi-quadro]] possiamo facilmente definire un test con precisione $1-\alpha$.
 
 Un modo più semplice ed empirico per vedere questo test è il seguente:

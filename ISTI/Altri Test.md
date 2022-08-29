@@ -38,4 +38,4 @@ Definiamo l'*ipotesi nulla* $$H_0: \theta = \theta_0$$
 Consideriamo uno [[Stimatore di Massima Verosimiglianza#Stimatore di Massima Verosimiglianza - MLE|MLE]] $\hat\theta_{ML}$ per $\theta$.
 
 Sotto ipotesi nulla $H_0$, sappiamo che [[Stimatore di Massima Verosimiglianza#^c3b404|asintoticamente avremo]] $$T = \sqrt{nI(\theta_0)} \cdot {(\hat\theta_{ML} - \theta_0)}\sim N(0, 1)$$
-Periò possiamo applicare lo [[Test più comuni#z-test|z-test]].
+Periò possiamo applicare lo [[Test comuni#z-test|z-test]].

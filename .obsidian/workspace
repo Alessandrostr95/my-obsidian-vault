@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e465502fd91a4367",
+        "id": "e339b4fc9a634d6e",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 331.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md"
+              }
             }
           },
           {
@@ -100,17 +107,17 @@
     "direction": "horizontal",
     "width": 328.4999084472656
   },
-  "active": "e465502fd91a4367",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "ISTI/Delta Method.md",
-    "Proprietà utili.md",
-    "ISTI/Distribuzioni.md",
-    "ISTI/Distribuzioni Multivariate.md",
-    "ISTI/Test più comuni.md",
-    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "ISTI/p-value.md",
+    "ISTI/Test comuni.md",
+    "ISTI/Cramer-Rao Inequality.md",
+    "ISTI/Trasformazioni Bivariate.md",
+    "ISTI/Test chi-quadro.md",
     "ISTI/Stimatore di Massima Verosimiglianza.md",
-    "ISTI/Verosimiglianza.md",
-    "ISTI/Informazione di Fisher.md",
-    "ISTI/Test chi-quadro.md"
+    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "AR/0 -Analisi di reti.md",
+    "AGT/3 - Myerson’s Lemma.md",
+    "ISTI/Distribuzioni.md"
   ]
 }

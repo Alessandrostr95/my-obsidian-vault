@@ -1,5 +1,5 @@
 Abbiamo visto che ci sono svariati modi di definire un test.
-Quello che ci si può chiedere è se dobbiamo necessariamente ogni volta ricavarci un test definendo una statistica opportuna (vedi per esempio [[Test più comuni#z-test|z-test]] o [[Test più comuni#t-test di Student|t-test]]), oppure se esiste una famiglia di test "**migliore**" a livello qualitativo rispetto agli altri.
+Quello che ci si può chiedere è se dobbiamo necessariamente ogni volta ricavarci un test definendo una statistica opportuna (vedi per esempio [[Test comuni#z-test|z-test]] o [[Test comuni#t-test di Student|t-test]]), oppure se esiste una famiglia di test "**migliore**" a livello qualitativo rispetto agli altri.
 
 
 ## Test "più potente"
