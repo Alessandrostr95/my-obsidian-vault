@@ -69,9 +69,9 @@ In questo caso dire che [[#^cbc983|l'apporccio greedy]] che massimizza il social
 Infatti, offrendo di più, un player può solo salire in classifica, ottenendo quindi uno slotto con CTR migliore.
 
 ### Theorem (Mayerson's Lemma)
-Consideriamo un ambiente a singolo parametro, allora:
-- ***(a)*** Una regola di allocazione $\mathbf{x}$ è *implementabile* <u>se e solo se</u> è *monotona*. ^d589da
-- ***(b)*** Assumendo che $b_i = 0 \implies p_i(\mathbf{b}) = 0$, se $\mathbf{x}$ è *monotona*, esiste un <u>unico</u> *schema di pagamento* $\mathbf{p}$ tale che il meccanismo d'asta $(\mathbf{x}, \mathbf{p})$ è DSIC. ^3bc8f8
+Consideriamo un ambiente a [[#Single-Parameter Environments|singolo parametro]], allora:
+- ***(a)*** Una regola di allocazione $\mathbf{x}$ è *[[#^1898c6|implementabile]]* <u>se e solo se</u> è *[[#^3c29c4|monotona]]*. ^d589da
+- ***(b)*** Assumendo che $b_i = 0 \implies p_i(\mathbf{b}) = 0$, se $\mathbf{x}$ è *[[#^3c29c4|monotona]]*, esiste un <u>unico</u> *schema di pagamento* $\mathbf{p}$ tale che il meccanismo d'asta $(\mathbf{x}, \mathbf{p})$ è [[2 - Mechanism Design Basics#^a63f67|DSIC]]. ^3bc8f8
 - ***(c)*** Il pagamento nel punto precedente può essere espresso con una *formula esplicita*. ^9c8cc8
 
 ### Proof of Myerson’s Lemma (informal)
