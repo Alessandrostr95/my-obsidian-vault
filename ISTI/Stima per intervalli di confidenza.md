@@ -72,6 +72,39 @@ Perciò definendo la statistica $$Z = \sqrt{nI(\hat\theta_{ML})} \cdot (\hat\the
 Infatti $$P(-\phi_{1-\alpha/2} \leq Z \leq \phi_{1-\alpha/2}) = P\left(\hat\theta_{ML}-\frac{\phi_{1-\alpha/2}}{\sqrt{nI(\hat\theta_{ML})}} \leq \theta_0 \leq \hat\theta_{ML}+\frac{\phi_{1-\alpha/2}}{\sqrt{nI(\hat\theta_{ML})}}\right) = 1-\alpha$$
 
 ----------------------------
-## Stima di $p$ per una Binomiale
-[DA FINIRE...]
+## Stima di $p$ per una Binomiale tramite approssimazione Normale
+Sia il [[Random Sample#Random Sample|campione]] $X_1, ..., X_n$ da una popolazione di [[Distribuzioni#Bernoulli|bernoulli]] $\text{Bernoulli}(p)$, con $p$ **sconosciuto**.
+Consideriamo ora $X = X_1 + ... + X_n$, ovvero una v.a. [[Distribuzioni#Binomiale|binomiale]] $\text{Bin}(n,p)$ con $p$ **sconosciuto**.
 
+Sia la [[Random Sample#Media campionaria|media campionaria]] $\hat{p} = \overline{X} = X/n$.
+Allora per il [[CLT - Central Limit Theorem|CLT]] $\hat{p} \sim N(p, p(1-p)/n)$ (<u>approssimativamente</u>), dove $p(1-p)/n$ è la varianza di $\hat{p}$.
+
+Dato che $p$ è sconosciuto allora non abbiamo a disposizione $\sigma^2 = p(1-p)$ per poter stimare un **intervallo di confidenza** per $p$ (come fatto prima).
+
+Un'idea può essere quella di sostituire $p$ con $\hat{p}$ all'interno della varianza, ottenendo così il seguente intervallo di confidenza
+$$I \equiv \hat{p} \pm \phi_{1 - \alpha/2} \sqrt{\hat{p}(1 - \hat{p})/n}$$
+
+Purtrppo questa approssimazione non funziona bene per valori di $p$ vicini a 0 o a 1, oppure per $n$ troppo piccolo, dato che potrebbe capitare intervalli con estremi minori di 0 o maggiori di 1.
+
+Vediamo alcuni metodi per ovviare a queste problematiche.
+
+### Metodo di Agresti-Coull
+Un primo metodo per approssimare questo l'intervallo di confidenza per $p$ in una binomiale è quello proposto da **Agresti & Coull**.
+
+Consideriamo le seguenti approssimazioni
+- $$\tilde{n} = X + \phi_{1-\alpha/2}^2$$
+- $$\tilde{p} = \frac{\left(X + \dfrac{\phi_{1-\alpha/2}^2}{2}\right)}{\tilde{n}}$$
+
+Allora un intervallo di confidenza per $p$ con grado di confidenza $1-\alpha$, è dato da $$I \equiv \tilde{p} \pm \phi_{1-\alpha/2}\sqrt{\frac{\tilde{p}(1 - \tilde{p})}{\tilde{n}}}$$
+
+
+### Intervallo basato disuguaglianza quatradica
+Un'altra idea è quella di non considerare $$P(-\phi_{1-\alpha/2} \leq Z \leq \phi_{1-\alpha/2})$$ bensì $$P(Z^2 \leq \phi_{1-\alpha/2}^2)$$
+
+Sempre con $$Z = \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} \sim N(0,1)$$
+
+Tale probabilità non ha esattamente probabilità $1-\alpha$, però un'approssimazione accettabile.
+
+$$P(Z^2 \leq \phi_{1-\alpha/2}^2) = P((1+\phi_{1-\alpha/2}^2)p^2 - (2 \hat{p} + \phi_{1-\alpha/2}^2)p + \hat{p}^2 \leq 0) \approx 1 - \alpha$$
+
+Il vantaggio è che risolvendo la **disuguaglianza di secondo grado** otterremo sempre un interallo di confidenza incluso in $\left[ 0,1 \right]$.
