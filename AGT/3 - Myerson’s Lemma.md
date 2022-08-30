@@ -117,7 +117,7 @@ Ovvero
 $$\Delta_p = z \cdot \left[ \text{salto di } x(\cdot) \text{ in } z \right]$$
 Assumendo che $p(0) = 0$ è possibile ricavare che
 
-$$p_i(b_i, \mathbf{b}_{-i}) = \sum_{j=1}^{\ell} z_j \cdot \left[ \text{salto di } x_i(\cdot, , \mathbf{b}_{-i}) \text{ in } z_j \right]$$ ^232507
+$$p_i(b_i, \mathbf{b}_{-i}) = \sum_{j=1}^{\ell} z_j \cdot \left[ \text{salto di } x_i(\cdot , \mathbf{b}_{-i}) \text{ in } z_j \right]$$ ^232507
 
 dove $z_1, ..., z_\ell$ sono i punto di $x_i(\cdot, , \mathbf{b}_{-i})$ dove avvengono i salti, rispetto all'intervallo $\left[ 0, b_i \right]$.
 

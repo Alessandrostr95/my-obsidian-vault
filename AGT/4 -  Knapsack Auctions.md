@@ -26,10 +26,10 @@ $$
 Questa appena descritta è una istanza del problema combinatorico di ottimizzazione [Knapsack problem](https://en.wikipedia.org/wiki/Knapsack_problem).
 
 ## Soglia critica di pagamento
-Il [[3 - Myerson’s Lemma#Theorem Mayerson's Lemma|lemma di Myerson]] ci garantisce l'**esistenza** di una configurazione di pagamenti $\mathbf{p}$ tale che il meccanismo $(\mathbf{x}, \mathbf{p})$ è [[2 - Mechanism Design Basics#^a63f67|DSIC]] (grazie al fatto che $\mathbf{x}$ è [[3 - Myerson’s Lemma#^3c29c4|monotona]]).
+Il [[3 - Myerson’s Lemma#Theorem Mayerson's Lemma|lemma di Myerson]] ci garantisce l'**esistenza** di una configurazione di pagamenti $\mathbf{p}$ tale che il meccanismo $(\mathbf{x}, \mathbf{p})$ è [[2 - Mechanism Design Basics#^a63f67|DSIC]] (grazie al fatto che $\mathbf{x}$ è [[3 - Myerson’s Lemma#^3c29c4|monotona]]!!).
 
 Fissiamo un player $i$ e le offerte $\mathbf{b}_{-i}$.
-Dato che la regola di allocazione è *binaria* ($x_i$ può essere solo $0$ o $1$) allora l'andamento di $x_i(\cdot, \mathbf{b}_{-i})$ è facile da intuire: vale sempre $0$ finché non si raggiunge una **soglia critica** $\theta_i$ dalla quale in poi è sempre $1$.
+Dato che la regola di allocazione è *binaria* ($x_i$ può essere solo $0$ o $1$) allora l'andamento di $x_i(\cdot, \mathbf{b}_{-i})$ è facile da intuire: vale sempre $0$ finché non si raggiunge una **soglia critica** $\theta_i$ dalla quale di lì in poi $x_i$ è sempre $1$.
 
 Ricordando la [[3 - Myerson’s Lemma#^232507|formula]] avremo che il pagamento sarà pari a $0$ per ogni offerta $b_i < \theta_i$, e pari a $\theta_i \cdot (1 - 0) = \theta_i$ per ogni $b_i \geq \theta_i$, un po' come accadeva nella [[2 - Mechanism Design Basics#Vickrey's Second-Price Auctions|Vickrey's second auction]].
 
@@ -88,9 +88,9 @@ end
 
 Quello appena descritto è un algoritmo $\frac{1}{2}$-approssimante per il problema del Knapsack, ovvero garantisce che (nel caso peggiore) il risultato trovato è almeno la metà del valore del risultato ottimo.
 
-> **Theorem** Assumendo che le offerte sia sincere, ovvero che $b_i = v_i$ per ogni partecipante, allora il *social surplus* ottenuto tramite l'algoritmo greedy è *almeno* il 50% del *massimo social surplus*.
+> **Theorem** Assumendo che le offerte siano <u>sincere</u>, ovvero che $b_i = v_i$ per ogni partecipante, allora il *social surplus* ottenuto tramite l'algoritmo greedy è *almeno* il 50% del *massimo social surplus*.
 
-> **Proof**  **TODO**
+> **Proof**  **[TODO]**
 
 Questo approccio greedy funziona anche meglio sotto certe assunzioni.
 Per esempio, se per ogni partecipante $i$ abbiamo che $w_i \leq \alpha W$, con $0 < \alpha \leq \frac12$, allora l'algoritmo garantisce un'approssimazione di $1-\alpha$ (anche omettendo il terzo punto).
@@ -107,9 +107,9 @@ In realtà non è sempre detto.
 
 Per esempio, per knapsack, esiste un [FPTAS](https://en.wikipedia.org/wiki/Fully_polynomial-time_approximation_scheme) che dato un $\varepsilon > 0$ calcola una $(1-\varepsilon)$-approssimazione in tempo polinomiale nell'istanza e in $1/\varepsilon$, inducendo però in una regola di allocazione **non**-monotona.
 
-È però possibile **riarrangiare** tale regola ottenuta tramite l'FPTAS in modo tale da garantire la monotonia, <u>senza degradare l'efficienza</u>.
+È però possibile **riarrangiare** tale regola ottenuta tramite l'FPTAS in modo tale da garantire la monotonia, <u>senza degradare l'efficienza!!</u>.
 
-Quello che si può chiedere è quindi:
+Quello che ci si può chiedere è quindi:
 > Esiste un problema a **singolo parametro** per il quale la migliore approssimazione garantita ottenuta tramite un algoritmo polinomiale è **strettamente migliore** della migliore approssimazione garantita ottenuta tramite un algoritmo polinomiale e *monotono*?
 
 O più semplicemente:
@@ -121,8 +121,8 @@ Questo risultato sarebbe fantastico in quanto significherebbe che se un problema
 
 Tale riduzione black-box sarebbe interessante anche se la trasformazione genererebbe un algoritmo polinomiale e monotono con un fattore di approssimazione degenrato di un fattore **costante**.
 
-Purtroppo nel 2012 è stato dimostrato che non è possibile definire un metodo **generale**  di riduzione black-box per i tipi di porblemi a singolo parametro appena citati (vedi [qua](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.307.8197&rep=rep1&type=pdf)).
-D'altro canto esistono larghe classi di problemi a singolo parametro per i quali è possibile definrie una riduzione black-box (vedi Exercise 16).
+Purtroppo nel 2012 è stato dimostrato che non è possibile definire un metodo **generale** di riduzione black-box per i tipi di porblemi a singolo parametro appena citati (vedi [qua](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.307.8197&rep=rep1&type=pdf)).
+D'altro canto esistono larghe classi di problemi a singolo parametro per i quali è possibile definrie una riduzione black-box (vedi [[Exercise Set 2#Exercise 16|Exercise 16]]).
 
 -------------------
 # The Revelation Principle
@@ -132,9 +132,9 @@ Fin ora ci siamo interessati di meccanismi [[2 - Mechanism Design Basics#^a63f67
 
 Ciò che si può chiedere è:
 > Possono i meccanismo non-DSIC garantire proprietà che i meccanismi DSIC non possono?
-> Ovvero, sono anche utili da studiare i meccanismi che non sono DSIC?
+> Ovvero, sono utili da studiare anche i meccanismi che non sono DSIC?
 
-Per cercare di dare una risposta, iniziamo col osservera un paio di assunzione che abbiamo dato per scontato nei meccanismi DSIC:
+Per cercare di dare una risposta, iniziamo con l'osservera un paio di assunzione che abbiamo dato per scontato nei meccanismi DSIC:
 - (a) Ogni partecipante ha **sempre** una strategia dominante, indipendentemente dalla sua valutazione privata. ^4a68e4
 - (b) Questa strategia dominante è la **direct revelation** (ovvero dichiarare il vero). ^c7388e
 
@@ -142,7 +142,7 @@ Per esempio, esistono meccanismi nei quali non esiste una strategia dominante, c
 
 Oppure ancora esistono meccanismi per i quali vale [[#^4a68e4|(a)]] ma non [[#^c7388e|(b)]].
 Per esempio, supponiamo di avere un'[[2 - Mechanism Design Basics#Single item auction|asta a singolo oggetto]], dove i partecipanti dichiarano $\mathbf{b}$ e di eseguire la [[2 - Mechanism Design Basics#Vickrey's Second-Price Auctions|Vickrey's auction]] con offerte $2\mathbf{b}$.
-In tal caso la strategia dominante non sarebbe pià quella di dichiarare la propria valutazione privata $v_i$, bensì la sua metà $v_i/2$.
+In tal caso la strategia dominante non sarebbe più quella di dichiarare la propria valutazione privata $v_i$, bensì la sua metà $v_i/2$.
 
 ### Beyond Dominant-Strategy Equilibria
 In pratica spesso accade di trovarsi in contesti in cui non esistono *strategie dominanti*.
@@ -164,7 +164,7 @@ Più formalmente
 
 ^ec0935
 
-In breve ciò che dice il *pricipio di rivalazione* è che se riesci a progettare un meccanismo che ha delle strategie dominanti allora può progettare un meccanismo la cua strategia dominante è la diretta rivelazione delle proprie informazioni private (ovvero conviene sempre dichiarare il vero).
+In breve ciò che dice il *pricipio di rivalazione* è che se si riesce a progettare un meccanismo che ha delle strategie dominanti allora si può progettare un meccanismo la cua strategia dominante è la diretta rivelazione delle proprie informazioni private (ovvero conviene sempre dichiarare il vero).
 
 > **Proof:** Supponiamo che per ogni partecipante $i$, e per ogni possibile informazione privata $v_i$ che esso può avere, esiste una *strategia dominante* $s_i(v_i)$ che esso può adottare nel meccanismo $M$.
 > 
