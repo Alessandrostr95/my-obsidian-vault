@@ -1,6 +1,6 @@
 # PageRank
 
-Mentre con l\'algoritmo [HITS](./18.html) la rilevanza di una pagina
+Mentre con l\'algoritmo [[18 - Web Search - Part 2#HITS Hubs and Authorities|HITS]] la rilevanza di una pagina
 dipende da quante pagine è putanta e a quante punta, esistono contesti
 in cui la rilevanza non dipende dal numero bensì dalla **qualità** dei
 link. Ovvero ci sono situazioni in cui l\'approvazione è vista come un

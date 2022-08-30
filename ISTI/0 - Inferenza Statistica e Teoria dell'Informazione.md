@@ -33,3 +33,5 @@
 	3. [[Test chi-quadro]]
 	4. [[I test "migliori"]]
 17. [[Stima per intervalli di confidenza]]
+
+- [[Proprietà utili]]
