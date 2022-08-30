@@ -1,9 +1,7 @@
 # Revenue-Maximizing Auctions
 ## The Challenge of Revenue Maximization
 Fin ora ci siamo interessati alla progettazione di meccanismi che massimizzasserro (*esattamente* o *approsimativamente*) una sorta di **benessere** sociale, ovvero
-$$
-\text{social-surplus} = \sum_{i=1}^{n} v_i x_i
-$$
+$$\text{social-surplus} = \sum_{i=1}^{n} v_i x_i$$
 dove $(x_1,...,x_n) \in X$ è una [[3 - Myerson’s Lemma#^43b362|soluzione ammissibile]].
 
 Un'asta è detta **welfare-maximizing** se ha come obiettivo quelli di massimizzare il social-surplus (come visto fin ora).
@@ -12,7 +10,7 @@ Ci siamo interessati a *welfare-maximizing auctions* per due semplici motivi:
 1. è un obiettivo che spesso si incontra in scenari reali
 2. in ogni ambiente a [[3 - Myerson’s Lemma#Single-Parameter Environments|singolo parametro]] esiste sempre un meccanismo DSIC che massimizza il *"benessere"* (esattamente come se il designer conoscesse in anticipo tutte le valutazioni private $v_i$).
 
-In tali aste vengono generate dei **pagamenti**, però col solo scopo di incentivare i partecipanti a dichiarare il vero (ovvero per ottenere un meccanismo [[2 - Mechanism Design Basics#^a63f67|DSIC]]).
+In tali aste vengono generati dei **pagamenti**, però col solo scopo di incentivare i partecipanti a dichiarare il vero (ovvero per ottenere un meccanismo [[2 - Mechanism Design Basics#^a63f67|DSIC]]).
 
 Cosa accade se ci prefissiamo l'ulteriore obiettivo di **massimizzare il ricavato** dell'asta il più possibile?
 
@@ -27,7 +25,7 @@ Perciò assumiamo che l'oggetto all'asta abbia un prezzo $r$, fissato dal design
 In tal caso lo spazio dei meccanismi si riduce al semplice meccanismo del **"prendere o lasciare"**.
 
 Se il partecipante deciderà di *prende* l'oggetto pagherà il prezzo $r$.
-Perciò, per non avere utilità negativa l'unica strategia (*dominante*) è quella di prendere se $v \geq r$, e non prendere se $v < r$.
+Perciò, per non avere utilità negativa l'unica strategia (*dominante*) è quella di prendere se $v \geq r$, e lasciare se $v < r$.
 Così facendo non solo si garantisce utilità non negatica, ma la si massimizza anche
 $$
 u = \max{\{0, v-r\}}
