@@ -1,3 +1,13 @@
+---
+tags:
+  - AR
+  - Math
+  - Algorithm
+  - ComputerScience
+  - Probability
+  - Network
+  - NetworkAnalysis
+---
 # Analisi di Reti
 --------------------------
 ## Info corso

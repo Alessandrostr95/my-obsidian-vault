@@ -1,3 +1,10 @@
+---
+tags:
+  - ISTI
+  - Math
+  - Statistics
+  - Probability
+---
 # Inferenza Statistica e Teoria dell'Informazione
 --------------
 ## Info corso
@@ -34,4 +41,9 @@
 	4. [[I test "migliori"]]
 17. [[Stima per intervalli di confidenza]]
 
+### Esercizi
+- [[Esercizi stimatori consistenti]]
+- [[Vari]]
+
+### Altro
 - [[Proprietà utili]]

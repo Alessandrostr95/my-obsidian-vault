@@ -1,4 +1,12 @@
-# Algorithmic game theory - by Tim Roughgarden
+---
+tags:
+  - AGT
+  - Math
+  - Algorithm
+  - ComputerScience
+  - Probability
+---
+# Algorithmic game theory - by Tim Roughgarden 
 ----------------------
 ## Info corso
 - **Docente**: Tim Roughgarden
