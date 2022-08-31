@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9cd5dc701e54f206",
+        "id": "dade88f31c352048",
         "type": "leaf",
         "state": {
-          "type": "diff-view",
-          "state": {
-            "file": ".obsidian/appearance.json",
-            "staged": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -103,7 +100,7 @@
     "direction": "horizontal",
     "width": 328.4999084472656
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "dade88f31c352048",
   "lastOpenFiles": [
     "ISTI/Stima per intervalli di confidenza.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
