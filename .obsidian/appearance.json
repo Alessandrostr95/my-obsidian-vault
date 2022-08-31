@@ -2,5 +2,6 @@
   "theme": "moonstone",
   "translucency": false,
   "cssTheme": "",
-  "interfaceFontFamily": "TeX Gyre Termes"
+  "interfaceFontFamily": "TeX Gyre Termes",
+  "baseFontSize": 15
 }

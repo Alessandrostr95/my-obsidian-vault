@@ -37,6 +37,7 @@ Un modo più semplice ed empirico per vedere questo test è il seguente:
 
 ## Esempio
 Un dado viene lanciato 2000 volte e i vari risultati escono con le seguenti sequenze
+
 Esito | Occorrenza
 -|-
 1|388
@@ -64,6 +65,7 @@ Supponiamo di avere un campione di $n$ elementi, classificabili due **differenti
 Per esempio, supponiamo di aver campionato da 5 differenti stati dell'unione europea $n$ persone, e di aver chiesto che frutto preferiscono mangiare d'estate tra cocco 🥥, anguria 🍉 o ananas 🍍.
 
 Possiamo rappresentare tali dati come una tabella dove abbiamo $r$ righe che rappresentano le classi del primo criterio, e $c$ colonne che rappresentano le classi del secondo criterio.
+
 \ | 🥥 | 🍉 | 🍍
 -|-|-|-
 🇮🇹| 40 | 80 | 21
@@ -85,6 +87,7 @@ Per stimare $\underline{\alpha}, \underline{\beta}$ iniziamo col fare le **somme
 $$r_i = \sum_{j=1}^{c} X_{ij}$$
 $$c_j = \sum_{i=1}^{r} X_{ij}$$
 Osserviamo che $$n = \sum_{i=1}^{r} r_i = \sum_{j=1}^{c} c_j$$
+
 \ | 🥥 | 🍉 | 🍍 | $r_i$ 
 -|-|-|-|-
 🇮🇹 | 40 | 80  | 21 | 141
