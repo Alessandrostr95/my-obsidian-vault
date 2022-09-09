@@ -30,7 +30,7 @@ Osserviamo che $X \sim N(\mu, \sigma^2)$ avra *pdf* $$f_X(x) = \frac{1}{\sigma} 
 
 ## Proprietà importanti
 Sia $X \sim N(\mu, \sigma^2)$
-1. La v.a. $aX + b$ equivlae a una normale $N(a\mu + b, |a|\sigma)$.
+1. La v.a. $aX + b$ equivlae a una normale $N(a\mu + b, (a\sigma)^2)$.
 2. Caso particolare del predente: sia $Z \sim N(0, 1)$. Allora la v.a. $\sigma^2 Z + \mu$ è una normale $N(\mu, \sigma^2)$. 
 3. $e^X \sim \ln{(N(\mu, \sigma^2))}$.
 4. La v.a. $\vert X - \mu \vert / \sigma$ avrà distribuzione **chi** con 1 grado di libertà: $\vert X - \mu \vert / \sigma \sim \chi_1$.
