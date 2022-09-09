@@ -12,3 +12,7 @@ L'algoritmo *"migliore"* è quindi quello che ha le prestazioni migliori nel cas
 
 Il *merge sort*, con il suo tempo di esecuzione (**asintotico**) nel caso peggiore di $\Theta(n \log{n})$ per gli array di lunghezza $n$, è migliore in questo senso rispetto all'*insertion sort*, che ha un tempo di esecuzione peggiore di $\Theta(n^2)$.
 
+L'analisi *worst-case* risulta estremamente utile, ed è il paradigma dominante per l'analisi degli algoritmi nell'informatica teorica.
+Un algoritmo con buone prestazioni nel caso peggiore garantisce una buona qualità per qualsiasi input possibile.
+
+
