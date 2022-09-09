@@ -59,7 +59,7 @@ Come abbiamo visto [[#^5f39d8|prima]], nel problema della massimizzazione dei gu
 
 Introduciamo e studiamo quindi il modello noto come **avarage-case** o **Bayesiano**, nel quale si assume che le valutazioni dei partecipanti rispettano certe **distribuzioni**, aprendo quindi la possibilità di studiare i **guadagni medi**.
 
-Più formalmente, gli ingredianti sono:
+Più formalmente, gli ingredianti di un ambiente Bayesiano sono:
 - Un *enviroment* a [[3 - Myerson’s Lemma#Single-Parameter Environments|singolo parametro]].
 - La valutazione privata $v_i$ del partecipante $i$ segue una *distribuzione* con funzione di ripartizione $F_i$ e funzione di densità $f_i$, con **supporto** $\left[0, v_{\max} \right]$. Assumiamo inoltre che le distribuzioni $F_1,...,F_n$ siano **indipendenti**.
 - Le distribuzioni $F_1,...,F_n$ sono note *a priori* dal designer. Mentre le reali valutazioni $v_1,...,v_n$ sono *private* (come al solito).
@@ -67,7 +67,7 @@ Più formalmente, gli ingredianti sono:
 Osservare che, dato che siamo interessati a meccanismi [[2 - Mechanism Design Basics#^a63f67|DSIC]] per i quali (<u>per definizione</u>) esiste sempre una strategia dominante, i partecipanti non hanno bisogno di conoscere le relative distribuzioni $F_1,...,F_n$.
 
 In questo ambiente **Bayesiano** è semplice definire un'asta *"ottima"* che massimizza il guadagno (revenue).
-Il meccanismo ottimo è quello che tra tutti i meccanismi DSIC ha il più alto **valore atteso** rispetto alla distribuzione $F_1 \times F_2 \times ... \times F_n$ rispetto alle valutazioni $\mathbf{v}$.
+Il meccanismo ottimo è quello che tra tutti i meccanismi DSIC ha il più alto **valore atteso** rispetto alla [[Distribuzioni Multivariate#Joint PDF|distribuzione congiunta]] $F_1 \times F_2 \times ... \times F_n$ rispetto alle valutazioni $\mathbf{v}$.
 
 Per esempio, rispetto all'asta [[5 - Revenue-Maximizing Auctions#One Bidder and One Item|one-bidder one-item]] il guadagno atteso rispetto al prezzo $r$ sarà
 $$ r \cdot (1 - F(r)) $$
@@ -91,7 +91,7 @@ In questo sistema ci sono sia dei vantaggi che svantaggi dal punto di vista dei 
 Si può verificare (**[vedi esercizio]**) che il guadagno medio in questa asta è di $5/12$ (meglio di $1/3$ senza la presenza del prezzo soglia).
 
 Ciò che ci chiedimo è quindi:
-si può fare meglio, per esempio cambiando il prezzo soglia $r$ oppure totalmente approccio ?
+si può fare meglio, per esempio cambiando il prezzo soglia $r$ oppure con totalmente un altro approccio ?
 
 ----------------------
 # Expected Revenue Equals Expected Virtual Welfare
@@ -158,7 +158,7 @@ La *valutazione virtuale* gioca un ruolo importante nella progettazione di aste 
 È utile chiedersi se si può dare un qualche significato *intuitivo* a $\varphi_i(v_i)$.
 
 Un modo per interpretare i due addendi che compongono $\varphi_i(v_i)$ è considerando $v_i$ il **massimo guadagno** che è possibile ottenere da $i$ (di più $i$ non può pagare altrimenti avrebbe utilità negativa) mentre il secondo elemento $(1-F_i(v_i))/f_i(v_i)$ la **perdita** di guadagno causata dalla **mancata conoscenza a priori** di $v_i$ (aka *"information rent"*).
-$$\varphi_i(v_i) = \underbrace{v_i}_{\text{what you'd like to charge }i} - \underbrace{\frac{1-F_i(v_i)}{f_i(v_i)}}_{\text{"information rent" earned by bidder} i}$$
+$$\varphi_i(v_i) = \underbrace{v_i}_{\text{what you'd like to charge }i} - \underbrace{\frac{1-F_i(v_i)}{f_i(v_i)}}_{\text{"information rent" earned by bidder } i}$$
 
 Un secondo modo più accurato è quello di pensare a $\varphi_i(v_i)$ come la **pendenza** di una *"curva dei ricavi"*, dove tale curva traccia il *guadagno atteso* dal player $i$ campionando $v_i \sim F_i$. 
 
@@ -217,15 +217,16 @@ Purtroppo non abbiamo controllo sulla distribuzione $\mathbf{F}$, perciò su $\m
 Il modo più semplice è quello di massimizzare il *virtual surplus* separatamente per ogni input $\mathbf{v}$ (*pointwise*).
 
 Nell'asta a singolo oggetto abbiamo che $\mathbf{x}(\mathbf{v}) \in \{0,1\}^n$ con la costrizione che *al più* una sola entry deve essere $1$.
-Perciò la regola di allocazione $\mathbf{x}$ che massimizza il *virtual surplus* equivale semplicemente alla regola che elegge come vincitore il player $i$ con **[[#^9edaa0|valutazione virtuale]]** $\varphi(v_i)$, massima.
+Perciò la regola di allocazione $\mathbf{x}$ che massimizza il *virtual surplus* equivale semplicemente alla regola che elegge come vincitore il player $i$ con **[[#^9edaa0|valutazione virtuale]]** $\varphi(v_i)$, massima, ovvero
+$$\text{winner} = \arg\max_{i=1,...,n} \varphi(v_i)$$
 
 > Ricordiamo che la valutazione virtuale può anche assumere valori **negativi** ([[#Esempio|vedi esempio]]).
 > Perciò, nel caso in cui tutti i $\varphi(v_i)$ siano $< 0$, la regola $\mathbf{x}$ che massimizza il *virtual surplus* è quella che non dichiara nessun vincitore.
 
-Trovare un $\mathbf{x}$ che massimizza il *[[#^7b8481|virtual surplus]]* per separatamente per ogni $\mathbf{v}$ definisce una regola di allocazione che lo massimizza anche in [[#^8ee749|media]] tra tutte le possibili regole di allocazione possibili in $X$ (monotone o no).
+Trovare un $\mathbf{x}$ che massimizza il *[[#^7b8481|virtual surplus]]* separatamente per ogni $\mathbf{v}$ definisce una regola di allocazione che lo massimizza anche in [[#^8ee749|media]] tra tutte le possibili regole di allocazione possibili in $X$ (monotone o no).
 
 Noi però vorremmo anche che tale regola di allocazione $\mathbf{x}$ che massimizza il *virtual surplus* abbia una *strategia dominante*.
-Per il [[4 -  Knapsack Auctions#^ec0935|principio di rivelazione]] sappiamo che possiamo estendere $\mathbf{x}$ ad essere [[2 - Mechanism Design Basics#^a63f67|DSIC]], e per il [[3 - Myerson’s Lemma#Theorem Mayerson's Lemma|Mayerson's Lemma]] ciò equivale a dire che $\mathbf{x}$ è [[3 - Myerson’s Lemma#^3c29c4|monotona]].
+Se così fosse, per il [[4 -  Knapsack Auctions#^ec0935|principio di rivelazione]] sappiamo che possiamo estendere $\mathbf{x}$ ad essere [[2 - Mechanism Design Basics#^a63f67|DSIC]], e per il [[3 - Myerson’s Lemma#Theorem Mayerson's Lemma|Mayerson's Lemma]] ciò equivale a dire che $\mathbf{x}$ è [[3 - Myerson’s Lemma#^3c29c4|monotona]].
 In fine sappiamo che se $\mathbf{x}$ è monotona allora tale meccanismo che massimizza il *virtual surplus* (in media) massimizzerebbe anche i *guadagni medi* (vedi [[#Step 6]]).
 
 La risposta a tale domanda chiave dipende dalla distribuzione $F$.
@@ -236,7 +237,7 @@ Infatti si può dimostrare che se $F$ è tale che la [[#^9edaa0|valutazione virt
 Per esempio la distribuzione uniformo vista nell'[[#Esempio]] è *regolre*.
 Anche altre distribuzioni lo sono, come per esempio quella [esponenziale](https://en.wikipedia.org/wiki/Exponential_distribution) o quella [log-normale](https://en.wikipedia.org/wiki/Log-normal_distribution).
 
-Perciò possiamo dire che nell'asta a singolo oggetto con distribuzioni i.i.d. e con l'assunzione di *regolarità* delle distribuzioni, la regola di allocazione $\mathbf{x}$ che elegge vincitore il partecipante con massima (<u>non negativa</u>) *valutazione virtuale* $\varphi(v_i)$ (se esiste), è *monotona* e quindi induce in un'asta *"ottima"* che **massimizza il social-surplus e il guadagno atteso**.
+Perciò possiamo dire che nell'asta a singolo oggetto con distribuzioni i.i.d. e con l'assunzione di *regolarità* delle distribuzioni, la regola di allocazione $\mathbf{x}$ che elegge vincitore il partecipante con massima (<u>non negativa</u>) *valutazione virtuale* $\varphi(v_i)$ (se esiste), è *monotona* e quindi induce in un'asta *"ottima"* che **massimizza il social-surplus (esattamente) e il guadagno atteso**.
 
 Osservare inoltre che dato che tutti i partecipanti condividono la stesso funzione di *valutazione virtuale* $\varphi$, e dato che stiamo assumendo che $F$ è regolare, allora il player con $\varphi(v_i)$ più alto equivale al player con valutazione privata $v_i$ più alta.
 
