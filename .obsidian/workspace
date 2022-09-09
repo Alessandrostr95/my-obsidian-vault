@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "dade88f31c352048",
+        "id": "e7a3b4a2ad049f06",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "BWA/1 - Introduction.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "BWA/1 - Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "BWA/1 - Introduction.md"
+              }
             }
           },
           {
@@ -100,17 +107,17 @@
     "direction": "horizontal",
     "width": 328.4999084472656
   },
-  "active": "dade88f31c352048",
+  "active": "e7a3b4a2ad049f06",
   "lastOpenFiles": [
-    "ISTI/Stima per intervalli di confidenza.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
+    "root.md",
+    "BWA/1 - Introduction.md",
+    "AGT/0 - Algorithmic game theory.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "ISTI/quantili.pdf",
-    "ISTI/I test \"migliori\".md",
-    "ISTI/Test chi-quadro.md",
-    "ISTI/p-value.md",
-    "ISTI/Test comuni.md",
-    "ISTI/Hypothesis Testing.md",
-    "ISTI/Esercizi/Vari.md",
-    "ISTI/Altri Test.md"
+    "AGT/6 - Simple Near-Optimal Auctions.md",
+    "AGT/5 - Revenue-Maximizing Auctions.md",
+    "AGT/4 -  Knapsack Auctions.md",
+    "AGT/3 - Myerson’s Lemma.md",
+    "AGT/2 - Mechanism Design Basics.md"
   ]
 }
