@@ -17,3 +17,7 @@ tags:
 -------------------
 ## Table of contents
 - [[1 - Introduction]]
+
+
+## Appendix
+- [[median-point|Linear algorithm for finding median]]

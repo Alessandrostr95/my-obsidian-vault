@@ -7,11 +7,10 @@
         "id": "83da178b39b3ec7e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diff-view",
           "state": {
-            "file": "BWA/1 - Introduction.md",
-            "mode": "source",
-            "source": false
+            "file": "BWA/0 - Beyond Worst-Case Analysis.md",
+            "staged": true
           }
         }
       }
@@ -69,7 +68,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BWA/1 - Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,9 +83,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "BWA/1 - Introduction.md"
-              }
+              "state": {}
             }
           },
           {
@@ -109,15 +105,15 @@
   },
   "active": "83da178b39b3ec7e",
   "lastOpenFiles": [
-    "^.md",
     "BWA/1 - Introduction.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
+    "BWA/Appendix/median-point.md",
+    "^.md",
     "BWA/img/BWA_01_3.png",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
     "root.md",
     "AGT/0 - Algorithmic game theory.md",
     "AGT/6 - Simple Near-Optimal Auctions.md",
-    "AGT/5 - Revenue-Maximizing Auctions.md",
-    "AGT/4 -  Knapsack Auctions.md"
+    "AGT/5 - Revenue-Maximizing Auctions.md"
   ]
 }
