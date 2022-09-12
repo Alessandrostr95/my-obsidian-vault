@@ -173,7 +173,7 @@ L'analisi *worst-case* è il paradigma dominante nell'analisi formale degli algo
 Diamo una definizione formale di questo paradigma.
 Sia $A$ un algoritmo e $z$ una qualsiasi istanza ammissibile.
 Definiamo la **funzione di misura** $\text{cost}(A,z)$ che descrive la quantità rilevante di **risorse** che l'algoritmo $A$ *"consuma"* quando riceve l'input $z$.
-Questa misura può indicare per esempio il **running time**, lo **spazio** usato in memroia, il **numero di operazioni di I/O** fatte, oppure la **qualità dell'output**.
+Questa misura può indicare per esempio il **running time**, lo **spazio** usato in memroia, il **numero di operazioni di I/O** fatte, oppure la **qualità dell'output**. ^db5c4b
 
 Se quindi $\text{cost}(A,z)$ descrive le *"prestazioni"* di $A$ rispetto al dato input $z$, cosa possiamo dire riguardo le *"prestazioni complessive"* di $A$ rispetto ad ogni possibile input?
 
@@ -224,3 +224,5 @@ Pericò possiamo *rilassare* questa [[#^a9ed78|condizione]] è definire
 > **Def. Instance Optimality**
 > Un algoritmo $A$ per un dato problema è detto **instance optimal** con **approssimazione** $c \geq 1$ se per ogni ogni altro algoritmo $B$ (per lo stesso problema) e per ogni istanza $z$ avremo che $$\text{cost}(A,z) \leq c \cdot \text{cost}(B,z)$$
 > Importante osservare che $c$ è una **costante indipendente** da $B$.
+
+^67367e
