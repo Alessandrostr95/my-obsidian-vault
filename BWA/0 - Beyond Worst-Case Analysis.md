@@ -18,6 +18,7 @@ tags:
 ## Table of contents
 - [[1 - Introduction]]
 - [[2 - Instance-Optimal Geometric Algorithms]]
+- [[3 - Online Paging and Resource Augmentation]]
 
 
 ## Appendix
