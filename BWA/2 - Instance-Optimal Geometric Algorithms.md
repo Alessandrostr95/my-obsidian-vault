@@ -133,7 +133,9 @@ L'idea intuitiva è che ogni insieme $S_i$ del **secondo tipo** rappresenta il c
 Più grande è $S_i$, più *"facile"* risulterà l'istanza.
 
 > **Teorema**
-> Per ogni possibile input $Q$, il running time dell'algoritmo KS è $$O\left( \min_{legal \, \{S_i\}} \sum_{i=1}^{k} \vert S_i \vert \log{\frac{n}{\vert S_i \vert}} \right)$$
+> Per ogni possibile input $Q$, il running time dell'algoritmo KS è $$O\left( \min_{\text{legal } \{S_i\}} \sum_{i=1}^{k} \vert S_i \vert \log{\frac{n}{\vert S_i \vert}} \right)$$
+
+^3112de
 
 Tale teorema mostra un upper-bound con una *grana molot fine* per il running time dell'algoritmo KS, parametrizzato dalla *"facilità"* dell'istanza (ovvero dalla partizione legale $\{S_i\}$).
 
@@ -169,5 +171,57 @@ Tale teorema mostra un upper-bound con una *grana molot fine* per il running tim
 \end{align*}$$
 
 > **Proof of the Key claim**
-> [[TODO]]
+> Fissiamo un generico livello $j$ della ricorsione, e suddividiamo la dimostrazione in due parti:
+> 1. Tutti i punti di $S_i$ rimasti (ovvero $S_i^{(j)}$) sono compresi (rispetto all'asse delle $x$) tra due punti **massimali** $p_L,p_R$ **adiacenti** e **trovati entro il livello** $j$.
+> 2. Per ogni coppia di punti **massimali** $p_L,p_R$ **adiacenti** e **trovati entro il livello** $j$, ci sono solamente $O(n/2^j)$ punti sopravvissuti compresi tra $p_L$ e $p_R$ (rispetto alla coordinata $x$).
+> 
+> Siano $a$ e $b$ le coordinate $x$ dei punti $p_L$ e $p_R$ (rispettivamente).
+> Nel caso in cui $p_L$ o $p_R$ non esistano (nei margini) poniamo $a = -\infty$ o $b = \infty$.
+> Per definizione, tutti i punti in $S_i^{(j)}$ hanno coordinate $x$ **minori** di $b$ (pensa come funzione l'algoritmo).
+> Sicuramente avremo anche che tutti i punti in $S_i$ con coordinate $x$ **minori** di $a$ saranno stati *rimossi* dall'algoritmo quando il punto $q_L$ è stato identificato come massimo.
+> Perciò avremo anche che in $S_i^{(j)}$ tutti i punti hanno coordinate $x$ **maggiori** di $a$, provando quindi il punto (1).
+> 
+> ![|500](BWA_02_5.png)
+> 
+> Per quanto riguarda il punto (2), ricordiamo che l'algoritmo **dimezza** la grandezza dell'istanza ad ogni iterzaione, in quanto $Q$ viene partizionato rispetto al punto **mediano**.
+> Perciò le $\leq 2^j$ chiamate ricorsive al livello $j$ (al più perché alcune chiamate possono essere vuote) sono composte da $\leq 2^j$ sottoinsiemdi di $Q$ (partizionati rispetto all'asse $x$), composti da $\leq n/2^j$ punti ciascuno (al più perché potrebbero essere rimossi molti punti strada facendo).
+> 
+> ![](BWA_02_4.png)
+> 
+> Una volta identificati i punti **massimali** per ognuno di questi sottoinsiemi, osserviamo che tra un massimale e un altro possono esserci **al più** $2 \cdot n/2^j \in O(n/2^j)$ punti che sopravvivono.
+> Ciò implica che $\vert S_i^{(j)} \vert \in O(n/2^j)$ $\square$.
+
+-------------------
+# Instance Optimality of the KS Algorithm
+Il [[#^3112de|precedente teorema]] propone un upper-bound parametrizzato e molto raffinato al running time dell'algoritmo KS.
+Per dimostrare ora che KS è [[1 - Introduction#^67367e|instance optimal]]  per il problema del *2D Maxima*, equivale al dimostrare che per ogni input $Q \subset \mathbb{R}^2$, e per ogni altro algoritmo (*corretto*) $B$ avremo
+$$\text{cost}(B, Q) \in \Omega\left( \min_{\text{legal } \{S_i\}} \sum_{i=1}^{k} \vert S_i \vert \log{\frac{n}{\vert S_i \vert}} \right)$$
+
+Purtroppo però è facile mostrare un esempio in cui tale relazione non è vera.
+Un algoritmo può **memorizzare** (in maniera *hard-coded*) le soluzioni per alcune istanze (magari già risolte in precedenza).
+Periò un algoritmo che sfrutta tale tecnica può essere:
+1. Controlla se la soluzione per l'input $Q$ è **memorizzata** (time $O(n)$);
+2. Se si, ritorna la soluzione *hard-coded* $S$ (time $O(1)$);
+3. Altrimenti, risolvi l'istanza con l'algoritmo che preferisci (per esempio KS).
+
+Questo algoritmo è corretto, è in certi casi è anche asintoticamente migliore di KS.
+Anche se potrebbe scoraggiarci nel continuare verso questa strada, un ragionamente invece incoraggiante è
+
+> *Annoying counterexamples are not a good reason to abandon the quest for an interesting theorem*
+
+In poche parole
+
+> Se hai in mente un teorema, forse il modello o l'affermazione del teorema possono essere leggermente modificati per ottenere un risultato significativo?
+
+Osserviamo che il nostro [[#^3112de|upper-bound]] al running time dell'algoritmo KS dipende **solamente** dall'insieme di punti in input $Q$, ed è **indipendente dall'ordine** in cui questi punti sono elencati (ricordando che per avere queste prestazioni $Q$ deve essere disposto in un **array**).
+
+Pericò, riconsiderando l'algoritmo banale in questi termini, per verificare se $Q$ ha una soluzione gia memorizzata, saranno necessari $O(n\log{n})$ confronti anziché $O(n)$ (perché conviene ordinare $Q$ e la sequenza memorizzata, e poi verificare se sono uguali).
+
+Ciò che quindi ci si aspetta è che le prestazioni di un algoritmo *"naturale"* per il problema sia **incurante dell'ordine**, nel senso appena discusso.
+Mentre l'algoritmo banale, per avere efficienza $O(n)$ richiede che $Q$ sia già ordinato, perciò possiamo classificarlo come algoritmo *"non naturale"*.
+
+Formuliamo quindi il seguente teorema
+
+> **Teorema**
+> Per ogni possibile input $Q \subset \mathbb{R}^2$ per il problema *2D maxima*, qualsiasi algoritmo *"naturale"* (o *"incurante dell'ordine"*) richiederà un numero di confronti dell'ordine di $$\Omega\left( \min_{\text{legal } \{S_i\}} \sum_{i=1}^{k} \vert S_i \vert \log{\frac{n}{\vert S_i \vert}} \right)$$
 
