@@ -1,188 +1,120 @@
 # PageRank
+Mentre con l'algoritmo [[18 - Web Search - Part 2#HITS Hubs and Authorities|HITS]] la rilevanza di una pagina dipende da quante pagine è putanta e a quante punta, esistono contesti in cui la rilevanza non dipende dal numero bensì dalla **qualità** dei link.
+Ovvero ci sono situazioni in cui l'approvazione è vista come un passaggio diretto da una pagina importante ad un'altra.
 
-Mentre con l\'algoritmo [[18 - Web Search - Part 2#HITS Hubs and Authorities|HITS]] la rilevanza di una pagina
-dipende da quante pagine è putanta e a quante punta, esistono contesti
-in cui la rilevanza non dipende dal numero bensì dalla **qualità** dei
-link. Ovvero ci sono situazioni in cui l\'approvazione è vista come un
-passaggio diretto da una pagina importante ad un\'altra. Per esempio, se
-un articolo `X` molto importante cita un articolo `Y`, allora `Y`
-prenderà rilevanza. Simmetricamente, se `X` cita molti articoli
-importanti allora probabilmente il suo contenuto sarà rilevante per la
-ricerca.\
-Questo concetto è quello su cui si basa l\'algoritmo **PageRank** per
-determinare la rilevanza delle pagine rispetto a una ricerca. Tale
-modello prende il nome da [Larry
-Page](https://it.wikipedia.org/wiki/Larry_Page), fondatore di Google da
-cui il nome.\
-Tale algoritmo è ancora una volta un metodo iterativo, basato però
-sull\'analisi dei soli [link entranti]{.underline} in una pagina. Ovvero
-solamente i link che puntano ad una pagina `X` saranno utili per
-definirne la sua rilevanza.\
-Tale algoritmo parte dall\'assunzione che nella porzione di rete
-attinente alla ricerca sia presente una unità di **flusso** inizialmente
-distribuita in maniera equa fra tutti i nodi, ovvero se ci sono $n$
-allora inizialmente ognino possiede frazione $1/n$ di flusso.\
-In maniera intutitva, durante le iterazioni dell\'algoritmo, ogni nodo
-redistribuisce la propria frazione di flusso alle pagine che punta. Alla
-fine, dopo un certo numero di iterazioni, la pagina che avrà una
-frazione più alta sarà quella più rilevante per la ricerca.\
-Formalmente indichiamo con $$
-  f^{(0)}_i = \frac{1}{n}
-  $$ la quantità [iniziale]{.underline} di flusso del nodo $i$-esimo,
-per $i=1,...,n$.\
-Ad ogni passo, ogni nodo redistribuisce la propria quantità di flusso
-lungo i suoi archi uscenti in maniera **uniforme**. Perciò avremo che $$
-  f^{(k+1)}_i = \sum_{1 \leq j \leq n :\\j \rightarrow i} \frac{f^{(k)}_j}{d^{(out)}_j}
-  $$ dove $d^{(out)}_j$ indica il [grado uscente]{.underline} di $j$,
-ovvero il numero di nodi puntati da $j$ all\'interno del sottografo
-indotto dalle sole pagine inerenti alla ricerca.\
-Per notazione indichiamo con $f^{(k)} = (f^{(k)}_1, ..., f^{(k)}_n)$ il
-vettore delle quantità di flusso degli $n$ al tempo $k$.\
+Per esempio, se un articolo `X` molto importante cita un articolo `Y`, allora `Y` prenderà rilevanza.
+Simmetricamente, se `X` cita molti articoli importanti allora probabilmente il suo contenuto sarà rilevante per la ricerca.
 
-> Se il sottografo indotto dalle pagine attinenti alla ricerca è
-> [fortemente connesso]{.underline} allora esiste ed è unico il limite
-> $$
-> \lim_{k \rightarrow \infty} f^{(k)} = f^*
-> $$
+Questo concetto è quello su cui si basa l'algoritmo **PageRank** per determinare la rilevanza delle pagine rispetto a una ricerca.
+Tale modello prende il nome da [Larry Page](https://it.wikipedia.org/wiki/Larry_Page), fondatore di Google da cui il nome.
 
-Sotto l\'assunzione di connessione forte, è facile osservare che la
-quantità di flusso globale rimane sempre 1.\
-Possiamo quindi pensare al limite $f^*$ come una **configurazione di
-equilibrio** in cui $$
-  f^*_i = \sum_{1 \leq j \leq n :\\j \rightarrow i} \frac{f^*_j}{d^{(out)}_j} \;\;\; \forall i=1,...,n
-  $$
+Tale algoritmo è ancora una volta un metodo iterativo, basato però sull'analisi dei soli **link entranti** in una pagina.
+Ovvero solamente i link che puntano ad una pagina `X` saranno utili per definirne la sua rilevanza.
 
-![Configurazione di equilibrio $f^*$ (porvare per
-credere).](../images/ar-lesson19-img1.png){width="100%"
-style="max-width: 500px;"}
+Tale algoritmo parte dall'assunzione che nella porzione di rete attinente alla ricerca sia presente una unità di **flusso** inizialmente distribuita in maniera equa fra tutti i nodi, ovvero se ci sono $n$ allora inizialmente ognino possiede frazione $1/n$ di flusso.
 
-Ovviamente la condizione che il grafo sia fortemente connesso è
-**necessaria** per il correto funzionamento, in quanto se non fosse
-fortemente connesso tutto il flusso andrebbe a finire tutto in
-[componenti pozzo]{.underline}.\
-Perciò è necessario modificare opportunamente il PageRank per evitare
-tutto il flusso si accumuli in componenti pozzo. Una versione modificata
-è il noto **Scaled PageRank** nel quale ogni pagina
-[preserva]{.underline} un propria porzione di flusso per evitare che
-tutto si accumuli nei *\"vicoli ciechi\"*.\
-Più precisamente, fissato un parametro $s \in \left[ 0,1 \right]$, e ad
-ogni iterazione:
+In maniera intutitva, durante le iterazioni dell'algoritmo, ogni nodo redistribuisce la propria frazione di flusso alle pagine che punta.
+Alla fine, dopo un certo numero di iterazioni, la pagina che avrà una frazione più alta sarà quella più rilevante per la ricerca.
 
--   una frazione $s$ del flusso di ogni nodo viene redistribuito
-    uniformemente sugli archi uscenti come nel PageRank calssico.
--   mentre la frazione rimanente $(1-s)$ di ciascun nodo viene
-    ridistribuita sul tutto il grafo in maniera uniforme.
+Formalmente indichiamo con $$f^{(0)}_i = \frac{1}{n}$$ la quantità <u>iniziale</u> di flusso del nodo $i$-esimo, per $i=1,...,n$.
 
-Percò, dato che il flusso globale di tutta la sottorete è sempre 1,
-avremo che ad ogni iterazione ogni nodo riceverà una quantità di flusso
-di [almeno]{.underline} $(1-s)/n$.\
-Per distiguere, indichiamo con $r^{(k)}_i$ la quantità di flusso
-posseduta dal nodo $i$ all\'iterazione $k$ nello Scaled Page Rank.
-D\'ora in avanti ci riferiremo ad esso con il termine di **rank**, e non
-più di flusso.\
-La formula ricorsiva per calcolare il rank di un nodo al tempo $k+1$ è
+Ad ogni passo, ogni nodo redistribuisce la propria quantità di flusso lungo i suoi archi uscenti in maniera **uniforme**.
+Perciò avremo che $$f^{(k+1)}_i = \sum_{1 \leq j \leq n :\\j \rightarrow i} \frac{f^{(k)}_j}{d^{(out)}_j}$$ dove $d^{(out)}_j$ indica il **grado uscente** di $j$, ovvero il numero di nodi puntati da $j$ all'interno del sottografo indotto dalle sole pagine inerenti alla ricerca.
 
-```{=latex}
-\begin{equation}
-  r^{(k+1)}_i = \Big( \sum_{1 \leq j \leq n :\\j \rightarrow i} s \cdot \frac{r^{(k)}_j}{d^{(out)}_j} \Big) + \frac{1-s}{n}
-\end{equation}
-```
-Dato un vettore di ranking
-$r^{(k)} = (r^{(k)}_1, r^{(k)}_2, ..., r^{(k)}_n)$ la tempo $k$,
-difiniamo con $N$ la matrice $n \times n$ che descirve il processo
-iterativo, ovvero tale che $$
-  r^{(k+1)} = N r^{(k)}
-  $$
+Per notazione indichiamo con $f^{(k)} = (f^{(k)}_1, ..., f^{(k)}_n)$ il vettore delle quantità di flusso degli $n$ al tempo $k$.
 
-Per definizione la matrice $N$ è definita come segue $$
-  N [ i,j ] = \begin{cases}
-    \frac{s}{d^{(out)}_j} + \frac{1-s}{n} &\mbox{se } j \rightarrow i\\
-    \frac{1-s}{n} &\mbox{altrimenti}
-  \end{cases} \;\; \forall 1 \leq i,j \leq n
-  $$ Infatti avremo che il ranking $i$-esimo di $r^{(k+1)}$ sarà
+> Se il sottografo indotto dalle pagine attinenti alla ricerca è **fortemente connesso** allora esiste ed è unico il limite $$\lim_{k \rightarrow \infty} f^{(k)} = f^*$$
 
-```{=latex}
-\begin{align*}
-    r^{(k+1)} = \sum_{j = 1}^{n} N [ i,j ] r^{(k)}_j &= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \Big( \frac{s}{d^{(out)}_j} + \frac{1-s}{n} \Big) r^{(k)}_j \bigg) + \bigg( \sum_{1 \leq j \leq n :\\ j \not\to i} \frac{1-s}{n}r^{(k)}_j \bigg)\\
-    &= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \frac{s}{d^{(out)}_j}r^{(k)}_j \bigg) + \bigg( \sum_{j = 1}^{n} \frac{1-s}{n}r^{(k)}_j \bigg)\\
-    &= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \frac{s}{d^{(out)}_j}r^{(k)}_j \bigg) + \frac{1-s}{n}\underbrace{\bigg( \sum_{j = 1}^{n} r^{(k)}_j \bigg)}_{\scriptsize{\mbox{tutto il flusso}}}\\
-    &= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \frac{s}{d^{(out)}_j}r^{(k)}_j \bigg) + \frac{1-s}{n}
-\end{align*}
-```
-ovvero la definizione data nell\'eq. (1).\
-Anche in questo caso possiamo pensare al vettore $r^*$ che definisce una
-**configurazione di equilibrio**, ovvero tale che $$
-  r^* = Nr^*
-  $$
+Sotto l'assunzione di connessione forte, è facile osservare che la quantità di flusso globale rimane sempre 1.
 
-Osserviamo che $r^*$ (se esiste) è un autovettore di $N$ con le seguenti
-proprietà:
+Possiamo quindi pensare al limite $f^*$ come una **configurazione di equilibrio** in cui $$f^*_i = \sum_{1 \leq j \leq n :\\j \rightarrow i} \frac{f^*_j}{d^{(out)}_j} \;\;\; \forall i=1,...,n$$
 
--   il rispettivo autovalore è $\lambda = 1$.
--   la somma degli elementi di $r^*$ è pari a 1.
--   ha tutti elementi [non negativi]{.underline}.
--   possibilmente che $r^*$ è l\' [unico]{.underline} autovettore con
-    tali prorpietà (così da avere un unico punto di convergenza).
+![Configurazione di equilibrio $f^*$ (porvare per credere).](ar-lesson19-img1.png)
 
-Ma chi ci assicura che tale autovettore (con relativo autovalore)
-esista?\
+Ovviamente la condizione che il grafo sia fortemente connesso è **necessaria** per il correto funzionamento, in quanto se non fosse fortemente connesso tutto il flusso andrebbe a finire tutto in **componenti pozzo**.
 
-> \*Teorema di Perron\*\
-> Sia $A$ un matrice $n \times n$ con valori [reali
-> positivi]{.underline}, allora
->
-> -   $A$ ha un autovalore $c \in \mathbb{R}^+$ tale che
->     $c > \vert c' \vert$ per ogni altro autovalore $c'$ di $A$.
-> -   l\'autovettore di $A$ corrispondente a $c$ è [unico]{.underline}
->     ed ha elementi [reali positivi]{.underline} la cui somma è pari
->     a 1.
+Perciò è necessario modificare opportunamente il PageRank per evitare tutto il flusso si accumuli in componenti pozzo.
 
-La nostra matrice $N$ rispetta tali condizioni, perciò possiamo
-applicare il teorema di *Perron* e dire che esiste una coppia
-autovalore-autovettore $(r^*, c)$ che rispetta le porprietà. Se
-potessimo anche essere certi $c = 1$ potremmo concludere che
-$r^* = N r^*$.\
+Una versione modificata è il noto **Scaled PageRank** nel quale ogni pagina **preserva** un propria porzione di flusso per evitare che tutto si accumuli nei *"vicoli ciechi"*.
+
+Più precisamente, fissato un parametro $s \in \left[ 0,1 \right]$, e ad ogni iterazione:
+- una frazione $s$ del flusso di ogni nodo viene redistribuito uniformemente sugli archi uscenti come nel PageRank calssico.
+- mentre la frazione rimanente $(1-s)$ di ciascun nodo viene ridistribuita sul tutto il grafo in maniera uniforme.
+
+Percò, dato che il flusso globale di tutta la sottorete è sempre 1, avremo che ad ogni iterazione ogni nodo riceverà una quantità di flusso di **almeno** $(1-s)/n$.
+
+Per distiguere, indichiamo con $r^{(k)}_i$ la quantità di flusso posseduta dal nodo $i$ all'iterazione $k$ nello Scaled Page Rank.
+
+D'ora in avanti ci riferiremo ad esso con il termine di **rank**, e non più di flusso.
+
+La formula ricorsiva per calcolare il rank di un nodo al tempo $k+1$ è $$r^{(k+1)}_i = \Big( \sum_{1 \leq j \leq n :\\j \rightarrow i} s \cdot \frac{r^{(k)}_j}{d^{(out)}_j} \Big) + \frac{1-s}{n}$$ ^eda700
+
+Dato un vettore di ranking $r^{(k)} = (r^{(k)}_1, r^{(k)}_2, ..., r^{(k)}_n)$ la tempo $k$, difiniamo con $N$ la matrice $n \times n$ che descirve il processo iterativo, ovvero tale che $$r^{(k+1)} = N r^{(k)}$$
+
+Per definizione la matrice $N$ è definita come segue
+$$N [ i,j ] = \begin{cases}
+\frac{s}{d^{(out)}_j} + \frac{1-s}{n} &\mbox{se } j \rightarrow i\\
+\frac{1-s}{n} &\mbox{altrimenti}
+\end{cases} \;\; \forall 1 \leq i,j \leq n$$
+Infatti avremo che il ranking $i$-esimo di $r^{(k+1)}$ sarà
+
+$$\begin{align*}
+r^{(k+1)} = \sum_{j = 1}^{n} N [ i,j ] r^{(k)}_j &= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \Big( \frac{s}{d^{(out)}_j} + \frac{1-s}{n} \Big) r^{(k)}_j \bigg) + \bigg( \sum_{1 \leq j \leq n :\\ j \not\to i} \frac{1-s}{n}r^{(k)}_j \bigg)\\
+&= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \frac{s}{d^{(out)}_j}r^{(k)}_j \bigg) + \bigg( \sum_{j = 1}^{n} \frac{1-s}{n}r^{(k)}_j \bigg)\\
+&= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \frac{s}{d^{(out)}_j}r^{(k)}_j \bigg) + \frac{1-s}{n}\underbrace{\bigg( \sum_{j = 1}^{n} r^{(k)}_j \bigg)}_{\scriptsize{\mbox{tutto il flusso}}}\\
+&= \bigg( \sum_{1 \leq j \leq n :\\ j \rightarrow i} \frac{s}{d^{(out)}_j}r^{(k)}_j \bigg) + \frac{1-s}{n}
+\end{align*}$$
+ovvero la definizione data [[#^eda700|precedentemente]].
+
+Anche in questo caso possiamo pensare al vettore $r^*$ che definisce una **configurazione di equilibrio**, ovvero tale che $$r^* = Nr^*$$
+
+Osserviamo che $r^*$ (se esiste) è un autovettore di $N$ con le seguenti proprietà:
+- il rispettivo autovalore è $\lambda = 1$.
+- la somma degli elementi di $r^*$ è pari a 1.
+- ha tutti elementi **non negativi**.
+- possibilmente che $r^*$ è l'**unico** autovettore con tali prorpietà (così da avere un unico punto di convergenza).
+
+Ma chi ci assicura che tale autovettore (con relativo autovalore) esista?
+
+> **Teorema di Perron**
+> Sia $A$ un matrice $n \times n$ con valori **reali positivi**, allora
+> - $A$ ha un autovalore $c \in \mathbb{R}^+$ tale che $c > \vert c' \vert$ per ogni altro autovalore $c'$ di $A$.
+> - l'autovettore di $A$ corrispondente a $c$ è **unico** ed ha elementi **reali positivi** la cui somma è pari a 1.
+
+La nostra matrice $N$ rispetta tali condizioni, perciò possiamo applicare il teorema di *Perron* e dire che esiste una coppia autovalore-autovettore $(r^*, c)$ che rispetta le porprietà.
+Se potessimo anche essere certi $c = 1$ potremmo concludere che $r^* = N r^*$.
+
 Per fortuna esiste un teorema che ci viene in salvo.
 
-> \*Teorema\*\
-> Sia $A$ una matrice stocastica, ovvero una matrice
-> [quadrata]{.underline} $n \times n$ la cui somma degli elementi su
-> ciascuna riga (o colonna) è pari a 1. Allora $A$ ha un autovalore
-> $\lambda$ tale che $\lambda = 1$ e $\lambda$ è l\'autovalore di
-> [modulo massimo]{.underline}.
+> **Teorema**
+> Sia $A$ una matrice stocastica, ovvero una matrice **quadrata** $n \times n$ la cui somma degli elementi su ciascuna riga (o colonna) è pari a 1.
+> Allora $A$ ha un autovalore $\lambda$ tale che $\lambda = 1$ e $\lambda$ è l'autovalore di **modulo massimo**.
 
-Osserviamo che $N$ è una matrice stocastica per colonne. Infatti, poiché
-è vero che fissato un nodo $j$ avremo che $$
-  \sum_{1 \leq i \leq n :\\ j \to i} \frac{1}{d^{(out)}_j}
-  $$ (convincersi di questo prima di proseguire) allora
+Osserviamo che $N$ è una matrice stocastica per colonne.
+Infatti, poiché è vero che fissato un nodo $j$ avremo che $$\sum_{1 \leq i \leq n :\\ j \to i} \frac{1}{d^{(out)}_j}$$ (convincersi di questo prima di proseguire) allora
 
-```{=latex}
-\begin{align*}
-    \sum_{1 \leq i \leq n} N [ i,j ] &= \Big( \sum_{1 \leq i \leq n :\\ j \to i} \frac{s}{d^{(out)}_j} + \frac{1 - s}{n} \Big) + \Big( \sum_{1 \leq i \leq n :\\ j \not\to i} \frac{1 - s}{n} \Big)\\
-    &= \Big( \sum_{1 \leq i \leq n :\\ j \to i} \frac{s}{d^{(out)}_j} \Big) + \Big( \sum_{1 \leq i \leq n} \frac{1 - s}{n} \Big)\\
-    &= s + (1-s) = 1
-\end{align*}
-```
-In conclusione per il teorema di *Perron* e per quello sulle matrici
-stocastiche averemo che l\'algoritmo Scaled PageRank converge ad un
-**punto fisso** $r^* = Nr^*$.
+$$\begin{align*}
+\sum_{1 \leq i \leq n} N [ i,j ] &= \Big( \sum_{1 \leq i \leq n :\\ j \to i} \frac{s}{d^{(out)}_j} + \frac{1 - s}{n} \Big) + \Big( \sum_{1 \leq i \leq n :\\ j \not\to i} \frac{1 - s}{n} \Big)\\
+&= \Big( \sum_{1 \leq i \leq n :\\ j \to i} \frac{s}{d^{(out)}_j} \Big) + \Big( \sum_{1 \leq i \leq n} \frac{1 - s}{n} \Big)\\
+&= s + (1-s) = 1
+\end{align*}$$
 
-> \*Esempio Matrice Stocastica\*\
+In conclusione per il teorema di *Perron* e per quello sulle matrici stocastiche averemo che l'algoritmo Scaled PageRank converge ad un **punto fisso** $r^* = Nr^*$.
+
+> **Esempio Matrice Stocastica**
 > $$N = \left [
-> \begin{array}{ccc}
->   \frac{1-s}{3} & \frac{s}{2} + \frac{1-s}{3} & s +\frac{1-s}{3}\\
->   s + \frac{1-s}{3} & \frac{1-s}{3} & \frac{1-s}{3}\\
->   \frac{1-s}{3} & \frac{s}{2} + \frac{1-s}{3} & \frac{1-s}{3}
-> \end{array}
-> \right ]$$
+\begin{array}{ccc}
+\frac{1-s}{3} & \frac{s}{2} + \frac{1-s}{3} & s +\frac{1-s}{3}\\
+s + \frac{1-s}{3} & \frac{1-s}{3} & \frac{1-s}{3}\\
+\frac{1-s}{3} & \frac{s}{2} + \frac{1-s}{3} & \frac{1-s}{3}
+\end{array}
+\right ]$$
 >
-> ![Sottografo indotto dalle pagine inerenti alla
-> ricerca](../images/ar-lesson19-img2.png){width="100%"
-> style="max-width: 250px;"}
+> ![Sottografo indotto dalle pagine inerenti alla ricerca](ar-lesson19-img2.png)
 
-PageRank e Random Walk
-======================
 
+---------------------
+# PageRank e Random Walk
 Abbiamo visto concettualmente che l\'idea dietro al PageRank è quella di
 avere una sorta di fluido che *\"scorre\"* tra le pagine individuate
 essere inerenti alla ricerca.\
