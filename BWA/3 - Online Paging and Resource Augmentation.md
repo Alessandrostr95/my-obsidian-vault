@@ -161,5 +161,37 @@ Un po' meglio rispeto al [[1 - Introduction#Goal 2 Identify Optimal Algorithms|g
 Nel resto delle note vedremo altre tecniche che migliorano la qualità degli obiettivi [[1 - Introduction#Goal 1 Performance Prediction|1]] e [[1 - Introduction#Goal 2 Identify Optimal Algorithms|2]].
 ```
 
-# Resource Augmentation and Interpretations
-[DA FINIRE]
+# Resource Augmentation
+L'idea della tecnica della **resource augmentation** è quella di comparare l'algoritmo interessato (nel nostro caso LRU) con **extra risorse** con un algoritmo migliore (nel nostro caso FIF) il quale con **risorse ridotte**.
+Naturalmente, l'indebolimento delle capacità dell'algoritmo ottimale *offline* può solo portare a [[#^2d11f5|competitive ratio]] migliori.
+
+Lasciamo a dopo l'[[#Interpretazione|interpretazione]] del perché di questo approccio.
+
+> **Teorema (Resource Augmentation Bound for LRU)**
+> Il [[#^2d11f5|competitive ratio]] dell'algoritmo online LRU con memoria $k$ è al più $$\frac{k}{k-h+1}$$ rispetto all'algoritmo ottimale con memoria di dimensione $h \leq k$.
+> Più formalmente $$\max_{\sigma} \frac{\text{cost}(LRU, k, \sigma)}{\text{cost}(OPT, h, \sigma)} \leq \frac{k}{k-h+1}$$
+
+> **Proof**
+> Molto simile alla [[#^e1e690|dimostrazione per l'upperbound dell'LRU]].
+> Partizioniamo sempre $\sigma$ in $\sigma_1, ..., \sigma_b$ in modo tale che in ogni sottosequenza appaiano solamente $k$ richieste diefferenti, e in modo tale che la prima richiesta di ogni blocco sia la $k+1$-esima richiesta differente rispetto al blocco precedente (vedi altra dimostrazione).
+> 
+> Ricordiamo che LRU incorrerà in **al più** $k$ page fault per ognuno dei $b$ blocchi.
+> 
+> Ciò che cambia rispetto all'altra dimostrazione è il numero di confronti che $OPT$ farà **almeno** per ogni blocco.
+> Come prima, consideriamo la nuova partizione con i nuovi blocchi **traslati**.
+> 
+> Il primo blocco traslto $\hat{\sigma}_1$ comprende tutto $\sigma_1$ più la prima richiesta di $\sigma_2$.
+> Dato che in questa sequenza ci sono $k+1$ pagine differenti e la memoria è solo $h$, avremo che $OPT$ farà almeno $(k+1) - h$ page fault.
+> $$\underbrace{k+1}_{\text{pagine differenti}} - \underbrace{h}_{\text{pagine in memoria}}$$
+> 
+> Il secondo blocco traslato $\hat{\sigma}_2$ sarà composto dal restante $\sigma_2$ (della seconda richiesta in poi), più la prima richiesta di $\sigma_3$.
+> Sia $p$ la pagina richista come prima richiesta di $\sigma_2$.
+> All'inizio di $\hat{\sigma}_2$ avremo quindi $p$ in cache, più altre $h-1$ pagine differenti.
+> Nel restante $\hat{\sigma}_2$ troveremo altre $k$ richieste distinte e diverse da $p$.
+> Pericò occorreranno sicuramente almeno altri $k - (h-1)$ page fault.
+>  $$\underbrace{k}_{\text{pagine differenti da }p} - \underbrace{(h-1)}_{\text{pagine in memoria differenti da }p}$$
+> 
+> In conclusione avremo che $$\frac{\text{cost}(LRU, k, \sigma)}{\text{cost}(OPT, h, \sigma)} \leq \frac{k}{k-h+1} \;\; \square$$
+
+-------
+# Interpretazione
