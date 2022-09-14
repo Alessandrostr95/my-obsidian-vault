@@ -84,20 +84,22 @@ Ovvero $A$ avrà una efficienze **al più** $\alpha$ volte quella di un qualsias
 Purtroppo il [[#A Lower Bound for all Deterministic Algorithms|lower bound]] potrebbe risultare ridicolmente enorme, dato che in contesti reali $k$ risulta essere molto grande.
 Il che non spiegherebbe le ottime prestazioni osservate empiricamente di molti algoritmi online (come *LRU*) quando applicati su **dati reali**.
 
-Tali osservazioni quindi escludono l'**analisi competitiva** dal [[1 - Introduction#Goal 1 Performance Prediction|gola di predire/descriver]] le prestazioni empiriche di un algoritmo.
+Tali osservazioni quindi escludono l'**analisi competitiva** dal [[1 - Introduction#Goal 1 Performance Prediction|goal di predire/descriver]] le prestazioni empiriche di un algoritmo.
 
 Infatti il [[#^f725b1|bound]] ci dice che le performance degradano (rispetto all'ottimo <u>offline</u>) **linearmente** al crescere della dimensione della cache.
-Ciò suggerirebbe che aumentare la memoria non è una strategia buona da adottare, contrariamente ad ogni buon senso!
+Ciò suggerirebbe che aumentare la memoria non è una strategia buona da adottare, contrariamente ad ogni buon senso! ^85a713
 
 Però, ripensando alla [[#^2d11f5|definizione di competitive ratio]], non dovremmo sorprenderci di vedere valori molto alti, infatti si basa sul modello **caso peggiore**.
 
 Questo non significa però che è inutile proseguire su questa strada.
-Infatti, se $A$ ha un competitive ratio migliore di quello di $B$ (anche se entrambi enormi), rimane sempre verò che $A$ è più competitivo rispetto a $B$.
+Infatti, se $A$ ha un competitive ratio migliore di quello di $B$ (anche se entrambi enormi), rimane sempre verò che $A$ è più competitivo rispetto a $B$. ^2482c0
 
 Perciò possiamo sempre utilizzarlo come [[1 - Introduction#Goal 2 Identify Optimal Algorithms|metodo di paragone]] per la ricerca di algoritmi ottimi.
 
 > **Teorema (Upper Bound for LRU)**
 > Il competitive ratio dell'algoritmo di paging online **LRU** è **al più** $k$.
+
+^adc4cd
 
 > **Proof**
 > Fissiamo una generica sequenza $\sigma$.
@@ -124,6 +126,40 @@ Perciò possiamo sempre utilizzarlo come [[1 - Introduction#Goal 2 Identify Opti
 > Applicando questo questo ragionamento per tutti i $b$ blocchi, avremo che qualsiasi algoritmo (e quindi anche quello ottimo) incorrerà in **almeno** un page fault per blocco.
 > Quindi $$\text{cost}(OPT,k,\sigma) \geq b$$
 > 
-> In conclusione $$\max_{k,\sigma}\frac{\text{cost}(LRU,k,\sigma)}{\text{cost}(OPT,k,\sigma)} \geq \frac{kb}{b} = k \;\; \square$$
+> In conclusione $$\max_{k,\sigma}\frac{\text{cost}(LRU,k,\sigma)}{\text{cost}(OPT,k,\sigma)} \leq \frac{kb}{b} = k \;\; \square$$
+
+^e1e690
 
 
+## An Upper Bound for Flush-When-Full
+I teoremi precedenti ([[#^f725b1|lowerbound]] e [[#^adc4cd|upperbound]]) mostrano che l'algoritmo LRU ha il [[#^2d11f5|competitive ratio]] più piccolo possibile, e questo è un punto a favore della **ompetitive analysis**.
+
+Consideriamo ora un nuovo algoritmo di paging offline, il **Flush-When-Full** (o **FWF**).
+
+> **Algoritmo Flush-When-Full**
+> Quando la cache è piena, e occore un page fault, l'algoritmo **FWF** svuota l'intera cache.
+
+```ad-note
+title: Osserva
+Ricordando la notazione della [[#^e1e690|dimostrazione]] del [[#^f725b1|teorema per il lowerbound]], avremo che i **flush** della cache nell'algoritmo FWF corrispondono esattamente alla fine dei blocchi $\sigma_1, ..., \sigma_{b-1}$.
+```
+
+Dato che FWF fa un *flush* della dell'intera memoria, ogni $k$ fault, avremo quindi che il numero comlessivo di fault dell'algoritmo è **esattamente** $kb$.
+Perciò anche il **competitive ratio** di FWF è $k$, come LRU.
+
+Purtroppo per FWF è *"ovviamente"* peggiore di LRU, nel senso che FWF non subisce mai meno page fault di LRU (perché LRU fa $\leq k$ fault per blocco, mentre FWF $=k$ fault), e sicuramente LRU è strettamente migliore su una gra parte degli input.
+
+--------
+```ad-summary
+title: Recap
+Come abbiamo visto fin ora, l'**analisi competitiva** sembra non promettere molto bene rispetto ai [[1 - Introduction#Goals of Analyzing Algorithms|goals dell'analisi degli algoritmi]].
+
+Per quanto riguarda il [[1 - Introduction#Goal 1 Performance Prediction|goal esplicativo]], abbiamo [[#^85a713|già discusso]] di come non bisogna prendere eccisvamente alla lettera l'analisi competitiva per predire le prestazioni di un algoritmo (infatti il competitive ratio cresce al crescere della cache).
+
+Un po' meglio rispeto al [[1 - Introduction#Goal 2 Identify Optimal Algorithms|goal comparativo]], abbiamo [[#^2482c0|visto]] che può essere sempre usato come strumento di comparazione tra algoritmi, anche se certe volte non va propriamente bene (come nel caso del [[#An Upper Bound for Flush-When-Full|FIF]]).
+
+Nel resto delle note vedremo altre tecniche che migliorano la qualità degli obiettivi [[1 - Introduction#Goal 1 Performance Prediction|1]] e [[1 - Introduction#Goal 2 Identify Optimal Algorithms|2]].
+```
+
+# Resource Augmentation and Interpretations
+[DA FINIRE]

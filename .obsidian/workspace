@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 356.5
+    "width": 336.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -109,10 +110,10 @@
   },
   "active": "07cd470bfb44af01",
   "lastOpenFiles": [
-    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
-    "BWA/3 - Online Paging and Resource Augmentation.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/1 - Introduction.md",
+    "BWA/3 - Online Paging and Resource Augmentation.md",
+    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
     "AR/19 - Web Search - Part 3.md",
     "AR/images/ar-lesson19-img1.png",
     "TODO.md",
