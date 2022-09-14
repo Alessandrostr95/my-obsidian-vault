@@ -171,6 +171,8 @@ Lasciamo a dopo l'[[#Interpretazione|interpretazione]] del perché di questo app
 > Il [[#^2d11f5|competitive ratio]] dell'algoritmo online LRU con memoria $k$ è al più $$\frac{k}{k-h+1}$$ rispetto all'algoritmo ottimale con memoria di dimensione $h \leq k$.
 > Più formalmente $$\max_{\sigma} \frac{\text{cost}(LRU, k, \sigma)}{\text{cost}(OPT, h, \sigma)} \leq \frac{k}{k-h+1}$$
 
+^b37ec7
+
 > **Proof**
 > Molto simile alla [[#^e1e690|dimostrazione per l'upperbound dell'LRU]].
 > Partizioniamo sempre $\sigma$ in $\sigma_1, ..., \sigma_b$ in modo tale che in ogni sottosequenza appaiano solamente $k$ richieste diefferenti, e in modo tale che la prima richiesta di ogni blocco sia la $k+1$-esima richiesta differente rispetto al blocco precedente (vedi altra dimostrazione).
@@ -195,3 +197,23 @@ Lasciamo a dopo l'[[#Interpretazione|interpretazione]] del perché di questo app
 
 -------
 # Interpretazione
+Quello che viene naturale chiedersi è:
+
+```ad-question
+title: Questions
+- Cosa garantisce il [[#^b37ec7|precedente teorema]]?
+- A cosa serve forzare *artificialmente* l'algoritmo ottimo ad avere prestazioni peggiori?
+```
+
+## Interpretazione 1: approccio alla progettazione i sistemi
+Una risposta a tale domanda può essere motivata dal fatto che si può sfruttare la [[#Resource Augmentation|resource augmentation]] per avere consigli su quante risorse usare in un contesto reale.
+
+Infatti, per prima cosa possiamo **stimare** le risorse minime necessarie per avere buone performance tramite gli algoritmi ottimi **offline**, per poi **scalare** il valore di $k$ stimato per predire quali saranno le prestazioni di un algoritmo **online**, come LRU.
+
+Per esempio, se ho dei **campioni** di istanza tipici nel mio dominio applicativo, potrei darle in pasto all'algoritmo [[#^fe8b62|FIF]] e vedere per quale valore della size della cache $k$ si hanno buone prestazioni.
+Se per esempio stimiamo che $k=10$ è una buona dimensione di cache per FIF, potremmo decidere di adottare nel nostro sistema LRU come politica di paging con cache di grandezza $3k$.
+
+In tal caso possiamo stimare che un upper-bound per al competitive ratio è approssimativamente (perché abbiamo stimato la cache ottima per FIF) $\approx 3/2$.
+
+## Interpretazione 2: Algoritmi online poco competitivi
+[[DA FINIRE]]
