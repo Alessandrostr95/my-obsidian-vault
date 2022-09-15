@@ -216,4 +216,50 @@ Se per esempio stimiamo che $k=10$ è una buona dimensione di cache per FIF, pot
 In tal caso possiamo stimare che un upper-bound per al competitive ratio è approssimativamente (perché abbiamo stimato la cache ottima per FIF) $\approx 3/2$.
 
 ## Interpretazione 2: Algoritmi online poco competitivi
-[[DA FINIRE]]
+Mentre la [[#Interpretazione 1 approccio alla progettazione i sistemi|prima interpretazione]] era intuitiva/empirica, questa è più formale e matematica.
+
+C'è un teorema che **informalmente** afferma che
+
+> **Teorema (informale)**
+> Per ogni sequenza di richieste $\sigma$, allora LRU è ha "**prestazioni dimostrabilmente eccellenti**" per la sequenza $\sigma$ e per la "**maggior parte**" delle dimensioni della cache $k$.
+
+Un primo *"informalismo"* di questo teorema è il fatto che si può dimostrare che LRU è buono sulla "**maggior parte**" dei valori di $k$, il che è ragionevole assumere che aumentando $k$ le prestazioni migliorino.
+
+Il secondo *"informalismo"* riguarda il concetto di "**prestazioni dimostrabilmente eccellenti**", il che può voler significare due cose:
+1. prestazioni eccellenti in confronto all'algoritmo offline ottimo (come nell'[[#Competitive Analysis]]).
+2. prestazioni eccellenti nel senso di una piccola percentuale di page fault.
+
+```ad-important
+title: Osserva
+Non necessariamente il secondo punto implica il primo (perché?)
+```
+
+L'idea intuitiva dietro è che le prestazioni dell'LRU rimangono quasi le stesse (al massimo raddoppiano) se si ha disposizione una cache grande $k$, oppure una cache più grande $2k$.
+
+Nel caso in cui si ha disposizione $k$ allora i teoremi [[#^f725b1|lower bound]] e [[#^adc4cd|upper bound]] ci dicono semplicemente che LRU ha un buon competitive ratio.
+
+Mentre nel caso in cui si ha un supplemento di memoria, per esempio $2k$, le prestazioni rapidamente migliorano al crescere del supplemento.
+Osserviamo però che da un certo supplemento di memoria in poi, le prestazioni non migliora ulteriormente (su dati reali), perciò LRU può migliorare per un numero fissato di dimensioni della cache.
+
+Più formalmente, sia una sequenza $\sigma$ e un supplemento di pagine extra $b \geq 1$.
+Il [[#^b37ec7|teorema]] ci garantisce che
+$$\text{cost}(LRU, k+b, \sigma) \leq \frac{k+b}{b+1}\text{cost}(OPT, k, \sigma)$$ ^39d212
+
+Ora possiamo suddividere i valori di $k$ in due categorie.
+1. i valori di $k$ **critici**, ovvero quei $k$ tali che aggiungendo un qualsiasi supplemento alla cache (anche una sola pagina, $b=1$) le prestazioni **migliorano drasticamente**, per esempio i page fault almeno dimezzano $$\text{cost}(LRU, k+b, \sigma) < \frac{1}{2}\text{cost}(LRU, k, \sigma)$$ ^c56a00
+2. tutti quegli altri $k$ per i quali vale invece l'[[#^39d212|upper bound]], ovvero tali che $$\text{cost}(LRU, k+b, \sigma) \leq \frac{k+b}{b+1}\text{cost}(OPT, k, \sigma) \leq \frac{k+b}{b+1}\text{cost}(LRU, k, \sigma)$$
+
+Prendiamo in analisi il primo caso, quello più drastico.
+
+Supponiamo che il nostro $\sigma$ è tale che esistono dei valori di $k$ per i quali vale il [[#^c56a00|primo caso]].
+Consideriamo tutti i valori **critici** per i quali, al fronte di un supplemento di $b$ pagine, le prestazioni "*migliorano drasticamente*" (almeno raddoppiano).
+
+Fissiamo un generico $k$, e supponiamo che tra 1 e $k$ ci sono **almeno** $\ell \leq k$ valori **critici**.
+Allora togliendo a $k$ il supplemento $b$, possiamo trovare **almeno** $\ell / b$ altri valori critici della dimensione della cache, per i quali vale quindi la [[#^c56a00|disuguaglianza 1]].
+Perciò
+$$\text{cost}(LRU, k, \sigma) < \frac{1}{2}\text{cost}(LRU, k-b, \sigma) < \frac{1}{4}\text{cost}(LRU, k-2b, \sigma) < ... < 2^{-\ell/b} \cdot \text{cost}(LRU, 1, \sigma)$$
+Perciò, se abbiamo che $$\ell \geq b \cdot \log_2\frac{1}{\varepsilon}$$ allora $$\text{cost}(LRU, k, \sigma) < \varepsilon \cdot \vert \sigma \vert$$
+(Osserva che $\text{cost}(LRU, 1, \sigma) = \vert \sigma \vert$).
+
+> In conclusione se $\varepsilon$ è sufficientemente piccolo le prestazioni di LRU sono **eccellenti in senso assoluto**, e possiamo anche dimenticarci del suo rapporto competitivo.
+

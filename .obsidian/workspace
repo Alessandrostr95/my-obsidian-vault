@@ -10,7 +10,8 @@
           "type": "markdown",
           "state": {
             "file": "BWA/3 - Online Paging and Resource Augmentation.md",
-            "mode": "source",
+            "mode": "preview",
+            "backlinks": false,
             "source": false
           }
         }
@@ -53,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 261.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -110,15 +110,15 @@
   },
   "active": "07cd470bfb44af01",
   "lastOpenFiles": [
+    "DA FINIRE.md",
+    "BWA/3 - Online Paging and Resource Augmentation.md",
     "TODO.md",
     "BWA/2 - Instance-Optimal Geometric Algorithms.md",
-    "BWA/3 - Online Paging and Resource Augmentation.md",
     "BWA/1 - Introduction.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "AR/19 - Web Search - Part 3.md",
     "AR/images/ar-lesson19-img1.png",
     "BWA/Appendix/median-point.md",
-    "^.md",
-    "BWA/img/BWA_01_3.png"
+    "^.md"
   ]
 }
