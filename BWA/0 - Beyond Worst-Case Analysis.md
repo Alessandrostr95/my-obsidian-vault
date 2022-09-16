@@ -14,12 +14,15 @@ tags:
 - **CFU**: -
 - **Università**: Stadford
 
+
 -------------------
 ## Table of contents
 - [[1 - Introduction]]
 - [[2 - Instance-Optimal Geometric Algorithms]]
 - [[3 - Online Paging and Resource Augmentation]] (*competitive analysis*)
+- [[4 - Parameterized Analysis of Online Paging]]
 
 
+------------------
 ## Appendix
 - [[median-point|Linear algorithm for finding median]]
