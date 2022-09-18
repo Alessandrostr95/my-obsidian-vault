@@ -139,6 +139,8 @@ Consideriamo ora un nuovo algoritmo di paging offline, il **Flush-When-Full** (o
 > **Algoritmo Flush-When-Full**
 > Quando la cache è piena, e occore un page fault, l'algoritmo **FWF** svuota l'intera cache.
 
+^cd1d79
+
 ```ad-note
 title: Osserva
 Ricordando la notazione della [[#^e1e690|dimostrazione]] del [[#^f725b1|teorema per il lowerbound]], avremo che i **flush** della cache nell'algoritmo FWF corrispondono esattamente alla fine dei blocchi $\sigma_1, ..., \sigma_{b-1}$.
