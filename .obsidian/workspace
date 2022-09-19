@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "3da447236537996a",
+        "id": "440597700b740f54",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -107,15 +107,15 @@
     "direction": "horizontal",
     "width": 332.5
   },
-  "active": "3da447236537996a",
+  "active": "440597700b740f54",
   "lastOpenFiles": [
-    "BWA/0 - Beyond Worst-Case Analysis.md",
+    "BWA/1 - Introduction.md",
     "BWA/4 - Parameterized Analysis of Online Paging.md",
+    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "BWA/3 - Online Paging and Resource Augmentation.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
     "DA FINIRE.md",
     "TODO.md",
-    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
-    "BWA/1 - Introduction.md",
     "AR/19 - Web Search - Part 3.md",
     "AR/images/ar-lesson19-img1.png",
     "BWA/Appendix/median-point.md"

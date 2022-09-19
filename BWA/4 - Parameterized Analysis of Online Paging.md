@@ -12,4 +12,31 @@ Purtroppo, riguardo il [[1 - Introduction#Goal 2 Identify Optimal Algorithms|Goa
 
 Intuitivamente, poiché la *superiorità empirica* di LRU sembra essere guidata dalle **proprietà** dei dati del "*mondo reale*" (ovvero la **località di riferimento**) non possiamo aspettarci di riuscire a distinguere LRU da altri algoritmi di paging naturali (come FIFO) senza almeno articolare implicitamente tali proprietà.
 
+-----------
 # Parameterized Analysis
+Informalmente l'**analisi parametrizzata** consiste in due *"step"*.
+Il primo è quello di definire un **parametro naturale** per ogni input, il quale dovrebbe modellare la *"facilità"* o *"difficoltà"* intuitiva dell'istanza.
+Ricordiamo infatti che siamo partiti dall'idea che esistono istanze più *"semplici"* da risolvere rispetto ad altre.
+
+![|600](BWA_04_1.png)
+
+Il secondo step è quello di analizzare le prestazioni di un algoritmo in funzione del parametro scelto.
+Questo consente un'analisi più precisa rispetto alla classica analisi *worst-case*, la quale caratterizza le istanze **solo** in funzione della loro dimensione.
+
+Idealmente, nell'applicazione dell'analisi parametrica il parametro dovrebbe essere **indipendente** dall'algoritmo.
+
+```ad-example
+title: Example: Running Time of the Kirkpatrick-Seidel Algorithm
+Richiamando l'[[2 - Instance-Optimal Geometric Algorithms#The Kirkpatrick-Seidel Algorithm|algoritmo Kirkpatrick-Seidel]], 
+abbiamo analizzato in [[2 - Instance-Optimal Geometric Algorithms]] le sue prestazioni rispetto ad ogni istanza, mostrando che è KS è un algorimo [[1 - Introduction#^67367e|instance optimal]].
+
+Infatti siamo partiti analizzando l'algoritmo solamente rispetto al numero dei punti $n$, trovando un upperbound (poco preciso) di $O(n\log{n})$.
+
+Abbiamo poi raffinato l'analisi, parametrizzando anche rispetto alla grandezza dell'output $h$, dando un upperbound migliore di $O(n\log{h})$ **per ogni input**.
+
+In fine abbiamo definito una **parametrizzazione** della *"facilità"* (o *"difficoltà"*) degli input, che era **indipendente** dalla descrizione dell'algoritmo KS, e che dava un upperbound migliore.
+```
+
+-------------
+# Quantifying Locality: The Working Set Model
+[DA FINIRE]
