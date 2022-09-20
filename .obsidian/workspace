@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 391.5
+    "width": 328.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -109,10 +109,10 @@
   },
   "active": "440597700b740f54",
   "lastOpenFiles": [
-    "BWA/1 - Introduction.md",
-    "BWA/4 - Parameterized Analysis of Online Paging.md",
-    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "BWA/3 - Online Paging and Resource Augmentation.md",
+    "BWA/4 - Parameterized Analysis of Online Paging.md",
+    "BWA/1 - Introduction.md",
+    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "DA FINIRE.md",
     "TODO.md",
