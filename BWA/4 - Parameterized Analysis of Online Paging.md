@@ -60,6 +60,8 @@ Con $f(n) \approx \sqrt{n}$ avremo che solamente sequenze lunghe **almeno** 100 
 Mentre con $f(n) \approx 1 + \log_2{n}$ avremo che solamente sequenze lunghe **almeno** 1000 contengono **almeno** 10 pagine differenti.
 ```
 
+^c11a0f
+
 Noi concetreremo la nostra analisi sulle **prestazioni assolute** (detto anche **page fault ratio**), ovvero sul rapporto $\frac{\text{\# faults}}{\vert \sigma \vert}$, anziche sul [[3 - Online Paging and Resource Augmentation#^2d11f5|competitive ratio]].
 Questo perché considerare le prestazioni assolute evita confronti con gli algoritmi ottimi offline.
 Infatti sappiamo che LRU ha un [[3 - Online Paging and Resource Augmentation#^adc4cd|competitive ratio ottimo]], e che la competitive anylisis non ci aiuta bene ad identificare quale algoritmo è migliore di altri.
@@ -101,6 +103,7 @@ $n$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | ...
 Possiamo quindi descrivere l'intero $f$ definendo per ogni $j \in \mathbb{N}$ il valore $m_j$ come il **numero di valori consecutivi di** $n$ tali che $f(n) = j$.
 
 ![|600](BWA_04_2.png)
+
 ```
 
 ^88c70f
@@ -116,8 +119,74 @@ Considerare solo funzione $f$ **concave** non è una restrizione eccessiva.
 Infatti su dati reali la concavità è **empiricamente presente**.
 
 Anche nel caso di dati nei quali si osserva una **funzione empirica di working set** $\hat{f}$ **non concava**, si può sempre trocare un $f$ concava tale che $\hat{f}(n) \leq f(n)$ per ogni $n$.
+
+Questo ci consente di applicare il teorema in maniera più generale su qualsiasi sequenza.
 ```
 
+Definiamo ora il **parametro** $\alpha_f(k)$
+$$\alpha_f(k) = \frac{k-1}{f^{-1}(k+1) - 2}$$
+dove $f^{-1}(m)$ è il **minimo** valore di $n$ per il quale $f(n) = m$.
+Per esempio, considerando l'[[#^88c70f|immagine]] avremo che
+- $f^{-1}(1) = 1$
+- $f^{-1}(2) = 2$
+- $f^{-1}(3) = 3$
+- $f^{-1}(4) = 5$
+- $f^{-1}(5) = 8$
+
+```ad-important
+title: Important !!
+Un modo intuitivo per interpretare $f^{-1}(m)$ è come un **lower bound** alla dimensione delle finestre che contengono **almeno** $m$ pagine distinte.
+
+$$f^{-1}(m) := \min{\{n \in \mathbb{N} \vert f(n) \geq m\}}$$
+
+Per esempio:
+- se $f(n) = n \implies f^{-1}(m) = m$ allora $\alpha_f(k) = 1$.
+- se $f(n) \approx \sqrt{n} \implies f^{-1}(m) \approx m^2$ allora $\alpha_f(k) \approx 1/k$. Questo è buon un bound al page fault rate, anche su dimensioni della cache non troppo grandi.
+- se $f(n) \approx 1 + \log_2{n} \implies f^{-1}(m) \approx 2^m$ allora $\alpha_f(k) \approx k/2^k$. Questo invece è un bound molto piccolo praticamente per qualsiasi valore di $k$.
+```
+
+```ad-important
+title: More important !!
+
+Sia $H = m_1 + m_2 + ... + m_h$ la somma dei primi $m_j$. 
+Osservando la [[#^88c70f|tabella]] dei valori di un $f$ concavo, possiamo constatare che $H$ corrisponde all'**ultimo** indice in cui troviamo come valore $h$.
+O analogamente abbiamo che
+$$H = f^{-1}(H+1) - 1$$
+```
+
+^249095
 
 
+## Proof
+Prima di procedere con la dimostrazione è necessario assumere che $f(2) = 2$ (e che quindi $m_1 = 1$).
+Infatti se $f(2) = 1$ abbiamo che l'[[#^c11a0f|unica sequenza conforme è quella costante]], ed **ogni** algoritmo di paging avrà page fault rate 0.
 
+### Proof part 1
+Fissiamo una funzione concava $f$, un dimensione della cache $k \geq 2$ e un algoritmo deterministico online $A$.
+
+Assumiamo che il numero di pagine $N$ è esattamente $k+1$, così che ad ogni istante c'è un'**unica** pagina mancante dalla cache (piena).
+Con $N \leq k$ avremo che lo 0% di page fault perché possiamo caricare direttamente tutte le pagine in memoria.
+
+Dato che lo [[#^be9407|statement 1]] riguarda il **caso peggiore**, definiamo quindi una famiglia di sequenze $\sigma$ che rispettano il bound desiderato (se il lowerbound è rispettato per le sequenze di questa famigli allora lo sarà anche per le *"richieste peggiori"*).
+
+Suddividiamo ogni sequenza $\sigma$ in un numero arbitrario di $\ell$ **fasi** $\sigma^{(1)}, ..., \sigma^{(\ell)}$, tali che ogni fase $i$ è composto da esattamente $k-1$ **blocchi** $\sigma^{(i)}_1, ...,\sigma^{(i)}_{k-1}$.
+
+Per ogni generica fase $i$, il blocco $j$-esimo $\sigma^{(i)}_j$ sarà costituito da $m_{j+1}$ richieste consecutive di una stessa pagina $p_j$, dove $p_j$ è l'**unica** pagina mancante dalla memoria (per via dell'algoritmo $A$) all'inizio del blocco $\sigma^{(i)}_j$.
+Perciò $A$ soffre di esattamente $k-1$ *page faults* per fase (uno per blocco).
+
+Per rendere le idee, se $p_1$ è la prima pagina mancate dalla cache all'inizio di una fase $i$, allora il suo primo blocco sarà lungo $m_2$.
+Il secondo blocco sarà composto da $m_3$ richieste alla pagina $p_2$ mancante dalla memoria, e così via...
+
+```ad-example
+title: Esempio
+Se abbiamo $m_2 = 2, m_3 = 3, m_4 = 3$ allora i primi 3 blocchi di una fase sono
+
+$$\underbrace{p_1p_1}_{\sigma^{(i)}_1} \;\; \underbrace{p_2p_2p_2}_{\sigma^{(i)}_2} \;\; \underbrace{p_3p_3p_3}_{\sigma^{(i)}_3} \;\; ...$$
+```
+
+Perciò ogni fase avrà lunghezza $$\vert \sigma^{(i)} \vert = m_2 + m_3 + ... + m_k = \left( \sum_{i=1}^{k}m_i \right) - 1$$(meno 1 perché ricordiamo che $m_1 = 1$).
+
+Ricordando la [[#^249095|proprietà]] della somma dei primi $m_j$ valori, avremo quindi che
+$$\vert \sigma^{(i)} \vert = (f^{-1}(k+1)-1) -1 = f^{-1}(k+1) -2$$
+
+Se riusciamo ora a dimostrare che la sequenza $\sigma$ costruita è conforme ad $f$ abbiamo dimostrato il bound $$\frac{\text{\# page fault}}{\vert \sigma \vert} = \frac{\ell(k-1)}{\sum_{i=1}^{\ell} \vert \sigma^{(i)}\vert} = \frac{k-1}{f^{-1}(k+1)-2}$$
