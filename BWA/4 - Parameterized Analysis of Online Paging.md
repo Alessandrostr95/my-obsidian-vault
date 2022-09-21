@@ -145,6 +145,8 @@ Per esempio:
 - se $f(n) \approx 1 + \log_2{n} \implies f^{-1}(m) \approx 2^m$ allora $\alpha_f(k) \approx k/2^k$. Questo invece è un bound molto piccolo praticamente per qualsiasi valore di $k$.
 ```
 
+^e11595
+
 ```ad-important
 title: More important !!
 
@@ -159,7 +161,7 @@ $$H = f^{-1}(H+1) - 1$$
 
 ## Proof
 Prima di procedere con la dimostrazione è necessario assumere che $f(2) = 2$ (e che quindi $m_1 = 1$).
-Infatti se $f(2) = 1$ abbiamo che l'[[#^c11a0f|unica sequenza conforme è quella costante]], ed **ogni** algoritmo di paging avrà page fault rate 0.
+Infatti se $f(2) = 1$ abbiamo che l'[[#^c11a0f|unica sequenza conforme è quella costante]], ed **ogni** algoritmo di paging avrà page fault rate 0. ^3cc86c
 
 ### Proof part 1
 Fissiamo una funzione concava $f$, un dimensione della cache $k \geq 2$ e un algoritmo deterministico online $A$.
@@ -189,4 +191,26 @@ Perciò ogni fase avrà lunghezza $$\vert \sigma^{(i)} \vert = m_2 + m_3 + ... +
 Ricordando la [[#^249095|proprietà]] della somma dei primi $m_j$ valori, avremo quindi che
 $$\vert \sigma^{(i)} \vert = (f^{-1}(k+1)-1) -1 = f^{-1}(k+1) -2$$
 
-Se riusciamo ora a dimostrare che la sequenza $\sigma$ costruita è conforme ad $f$ abbiamo dimostrato il bound $$\frac{\text{\# page fault}}{\vert \sigma \vert} = \frac{\ell(k-1)}{\sum_{i=1}^{\ell} \vert \sigma^{(i)}\vert} = \frac{k-1}{f^{-1}(k+1)-2}$$
+Se riusciamo ora a dimostrare che la sequenza $\sigma$ costruita è conforme ad $f$ abbiamo dimostrato il bound $$\text{worst-case page fault ratio} \geq \frac{\text{\# page fault}}{\vert \sigma \vert} = \frac{\ell(k-1)}{\sum_{i=1}^{\ell} \vert \sigma^{(i)}\vert} = \frac{k-1}{f^{-1}(k+1)-2} = \alpha_f(k)$$
+
+Per $j=1,2$ abbiamo per [[#^3cc86c|definizione]] che $f^{-1}(j)=j$, quindi $m_1 = m_2 = 1$ (ovvero $m_1 \leq m_2$).
+Consideriamo quindi $j=3, ..., k$.
+Osserviamo che per come sono definiti i blocchi, ogni sottosequenza di $j$ **pagine distinte** deve ricoprire (almeno **parzialmente**) $j$ blocchi consecutivi.
+
+![](BWA_04_3.png)
+
+Quindi un $j$ **minimale** che contiene almeno $j$ pagine distinte (vedi [[#^e11595|definizione]] $f^{-1}$) è composto dall'**ultima richiesta** del primo blocco parzialemente ricoperto e dalla **prima richiesta** dell'ultimo blocco parzialmente ricoperto.
+
+![](BWA_04_4.png)
+
+Infatti estendendo ulteriormente la sottosequenza verde nel primo o nell'ultimo blocco, non otteniamo pagine aggiuntive ma aumentiamo solamente la lunghezza della sottosequenza.
+
+Per via della **monotonia** della lunghezza dei blocchi ($m_1  \leq m_2 \leq ...$) tale sequenza è **effettivamente minimale** quando inizia dall'**ultima richiesta di una fase**, poi comprende i primi $j-2$ blocchi e poi tocca la prima richiesta del blocco $j-1$.
+
+Perciò la lunghezza di tale sottosequenza minimale sarà $$1 + m_{1} + m_{2} + ... + m_{j-2} + 1 = \left( \sum_{i=1}^{j-2} m_{i}\right) + 2 = f^{-1}(j-1)+1 \leq f^{-1}(j)$$
+Ovvero data una finestra con $j$ pagine distinte, essa sarà lugna al più $f^{-1}(j)$.
+Oppure viceversa, data una finestra lugna $n$, in essa ci saranno al più $f(n)$ pagine distinte.
+
+Perciò ogni fase $\sigma^{(i)}$ è **conforme** ad $f$ $\square$.
+
+### Proof part 2
