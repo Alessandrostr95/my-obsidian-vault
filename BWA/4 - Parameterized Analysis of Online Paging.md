@@ -214,3 +214,71 @@ Oppure viceversa, data una finestra lugna $n$, in essa ci saranno al più $f(n)$
 Perciò ogni fase $\sigma^{(i)}$ è **conforme** ad $f$ $\square$.
 
 ### Proof part 2
+Fissiamo un $f$ e un $k$ e consideriamo una qualsiasi sequenza $\sigma$ **conforme** ad $f$.
+
+Quello che vogliamo è cercare di **partizionare** la sequenza $\sigma$ in blocchi di lunghezza **almeno** $f^{-1}(k + 1) − 2$ (*minimizzare il denominatore*) tale che ogni blocco abbia **al più** $k − 1$ errori (*massimizzare il numeratore*).
+
+Suddividiamo $\sigma$ in blocchi tali che LRU faccia esattamente $k-1$ page fault.
+Tali blocchi devono essere **massimali**, ovvero iniziano col primo page fault e terminano alla richiesta precedente al $k$-esimo page fault.
+
+![|500](BWA_04_5.png) ^105512
+
+> **Claim**
+> Consideriamo un generico blocco $X$, diverso dal primo e l'ultimo.
+> Estendiamo $X$ con la richiesta precedente e quella immediatamente successiva.
+> Tale blocco esteso comprenderà **esattamente** $k+1$ **pagine distinte**.
+> 
+> Infatti, dato che il blocco $X$ inizia con un *page fault*, abbiamo che la richiesta precedente è differente dalla prima in $X$.
+> 
+> Analogamente, dato che nella memoria ci sono esattamente $k$ differenti pagine, la prima richiesta del blocco successivo deve necessariamente essere differente dalle precedenti inserite in cache durante $X$. 
+
+^d32a87
+
+Dato che quindi il *[[#^d32a87|blocco esteso]]* ha $k+1$ pagine distinte, allora esso avrà lughezza **almeno** $f^{-1}(k+1)$.
+
+Togliendo i due estremi avremo che ogni blocco ha come dimensione **almeno** $f^{-1}(k+1)-2$.
+
+Perciò il page fault rate di ogni blocco sarà **al più** $\leq \frac{k-1}{f^{-1}(k+1)-2}$ $\square$.
+
+### Proof part 3
+Costruiamo appositamente un $f$ concava e una sequenza $\sigma$ che induca FIFO ad avere prestazioni beggiori di LRU.
+
+La funzione $f$ è la seguente
+![|600](BWA_04_6.png)
+
+Poniamo $k = 4$ e supponiamo di avere $N=5$ pagine $\{0,1,2,3,4\}$.
+Dato che ci sono 5 pagine e la cache è grande 4, possiamo assumere che $f(n) = 5$ per ogni $n \geq 7$, e che quindi $f^{-1}(m) = 7$ per ogni $m \geq 5$.
+
+Pericò questa funzione è **convessa** e che $$\alpha_f(k) = \frac{4-1}{f^{-1}(4+1) - 2} = \frac{3}{5}$$
+
+Il punto [[#^e14157|(2)]] del teorema dimostra che LRU avrà un page fault rate di **al più** $3/5 = 60\%$ su qualsiasi sequenza $\sigma$.
+
+Mostriamo ora una sequenza per la quale FIFO ha un page fault rate **strettamente maggiore** del $60\%$.
+
+La sequenza in questione è composta da un numero arbitrariamente grade di blocchi identici che si ripetono, della forma:
+$$\sigma = \langle 10203040 \;\; 10203040 \;\; ... \;\; 10203040 \rangle$$
+
+L'idea intuitiva del perché questa sequenza è critica per FIFO e buona per LRU è che LRU non rimuoverà mai la pagina $0$ dalla cache dato che si presenta ogni due richieste, mentre FIFO rimuoverà la pagina $0$ ogni due richieste.
+
+Per vedere perché FIFO effettivamente ha un page fault ratio strettamente maggiore di $\alpha_f(k) = 0.6$ bisogna tracciarne il comportamento per almeno un paio di blocchi (dopodiché si ripete).
+
+Dato che l'algoritmo inizia con la cache vuota, i primi page fault prima che si riempi tutta (ovvero tutte le 4 pagine) saranno in ordine 1, 0, 2 e 3.
+Dopodiché avverrà una page fault sulla pagina 4, facendo così rimuovere dalla cache la pagina 1.
+Con un totale di 5 page fault su 8 richieste.
+
+Nel secondo blocco verrà richiesta la pagina 1, e quindi rimossa la pagina 0.
+Dopodiché verra richiesta la pagina 0 e rimossa la 2.
+Poi verrà richiesta la pagina 0 nuovamente, e nessun page fault occorre.
+Poi verrà richiesta la pagina 2 e rimossa la 3.
+L'altra page fault accadrà quando verrà richiesta la 3, rimuovendo la pagina 4, e in fine l'ultimo quando verrà richiesta 4 rimuovendo la pagina 1.
+
+![](BWA_04_7.png)
+
+Quindi ciclicamente avremo sempre 5 page fault ogni 8, con un page fault rate di
+$$\frac{5}{8} = 62.5 \% > 60\% = \alpha_f(k)$$
+dimostrando l'ultima parte del teorema $\square$.
+
+```ad-note
+Questa dimostrazione mostra che FIFO è avvolte strettamente peggiore di LRU, ma non di molto ($62.5\%$ vs $60\%$).
+Infatti empiricamente abbiamo che FIFO è peggiore di LRU ma non di molto.
+```
