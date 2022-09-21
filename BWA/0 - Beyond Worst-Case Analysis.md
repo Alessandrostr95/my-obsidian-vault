@@ -18,9 +18,10 @@ tags:
 -------------------
 ## Table of contents
 - [[1 - Introduction]]
-- [[2 - Instance-Optimal Geometric Algorithms]]
+- [[2 - Instance-Optimal Geometric Algorithms]] (*Instance-Optimality*)
 - [[3 - Online Paging and Resource Augmentation]] (*competitive analysis*)
-- [[4 - Parameterized Analysis of Online Paging]]
+- [[4 - Parameterized Analysis of Online Paging]] (*Parameterized Paging*)
+- [[5 -  Parametrized Analysis of Computing Independent Sets]] (*Recoverable Value*)
 
 
 ------------------
