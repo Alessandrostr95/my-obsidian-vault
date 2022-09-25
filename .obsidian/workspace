@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
+            "file": "BWA/Appendix/median-point.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
+                "file": "BWA/Appendix/median-point.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md"
+                "file": "BWA/Appendix/median-point.md"
               }
             }
           },
@@ -109,15 +109,15 @@
   },
   "active": "440597700b740f54",
   "lastOpenFiles": [
+    "BWA/6 - Clustering in Approximation-Stable Instances.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
     "BWA/4 - Parameterized Analysis of Online Paging.md",
     "BWA/3 - Online Paging and Resource Augmentation.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/img/BWA_04_6.png",
     "BWA/img/BWA_04_3.png",
     "BWA/img/BWA_04_4.png",
     "BWA/1 - Introduction.md",
-    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
-    "DA FINIRE.md"
+    "BWA/2 - Instance-Optimal Geometric Algorithms.md"
   ]
 }

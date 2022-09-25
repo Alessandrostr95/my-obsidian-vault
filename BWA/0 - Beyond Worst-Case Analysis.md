@@ -22,6 +22,7 @@ tags:
 - [[3 - Online Paging and Resource Augmentation]] (*competitive analysis*)
 - [[4 - Parameterized Analysis of Online Paging]] (*Parameterized Paging*)
 - [[5 -  Parametrized Analysis of Computing Independent Sets]] (*Recoverable Value*)
+- [[6 - Clustering in Approximation-Stable Instances]] (*Stable Clustering*)
 
 
 ------------------
