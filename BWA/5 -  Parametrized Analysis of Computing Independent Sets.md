@@ -111,3 +111,119 @@ Questo però ce lo aspettavamo per via del fatto che MWIS è [[#^f8b049|difficil
 
 -----
 # The Recoverable Value
+Purtroppo il parametro $\Delta$ è "*troppo delicato*".
+Infatti a piccole variazioni del grafo $G$, il grado massimo $\Delta$ può variare di molto!
+
+```ad-example
+Consideriamo un grafo $G$ con un grande numero $n$ di nodi, e un grado massimo $\Delta$ molto piccolo ($o(n)$).
+Il [[#^da3594|Corollario 2]] ci garantisce che l'algoritmo RG computerà (in media) un independent set con valori ragionevolmente vicini a quelli ottimi.
+
+Modifichiamo ora $G$ aggiungendo un nodo $v^*$, ed $n$ archi da $v^*$ verso tutti gli altri nodi.
+Chiamiamo questo grafo $G'$.
+$$G' \equiv (V \cup \{v^*\}, E \cup \{ (v^*,u): u \in V \})$$
+
+Supponiamo che il peso di $v^*$ sia abbastanza piccolo da non includerlo nella soluzione ottima $S$ per $G$.
+
+In $G'$ le prestazioni di RG rimangono pressoché invariate.
+Infatti avrà pessime prestazioni quando $v^*$ verrà inserito nella soluzione (e se succede nessun altro non può essere inserito), però ciò accade con probabilità $1/(n+1)$.
+
+
+Perciò mediamente la soluzione ritornata sarà sempre almeno $1/(\Delta + 1)$ volte quella ottima, però l'analisi fatta in precedenza nel [[#^da3594|Corollario 2]] prova solo un fattore di approssimazione $n+1$.
+```
+
+^e33bc9
+
+L'osservazione chiave che ci suggerisce l'[[#^e33bc9|esempio precedente]] è che:
+anche se $G'$ ha un grado massimo molto grande (ovvero $n+1$), la soluzione ottima $S^*$ comprende solo i nodi con **grado basso** (a più $\Delta + 1$ in $G'$, o $\Delta$ in $G$).
+
+Perciò sfruttando in [[#^966e4e|Corollario 1]] abbaimo che $$\mathbb{E}\left[ \sum_{v \in S} w(v) \right] \geq \sum_{v \in V} \frac{w(v)}{\delta(v) + 1} \geq \sum_{v \in S^*} \frac{w(v)}{\delta(v) + 1}$$ il che è sufficiente per implicare il [[#^da3594|Corollario 2]] (*convinciti di questo*). ^c25eb1
+
+Perciò possiamo fare un'analisi *più raffinata* basandoci sui gradi dei nodi all'interno della soluzione ottima $S^*$ (come abbiamo fatto per l'algoritmo [[2 - Instance-Optimal Geometric Algorithms#The Kirkpatrick-Seidel Algorithm|Kirkpatrick-Seidel]], in cui parametrizzavamo in accordo con la [[2 - Instance-Optimal Geometric Algorithms#More refined bound|dimensione dell'output]] $h$, oltre che rispetto a $n$).
+
+Possiamo quindi **generalizzare** l'[[#^c25eb1|espressione precedente]] come
+$$\mathbb{E}\left[ \sum_{v \in S} w(v) \right] \geq \underbrace{1}_{\text{"recoverable value"}} \cdot \max_{\text{ind. set }I} \sum_{v \in I} \frac{w(v)}{\delta(v) + 1}$$ ^c6ec29
+
+Il punto della questione è che l'algoritmo RG soddisfa una relazione forte su qualsiasi sottoinsieme di $V$, non solo rispetto agli *independente set* $I$.
+In pratica, ogni algoritmo che soddisfa la [[#^c6ec29|precedente relazione]] garantisce **ottime prestazione** ogni volta che esiste un *independente set* $I$ **quasi ottimale** che è composto da soli vertici con **grado basso**.
+
+Ancora una volta, abbiamo identificato una famiglia di istanze per le quali si possono garantire buone prestazioni.
+Perciò ci possiamo chiedere:
+> Le *"istanze tipiche"* di MWIS hanno soluzioni **quasi ottime** che comprendono solo, o per lo più, nodi di grado basso?
+
+Purtroppo non è facile da dirsi.
+Abbiamo solo la vaga intuizione che i nodi di grado basso siano generalmente "*migliori*" di quelli di grado superiore, perché "*bloccano*" l'inclusione di un minor numero di altri nodi.
+È anche difficile computazionalmente da verificare tale condizione (problema decisionale NP-hard), se volessimo una [[1 - Introduction#Goal 1 Performance Prediction|predizione delle performance]] data un'istanza.
+
+Possiamo però sfruttare i risultati raggiunti come [[1 - Introduction#Goal 3 Design New Algorithms|guida]] per la progettazione di algoritmi con migliori garanzie (in pratica).
+
+## Optimizing the Recoverable Value
+Spostiamo per il momento l'obiettivo dall'**analisi** alla **progettazione** di algoritmi.
+
+Possiamo porci come obiettivo quello di fare meglio della costante "1" (la **recoverable value**) nell'[[#^c6ec29|espressione precedente]].
+
+Innanzitutto notiamo che non possiamo porre la *recoverable value* pari a 4 se vogliamo un algoritmo polinomiale, a meno che $P = NP$.
+Infatti, per esempio, consideriamo un **grafo 3-regolare** (con tutti i nodi di grado $3$) e rimpiazziamo la *recoverable value* con 4.
+
+Se avessimo un algoritmo che garantisce tale bound, abbiamo trovato un algoritmo che trova l'ottimo in tempo polinomiale su grafi 3-regolari.
+Però è possibile dimostrare che trovare un MWIS su un grafo 3-regolare è NP-hard.
+
+Definiamo ora un algoritmo che migliora la recoverable value di un fattore *al più* 2.
+> **Feige-Reichman (FG) algorithm**
+> **Input:** $\langle G=(V,E), w:V \to \mathbb{R}^+ \cup \{ 0 \} \rangle$
+> **Output:** $S \subseteq V: u,v \in S \implies (u,v) \notin E$
+> 
+> 1. Ordina $V = \{1, 2, ..., n\}$ in accordo a una **permutazione casuale**
+> 2. Poni $T \equiv \emptyset$
+> 3. for $i = 1$ to $n$
+> 	- se **al più** 1 dei vicini del nodo $i$-esimo è già stato visitato dall'algoritmo
+> 		- $T \equiv T \cup \{ i \}$
+> 4. Return un MWIS $S$ del sottografo **indotto** $G\left[T\right]$
+
+^16c11e
+
+> **Theorem 1**
+> L'[[#^16c11e|algoritmo FG]] computa in **tempo polinomiale** un *independent set* con valore atteso **almeno** $$\geq \max_{\text{ind. set }I} \sum_{v \in I} w_v \cdot \min\bigg\lbrace 1, \frac{2}{\delta(v) + 1}\bigg\rbrace$$
+
+Prima di procedere con la dimostrazione, sono necessari dei lemmi.
+
+> **Lemma 2**
+> Con probabilità 1, il grafo indotto $G\left[ T \right]$ computato nell'algoritmo [[#^16c11e|FG]] è una **foresta**.
+
+^c6839f
+
+> **Proof (Lemma 2)**
+> Per dimostrare il [[#^c6839f|Lemma 2]] basta dimostrare che $G\left[ T \right]$ è **aciclico**.
+> 
+> Se $G$ non ha cicli allora semplicemeten neache $G\left[ T \right]$ può averne.
+> Supponiamo invece che $G$ abbia cicli.
+> Sia $C$ un generico ciclo in $G$.
+> Nell'ordinamento casuale dell'algoritmo, l'ultimo nodo visitato non può essere inserito in $T$, in quanto (essendo l'ultimo dei nodi di $C$) avrà *almeno due* suoi vicini visitati in precedenza.
+> Perciò $G\left[ T \right]$ è una foresta $\square$.
+
+> **Lemma 3**
+> L'algoritmo FR può essere implementato in **tempo polinomiale**.
+
+^11c4f9
+
+> **Proof (Lemma 3)**
+> La permutazione e il ciclo *for* richiedono tempo *lineare* in $n$.
+> Per quanto riguarda il trovare un MWIS $S$ di $G\left[ T \right]$, anche esso richiede tempo polinomiale!
+> Infatti, trovare un MWIS di un albero può essere computato grazie a un algoritmo di **programmazione dinamica** in tempo polinomiale.
+> Dato che $G\left[ T \right]$ è una [[#^c6839f|foresta]], possiamo calcolare i MWIS $S_1, ..., S_k$ dei $k \geq 1$ alberi che compongono $G\left[ T \right]$.
+> Quindi $S = S_1 \cup ... \cup S_k$ è a sua volta un MWIS per $G\left[ T \right]$ $\square$.
+
+> **Proof (Theorem 1)**
+> Grazie al [[#^11c4f9|Lemma 3]] sappiamo che FR è un algoritmo che computa una soluzione in <u>tempo polinomiale</u>.
+> 
+> Calcoliamo ora il valore (in media) della soluzione.
+> Fissiamo un <u>generico</u> independente set $I$ per $G$.
+> Dato che $T \subseteq V$, allora $I \cap T$ è un independent set per $G\left[ T \right]$.
+> Dato che FR ritorna un **massimo** independent set $S$ per $G\left[ T \right]$, allora $$\mathbb{E}\left[ \text{val}(I \cap T) \right] \leq \mathbb{E}\left[ \text{val}(S) \right]$$
+> Osserviamo che un nodo $v \in I$ contribuisce alla soluzione $I \cap T$ (per $G\left[ T \right]$) se e solo se $v \in T$, il che occorre se e solo se il nodo $v$ è <u>il primo o il secondo</u> nell'ordinamento di $v$ rispetto al suo vicinato $N(v) \cup \{v\}$.
+> $$P(v \text{ è primo o seconod in } N(v) \cup \{v\}) = \frac{2}{\delta(v) + 1}$$
+> Osserviamo che $2/(\delta(v) + 1)$ è maggiore di 1 quando $v$ non ha vicini, perciò esse apparterrà a $I \cap T$ con probabilità 1.
+> 
+> Perciò $$P(v \in I \cap T) = \min\bigg\lbrace 1, \frac{2}{\delta(v) + 1}\bigg\rbrace$$
+> In conclusione, applicando la linearità avremo che $$\mathbb{E}\left[ \text{val}(I \cap T)\right] = \sum_{v \in I \cap T}\mathbb{E}\left[ W_v \right] = \sum_{v \in I \cap T} w(v) \cdot  \min\bigg\lbrace 1, \frac{2}{\delta(v) + 1}\bigg\rbrace$$
+> Perciò se questo è vero per ogni independent set $I \cap T$ di $G\left[ T \right]$, lo sarà anche per il massimo, implicando il teorema
+> $$\mathbb{E}\left[ \text{val}(S) \right] \geq \max_{\text{ind. set } I}\mathbb{E}\left[ \text{val}(I) \right] = \max_{\text{ind. set } I} \sum_{v \in I \cap T} w(v) \cdot  \min\bigg\lbrace 1, \frac{2}{\delta(v) + 1}\bigg\rbrace \;\; \square$$
