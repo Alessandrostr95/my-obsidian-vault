@@ -58,9 +58,47 @@ $$\sum_{x \in X} \left( \min_{c \in S} d(c) \right)$$
 
 ^d2b2c2
 
+```ad-caution
+Eseguire un algoritmo $c$-**approssimante** per un problema di **minimizzazione** significa trovare una soluzione che è **al più** $c$ volte peggiore di quella ottima.
+
+Ovvero sia $S$ una soluzione restituita da un algoritmo $c$-approssimante, e sia $S^*$ una **soluzione ottima**, allora avremo che $$\frac{\text{val}(S)}{\text{val}(S^*)} \leq c$$
+
+Importante infine notare che visto che $S^*$ è la soluzione che **minimizza** una funzione obiettivo, allora necessariamente avremo che $c \geq 1$.
+```
+
+
 Quando diciamo che due $k$-clustering sono "*concordi" con una frazione $1 - \varepsilon$ dei punti, si intende che esiste un modo di **etichettare** i due clustering con etichette $1, 2, ..., k$ in modo tale che **almeno** $(1-\varepsilon)n$ punti hanno le stesse etichette in entrambi i $k$-clustering.
 
 ```ad-note
 La [[#^d2b2c2|definizione]] diventa più *restrittiva* al **crescere** di $c$ oppure al **decrescere** di $\varepsilon$.
 ```
+
+### Discussion of Approximation Stability
+La [[#^d2b2c2|approximation stability]] richiede che l'unico modo per ottenere una soluzione quasi ottima numericamente, bisogna trovare una soluzione quesi uguale al clustering target.
+
+> La **similarità numerica** (rispetto alla funzione obiettivo) implica la **similarità strutturale**.
+
+Quello che ci si può chiedere e se tale definizione è **ragionevole**.
+Infatti presa toppo alla regola la [[#^d2b2c2|definizione di approximation stability]] è troppo forte, e non è chiaro se essa può occorrere su dati reali.
+Poiché la definizione fa riferimento sia a un **clustering target sconosciuto** che a tutte le soluzioni **quasi ottimali**, non è nemmeno chiaro come verificare se la condizione vale o meno negli input che ci interessano.
+
+Innanzitutto, c'è una motivazione plausibile per cui le istanze di clustering "*reali*" dovrebbero tendere (quantomeno vagamente) a soddisfare la [[#^d2b2c2|definizione di approximation stability]].
+Infatti, per la classificazione di immagini di cani e gatti, ad esempio, sembra molto improbabile che una classificazione del tutto errata delle immagini produca un 2-clustering <u>numericamente quasi ottimale</u> (per qualsiasi ragionevole codifica del problema).
+
+In secondo luogo invece, l'insieme di istanze in cui è possibile dimostrare <u>formalmente</u> le buone prestazioni di un algoritmo, è in genere un **piccolo sottoinsieme** delle istanze in cui l'algoritmo funziona bene empiricamente.
+
+## Connection to Approximation Algorithms
+Come prima cosa possiamo usare degli algoritmo $c$-approssimanti già noti per il problema $k$-median.
+
+Purtroppo però è noto che, a meno che $P = NP$, non esistono algoritmi **polinomiali** $c$-approssimanti per il $k$-median con $c < 1 + \dfrac{2}{e} \approx 1.736$ .
+
+Inoltre il miglior upperbound ad oggi noto è di $1 + \sqrt{3} \approx 2.73$
+
+E se invece del fattore di parrossimazione $c$ ci interessassimo solamente all'accuratezza $\varepsilon$?
+Ovvero, anziché cercare di approssimare bene numericamente l'ottimo, ci interessassimo invece di trovare un clustering che sia il quanto più simile (strutturalmente) a quello target?
+
+Si può dimostrare che, nel caso di instanze **approximation-stable** di $k$-median, trovare clustering "*accurati*" è **strettamente più semplice** che trovare *approssimazioni numeriche*.
+
+> **Theorem 1**
+> Per ogni coppia di **costanti** $\alpha, \varepsilon > 0$, esiste un **algoritmo polinomiale** che, per ogni istanza $(1 + \alpha, \varepsilon)$-[[#^d2b2c2|approximation stable]] del $k$-median, computa un $k$-clustering che è uguale a quello target, eccetto che per una frazione $O(\varepsilon/\alpha)$ dei punti.
 

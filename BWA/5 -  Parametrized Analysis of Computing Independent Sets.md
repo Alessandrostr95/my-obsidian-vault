@@ -69,7 +69,7 @@ Consideriamo un primo (banale) algoritmo greedy e randomizzato (chiamiamolo **ra
 > **Se** nell'ordinamento (relativo) di $N(v) \cup \{v\}$ il nodo $v$ sarà il primo, **allora** $v$ verrà inserito in $S$.
 > Perciò se $$v \text{ appare primo in } N(v) \cup \{v\} \implies v \in S$$ allora $$P(v \text{ appare primo in } N(v) \cup\{v\})  \leq P(v \in S)$$
 > Tutte queste permutazioni *"buone"* sono in totale $\delta(v)!$, mentre tutte quelle possibili sono $(\delta(v) + 1)!$.
-> Perciò (*casi favorevli su casi possibili*) avremo l'occorrenza di questo evento con frequenza $$\frac{\delta(v)!}{(\delta(v) + 1)!} = \frac{1}{\delta(v) + 1!} \;\; \square$$
+> Perciò (*casi favorevli su casi possibili*) avremo l'occorrenza di questo evento con frequenza $$\frac{\delta(v)!}{(\delta(v) + 1)!} = \frac{1}{\delta(v) + 1} \;\; \square$$
 
 ```ad-warning
 Osserva che la disuguaglianza nel [[#^e518bc|Lemma 1]] non per forza è una *uguaglianza*.
