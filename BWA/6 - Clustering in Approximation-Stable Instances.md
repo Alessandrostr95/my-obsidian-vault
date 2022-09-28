@@ -96,9 +96,23 @@ Inoltre il miglior upperbound ad oggi noto è di $1 + \sqrt{3} \approx 2.73$
 
 E se invece del fattore di parrossimazione $c$ ci interessassimo solamente all'accuratezza $\varepsilon$?
 Ovvero, anziché cercare di approssimare bene numericamente l'ottimo, ci interessassimo invece di trovare un clustering che sia il quanto più simile (strutturalmente) a quello target?
+Oppure potremmo chiederci se classificare "*bene*" la maggior parte dei punti implica automaticamente una buona approssimazione numerica della funzione obiettivo.
 
-Si può dimostrare che, nel caso di instanze **approximation-stable** di $k$-median, trovare clustering "*accurati*" è **strettamente più semplice** che trovare *approssimazioni numeriche*.
+La risposta è negativa.
+Infatti si può dimostrare che, nel caso di instanze **approximation-stable** di $k$-median, trovare clustering "*accurati*" è **strettamente più semplice** che trovare *approssimazioni numeriche*.
 
 > **Theorem 1**
 > Per ogni coppia di **costanti** $\alpha, \varepsilon > 0$, esiste un **algoritmo polinomiale** che, per ogni istanza $(1 + \alpha, \varepsilon)$-[[#^d2b2c2|approximation stable]] del $k$-median, computa un $k$-clustering che è uguale a quello target, eccetto che per una frazione $O(\varepsilon/\alpha)$ dei punti.
+
+^3c1f47
+
+```ad-warning
+Quando $\alpha < 2/e$ il [[#^3c1f47|precedente teorema]] garantisce classificazioni accurate anche quando l'approssimazione numerica è NP-hard!
+
+Ciò è possibile grazie alla [[#^d2b2c2|approximation stability]] che garantisce la presenza di una **struttura** nei dati utile alla classificazione. 
+```
+
+-----------
+# Approximate Recovery in Approximation-Stable k-Median Instances
+
 
