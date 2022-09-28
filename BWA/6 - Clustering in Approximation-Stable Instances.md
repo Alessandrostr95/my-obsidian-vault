@@ -27,6 +27,12 @@ In poche parole saremo ottimisti, proseguendo con l'idea che le "**soluzioni sig
 Innanzitutto partiamo con la (<u>forte</u>) assunzione che nei nostri dati è implictamente presente un "*verità di fondo*", ovvero esiste un unico **clustering target**.
 Per esempio se vogliamo distinguere le foto di cani da foto di gatti (i nostri punti), non è possibile che esista una foto che raffiguri un animale che sia sia gatto che cane.
 
+```ad-attention
+Non è detto che il **clustering target** corrisponda **esattamente** al clustering che **ottimizza** la funzione obiettivo.
+
+Assumiamo però che abbiamo modellizato abbastanza bene la funzione obiettivo, e che quindi il clustering target è **quasi** ottimo.
+```
+
 Il nostro obiettivo è recuperare, quantomeno approssimativamente, questo *clustering target* tramite un algoritmo.
 
 La seconda assunzione importante è che qualsiasi clustering che è **quasi ottimo** rispetto alla funzione obiettivo, non è molto diversa dal clustering target.
@@ -49,7 +55,7 @@ Un $k$-**clustering** di uno spazio metrico finito $(X,d)$ è una **partizione**
 L'obiettivo del $k$-median problem è di identificare un sottoinsieme $S \subset X$ composto da $k$ **centri** (uno per ogni cluster) che minimizza la somma delle distanze verso i punti nei rispettivi clustering.
 
 Più formalmente si vogliono trovare $k$ punti $S = (c_1, ..., c_k)$ tali che
-$$\sum_{x \in X} \left( \min_{c \in S} d(c) \right)$$
+$$\sum_{x \in X} \left( \min_{c \in S} d(c) \right)$$ ^cc98b0
 
 ## Approximation Stability
 
@@ -111,6 +117,76 @@ Quando $\alpha < 2/e$ il [[#^3c1f47|precedente teorema]] garantisce classificazi
 
 Ciò è possibile grazie alla [[#^d2b2c2|approximation stability]] che garantisce la presenza di una **struttura** nei dati utile alla classificazione. 
 ```
+
+-----------
+# Structural Consequences of Approximation Stability
+Sia $C^*_1, ..., C^*_k$ un clustring ottimo che minimizza la [[#^cc98b0|funzione obiettivo]] del $k$-median problem.
+Supponiamo di conoscere il valore $OPT$ della soluzione ottima $C^*_1, ..., C^*_k$.
+Sia inoltre $S^*$ l'insieme dei rispettivi centri di $C^*_1, ..., C^*_k$.
+
+> **Definition 1**
+> Per ogni punto $x \in X$, indichiamo con $w(x)$ il **contributo** di $x$ nella soluzione ottimva $C^*_1, ..., C^*_k$.
+> Ovvero $$w(x) = \min_{c \in S^*} d(x,c)$$
+> 
+> Diremo che:
+> 1. Il punto $x$ è **vicino** se $$w(x) \leq \frac{OPT}{n} \cdot \frac{\alpha}{5\varepsilon}$$
+> 2. Il punto $x$ è **ben separato** se $$w_2(x) - w(x) > \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}$$ dove $w_2(x)$ indica la distanza dal **secondo** centro più vicino al punto $x$.
+> 3. Il punto $x$ è detto **buono** se è **vicino** e **ben separato**, altrimenti è detto **cattivo**.
+
+^3bdd74
+
+L'idea dietro la [[#^3bdd74|definizione]] è che un'istanza $(1+\alpha, \varepsilon)$-approximation stable è "*ben strutturata*" quando tutti (o quasi) i punti sono **vicini** al proprio centro, e **ben separati** dagli altri centri.
+![|600](BWA_06_2.png)
+
+Dimostreremo ora che il clustering ottimale è ben strutturato, comprendendo cluster strettamente collegati e ben separati.
+
+Innanzitutto, una **frazione costante** di tutti i punti è **vicina** (indipendentemente dal fatto che l'istanza sia *approximation-stable* o meno).
+
+> **Lemma 1**
+> Per **ogni** istanza del $k$-median problem, **al più** $\dfrac{5\varepsilon}{\alpha}n$ punti sono **[[#^3bdd74|non vicini]]**.
+
+^848593
+
+> **Proof**
+> Supponiamo *per assurdo* che ci sono **più** di $\dfrac{5\varepsilon}{\alpha}n$ punti **non vicini**.
+> Ricordiamo che 
+> $$OPT = \sum_{x \in X} w(x) = \sum_{x \in X} \min_{c \in S^*}d(x,c)$$
+> Sia $E \subseteq X$ l'inseme dei punti **non vicini**, con $\vert E \vert > \dfrac{5\varepsilon}{\alpha}n$.
+> Dato che $\vert E \vert \leq \vert X \vert$, allora avremo che $$\sum_{x \in E}w(x) \leq \sum_{x \in X}w(x) = OPT$$
+> 
+> Però, visto che $E$ è composto da punti **non buoni**, avremo che $$\sum_{x \in E}w(x) > \vert E \vert \cdot \frac{OPT}{n}\cdot\frac{\alpha}{5\varepsilon} > \cancel{\dfrac{5\varepsilon}{\alpha}}\cancel{n} \cdot \frac{OPT}{\cancel{n}}\cdot\cancel{\frac{\alpha}{5\varepsilon}} > OPT$$
+> assurdo $\square$.
+
+Sfruttando la [[#^d2b2c2|approximation stability]] possiamo anche limitare il numero di punti che non sono **ben separati**.
+
+> **Lemma 2**
+> In una istanza $(1+\alpha,\varepsilon)$-approximation stabe, **al più** di $\varepsilon n$ punti **non** sono **ben separati**.
+
+^46dfb6
+
+> **Proof**
+> Supponiamo per assurdo che ci siano **strettamente più** di $> \varepsilon n$ punti che non sono ben separati.
+> Osserviamo che $$w_2(x) - w(x) \leq \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}$$
+> $$\implies w_2(x) \leq w(x) + \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}$$
+> Partendo dalla soluzione ottima $C^*_1, ..., C^*_k$, riassegnamo $\varepsilon n$ ai cluster con i **secondi** più vicini centri (rispettivamente).
+> Indichiamo con $\hat{X}$ l'inseme dei $\varepsilon n$ punti riassegnati.
+> 
+> Così facendo abbiamo ottenuto un nuovo clustering, con una frazione $\varepsilon$ di punti **mal etichettati**, e con **valore**
+> $$\begin{align}
+\sum_{x \in X} w_2(x)
+&= \sum_{x \in X \setminus \hat{X}} w(x) + \sum_{x \in \hat{X}} w_2(x)\\
+&\leq \sum_{x \in X \setminus \hat{X}} w(x) + \sum_{x \in \hat{X}} \left(w(x) + \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon} \right)\\
+&= \sum_{x \in X}w(x) +\sum_{x \in \hat{x}}\frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}\\
+&= OPT + \varepsilon n \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon} = (1 + \alpha) \cdot OPT
+\end{align}$$
+> Questo però contraddice l'ipotesi che l'istanza è $(1+\alpha, \varepsilon)$-[[#^d2b2c2|approximation stable]], perché abbiamo trovato una $1 + \alpha$ approssimazione della soluzione ottima con **strettamente di più** di $\varepsilon\%$ delle etichette in comune (mentre noi vogliamo al più $\varepsilon\%$) $\square$.
+> 
+
+I punti che **non sono** buoni, sono tutti quelli che non sono **vicini** o non sono **ben distanti** <u>oppure entrambi</u>.
+Perciò sia $A$ l'insieme dei punti **non vicini**, con dimensione $\vert A \vert \leq \dfrac{5\varepsilon}{\alpha}n$ (per [[#^848593|Lemma 1]]), e sia $B$ l'insieme dei punti **non ben distanti**, con dimensione $\vert B \vert \leq \varepsilon n$ (per [[#^46dfb6|Lemma 2]]), avremo che il numero di punti **non buoni** sarà
+$$\vert A \cup B\vert \leq \vert A \vert + \vert B \vert = \varepsilon n \left( 1 + \frac{5}{\alpha}\right) := b$$
+
+
 
 -----------
 # Approximate Recovery in Approximation-Stable k-Median Instances
