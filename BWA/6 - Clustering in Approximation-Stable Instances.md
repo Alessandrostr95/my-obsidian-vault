@@ -183,12 +183,101 @@ Sfruttando la [[#^d2b2c2|approximation stability]] possiamo anche limitare il nu
 > 
 
 I punti che **non sono** buoni, sono tutti quelli che non sono **vicini** o non sono **ben distanti** <u>oppure entrambi</u>.
+
 Perciò sia $A$ l'insieme dei punti **non vicini**, con dimensione $\vert A \vert \leq \dfrac{5\varepsilon}{\alpha}n$ (per [[#^848593|Lemma 1]]), e sia $B$ l'insieme dei punti **non ben distanti**, con dimensione $\vert B \vert \leq \varepsilon n$ (per [[#^46dfb6|Lemma 2]]), avremo che il numero di punti **non buoni** sarà
-$$\vert A \cup B\vert \leq \vert A \vert + \vert B \vert = \varepsilon n \left( 1 + \frac{5}{\alpha}\right) := b$$
+$$\vert A \cup B\vert \leq \vert A \vert + \vert B \vert = \varepsilon n \left( 1 + \frac{5}{\alpha}\right) := b$$ ^4fb302
 
+## The "large clusterings" assumption
+D'ora in avanti assumiamo che ogni cluster $C^*_i$ della *soluzione ottimale* contiene **almeno** $2b + 2$ punti, e **almeno** $b+2$ siano **punti buoni** (perché [[#^4fb302|ricordiamo]] che ci sono al più $b$ punti **non** buoni).
 
+Per esempio, con $n=10^6, \; \varepsilon = 1/\sqrt{n} = 0.001, \; \alpha = 0.1$.
+Avremo che $b = 51 \times 10^3$, e che quindi ogni cluster $C^*_i$ avrà **almeno** il $(2b+2)/n \approx 10\%$ dei punti (e che quindi $k \leq 10$).
+
+Questa assunzione è "*abbastanza forte*" da rendere il $k$-median problem **risolvibile in tempo polinomaile** su tali istanze.
+
+```ad-check
+Ricapitolando, le assunzioni sulle nostre istanze sono:
+1. Istanza $(1+\alpha, \varepsilon)$-[[#^d2b2c2|approximation stable]].
+2. Presenza di "*large clustering*" nella soluzione ottimale, di dimensione almeno $2b+2$.
+3. La struttura strutturalmente ottima equivale a quella numericamente ottima.
+```
+
+^d4b2cc
 
 -----------
-# Approximate Recovery in Approximation-Stable k-Median Instances
+# The BBG Algorithm
+## Step 1
+Imposta $$\tau := \frac{OPT}{n}\cdot\frac{2\alpha}{5\varepsilon}$$
+Osserva che $\tau$ è il **doppio** del bound per i punti **vicini**, e $2/5$ quello per i punti **ben separati**.
 
+Creiamo il grafo $G=(X,E)$ dove $(x,y) \in E$ se e solo se $d(x,y) \leq \tau$.
+
+La speranza è che il clustering ottimo $C^*_1, ..., C^*_k$ si presenti in $G$ in maniera *velata* ma comunque "*rintracciabile*".
+
+### Observation 1
+Tutti i **punti buoni** all'interno di un cluster $C^*_i$ formano una **clique** in $G$.
+Infatti, per [[#^3bdd74|definizione]] abbiamo che ogni punto buono $x \in C^*_i$ è distante **al più** $\leq \tau/2$.
+Pericò, per **disuguaglianza triangolare**, presi due punti buoni $x,y \in C^*_i$ avremo che $$d(x,y) \leq d(x,c_i) + d(c_i,y) \leq \tau$$ e quindi $(x,y) \in E$.
+
+### Observation 2
+Siano $x,y$ due punti entrambi **buoni** ma appartenenti a due cluster differenti $C^*_i, C^*_j$.
+Quindi avremo che $d_G(x,y) \geq 3$, ovvero non esistono cammini lunghi 1 oppure 2 **archi** all'interno di $G$ che collegano $x$ e $y$.
+
+![|600](BWA_06_3.png)
+
+Dato che $x$ è **ben saparato**, la sua distanza dal centro $c_j$ di $C^*_j$ è maggiore di $$d(x,c_j) > 5\tau/2$$
+Mentre, dato che $y$ è **vicino**, la sua distanza da $c_j$ sarà al più $$d(y,c_j) \leq \tau/2$$
+
+Per disuguaglianza triangolare avremo che
+$$d(x,c_j) \leq d(x,y) + d(y, c_j)$$
+$$\implies \frac{5\tau}{2} < d(x,c_j) \leq d(x,y) + d(y,c_j) \leq d(x,y) + \frac{\tau}{2}$$
+$$\implies d(x,y) > \frac{5\tau}{2} - \frac{\tau}{2} = 2 \tau$$
+Dato che quindi la distanza tra $x$ e $y$ è **strettamente maggiore** di $2\tau$, e dato che con due archi si possono collegare nodi a distanza **al più** $2\tau$, avremo che per collegare $x$ ed $y$ due archi non sono sufficienti a collegarli.
+
+### Observation 3
+Il vicinato di un punto **non buono** è composto da **al più** $b-1$ altri punti **non buoni** ed <u>eventualmente</u> qualche punto **buono**, appartenenti tutti ad uno stesso clusteri $C^*_i$.
+
+Infatti, [[#^4fb302|sappiamo]] che ci sono al più $b$ punti non buoni, meno $1$ che sarebbe quello in questione, abbiamo il bound di $b-1$.
+
+Mentre grazie a [[#Observation 1]] (o equivalentemente [[#Observation 2]]) avremo che gli unici vicini **buoni** che ha, devono appartenere necessariamente ad uno stesso cluster.
+Infatti un nodo non buono avesse due vicini buoni $x,y$ in due cluster differenti $C^*_i, C^*_j$, avremmo un cammino di **due archi** che collega $x$ ad $y$ (contraddicendo [[#Observation 1]]).
+
+![|600](BWA_06_4.png)
+
+## Step 2
+Crea il grafo $H = (X, F \subseteq E)$ tale che $(x,y) \in F$ <u>se e solo se</u> $(x,y) \in E \land \vert N_G(x) \cap N_G(y) \vert \geq b$ (ovvero $x$ ed $y$ hanno **almeno** $b$ vicini in comune). ^e1b067
+
+### Observation 4
+Le **clique di punti buoni** presenti in $G$ sopravvivono anche in $H$, perché sappiamo per [[#The large clusterings assumption|large clustering assumption]] che ci sono almeno $b+2$ nodi, e quindi hanno tutti in comune almeno $b+1$ vicini.
+
+### Observation 5
+Nessun cammino tra punti buoni di cluster <u>differenti</u> sopravvivono in $H$.
+
+Per [[#Observation 3]] e per [[#^e1b067|definizione]], due punti **non buoni** sono *adiacenti* in $H$ se in $G$ sono adicenti a punti buoni appartenenti ad uno stesso cluster $C^*_i$, e inoltre due punti non buoni hanno al più $b-1$ vicini non buoni in comune.
+Perciò, sia $v$ un punto non buono con vicini buoni in $C^*_i$ e $w$ un punto non buono con vicini buoni in $C^*_j$.
+L'arco $(v,w)$ (se esistente in $G$) verrà **reciso** in $H$, in quanto non raggiungono il numero sufficiente di vicini in comune per sopravvivere.
+
+## Recap
+Ricapitolando, $H$ avrà $k$ componenti connesse con **almeno** $b+2$ punti, e ognuno di questi classific correttamente i punti **buoni** di $C^*_1, ..., C^*_k$.
+Inoltre tali componenti possono essere ricavati in tempo **polinomiale**.
+
+A questo punto potrebbero essere rimaste delle componenti di punti **non buoni**, però sappiamo che esse possono essere al più $b$.
+
+Classificando **arbitrariamente** tali punti "*avanzati*" otterremo un $k$-clustering $\hat{C}_1, ..., \hat{C}_k$ che classiffica **tutti** i punti **buoni**, e che quindi classifica correttamente **almeno** una frazione $$\geq 1 - \frac{b}{n} = 1 - \varepsilon \left(1 + \frac{5}{\alpha}\right)$$ di tutti i punti.
+
+Ovvero abbiamo trovato un algoritmo che in tempo polinomiale (e sotto le **[[#^d4b2cc|assunzioni]]**!) classifica correttamente tutti i punti eccetto una frazione $O(\varepsilon/\alpha)$ ([[#^3c1f47|teorema]]).
+
+> [!warning]
+> Purtroppo non abbiamo dimostrato il [[#^3c1f47|teorema]], in quanto esso afferma l'efficienze per **ogni** istanza $(1+\alpha, \varepsilon)$*-approximation stable*, mentre noi ci siamo ristretti al caso di [[#The large clusterings assumption|large clustering]].
+> 
+> La dimostrazione per ogni istanza risulta essere parecchio più complessa.
+
+%% ## Step 3
+Possiamo raffinare l'algoritmo, sfruttando la [[#The large clusterings assumption|large clusterings assumption]] per classificare meglio i punti che sono **ben separati** ma **non vicini**.
+
+Eseguiamo in **parallelo** (ovvero in maniera **indipendente**) per ogni punti $x \in X$ la seugente procedura:
+1. per ogni cluster $\hat{C}_i$ calcolato nello [[#Step 2]], calcoliamo la **distanza mediana** $d(x,y)$ rispetto a tutti i punti $y \in \hat{C}_i$. Non consideriamo il caso in cui $x \in \hat{C}_i$.
+2. Riassegna $x$ al cluster per il quale la distanza **mediana** computata in precedenza è **minima**.
+
+Cioè, ogni punto $x$ si guarda intorno per vedere a quale cluster $\hat{C}_i$ è più vicino (secondo la distanza **mediana**) e poi si unisce ad esso.
 

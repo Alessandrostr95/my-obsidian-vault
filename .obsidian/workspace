@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "4ebd92d97415e8e5",
+        "id": "1d1da7e13a5fbae4",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -107,17 +107,17 @@
     "direction": "horizontal",
     "width": 301.5
   },
-  "active": "4ebd92d97415e8e5",
+  "active": "1d1da7e13a5fbae4",
   "lastOpenFiles": [
-    "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
+    "BWA/img/BWA_06_3.png",
     "BWA/6 - Clustering in Approximation-Stable Instances.md",
+    "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
     "BWA/3 - Online Paging and Resource Augmentation.md",
     "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "ISTI/Statistiche Sufficienti.md",
     "ISTI/Convergenza.md",
     "Proprietà utili.md",
     "BWA/4 - Parameterized Analysis of Online Paging.md",
-    "BWA/Appendix/median-point.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md"
+    "BWA/Appendix/median-point.md"
   ]
 }
