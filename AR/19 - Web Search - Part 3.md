@@ -115,119 +115,77 @@ s + \frac{1-s}{3} & \frac{1-s}{3} & \frac{1-s}{3}\\
 
 ---------------------
 # PageRank e Random Walk
-Abbiamo visto concettualmente che l\'idea dietro al PageRank è quella di
-avere una sorta di fluido che *\"scorre\"* tra le pagine individuate
-essere inerenti alla ricerca.\
-Esiste una relazione tra questo concetto di fluido e le cosidette
-**Random Walk**, o **percorso aleatorio**. Una Random Walk funziona
-nella seguente maniera:
+Abbiamo visto concettualmente che l'idea dietro al PageRank è quella di avere una sorta di fluido che *"scorre"* tra le pagine individuate essere inerenti alla ricerca.
 
--   dato un grafo $G$ scegliamo [uniformemente a caso]{.underline} un
-    nodo $u$ da cui iniziare il percorso.
--   al passo successivo passiamo da $u$ ad uno dei suoi vicini in
-    maniera del tutto [uniforme]{.underline}.
--   e così via...
+Esiste una relazione tra questo concetto di fluido e le cosidette **Random Walk**, o **percorso aleatorio**. Una Random Walk funziona nella seguente maniera:
 
-Cerchiamo di calcolare la probabilità di trovarsi su di un dato nodo $i$
-dopo una random walk lunga $k$ passi. Più formalmente, per ogni
-$i \in V$ indichiamo con $w^{(k)}_i$ la v.a. binaria che:
+- dato un grafo $G$ scegliamo **uniformemente a caso** un nodo $u$ da cui iniziare il percorso.
+- al passo successivo passiamo da $u$ ad uno dei suoi vicini in maniera del tutto **uniforme**.
+- e così via...
 
--   vale 1 se dopo $k$ passi del random walk ci troviamo esattamente sul
-    nodo 1.
--   0 altrimenti.
+Cerchiamo di calcolare la probabilità di trovarsi su di un dato nodo $i$ dopo una random walk lunga $k$ passi. Più formalmente, per ogni $i \in V$ indichiamo con $w^{(k)}_i$ la v.a. binaria che:
 
-Scegliendo il primo noto della random walk in maniera uniforme avremo
-che $$
-  \mathcal{P}(w^{(0)}_i = 1) = \frac{1}{n} = f^{(0)}_i
-  $$
+- vale 1 se dopo $k$ passi del random walk ci troviamo esattamente sul nodo 1.
+- 0 altrimenti.
 
-Al tempo $k = 1$ avremo invece che la probabilità che il cammino
-aleatoria finisca sul nodo $i$ è pari alla probabilità che un suo vicino
-$j$ sia il nodo iniziale del cammino, moltiplicata per la probabilità
-che $j$ si passi esattamente ad $i$.
+Scegliendo il primo noto della random walk in maniera uniforme avremo che $$\mathcal{P}(w^{(0)}_i = 1) = \frac{1}{n} = f^{(0)}_i$$
 
-```{=latex}
-\begin{align*}
-    \mathcal{P}(w^{(1)}_i = 1) &= \sum_{j \in V:\\ j \to i} \left( \mathcal{P}(w^{(0)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \right)\\
-    \sum_{j \in V:\\ j \to i} \frac{f^{(0)}_j}{d^{(out)}_j} = f^{(1)}_i
-\end{align*}
-```
+Al tempo $k = 1$ avremo invece che la probabilità che il cammino aleatoria finisca sul nodo $i$ è pari alla probabilità che un suo vicino $j$ sia il nodo iniziale del cammino, moltiplicata per la probabilità che $j$ si passi esattamente ad $i$.
+
+$$\begin{align*}
+\mathcal{P}(w^{(1)}_i = 1) &= \sum_{j \in V:\\ j \to i} \left( \mathcal{P}(w^{(0)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \right)\\
+\sum_{j \in V:\\ j \to i} \frac{f^{(0)}_j}{d^{(out)}_j} &= f^{(1)}_i
+\end{align*}$$
+
 In maniera induttiva per ogni $k > 0$
 
-```{=latex}
-\begin{align*}
-    \mathcal{P}(w^{(k+1)}_i = 1) &= \sum_{j \in V:\\ j \to i} \left( \mathcal{P}(w^{(k)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \right)\\
-    \sum_{j \in V:\\ j \to i} \frac{f^{(k)}_j}{d^{(out)}_j} = f^{(k+1)}_i
-\end{align*}
-```
-Ovvero la quantità di flusso del nodo $i$ dopo $k$ iterazioni e pari
-alla probabilità di finire esattamente sul nodo $i$ dopo $k$ passi del
-random walk.\
-Consideriamo una versione \"scalata\" del random walk per lo *Scaled
-PageRank*. Le regole di questa versione di random walk sono:
 
--   fissare un parametro $s \in [ 0,1 ]$.
--   scegliere [uniformemente a caso]{.underline} un nodo iniziale $u$ da
-    cui partire.
--   da $u$:
-    -   con probabilità $s$ proseguiamo la random walk, ovvero scegliamo
-        [uniformemente a caso]{.underline} un suo vicino su cui
-        avviarci.
-    -   con probabilità $1 - s$ rincominciamo la random walk, ovvero
-        scegliamo [uniformemente a caso]{.underline} un altro nodo del
-        grafo da cui iniziare.
--   e così via...
+$$\begin{align*}
+\mathcal{P}(w^{(k+1)}_i = 1) &= \sum_{j \in V:\\ j \to i} \left( \mathcal{P}(w^{(k)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \right)\\
+\sum_{j \in V:\\ j \to i} \frac{f^{(k)}_j}{d^{(out)}_j} &= f^{(k+1)}_i
+\end{align*}$$
 
-Pper ogni nodo $i \in V$ indichiamo con $\omega^{(k)}_i$ la v.a. binaria
-che:
+Ovvero la quantità di flusso del nodo $i$ dopo $k$ iterazioni e pari alla probabilità di finire esattamente sul nodo $i$ dopo $k$ passi del random walk.
 
--   vale 1 se dopo $k$ passi del random walk ci troviamo esattamente sul
-    nodo 1.
--   0 altrimenti.
+Consideriamo una versione \"scalata\" del random walk per lo *Scaled PageRank*.
+Le regole di questa versione di random walk sono:
+- fissare un parametro $s \in [ 0,1 ]$.
+- scegliere **uniformemente a caso** un nodo iniziale $u$ da cui partire.
+- da $u$:
+	- con probabilità $s$ proseguiamo la random walk, ovvero scegliamo **uniformemente a caso** un suo vicino su cui avviarci.
+    - con probabilità $1 - s$ rincominciamo la random walk, ovvero scegliamo **uniformemente a caso** un altro nodo del grafo da cui iniziare.
+- e così via...
 
-Come prima abbiamo che $$
-  \mathcal{P}(\omega^{(0)}_i = 1) = \frac{1}{n} = r^{(0)}_i
-  $$ per $k = 1$
+Per ogni nodo $i \in V$ indichiamo con $\omega^{(k)}_i$ la v.a. binaria che:
+- vale 1 se dopo $k$ passi del random walk ci troviamo esattamente sul nodo 1.
+- 0 altrimenti.
 
-```{=latex}
-\begin{align*}
-    \mathcal{P}(\omega^{(1)}_i = 1) &= s \cdot \Big( \sum_{j \in V:\\ j \to i} \mathcal{P}(\omega^{(0)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \Big) + (1-s) \cdot \frac{1}{n}\\
-    &= \sum_{j \in V:\\ j \to i} \Big( s \cdot \frac{r^{(0)}_j}{d^{(out)}_j} \Big) + \frac{1 - s}{n}\\
-    &= r^{(1)}_i
-\end{align*}
-```
+Come prima abbiamo che $$\mathcal{P}(\omega^{(0)}_i = 1) = \frac{1}{n} = r^{(0)}_i$$ per $k = 1$
+$$\begin{align*}
+\mathcal{P}(\omega^{(1)}_i = 1) &= s \cdot \Big( \sum_{j \in V:\\ j \to i} \mathcal{P}(\omega^{(0)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \Big) + (1-s) \cdot \frac{1}{n}\\
+&= \sum_{j \in V:\\ j \to i} \Big( s \cdot \frac{r^{(0)}_j}{d^{(out)}_j} \Big) + \frac{1 - s}{n}\\
+&= r^{(1)}_i
+\end{align*}$$
+
 e quindi più in generale
 
-```{=latex}
-\begin{align*}
-    \mathcal{P}(\omega^{(k+1)}_i = 1) &= s \cdot \Big( \sum_{j \in V:\\ j \to i} \mathcal{P}(\omega^{(k)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \Big) + (1-s) \cdot \frac{1}{n}\\
-    &= \sum_{j \in V:\\ j \to i} \Big( s \cdot \frac{r^{(k)}_j}{d^{(out)}_j} \Big) + \frac{1 - s}{n}\\
-    &= r^{(k+1)}_i
-\end{align*}
-```
-Ovvero lo scaled rank di una pagina $i$ dopo $k$ iterazioni
-dell\'algoritmo *Scaled PageRank* equivale alla probabilità di trovarsi
-esattamente sul nodo $i$ dopo $k$ passi di questo scaled random walk.
+$$\begin{align*}
+\mathcal{P}(\omega^{(k+1)}_i = 1) &= s \cdot \Big( \sum_{j \in V:\\ j \to i} \mathcal{P}(\omega^{(k)}_j = 1) \cdot \frac{1}{d^{(out)}_j} \Big) + (1-s) \cdot \frac{1}{n}\\
+&= \sum_{j \in V:\\ j \to i} \Big( s \cdot \frac{r^{(k)}_j}{d^{(out)}_j} \Big) + \frac{1 - s}{n}\\
+&= r^{(k+1)}_i
+\end{align*}$$
 
-Modern Web Search
-=================
+Ovvero lo scaled rank di una pagina $i$ dopo $k$ iterazioni dell'algoritmo *Scaled PageRank* equivale alla probabilità di trovarsi esattamente sul nodo $i$ dopo $k$ passi di questo scaled random walk.
 
-L\'enorme crescita del Web, in termini di numero di pagine e numero di
-argomenti trattati, ha richiesto col tempo di raffinare le vecchie
-tecniche di link analysis e web search. Una tecnica è quella di
-analizzare i link combinando il **contenuto** delle pagine, come per
-esempio usando gli **anchor text**, ovvero delle parole chiave che
-descrivono in qualche maniera il contenuto di un link. Oppure ancora
-considerando con quale frequenza o quante volte una pagina viene
-effettivamente aperta.\
-Spesso ci sono anche motivi commerciali per cercare di apparire primi
-nei ranking di una ricerca. Infatti è nata una vera e propria industria
-dietro le tecniche di ranking. Da una parte ci sono i web designer che
-cercano di comprendere gli algoritmi di ranking usati dai motori di
-ricerca, e cercano un modo per poterli sfruttare a loro vantaggio.
-D\'altra parte ci sono i progettisti di motori di ricerca che vengono
-indotti nel cercare di modificare è migliorare i propri algoritmi di
-ranking. Ecco perché gli algoritmi di ranking effettivi vengono spesso
-tenuti segreti.
+---------
+# Modern Web Search
+L'enorme crescita del Web, in termini di numero di pagine e numero di argomenti trattati, ha richiesto col tempo di raffinare le vecchie tecniche di link analysis e web search.
+Una tecnica è quella di analizzare i link combinando il **contenuto** delle pagine, come per esempio usando gli **anchor text**, ovvero delle parole chiave che descrivono in qualche maniera il contenuto di un link.
+Oppure ancora considerando con quale frequenza o quante volte una pagina viene effettivamente aperta.
 
-------------------------------------------------------------------------
+Spesso ci sono anche motivi commerciali per cercare di apparire primi nei ranking di una ricerca.
+Infatti è nata una vera e propria industria dietro le tecniche di ranking.
+Da una parte ci sono i web designer che cercano di comprendere gli algoritmi di ranking usati dai motori di ricerca, e cercano un modo per poterli sfruttare a loro vantaggio.
+
+D'altra parte ci sono i progettisti di motori di ricerca che vengono indotti nel cercare di modificare è migliorare i propri algoritmi di ranking.
+Ecco perché gli algoritmi di ranking effettivi vengono spesso tenuti segreti.
