@@ -109,9 +109,9 @@
   },
   "active": "1d1da7e13a5fbae4",
   "lastOpenFiles": [
-    "BWA/0 - Beyond Worst-Case Analysis.md",
-    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "BWA/6 - Clustering in Approximation-Stable Instances.md",
+    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/img/BWA_06_3.png",
     "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
     "BWA/3 - Online Paging and Resource Augmentation.md",
