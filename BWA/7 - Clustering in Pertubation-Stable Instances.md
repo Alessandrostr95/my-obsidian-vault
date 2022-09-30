@@ -37,3 +37,43 @@ Ricorda che tale problema è **NP-Hard** nelle istanze peggiori.
 ```
 
 ---------
+# Single-Link Clustering
+Il **Single-Link** è un noto algoritmo di clustering.
+L'idea è di pensare allo spazio metrico (l'istanza) $(X,d)$ come un grafo **completo** e **pesato**, dove i pesi degli archi sono definiti dalla funzione di distanza $d$.
+
+L'algoritmo **SL** esegue l'[algoritmo di Kruskal](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm) per trovare il [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) (o MST), con la differenza che l'algoritmo viene fermato quando ci sono solamente $k$ componenti connesse.
+In pratica non vengono aggiunti gli ultimi $k-1$ archi che verrebbero aggiunti dall'agoritmo di Kruskal.
+
+```ad-note
+Inutile osservare che l'algoritmo SL è **polinomiale**.
+```
+
+Quello che vorremmo poter dimostrare è
+
+> per $\gamma$ *sufficientemente grande*, l'algoritmo SL computa computa (in tempo *polinomiale*) la soluzione **ottima** per il problema $k$-median clustering per ogni istanza $\gamma$-[[#^a9d2c7|stable]].
+
+^d3bbdb
+
+Purtroppo esistono dei controesempi che smentiscono la [[#^d3bbdb|precedente affermazione]].
+
+> **Controesempio**
+> Supponiamo di avere 3 *città*, ciascuna avente $M$ abitanti (con $M$ molto grande), e un piccolo villaggio con solamente $10$ abitanti.
+> 
+> ![|600](BWA_07_1.png)
+> 
+> Se $k=4$ è facile catalogare le persone, $M$ persone per ogni città più le $10$ nel piccolo villaggio.
+> 
+> Anche con $k=3$ è facile trovare il clustering ottimo, basta definire un clustering per ogni città, e poi riassegnare il piccolo villaggio alla *citta più vicina*.
+> Per esempio, modellizzando l'istanza sottoforma di grafo, potemmo avere una situazione del genere
+> ![](BWA_07_2.png)
+> 
+> Clusterizzando in tale maniera, avremo che solamente i $10$ abitanti del villaggio potrebbero essere classificati male, venendo così costretti a "*percorrere*" un percorso di $2$ (per un massimo di $20$).
+> 
+> Eseguendo l'algoritmo SL su tale istanza (e con $k=3$) otterremo che le due citta di destra verrebbero unite in un unico grande cluster, mentre il piccolo villaggio genererebbe un cluster a sé, il che è <u>parecchio differente dalla soluzione ottima</u>.
+> 
+> ![|600](BWA_07_3.png)
+> Con questa classificazione invece, avremo che $M$ persone di una grande città vengono classificate male e perciò costrette a percorrere una distanza di $1$ (con un surplus totale di $M >> 20$).
+
+------
+# Single-Link++
+
