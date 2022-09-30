@@ -271,7 +271,7 @@ Ovvero abbiamo trovato un algoritmo che in tempo polinomiale (e sotto le **[[#^d
 > Purtroppo non abbiamo dimostrato il [[#^3c1f47|teorema]], in quanto esso afferma l'efficienze per **ogni** istanza $(1+\alpha, \varepsilon)$*-approximation stable*, mentre noi ci siamo ristretti al caso di [[#The large clusterings assumption|large clustering]].
 > 
 > La dimostrazione per ogni istanza risulta essere parecchio più complessa.
-
+ 
 %% ## Step 3
 Possiamo raffinare l'algoritmo, sfruttando la [[#The large clusterings assumption|large clusterings assumption]] per classificare meglio i punti che sono **ben separati** ma **non vicini**.
 

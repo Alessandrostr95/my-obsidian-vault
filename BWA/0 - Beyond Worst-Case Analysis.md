@@ -23,7 +23,7 @@ tags:
 - [[4 - Parameterized Analysis of Online Paging]] (*Parameterized Paging*)
 - [[5 -  Parametrized Analysis of Computing Independent Sets]] (*Recoverable Value*)
 - [[6 - Clustering in Approximation-Stable Instances]] (*Stable Clustering*)
-
+- [[7 - Clustering in Pertubation-Stable Instances]] (*Single-Link++*)
 
 ------------------
 ## Appendix
