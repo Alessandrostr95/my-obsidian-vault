@@ -30,4 +30,10 @@ Il nostro obiettivo è quello di dimostrare che per ogni $\gamma$ <u>sufficiente
 Ricorda che tale problema è **NP-Hard** nelle istanze peggiori.
 ```
 
+
+```ad-summary
+- L'[[6 - Clustering in Approximation-Stable Instances#^d2b2c2|Approximation stability]] formalizza l'idea che un clustering con valore **quasi ottimo** rispetto alla funzione obiettivo, deve essere **strutturalmente simile** alla soluzione ottima.
+- La [[#^a9d2c7|Pertubation Stability]] invece formalizza l'intuizione che la soluzione ottima deve essere **robusta** a fronte di pertubazioni della funzione di distanza.
+```
+
 ---------
