@@ -124,3 +124,18 @@ Per fortuna questo step può essere implementato in **tempo polinomiale** tramit
 ## When Does Single-Link++ Succeed?
 Identifichiamo in questa sezione le **condizioni sufficienti** per le quali l'algoritmo SL++ riesce a trovare una soluzione ottima per una istanza.
 
+Una prima condizione necessaria affinché SL++ computi la soluzione ottima $C^*_1, ..., C^*_k$ è la seguente
+
+> **(1)** per ogni $i$, il cluster ottimo $C^*_i$ appare sottoforma di componente connessa in quelche punto dell'esecuzione dell'algoritmo di Kruskal.
+
+^300893
+
+Infatti a seguito di un $k$-pruning rimarranno dei sottoalberi di dell'albero gerarchico $H$, e tali sottoalberi corrispondono a componenti connesse che appaiono durante l'esecuzione dell'algoritmo di Kruskal.
+Perciò se esiste un $C^*_i$ per il quale non vale la condizione [[#^300893|(1)]], allora SL++ non potrà ma identificarlo e di conseguenza non potrà trovare la soluzine ottima.
+
+Un'altra proprietà è la seguente
+
+> **(2)** per ogni $i$, per ogni <u>sottoinsieme proprio</u> $A \subsetneq C^*_i$ dell'$i$-esimo cluster ottimo avremo che il punto $x \in X \setminus A$ **più vicino** all'insieme $A$ si trova all'interno di $C^*_i$ (e non fuori).
+> 
+> Più formalmente, sia $$x = \arg \min_{x \in X \setminus A} d(x, A)$$ allora avremo che $x \in C^*_i \setminus A$.
+
