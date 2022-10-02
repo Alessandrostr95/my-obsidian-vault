@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5
+    "width": 311.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -109,6 +109,7 @@
   },
   "active": "1d1da7e13a5fbae4",
   "lastOpenFiles": [
+    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "TODO.md",
     "root.md",
@@ -117,7 +118,6 @@
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/6 - Clustering in Approximation-Stable Instances.md",
     "BWA/img/BWA_06_3.png",
-    "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
-    "BWA/3 - Online Paging and Resource Augmentation.md"
+    "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md"
   ]
 }

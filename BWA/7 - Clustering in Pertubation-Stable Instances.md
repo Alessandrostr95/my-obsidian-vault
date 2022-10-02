@@ -59,7 +59,7 @@ Purtroppo esistono dei controesempi che smentiscono la [[#^d3bbdb|precedente aff
 > **Controesempio**
 > Supponiamo di avere 3 *città*, ciascuna avente $M$ abitanti (con $M$ molto grande), e un piccolo villaggio con solamente $10$ abitanti.
 > 
-> ![|600](BWA_07_1.png)
+> ![|](BWA_07_1.png)
 > 
 > Se $k=4$ è facile catalogare le persone, $M$ persone per ogni città più le $10$ nel piccolo villaggio.
 > 
@@ -71,9 +71,56 @@ Purtroppo esistono dei controesempi che smentiscono la [[#^d3bbdb|precedente aff
 > 
 > Eseguendo l'algoritmo SL su tale istanza (e con $k=3$) otterremo che le due citta di destra verrebbero unite in un unico grande cluster, mentre il piccolo villaggio genererebbe un cluster a sé, il che è <u>parecchio differente dalla soluzione ottima</u>.
 > 
-> ![|600](BWA_07_3.png)
+> ![](BWA_07_3.png)
 > Con questa classificazione invece, avremo che $M$ persone di una grande città vengono classificate male e perciò costrette a percorrere una distanza di $1$ (con un surplus totale di $M >> 20$).
+
+^4ee98d
 
 ------
 # Single-Link++
+Descriviamo ora il **Single-Link++** (o **SL++**), una versione più sofisticata del [[#Single-Link Clustering]].
+
+Il primo step è quello di eseguire l'[algoritmo di Kruskal](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm) per intero.
+
+Dall'ordine di esecuzione dell'algoritmo di Kruskal si può generare un **hierarchical cluster tree** $H$.
+
+ ![](BWA_07_4.png) ^32e5ce
+
+L'albero gerarchico $H$ ha $n$ **foglie**, rappresentanti i nodi di $G$.
+Ognuno degli $n-1$ archi selezionati dall'algoritmo di Kruskal corrispone esattamente ad un **nodo interno** dell'albero $H$.
+Ognuno di questi nodi interni è etichetatto con il **peso** del rispettivo arco di $G$.
+Inoltre ognuno dei nodi interni di $H$ ha **esattamente** due figli (quindi $H$ è un albero **binario**).
+
+Osservare che le foglie di un qualsiasi sottoalbero di $H$ corrispondono ad una **componente** connessa che appare in qualche punto dell'esecuzione dell'algoritmo di Kruskal.
+Per esempio, guardando la [[#^32e5ce|precedente figura]], abbiamo che il sottoalbero radicato in "1" rappresenta la prima componente connessa (con più di un nodo) $\{u, x\}$ che viene generata al primo passo dell'algoritmo, perché il primo arco aggiunto è proprio $(u,x)$ con **peso minimo** $w(u,x) = 1$.
+
+> **Def. ($k$-pruning)**
+> Un $k$**-pruning** di $H$ (con $k \geq 1$) è il $k$-clustering indotto dalla rimozione di un insieme $S$ di $k-1$ **nodi interni** di $H$, partendo dall'**alto**.
+> Ovvero se $x \in S$ allora certamente avremo che $\text{parent}(x) \in S$.
+
+```ad-important
+title: Note
+Osserva che un $k$-proning genera **esattamente** $k$ sottoalberi disgiunti, in quanto ogni nodo interno ha esattamente 2 figli.
+
+Di conseguenza un $k$-pruning genera un **partizionamento** delle foglie di $H$ (o nodi di $G$), ottenendo così un $k$-clustering.
+```
+
+Per $k=1,2$ esiste **solamente un** $k$-pruning.
+Invece per $k > 2$ ne esistono molteplici, ognuno dei quali può indurre un $k$-clustering di "*qualità*" differenti!
+
+Consideriamo l'albero gerarchico $H$ generato da SL++ sull'istanza del [[#^4ee98d|controesempio]], ed eseguiamo un 3-pruning.
+
+![](./img/BWA_07_5.png)
+
+Osseviamo che rimuovendo il nodo interno etichettato con "2" genera la stessa soluzione dei SL semplice, mentre rimuovendo quello etichettato con "1" genera quella ottima.
+
+Quindi il **secondo step** dell'algoritmo SL++ è quello di calcolare il $k$-pruning **ottimale**, su tutti i possibili $k$-clustering indotti da tutti i possibili $k$-pruning.
+
+Per fortuna questo step può essere implementato in **tempo polinomiale** tramite un algoritmo di programmazione dinamica (vedi [ESERCIZIO]).
+
+> **Theorem**
+> Per ogni istanza $\gamma$-[[#^a9d2c7|stabile]] di $k$-median clustering, con $\gamma > 3$, l'algoritmo SL++ computa la **soluzione ottima**.
+
+## When Does Single-Link++ Succeed?
+Identifichiamo in questa sezione le **condizioni sufficienti** per le quali l'algoritmo SL++ riesce a trovare una soluzione ottima per una istanza.
 
