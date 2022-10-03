@@ -157,7 +157,33 @@ Vedremo adesso che qualsiasi istanza $\gamma$-[[#^a9d2c7|stabile]] di $k$-median
 Ovvero il SL++ potrà identificare il $k$-clustering ottimo $C^*_1, ..., C^*_k$.
 
 ### Step 1
+> **Fact 1.**
+> Per ogni istanza $\gamma$-[[#^a9d2c7|stabile]] con $\gamma > 3$, e per ogni $x \in C^*_i$ (*cluster ottimo*) avremo che $$d(x, c_j) > 3d(x, c_i)$$ dove $c_i, c_j$ sono i centri dei cluster $C^*_i, C^*_j$ rispettivamente (con $i \neq j$).
+
+^ad50eb
+
+Intuitivamente abbiamo che, nel clustering ottimo, ogni punto è più vicino al proprio centro rispetto a qualsiasi altro, di uno fattore maggiore di $3$.
+
+Questa proprietà richiama un po' il concetto di punto **[[6 - Clustering in Approximation-Stable Instances#^3bdd74|ben separato]]** per le istanze [[6 - Clustering in Approximation-Stable Instances#^d2b2c2|approximation stable]].
+
+Per dimostrare il [[#^ad50eb|fatto 1]], espandiamo tutte le distanze in $C^*_i$ di un fattore 3 (compresa $d(x,c_i)$) e lasciamo tutte le altre invariate (ovvero stiamo peggiorando $C^*_i$ il più possibile).
+In particolare avremo che $$\tilde{d}(x,c_i) = 3d(x, c_i),\;\; \tilde{d}(x, c_j) = d(x, c_j)$$
+Dato che per ipotesi l'istanza è $\gamma$-stable con $\gamma > 3$, la soluzione ottima $C^*_1, ..., C^*_k$ rimane invariata.
+Inoltre, dato che **tutte** le distanze in $C^*_i$ sono state scalate di uno **stesso fattore** costante, avremo che $c_i$ rimane ancora il centro di $C^*_i$.
+
+Dato che $C^*_1, ..., C^*_k$ rimane (l'unica) ottima, riassegnare $x$ al cluster $C^*_j$ **peggiora** il valore della soluzione.
+Ovvero $$d(x, c_j) = \tilde{d}(x, c_j) > \tilde{d}(x, c_i) = 3d(x, c_i) \;\; \square$$
 
 ### Step 2
+> **Fact. 2**
+> Per ogni $x \in C^*_i$ e $y \in C^*_j$ (con $i \neq j$) abbiamo che $$d(x,y) > 2 \cdot \max{\{d(x,c_i), d(y,c_j)\}}$$
+
+Grazie a [[#^ad50eb|Fact 1]], e per *disuguaglianza triangolare*, abbiamo che $$3 d(y, c_j) < d(y, c_i) \leq d(y, x) + d(x, c_i)$$ ovvero $$d(x, y) + d(x, c_i) > 3 d(y, c_j)$$
+Simmetricamente $$d(x,y) + d(y, c_j) > 3d(x, c_i)$$ ^d6aa09
+
+Senza perdita di generalità assumiamo che $d(x,c_i) \geq d(y,c_j)$ (il caso opposto è simmetrico).
+Dalla [[#^d6aa09|precedente disuguaglianza]]  abbiamo che $$d(x,y) > 3d(x, c_i) - d(y, c_j) \geq 2d(x,c_i)$$ il che implica anche che $d(x,y) > 2d(y,c_j)$.
+
+Perciò avremo che $$d(x,y) > 2 \cdot \max{\{d(x,c_i), d(y,c_j)\}} \;\; \square$$
 
 ### Step 3
