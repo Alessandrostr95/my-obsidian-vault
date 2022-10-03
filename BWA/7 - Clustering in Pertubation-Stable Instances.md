@@ -178,6 +178,8 @@ Ovvero $$d(x, c_j) = \tilde{d}(x, c_j) > \tilde{d}(x, c_i) = 3d(x, c_i) \;\; \sq
 > **Fact. 2**
 > Per ogni $x \in C^*_i$ e $y \in C^*_j$ (con $i \neq j$) abbiamo che $$d(x,y) > 2 \cdot \max{\{d(x,c_i), d(y,c_j)\}}$$
 
+^0b2354
+
 Grazie a [[#^ad50eb|Fact 1]], e per *disuguaglianza triangolare*, abbiamo che $$3 d(y, c_j) < d(y, c_i) \leq d(y, x) + d(x, c_i)$$ ovvero $$d(x, y) + d(x, c_i) > 3 d(y, c_j)$$
 Simmetricamente $$d(x,y) + d(y, c_j) > 3d(x, c_i)$$ ^d6aa09
 
@@ -187,3 +189,28 @@ Dalla [[#^d6aa09|precedente disuguaglianza]]  abbiamo che $$d(x,y) > 3d(x, c_i) 
 Perciò avremo che $$d(x,y) > 2 \cdot \max{\{d(x,c_i), d(y,c_j)\}} \;\; \square$$
 
 ### Step 3
+Come ultimo step dimostriamo la condizione sufficiente [[#^dc6716|(2)]] che garantisce efficacia dell'algoritmo SL++.
+
+Scegliamo un cluster ottimo $C^*_i$ e un suo **sottoinsieme proprio** $A \subsetneq C^*_i$.
+Vogliamo dimostrare che se l'istanza è $\gamma$-stabile (con $\gamma > 3$) allora il punto $x \in X \setminus A$ più vicino ad $A$ ricade all'interno di $C^*_i$, il che è sufficiente (come abbiamo già discusso).
+
+Il caso più semplice è quando $c_i \notin A$.
+In tal caso, lo [[#Step 2]] implica automaticamente che $c_i$ è il punto più vicino a qualsiasi punto $x \in A$.
+
+Consideriamo quindi il caso $c_i \in A$.
+Supponiamo **per assurdo** che il punto più vicino ad $A$ sia il punto $y \in C^*_j$, con $j \neq i$.
+Ovvero $$y = \arg \min_{y \in X \setminus A} d(A,y)$$
+Indichiamo con $x$ il punto di $A$ più vicino ad $y$.
+Avremo quindi che $$x= \arg \min_{a \in A} d(a,y)$$
+Formalmente avremo che la coppia $x \in A$ e $y \in X \setminus A$ minimizza la quantità $$\min_{y \in X \setminus A} \min_{x \in A} d(x,y)$$
+Inoltre, dato che $A \subsetneq C^*_i$, avremo che esiste almeno un punti $z \in C^*_i \setminus A$.
+
+Di seguito un'immagine che raffigura il quadro della situazione
+![](BWA_07_7.png)
+
+Per individuare un assurdo, consideriamo il cammino $z \to c_i \to x \to y \to c_j$.
+
+Sfruttando la *disuguaglianza triangolare* e il [[#^0b2354|Fact 2]] abbiamo che $$d(z,c_j) \leq d(z,c_i) + \underbrace{d(c_i,x)}_{< \frac{1}{2}d(x,y)} + d(x,y) + \underbrace{d(y, c_j)}_{< \frac{1}{2}d(x,y)} < d(z,c_i) + 2d(x,y)$$
+
+Dato che sia l'arco $(z,c_i)$ che l'arco $(x,y)$ appartengono al taglio $(A, X \setminus A)$, e dato che per ipotesi assurda abbiamo che $d(x,y) \leq d(z,c_i)$, allora avremo che $$d(z,c_j) < 3d(z,c_i)$$
+Questo però contraddice il [[#^ad50eb|Fact 1]], perciò non può essere che $y$ è il punto più vicino ad $A$ $\square$.
