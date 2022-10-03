@@ -139,3 +139,25 @@ Un'altra proprietà è la seguente
 > 
 > Più formalmente, sia $$x = \arg \min_{x \in X \setminus A} d(x, A)$$ allora avremo che $x \in C^*_i \setminus A$.
 
+^dc6716
+
+![](BWA_07_6.png)
+
+Supponiamo che la nosrta istanza soddisfi [[#^dc6716|(2)]].
+Fissiamo un cluster ottimo $C^*_i$ generico e consideriamo la prima iterazione di Kruskal che aggiunge un arco tra un nodo $a \in C^*_i$ e un nodo $x \in X \setminus C^*_i$.
+Dato che tale arco è il primo di questa tipologia, allora la componente connessa $A$ del nodo $a$ è un sottoinsieme di $C^*_i$.
+Per definizoine di Kruskal, il punto $x$ è il più vicino ad $A$ nell'insieme $X \setminus A$.
+Dato che $x \notin C^*_i$, allora la condizione [[#^dc6716|(2)]] allora implica che l'insieme $A$ **non può essere** un sottoinsieme proprio di $C^*_i$, ovvero $A \equiv C$.
+Ovvero, se abbiamo la condizione [[#^dc6716|(2)]], abbiamo identificato un'iterazione di Kruskal in cui è presente per intero la componente $C^*_i$.
+
+> [[#^dc6716|(2)]] $\implies$ [[#^300893|(1)]]
+
+## Proof
+Vedremo adesso che qualsiasi istanza $\gamma$-[[#^a9d2c7|stabile]] di $k$-median clustering, con $\gamma > 3$, soddisfa la condizione [[#^dc6716|(2)]], e di conseguenza anche la [[#^300893|(1)]].
+Ovvero il SL++ potrà identificare il $k$-clustering ottimo $C^*_1, ..., C^*_k$.
+
+### Step 1
+
+### Step 2
+
+### Step 3

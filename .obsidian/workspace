@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "1d1da7e13a5fbae4",
+        "id": "462cdec4fafcf89d",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -107,8 +107,9 @@
     "direction": "horizontal",
     "width": 301.5
   },
-  "active": "1d1da7e13a5fbae4",
+  "active": "462cdec4fafcf89d",
   "lastOpenFiles": [
+    "BWA/img/BWA_07_5.png",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "TODO.md",
@@ -117,7 +118,6 @@
     "AR/19 - Web Search - Part 3.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/6 - Clustering in Approximation-Stable Instances.md",
-    "BWA/img/BWA_06_3.png",
-    "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md"
+    "BWA/img/BWA_06_3.png"
   ]
 }
