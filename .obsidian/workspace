@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BWA/8 - Exact Recovery in Stable Cut Instances.md",
+            "file": "BWA/9 - Compressive Sensing.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BWA/8 - Exact Recovery in Stable Cut Instances.md",
+                "file": "BWA/9 - Compressive Sensing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BWA/8 - Exact Recovery in Stable Cut Instances.md"
+                "file": "BWA/9 - Compressive Sensing.md"
               }
             }
           },
@@ -109,15 +109,15 @@
   },
   "active": "ca5172a04cc1a18a",
   "lastOpenFiles": [
-    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
-    "BWA/8 - Exact Recovery in Stable Cut Instances.md",
-    "BWA/6 - Clustering in Approximation-Stable Instances.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
+    "BWA/9 - Compressive Sensing.md",
+    "BWA/8 - Exact Recovery in Stable Cut Instances.md",
+    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
+    "BWA/6 - Clustering in Approximation-Stable Instances.md",
     "BWA/img/BWA_07_6.png",
     "BWA/img/BWA_07_5.png",
     "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "TODO.md",
-    "root.md",
-    "Proprietà utili.md"
+    "root.md"
   ]
 }

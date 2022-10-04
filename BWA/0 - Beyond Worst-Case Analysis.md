@@ -25,6 +25,7 @@ tags:
 - [[6 - Clustering in Approximation-Stable Instances]] (*Stable Clustering*)
 - [[7 - Clustering in Pertubation-Stable Instances]] (*Single-Link++*)
 - [[8 - Exact Recovery in Stable Cut Instances]] (*Recovering Graphs Cuts*)
+- [[9 - Compressive Sensing]]
 
 ------------------
 ## Appendix
