@@ -140,9 +140,7 @@ Invece il caso d'uso più comune in cui si usano algoritmi di clustering è per 
 Perciò ci si chiede: le istanze che presentano una classificazione significativa, potrebbero essere più facili da risolvere rispetto alle istanze peggiori?
 
 ------
-# Course Information
-
-## Goals of Analyzing Algorithms
+# Goals of Analyzing Algorithms
 Iniziamo con l'elencare le principali motivazione per cui noi vogliamo analizzare rigorosamente le prestazioni di un algoritmo.
 
 ### Goal 1: Performance Prediction
@@ -167,7 +165,7 @@ L'ultimo obiettivo è quello di avere una guida che aiuti lo sviluppo di nuovi a
 
 Infatti una volta data una misura della qualità degli algoritmi ([[#Goal 2 Identify Optimal Algorithms|obiettivo 2]]) possiamo porci come compito quello di migliorare lo *"stato dell'arte"* (l'algoritmo migliore noto fin ora) rispetto alla data misura di qualità.
 
-## Summarizing Algorithm Performance
+# Summarizing Algorithm Performance
 L'analisi *worst-case* è il paradigma dominante nell'analisi formale degli algoritmi.
 
 Diamo una definizione formale di questo paradigma.
@@ -183,18 +181,18 @@ Dato che i possibili input sono generalmente **infiniti** si parametrizza $Z$ in
 Perciò sia $Z_n$ l'insieme di tutte le istanze di dimensione $n$:
 l'analisi *worst-case* riassume le prestazioni di un algoritmo $A$ come $$\max_{z \in Z_n} \text{cost}(A,z)$$
 
-## Pro e Contro
-### Pro dell'analisi worst-case
+# Pro e Contro
+## Pro dell'analisi worst-case
 1. **Good worst-case upper bounds are awesome.** Qualora un algoritmo garantisce un buon (ovvero piccolo) **upper bound** al caso peggiore, allora possiamo anche dimenticarci della natura del dominio applicativo.
 2. **Mathematical tractability.** Di solito è più facile stabilire un bound alle prestazioni nel caso peggiore di un algoritmo, anziché cercare di riassumere le prestazioni per tutte le istanze in generale. Ricordiamo che l'utilità di un modello matematico non cresce necessariamente in maniera monotona all'aumentare del suo realismo/complessità: infatti modello matematico più accurato non è utile se non si possono dedurne proprietà interessanti.
 3. **No data model.** L'analisi worst-case non fa alcuna assunzione riguardo l'input. Per tale ragione risulta essere orientata ad "uso generale", garantendo risultati che sono utili su tutto il range di domini applicativi.
 
-### Contro dell'analisi worst-case
+## Contro dell'analisi worst-case
 1. **Overly pessimistic.** Abbiamo visto come il riassumere le prestazioni di un algoritmo tramite il caso peggiore può **sovrastimare troppo** le prestazioni sulla maggior parte degli input (come per esempio nel caso del [[#Linear Programming|metodo del simplesso]], dove l'analisi worst-case raffigurava in maniera troppo pessimistica le reali prestazioni dell'algoritmo)
 2. **Can rank algorithms inaccurately.** Riassumere le prestazioni in maniera eccessivamente pessimistica può impedire all'analisi worst-case di identificare l'algoritmo (empiricamente) giusto da utilizzare nella pratica ([[#Goal 1 Performance Prediction]]). Per esempio tramite l'analisi worst-case avremo che nel problema del [[#Caching problem LRU vs FIFO|caching]] non c'è distinzione tra politica FIFO e LRU, mentre nella [[#Linear Programming|programmazione lineare]] conviene usare l'*ellipsoid method* anziché il simplesso.
 3. **No data model.** O meglio, l'analisi worst-case corrisponde al modello di dati *"[Legge di Murphy](https://en.wikipedia.org/wiki/Murphy%27s_law)"*: qualunque algoritmo tu scelga, il fato cospirerà contro di te per produrre il peggior input possibile. Questo modo di pensare dipende solamente dall'algoritmo, considerando i dati coerenti all'applicazione dell'algoritmo.
 
-## Conclusioni sull'analisi worst-case
+# Conclusioni sull'analisi worst-case
 Riespetto al [[#Goal 3 Design New Algorithms]], l'analisi worst-case ha avuto un enorme successo.
 Infatti il tentativo di migliorare le performace nel caso peggiore ha portato i ricercatori a trovare migliaia di nuovi algoritmi e strutture dati, molti dei quali estramemente utili.
 
