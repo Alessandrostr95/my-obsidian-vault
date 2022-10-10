@@ -152,9 +152,9 @@ Perciò ci possiamo chiedere:
 
 Purtroppo non è facile da dirsi.
 Abbiamo solo la vaga intuizione che i nodi di grado basso siano generalmente "*migliori*" di quelli di grado superiore, perché "*bloccano*" l'inclusione di un minor numero di altri nodi.
-È anche difficile computazionalmente da verificare tale condizione (problema decisionale NP-hard), se volessimo una [[1 - Introduction#Goal 1 Performance Prediction|predizione delle performance]] data un'istanza.
+È anche difficile computazionalmente da verificare tale condizione (problema decisionale NP-hard), se volessimo una [[BWA/1 - Introduction#Goal 1 Performance Prediction|predizione delle performance]] data un'istanza.
 
-Possiamo però sfruttare i risultati raggiunti come [[1 - Introduction#Goal 3 Design New Algorithms|guida]] per la progettazione di algoritmi con migliori garanzie (in pratica).
+Possiamo però sfruttare i risultati raggiunti come [[BWA/1 - Introduction#Goal 3 Design New Algorithms|guida]] per la progettazione di algoritmi con migliori garanzie (in pratica).
 
 ## Optimizing the Recoverable Value
 Spostiamo per il momento l'obiettivo dall'**analisi** alla **progettazione** di algoritmi.

@@ -22,9 +22,9 @@ Tale regione è sempre a forma di *"scala"*.
 
 ```
 
-Come [[1 - Introduction#^db5c4b|misura di qualità]] $\text{cost}(A,z)$ il numero di **operazioni di confronto** che necessita l'algoritmo $A$ per computare la soluzione, dato l'input $z$.
+Come [[BWA/1 - Introduction#^db5c4b|misura di qualità]] $\text{cost}(A,z)$ il numero di **operazioni di confronto** che necessita l'algoritmo $A$ per computare la soluzione, dato l'input $z$.
 
-Il nostro obiettivo è quello di dimostrare che esiste un algoritmo $A$ che è [[1 - Introduction#^67367e|instance-optimal]] per il *2D Maxima problem*.
+Il nostro obiettivo è quello di dimostrare che esiste un algoritmo $A$ che è [[BWA/1 - Introduction#^67367e|instance-optimal]] per il *2D Maxima problem*.
 
 -------------
 # The Kirkpatrick-Seidel Algorithm
@@ -194,7 +194,7 @@ Tale teorema mostra un upper-bound con una *grana molot fine* per il running tim
 -------------------
 # Instance Optimality of the KS Algorithm
 Il [[#^3112de|precedente teorema]] propone un upper-bound parametrizzato e molto raffinato al running time dell'algoritmo KS.
-Per dimostrare ora che KS è [[1 - Introduction#^67367e|instance optimal]]  per il problema del *2D Maxima*, equivale al dimostrare che per ogni input $Q \subset \mathbb{R}^2$, e per ogni altro algoritmo (*corretto*) $B$ avremo
+Per dimostrare ora che KS è [[BWA/1 - Introduction#^67367e|instance optimal]]  per il problema del *2D Maxima*, equivale al dimostrare che per ogni input $Q \subset \mathbb{R}^2$, e per ogni altro algoritmo (*corretto*) $B$ avremo
 $$\text{cost}(B, Q) \in \Omega\left( \min_{\text{legal } \{S_i\}} \sum_{i=1}^{k} \vert S_i \vert \log{\frac{n}{\vert S_i \vert}} \right)$$
 
 Purtroppo però è facile mostrare un esempio in cui tale relazione non è vera.

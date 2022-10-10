@@ -1,9 +1,9 @@
 # Online Paging and Resource Augmentation
 
 # Online Paging
-L'**Online Paging** (o **[[1 - Introduction#Caching problem LRU vs FIFO|Online Caching]]**) è un comune problema del mondo reale, abbastanza "semplice" però per dimostrare alternative all'analisi *worst-case*.
+L'**Online Paging** (o **[[BWA/1 - Introduction#Caching problem LRU vs FIFO|Online Caching]]**) è un comune problema del mondo reale, abbastanza "semplice" però per dimostrare alternative all'analisi *worst-case*.
 
-Richiamando la struttura del problema vista in [[1 - Introduction]], abbiamo:
+Richiamando la struttura del problema vista in [[BWA/1 - Introduction]], abbiamo:
 1. Una memoria di archivio lenta, contenente $N$ **pagine**.
 2. Una memoria molto veloce (la **cache**) che può contenere al più $k < N$ pagine nello stesso momento.
 3. Le richieste delle pagine arrivano **online**, ovvero consecutivamente nel tempo. Indichiamo con $\sigma$ la sequenza di richieste.
@@ -51,9 +51,9 @@ Il paradigma dominante per l'analisi degli algoritmi *online* è noto come **com
 
 Nell'**analisi competitiva** degli algoritmi online, interpretiamo *"l'algoritmo $A$ megliore dell'algoritmo $B$"* se e solo se il *competitive ratio* di $A$ è più piccolo di quello di $B$ (perché si avvicina di più alle performance di $OPT$).
 Inoltre, possiamo identificare come algoritmo ottimo quello col minor competitive ratio possibile.
-Così facendo stiamo cercando di soddisfare il [[1 - Introduction#Goal 2 Identify Optimal Algorithms]].
+Così facendo stiamo cercando di soddisfare il [[BWA/1 - Introduction#Goal 2 Identify Optimal Algorithms]].
 
-Possiamo interpretare intuitivamente il competitive ratio come una sorta di [[1 - Introduction#^67367e|instace optimality]]:
+Possiamo interpretare intuitivamente il competitive ratio come una sorta di [[BWA/1 - Introduction#^67367e|instace optimality]]:
 se un algoritmo $A$ ha competitive ratio $\alpha$ allora esso sarà un algoritmo **instance optimal** con fattore di ottimalità $\alpha$.
 Infatti, per ogni possibile input $w$, avremo che 
 $$\frac{\text{cost}(A, w)}{\text{cost}(OPT, w)} \leq \max_{z} \frac{\text{cost}(A, z)}{\text{cost}(OPT, z)} = \alpha \implies \text{cost}(A,w) \leq \alpha \cdot \text{cost}(OPT, w)$$
@@ -84,7 +84,7 @@ Ovvero $A$ avrà una efficienze **al più** $\alpha$ volte quella di un qualsias
 Purtroppo il [[#A Lower Bound for all Deterministic Algorithms|lower bound]] potrebbe risultare ridicolmente enorme, dato che in contesti reali $k$ risulta essere molto grande.
 Il che non spiegherebbe le ottime prestazioni osservate empiricamente di molti algoritmi online (come *LRU*) quando applicati su **dati reali**.
 
-Tali osservazioni quindi escludono l'**analisi competitiva** dal [[1 - Introduction#Goal 1 Performance Prediction|goal di predire/descriver]] le prestazioni empiriche di un algoritmo.
+Tali osservazioni quindi escludono l'**analisi competitiva** dal [[BWA/1 - Introduction#Goal 1 Performance Prediction|goal di predire/descriver]] le prestazioni empiriche di un algoritmo.
 
 Infatti il [[#^f725b1|bound]] ci dice che le performance degradano (rispetto all'ottimo <u>offline</u>) **linearmente** al crescere della dimensione della cache.
 Ciò suggerirebbe che aumentare la memoria non è una strategia buona da adottare, contrariamente ad ogni buon senso! ^85a713
@@ -94,7 +94,7 @@ Però, ripensando alla [[#^2d11f5|definizione di competitive ratio]], non dovrem
 Questo non significa però che è inutile proseguire su questa strada.
 Infatti, se $A$ ha un competitive ratio migliore di quello di $B$ (anche se entrambi enormi), rimane sempre verò che $A$ è più competitivo rispetto a $B$. ^2482c0
 
-Perciò possiamo sempre utilizzarlo come [[1 - Introduction#Goal 2 Identify Optimal Algorithms|metodo di paragone]] per la ricerca di algoritmi ottimi.
+Perciò possiamo sempre utilizzarlo come [[BWA/1 - Introduction#Goal 2 Identify Optimal Algorithms|metodo di paragone]] per la ricerca di algoritmi ottimi.
 
 > **Teorema (Upper Bound for LRU)**
 > Il competitive ratio dell'algoritmo di paging online **LRU** è **al più** $k$.
