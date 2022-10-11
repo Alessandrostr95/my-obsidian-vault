@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "IR/0 - Information Retrieval.md",
+            "file": "IR/1 - Introduzione.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/1 - Introduzione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "IR/1 - Introduzione.md"
               }
             }
           },
@@ -109,15 +109,15 @@
   },
   "active": "a0a9973eae72cc15",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "IR/1 - Introduzione.md",
     "IC/1 - Intro.md",
     "IC/0 - Ingegneria della Conoscenza.md",
-    "IR/0 - Information Retrieval.md",
     "AR/17 - Web Search - Part 1.md",
     "root.md",
     "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
     "1 - Introduction.md",
     "AR/0 -Analisi di reti.md",
-    "ISTI/Distribuzioni.md",
-    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md"
+    "ISTI/Distribuzioni.md"
   ]
 }
