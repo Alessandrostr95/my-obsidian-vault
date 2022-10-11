@@ -1,21 +1,21 @@
 ---
 tags:
-  - IC
+  - IR
   - ComputerScience
   - IA
   - Network
   - ArtificialIntelligence
+  - InformationRetrieval
 ---
-# Ingegneria della Conoscenza
+# Information Retrieval 
 --------------------------
 ## Info corso
-- **Docente**: Armando Stellato
+- **Docente**: Danilo Croce
 - **A.A.**: 2022/2023
 - **Semestre**: 1°
 - **CFU**: 6
 - **Università**: Tor Vergata
-- **Settore**: ING-INF/05
+- **Settore**: INF/01
 
 ---------------------
 ## Table of contents
-- [[1 - Intro]]

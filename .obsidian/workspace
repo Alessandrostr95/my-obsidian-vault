@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "IC/0 - Ingegneria della Conoscenza.md",
-            "mode": "preview",
+            "file": "IR/0 - Information Retrieval.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/0 - Ingegneria della Conoscenza.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/0 - Ingegneria della Conoscenza.md"
+                "file": "IR/0 - Information Retrieval.md"
               }
             }
           },
@@ -109,15 +109,15 @@
   },
   "active": "a0a9973eae72cc15",
   "lastOpenFiles": [
-    "IC/0 - Ingegneria della Conoscenza.md",
     "IC/1 - Intro.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IR/0 - Information Retrieval.md",
     "AR/17 - Web Search - Part 1.md",
     "root.md",
     "BWA/5 -  Parametrized Analysis of Computing Independent Sets.md",
     "1 - Introduction.md",
     "AR/0 -Analisi di reti.md",
     "ISTI/Distribuzioni.md",
-    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "BWA/6 - Clustering in Approximation-Stable Instances.md"
+    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md"
   ]
 }
