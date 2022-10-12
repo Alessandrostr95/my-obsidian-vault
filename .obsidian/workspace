@@ -7,11 +7,10 @@
         "id": "7a8c386558b6a771",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diff-view",
           "state": {
-            "file": "IC/Lecture 1.md",
-            "mode": "source",
-            "source": false
+            "file": "IR/0 - Information Retrieval.md",
+            "staged": false
           }
         }
       }
@@ -107,14 +106,14 @@
     "direction": "horizontal",
     "width": 301.5
   },
-  "active": "7a8c386558b6a771",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IC/Lecture 2.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IC/Lecture 1.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Lecture 2.md",
     "IR/Lecture 1.md",
+    "IC/Lecture 1.md",
+    "IC/Lecture 2.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IR/0 - Information Retrieval.md",
     "NLP/note 1.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "BWA/9 - Compressive Sensing.md",

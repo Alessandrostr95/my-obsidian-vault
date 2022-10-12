@@ -1,5 +1,6 @@
 ---
 date: 2022-10-11
+draft: true
 ---
 ## Information Retrieval
 **Information Retrieva**: trovare del materiale in una **larga** collezione di dati non necessariamente strutturati (generalmente del test), che soddisfano degli **information need** (dei **bisogni informativi**).
