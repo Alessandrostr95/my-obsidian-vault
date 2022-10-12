@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "IR/Lecture 2.md",
+            "file": "IC/Lecture 1.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Lecture 2.md",
+                "file": "IC/Lecture 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Lecture 2.md"
+                "file": "IC/Lecture 1.md"
               }
             }
           },
@@ -109,15 +109,15 @@
   },
   "active": "7a8c386558b6a771",
   "lastOpenFiles": [
-    "IR/Lecture 1.md",
     "IR/0 - Information Retrieval.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/Lecture 1.md",
     "IR/Lecture 2.md",
+    "IR/Lecture 1.md",
     "NLP/note 1.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "BWA/9 - Compressive Sensing.md",
     "NLP/0 - Natural Language Processing.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IC/1 - Intro.md",
     "AR/17 - Web Search - Part 1.md"
   ]
 }

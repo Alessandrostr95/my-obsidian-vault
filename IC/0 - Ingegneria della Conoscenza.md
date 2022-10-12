@@ -18,4 +18,4 @@ tags:
 
 ---------------------
 ## Table of contents
-- [[1 - Intro]]
+- [[IC/Lecture 1|Lecture 1]]
