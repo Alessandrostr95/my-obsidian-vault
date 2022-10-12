@@ -20,4 +20,5 @@ tags:
 
 ---------------------
 ## Table of contents
-- [[IR/1 - Introduzione|Introduzione]]
+- [[Lecture 1]]
+- [[Lecture 2]]

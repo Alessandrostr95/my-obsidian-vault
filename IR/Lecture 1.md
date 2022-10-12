@@ -1,3 +1,6 @@
+---
+date: 2022-10-11
+---
 ## Information Retrieval
 **Information Retrieva**: trovare del materiale in una **larga** collezione di dati non necessariamente strutturati (generalmente del test), che soddisfano degli **information need** (dei **bisogni informativi**).
 
@@ -14,10 +17,9 @@ Però in genere i soldi giravano più su quelli strutturati.
 
 Adesso però anche il mercato sui dati non strutturati è cresciuto molto, superando quello sui dati strutturati.
 
-## Basi assumptions
-- **Collection**: un insieme (possibilmente statico) di documenti.
-- **Goal**: trovare un insieme **rilevante** di questi docuementi.
-
+## Basic assumptions
+- **Collection**: un insieme (assumendola **statica**) di documenti. ^da9c63
+- **Goal**: recupeare un insieme **rilevante** (rispetto alle **information need**) di questi docuementi.
 
 ## IR vs DB
 - **DB** accesso ai dati in base a dei **metadati** che descrivono un documento.
