@@ -1,3 +1,8 @@
+---
+date: 2022-10-10
+draft: true
+---
+
 Strutturare la conoscenza in modo che possa essere compresa dalla macchina.
 
 ```ad-important
