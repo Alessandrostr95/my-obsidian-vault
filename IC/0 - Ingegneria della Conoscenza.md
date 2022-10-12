@@ -4,6 +4,7 @@ tags:
   - ComputerScience
   - IA
   - Network
+  - BigData
   - ArtificialIntelligence
 ---
 # Ingegneria della Conoscenza
@@ -15,6 +16,7 @@ tags:
 - **CFU**: 6
 - **Università**: Tor Vergata
 - **Settore**: ING-INF/05
+- **Sito**: http://art.uniroma2.it/teaching/ke/
 
 ---------------------
 ## Table of contents

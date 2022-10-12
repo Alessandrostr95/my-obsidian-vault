@@ -49,6 +49,7 @@ Per esempio applicando la politica [FIFO](https://en.wikipedia.org/wiki/Cache_re
 
 ```
 
+
 Supponiamo di poter prevedere il futuro e di conoscere l'intera sequenza di richieste.
 Una politica di rimpiazzo ragionevole è quella di rimuovere ogni volta la pagina che verrà richiesta più in la' nel futuro (**furthest in the future** o politica **FIF**).
 Infatti è stato dimostrato che tale approccio *greedy* garantisce il minor numero possibile di rimpiazzi di pagine.

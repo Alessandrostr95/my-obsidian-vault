@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "7a8c386558b6a771",
+        "id": "d7bd6fe734ac080f",
         "type": "leaf",
         "state": {
-          "type": "diff-view",
+          "type": "markdown",
           "state": {
-            "file": "IR/0 - Information Retrieval.md",
-            "staged": false
+            "file": "IC/Lecture 2.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/Lecture 1.md",
+                "file": "IC/Lecture 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/Lecture 1.md"
+                "file": "IC/Lecture 2.md"
               }
             }
           },
@@ -106,17 +107,17 @@
     "direction": "horizontal",
     "width": 301.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "d7bd6fe734ac080f",
   "lastOpenFiles": [
-    "IR/Lecture 2.md",
-    "IR/Lecture 1.md",
-    "IC/Lecture 1.md",
     "IC/Lecture 2.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IR/0 - Information Retrieval.md",
+    "IR/Lecture 2.md",
+    "NLP/0 - Natural Language Processing.md",
     "NLP/note 1.md",
+    "root.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "BWA/1 - Introduction.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
-    "BWA/9 - Compressive Sensing.md",
-    "NLP/0 - Natural Language Processing.md"
+    "BWA/8 - Exact Recovery in Stable Cut Instances.md",
+    "IC/Lecture 1.md"
   ]
 }
