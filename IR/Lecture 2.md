@@ -73,3 +73,15 @@ Rimuovere le **stop word** non è sempre buono.
 Se rimuovo il termine `da` e cerchiamo `Leonardo Da Vinci`, potrebbero essere restituite pagine che parlano di Leonardo delle Tartarughe Ninja.
 ```
 
+## Stages
+1. **Tokenizzazione**
+2. **Normalizzazione**
+3. **Stemming** (o **Lemmizzazione**)
+4. **Stop Word**
+
+----
+Per trovare le pagine che contengono `Brutus` lo faccio in tempo **logaritmico** nel numero di termini, perché assumo che la collezione è statica e i termini sono ordinati.
+
+Per trovare l'intersezione tra `Brutus` e `Cesar`  prendo le due liste inerenti e faccio il **merge**.
+Se gli indici non fossero ordinati ci metteremmo tempo **quadratico**.
+Ma per fortuna abbiamo assunto che anche gli indici sono ordinati, perciò si può fare intempo **lineare** nella lunghezza delle due sequenze di indici.
