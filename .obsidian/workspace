@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "d7bd6fe734ac080f",
+        "id": "e34aa2f2445a54e0",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "IC/Lecture 2.md",
+            "file": "NLP/Lecture 2.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 337.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/Lecture 2.md",
+                "file": "NLP/Lecture 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/Lecture 2.md"
+                "file": "NLP/Lecture 2.md"
               }
             }
           },
@@ -107,17 +108,17 @@
     "direction": "horizontal",
     "width": 301.5
   },
-  "active": "d7bd6fe734ac080f",
+  "active": "31832b411d1e8af5",
   "lastOpenFiles": [
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/Lecture 2.md",
+    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "IC/Lecture 2.md",
     "IR/Lecture 2.md",
-    "NLP/0 - Natural Language Processing.md",
     "NLP/note 1.md",
     "root.md",
     "IC/0 - Ingegneria della Conoscenza.md",
     "BWA/1 - Introduction.md",
-    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
-    "BWA/8 - Exact Recovery in Stable Cut Instances.md",
-    "IC/Lecture 1.md"
+    "BWA/8 - Exact Recovery in Stable Cut Instances.md"
   ]
 }
