@@ -23,8 +23,8 @@ tags:
 - [[4 - Parameterized Analysis of Online Paging]] (*Parameterized Paging*)
 - [[5 -  Parametrized Analysis of Computing Independent Sets]] (*Recoverable Value*)
 - [[6 - Clustering in Approximation-Stable Instances]] (*Stable Clustering*)
-- [[7 - Clustering in Pertubation-Stable Instances]] (*Single-Link++*)
-- [[8 - Exact Recovery in Stable Cut Instances]] (*Recovering Graphs Cuts*)
+- [[7 - Clustering in Pertubation-Stable Instances]] (*Single-Link++* - *Exact Recovery*)
+- [[8 - Exact Recovery in Stable Cut Instances]] (*Recovering Graphs Cuts*- *Exact Recovery*)
 - [[9 - Compressive Sensing]]
 
 ------------------
