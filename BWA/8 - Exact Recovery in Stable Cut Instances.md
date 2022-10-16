@@ -103,4 +103,17 @@ Dato che $C^*$ è per definizione ottimo, avremo che $$\Delta(C) \geq 0$$ per og
 
 Infine, dato che per assunzione $C^*$ è unico, avremo che $$\Delta(C) = 0 \iff C \equiv C^*$$
 
+Analogamente per una soluzione ottima $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ per **LP1**, indichiamo con $\Delta(\hat{\mathbf{x}})$ la misura in cui il valore della funzione obiettivo della soluzione intera corrispondente a $C^*$ supera quello di $\hat{\mathbf{x}}$.
+Più chiaramente, sia $(\mathbf{x}^*, \mathbf{d}^*)$ la codifica opportuna in programmazione lineare di $C^*$.
+Allora $\Delta(\hat{\mathbf{x}})$ è definito come
+$$\begin{align}
+\Delta(\hat{\mathbf{x}}) &= \text{cost}(\hat{\mathbf{x}}, \hat{\mathbf{d}}) - \text{cost}(\mathbf{x}^*, \mathbf{d}^*)\\
+\\
+&= \sum_{e \notin C^*} c_e \hat{x}_e - \sum_{e \in C^*} c_e (1 - \hat{x}_e)
+\end{align}$$
+
+Dato che $(\mathbf{x}^*, \mathbf{d}^*)$ è una soluazione **ammissibile** per **LP1**, e dato che $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ è ottima, avremo che $$\Delta(\hat{\mathbf{x}}) \leq 0$$
+
+> **Lemma 1**
+> Esiste un algoritmo **probabilistico** che computa un (*random*) $(s-t)$-cut $C$ tale che, per ogni arco $e \in E$, $$P(e \in C) = \hat{x}_e$$ e $$P(e \notin C) = 1 - \hat{x}_e$$
 
