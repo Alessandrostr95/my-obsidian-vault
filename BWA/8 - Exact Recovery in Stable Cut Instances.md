@@ -101,7 +101,7 @@ Alternativamente possiamo definirlo come $$\Delta(C) = \text{cost}(C) -  \text{c
 
 Dato che $C^*$ è per definizione ottimo, avremo che $$\Delta(C) \geq 0$$ per ogni $(s-t)$-cut $C$.
 
-Infine, dato che per assunzione $C^*$ è unico, avremo che $$\Delta(C) = 0 \iff C \equiv C^*$$
+Infine, dato che per assunzione $C^*$ è unico, avremo che $$\Delta(C) = 0 \iff C \equiv C^*$$ ^bb7b39
 
 Analogamente per una soluzione ottima $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ per **LP1**, indichiamo con $\Delta(\hat{\mathbf{x}})$ la misura in cui il valore della funzione obiettivo della soluzione intera corrispondente a $C^*$ supera quello di $\hat{\mathbf{x}}$.
 Più chiaramente, sia $(\mathbf{x}^*, \mathbf{d}^*)$ la codifica opportuna in programmazione lineare di $C^*$.
@@ -117,3 +117,26 @@ Dato che $(\mathbf{x}^*, \mathbf{d}^*)$ è una soluazione **ammissibile** per **
 > **Lemma 1**
 > Esiste un algoritmo **probabilistico** che computa un (*random*) $(s-t)$-cut $C$ tale che, per ogni arco $e \in E$, $$P(e \in C) = \hat{x}_e$$ e $$P(e \notin C) = 1 - \hat{x}_e$$
 
+^91cb8a
+
+Assumendo che il [[#^91cb8a|Lemma 1]] sia vero, dimostriamo la [[#^0d39b5|Proposizione 1]].
+
+> **Proof of Proposition 1**
+> Assumiamo che [[#^91cb8a|Lemma 1]] sia vero, e sia $C$ il *random* $(s-t)$-cut generato da tale algoritmo.
+> In media il valore di $\Delta(C)$ sarà
+> $$\begin{align}
+\mathbb{E}\left[ \Delta(C) \right]
+&= \mathbb{E}\left[ \text{cost}(C) - \text{cost}(C^*) \right]\\
+&= \sum_{e \in C \setminus C^*} c_e \cdot P(e \in C) - \sum_{e \in C^* \setminus C} c_e \cdot P(e \notin C)\\
+&= \sum_{e \in C \setminus C^*} c_e \hat{x}_e - \sum_{e \in C^* \setminus C} c_e (1 - \hat{x}_e)\\
+&= \Delta(\hat{\mathbf{x}})\\
+&\leq 0
+\end{align}$$
+> Dato che $\Delta(C)$ è sempre non negativa a meno che $C \equiv C^*$ ([[#^bb7b39|vedi]]), e dato che in media esso assume valore $\leq 0$, allora avremo che, **con probabilità 1**, l'algoritmo restituisce esattamente $C^*$ $\square$.
+
+```ad-important
+Importante osservare che, dato che l'algoritmo probabilistico del [[#^91cb8a|Lemma 1]] induce la soluzione ottima $C^*$, allora avremo necessariamente che $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ è una **soluzione intera** composta da soli 0-1.
+```
+
+> **Proof of Lemma 1**
+> Sia $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ la soluzione ottima per **LP1**.
