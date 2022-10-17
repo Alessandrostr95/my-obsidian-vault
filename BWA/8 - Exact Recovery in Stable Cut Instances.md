@@ -193,3 +193,34 @@ Minimum Multiway Cut Problem è *NP-hard* per ogni $k \geq 3$.
 Poiché il problema è *NP-hard*, non ci aspettiamo di recuperare una soluzione ottima utilizzando la programmazione lineare anche nel caso peggiore.
 Ma possiamo farlo sotto un'ipotesi di stabilità, analogamente a come abbiamo fatto in [[7 - Clustering in Pertubation-Stable Instances]].
 
+> **Def. ($\gamma$-perturmation)**
+> Una $\gamma$-**perturbazione** di una istanza $\langle G=(V,E), c : E \to \mathbb{R}^+, t_1, ..., t_k \rangle$ del *Minimum Multiway Cut Problem* è una nuova istanza $\langle G=(V,E), \tilde{c} : E \to \mathbb{R}^+, t_1, ..., t_k \rangle$ (derivante dalla prima) tale che ogni costo originale $c_e$ è rimpiazzato da uno **perturbato** $\tilde{c}_e = \sigma_e \cdot c_e$, per qualche valore $\sigma_e \in \left[ 1, \gamma \right]$.
+
+^6bd4b1
+
+> **Def. ($\gamma$-stable instace)**
+> Sia $\langle G=(V,E), c : E \to \mathbb{R}^+, t_1, ..., t_k \rangle$ una istanza del *Minimum Multiway Cut Problem*, con **soluzione ottima** $(S^*_1, ..., S^*_k)$.
+> Per ogni $\gamma \geq 1$, diremo che tale istanza è $\gamma$**-stable** se a fronte di una qualsiasi $\gamma$[[#^6bd4b1|-perturbazione]], la soluzione $(S^*_1, ..., S^*_k)$ rimane **ottima**.
+
+### Minimum Multiway Cut Problem as LP Problem
+Definiamo ora una codifica **LP2** del problema in *programmazione lineare*, la quale è una **estensione** di [[#$s$-$t$ Min-Cut as LP Problem|LP1]].
+
+Come prima abbiamo un insieme di **variabili decisionali** $x_e \geq 0$ per ogni arco $e \in E$, le quali indicano (come prima) quale arco $e$ appartiene al taglio.
+
+Per ogni nodo $v \in V$, abbiamo ora l'**insieme** di variabili decisionali $d^k_v, ..., d^k_v \geq 0$, le quali intuitivamente vengono intese come:
+- se $d^i_v = 1$ allora il nodo $v$ appartiene alla partizione $S_i$.
+- per tutte le altre partizioni $j \neq i$ invece $d^j_v = 0$.
+
+Il primo insieme di **vincoli** indicano che ciascun terminale è assegnato alla sua partizione $$d^i_{t_i} = 1 \;\; \forall i = 1, ..., k$$
+Per ogni altro nodo $v$ invece, insistiamo sul fatto che siano completamente assegnati (quantomeno **frazionatamente**) alle diverse partizioni $$\sum_{i = 1}^{k} d^i_v = 1 \;\;\; \forall v \in V$$
+
+Poi vogliamo che ogni arco $e$ che ha due estremi in due partizioni differenti, deve necessariamente appartenere al taglio.
+Per ogni $e = (u,v) \in E$ abbiamo
+$$\begin{align}y^i_e &\geq d^i_u - d^i_v\\ y^i_e &\geq d^i_v - d^i_u\end{align}$$
+La variabile $y^i_e$ è solamente una **variabile ausiliare**.
+Questo vincolo afferma che la differenza nella misura in cui i due estremi $u,v$ dell'arco $e$ sono assegnati alla partizione $S_i$ dovrebbe contribuire nella misura in cui $e$ apparteine al taglio.
+
+Infine abbiamo per ogni arco $e \in E$ il vincolo $$x_e = \frac{1}{2} \sum_{i=1}^{k} y^i_e$$
+
+Osserviamo che, se entrambi gli estremi di un arco $e$ sono assegnati **interamente** a due partizioni differenti $S_h, S_\ell$ (con $h \neq \ell$), avremo che $y^h_e = y^{\ell}_e = 1$ e che quindi $\sum_{i=1}^{k} y^i_e = 1$, e questo giustifica il fattore $1/2$ (noi vogliamo che $0 \leq x_e \leq 1$).
+
