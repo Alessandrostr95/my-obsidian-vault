@@ -8,24 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c5162487a06a1aa1",
+            "id": "5318d2e1aad5e80f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/Lecture 3.md",
+                "file": "BWA/8 - Exact Recovery in Stable Cut Instances.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "5318d2e1aad5e80f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.0.0"
               }
             }
           }
@@ -87,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/Lecture 3.md",
+                "file": "BWA/8 - Exact Recovery in Stable Cut Instances.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/Lecture 3.md"
+                "file": "BWA/8 - Exact Recovery in Stable Cut Instances.md"
               }
             }
           },
@@ -126,10 +116,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "c5162487a06a1aa1",
+  "active": "5318d2e1aad5e80f",
   "lastOpenFiles": [
-    "IC/0 - Ingegneria della Conoscenza.md",
     "IC/Lecture 3.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
     "BWA/8 - Exact Recovery in Stable Cut Instances.md",
     "TODO.md",
     "BWA/9 - Compressive Sensing.md",

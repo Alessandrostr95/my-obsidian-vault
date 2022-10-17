@@ -140,3 +140,23 @@ Importante osservare che, dato che l'algoritmo probabilistico del [[#^91cb8a|Lem
 
 > **Proof of Lemma 1**
 > Sia $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ la soluzione ottima per **LP1**.
+> Intuitivamente, l'algoritmo in questione espande una *"bolla"* centrata in $s$ fino a una dimensione casuale, e tutto ciò che è incluso nella bolla apparterrà alla partizione della sorgente.
+> 
+> 1. Campiona uniformemente a caso un "*raggio*" $r \in (0, 1)$.
+> 2. $A \equiv \lbrace v \in V: \hat{d}_v \leq r \rbrace$
+> 3. Return $C = (A, V \setminus A)$
+> 
+> Dato che $d_s = 0$ e $d_t = 1$ certamente $C$ è un $(s-t)$-cut (con probabilità 1).
+> 
+> Consideriamo ora un generico arco del taglio $e = (u, v) \in C$.
+> Assumiamo senza perdita di generalità che $u \in A$ e $v \in \overline{A}$ (il caso simmetrico è analogo).
+> Allora avremo che
+> $$\begin{align}
+P(e \in C)
+&= P(u \in A \cap v \notin A)\\
+&= P(\hat{d}_u \leq r, \hat{d}_v > r)\\
+&= P(r \in \left[ \hat{d}_u, \hat{d}_v \right))\\
+&= \hat{d}_v - \hat{d}_u\\
+&\leq \hat{x}_e
+\end{align}$$
+
