@@ -59,3 +59,21 @@ Abbiamo 6 combinazioni [Vedi Slides].
 - **CC BY-NC-ND** ...
 
 Infine esiste **CC0**, ovvero si rinuncia a **tutti** i diriti d'autore.
+
+----
+# Formati per Open Data
+Formati per il web:
+- **Livello Sintattico**: XML per la **readability**
+- **Livello Semantico**: per la **understandabality**
+
+----
+# 5-star of Linked Open Data
+
+ | 
+---|---
+`*` | Rendi il tuo materiale disponibile nel web in qualsiasi formato, purché sotto licenza **open**.
+`**` | Rendi i tuoi dati disponibili in maniera **strutturata** (e.g. Excel, png, ecc...).
+`***` | Usa formati **non proprietari** (CSV, JSON, XML), così le persone non sono vincolate alla prima lettura.
+`****` | Usa **URI** per identificare i dati.
+`*****` | Consenti ai dati avere dei **link** ad altri dati, così che il web diventi un db distribuito.
+
