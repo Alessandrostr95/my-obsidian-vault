@@ -159,4 +159,37 @@ P(e \in C)
 &= \hat{d}_v - \hat{d}_u\\
 &\leq \hat{x}_e
 \end{align}$$
+> Per concludere l'uguaglianza basta dimostrare che l'ottimalità di $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ implica che $\hat{x}_e = \vert \hat{d}_u - \hat{d}_v \vert$ per ogni arco $e = (u,v) \in E$.
+> 
+> Supponiamo <u>per assurdo</u> che esiste un arco $e = (u,v) \in E$ tale che $\hat{x}_e > \vert \hat{d}_u - \hat{d}_v \vert$.
+> Se così fosse, possiamo ricavare da $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$ una soluzione migliore, semplicemente ponendo $\hat{x}_e = \vert \hat{d}_u - \hat{d}_v \vert$, ottenendo così una soluzione con un valore minore e contraddicendo l'ottimalità di $(\hat{\mathbf{x}}, \hat{\mathbf{d}})$.
+> 
+> Perciò avremo che $P(e \in C) = \hat{x}_e$, e di conseguenza $P(e \notin C) = 1 - \hat{x}_e$ $\square$.
+
+----
+# Stable Instances of the Minimum Multiway Cut Problem
+In questa sezione vedremo come riportare il risultato della [[#^0d39b5|Proposizione 1]] a una generalizzazione *NP-hard* del problema $s$-$t$ Min-Cut problem, sostituendo l'assunzione di **unicità della soluzione ottima** con un'assunzione di **stabilità su perturbazioni** della soluzione ottima, e dimostrando ancora che è possibile ricavare la soluzione ottima tramite programmazione lineare.
+
+Una istanza del **Minimum Multiway Cut Problem** è composta da:
+- Un grafo **non diretto** $G=(V,E)$
+- Una **funzione di costo** $c_e > 0$ **positiva** per ogni arco $e \in E$
+- Un sottoinsieme $k$ di nodi $\lbrace t_1, ..., t_k \rbrace \subseteq V$ detti **terminali**
+
+Un **multiway cut** è un **partizionamento** di $V$ in $k$ sottoinsiemi $S_1, ..., S_k$ tali che $t_i \in S_i$ per ogni $i = 1, ..., k$.
+
+L'obiettivo è trovare un *multiway cut* $S_1, ..., S_k$ che minimizzi la dimensione degli archi del taglio $(S_1, ..., S_k)$.
+$$(S_1, ..., S_k) \equiv \lbrace (u,v) \in V : u \in S_i, v \in S_j, 1 \leq i < j \leq 2 \rbrace$$
+$$\text{cost}(S_1, ..., S_k) = \sum_{e \in (S_1, ..., S_k)} c_e$$
+
+> [!note]
+> Il problema [[#The Minimum $s$-$t$ Cut Problem|s-t Min-Cut]] è un caso particolare del Minimum Multiway Cut Problem con $k = 2$.
+
+```ad-tldr
+Minimum Multiway Cut Problem è *NP-hard* per ogni $k \geq 3$.
+```
+
+![](./img/BWA_08_2.png)
+
+Poiché il problema è *NP-hard*, non ci aspettiamo di recuperare una soluzione ottima utilizzando la programmazione lineare anche nel caso peggiore.
+Ma possiamo farlo sotto un'ipotesi di stabilità, analogamente a come abbiamo fatto in [[7 - Clustering in Pertubation-Stable Instances]].
 
