@@ -21,3 +21,4 @@ tags:
 ---------------------
 ## Table of contents
 - [[IC/Lecture 1|Lecture 1]]
+- [[IC/Lecture 3|Lecture 3]]
