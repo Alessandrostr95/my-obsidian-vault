@@ -3,5 +3,6 @@
   "translucency": false,
   "cssTheme": "",
   "interfaceFontFamily": "TeX Gyre Termes",
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "accentColor": ""
 }
