@@ -202,7 +202,9 @@ Ma possiamo farlo sotto un'ipotesi di stabilità, analogamente a come abbiamo fa
 > Sia $\langle G=(V,E), c : E \to \mathbb{R}^+, t_1, ..., t_k \rangle$ una istanza del *Minimum Multiway Cut Problem*, con **soluzione ottima** $(S^*_1, ..., S^*_k)$.
 > Per ogni $\gamma \geq 1$, diremo che tale istanza è $\gamma$**-stable** se a fronte di una qualsiasi $\gamma$[[#^6bd4b1|-perturbazione]], la soluzione $(S^*_1, ..., S^*_k)$ rimane **ottima**.
 
-### Minimum Multiway Cut Problem as LP Problem
+^946a69
+
+## Minimum Multiway Cut Problem as LP Problem
 Definiamo ora una codifica **LP2** del problema in *programmazione lineare*, la quale è una **estensione** di [[#$s$-$t$ Min-Cut as LP Problem|LP1]].
 
 Come prima abbiamo un insieme di **variabili decisionali** $x_e \geq 0$ per ogni arco $e \in E$, le quali indicano (come prima) quale arco $e$ appartiene al taglio.
@@ -221,6 +223,38 @@ La variabile $y^i_e$ è solamente una **variabile ausiliare**.
 Questo vincolo afferma che la differenza nella misura in cui i due estremi $u,v$ dell'arco $e$ sono assegnati alla partizione $S_i$ dovrebbe contribuire nella misura in cui $e$ apparteine al taglio.
 
 Infine abbiamo per ogni arco $e \in E$ il vincolo $$x_e = \frac{1}{2} \sum_{i=1}^{k} y^i_e$$
-
 Osserviamo che, se entrambi gli estremi di un arco $e$ sono assegnati **interamente** a due partizioni differenti $S_h, S_\ell$ (con $h \neq \ell$), avremo che $y^h_e = y^{\ell}_e = 1$ e che quindi $\sum_{i=1}^{k} y^i_e = 1$, e questo giustifica il fattore $1/2$ (noi vogliamo che $0 \leq x_e \leq 1$).
+
+```ad-note
+Ogni *multiway cut* $S_1, ..., S_k$ induce una soluzione intera (0-1) per **LP2**.
+Per ogni arco del taglio basta porre $x_e = 1$, e per tutti gli altri invece $x_e$.
+Invece, pergni partizine $S_i$ e per ogni nodo $v \in S_i$ porre $d^i_v = 1$ e $d^j_v = 0$ (per $j \neq i$).
+```
+
+
+## Main Result
+
+> **Theorem**
+> Per ogni istanza $\gamma$[[#^946a69|-stabile]] di *Multiway Minimum Cut Problem* con $\gamma > 4$, la soluzione al problema **LP2** corrispone ad un multiway cut **ottimo** (*opportunamente decodificato*).
+
+Sia $C^* = (S^*_1, ..., S^*_k)$ l'**unico** multiway cut **ottimo** (e $\gamma$-stabile con $\gamma > 4$).
+Sia invece $C$ un generico multiway cut ammissibile.
+
+Definiamo allora $$\Delta_4(C) = \sum_{e \in C \setminus C^*} c_e - 4 \sum_{e \in C^* \setminus C} c_e$$ o in alternativa $$\Delta_4(C) = \text{cost}(C) - \text{cost}(C^*) - 3 \cdot \text{cost}(C^* \setminus C)$$
+Certamente abbiamo che $$\Delta_4(C^*) = 0$$
+
+> **Lemma 2**
+> Sia $C^*$ il multiway cut **ottimo**, e $C \not\equiv C^*$ un altro multiway cut ammissibile.
+> Se l'istanza in questione è $\gamma$[[#^946a69|-stabile]] con $\gamma > 4$ allora avremo che $$\Delta_4(C) > 0$$
+
+> **Proof of Lemma 2**
+> [TODO]
+
+Sia $(\hat{\mathbf{x}}, \hat{\mathbf{y}}, \hat{\mathbf{d}})$ la soluzione **ottima** per **LP2**.
+Come prima definiamo $$\Delta(\hat{\mathbf{x}}) = \sum_{e \notin C^*} c_e \hat{x}_e - \sum_{e \in C^*} c_e (1 - \hat{x}_e)$$
+E dato che $C^*$ è ottima abbiamo che $$\Delta(\hat{\mathbf{x}}) \leq 0$$
+
+> **Lemma 3**
+> Esiste un algoritmo **probabilistico** che computa un (*random*) multiway cut $C$ tale che, per ogni arco $e \in E$, $$P(e \in C) \leq 2\hat{x}_e$$ e $$P(e \notin C) \geq \frac{1 - \hat{x}_e}{2}$$
+
 
