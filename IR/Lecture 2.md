@@ -3,13 +3,13 @@ date: 2022-10-12
 draft: true
 ---
 
-## Classi Search model
+## Classic Search model
 Data una **query** che soddisfa le **information need** di un utente, un **search engine** accede ad una **collection** di documenti e genera un **risultato**.
 In base al risultato, se non soddisfa a pieno le **information need** allora parte un porcesso di **query refinement**, e così via finché non si soddisfa il task.
 
-[imagine]
+![](img/IR_02_1.png)
 
-### How good are the retrieved dosuments?
+### How good are the retrieved documents?
 È necessario nel mondo reale **misurare** la qualità di un sistema di IR.
 - **Precision**: la frazione di documenti (del risultato) che soddisfano la infromation need. $$\frac{\# \text{ documenti buoni restituiti}}{\# \text{ documenti restituiti}} = \frac{\# \texttt{ treu positive}}{\# \texttt{ treu}}$$
 - **Recall** la capacità del sistema di recuperare informazioni rilevanti. $$\frac{\# \text{ documenti buoni restituiti}}{\# \text{ documenti buoni esistenti}} = \frac{\# \texttt{ treu positive}}{\# \texttt{ positive}}$$
@@ -55,9 +55,9 @@ Identifichiamo questi documenti con dei **puntatori**, o **docID**.
 
 In pratica abiamo una **lista di trabbocco**.
 
-**Brutus** -> | 1 | 2 | 4 | 11 | ... |
-**Cesar** ->  | 1 | 2 | 4 | 5 | ... |
-**Calpurnia** ->  | 1 | 2 | 4 | 5 | ... |
+**Brutus** -> \[ 1 | 2 | 4 | 11 | ... \]
+**Cesar** ->  \[ 1 | 2 | 4 | 5 | ... \]
+**Calpurnia** ->  \[ 1 | 2 | 4 | 5 | ... \]
 
 ```ad-important
 Per il momento usiamo **array di lughezza fissa**, perché stiamo assumendo che la [[1 - Introduzione#^da9c63|collezione è statica]], quindi non aggiungo altri documenti.

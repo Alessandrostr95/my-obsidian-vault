@@ -21,4 +21,5 @@ tags:
 ---------------------
 ## Table of contents
 - [[IR/Lecture 1|Lecture 1]]
-- [[IR/Lecture 2]]
+- [[IR/Lecture 2|Lecture 3]]
+- [[IR/Lecture 3|Lecture 3]]
