@@ -65,7 +65,7 @@ cassapanca, pescecane, capostazione, ...
 
 
 ## Sintassi [to do]
-$$\text{parole} \to \text{frasi}$$
+$$\text{parole} \to \text{frasi}$$ ^628640
 ## Semantica [to do]
 $$\text{senso delle parole} \to \text{sendo delle frasi}$$
 
@@ -80,6 +80,6 @@ Livello |Unità Minima | Unità d'Interesse
 **Morfologia** | morfemi | parole
 **Sintassi** | parole | frasi
 **Semantica** | senso delle parole | senso delle frasi
-**Pragmatica** | ... | ...
+**Pragmatica** | senso | intento
 
 

@@ -22,3 +22,4 @@ tags:
 ## Table of contents
 - [[NLP/Lecture 2|Lecture 2]]
 - [[NLP/Lecture 3|Lecture 3]]
+- [[NLP/Lecture 4|Lecture 4]]
