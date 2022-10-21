@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "48d88435bd9a3393",
+        "id": "bb54d076822800e8",
         "type": "tabs",
         "children": [
           {
-            "id": "bafe1c0fe5339b57",
+            "id": "d97c9ea76b0e66c8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "IR/Lecture 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "79a654e60cdd6ee6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Boolean Retrieval.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "IR/Boolean Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "IR/Boolean Retrieval.md"
+              }
             }
           },
           {
@@ -109,16 +129,16 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "79a654e60cdd6ee6",
   "lastOpenFiles": [
+    "IR/Lecture 2.md",
+    "IR/Lecture 1.md",
+    "IR/0 - Information Retrieval.md",
     "IC/Lecture 4.md",
     "root.md",
     "Proprietà utili.md",
-    "IR/Lecture 2.md",
-    "IR/Lecture 1.md",
     "IC/Lecture 3.md",
     "IR/Lecture 3.md",
-    "IR/0 - Information Retrieval.md",
     "BWA/8 - Exact Recovery in Stable Cut Instances.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md"
   ]
