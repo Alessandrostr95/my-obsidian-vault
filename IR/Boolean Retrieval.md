@@ -97,3 +97,55 @@ Però nell'almbito dell IR non si vuole gestire un numero elevato di inserimenti
 
 ## Inverted Index Construction
 ### Tokenization
+Data la sequanza di caratteri che compongono un documento, il task della **tokenizzazione** è il task di *"spezzare"* tale sequenza in pezzi (detti **toke**).
+Generalmente questi token sono le parole che compongono le frasi.
+
+- **Input**: *Friends, Romans, Countrymen, lend me your ears;*
+- **Output**: `Friends`, `Romans`, `Countrymen`, `lend`, `me`, `your`, `ears`
+
+Un **token** è un'istanza di una sequenza di caratteri in un particolare documento che sono raggruppati come un'utile unità semantica per l'elaborazione.
+Per esempio *"Michael Jackson"* è meglio trattarlo come un **singolo token** `Michael Jackson`  perché è più utile al task di IR.
+
+Un **tipo** è la classe di tutti i token che contengono la stessa sequenza di caratteri.
+Nel nostro caso possiamo avere il tipo:
+- `Michael Jackson`, `Michael jackson`, `michael Jackson`, `michael jackson`, `MICHAEL JACKSON`, ...
+
+Un **termine** è invece un elemento di un tipo, generalmente **normalizzato**, il quale viene usato nel nostro motore di IR.
+
+Il problema del task della tokenizzazione è:
+
+> Qual è il miglio modo di generare token?
+
+Consideriamo il seguente esempio
+
+	Mr. O'Neill thinks that the boys' stories about Chile's capital aren't amusing.
+
+Come trattiamo il cognome `O'Neil`?
+Quale dei seguenti modi è più corretto?
+- `neil`  
+- `oneil`  
+- `o'neil`  
+- `o'`, `neil`  
+- `o`, `neil`  
+
+E per `aren't`?
+- `aren't`
+- `arent`
+- `are`, `n't`
+- `aren`, `t`
+
+Oppure, se tokenizzo rimuovendo tutti i punti, potrebbe capitare che la parola "*U.S.A.*" venga decomposta in tre token inutili `u`, `s` e `a`.
+
+Questo è un processo delicato, e bisogna tenere in considerazione tutti i casi particolare che si desidera gestire.
+
+```julia
+# my document
+document::String = "Mr. O'Neill thinks that the boys' stories about Chile's capital aren't amusing."
+
+# trivial tokenization
+tokens::Vector{String} = document |> split |> (d -> replace.(d, "." => "")) .|> lowercase
+```
+
+### Dropping common terms: stop words
+
+

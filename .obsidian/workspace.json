@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bb54d076822800e8",
+        "id": "f27029ea834d5956",
         "type": "tabs",
         "children": [
           {
-            "id": "4e8d907090a28a1d",
+            "id": "bdfef81a6378f786",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -116,11 +116,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "4e8d907090a28a1d",
+  "active": "bdfef81a6378f786",
   "lastOpenFiles": [
+    "IR/Boolean Retrieval.md",
     "IR/Lecture 1.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Boolean Retrieval.md",
     "IR/img/IR_boolean_retrieval_1.png",
     "IR/img/IR_02_1.png",
     "NLP/Lecture 4.md",
