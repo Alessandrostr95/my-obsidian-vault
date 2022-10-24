@@ -15,6 +15,7 @@
               "state": {
                 "file": "IR/Boolean Retrieval.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               }
             }
@@ -36,10 +37,8 @@
             "id": "31832b411d1e8af5",
             "type": "leaf",
             "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -56,12 +55,23 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "d83f1c6a68518c0b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 235.5
+    "width": 263.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -118,6 +128,7 @@
   },
   "active": "bdfef81a6378f786",
   "lastOpenFiles": [
+    "IR/Lecture 3.md",
     "IR/Boolean Retrieval.md",
     "IR/Lecture 1.md",
     "IR/0 - Information Retrieval.md",
@@ -126,7 +137,6 @@
     "NLP/Lecture 4.md",
     "NLP/Lecture 3.md",
     "IR/Lecture 2.md",
-    "NLP/0 - Natural Language Processing.md",
-    "IC/Lecture 4.md"
+    "NLP/0 - Natural Language Processing.md"
   ]
 }

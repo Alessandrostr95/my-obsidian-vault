@@ -143,9 +143,44 @@ Questo è un processo delicato, e bisogna tenere in considerazione tutti i casi 
 document::String = "Mr. O'Neill thinks that the boys' stories about Chile's capital aren't amusing."
 
 # trivial tokenization
-tokens::Vector{String} = document |> split |> (d -> replace.(d, "." => "")) .|> lowercase
+tokens::Vector{String} = document |> split |> (d -> replace.(d, "." => "", "'" => "")) .|> lowercase
 ```
 
 ### Dropping common terms: stop words
+Ci sono termini che sono contenuti in **ogni** documento, come pre esempio gli articoli, le congiunzioni, le proposizioni, ecc...
+
+Per esempio, se ricerco la frase *"President of the United States"* gli unici termini realmente utili alla ricerca sono *"President"* e *"United States"*.
+Infatti, molto probabilmente la mia ricerca sarà un query del tipo $$\text{president } \land \text{ united states}$$
+Perciò, possiamo pensare di rimuovere tutte quelle parole con altissima frequenza in una lingua, e che non hanno utilità ai fini di una ricerca.
+Tali parole sono dette **stop words**.
+
+```julia
+stop_words = ["the", "that", "an", "a", "an", "at"]
+
+filter!(t -> t ∉ stop_words, tokens)
+```
+
+### Normalization (equivalence classing of terms)
+La **normalizzazione** dei token è il processo di *canonizzazione* dei token, ovvero si riducono i token si cerca di raggruppare token differenti che rappresentano una stessa cosa in un unico token.
+
+Per esempio, io voglio che se ricerco `U.S.A.` oppure ricerco `USA` ottengo lo stesso risultato dal mio motore di IR.
+
+Il modo più comune di standardizzare è quello di definire **classi di equivalenza** tra termini.
+Se per esempio entrambi i termini `anti-discriminatory` e `antidiscriminatory` sono entrambi *mappati* nel termine `antidiscriminatory`, allora tutte le query che li comprendono avranno come risultato lo stesso insieme di documenti.
+
+```julia
+equivalen_class = Dict(
+           "Windows" => ["Windows"],
+           "windows" => ["Windows", "windows", "window"],
+           "window" => ["window", "windows"],
+           "u.s.a." => ["usa", "united states"],
+           "usa" => ["usa", "united states"],
+           "anti-discriminatory" => ["antidiscriminatory"],
+           "antidiscriminatory" => ["antidiscriminatory"],
+           ...
+           )
+```
+
+### Stemming and Lemmatization
 
 
