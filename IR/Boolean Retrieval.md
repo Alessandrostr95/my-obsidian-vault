@@ -182,5 +182,105 @@ equivalen_class = Dict(
 ```
 
 ### Stemming and Lemmatization
+[TODO]
 
+## Intersection
+```julia
+function is_sorted(a::AbstractVector{T})::Bool where T
+	for i=1:length(a)-1
+		a[i] > a[i+1] && return false
+	end
+	true
+end
+```
+
+```julia
+function intersect(
+		L₁::AbstractVector{T},
+		L₂::AbstractVector{T}
+	)::AbstractVector{T} where T
+	
+	@assert is_sorted(L₁) && is_sorted(L₂) "Posting lists MUST be sorted!"
+	
+	result = T[]
+	i, j = 1, 1
+	while i ≤ length(L₁) && j ≤ length(L₂)
+		if L₁[i] == L₂[j]
+			push!(result, L₁[i])
+			i += 1
+			j += 1
+		elseif L₁[i] < L₂[j]
+			i += 1
+		else
+			j += 1
+		end
+	end
+	
+	result
+end
+```
+
+## Union
+```julia
+function union(
+		L₁::AbstractVector{T},
+		L₂::AbstractVector{T}
+	)::AbstractVector{T} where T
+	
+	@assert is_sorted(L₁) && is_sorted(L₂) "Posting lists MUST be sorted!"
+	
+	result = T[]
+	i, j = 1, 1
+	while i ≤ length(L₁) && j ≤ length(L₂)
+		if L₁[i] == L₂[j]
+			push!(result, L₁[i])
+			i += 1
+			j += 1
+		elseif L₁[i] > L₂[j]
+			push!(result, L₁[i])
+			i += 1
+		else
+			push!(result, L₂[j])
+			j += 1
+		end
+	end
+	
+	if i > length(L₁)
+		append!(result, L₂[j:end])
+	elseif j > length(L₂)
+		append!(result, L₁[i:end])
+	end
+	
+	result
+end
+```
+
+## Difference
+```julia
+function difference(
+		L₁::AbstractVector{T},
+		L₂::AbstractVector{T}
+	)::AbstractVector{T} where T
+	
+	@assert is_sorted(L₁) && is_sorted(L₂) "Posting lists MUST be sorted!"
+	
+	result = T[]
+	i, j = 1, 1
+	while i ≤ length(L₁) && j ≤ length(L₂)
+		if L₁[i] < L₂[j]
+			push!(result, L₁[i])
+			i += 1
+		elseif L₁[i] > L₂[j]
+			j += 1
+		else
+			i += 1
+			j += 1
+		end
+	end
+	
+	j > length(L₂) && append!(result, L₁[i:end])
+	
+	result
+end
+```
 
