@@ -1,4 +1,4 @@
-## Binary Term-Document Incidence Matrix
+# Binary Term-Document Incidence Matrix
 Supponiamodi avere una grande collezione con tutte le opere di Shakespeare.
 Supponiamo di voler identificare quali opere contengono le parole
 - *Brutus* **AND** *Caesar*
@@ -44,7 +44,15 @@ Alla fine i documenti interessati saranno quelli per i quali il relativo bit è 
 Questo approccio è detto **Boolean retrieval model**.
 In tale modello le query sono della forma di **espressioni booleane di termini**, dove i termini sono combinati tramite gli **opeartori logici** `AND`, `OR` e `NOT`.
 
-### Efficienza - Tempo
+```julia
+M::BitMatrix
+
+brutus, caesar, calpurnia = M[2,:], M[3,:], M[4,:]
+
+return brutus .& caesar .& (.! calpurnia) 
+```
+
+## Efficienza - Tempo
 L'applicazione di un **operatore** booleano è **lineare** nel numero $N$ di documenti.
 La risoluzione di una espressione ha quindi una complessità di $O(kN)$, dove $k$ è il numero di operatori nella query.
 
@@ -56,10 +64,36 @@ Tale complessità non è per niente ragionevole, in quanto $M$ può crescere a d
 Perciò si può pensare di **ordinare** i termini in fase di costruzione della matrice d'incidenza.
 I tal caso si può effettuare una **ricerca dicotomica** sui termini, ottenendo una complessità di $O(kN\log{M})$ (decisamente più ragionevole).
 
-### Efficienza - Spazio
+## Efficienza - Spazio
 Purtroppo in termini di **spazio** tale struttura dati non è praticabile.
 Infatti per larghe collezioni di documenti la matrice quasi sicuramente potrebbe non entrare in RAM, mentre per piccole collezioni conviene fare il *grepping*.
 Infatti, supponiamo di avere $N = 500K$ documenti ed $M = 1M$ di termini.
 Se per ogni cella abbiamo bisogno di un bit, avremo una matrice grande $NM = 500,000,000,000$ di bit, ovvero $62,500,000,000B \approx 58GB$.
 
-## Ottimizzazione
+-------
+# Inverted Index 
+Un'osservazione che si può fare è che la [[#Binary Term-Document Incidence Matrix|matrice d'incidenza]] per molti **termini d'interesse** (nomi, luoghi, ecc...) è piena di zeri, ovvero è **sparsa**.
+
+```ad-note
+Certamente per molti termini, come gli articoli, ci sono molti 1.
+Però generalemte non si fanno query in cui richiedo tutti i documenti con il termine `the`, perché certamente tutti i documenti saranno compresi nella risposta.
+```
+
+Perciò, quello che si può fare per ottimizzare, possiamo pensare di usare un **dizionario** di termini (detto anche **vocabolario** o **lexicon**), dove per ogni termine conserviamo una **lista di documenti** nei quali occorrono.
+Tale lista è anche detta **posting list**.
+
+![](./img/IR_boolean_retrieval_1.png)
+
+```ad-important
+Nella costruzione di un indice inverso, assumiamo che viene costruito in modo tale che sia i termini sia le loro posting lists sono mantenute **oridnate**.
+```
+
+```ad-note
+Anche se in termini di efficienza è dispendioso mantenere l'ordinamento a fronte di **inserimenti** e **rimozioni**.
+
+Però nell'almbito dell IR non si vuole gestire un numero elevato di inserimenti, rimozioni o update.
+```
+
+
+## Inverted Index Construction
+### Tokenization

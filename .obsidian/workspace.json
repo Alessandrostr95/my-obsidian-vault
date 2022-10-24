@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 4.md",
+                "file": "IR/Boolean Retrieval.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 4.md",
+                "file": "IR/Boolean Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 4.md"
+                "file": "IR/Boolean Retrieval.md"
               }
             }
           },
@@ -118,15 +118,15 @@
   },
   "active": "4e8d907090a28a1d",
   "lastOpenFiles": [
-    "NLP/Lecture 3.md",
-    "NLP/Lecture 4.md",
-    "IR/Lecture 2.md",
-    "NLP/0 - Natural Language Processing.md",
-    "IR/Boolean Retrieval.md",
     "IR/Lecture 1.md",
     "IR/0 - Information Retrieval.md",
-    "IC/Lecture 4.md",
-    "root.md",
-    "Proprietà utili.md"
+    "IR/Boolean Retrieval.md",
+    "IR/img/IR_boolean_retrieval_1.png",
+    "IR/img/IR_02_1.png",
+    "NLP/Lecture 4.md",
+    "NLP/Lecture 3.md",
+    "IR/Lecture 2.md",
+    "NLP/0 - Natural Language Processing.md",
+    "IC/Lecture 4.md"
   ]
 }
