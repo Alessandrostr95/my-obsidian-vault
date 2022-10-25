@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 4.md",
+                "file": "NLP/Lecture 5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ae6d485f79559f51",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Lecture 2.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Lecture 4.md",
+                "file": "NLP/Lecture 5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Lecture 4.md"
+                "file": "NLP/Lecture 5.md"
               }
             }
           },
@@ -127,15 +139,15 @@
   },
   "active": "3c4449d37793daba",
   "lastOpenFiles": [
-    "IR/Positional postings and phrase queries.md",
-    "IR/0 - Information Retrieval.md",
+    "NLP/note 1.md",
+    "NLP/Lecture 2.md",
+    "NLP/Lecture 5.md",
+    "NLP/Lecture 4.md",
+    "NLP/Lecture 3.md",
     "IR/Lecture 4.md",
-    "IR/Lecture 1.md",
     "IR/Lecture 2.md",
-    "IR/Lecture 3.md",
-    "IR/Inverted Index.md",
-    "IR/Boolean Retrieval.md",
-    "IR/Binary Term-Document Incidence Matrix.md",
-    "IR/img/IR_boolean_retrieval_1.png"
+    "IR/Lecture 1.md",
+    "IR/Positional postings and phrase queries.md",
+    "IR/0 - Information Retrieval.md"
   ]
 }
