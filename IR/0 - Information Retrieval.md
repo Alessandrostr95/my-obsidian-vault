@@ -23,6 +23,7 @@ tags:
 - [[IR/Lecture 1|Lecture 1]]
 - [[IR/Lecture 2|Lecture 3]]
 - [[IR/Lecture 3|Lecture 3]]
+- [[IR/Lecture 4|Lecture 4]]
 
 ---------
 ## Table of contents
