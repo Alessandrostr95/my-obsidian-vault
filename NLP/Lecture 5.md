@@ -84,4 +84,16 @@ Prutroppo, noi stiamo assumendo che il modello del linguaggio è **unico**, ovve
 Purtroppo non è così, in quanto esistono differenti interpretazioni di una stessa frase, ed entrambe **corrette**.
 ```
 
+Perciò, finito il task dell'etichettamento, otterremo un "**oracolo**" $O$ (o **gold standard**) che possiamo usare per fare testing o training.
+Nel nostro caso, possiamo usare l'oracolo $O$ come **fonte di verità** per misurare la qualità del nostro sistema $S$.
 
+Per esempio otteniamo come qualità $85\%$.
+Come facciamo a dire che è buono?
+Ci servirebbe un **metro di paragone** sulla qualità, che ovviamente dipende dal **problema in questione**.
+
+Per prima cosa prendo un **sistema base line**, ovvero uno semplice da implementare.
+Per esempio:
+- uno aleaotirio, che classifica a caso le frasi del corpus
+- partiziono le parole della frase, le uso come **features** e poi clusterizzo le frasi
+
+Se per esempio il mio sistema base line ha una precisione dell'$82\%$, posso dire che il mio sistema è buono?
