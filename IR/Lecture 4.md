@@ -68,11 +68,32 @@ Perciò, in un anno, per il $63\%$ del tempo un operaio dovrà andare ad aggiust
 
 [vedi immagine data flow]
 
+## Map-Reduce
 - **map phase**. Il master assegna i documenti divisi in blocchi a un **parser**, i quali genereranno le posting list di tale blocco.
 - **reduce phase**: Date tutte le posting lists, un **inverter** fa il merge di positng lists (suddivisi per lettere). Per esempio un inverter per le lettere dalla a-f, uno per per g-p, ...
 
-vantaggi
+## Vantaggi
 - **scalabile**
 - **fault tollernat**: se si rompe una macchina, il master assegna il task al nodo più disponibile
 - **macchine eterogenei**
+
+## Parser
+Il parter legge i documenti del blocco che gli è stato assegnato, e crea una struttura del tipo `<termine, documenti>`, generalmente suddivisi in blocchi lessico-graficamente partizionati.
+
+## Inverter
+L'inverter legge tutte le coppie `<termine, documenti>` tali che i termini appartengano ad un unico blocco (per esempio `a-f`), fonde le posting list e ordina i termini.
+
+## Osservazione importante
+Invece di partizionare per **lettere**, è più **robusto** partizionare per documenti.
+Infatti, se si rompe il disco con i termini che iniziano per `a` il mio servizio crolla.
+
+Viceversa, se crolla il blocco con i documenti di Wikipedia, continuerò ad avere altri documenti che hanno termini che iniziano per `a`. Anche se ne perdo di **recall**, il sistema non crolla.
+
+------
+# Dynamic Indexing
+Gli indici costruite fin ora si basano su collezioni di documenti statiche.
+Come possiamo fare invece nel caso di collezioni **dinamiche** che cambiano nel tempo? (*insert*, *delete* e *update* dei documenti)
+
+
+
 

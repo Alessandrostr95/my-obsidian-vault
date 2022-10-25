@@ -127,15 +127,15 @@
   },
   "active": "3c4449d37793daba",
   "lastOpenFiles": [
+    "IR/Positional postings and phrase queries.md",
     "IR/0 - Information Retrieval.md",
     "IR/Lecture 4.md",
+    "IR/Lecture 1.md",
+    "IR/Lecture 2.md",
     "IR/Lecture 3.md",
-    "IR/Positional postings and phrase queries.md",
     "IR/Inverted Index.md",
     "IR/Boolean Retrieval.md",
     "IR/Binary Term-Document Incidence Matrix.md",
-    "IR/Lecture 1.md",
-    "IR/img/IR_boolean_retrieval_1.png",
-    "IR/img/IR_02_1.png"
+    "IR/img/IR_boolean_retrieval_1.png"
   ]
 }
