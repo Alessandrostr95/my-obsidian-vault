@@ -26,4 +26,7 @@ tags:
 
 ---------
 ## Table of contents
-- [[Boolean Retrieval]] (*Incidence Matrix*, *Inverted Index*)
+- [[Boolean Retrieval]] 
+	- [[Binary Term-Document Incidence Matrix]]
+	- [[Inverted Index]]
+	- [[Positional postings and phrase queries]]

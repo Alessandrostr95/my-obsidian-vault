@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Boolean Retrieval.md",
+                "file": "IR/Positional postings and phrase queries.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -71,7 +71,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 223.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Boolean Retrieval.md",
+                "file": "IR/Positional postings and phrase queries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Boolean Retrieval.md"
+                "file": "IR/Positional postings and phrase queries.md"
               }
             }
           },
@@ -128,15 +128,15 @@
   },
   "active": "bdfef81a6378f786",
   "lastOpenFiles": [
+    "IR/Positional postings and phrase queries.md",
     "IR/Lecture 3.md",
-    "IR/Boolean Retrieval.md",
-    "IR/Lecture 1.md",
+    "IR/Inverted Index.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Boolean Retrieval.md",
+    "IR/Binary Term-Document Incidence Matrix.md",
+    "IR/Lecture 1.md",
     "IR/img/IR_boolean_retrieval_1.png",
     "IR/img/IR_02_1.png",
-    "NLP/Lecture 4.md",
-    "NLP/Lecture 3.md",
-    "IR/Lecture 2.md",
-    "NLP/0 - Natural Language Processing.md"
+    "NLP/Lecture 4.md"
   ]
 }
