@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e02e2d258095c4db",
+        "id": "90edf45ffa950985",
         "type": "tabs",
         "children": [
           {
-            "id": "267137d83e6d665e",
+            "id": "ba515a32f8c601fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,8 +36,12 @@
             "id": "31832b411d1e8af5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "IR/Lecture 4.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -64,13 +68,21 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "267137d83e6d665e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 223.5
+    "width": 353.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -86,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Lecture 5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,9 +113,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "IR/Lecture 5.md"
-              }
+              "state": {}
             }
           },
           {
@@ -127,15 +136,15 @@
   },
   "active": "267137d83e6d665e",
   "lastOpenFiles": [
-    "IR/Lecture 4.md",
     "IR/Lecture 5.md",
     "IR/Positional postings and phrase queries.md",
-    "IR/Biword Indexes.md",
+    "TODO.md",
+    "IR/Lecture 4.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Biword Indexes.md",
     "IR/Inverted Index.md",
     "IR/Binary Term-Document Incidence Matrix.md",
     "NLP/Lecture 5.md",
-    "NLP/note 1.md",
-    "NLP/Lecture 2.md"
+    "NLP/note 1.md"
   ]
 }

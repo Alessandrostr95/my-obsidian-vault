@@ -26,8 +26,27 @@ Assumiamo per il momento di avere un **unico indice** in un **unico file**.
 ([[IR/Lecture 4|sappiamo]] che spesso non è così, perché potrei avere un indice partizionato su differenti macchine)
 
 
-- Ho il mio **indice principale** su disco.
-- In ram creo un **indice ausiliare**, e quando la memoria è satura scrivo in memoria.
-- Quando gli indici caricati in memoria, tutti insieme, hanno una dimensione **comparabile** all'indice principale attuale, operiamo un operazione di merge.
-- Così facendo, otteniamo un **numero logaritmico** di operazione di merge, **ammartizzando** così il numero di operazioni.
+1. Ho un **indice principale** su disco.
+2. In ram creo un **indice ausiliare** (dinamico - [[IR/Lecture 4#SPIMI: Single-Pass In-Memory Indexing|SPIMI]]), e quando la memoria è satura scrivo in memoria.
+3. Quando gli indici caricati in memoria, tutti insieme, hanno una dimensione **comparabile** all'indice principale attuale, operiamo un operazione di merge.
+4. Così facendo, otteniamo un **numero logaritmico** di operazione di merge, **ammartizzando** così il numero di operazioni.
+
+### Complessità
+- $T = \text{\# posting lists}$ ed $n = \text{size of auxiliary index}$.
+- $T/n$ = numero di indici che creo.
+- Ogni posting list è fusa **al più** $O(\log{(T/n)})$ volte.
+- Dato che il merge ha costo $O(T)$, la complessità risultante sarà $O(T \log{(T/n)})$.
+
+### Problemi
+[TODO]
+
+-------------
+## Real-Time search at Twitter
+In questo caso il contesto cambia, perché abbiamo una frequenza **altissima** di scrittura e lettura dei documenti (tweet).
+
+La caratteristica importante dei tweet, non è tanto il contenuto, quanto l'autore e la data.
+Infatti, non mi interessa leggere i tweet del 2010 di una celebrità, mi interessa di più quello di oggi o di ieri.
+
+Infatti, il motore di ricerca di twitter, usa una politica **LIFO** per le posting list, trascurandone il contenuto.
+Al massimo viene considerato come ulteriore indice basato sugli **hashtag**.
 
