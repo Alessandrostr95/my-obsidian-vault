@@ -88,12 +88,3 @@ Invece di partizionare per **lettere**, è più **robusto** partizionare per doc
 Infatti, se si rompe il disco con i termini che iniziano per `a` il mio servizio crolla.
 
 Viceversa, se crolla il blocco con i documenti di Wikipedia, continuerò ad avere altri documenti che hanno termini che iniziano per `a`. Anche se ne perdo di **recall**, il sistema non crolla.
-
-------
-# Dynamic Indexing
-Gli indici costruite fin ora si basano su collezioni di documenti statiche.
-Come possiamo fare invece nel caso di collezioni **dinamiche** che cambiano nel tempo? (*insert*, *delete* e *update* dei documenti)
-
-
-
-
