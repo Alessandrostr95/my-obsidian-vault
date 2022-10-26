@@ -23,3 +23,5 @@ tags:
 - [[NLP/Lecture 2|Lecture 2]]
 - [[NLP/Lecture 3|Lecture 3]]
 - [[NLP/Lecture 4|Lecture 4]]
+- [[NLP/Lecture 5|Lecture 5]]
+- [[NLP/Lecture 6|Lecture 6]]
