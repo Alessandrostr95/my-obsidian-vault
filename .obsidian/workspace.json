@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 5.md",
+                "file": "IR/Positional postings and phrase queries.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "93cd67cb47624d5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Biword Indexes.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 5.md",
+                "file": "IR/Biword Indexes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 5.md"
+                "file": "IR/Biword Indexes.md"
               }
             }
           },
@@ -137,17 +150,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "3c4449d37793daba",
+  "active": "93cd67cb47624d5a",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "IR/Positional postings and phrase queries.md",
+    "IR/Biword Indexes.md",
+    "IR/Inverted Index.md",
+    "IR/Binary Term-Document Incidence Matrix.md",
+    "NLP/Lecture 5.md",
     "NLP/note 1.md",
     "NLP/Lecture 2.md",
-    "NLP/Lecture 5.md",
     "NLP/Lecture 4.md",
-    "NLP/Lecture 3.md",
-    "IR/Lecture 4.md",
-    "IR/Lecture 2.md",
-    "IR/Lecture 1.md",
-    "IR/Positional postings and phrase queries.md",
-    "IR/0 - Information Retrieval.md"
+    "NLP/Lecture 3.md"
   ]
 }
