@@ -33,3 +33,4 @@ tags:
 	- [[Inverted Index]]
 - [[Positional postings and phrase queries]]
 	- [[Biword Indexes]]
+	- [[Positional indexes]]
