@@ -34,3 +34,4 @@ tags:
 - [[Positional postings and phrase queries]]
 	- [[Biword Indexes]]
 	- [[Positional indexes]]
+- [[Index construction]]

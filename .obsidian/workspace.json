@@ -13,25 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Biword Indexes.md",
+                "file": "IR/Positional indexes.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "abae9c9b271ee1bc",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "IR/Positional postings and phrase queries.md",
-                "staged": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Positional indexes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "IR/Positional indexes.md"
               }
             }
           },
@@ -151,15 +139,15 @@
   },
   "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IR/Positional indexes.md",
-    "IR/Positional postings and phrase queries.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Biword Indexes.md",
     "IR/Inverted Index.md",
-    "some_notes/Distance Oracle.md",
+    "IR/Positional indexes.md",
     "IR/Binary Term-Document Incidence Matrix.md",
-    "IR/Boolean Retrieval.md",
-    "NLP/Lecture 6.md",
-    "NLP/0 - Natural Language Processing.md"
+    "IR/Index construction.md",
+    "IR/Positional postings and phrase queries.md",
+    "IR/Lecture 3.md",
+    "IR/Biword Indexes.md",
+    "some_notes/Distance Oracle.md",
+    "IR/Boolean Retrieval.md"
   ]
 }
