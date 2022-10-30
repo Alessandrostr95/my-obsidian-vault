@@ -31,6 +31,5 @@ tags:
 - [[Boolean Retrieval]] 
 	- [[Binary Term-Document Incidence Matrix]]
 	- [[Inverted Index]]
-	- [[Positional postings and phrase queries]]
 - [[Positional postings and phrase queries]]
 	- [[Biword Indexes]]

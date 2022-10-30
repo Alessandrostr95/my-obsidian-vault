@@ -267,7 +267,8 @@ Alla luce di quanto osservato, conviene salvarsi per ogni termine la **frequenza
 
 ![](./img/IR_boolean_retrieval_2.png)
 
-### Exercise
+----------
+### Exercise 1
 Sia la query
 
 > (**tangerine** OR **trees**) AND (**marmalade** OR **skies**) AND (**kaleidoscope** OR **eyes**)
@@ -285,7 +286,7 @@ trees | 316812
 
 Quale intersezione va processata per prima?
 
-#### Exercise
+#### Result
 Le unioni risultanti avranno dimensione
 - 316812 $\leq$ |**tangerine** OR **trees**| $\leq$ 363465
 - 271658 $\leq$ |**marmalade** OR **skies**| $\leq$ 379571
@@ -294,3 +295,42 @@ Le unioni risultanti avranno dimensione
 Perciò in questo caso la query che conviene fare è
 
 > (**tangerine** OR **trees**) AND ( (**marmalade** OR **skies**) AND (**kaleidoscope** OR **eyes**) )
+
+-------
+### Exercise 2
+Adapt the merge for the queries:
+- *Brutus* AND NOT *Caesar*   ^348f7f
+- *Brutus* OR NOT *Caesar* ^78f67c
+
+Can we still run through the merge in time $O(L_1 + L_2)$?
+What can we achieve?
+
+#### Result
+Per quanto riguarda la [[#^348f7f|prima query]] basta osservare che essa equivale alla **differenza** tra i due insiemi, ovvero
+$$\text{Brutus} \land \lnot \text{Caesar} \equiv \text{Brutus} \setminus \text{Caesar}$$
+
+Perciò possiamo applicare la funzione [[#Difference|difference]] precedentemente implementata, e quindi mantenendo la complessità nell'ordine di $O(L_1 + L_2)$.
+
+Riguardo invece la [[#^78f67c|seconda query]] non c'è molto che si puà fare.
+Infatti bisogna <u>unire</u> tutti i documenti di $\lnot \text{Caesar}$ con tutti i documenti di $\text{Brutus}$.
+Purtroppo però i documenti in $\lnot \text{Caesar}$ potrebbero essere dell'ordine di tutti i documenti della collezione.
+
+Possiamo osservare però che, applicando la legge di De Morgan, possiamo riscrivere equivalentemente la query come
+$$\text{Brutus} \lor \lnot \text{Caesar} \equiv \lnot (\lnot \text{Brutus} \land \text{Caesar}) \equiv \lnot (\text{Caesar} \land \lnot \text{Brutus})$$
+riconducendoci così al complemento del primo caso.
+
+```julia
+function or_not(
+		L₁::AbstractVector{T},
+		L₂::AbstractVector{T};
+		num_documents=1000
+	)::AbstractVector{T} where T
+	"""
+		- **complexity**: length(L₁) + length(L₂) + num_documents
+		- **output size**: 0 ≤ length(result) ≤ num_documents
+	"""
+	
+	a = difference(L₁, L₂)
+	return difference(collect(1:num_documents), a)
+end
+```
