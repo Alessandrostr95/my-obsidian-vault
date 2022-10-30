@@ -286,7 +286,7 @@ trees | 316812
 
 Quale intersezione va processata per prima?
 
-#### Result
+#### Solution
 Le unioni risultanti avranno dimensione
 - 316812 $\leq$ |**tangerine** OR **trees**| $\leq$ 363465
 - 271658 $\leq$ |**marmalade** OR **skies**| $\leq$ 379571
@@ -305,7 +305,7 @@ Adapt the merge for the queries:
 Can we still run through the merge in time $O(L_1 + L_2)$?
 What can we achieve?
 
-#### Result
+#### Solution
 Per quanto riguarda la [[#^348f7f|prima query]] basta osservare che essa equivale alla **differenza** tra i due insiemi, ovvero
 $$\text{Brutus} \land \lnot \text{Caesar} \equiv \text{Brutus} \setminus \text{Caesar}$$
 
@@ -334,3 +334,32 @@ function or_not(
 	return difference(collect(1:num_documents), a)
 end
 ```
+
+
+------
+### Exercise 3
+What about an rbitrary formula?
+(*Brutus* OR *Caesar*) AND NOT (*Antony* OR *Cleopatra*)
+
+Can we always merge in “linear” time?
+Linear in what?
+Can we do better?
+
+#### Solution
+Siano $L_1, L_2, L_3, L_4$ le rispettive lunghezze delle posting list dei termini `Brutus`, `Caesar`, `Antony` e `Cleopatra`.
+
+Siano le espressioni
+- $E_1 = \text{Brutus} \lor \text{Caesar}$ 
+- $E_2 = \text{Antony} \lor \text{Cleopatra}$ 
+
+La nostra query può quindi essere espressa come $$E_1 \land \lnot E_2 \equiv E_1 \setminus E_2$$
+```julia
+E₁ = union(brutus, caesar)
+E₂ = union(antony, cleopatra)
+result = difference(E₁, E₂)
+```
+
+L'espressione $E_1$ viene calcolata in tempo $O(L_1 + L_2)$ e avrà dimensione (al più) $O(L_1 + L_2)$.
+Invece l'espressione $E_2$ viene calcolata in tempo $O(L_3 + L_4)$ e avrà dimensione (al più) $O(L_3 + L_4)$.
+
+Infine il risultato $E_1 \setminus E_2$ verrà calcolata in tempo $O(|E_1| + |E_2|) \in O(L_1 + L_2 + L_3 + L_4)$, e avrà dimensione al più $O(|E_1|) \in O(L_1 + L_2)$.
