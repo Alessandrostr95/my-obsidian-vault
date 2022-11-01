@@ -35,3 +35,5 @@ tags:
 	- [[Biword Indexes]]
 	- [[Positional indexes]]
 - [[Index construction]]
+	- [[Blocked sort-based indexing]]
+	- [[Single-pass in-memory indexing]]

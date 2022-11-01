@@ -25,3 +25,4 @@ I problemi che generalmente possiamo trovare nello sviluppo di un indice sono:
 3. abbiamo bisogno di generare un indice che sia **dinamico**, ovvero che consenta nella maniera più efficiente possibile di effettuare operazioni di rimozione, inserimento e modifica dei documenti.
 
 - [[Blocked sort-based indexing]] - BSBI
+- [[Single-pass in-memory indexing]] - SPIMI

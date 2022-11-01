@@ -94,15 +94,18 @@ Perciò, anche l'operazione di merge è effettua "*a blocchi*".
 
 
 
-> Per fortuna è possibile effettuare il merge di due posting list di uno stesso termine in tempo **costante**, semplicemente enumerando i documenti in base al loro ordine di arrivo.
-> 
-> Per esempio, supponiamo di avere i documenti `docA, docB, docC` e i soli termini `term1, term2, term3, term4, term5`.
-> Assegnamo come *docID* i valori in base al loro ordine di arrivo
-> - docID\[docA\] = 1
-> - docID\[docB\] = 2
-> - docID\[docC\] = 3
-> 
-> Supponiamo che ogni blocco può tenere al più 3 paia `termID->docID`, e supponiamo per esempio che i documenti generino rispettivamente 3,1 e 2 blocchi
+## Efficienza
+### Merge di due posting list
+Per fortuna è possibile effettuare il merge di due posting list di uno stesso termine in tempo efficiente, semplicemente enumerando i documenti in base al loro ordine di arrivo.
+
+Per esempio, supponiamo di avere i documenti `docA, docB, docC` e i soli termini `term1, term2, term3, term4, term5`.
+Assegnamo come *docID* i valori in base al loro ordine di arrivo
+- docID\[docA\] = 1
+- docID\[docB\] = 2
+- docID\[docC\] = 3
+
+Supponiamo che ogni blocco può tenere al più 3 paia `termID->docID`, e supponiamo per esempio che i documenti generino rispettivamente 3,1 e 2 blocchi
+
 ```json
 // PROCESSING DOCUMENT A
 // block 1
@@ -214,3 +217,13 @@ Perciò, anche l'operazione di merge è effettua "*a blocchi*".
 ],
 ```
 
+### Merge di due blocchi
+Abbiamo visto che, dato un termine fare il merge di due sue posting list si può fare in maniera efficiente.
+Valutiamo ora in quanto tempo, dati due blocchi è possibile fare il merge dei loro termini.
+
+Se utiliziamo come struttura dati un [Log-structured merge-tree](https://en.wikipedia.org/wiki/Log-structured_merge-tree) è possibile effetuare il merge in tempo logaritmico
+
+
+### Performace complessive
+Alla fine le operazioni più dispendiose ricadono nell'**ordinare** i termini in ogni bocco.
+Dato che il numero $M$ di termini è limitato dal numero totale di token $T$, avremo una complessità dell'ordine di $$O(M \log{M}) \in O(T \log{T})$$
