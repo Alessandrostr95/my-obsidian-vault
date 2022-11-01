@@ -14,8 +14,14 @@ $p$ | lowlevel operation (e.g., compare & swap a word) | $0.01 \; \mu s = 10^{-8
 
 Bisogna infatti tenere conto delle seguenti proprietà dell'hardware:
 1. L'accesso alla memoria è ordini di grandezza più veloce rispetto all'accesso su disco. Di conseguenza vogliamo tenere in memoria quanti più dati possibili, specialmente quei dati per i quali abbiamo bisogno di frequente accesso. La tecnica di tenere in memoria i dati più frequentemente accessi è anche detta **caching**.
-2. Quando bisogna fare una operazione di lettura o scrittura su disco, bisogna attendere il tempo necessario a finché la testa del disco si allinei col settore del disco interessato. Tale tempo è detto **seek time** e dura mediamente 5 ms. Perciò, per massimizzare la quantità di dati letti/scritti, è desiderabile che dati che vengono accessi insieme siano salvati in regioni di memoria *consecutive*.
+2. Quando bisogna fare una operazione di lettura o scrittura su disco, bisogna attendere il tempo necessario a finché la testa del disco si allinei col settore del disco interessato. Tale tempo è detto **seek time** e dura mediamente 5 ms. Perciò, per massimizzare la quantità di dati letti/scritti, è desiderabile che dati che vengono accessi insieme siano salvati in regioni di memoria *consecutive*. ^31e9e5
 3. Le operazioni di lettura e scrittura da disco sono delegate al **sistema operativo**, il quale generalmente legge/scrive un intero blocco di memoria, anche se dobbiamo accedere a un singolo byte.
 4. Il trasfetimento dei dati dal disco alla memoria è delegato al **bus dati** e non al processore. Perciò durante tali operazioni il processore è libero di processare altri dati.
 5. I server usati per i sistemi di IR hanno spesso a disposizione decine di GB di memoria, e uno spazio di archiviazione <u>potenzialmente</u> illimitato.
 
+I problemi che generalmente possiamo trovare nello sviluppo di un indice sono:
+1. non abbiamo a disposizione abbastanza ram per costruire l'intero indice e quindi dobbiamo aiutarci con il disco.
+2. non abbiamo a disposizione nemmeno abbastanza spazio su disco per il nostro indice, e quindi abbiamo bisogno di implementarlo in maniera **distribuita**.
+3. abbiamo bisogno di generare un indice che sia **dinamico**, ovvero che consenta nella maniera più efficiente possibile di effettuare operazioni di rimozione, inserimento e modifica dei documenti.
+
+- [[Blocked sort-based indexing]] - BSBI
