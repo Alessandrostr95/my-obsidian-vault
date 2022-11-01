@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "IR/Lecture 4.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6323082e1b79c365",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "IR/Index construction.md",
                 "mode": "source",
                 "source": false
@@ -20,12 +32,12 @@
             }
           },
           {
-            "id": "be74efa7bbdd95c3",
+            "id": "2c6c7d4f1b36420b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 4.md",
+                "file": "IR/Blocked sort-based indexing.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Index construction.md",
+                "file": "IR/Lecture 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Index construction.md"
+                "file": "IR/Lecture 4.md"
               }
             }
           },
@@ -151,15 +163,15 @@
   },
   "active": "edb9dc1d178649e3",
   "lastOpenFiles": [
-    "IR/Lecture 4.md",
+    "IR/Blocked sort-based indexing.md",
     "IR/Index construction.md",
-    "IR/Lecture 5.md",
+    "IR/Lecture 4.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Lecture 5.md",
     "IC/Lecture 3.md",
     "IC/Lecture 2.md",
     "IC/Lecture 4.md",
     "IR/Positional indexes.md",
-    "IR/Inverted Index.md",
-    "IR/Binary Term-Document Incidence Matrix.md"
+    "IR/Inverted Index.md"
   ]
 }
