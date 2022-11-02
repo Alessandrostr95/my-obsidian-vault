@@ -61,7 +61,7 @@ Perciò, possiamo costruire un indice che da priorità alle parole con più bass
 -----
 # Compression
 
-# Dictionary Compressiont
+# Dictionary Compression
 Si vuole comprimere il dizionario, perché è necessario tenere il dizionario per intero in memoria.
 
 Importante anche osservare che il dizionario compresso deve poter essere utilizzabile già da compresso, e soprattutto no vogliamo perdita di informazioni.
@@ -118,3 +118,51 @@ Dictionary-as-a-String | 7.6
 \+ blocking \+ front coding | 5.9
 
 Purtroppo non possiamo comprimere di più senza perdere informazione, oppure senza dover decomprimere per accedere al dizionario (noi non vogliamo dover decomprimere).
+
+## Postings Compression
+Partiamo dalle posting list non posizionali.
+Avendo 800,000 dicumenti, e usando un numero seriale come docID, ci bastano circa 20 bit a disposizone.
+
+Per parole poco frequenti, per esempio **arachnocentric**, ci saranno pochi documenti nella posting list, perciò 20 byte sono più che sufficienti.
+
+Ma per termini estremamente frequenti come **the**?
+
+### Gap encoding
+Invece di salvare i documenti in cui appaiono, usiamo il **gap** tra i doc id, così per i termini estramente frequenti avremo numeri molto piccoli
+-> 33,47,154,159,202...
+-> 33,14,107,5,43...
+
+oppuer per **the**
+-> 1,2,3,4,5, ...
+-> 1,1,1,1,1,1, ...
+
+```ad-note
+Ovviamente abbiamo bisogno di una **codifica variabile** dei numeri, perché se uso un numero fissati di bit per i numeri, la dimensione delle posting list non varia (sia che usiamo la posting semplice, sia la gap encoding).
+```
+
+### Unary code
+Se il gap è $G$ tra due termini, in meno di $\log_2{G}$ bit non possiamo salvare la sua informazione.
+
+Per rappresentare un gap lungo $G$ possiamo usare $G$ 1 seguiti da uno $0$.
+Per esempio $G = 3 \to 1110$.
+
+Ovviamente per gap molto grandi, questo metodo è estremamente dispendioso.
+
+[VEDI SVANTAGGIO DISTRIBUZIONE]
+
+### Gamma code
+Osserviamo che se rappresentiamo in maniera variabile una sequenza di numeri, non sappiamo quando inizia e quando finisce un numero.
+
+Però possiamo rappresentare in maniera **unaria** la lunghezza in bit del numero che segue.
+Così facendo, in $2\log{G}$ bits riusciamo a rappresentare in **maniera variabile** la sequenza di numeri della mia **gap list**.
+
+[VEDI VANTAGGIO DISTRIBUZIONE]
+
+Anche se teoricamente è un metodo ottimo, purtroppo nel modo reale non funziona bene perché i processori operano in sequenze di **lunghezza fissa** di bit (8, 16, 32, 64, ...).
+
+### Variable Byte (VB) codes
+Possiamo rappresentare quindi un numero con una sequenza **variabile** di bit possiamo rappresentarlo come una sequenza variablie di **byte**.
+
+Uso 7 bit per la codifica di un numero, e con l'ottavo bit indico che 
+- se 0 continuo a interpretare il numero col prossimo byte
+- se 1 ho finito di interpretare il numero nel blocco corrente.
