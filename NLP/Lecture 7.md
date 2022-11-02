@@ -59,6 +59,6 @@ $$P(t_i \vert t_{i+1}, w_i, w_{i+1}) \approx \frac{\# \lbrace (w_i, t_i), (w_{i+
 ## Modello generativo
 $$P(T \vert W) \propto P(W \vert T) P(T)$$
 
-###
+### Hidden Markov model
 [...]
-$$P(T \vert W) \approx \prod_{i=1}^{n} \hat{P}(w_i \vert t_i) \hat{P}(t_i \vert t_{i+1})$$
+$$P(W \vert T) P(T) \approx \prod_{i=1}^{n} \hat{P}(w_i \vert t_i) \hat{P}(t_i \vert t_{i+1})$$
