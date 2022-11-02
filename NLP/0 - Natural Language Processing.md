@@ -25,3 +25,4 @@ tags:
 - [[NLP/Lecture 4|Lecture 4]]
 - [[NLP/Lecture 5|Lecture 5]]
 - [[NLP/Lecture 6|Lecture 6]]
+- [[Lecture 7|Lecture 7]]

@@ -57,7 +57,7 @@ Potrebbe capitare però che gli annotatori siano d'accordo **per caso**, e non o
 ```
 
 Per *"pulire"* l'accordo effettivo $A_E$, possiamo sottrarre un **accordo** $A_C$ e normalizzarlo.
-Questo è detto **k inter annotator agreement**
+Questo è detto **k inter annotator agreement** ^d49e53
 
 $$A_C = P(I_1(f) \equiv I_2(f))$$
 $$\kappa = \frac{A_E - A_C}{1 - A_C}$$
