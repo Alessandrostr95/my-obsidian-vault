@@ -49,14 +49,4 @@ Infatti, non mi interessa leggere i tweet del 2010 di una celebrità, mi interes
 Infatti, il motore di ricerca di twitter, usa una politica **LIFO** per le posting list, trascurandone il contenuto.
 Al massimo viene considerato come ulteriore indice basato sugli **hashtag**.
 
-----------
-----------
-# Index Compression
-Spesso può capitare che anche gli indici sono troppo grandi, perciò è vantaggioso cercare di comprimere i documenti.
-
-Mentre la codifica di **Huffman** è **general purpose**, sono stati definiti algoritmi di compressione estremamente specifici ed ottimizzati per gli indici.
-
-Quello che vogliamo inoltre è che la **decompressione** deve essere il più veloce possibile, possibilmente *gratuita*.
-Questo perché ci sono principalmente operazioni di **query** al mio indice, perciò un numero elevato di operazioni in lettura.
-
 
