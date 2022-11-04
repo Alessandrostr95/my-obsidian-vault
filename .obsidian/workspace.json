@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "7a576840ffcb4be1",
+        "id": "d441ff9f99f53787",
         "type": "tabs",
         "children": [
           {
-            "id": "6cd762f1248b2baf",
+            "id": "ec3a15e0ba757268",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Inverted Index.md",
+                "file": "IR/Single-pass in-memory indexing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "22d271c9a3cd4c97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Blocked sort-based indexing.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Inverted Index.md",
+                "file": "IR/Single-pass in-memory indexing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Inverted Index.md"
+                "file": "IR/Single-pass in-memory indexing.md"
               }
             }
           },
@@ -134,17 +147,17 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "6cd762f1248b2baf",
+  "active": "ec3a15e0ba757268",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Blocked sort-based indexing.md",
-    "IR/Boolean Retrieval.md",
     "IR/Single-pass in-memory indexing.md",
-    "IR/Positional postings and phrase queries.md",
     "IR/Lecture 4.md",
+    "Senza nome.md",
+    "IR/Positional postings and phrase queries.md",
+    "IR/Inverted Index.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Boolean Retrieval.md",
     "IR/Lecture 5.md",
-    "NLP/Lecture 7.md",
-    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "ISTI/Verosimiglianza.md"
+    "NLP/Lecture 7.md"
   ]
 }

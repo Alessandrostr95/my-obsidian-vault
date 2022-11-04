@@ -45,31 +45,49 @@ Una prima soluzione è il **blocked sort-based indexing algorithm** o **BSBI**
 # 	end
 # end
 
-mutable struct Document
-	io::IOStream
-	current_buffer::IOBuffer
-	name::String
-	function Document(fname::String)
-		io = open(fname, "r+")
-		#current_buffer = read(io) |> IOBuffer
-		return new(io, IOBuffer(), fname)
+# mutable struct Document
+#	io::IOStream
+#	current_buffer::IOBuffer
+#	name::String
+#	function Document(fname::String)
+#		io = open(fname, "r+")
+#		#current_buffer = read(io) |> IOBuffer
+#		return new(io, IOBuffer(), fname)
+#	end
+# end
+
+# current_block(document::Document)::IOBuffer = document.current_buffer
+# parse_current_block(document::Document)::String = document |> current_block |> take! |> String
+
+# function next_block!(document::Document; size=1024)::Bool
+# 	document.current_buffer = read(document.io, size) |> IOBuffer
+# 	return document.current_buffer.size > 0
+# end
+
+DICTIONARY = Dict{String, Int}()
+SERIAL_ID_NUMBER = 0
+
+function BSBI_invert!(document::Document)::Vector{Pair}
+	global dictionary, serial_term_id
+	parsed_block::String = parse_current_block(document)
+	tokens = parsed_block |> split .|> lowercase .|> string |> sort
+		
+	result = Pair[]
+	for t ∈ tokens
+		if t ∉ keys(dictionary)
+			DICTIONARY[t] = SERIAL_ID_NUMBER
+			SERIAL_ID_NUMBER += 1
+		end
+		push!(result, (t, id(document)))
 	end
-end
-
-current_block(document::Document)::IOBuffer = document.current_buffer
-parse_current_block(document::Document)::String = document |> current_block |> take! |> String
-
-function next_block!(document::Document; size=1024)::Bool
-	document.current_buffer = read(document.io, size) |> IOBuffer
-	return document.current_buffer.size > 0
+	result
 end
 
 function bsbi_index_construction(documents::AbstracVector{Document}; buff_size=1024)
 	files = File[] # saves blocks as files
 	for document ∈ documents
 		while next_block!(document, size=buff_size)
-			parsed_block::String = parse_current_block(document)
-			inverted_block::Vector{Pair} = bsbi_invert!(parsed_block) # to do
+			inverted_block = BSBI_invert!(document)
 			f = write_block_to_disk(inverted_block)
 			push!(files, f)
 		end
