@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "767733ec1c10bbb2",
+        "id": "7a576840ffcb4be1",
         "type": "tabs",
         "children": [
           {
-            "id": "d936e7d5d934b28c",
+            "id": "6cd762f1248b2baf",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "IR/Lecture 4.md",
-                "staged": false
+                "file": "IR/Inverted Index.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -81,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md",
+                "file": "IR/Inverted Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md"
+                "file": "IR/Inverted Index.md"
               }
             }
           },
@@ -134,17 +134,17 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "6cd762f1248b2baf",
   "lastOpenFiles": [
-    "IR/Positional postings and phrase queries.md",
-    "IR/Single-pass in-memory indexing.md",
-    "IR/Blocked sort-based indexing.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Blocked sort-based indexing.md",
+    "IR/Boolean Retrieval.md",
+    "IR/Single-pass in-memory indexing.md",
+    "IR/Positional postings and phrase queries.md",
     "IR/Lecture 4.md",
     "IR/Lecture 5.md",
     "NLP/Lecture 7.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "ISTI/Verosimiglianza.md",
-    "ISTI/Stimatore di Massima Verosimiglianza.md"
+    "ISTI/Verosimiglianza.md"
   ]
 }

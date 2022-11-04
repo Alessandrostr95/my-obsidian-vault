@@ -23,8 +23,8 @@ Però nell'almbito dell IR non si vuole gestire un numero elevato di inserimenti
 ---------------
 # Inverted Index Construction
 ## Tokenization
-Data la sequanza di caratteri che compongono un documento, il task della **tokenizzazione** è il task di *"spezzare"* tale sequenza in pezzi (detti **toke**).
-Generalmente questi token sono le parole che compongono le frasi.
+Data la sequanza di caratteri che compongono un documento, il task della **tokenizzazione** è il task che consiste nello *"spezzare"* tale sequenza in pezzi (detti **toke**).
+Generalmente questi token sono le parole che compongono le frasi, perciò generalmente si utilizzano gli spazi e la punteggiatura come separatori.
 
 - **Input**: *Friends, Romans, Countrymen, lend me your ears;*
 - **Output**: `Friends`, `Romans`, `Countrymen`, `lend`, `me`, `your`, `ears`
@@ -87,7 +87,7 @@ filter!(t -> t ∉ stop_words, tokens)
 ```
 
 ## Normalization (equivalence classing of terms)
-La **normalizzazione** dei token è il processo di *canonizzazione* dei token, ovvero si riducono i token si cerca di raggruppare token differenti che rappresentano una stessa cosa in un unico token.
+La **normalizzazione** dei token è il processo di *canonizzazione* dei token, ovvero si riducono i token e si cerca di raggruppare token differenti che rappresentano una stessa cosa in un unico token.
 
 Per esempio, io voglio che se ricerco `U.S.A.` oppure ricerco `USA` ottengo lo stesso risultato dal mio motore di IR.
 

@@ -12,12 +12,13 @@ Un primo passo per rendere la costruzione dell'indice più efficiente è quella 
 È possibile costruire la mappa `termine->termID` "*on the fly*" man mano che processiamo i documenti e costruiamo l'indice.
 Oppure possiamo farlo con un approccio in "*2-fasi*", ovvero prima processiamo la mappa `termine->termID` e poi costruiamo l'indice.
 
+Come esempio di collezione di dati, consideriamo [Reuters-RCV1](https://scikit-learn.org/0.18/datasets/rcv1.html)
 Symbol | Statistic | Value
 :---:|---|---
 $N$| number of documents | $800,000$
 $T_{avg}$| avg. number of tokens per document | $200$
-$M$ | terms | $400,000$
-$T$ | number of tokens in the entire collection | $100,000,000$
+$M$ | numbers of distincts terms | $400,000$
+$T$ | number of tokens in the entire collection (posting lists) | $100,000,000$
 \ | avg. # bytes per token (incl. spaces/punct.) | $6$
 \ | avg. # bytes per token (without spaces/punct.) | $4.5$
 \ | avg. # bytes per term | $7.5$
