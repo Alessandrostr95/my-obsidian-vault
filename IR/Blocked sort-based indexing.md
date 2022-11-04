@@ -8,10 +8,9 @@ Questo però non è sempre vero.
 ```
 
 Un primo passo per rendere la costruzione dell'indice più efficiente è quella di rappresentare i termini come **termID** numerici, anzichè come stringhe.
-Possiamo costruire la mappa `termine->termID` "*on the fly*" man mano che processiamo i documenti e costruiamo l'indice.
-Oppure possiamo farlo con un approccio in "*2-fasi*", ovvero prima processiamo la mappa `termine->termID` e poi costruiamo l'indice.
 
-Usiamo come dataset d'esempio
+È possibile costruire la mappa `termine->termID` "*on the fly*" man mano che processiamo i documenti e costruiamo l'indice.
+Oppure possiamo farlo con un approccio in "*2-fasi*", ovvero prima processiamo la mappa `termine->termID` e poi costruiamo l'indice.
 
 Symbol | Statistic | Value
 :---:|---|---
@@ -23,26 +22,27 @@ $T$ | number of tokens in the entire collection | $100,000,000$
 \ | avg. # bytes per token (without spaces/punct.) | $4.5$
 \ | avg. # bytes per term | $7.5$
 
-Dato che staimo assumendo che la memoria RAM non è sufficiente per costruire l'indice per intero, abbiamo bisogno di un **external sorting algorithm**, ovvero un algoritmo che usi il disco come memoria asuliaria.
+Dato che stiamo assumendo che la memoria RAM non è sufficiente per costruire l'indice per intero, abbiamo bisogno di un **external sorting algorithm**, ovvero un algoritmo che usi il disco come memoria asuliaria.
 
 ```ad-important
-Ovviamente per avere prestazioni accettabili, tale agloritmo deve **minimizzare** il numero di accessi su disco e il numero di operazioni di **seek**, tenendo conto del fatto che operazioni di lettura/scrittura su aree di memoria sequenziali sono più efficienti di operazioni di seek (come [[Index construction#^31e9e5|già discusso]]).
+Ovviamente per avere prestazioni accettabili, tale agloritmo deve **minimizzare** il numero di accessi su disco e il numero di operazioni di **seek**, tenendo anche conto del fatto che operazioni di lettura/scrittura su aree di memoria **sequenziali** sono più efficienti di operazioni di seek (come [[Index construction#^31e9e5|già discusso]]).
 ```
 
 Una prima soluzione è il **blocked sort-based indexing algorithm** o **BSBI**, il quale ha il seguente funzionamento:
-1. **partiziona** la collezione di documenti in blocchi di dimensione uguale, in modo tale che ciascun blocco può essere caricato in memoria.
-2. sequenzialmente, ordina le coppie `termID->docID` per ogni blocco, caricandone uno per volta in memoria.
-3. man mano salva su disco i blocchi ordinati.
-4. a coppie **fonde** i blocchi intermedi, finché non verrà generato l'indice completo finale.
+1. **partiziona** la collezione di documenti in blocchi di dimensione uguale, in modo tale che ciascun blocco può essere contenuto in memoria.
+2. sequenzialmente, costruiamo una **sequenza di coppie** `termID->docID` finché non riempiamo il blocco in memoria.
+3. una volta riempito un blocco, lo **ordiniamo** per `termID`, e poi lo salviamo su **disco**.
+4. una volta processati tutti i documenti, **fondiamo** il blocchi a **coppie di due** creando **indici temporanei**.
+5. ripetiamo il passo 4 finché non avremo ottenuto l'indice finale
 
 ```julia
-mutable struct Buffer
-	buffsize::Int
-	content::AbstracVector{Char}
-	function Buffer(buff_size::Int)
-		return new(buff_size, Vector{Char}(undef, buff_size))
-	end
-end
+# mutable struct Buffer
+# 	buffsize::Int
+# 	content::AbstracVector{Char}
+# 	function Buffer(buff_size::Int)
+# 		return new(buff_size, Vector{Char}(undef, buff_size))
+# 	end
+# end
 
 mutable struct Document
 	io::IOStream
@@ -64,7 +64,7 @@ function next_block!(document::Document; size=1024)::Bool
 end
 
 function bsbi_index_construction(documents::AbstracVector{Document}; buff_size=1024)
-	files = File[]
+	files = File[] # saves blocks as files
 	for document ∈ documents
 		while next_block!(document, size=buff_size)
 			parsed_block::String = parse_current_block(document)
@@ -78,12 +78,8 @@ function bsbi_index_construction(documents::AbstracVector{Document}; buff_size=1
 end
 ```
 
-Ricapitolando, l'algoritmo costruisce delle coppie `termID -> docID` accumulandoli in memoria finché non verrà riempito un blocco.
-Ovviamente la dimensione del blocco è fatta a posta per poter entrare per intero in memoria.
-Una volta completato il blocco, esso verrà scritto in memoria, e così facendo per ogni documento.
-
 ```ad-note
-Ogni singolo blocco è di per se un indice già pronto e finito, con *termini* e relative *posting list* già ordinati.
+Ogni singolo blocco è di per se un indice (intermedio) già pronto e finito, con *termini* e relative *posting list* già ordinati.
 ```
 
 Nello step finale, l'algoritmo effettua un **merge** di tutti i blocchi in un unico grande indice.
@@ -227,3 +223,7 @@ Se utiliziamo come struttura dati un [Log-structured merge-tree](https://en.wiki
 ### Performace complessive
 Alla fine le operazioni più dispendiose ricadono nell'**ordinare** i termini in ogni bocco.
 Dato che il numero $M$ di termini è limitato dal numero totale di token $T$, avremo una complessità dell'ordine di $$O(M \log{M}) \in O(T \log{T})$$
+### Svantaggi
+Uno svantaggio di tale metodo è che per lavorare abbiamo necessità di mantenere in memoria una **dizionario** `term->termID`, il quale cresce in modo dinamico.
+La memoria disposizione potrebbe non essere sufficientemente grande per contenere tale dizionario.
+In ogni caso, anche se riusciamo a tenerlo in memoria, potrebbe occupare così tanto spazio non consentirci di processare i blocchi.

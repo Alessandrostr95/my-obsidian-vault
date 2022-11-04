@@ -31,7 +31,7 @@ Assumiamo che la mia collezione è salvata su disco in **aree consecutive**.
 -----
 # SPIMI: Single-Pass In-Memory Indexing
 - **key idea 1**: genera dizionari differenti per ogni blocco.
-- **key idea 2**: non c'è bisogno di ordinare i termini, li salvo in nell'ordine in cui arrivano. (uso una funzione hash per ricavarli). Ordino solo alla fine.
+- **key idea 2**: non c'è bisogno di ordinare i termini, li salvo nell'ordine in cui arrivano. (uso una funzione hash per ricavarli). Ordino solo alla fine.
 
 ```ad-important
 Ordino perché potrei dividire i blocchi per lettere.
