@@ -6,27 +6,34 @@ La prima ottimizzazione che propone **SPIMI** si basa sull'idea che non c'è bis
 Purtroppo però, per effettuare il merge dei dizionari in seguito, non si possono usare i `termID` come chiavi del dizionario, bensì useremo i termini stessi.
 
 ```julia
-function SPIMI_Invert!(document::Document)
+dictionary = Dict{Int, Vector{Int}}()
+
+function SPIMI_invert!(document::Document)
+	global dictionary
+	
 	parsed_block::String = parse_current_block(document)
 	tokens = parsed_block |> split .|> lowercase .|> string |> sort
 	
-	token_stream::TokenStrem
-	output_file = File()
-	dictionary = Dict{Int, Vector{Int}}() # now local
+	output_files = File[]
 	
-	while FREE_MEMORY()
-		token = next!(token_stream)
-		
-		postin_list = Int[]
-		if term(token) ∈ keys(dictionary)
-			postin_list = dictionary[term(token)]
-		else 
-			dictionary[term(token)] = postin_list
-		end	
+	for token ∈ tokens
+		token = next!(tokens)
+		if !IS_MEMORY_FULL
+			if term(token) ∈ keys(dictionary)
+				push!(dictionary[term(token)], id(document)) 
+			else 
+				dictionary[term(token)] = [id(document)]
+			end
+		else
+			f = write_block_to_disk!(dictionary)
+			push!(output_files, f)
+			empty!(dictionary)
+		end
 	end
 	
-	write_block_to_disk!(output_file, dictionary)
-	return output_file
+	f = write_block_to_disk!(output_file, dictionary)
+	push!(output_files, f)
+	return output_files
 end
 
 
@@ -35,8 +42,8 @@ function spimi_index_construction(documents::AbstracVector{Document}; buff_size=
 	for document ∈ documents
 		while next_block!(document, size=buff_size)
 			inverted_block = BSBI_invert!(document)
-			f = write_block_to_disk(inverted_block)
-			push!(files, f)
+			output_files = write_block_to_disk(inverted_block)
+			extend!(files, output_files)
 		end
 	end
 	merged_blocks_file = merge_blocks(files)

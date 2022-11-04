@@ -26,3 +26,4 @@ I problemi che generalmente possiamo trovare nello sviluppo di un indice sono:
 
 - [[Blocked sort-based indexing]] - BSBI
 - [[Single-pass in-memory indexing]] - SPIMI
+- [[Distributed indexing]]

@@ -38,3 +38,4 @@ tags:
 - [[Index construction]]
 	- [[Blocked sort-based indexing]]
 	- [[Single-pass in-memory indexing]]
+	- [[Distributed indexing]]
