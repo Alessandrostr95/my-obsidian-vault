@@ -40,3 +40,4 @@ tags:
 	- [[Single-pass in-memory indexing]]
 	- [[Distributed indexing]]
 	- [[Dynamic indexing]]
+- [[Index Compression]]
