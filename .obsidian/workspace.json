@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Index construction.md",
+                "file": "IR/Dynamic indexing.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Index construction.md",
+                "file": "IR/Dynamic indexing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Index construction.md"
+                "file": "IR/Dynamic indexing.md"
               }
             }
           },
@@ -161,9 +161,9 @@
   },
   "active": "5f226a88b1fd051e",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Dynamic indexing.md",
     "IR/Index construction.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Binary Term-Document Incidence Matrix.md",
     "IR/Distributed indexing.md",
     "NLP/note 1.md",
