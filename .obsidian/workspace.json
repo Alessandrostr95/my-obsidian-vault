@@ -4,35 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "aa784e9fefa1d10d",
+        "id": "eb9f6cd42af418e9",
         "type": "tabs",
         "children": [
           {
-            "id": "c5620af3e277c5de",
+            "id": "2443370a321a7914",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Lecture 5.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c7a2ab5e19bb10ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Index construction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5f226a88b1fd051e",
+            "id": "a07e37bb38b07ca6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,7 +32,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -159,17 +147,17 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "5f226a88b1fd051e",
+  "active": "a07e37bb38b07ca6",
   "lastOpenFiles": [
+    "IR/Lecture 5.md",
     "IR/Dynamic indexing.md",
+    "IR/Lecture 4.md",
     "IR/Index construction.md",
     "IR/0 - Information Retrieval.md",
     "IR/Binary Term-Document Incidence Matrix.md",
     "IR/Distributed indexing.md",
     "NLP/note 1.md",
-    "IR/Lecture 4.md",
     "IR/Single-pass in-memory indexing.md",
-    "IR/Blocked sort-based indexing.md",
-    "IR/Positional postings and phrase queries.md"
+    "IR/Blocked sort-based indexing.md"
   ]
 }
