@@ -39,3 +39,4 @@ tags:
 	- [[Blocked sort-based indexing]]
 	- [[Single-pass in-memory indexing]]
 	- [[Distributed indexing]]
+	- [[Dynamic indexing]]
