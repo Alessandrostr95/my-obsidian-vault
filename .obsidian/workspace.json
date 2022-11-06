@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "5d852d66ce21751c",
+        "id": "aa784e9fefa1d10d",
         "type": "tabs",
         "children": [
           {
-            "id": "86eb224f4f8d1e7c",
+            "id": "c5620af3e277c5de",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "IR/Distributed indexing.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -78,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 295.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "IR/Distributed indexing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "IR/Distributed indexing.md"
+              }
             }
           },
           {
@@ -127,7 +134,7 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "86eb224f4f8d1e7c",
+  "active": "c5620af3e277c5de",
   "lastOpenFiles": [
     "NLP/note 1.md",
     "IR/Lecture 4.md",
