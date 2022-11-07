@@ -13,38 +13,37 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 5.md",
+                "file": "IR/Index Compression.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a07e37bb38b07ca6",
+            "id": "091105d5996df682",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Single-pass in-memory indexing.md",
+                "file": "IR/Blocked sort-based indexing.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "be6fa0927b5ac112",
+            "id": "b0f0d29440de8afa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Lecture 6.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 295.5
+    "width": 316.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -123,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Index Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "IR/Index Compression.md"
               }
             }
           },
@@ -159,17 +158,17 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "be6fa0927b5ac112",
+  "active": "2443370a321a7914",
   "lastOpenFiles": [
+    "IR/Blocked sort-based indexing.md",
+    "IR/Index construction.md",
     "IR/Index Compression.md",
+    "IR/Dynamic indexing.md",
+    "IR/Lecture 6.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Single-pass in-memory indexing.md",
     "IR/Lecture 5.md",
-    "IR/Lecture 6.md",
-    "IR/Dynamic indexing.md",
     "IR/Lecture 4.md",
-    "IR/Index construction.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/Binary Term-Document Incidence Matrix.md",
-    "IR/Distributed indexing.md"
+    "IR/Binary Term-Document Incidence Matrix.md"
   ]
 }

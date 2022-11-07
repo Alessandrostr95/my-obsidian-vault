@@ -21,7 +21,7 @@ $M$ | numbers of distincts terms | $400,000$
 $T$ | number of tokens in the entire collection (posting lists) | $100,000,000$
 \ | avg. # bytes per token (incl. spaces/punct.) | $6$
 \ | avg. # bytes per token (without spaces/punct.) | $4.5$
-\ | avg. # bytes per term | $7.5$
+\ | avg. # bytes per term | $7.5$ ^21c93f
 
 Dato che stiamo assumendo che la memoria RAM non è sufficiente per costruire l'indice per intero, abbiamo bisogno di un **external sorting algorithm**, ovvero un algoritmo che usi il disco come memoria asuliaria.
 
