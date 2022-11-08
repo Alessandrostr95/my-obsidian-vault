@@ -36,4 +36,19 @@ Per prendere la colla della parola `maria`, moltiplico la matrice $M$ per il vet
 
 Infine per trovare il tag più probabile per la parola `maria`, applico come prima la softmax.
 
+```ad-important
+Importante osservare che, dato che ogni colonna ha tutti valori compresi tra 0 e 1, e dato che abbiamo detto che la softmax non funziona bene su tali valori (tra 0 e 1). 
 
+Basta però **scalare** opportunamente tutti i valori, affinché siano abbastanza grandi.
+```
+
+Una volta calcolato il vettore della distribuzione più probabile per la **prima parola**, possiamo moltiplicare tale vettore per la **matrice di transizione** $T_i$
+
+$$T \cdot \overline{t}_1^T$$
+
+```ad-note
+In base al modello, $T$ potrebbe o meno dipendere dalla **posizione** in cui si trova.
+Dipende se usiamo un modello **omogeneo** o no di catena di markov.
+```
+
+Per trovare quindi il secondo vettore, basterà fare $$(T\cdot \overline{t}_1) \text{ .* } (POS \cdot \overline{w}_2)$$
