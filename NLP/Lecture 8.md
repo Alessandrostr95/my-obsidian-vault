@@ -15,4 +15,25 @@ Alla fine il valore di un cammino è esattamente il prodotto delle transazioni.
 
 
 -----
+## sfot-max function
+$$\text{soft-max}(z) = \left( \frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}} \right)_{i=1,...,n}$$
+
+Innanzitutto, essendo la funzione **monotona**, il massimo di $\text{soft-max}(z)$ equivale al massimno di $z$.
+
+La proprietà di tale funzione è che i valori massimi tendono ad 1, e gli altri a 0 (per via della crescita esponenziale).
+Perciò sarà un vettore di elementi tutti quasi pari a 0 e tutti quasi par a 1.
+
+```ad-attention
+La funzione non funziona bene quando tutti i valori sono compresi tra 0 e 1 (avrà valori di circa 0.5).
+```
+
+
+Per estrarre il massimo di $z$ (tramite i soli operatori **vettoriali**) basta fare $$\max{(z)} \approx z \text{ .* } \text{soft-max}(z)$$
+
+Creo quindi una matrice `TAG x PAROLE`, dove ad ogni colonna $i$ ci sta la distribuzione dei tag della parola $i$-esima.
+
+Per prendere la colla della parola `maria`, moltiplico la matrice $M$ per il vettore **one-hot** $w$ dove ci sta un 1 nell'indice `maria`, e 0 in tutte le altre posizioni.
+
+Infine per trovare il tag più probabile per la parola `maria`, applico come prima la softmax.
+
 
