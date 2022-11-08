@@ -122,3 +122,14 @@ Possiamo quindi definire il **peso** di un termine $t$ rispetto a un documento $
 $$w_{t,d} = (1 + \log{(\text{tf}_{t,d}})) \cdot \log{ \left( \frac{N}{\text{df}_t} \right)} = \text{tf-weight} \times \text{idf-weight}$$
 
 Possiamo quindi definire una **score matrix** dove le entri saranno $w_{i,j}$, dove $i$ è un termine e $j$ è un docuemnto.
+
+## Vector representation of documents
+Con questa rappresentazione possiamo vedere i documenti come dei **vettori**.
+I termini sono le **dimensioni** del nostro spazio.
+La [[#TD-IDF weight|td-idf frequency]] sono le coordinate del nostro vettore.
+Quindi ogni documento diventa un punto.
+
+Così abbiamo rappresentato la nostra collezione come uno **spazio metrico**, sul quale possiamo quindi fare **classificazione**.
+
+Possiamo rappresentare in maniera analoga (vettoriale) anche i termini, usando i **documenti** come dimensione (coordinate) per i itermini.
+Infatti, i termini `calciatore` e `calcio`, appariranno più o meno negli stessi documenti con la stessa frequenza.
