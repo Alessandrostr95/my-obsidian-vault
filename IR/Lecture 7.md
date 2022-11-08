@@ -133,3 +133,4 @@ Così abbiamo rappresentato la nostra collezione come uno **spazio metrico**, su
 
 Possiamo rappresentare in maniera analoga (vettoriale) anche i termini, usando i **documenti** come dimensione (coordinate) per i itermini.
 Infatti, i termini `calciatore` e `calcio`, appariranno più o meno negli stessi documenti con la stessa frequenza.
+Quindi possiamo dire che i due termini sono **simili**, nel senso che appartengono allo stesso argomento.
