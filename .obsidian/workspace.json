@@ -20,18 +20,6 @@
             }
           },
           {
-            "id": "091105d5996df682",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Blocked sort-based indexing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b0f0d29440de8afa",
             "type": "leaf",
             "state": {
@@ -160,12 +148,12 @@
   },
   "active": "2443370a321a7914",
   "lastOpenFiles": [
+    "IR/Lecture 6.md",
+    "IR/Index Compression.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Blocked sort-based indexing.md",
     "IR/Index construction.md",
-    "IR/Index Compression.md",
     "IR/Dynamic indexing.md",
-    "IR/Lecture 6.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Single-pass in-memory indexing.md",
     "IR/Lecture 5.md",
     "IR/Lecture 4.md",
