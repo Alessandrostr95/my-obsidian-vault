@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2443370a321a7914",
+            "id": "10d444fe700d71a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Index Compression.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b0f0d29440de8afa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Lecture 6.md",
+                "file": "IR/Lecture 7.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/Lecture 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Index Compression.md"
+                "file": "IR/Lecture 7.md"
               }
             }
           },
@@ -146,17 +134,17 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "2443370a321a7914",
+  "active": "10d444fe700d71a9",
   "lastOpenFiles": [
+    "IR/Lecture 7.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Lecture 6.md",
     "IR/Index Compression.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Blocked sort-based indexing.md",
     "IR/Index construction.md",
     "IR/Dynamic indexing.md",
     "IR/Single-pass in-memory indexing.md",
     "IR/Lecture 5.md",
-    "IR/Lecture 4.md",
-    "IR/Binary Term-Document Incidence Matrix.md"
+    "IR/Lecture 4.md"
   ]
 }
