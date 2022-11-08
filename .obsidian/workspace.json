@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "daf433b88ceef1bc",
+        "id": "bc2aff2521660089",
         "type": "tabs",
         "children": [
           {
-            "id": "0f43a3ac1c5d2de2",
+            "id": "d9d6b47153e02d00",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Lecture 7.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ba52fcc0b44ad8dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Lecture 8.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 399.5
+    "width": 399.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -94,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "NLP/Lecture 8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +128,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "NLP/Lecture 8.md"
+              }
             }
           },
           {
@@ -127,8 +148,10 @@
     "direction": "horizontal",
     "width": 347.5
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "ba52fcc0b44ad8dd",
   "lastOpenFiles": [
+    "NLP/Lecture 7.md",
+    "NLP/Lecture 8.md",
     "IR/Blocked sort-based indexing.md",
     "IR/Lecture 7.md",
     "IR/0 - Information Retrieval.md",
@@ -136,8 +159,6 @@
     "IR/img/IR_td-idf_1.png",
     "IR/Lecture 3.md",
     "IR/Lecture 1.md",
-    "IR/Lecture 2.md",
-    "IR/Lecture 6.md",
-    "IR/Index Compression.md"
+    "IR/Lecture 2.md"
   ]
 }
