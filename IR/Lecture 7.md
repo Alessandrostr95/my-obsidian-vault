@@ -113,6 +113,10 @@ Definiamo quindi la **informativeness** di un termine come
 $$\text{idf}_t = \log_{10}{\frac{N}{\text{df}_t}}$$
 dove $\text{df}_t$ è la **document frequency** del termine $t$ nella mia collezione, ed $N$ è il numero di documenti.
 
+![](./img/IR_td-idf_1.png)
+
+![](./img/IR_td-idf_2.png)
+
 ## TD-IDF weight
 Possiamo quindi definire il **peso** di un termine $t$ rispetto a un documento $d$
 $$w_{t,d} = (1 + \log{(\text{tf}_{t,d}})) \cdot \log{ \left( \frac{N}{\text{df}_t} \right)} = \text{tf-weight} \times \text{idf-weight}$$

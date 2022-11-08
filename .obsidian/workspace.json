@@ -136,15 +136,15 @@
   },
   "active": "10d444fe700d71a9",
   "lastOpenFiles": [
-    "IR/Lecture 3.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/img/IR_td-idf_2.png",
+    "IR/img/IR_td-idf_1.png",
     "IR/Lecture 7.md",
+    "IR/Lecture 3.md",
     "IR/Lecture 1.md",
     "IR/Lecture 2.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Lecture 6.md",
     "IR/Index Compression.md",
-    "IR/Blocked sort-based indexing.md",
-    "IR/Index construction.md",
-    "IR/Dynamic indexing.md"
+    "IR/Blocked sort-based indexing.md"
   ]
 }
