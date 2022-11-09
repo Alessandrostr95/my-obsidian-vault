@@ -17,7 +17,7 @@ tags:
 
 -------------------
 ## Table of contents
-- [[BWA/1 - Introduction]]
+- [[BWA/1 - Introduction|1 - Introduction]]
 - [[2 - Instance-Optimal Geometric Algorithms]] (*Instance-Optimality*)
 - [[3 - Online Paging and Resource Augmentation]] (*competitive analysis*)
 - [[4 - Parameterized Analysis of Online Paging]] (*Parameterized Paging*)
