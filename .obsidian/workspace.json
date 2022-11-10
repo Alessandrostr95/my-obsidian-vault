@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2f47e66573a5bd32",
+        "id": "ae2acfe46067b5cc",
         "type": "tabs",
         "children": [
           {
-            "id": "e31aa6c9cb803e35",
+            "id": "b048df580460081f",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "BWA/6 - Clustering in Approximation-Stable Instances.md",
-                "staged": false
+                "file": "NLP/Lecture 9.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -77,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BWA/0 - Beyond Worst-Case Analysis.md",
+                "file": "NLP/Lecture 9.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BWA/0 - Beyond Worst-Case Analysis.md"
+                "file": "NLP/Lecture 9.md"
               }
             }
           },
@@ -133,17 +134,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "b048df580460081f",
   "lastOpenFiles": [
+    "NLP/Lecture 5.md",
+    "NLP/Lecture 6.md",
+    "NLP/Lecture 9.md",
+    "NLP/Lecture 8.md",
+    "NLP/Lecture 7.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
     "root.md",
     "BWA/6 - Clustering in Approximation-Stable Instances.md",
-    "NLP/Lecture 7.md",
-    "NLP/Lecture 8.md",
-    "IR/Blocked sort-based indexing.md",
-    "IR/Lecture 7.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/img/IR_td-idf_2.png"
+    "IR/Blocked sort-based indexing.md"
   ]
 }

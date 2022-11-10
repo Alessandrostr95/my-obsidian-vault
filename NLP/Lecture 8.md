@@ -1,3 +1,7 @@
+---
+date: 2022/11/08
+draft: true
+---
 [[NLP/Lecture 7|vedi]] $\leftarrow$
 
 Abbiamo visto in [[NLP/Lecture 7]] il nostro **stimatore** della distribuzione dei tag
