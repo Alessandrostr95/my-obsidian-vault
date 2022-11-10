@@ -154,8 +154,8 @@ Innanzitutto, una **frazione costante** di tutti i punti è **vicina** (indipend
 > Sia $E \subseteq X$ l'inseme dei punti **non vicini**, con $\vert E \vert > \dfrac{5\varepsilon}{\alpha}n$.
 > Dato che $\vert E \vert \leq \vert X \vert$, allora avremo che $$\sum_{x \in E}w(x) \leq \sum_{x \in X}w(x) = OPT$$
 > 
-> Però, visto che $E$ è composto da punti **non buoni**, avremo che $$\sum_{x \in E}w(x) > \vert E \vert \cdot \frac{OPT}{n}\cdot\frac{\alpha}{5\varepsilon} > \cancel{\dfrac{5\varepsilon}{\alpha}}\cancel{n} \cdot \frac{OPT}{\cancel{n}}\cdot\cancel{\frac{\alpha}{5\varepsilon}} > OPT$$
-> assurdo $\square$.
+> Però, visto che $E$ è composto da punti **non vicini**, avremo che $$\sum_{x \in E}w(x) > \vert E \vert \cdot \frac{OPT}{n}\cdot\frac{\alpha}{5\varepsilon} > \cancel{\dfrac{5\varepsilon}{\alpha}}\cancel{n} \cdot \frac{OPT}{\cancel{n}}\cdot\cancel{\frac{\alpha}{5\varepsilon}} > OPT$$
+> assurdo! $\square$.
 
 Sfruttando la [[#^d2b2c2|approximation stability]] possiamo anche limitare il numero di punti che non sono **ben separati**.
 
@@ -165,15 +165,15 @@ Sfruttando la [[#^d2b2c2|approximation stability]] possiamo anche limitare il nu
 ^46dfb6
 
 > **Proof**
-> Supponiamo per assurdo che ci siano **strettamente più** di $> \varepsilon n$ punti che non sono ben separati.
+> Supponiamo per assurdo che ci siano **strettamente più** di $> \varepsilon n$ punti **non ben separati**.
 > Osserviamo che $$w_2(x) - w(x) \leq \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}$$
 > $$\implies w_2(x) \leq w(x) + \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}$$
-> Partendo dalla soluzione ottima $C^*_1, ..., C^*_k$, riassegnamo $\varepsilon n$ ai cluster con i **secondi** più vicini centri (rispettivamente).
+> Partendo dalla soluzione ottima $C^*_1, ..., C^*_k$, riassegnamo gli $\varepsilon n$ punto **non ben distinti** ai cluster con i **secondi** più vicini centri (rispettivamente).
 > Indichiamo con $\hat{X}$ l'inseme dei $\varepsilon n$ punti riassegnati.
 > 
-> Così facendo abbiamo ottenuto un nuovo clustering, con una frazione $\varepsilon$ di punti **mal etichettati**, e con **valore**
+> Così facendo abbiamo ottenuto un nuovo clustering $\hat{C}_1, ..., \hat{C}_k$, con una frazione $\varepsilon$ di punti **mal etichettati** rispetto alla soluzione ottima, e con **valore**
 > $$\begin{align}
-\sum_{x \in X} w_2(x)
+\text{val}(\hat{C}_1, ..., \hat{C}_k)
 &= \sum_{x \in X \setminus \hat{X}} w(x) + \sum_{x \in \hat{X}} w_2(x)\\
 &\leq \sum_{x \in X \setminus \hat{X}} w(x) + \sum_{x \in \hat{X}} \left(w(x) + \frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon} \right)\\
 &= \sum_{x \in X}w(x) +\sum_{x \in \hat{x}}\frac{OPT}{n} \cdot \frac{\alpha}{\varepsilon}\\
@@ -182,9 +182,10 @@ Sfruttando la [[#^d2b2c2|approximation stability]] possiamo anche limitare il nu
 > Questo però contraddice l'ipotesi che l'istanza è $(1+\alpha, \varepsilon)$-[[#^d2b2c2|approximation stable]], perché abbiamo trovato una $1 + \alpha$ approssimazione della soluzione ottima con **strettamente di più** di $\varepsilon\%$ delle etichette in comune (mentre noi vogliamo al più $\varepsilon\%$) $\square$.
 > 
 
-I punti che **non sono** buoni, sono tutti quelli che non sono **vicini** o non sono **ben distanti** <u>oppure entrambi</u>.
+I punti  **non buoni** sono tutti quelli che non sono **vicini** o non sono **ben distanti**, <u><b>oppure entrambi</b></u>.
 
-Perciò sia $A$ l'insieme dei punti **non vicini**, con dimensione $\vert A \vert \leq \dfrac{5\varepsilon}{\alpha}n$ (per [[#^848593|Lemma 1]]), e sia $B$ l'insieme dei punti **non ben distanti**, con dimensione $\vert B \vert \leq \varepsilon n$ (per [[#^46dfb6|Lemma 2]]), avremo che il numero di punti **non buoni** sarà
+Sia $A$ l'insieme dei punti **non vicini**, con dimensione $\vert A \vert \leq \dfrac{5\varepsilon}{\alpha}n$ (per [[#^848593|Lemma 1]]), e sia $B$ l'insieme dei punti **non ben distanti**, con dimensione $\vert B \vert \leq \varepsilon n$ (per [[#^46dfb6|Lemma 2]]).
+Perciò avremo che il numero di punti **non buoni** sarà
 $$\vert A \cup B\vert \leq \vert A \vert + \vert B \vert = \varepsilon n \left( 1 + \frac{5}{\alpha}\right) := b$$ ^4fb302
 
 ## The "large clusterings" assumption
@@ -237,10 +238,10 @@ Dato che quindi la distanza tra $x$ e $y$ è **strettamente maggiore** di $2\tau
 ### Observation 3
 Il vicinato di un punto **non buono** è composto da **al più** $b-1$ altri punti **non buoni** ed <u>eventualmente</u> qualche punto **buono**, appartenenti tutti ad uno stesso clusteri $C^*_i$.
 
-Infatti, [[#^4fb302|sappiamo]] che ci sono al più $b$ punti non buoni, meno $1$ che sarebbe quello in questione, abbiamo il bound di $b-1$.
+Infatti, [[#^4fb302|sappiamo]] che ci sono al più $b$ punti **non buoni**, meno $1$ che sarebbe quello in questione, abbiamo il bound di $b-1$.
 
 Mentre grazie a [[#Observation 1]] (o equivalentemente [[#Observation 2]]) avremo che gli unici vicini **buoni** che ha, devono appartenere necessariamente ad uno stesso cluster.
-Infatti un nodo non buono avesse due vicini buoni $x,y$ in due cluster differenti $C^*_i, C^*_j$, avremmo un cammino di **due archi** che collega $x$ ad $y$ (contraddicendo [[#Observation 1]]).
+Infatti se un nodo non buono avesse due vicini buoni $x,y$ in due cluster differenti $C^*_i, C^*_j$, avremmo un cammino di **due archi** che collega $x$ ad $y$ (contraddicendo [[#Observation 1]]).
 
 ![|600](BWA_06_4.png)
 
@@ -248,7 +249,7 @@ Infatti un nodo non buono avesse due vicini buoni $x,y$ in due cluster different
 Crea il grafo $H = (X, F \subseteq E)$ tale che $(x,y) \in F$ <u>se e solo se</u> $(x,y) \in E \land \vert N_G(x) \cap N_G(y) \vert \geq b$ (ovvero $x$ ed $y$ hanno **almeno** $b$ vicini in comune). ^e1b067
 
 ### Observation 4
-Le **clique di punti buoni** presenti in $G$ sopravvivono anche in $H$, perché sappiamo per [[#The large clusterings assumption|large clustering assumption]] che ci sono almeno $b+2$ nodi, e quindi hanno tutti in comune almeno $b+1$ vicini.
+Le **clique di punti buoni** presenti in $G$ sopravvivono anche in $H$, perché sappiamo per [[#The large clusterings assumption|large clustering assumption]] che ci sono almeno $b+2$ nodi buoni in ogni cluster, e quindi hanno tutti in comune almeno $b+1$ vicini.
 
 ### Observation 5
 Nessun cammino tra punti buoni di cluster <u>differenti</u> sopravvivono in $H$.

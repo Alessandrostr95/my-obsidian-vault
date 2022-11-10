@@ -11,11 +11,10 @@
             "id": "e31aa6c9cb803e35",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "BWA/0 - Beyond Worst-Case Analysis.md",
-                "mode": "source",
-                "source": false
+                "file": "BWA/6 - Clustering in Approximation-Stable Instances.md",
+                "staged": false
               }
             }
           }
@@ -82,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 399.5
+    "width": 263.0124969482422
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -134,17 +133,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "e31aa6c9cb803e35",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "BWA/0 - Beyond Worst-Case Analysis.md",
+    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
+    "root.md",
+    "BWA/6 - Clustering in Approximation-Stable Instances.md",
     "NLP/Lecture 7.md",
     "NLP/Lecture 8.md",
     "IR/Blocked sort-based indexing.md",
     "IR/Lecture 7.md",
     "IR/0 - Information Retrieval.md",
-    "IR/img/IR_td-idf_2.png",
-    "IR/img/IR_td-idf_1.png",
-    "IR/Lecture 3.md",
-    "IR/Lecture 1.md"
+    "IR/img/IR_td-idf_2.png"
   ]
 }
