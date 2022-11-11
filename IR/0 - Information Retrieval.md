@@ -46,6 +46,7 @@ tags:
 		- [[Dictionary storage]] (naïve approach)
 		- [[Dictionary as a String]]
 		- [[Blocked storage]]
+		- [[Front Encoding]]
 	- [[Index Compression#Postings file compression|Postings file compression]]
 		- [[Variable byte codes]]
 		- [[Gamma code]]

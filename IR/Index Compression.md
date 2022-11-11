@@ -104,6 +104,7 @@ In questa parte verranno proposti dei metodi per comprimere i **dizionari**, ovv
 - [[Dictionary storage]] (naïve approach)
 - [[Dictionary as a String]]
 - [[Blocked storage]]
+- [[Front Encoding]]
 
 ## Postings file compression
 - [[Variable byte codes]]
