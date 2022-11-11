@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 9.md",
+                "file": "IR/Index Compression.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6eaac9fcb167977a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Lecture 6.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.0124969482422
+    "width": 358.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 9.md",
+                "file": "IR/Index Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 9.md"
+                "file": "IR/Index Compression.md"
               }
             }
           },
@@ -136,15 +148,15 @@
   },
   "active": "b048df580460081f",
   "lastOpenFiles": [
-    "NLP/Lecture 8.md",
+    "AR/2 - Power Law.md",
+    "IR/Index Compression.md",
+    "IR/Lecture 6.md",
+    "IR/0 - Information Retrieval.md",
     "NLP/Lecture 9.md",
+    "NLP/Lecture 8.md",
     "NLP/Lecture 5.md",
     "NLP/Lecture 6.md",
     "NLP/Lecture 7.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
-    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
-    "root.md",
-    "BWA/6 - Clustering in Approximation-Stable Instances.md",
-    "IR/Blocked sort-based indexing.md"
+    "BWA/0 - Beyond Worst-Case Analysis.md"
   ]
 }

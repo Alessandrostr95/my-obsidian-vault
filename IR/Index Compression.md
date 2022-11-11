@@ -29,7 +29,7 @@ Richiamando i valori della [[Blocked sort-based indexing#^21c93f|tabella dei val
 ## Vocabulary size vs Collection Size
 
 ### Heaps' Law
-Si vuole stiamere la dimenzione del **vocabolario** della nostra collezione, ovvero il **numero di termini**.
+Si vuole stiamere la dimenzione del **vocabolario** della nostra collezione, ovvero il **numero di termini** $M$ che occorrono.
 
 Sia $T$ il numero di **token** nella nostra collezione.
 Allora il numero $M$ di **termini** empiricamente segue la seguente funzione $$M \approx kT^b$$
@@ -49,5 +49,48 @@ In questo caso abbiamo
 - $b = 0.495 \approx 0.5$
 
 Avremo quindi che $$400.000 = M \approx kT^b \approx 398107$$
+```ad-example
+title: Exercise
+Calcola la dimensione $M$ del vocabolario nel seguente scenario:
+
+- Guardando una collesione di **pagine web** osserviamo che ci sono $3.000$ **termini differenti** nei primi $10.000$ **tokens** e $30.000$ termini differenti nei primi $1.000.000$.
+
+- Assumiamo che un search engine indicizza un totale di $20.000.000.000$ ($2 \times 10^{10}$) pagine, ognuna contenente $200$ tokens **in media**.
+
+Qual è la dimensione **stimata** dalla legge di *Heaps* del vocabolario della nostra collezione?
+
+------
+
+**Soluzione:** il numero di termini $T$ in media nella nostra collezione sarà $$T = (2 \times 10^{10}) \times 200 = 4 \times 10^{12}$$
+
+Osservando che i termini crescono come un terzo dei tokens, voglio che
+$$3.000 \approx 10.000/3 \approx 30 \times 10.000^{b}$$ con $b = 0.5$.
+
+Stessa cosa per $T = 1.000.000$.
+
+Perciò, ponendo $k = 30$ e $b = .5$ avremo che $$M \approx k T^b = 30 \times (4 \times 10^{12})^{0.5} = 6 \times 10^7 = 60.000.000$$
+```
+
 ## Zipf’s law
 Si vuole ora stimare la **distribuzione** dei termini tra i documenti della collezione.
+Questo ci aiuta a caratterizzare le proprietà utili alla progettazione di algoritmi di compressione degli indici.
+
+**Enumeriamo** i termini $t_1, t_2, ...$ in ordine **non decrescente di frequenza**.
+Ovvero $t_1$ è il termine più frequente di tutti nella nostra collezione, $t_2$ è il secondo più frequente, e così via...
+
+Perciò secondo la legge di **Zipf**, la frequenze $\text{cf}_i$ del termine $i$-esimo all'interno della nostra collezione è proporzionale a $$\text{cf}_i \propto \frac{1}{i}$$
+
+> [!note]
+> Osservare che dato $\text{cf}_1$ avremo che
+> - $\text{cf}_2 \propto \frac{\text{cf}_1}{2}$
+> - $\text{cf}_3 \propto \frac{\text{cf}_1}{3}$
+> - $...$
+> - $\text{cf}_i \propto \frac{\text{cf}_1}{i}$
+
+Perciò, sia $c$ il **fattore  costante di proporzionalità**, riformuliamo la distribuzione come $$\text{cf}_i = c \cdot i^{-1}$$
+
+Importante osservare che tale distribuzione segue una [[2 - Power Law#Power Law|power law]] con esponente $1$.
+
+Infatti applicando il grafico **log-log** avremo $$\log{\text{cf}_i} = \log{c} - \log{i}$$
+![](./img/IR_index_compression_2.png)
+
