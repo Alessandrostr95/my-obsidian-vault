@@ -96,6 +96,9 @@ Infatti applicando il grafico **log-log** avremo $$\log{\text{cf}_i} = \log{c} -
 
 ------
 ## Dictionary compression
+Un fattore importante che influisce sulle prestazioni delle query in un sistema di IR è il numero di operazioni su disco.
+Perciò si vuole cercare di preservare in memoria quanta più porzione di **dizionario** possibile.
+
 In questa parte verranno proposti dei metodi per comprimere i **dizionari**, ovvero quella parte dell'indice che preserva i **termini**, le loro **frequenze** e i **puntatori alle posting lists**.
 
 - [[Dictionary storage]] (naïve approach)
