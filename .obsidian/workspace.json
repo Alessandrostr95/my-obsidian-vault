@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8f266141633ab454",
+        "id": "397fec9ec902666d",
         "type": "tabs",
         "children": [
           {
-            "id": "791a9564249b33fd",
+            "id": "2192291bfc07951d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Dictionary storage.md",
+                "file": "IR/Dictionary as a String.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Dictionary storage.md",
+                "file": "IR/Dictionary as a String.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Dictionary storage.md"
+                "file": "IR/Dictionary as a String.md"
               }
             }
           },
@@ -134,17 +134,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "791a9564249b33fd",
+  "active": "2192291bfc07951d",
   "lastOpenFiles": [
-    "IR/Dictionary storage.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Index Compression.md",
-    "IR/Dictionary as a String.md",
     "IR/Lecture 6.md",
+    "IR/img/IR_dictionary_as_a_string_1.png",
+    "IR/Dictionary as a String.md",
+    "IR/Dictionary storage.md",
+    "IR/Index Compression.md",
     "AR/2 - Power Law.md",
     "NLP/Lecture 9.md",
     "NLP/Lecture 8.md",
-    "NLP/Lecture 5.md",
-    "NLP/Lecture 6.md"
+    "NLP/Lecture 5.md"
   ]
 }

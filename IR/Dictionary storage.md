@@ -4,7 +4,7 @@ Ogni **foglia** di quest'albero rappresenta una entry del dizionario.
 
 Ongi entry necessiterà quindi di:
 - 20 bytes per rappresentare i **termini**
-- 4 bytes per la **doc frequency**
+- 4 bytes per la **term frequency**
 - 4 bytes per i **puntatori** alle aree di memoria in cui si trovano le **posting lists**.
 
 ![](./img/IR_dictionary_storage_1.png)
