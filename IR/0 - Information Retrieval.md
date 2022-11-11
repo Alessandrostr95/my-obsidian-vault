@@ -43,6 +43,7 @@ tags:
 	- [[Dynamic indexing]]
 - [[Index Compression]]
 	- [[Index Compression#Dictionary compression|Dictionary compression]]
+		- [[Dictionary storage]] (naïve approach)
 		- [[Dictionary as a String]]
 		- [[Blocked storage]]
 	- [[Index Compression#Postings file compression|Postings file compression]]

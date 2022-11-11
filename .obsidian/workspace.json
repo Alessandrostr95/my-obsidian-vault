@@ -4,34 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "ae2acfe46067b5cc",
+        "id": "8f266141633ab454",
         "type": "tabs",
         "children": [
           {
-            "id": "b048df580460081f",
+            "id": "78efceaed419b82a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Index Compression.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6eaac9fcb167977a",
+            "id": "791a9564249b33fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 6.md",
+                "file": "Dictionary storage.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "Dictionary storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "Dictionary storage.md"
               }
             }
           },
@@ -146,17 +147,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "b048df580460081f",
+  "active": "791a9564249b33fd",
   "lastOpenFiles": [
     "IR/Index Compression.md",
-    "AR/2 - Power Law.md",
-    "IR/Lecture 6.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Dictionary as a String.md",
+    "IR/Lecture 6.md",
+    "AR/2 - Power Law.md",
     "NLP/Lecture 9.md",
     "NLP/Lecture 8.md",
     "NLP/Lecture 5.md",
     "NLP/Lecture 6.md",
-    "NLP/Lecture 7.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md"
+    "NLP/Lecture 7.md"
   ]
 }
