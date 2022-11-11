@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b9ec5f1250faa465",
+        "id": "6161efdaf9df16d4",
         "type": "tabs",
         "children": [
           {
-            "id": "54c2cf3184c0885f",
+            "id": "1627abfecfdf0225",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 6.md",
+                "file": "IR/Index Compression.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Lecture 6.md",
+                "file": "IR/Index Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Lecture 6.md"
+                "file": "IR/Index Compression.md"
               }
             }
           },
@@ -134,17 +134,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "54c2cf3184c0885f",
+  "active": "1627abfecfdf0225",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "BWA/8 - Exact Recovery in Stable Cut Instances.md",
+    "IR/Lecture 4.md",
+    "IR/Lecture 6.md",
     "IR/Index Compression.md",
     "IR/Index construction.md",
     "IR/Front Coding.md",
-    "IR/Lecture 6.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Binary Term-Document Incidence Matrix.md",
     "IR/Blocked storage.md",
-    "IR/Lecture 7.md",
-    "IR/Dictionary as a String.md",
-    "BWA/6 - Clustering in Approximation-Stable Instances.md"
+    "IR/Lecture 7.md"
   ]
 }
