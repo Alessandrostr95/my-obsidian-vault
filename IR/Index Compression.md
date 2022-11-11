@@ -95,7 +95,7 @@ Infatti applicando il grafico **log-log** avremo $$\log{\text{cf}_i} = \log{c} -
 ![](./img/IR_index_compression_2.png)
 
 ------
-## Dictionary compression
+# Dictionary compression
 Un fattore importante che influisce sulle prestazioni delle query in un sistema di IR è il numero di operazioni su disco.
 Perciò si vuole cercare di preservare in memoria quanta più porzione di **dizionario** possibile.
 
@@ -104,8 +104,19 @@ In questa parte verranno proposti dei metodi per comprimere i **dizionari**, ovv
 - [[Dictionary storage]] (naïve approach)
 - [[Dictionary as a String]]
 - [[Blocked storage]]
-- [[Front Encoding]]
+- [[Front Coding]]
 
-## Postings file compression
+### RCV1 dictionary compression summary
+
+**Technique** | **Size in MB**
+---|---
+Dictionary storage | 11.2
+Dictionary-as-a-String | 7.6
+\+ blocking con $k = 4$ | 7.1
+\+ blocking \+ front coding | 5.9
+
+Purtroppo non possiamo comprimere di più senza **perdita d'informazione**, oppure senza dover **decomprimere** per accedere al dizionario (noi non vogliamo perdere tempo nella decompressione).
+
+# Postings file compression
 - [[Variable byte codes]]
 - [[Gamma code]]

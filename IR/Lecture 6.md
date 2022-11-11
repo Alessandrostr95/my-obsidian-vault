@@ -119,7 +119,8 @@ Dictionary-as-a-String | 7.6
 
 Purtroppo non possiamo comprimere di più senza perdere informazione, oppure senza dover decomprimere per accedere al dizionario (noi non vogliamo dover decomprimere).
 
-## Postings Compression
+-------
+# Postings Compression
 Partiamo dalle posting list non posizionali.
 Avendo 800,000 dicumenti, e usando un numero seriale come docID, ci bastano circa 20 bit a disposizone.
 

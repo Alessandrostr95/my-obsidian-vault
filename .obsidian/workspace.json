@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Front Encoding.md",
+                "file": "IR/Lecture 6.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Front Encoding.md",
+                "file": "IR/Lecture 6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Front Encoding.md"
+                "file": "IR/Lecture 6.md"
               }
             }
           },
@@ -136,15 +136,15 @@
   },
   "active": "54c2cf3184c0885f",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Index Compression.md",
-    "IR/Front Encoding.md",
+    "IR/Index construction.md",
+    "IR/Front Coding.md",
+    "IR/Lecture 6.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Binary Term-Document Incidence Matrix.md",
     "IR/Blocked storage.md",
-    "IR/Lecture 6.md",
     "IR/Lecture 7.md",
     "IR/Dictionary as a String.md",
-    "BWA/6 - Clustering in Approximation-Stable Instances.md",
-    "BWA/7 - Clustering in Pertubation-Stable Instances.md"
+    "BWA/6 - Clustering in Approximation-Stable Instances.md"
   ]
 }
