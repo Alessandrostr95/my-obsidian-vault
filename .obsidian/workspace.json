@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Dictionary as a String.md",
+                "file": "IR/Lecture 6.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Dictionary as a String.md",
+                "file": "IR/Blocked storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Dictionary as a String.md"
+                "file": "IR/Blocked storage.md"
               }
             }
           },
@@ -147,15 +146,15 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "4aec5c34597f954b",
+  "active": "c610b34571338a54",
   "lastOpenFiles": [
-    "IR/Blocked storage.md",
-    "IR/Dictionary as a String.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Lecture 6.md",
+    "IR/Lecture 7.md",
+    "IR/Dictionary as a String.md",
+    "IR/Blocked storage.md",
+    "IR/0 - Information Retrieval.md",
     "BWA/6 - Clustering in Approximation-Stable Instances.md",
     "BWA/7 - Clustering in Pertubation-Stable Instances.md",
-    "IR/Lecture 7.md",
     "IR/img/IR_dictionary_as_a_string_1.png",
     "IR/Dictionary storage.md",
     "IR/Index Compression.md"
