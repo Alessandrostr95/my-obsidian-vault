@@ -23,4 +23,4 @@ Perciò il numero totale di bits necessari per l'indicizzazione dei termini sono
 ```
 
 
-La dimensione di un dizionario di 400.000 termini sarà quindi  $$400.000 \times (11B + 8B) = 7.2 MB$$ risparmiando quindi circa 4MB rispetto al [[Dictionary storage|metodo semplice]].
+La dimensione di un dizionario di 400.000 termini sarà quindi  $$400.000 \times (11B + 8B) = 7.6 MB$$ risparmiando quindi circa 4MB rispetto agli $11.2MB$ del [[Dictionary storage|metodo semplice]].

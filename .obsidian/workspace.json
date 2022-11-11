@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "abf552264bc46e18",
+            "id": "c610b34571338a54",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,18 +20,19 @@
             }
           },
           {
-            "id": "c610b34571338a54",
+            "id": "4aec5c34597f954b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 6.md",
+                "file": "IR/Dictionary as a String.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Blocked storage.md",
+                "file": "IR/Dictionary as a String.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Blocked storage.md"
+                "file": "IR/Dictionary as a String.md"
               }
             }
           },
@@ -146,17 +147,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "abf552264bc46e18",
+  "active": "4aec5c34597f954b",
   "lastOpenFiles": [
-    "IR/Lecture 6.md",
     "IR/Blocked storage.md",
-    "IR/Lecture 7.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Dictionary as a String.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Lecture 6.md",
+    "BWA/6 - Clustering in Approximation-Stable Instances.md",
+    "BWA/7 - Clustering in Pertubation-Stable Instances.md",
+    "IR/Lecture 7.md",
     "IR/img/IR_dictionary_as_a_string_1.png",
     "IR/Dictionary storage.md",
-    "IR/Index Compression.md",
-    "AR/2 - Power Law.md",
-    "NLP/Lecture 9.md"
+    "IR/Index Compression.md"
   ]
 }
