@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Index Compression.md"
+                "file": "IR/0 - Information Retrieval.md"
               }
             }
           },
@@ -148,8 +148,8 @@
   },
   "active": "b048df580460081f",
   "lastOpenFiles": [
-    "AR/2 - Power Law.md",
     "IR/Index Compression.md",
+    "AR/2 - Power Law.md",
     "IR/Lecture 6.md",
     "IR/0 - Information Retrieval.md",
     "NLP/Lecture 9.md",

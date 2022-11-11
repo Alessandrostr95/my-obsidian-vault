@@ -94,3 +94,11 @@ Importante osservare che tale distribuzione segue una [[2 - Power Law#Power Law|
 Infatti applicando il grafico **log-log** avremo $$\log{\text{cf}_i} = \log{c} - \log{i}$$
 ![](./img/IR_index_compression_2.png)
 
+------
+## Dictionary compression
+- [[Dictionary as a String]]
+- [[Blocked storage]]
+
+## Postings file compression
+- [[Variable byte codes]]
+- [[Gamma code]]
