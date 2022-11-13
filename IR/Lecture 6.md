@@ -129,7 +129,7 @@ Per parole poco frequenti, per esempio **arachnocentric**, ci saranno pochi docu
 Ma per termini estremamente frequenti come **the**?
 
 ### Gap encoding
-Invece di salvare i documenti in cui appaiono, usiamo il **gap** tra i doc id, così per i termini estramente frequenti avremo numeri molto piccoli
+Invece di salvare i documenti in ordine cui appaiono, usiamo il **gap** tra i doc id, così per i termini estramente frequenti avremo numeri molto piccoli
 -> 33,47,154,159,202...
 -> 33,14,107,5,43...
 

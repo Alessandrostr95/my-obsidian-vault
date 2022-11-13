@@ -49,5 +49,6 @@ tags:
 		- [[Front Coding]]
 	- [[Index Compression#Postings file compression|Postings file compression]]
 		- [[Gap encoding]]
-		- [[Variable byte codes]]
+		- [[Unary code]]
 		- [[Gamma code]]
+		- [[Variable byte codes]]

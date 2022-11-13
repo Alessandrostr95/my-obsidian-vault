@@ -1,0 +1,1 @@
+Se $G$ è il valore **medio** dei gap, allora l'ideale sarebbe usare in **media** $\sim\log_2{G}$ bits.
