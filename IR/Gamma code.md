@@ -17,7 +17,7 @@ Si può dimostrare che tale codifica è **ottima** perché:
 - con meno di $\log_2{G}$ bit ho **perdita di informazione**.
 - il fattore $2$ è **necessario** per sapere quanto è lunga una codifica.
 
-number | length | offset | $\gamma$-code
+**number** | **length** | **offset** | $\gamma$-**code**
 ---|---|---|---
 0 | | | none
 1 | 0 | | 0

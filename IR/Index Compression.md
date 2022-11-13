@@ -134,3 +134,6 @@ Si può fare di meglio.
 - [[Unary code]]
 - [[Gamma code]]
 - [[Variable byte codes]]
+
+# RCV1 compression summary
+![](./img/IR_index_compression_3.png)
