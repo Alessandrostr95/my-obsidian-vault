@@ -127,7 +127,9 @@ Il nostro obiettivo è però usare **meno** di 20 bit per docID.
 La prima osservazione è che termini come `arachnocentric` appaiono "*una volta su un milione*" nella mia collezione, diciamo di 1.000.000 di documenti.
 Perciò $\lceil \log_2{1.000.000} \rceil = 20$ bits mi vanno bene per rappresentare l'unico docID in cui il termine `arachnocentric` appare.
 
-Invece il termine `the` appare potenzialmente in **ogni** documento, perciò la sua posting lists sarà grande $1.000.000 \times 20bits = 2MB$ (troppo dispendioso!). 
+Invece il termine `the` appare potenzialmente in **ogni** documento, perciò la sua posting lists sarà grande $1.000.000 \times 20bits = 2MB$ (troppo dispendioso!).
+Si può fare di meglio.
 
+- [[Gap encoding]]
 - [[Variable byte codes]]
 - [[Gamma code]]

@@ -48,5 +48,6 @@ tags:
 		- [[Blocked storage]]
 		- [[Front Coding]]
 	- [[Index Compression#Postings file compression|Postings file compression]]
+		- [[Gap encoding]]
 		- [[Variable byte codes]]
 		- [[Gamma code]]

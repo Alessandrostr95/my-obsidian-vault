@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/0 - Information Retrieval.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "13cb267d8e27a32c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Gap encoding.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/Gap encoding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Index Compression.md"
+                "file": "IR/Gap encoding.md"
               }
             }
           },
@@ -134,13 +147,13 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "1627abfecfdf0225",
+  "active": "13cb267d8e27a32c",
   "lastOpenFiles": [
     "IR/0 - Information Retrieval.md",
+    "IR/Index Compression.md",
+    "IR/Lecture 6.md",
     "BWA/8 - Exact Recovery in Stable Cut Instances.md",
     "IR/Lecture 4.md",
-    "IR/Lecture 6.md",
-    "IR/Index Compression.md",
     "IR/Index construction.md",
     "IR/Front Coding.md",
     "IR/Binary Term-Document Incidence Matrix.md",
