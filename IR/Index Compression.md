@@ -131,5 +131,6 @@ Invece il termine `the` appare potenzialmente in **ogni** documento, perciò la 
 Si può fare di meglio.
 
 - [[Gap encoding]]
-- [[Variable byte codes]]
+- [[Unary code]]
 - [[Gamma code]]
+- [[Variable byte codes]]
