@@ -1,0 +1,17 @@
+Siano $A,B$ due **insiemi**.
+Il **coefficente di Jaccard** è definito come $$J(A,B) = \frac{\vert A \cap B \vert}{\vert A \cup B \vert}$$
+Il coefficiente di Jaccard restituisce sempre un numero compreso tra 0 ed 1, perciò possiamo usarlo come funzione di ordinamento per il risultato della nostra query.
+
+Infatti abbiamo che:
+- $J(A,B) = 0 \implies$ sono totalmente differenti.
+- $J(A,B) = 1 \implies$ sono uguali.
+
+Se poniamo $A = \text{query}$ e $B = \text{document}$, possiamo misurare la "*rilevanza*" del documento $B$ rispetto alla query $A$.
+
+```ad-important
+La misura di *Jaccard* non è una **metrica**, in quanto non vale che:
+- $J(A,A) = 0$
+- $J(A,B) = J(A,X) + J(X,B)$ (**disugagliaza triangolare**)
+
+Abbiamo come proprietà solo la **simmetria**.
+```

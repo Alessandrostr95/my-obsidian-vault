@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/Lecture 7.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "41305919aaeb2262",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Jaccard coefficient.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Index Compression.md",
+                "file": "IR/Jaccard coefficient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Index Compression.md"
+                "file": "IR/Jaccard coefficient.md"
               }
             }
           },
@@ -134,17 +147,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "23a58c96801ffcd4",
+  "active": "41305919aaeb2262",
   "lastOpenFiles": [
-    "IR/Index Compression.md",
+    "IR/Lecture 7.md",
+    "IR/Jaccard coefficient.md",
+    "IR/Scoring, term weighting & the vector space model.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Index Compression.md",
     "IR/Gamma code.md",
     "IR/Lecture 6.md",
     "IR/Variable byte codes.md",
     "IR/Unary code.md",
-    "IR/Gap encoding.md",
-    "BWA/8 - Exact Recovery in Stable Cut Instances.md",
-    "IR/Lecture 4.md",
-    "IR/Index construction.md"
+    "IR/Gap encoding.md"
   ]
 }

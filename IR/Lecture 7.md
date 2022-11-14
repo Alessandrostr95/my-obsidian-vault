@@ -26,7 +26,7 @@ Per il [[#^b46390|punto 1]] vogliamo che il motore dia uno **score** *di rilevan
 
 Tale *score* deve essere un **indice di rilevanza** del documento rispetto alla query.
 
-Per esempio, se serco un termine `X` mi aspetto che più in documento appare il termine
+Per esempio, se cerco un termine `X` mi aspetto che più in documento esso appare più il documento è rilevante ai fini della query. 
 
 ## Jaccard Coefficient
 Siano $A,B$ due **insiemi**.
