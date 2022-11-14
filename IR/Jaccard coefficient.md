@@ -29,8 +29,8 @@ Generalmente la frequenza di un documento in un documento è una sorta di **indi
 > Se la dimensione è lastessa, allora avremo che $$J(B,D_1) = J(B,D_2)$$ anche se in teoria il documento $D_2$ è più significativo.
 
 Un altro problema è la **dimensione** del documento.
-Più un documento è grande, più esso verrà **penalizato** nello scoring.
+Infatti più un documento è grande, più esso verrà **penalizato** nello scoring.
 
-Un accorgimento è quindi quello di normalizzare per la **radice** dell'unione degli insiemi.
+Un accorgimento è quindi quello di normalizzare per la **radice** dell'unione degli insiemi, così da penalizzare un po' meno i documenti grandi.
 
 $$J'(A,B) = \frac{\vert A \cap B \vert}{\sqrt{\vert A \cup B \vert}}$$
