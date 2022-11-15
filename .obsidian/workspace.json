@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "c5cc9a361e22f81d",
+        "id": "4af09324e757b504",
         "type": "tabs",
         "children": [
           {
-            "id": "fea9da8beb872508",
+            "id": "4e13ee3708e287dd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "IR/Lecture 9.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "IR/Lecture 9.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "IR/Lecture 9.md"
+              }
             }
           },
           {
@@ -127,12 +134,12 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "fea9da8beb872508",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "IR/Lecture 7.md",
     "IR/Scoring, term weighting & the vector space model.md",
     "IR/0 - Information Retrieval.md",
     "IR/TD-IDF weight.md",
-    "IR/Lecture 7.md",
     "IR/Bag of words model - Term Frequency tf.md",
     "IR/Jaccard coefficient.md",
     "IR/Index Compression.md",
