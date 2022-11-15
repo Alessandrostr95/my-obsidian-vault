@@ -26,3 +26,5 @@ Tale *score* deve essere definito in modo tale da rappresentare una sorta di **i
 Per esempio, se cerco un termine `X` mi aspetto che più in documento appare il termine
 
 - [[Jaccard coefficient]]
+- [[Bag of words model - Term Frequency tf]]
+- [[TD-IDF weight]]

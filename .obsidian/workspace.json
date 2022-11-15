@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "97f2a22ea54aa24e",
+        "id": "c5cc9a361e22f81d",
         "type": "tabs",
         "children": [
           {
-            "id": "23a58c96801ffcd4",
+            "id": "fea9da8beb872508",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Lecture 7.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "29fae0fcb505e3f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Bag of words model - Term Frequency tf.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Bag of words model - Term Frequency tf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,9 +109,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "IR/Bag of words model - Term Frequency tf.md"
-              }
+              "state": {}
             }
           },
           {
@@ -147,17 +127,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "29fae0fcb505e3f8",
+  "active": "fea9da8beb872508",
   "lastOpenFiles": [
+    "IR/Scoring, term weighting & the vector space model.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/TD-IDF weight.md",
     "IR/Lecture 7.md",
     "IR/Bag of words model - Term Frequency tf.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Jaccard coefficient.md",
-    "IR/Scoring, term weighting & the vector space model.md",
     "IR/Index Compression.md",
     "IR/Gamma code.md",
     "IR/Lecture 6.md",
-    "IR/Variable byte codes.md",
-    "IR/Unary code.md"
+    "IR/Variable byte codes.md"
   ]
 }

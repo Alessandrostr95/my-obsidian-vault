@@ -55,3 +55,4 @@ tags:
 - [[Scoring, term weighting & the vector space model]]
 	- [[Jaccard coefficient]]
 	- [[Bag of words model - Term Frequency tf]]
+	- [[TD-IDF weight]]
