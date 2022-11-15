@@ -80,3 +80,30 @@ La rilevanza del mio rank è: $r_1 + r_2 + ... + r_n$
 
 Visto che man mano che si va avanti nel rank le persone perdono interesse, possiamo pesare in maniera inversa i valori.
 $$\sum_{i=1}^{n}\frac{r_i}{\log_2{i+1}}$$
+oppure in maniera simile
+$$r_1 + \frac{r_2}{\log_2{2}} + \frac{r_3}{\log_2{3}} + ... + \frac{r_n}{\log_2{n}}  =r_1 + \sum_{i=2}^{n}\frac{r_i}{\log_2{i}}$$
+
+In questo modo, il ranking che massimizza il DCG è quello che ordina in senso **non crescente** i documenti in ordine di apporto di rilevanza.
+
+```ad-note
+I valori di rilevanza dei documenti è calcolato a priori da persone che danno un valore di rilevanza ai documenti.
+```
+
+----
+# Mean Reciprocal Rank
+Ho una sola possibile soluzione corretta, e devo restituire un solo documento.
+Ordiniamo i documenti in ordine di rilevanza, dove al primo posto ci sta la più rilevante e all'ultimo quella meno.
+
+Se restituisco come documento la pagina in posizione $k$, il suo valore sarà $1/k$.
+Facendo la media tra i risultati di diferrenti query, calcolo la qualità del motore.
+
+-------
+# NO ESONERO DA QUI IN POI
+# Human Judgments are
+Google aggiunge ulteriori pesi.
+Per esempio considera quanti click su una pagina gli utenti fanno a seguito di un risultato di una query, adattando così ogni volta i risultati.
+
+Una seconda tecnica è stata quella di usare degli occhiali per vedere in quale area gli utenti guardavano di più sullo schermo.
+Premiando così le pagine in quelle aree.
+Infatti c'è un bias nei motori di ricerca, perché in genere le persone si fidano troppo dei motori e si soffermamo troppo nelle prime 2 o 3, compromettendo così la qualità dell'analisi del motore.
+Una soluzione è stato quello di proporre i risultati disposti in maniera casuale.
