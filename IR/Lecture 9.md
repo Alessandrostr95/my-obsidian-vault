@@ -49,3 +49,34 @@ Esercizio, Caclolare la F-measure:
 - $p,q = 0.8, 0.4$
 - $p,q = 0.65, 0.55$
 
+-----
+# Rank-Based Measures
+[VEDI]
+
+## Recall-Precision Graph
+## Breakeven Point
+Definisco una grafico precision e racall, dati due risultati di una query.
+
+Dopodiche le vado a interpolare, scegliendo sempre il valore massimo valore.
+
+Sommando i differenti valori, su un numero elevato di query, dei differenti grafici interpolati.
+
+-----
+# Mean Avarage Precision
+Metodo che funziona quando non ho modo di calcolare la precision e la recal in maniera diretta.
+
+
+-----
+# Discounted Cumulative Gain
+Prima abbiamo visto delle misure di rilevanza **binarie**.
+Noi vorremo invece delle misure a più **dimensione** di rilevanza.
+
+Due assunzioni:
+- La rilevanza dipende dalla posizione in rank.
+- Però in genere le persone sono pigre, e quindi man mano che si scende di rank si perde interesse.
+
+Siano le pagine $1,2, ..., n$ con rilevanza $r_1, ..., r_n$.
+La rilevanza del mio rank è: $r_1 + r_2 + ... + r_n$
+
+Visto che man mano che si va avanti nel rank le persone perdono interesse, possiamo pesare in maniera inversa i valori.
+$$\sum_{i=1}^{n}\frac{r_i}{\log_2{i+1}}$$
