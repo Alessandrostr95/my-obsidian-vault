@@ -53,3 +53,5 @@ tags:
 		- [[Gamma code]]
 		- [[Variable byte codes]]
 - [[Scoring, term weighting & the vector space model]]
+	- [[Jaccard coefficient]]
+	- [[Bag of words model]]

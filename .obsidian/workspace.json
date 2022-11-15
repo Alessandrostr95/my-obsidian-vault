@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "41305919aaeb2262",
+            "id": "29fae0fcb505e3f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Jaccard coefficient.md",
+                "file": "IR/Bag of words model.md",
                 "mode": "source",
                 "source": false
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Jaccard coefficient.md",
+                "file": "IR/Bag of words model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Jaccard coefficient.md"
+                "file": "IR/Bag of words model.md"
               }
             }
           },
@@ -147,17 +147,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "41305919aaeb2262",
+  "active": "29fae0fcb505e3f8",
   "lastOpenFiles": [
     "IR/Lecture 7.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Bag of words model.md",
     "IR/Jaccard coefficient.md",
     "IR/Scoring, term weighting & the vector space model.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Index Compression.md",
     "IR/Gamma code.md",
     "IR/Lecture 6.md",
     "IR/Variable byte codes.md",
-    "IR/Unary code.md",
-    "IR/Gap encoding.md"
+    "IR/Unary code.md"
   ]
 }
