@@ -54,4 +54,4 @@ tags:
 		- [[Variable byte codes]]
 - [[Scoring, term weighting & the vector space model]]
 	- [[Jaccard coefficient]]
-	- [[Bag of words model]]
+	- [[Bag of words model - Term Frequency tf]]
