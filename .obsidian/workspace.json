@@ -13,25 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/TD-IDF weight.md",
+                "file": "IR/Scoring, term weighting & the vector space model.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e46adddfbaf42945",
+            "id": "80c3e9170a3fd2c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 7.md",
+                "file": "IR/Vector Space Model.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/TD-IDF weight.md",
+                "file": "IR/Vector Space Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/TD-IDF weight.md"
+                "file": "IR/Vector Space Model.md"
               }
             }
           },
@@ -134,17 +135,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "8f441e26da776bc6",
+  "active": "80c3e9170a3fd2c1",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "IR/Vector Space Model.md",
+    "IR/Scoring, term weighting & the vector space model.md",
+    "IR/TD-IDF weight.md",
     "IR/Lecture 7.md",
     "IR/Inverted Index.md",
-    "IR/TD-IDF weight.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Lecture 9.md",
     "IR/Lecture 4.md",
     "NLP/Lecture 9.md",
-    "IR/Scoring, term weighting & the vector space model.md",
-    "IR/Bag of words model - Term Frequency tf.md",
-    "IR/Jaccard coefficient.md"
+    "IR/Bag of words model - Term Frequency tf.md"
   ]
 }

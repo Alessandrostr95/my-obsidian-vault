@@ -28,3 +28,11 @@ Per esempio, se cerco un termine `X` mi aspetto che più in documento appare il 
 - [[Jaccard coefficient]]
 - [[Bag of words model - Term Frequency tf]]
 - [[TD-IDF weight]]
+
+Quantity | Symbol | Definitionterm
+---|---|---
+frequency | $\text{tf}_{t,d}$ | number of occurrences of $t$ in $d$
+document frequency | $\text{df}_{t}$ | number of documents in the collection that $t$ occurs in
+collection frequency | $\text{cf}_{t}$ | total number of occurrences of $t$ in the collection
+
+- [[Vector Space Model]]

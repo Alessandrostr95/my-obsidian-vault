@@ -57,3 +57,4 @@ tags:
 	- [[Jaccard coefficient]]
 	- [[Bag of words model - Term Frequency tf]]
 	- [[TD-IDF weight]]
+	- [[Vector Space Model]]
