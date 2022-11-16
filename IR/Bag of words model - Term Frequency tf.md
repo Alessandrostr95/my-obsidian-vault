@@ -5,7 +5,7 @@ Per rappresentare la collezione usiamo una semplice [[Binary Term-Document Incid
 Perciò, sia la **term frequency** $\text{tf}_{t,d}$ il numero di volte in cui il termine $t$ appare nel documento $d$: la sua **frequenza**.
 
 Definiamo una matrice $\text{terms} \times \text{docs}$, dove nella cella $(i,j)$ è presente il valore $\text{tf}_{i,j}$.
-Questa matrice è anche detta **Count Matrix** o **Term-Frequency Matrix**
+Questa matrice è anche detta **Count Matrix** o **Term-Frequency Matrix** ^6f3674
 
 ![](./img/IR_bag_of_word_1.png)
 

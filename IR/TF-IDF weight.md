@@ -27,5 +27,6 @@ Si preferisce applicare una trasformazione non lineare a $N/\text{df}_t$ per ave
 A questo punto definiamo il **peso** di un termine $t$ rispetto a un documento $d$ combinando la sua [[Bag of words model - Term Frequency tf|term frequency]] e la sua [[#^3ca620|informativeness]]
 $$w_{t,d} = (1 + \log{(\text{tf}_{t,d}})) \cdot \log{ \left( \frac{N}{\text{df}_t} \right)} = \text{tf-weight} \times \text{idf-weight}$$
 
-
-Possiamo quindi definire una **score matrix** dove le entri saranno $w_{i,j}$, dove $i$ è un termine e $j$ è un docuemnto.
+Tale valore $w_{t,d}$ è anche noto come **tf-idf weight**.
+- tf = *term frequency*
+- idf = *informative document frequency*

@@ -27,7 +27,7 @@ Per esempio, se cerco un termine `X` mi aspetto che più in documento appare il 
 
 - [[Jaccard coefficient]]
 - [[Bag of words model - Term Frequency tf]]
-- [[TD-IDF weight]]
+- [[TF-IDF weight]]
 
 Quantity | Symbol | Definitionterm
 ---|---|---

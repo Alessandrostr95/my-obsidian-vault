@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Scoring, term weighting & the vector space model.md",
+                "file": "IR/Bag of words model - Term Frequency tf.md",
                 "mode": "source",
                 "source": false
               }
@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0f52e84bf146da01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/TF-IDF weight.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Vector Space Model.md",
+                "file": "IR/TF-IDF weight.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Vector Space Model.md"
+                "file": "IR/TF-IDF weight.md"
               }
             }
           },
@@ -135,17 +147,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "80c3e9170a3fd2c1",
+  "active": "0f52e84bf146da01",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Vector Space Model.md",
+    "IR/Bag of words model - Term Frequency tf.md",
     "IR/Scoring, term weighting & the vector space model.md",
-    "IR/TD-IDF weight.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/TF-IDF weight.md",
     "IR/Lecture 7.md",
     "IR/Inverted Index.md",
     "IR/Lecture 9.md",
     "IR/Lecture 4.md",
-    "NLP/Lecture 9.md",
-    "IR/Bag of words model - Term Frequency tf.md"
+    "NLP/Lecture 9.md"
   ]
 }
