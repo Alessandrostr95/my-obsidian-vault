@@ -30,18 +30,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "24eda892698ecbbe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Inverted Index.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -150,8 +138,8 @@
   "lastOpenFiles": [
     "IR/Lecture 7.md",
     "IR/Inverted Index.md",
-    "IR/0 - Information Retrieval.md",
     "IR/TD-IDF weight.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Lecture 9.md",
     "IR/Lecture 4.md",
     "NLP/Lecture 9.md",
