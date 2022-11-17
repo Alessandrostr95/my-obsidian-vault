@@ -26,3 +26,5 @@ tags:
 - [[NLP/Lecture 5|Lecture 5]]
 - [[NLP/Lecture 6|Lecture 6]]
 - [[NLP/Lecture 7|Lecture 7]]
+- [[NLP/Lecture 9|Lecture 9]]
+- [[Lecture 10|Lecture 10]]

@@ -4,35 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "7c3a55fb6071c409",
+        "id": "be084185e1f6cb54",
         "type": "tabs",
         "children": [
           {
-            "id": "5b573f120b68eb7b",
+            "id": "b40a721561222a0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 9.md",
+                "file": "IR/Vector Space Model.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6b74fba04ad85150",
+            "id": "86b14a878e2f97a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 10.md",
+                "file": "IR/TF-IDF weight.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5
+    "width": 358.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 10.md",
+                "file": "IR/Vector Space Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 10.md"
+                "file": "IR/Vector Space Model.md"
               }
             }
           },
@@ -135,17 +135,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "6b74fba04ad85150",
+  "active": "b40a721561222a0f",
   "lastOpenFiles": [
-    "NLP/Lecture 9.md",
-    "IR/Lecture 9.md",
-    "IR/Vector Space Model.md",
-    "IR/Bag of words model - Term Frequency tf.md",
     "IR/TF-IDF weight.md",
+    "IR/Bag of words model - Term Frequency tf.md",
+    "IR/Vector Space Model.md",
     "IR/0 - Information Retrieval.md",
+    "NLP/Lecture 10.md",
+    "NLP/Lecture 9.md",
+    "NLP/0 - Natural Language Processing.md",
+    "IR/Lecture 9.md",
     "IR/Scoring, term weighting & the vector space model.md",
-    "IR/Lecture 7.md",
-    "IR/Inverted Index.md",
-    "IR/Lecture 4.md"
+    "IR/Lecture 7.md"
   ]
 }

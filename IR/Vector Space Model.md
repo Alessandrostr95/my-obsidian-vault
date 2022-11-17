@@ -68,3 +68,58 @@ $$\text{SIM}(q,d) = \cos{(\text{angle}(q,d))} = \frac{q}{\Vert q \Vert} \cdot \f
 
 Tale misura di similitudine è anche detta **cosine similarity**.
 ![](./img/IR_vector_space_model_3.png)
+
+
+```julia
+import LinearAlgebra: normalize
+global COLLECTION
+global K = 10 # number of result's document
+
+function tf_score(term::String, doc::Union{Document, String, Vecotr{String}})::Float64
+	if count(term, doc) > 0
+		1.0 + log10(count(term, doc))
+	else
+		0.0
+	end
+end
+
+# ovviamente è pià efficiente **precomputare** gli informative document freqeuncy dei vari termini
+function idf_score(term::String, collection::Collection)::Float64
+	N = length(collection)
+	doc_frequency = findall(doc -> term ∈ doc, collection) |> length
+	log10(N/doc_frequency)
+end
+
+function tf_idf_weights(term::String, document::Union{Document, String, Vecotr{String}})
+	global COLLECTION
+	tf_score(term, document) * idf_score(term, COLLECTION)
+end
+
+function as_vecotr(d::Union{Document, String, Vecotr{String}})::Vector{Float64}
+	global COLLECTION
+	result = Float64[]
+	for term ∈ terms(COLLECTION)
+		add!(result, tf_idf_weights(term, d))
+	end
+	result
+end
+
+function cosine_sim(p₁::T, p₂::T)::Float64 where T <: Vector{Float64}
+	p₁ = normalize(p₁)
+	p₂ = normalize(p₂)
+	sum(p₁ .* p₂)
+end
+
+function CosineScore(query::Union{String, Vecotr{String}})
+	global COLLECTION, K
+	query_vec = as_vecotr(query)
+	score = Tuple{Document, Float64}[]
+	for document ∈ COLLECTION
+		doc_vec = as_vecotr(document)
+		s = cosine_sim(doc_vec, query_vec)
+		push!(score, (document, s))
+	end
+	sort!(score, by = x -> x[2], rev=true) # sort by score
+	return score[1:K]
+end
+```
