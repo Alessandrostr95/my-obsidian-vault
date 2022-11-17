@@ -20,11 +20,16 @@ Vedi [CYK](https://www.xarg.org/tools/cyk-algorithm/)
 	1 |__|
 	   a  b  c  a  a 
 """
-for d=1:5
-	for i=d:5
-		cell = [i, i-d]
-		for s=(i-1):-1:(j+1)
-			populate_cell!(cell, [i,s], [s,j])
+function CYK(n)
+	for d=1:n
+		for i=d:n
+			j = i-d
+			print("($i, $j) -> ")
+			for s=(i-1):-1:(j+1)
+				# do stuff
+				print("[($i, $s)#($s, $j)], ")
+			end
+			println()
 		end
 	end
 end
