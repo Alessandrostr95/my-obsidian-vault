@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e73332ea450115fb",
+        "id": "8acb5b5f959695c2",
         "type": "tabs",
         "children": [
           {
-            "id": "88e9db01184e48b4",
+            "id": "5fd9366e22e1e26e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/0 - Information Retrieval.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3549397fbcdf6135",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Variants of weighting.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,8 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5,
-    "collapsed": true
+    "width": 358.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -100,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Variants of weighting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "IR/Variants of weighting.md"
-              }
+              "state": {}
             }
           },
           {
@@ -136,8 +115,10 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "3549397fbcdf6135",
+  "active": "5fd9366e22e1e26e",
   "lastOpenFiles": [
+    "IR/Variants of weighting.md",
+    "IR/Scoring, term weighting & the vector space model.md",
     "IR/0 - Information Retrieval.md",
     "IR/TF-IDF weight.md",
     "IR/Vector Space Model.md",
@@ -145,8 +126,6 @@
     "NLP/Lecture 10.md",
     "NLP/Lecture 9.md",
     "NLP/0 - Natural Language Processing.md",
-    "IR/Lecture 9.md",
-    "IR/Scoring, term weighting & the vector space model.md",
-    "IR/Lecture 7.md"
+    "IR/Lecture 9.md"
   ]
 }

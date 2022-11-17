@@ -36,3 +36,4 @@ document frequency | $\text{df}_{t}$ | number of documents in the collection tha
 collection frequency | $\text{cf}_{t}$ | total number of occurrences of $t$ in the collection
 
 - [[Vector Space Model]]
+- [[Variants of weighting]]
