@@ -58,3 +58,4 @@ tags:
 	- [[Bag of words model - Term Frequency tf]]
 	- [[TF-IDF weight]]
 	- [[Vector Space Model]]
+	- [[Variants of weighting]]
