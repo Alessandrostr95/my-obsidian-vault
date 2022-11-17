@@ -18,7 +18,7 @@ Vedi [CYK](https://www.xarg.org/tools/cyk-algorithm/)
 	3 |__|__|__|
 	2 |__|__|
 	1 |__|
-	   a  b  c  a  a 
+	    a  b  c  a  a 
 """
 function CYK(n)
 	for d=1:n
