@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Rank-Based Measures.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Rank-Based Measures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "IR/Rank-Based Measures.md"
               }
             }
           },
@@ -137,8 +137,8 @@
   },
   "active": "112e483f37bf9b5f",
   "lastOpenFiles": [
-    "IR/Evaluation of IR systems.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Evaluation of IR systems.md",
     "IR/Lecture 9.md",
     "IR/Set Based Measures.md",
     "NLP/Lecture 10.md",
