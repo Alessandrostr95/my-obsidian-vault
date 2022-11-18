@@ -24,4 +24,5 @@ title: Esempio
 ```
 
 -----
-- [[Precision, Recall, Accuracy, Error, F-Measure]]
+- [[Set Based Measures]] (Precision, Recall, Accuracy, Error, F-Measure)
+- [[Rank-Based Measures]]

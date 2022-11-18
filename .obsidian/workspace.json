@@ -20,31 +20,19 @@
             }
           },
           {
-            "id": "2eb4f0c25ee70bd0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Evaluation of IR systems.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "112e483f37bf9b5f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Precision, Recall, Accuracy, Error, F-Measure.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5,
-    "collapsed": true
+    "width": 358.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -112,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Precision, Recall, Accuracy, Error, F-Measure.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Precision, Recall, Accuracy, Error, F-Measure.md"
+                "file": "IR/0 - Information Retrieval.md"
               }
             }
           },
@@ -150,10 +137,10 @@
   },
   "active": "112e483f37bf9b5f",
   "lastOpenFiles": [
-    "IR/Lecture 9.md",
     "IR/Evaluation of IR systems.md",
-    "IR/Precision, Recall, Accuracy, Error, F-Measure.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Lecture 9.md",
+    "IR/Set Based Measures.md",
     "NLP/Lecture 10.md",
     "IR/Variants of weighting.md",
     "IR/Scoring, term weighting & the vector space model.md",
