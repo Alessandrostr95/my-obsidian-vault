@@ -31,3 +31,17 @@ Consideriamo l'insieme $T = \lbrace T_1, ..., T_6 \rbrace$ l'insieme dei documen
 
 ------------
 # Accuracy and Error
+Altre due misure sono l'**accuracy** e l'**error**.
+- **Accuracy**: la frazione di pagine correttamente classificate come rilevanti e non rilevanti $$\text{acc} = \frac{tp + tn}{tp+tf+fp+fn}$$
+- **Error**: la frazione di pagine classificate in maniera sbagliata $$\text{err} = \frac{fp + fn}{tp+tf+fp+fn} = 1 - \text{acc}$$
+
+----------
+# F-Measure
+In genere è preferibile usare una sorta di **media** tra **precisione** e **recall**.
+Sia $P$ la precisione e $R$ la recall, .a **F-measure** usa una **media armonica** tra i duce valori $$F = \frac{1}{\alpha\frac{1}{P} + (1 - \alpha)\frac{1}{R}} = \frac{(\beta^2 + 1)PR}{\beta^2P + R}$$ dove $$\beta^2 = \frac{1-\alpha}{\alpha}$$
+Per esempio, per $\alpha = 1/2$ avremo $\beta^2 = 1$ e quindi
+$$F = \frac{1}{\frac{1}{2}(\frac{1}{P} + \frac{1}{R})} = \frac{2RP}{P + R}$$
+Quando $\alpha = 1/2$ è nota come **F1-measure**.
+
+![](./img/IR_precision_recall_1.png)
+
