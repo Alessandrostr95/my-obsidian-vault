@@ -1,6 +1,5 @@
 Fin ora abbiamo visto una serie di tecniche per la [[Index construction|costruzione]], [[Index Compression|compressione]] e [[Scoring, term weighting & the vector space model|scoring]] di un motore di IR.
 
-
 Una domanda lecita è:
 
 > Quale combinazione di tecniche è meglio usare, possibilmente rispetto alle mie esigenze?
@@ -24,3 +23,5 @@ title: Esempio
 5. Come faccio a valutare la qualità della risposta? Il mio risultato è abbastanza "*azzeccato*"?
 ```
 
+-----
+- [[Precision, Recall, Accuracy, Error, F-Measure]]

@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "112e483f37bf9b5f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Precision, Recall, Accuracy, Error, F-Measure.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -83,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5
+    "width": 358.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -99,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Evaluation of IR systems.md",
+                "file": "IR/Precision, Recall, Accuracy, Error, F-Measure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Evaluation of IR systems.md"
+                "file": "IR/Precision, Recall, Accuracy, Error, F-Measure.md"
               }
             }
           },
@@ -135,17 +148,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "2eb4f0c25ee70bd0",
+  "active": "112e483f37bf9b5f",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Evaluation of IR systems.md",
     "IR/Lecture 9.md",
+    "IR/Precision, Recall, Accuracy, Error, F-Measure.md",
+    "IR/0 - Information Retrieval.md",
     "NLP/Lecture 10.md",
     "IR/Variants of weighting.md",
     "IR/Scoring, term weighting & the vector space model.md",
     "IR/TF-IDF weight.md",
     "IR/Vector Space Model.md",
-    "IR/Bag of words model - Term Frequency tf.md",
-    "NLP/Lecture 9.md"
+    "IR/Bag of words model - Term Frequency tf.md"
   ]
 }
