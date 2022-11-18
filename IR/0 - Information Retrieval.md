@@ -59,3 +59,4 @@ tags:
 	- [[TF-IDF weight]]
 	- [[Vector Space Model]]
 	- [[Variants of weighting]]
+- [[Evaluation of IR systems]]

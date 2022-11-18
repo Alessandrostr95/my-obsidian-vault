@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "8acb5b5f959695c2",
+        "id": "7c4db34ad2e00f81",
         "type": "tabs",
         "children": [
           {
-            "id": "5fd9366e22e1e26e",
+            "id": "36c460e9bf5048d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 10.md",
+                "file": "IR/Lecture 9.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2eb4f0c25ee70bd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Evaluation of IR systems.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 10.md",
+                "file": "IR/Evaluation of IR systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 10.md"
+                "file": "IR/Evaluation of IR systems.md"
               }
             }
           },
@@ -122,17 +135,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "5fd9366e22e1e26e",
+  "active": "2eb4f0c25ee70bd0",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "IR/Evaluation of IR systems.md",
+    "IR/Lecture 9.md",
+    "NLP/Lecture 10.md",
     "IR/Variants of weighting.md",
     "IR/Scoring, term weighting & the vector space model.md",
-    "IR/0 - Information Retrieval.md",
     "IR/TF-IDF weight.md",
     "IR/Vector Space Model.md",
     "IR/Bag of words model - Term Frequency tf.md",
-    "NLP/Lecture 10.md",
-    "NLP/Lecture 9.md",
-    "NLP/0 - Natural Language Processing.md",
-    "IR/Lecture 9.md"
+    "NLP/Lecture 9.md"
   ]
 }
