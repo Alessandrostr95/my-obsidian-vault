@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7c4db34ad2e00f81",
+        "id": "e23780f1373e9ba8",
         "type": "tabs",
         "children": [
           {
-            "id": "36c460e9bf5048d4",
+            "id": "45eef67a5cdc8fa7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 9.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "112e483f37bf9b5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Rank-Based Measures.md",
+                "file": "NLP/Lecture 11.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Rank-Based Measures.md",
+                "file": "NLP/Lecture 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Rank-Based Measures.md"
+                "file": "NLP/Lecture 11.md"
               }
             }
           },
@@ -135,17 +122,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "112e483f37bf9b5f",
+  "active": "45eef67a5cdc8fa7",
   "lastOpenFiles": [
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/Lecture 11.md",
+    "NLP/Lecture 10.md",
+    "IR/Rank-Based Measures.md",
     "IR/0 - Information Retrieval.md",
     "IR/Evaluation of IR systems.md",
     "IR/Lecture 9.md",
     "IR/Set Based Measures.md",
-    "NLP/Lecture 10.md",
     "IR/Variants of weighting.md",
-    "IR/Scoring, term weighting & the vector space model.md",
-    "IR/TF-IDF weight.md",
-    "IR/Vector Space Model.md",
-    "IR/Bag of words model - Term Frequency tf.md"
+    "IR/Scoring, term weighting & the vector space model.md"
   ]
 }
