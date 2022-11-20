@@ -136,15 +136,15 @@
   },
   "active": "4ad8f7271c5c9cde",
   "lastOpenFiles": [
-    "IR/Set Based Measures.md",
-    "IR/Rank-Based Measures.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Rank-Based Measures.md",
+    "IR/Single-pass in-memory indexing.md",
+    "IR/Set Based Measures.md",
     "IR/Blocked sort-based indexing.md",
     "NLP/Lecture 11.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/Lecture 10.md",
     "IR/Evaluation of IR systems.md",
-    "IR/Lecture 9.md",
-    "IR/Variants of weighting.md"
+    "IR/Lecture 9.md"
   ]
 }

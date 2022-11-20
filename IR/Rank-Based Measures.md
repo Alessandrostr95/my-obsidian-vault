@@ -37,7 +37,7 @@ In pratica la funzione $P(r)$ definisce il valore di *precision* rispetto a qual
 Otterremo così un grafico **monotono non crescente**.
 
 Produciamo questo grafico per ogni query (nel nostro caso 2) e facciamo la **media**.
-Otterremo quindi una descrizione del mostro motore di IR tramite una **curva** (detta **curva precision/recall**) che rappresenta come **precision** e **racall** sono tra loro **bilanciate** nel notro motore di IR.
+Otterremo quindi una descrizione del mostro motore di IR tramite una **curva** (detta **curva precision/recall**) che rappresenta come **precision** e **racall** sono tra loro **bilanciate** nel notro motore di IR. ^656137
 
 ```ad-info
 Ricoridamo che **precision** e **recall** sono mutuamente bilanciate.
@@ -45,10 +45,32 @@ Generalmente al crescere di una, l'altra diminuisce.
 ```
 
 
-![](./img/IR_precision_recall_graph_3.png)
+![](./img/IR_precision_recall_graph_3.png) ^1af0ab
+
+## Comparison among different IR Systems
+Grazie alla [[#^1af0ab|curva precision/recall]] possiamo mettere a confronto due differenti sistemi di IR (ovviamente testandoli sullo stesso insieme di documenti target e sulle stesse query).
+
+Per esempio possiamo mettere a confronto due sistemi di IR dove in uno viene usato lo [[Inverted Index#Stemming and Lemmatization|stemming]] mentre nell'altro no.
+![](./img/IR_precision_recall_graph_4.png)
+
+
+Come metodo di paragone potremmo usare il **breakeven point** delle due curve.
+Tale punto è il punto in cui la curva si interseca con la retta $\text{recall} = \text{precision}$.
+![](./img/IR_precision_recall_graph_5.png)
+
 
 ------
 # Mean Average Precision (MAP)
+Siano $D_1, ..., D_r$ i documenti rilevanti restituiti dopo una query.
+Consideriamo ora le loro rispettive **posizioni** $K_1, ..., K_r$ nel **ranking**, e calcoliamo i valori $P@K_1, P@K_2, ..., P@K_r$.
+
+Per calcolare la **precision media** di una query possiamo fare la **media** dei valori $P@K_1, P@K_2, ..., P@K_r$.
+$$\text{AvgPrecision} = (P@K_1 + P@K_2 + ... + P@K_r)\cdot \frac{1}{r}$$
+
+![](./img/IR_mean_avarage_precision_1.png)
+
+
+
 
 
 -------
