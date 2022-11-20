@@ -62,3 +62,4 @@ tags:
 - [[Evaluation of IR systems]]
 	- [[Set Based Measures]] (Precision, Recall, Accuracy, Error, F-Measure)
 	- [[Rank-Based Measures]]
+	- [[Beyond Binary Relevance]]

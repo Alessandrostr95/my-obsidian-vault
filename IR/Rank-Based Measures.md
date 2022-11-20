@@ -71,7 +71,4 @@ $$\text{AvgPrecision} = (P@K_1 + P@K_2 + ... + P@K_r)\cdot \frac{1}{r}$$
 Una unità di misura molto usata è la **MAP** (**Mean Avarage Precision**), dove si fa una **media** sulle differenti **avarage precision** delle query fatte per testare un sistema di IR.
 ![](./img/IR_mean_avarage_precision_2.png)
 
-
--------
-# Mean Reciprocal Rank (MRR)
-
+> *The **MAP** value for a test collection is the arithmetic mean of average precision values*

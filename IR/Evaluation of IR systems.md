@@ -10,7 +10,14 @@ Per rispondere a queste domande abbiamo bisogno di **misurare** la qualità del 
 Per fare ciò abbiamo bisogno di:
 1. Un **sottoinsieme** di documenti significativi per il mio **information need** su cui fare test. ^79484d
 2. Un insieme di **query** significative per il mio **information need**.
-3. Per valutare la qualità delle risposte alle query, abbiamo bisogno di **precomputare** (tramite degli annotatori *umani*) la **rilevanza** dei documenti nel punto [[#^79484d|(1)]] in base all'**user need**. 
+3. Per valutare la qualità delle risposte alle query, abbiamo bisogno di **precomputare** (tramite degli annotatori *umani*) la **rilevanza** dei documenti nel punto [[#^79484d|(1)]] in base all'**user need**. ^e22ebc
+
+L'etichettamento accennato nel punto [[#^e22ebc|(3)]] è anche noto come **gold standard**.
+Costruire un **gold standard** risulta dispendioso, in quano abbiamo bisogno dell'intervento umano.
+Per costruire un *gold standard* in genere si procede nel seguente modo: ^f2d730
+1. Si defisce una serie di query che soddisfano determinati **information needs**. Se voglio cercare come pulire una piscina una possibile query è `clear pool`.
+2. Si applicano le query al sistema di IR.
+3. Un gruppo di persone valuta, per ogni coppia `query-document` risultante se effettivamente tale documento è rilevante o meno rispetto alla query (**true** o **false**).
 
 Una volta ottenuto quello di cui abbiamo bisogno, possiamo valutare la qualità di un motore di IR tramite una serie di **banchmark**.
 
@@ -26,3 +33,4 @@ title: Esempio
 -----
 - [[Set Based Measures]] (Precision, Recall, Accuracy, Error, F-Measure)
 - [[Rank-Based Measures]]
+- [[Beyond Binary Relevance]]
