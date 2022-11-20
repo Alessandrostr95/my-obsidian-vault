@@ -245,6 +245,81 @@ Se utiliziamo come struttura dati un [Log-structured merge-tree](https://en.wiki
 
 ### Performace complessive
 Alla fine le operazioni più dispendiose ricadono nell'**ordinare** le coppie $\langle \text{term-ID} - \text{doc-ID} \rangle$.
+
+```txt
+# doc 1 - docID = 100
+Il cane di Antonio e il cane di Maria sono amici
+
+# doc 2 - docID = 200
+Antonio e Maria sono amici
+
+```
+```json
+// Dictionary term->termID
+{
+	"il": 1,
+	"cane": 2,
+	"di": 3,
+	"antonio": 4,
+	"e": 5,
+	"maria": 6,
+	"sono": 7,
+	"amici": 8
+}
+
+// Block
+[
+	(1, 100)
+	(2, 100)
+	(3, 100)
+	(4, 100)
+	(5, 100)
+	(1, 100)
+	(2, 100)
+	(3, 100)
+	(6, 100)
+	(7, 100)
+	(8, 100)
+	(4, 200)
+	(5, 200)
+	(6, 200)
+	(7, 200)
+	(8, 200)
+]
+
+// Sorted block
+[
+	(1, 100)
+	(1, 100)
+	(2, 100)
+	(2, 100)
+	(3, 100)
+	(3, 100)
+	(4, 100)
+	(4, 200)
+	(5, 100)
+	(5, 200)
+	(6, 100)
+	(6, 200)
+	(7, 100)
+	(7, 200)
+	(8, 100)
+	(8, 200)
+]
+
+// Inverted block
+[
+	1: [100]
+	2: [100]
+	3: [100]
+	4: [100, 200]
+	5: [100, 200]
+	6: [100, 200]
+	7: [100, 200]
+	8: [100, 200]
+]
+```
+
 Abbiamo visto che prima della fase di **inversione** ci sono esattamente $T$ coppie, perciò il costo sarà $$O(T\log{T})$$
 
 ### Svantaggi
