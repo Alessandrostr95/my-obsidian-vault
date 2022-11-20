@@ -66,11 +66,10 @@ Consideriamo ora le loro rispettive **posizioni** $K_1, ..., K_r$ nel **ranking*
 
 Per calcolare la **precision media** di una query possiamo fare la **media** dei valori $P@K_1, P@K_2, ..., P@K_r$.
 $$\text{AvgPrecision} = (P@K_1 + P@K_2 + ... + P@K_r)\cdot \frac{1}{r}$$
-
 ![](./img/IR_mean_avarage_precision_1.png)
 
-
-
+Una unità di misura molto usata è la **MAP** (**Mean Avarage Precision**), dove si fa una **media** sulle differenti **avarage precision** delle query fatte per testare un sistema di IR.
+![](./img/IR_mean_avarage_precision_2.png)
 
 
 -------
