@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "IR/Rank-Based Measures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "82cced6e50d6c314",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "IR/Set Based Measures.md",
                 "mode": "source",
                 "source": false
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Set Based Measures.md",
+                "file": "IR/Rank-Based Measures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Set Based Measures.md"
+                "file": "IR/Rank-Based Measures.md"
               }
             }
           },
@@ -124,15 +136,15 @@
   },
   "active": "4ad8f7271c5c9cde",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
+    "IR/Set Based Measures.md",
     "IR/Rank-Based Measures.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Blocked sort-based indexing.md",
     "NLP/Lecture 11.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/Lecture 10.md",
     "IR/Evaluation of IR systems.md",
     "IR/Lecture 9.md",
-    "IR/Set Based Measures.md",
     "IR/Variants of weighting.md"
   ]
 }
