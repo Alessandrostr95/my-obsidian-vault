@@ -30,11 +30,11 @@ Ovviamente per avere prestazioni accettabili, tale agloritmo deve **minimizzare*
 ```
 
 Una prima soluzione è il **blocked sort-based indexing algorithm** o **BSBI**, il quale ha il seguente funzionamento:
-1. **partiziona** la collezione di documenti in blocchi di dimensione uguale, in modo tale che ciascun blocco può essere contenuto in memoria.
-2. sequenzialmente, costruiamo una **sequenza di coppie** `termID->docID` finché non riempiamo il blocco in memoria.
-3. una volta riempito un blocco, lo **ordiniamo** per `termID`, e poi lo salviamo su **disco**.
-4. una volta processati tutti i documenti, **fondiamo** il blocchi a **coppie di due** creando **indici temporanei**.
-5. ripetiamo il passo 4 finché non avremo ottenuto l'indice finale
+1. sequenzialmente processo i documenti, e man mano creo in **memoria** un **blocco** composto da coppie $\langle \text{term-ID}, \text{doc-ID} \rangle$, con eventuali doppioni se dovesse capitare che un termine appare più volte in uno stesso documento. Osservare che il numero di coppie è pari al numero di **token**.
+2. una volta riempito un blocco, lo **ordiniamo** per `termID`.
+3. una volta ordinato **invertiamo** il blocco, ovvero creiamo una serie di $\langle \text{term-ID}, \text{posting-list} \rangle$. Questa volta i termini appaiono una sola volta nelle coppie di un blocco.
+4. salviamo su **disco** il blocco inverito.
+5. una volta processati tutti i documenti, **fondiamo** il blocchi a **coppie di due**, finché non avremo ottenuto l'indice finale.
 
 ```julia
 # mutable struct Buffer
@@ -121,6 +121,7 @@ Assegnamo come *docID* i valori in base al loro ordine di arrivo
 
 Supponiamo che ogni blocco può tenere al più 3 paia `termID->docID`, e supponiamo per esempio che i documenti generino rispettivamente 3,1 e 2 blocchi
 
+#### Punto (1)
 ```json
 // PROCESSING DOCUMENT A
 // block 1
@@ -163,7 +164,10 @@ Supponiamo che ogni blocco può tenere al più 3 paia `termID->docID`, e supponi
 "term5": 3,
 ]
 ```
+
 > Osserviamo che i `docID` presenti in un generico blocco $i$ saranno certamente **minori o uguali** a quelli nel blocco $i+1$. Perciò basterà semplicemente **appendere** le due liste
+
+
 ```json
 // first step merging
 // block 1 MERGED block 2
@@ -240,8 +244,9 @@ Se utiliziamo come struttura dati un [Log-structured merge-tree](https://en.wiki
 
 
 ### Performace complessive
-Alla fine le operazioni più dispendiose ricadono nell'**ordinare** i termini in ogni bocco.
-Dato che il numero $M$ di termini è limitato dal numero totale di token $T$, avremo una complessità dell'ordine di $$O(M \log{M}) \in O(T \log{T})$$
+Alla fine le operazioni più dispendiose ricadono nell'**ordinare** le coppie $\langle \text{term-ID} - \text{doc-ID} \rangle$.
+Abbiamo visto che prima della fase di **inversione** ci sono esattamente $T$ coppie, perciò il costo sarà $$O(T\log{T})$$
+
 ### Svantaggi
 Uno svantaggio di tale metodo è che per lavorare abbiamo necessità di mantenere in memoria una **dizionario** `term->termID`, il quale cresce in modo dinamico.
 La memoria disposizione potrebbe non essere sufficientemente grande per contenere tale dizionario.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 11.md",
+                "file": "IR/Blocked sort-based indexing.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 11.md",
+                "file": "IR/Blocked sort-based indexing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 11.md"
+                "file": "IR/Blocked sort-based indexing.md"
               }
             }
           },
@@ -124,11 +124,11 @@
   },
   "active": "45eef67a5cdc8fa7",
   "lastOpenFiles": [
-    "NLP/0 - Natural Language Processing.md",
+    "IR/0 - Information Retrieval.md",
     "NLP/Lecture 11.md",
+    "NLP/0 - Natural Language Processing.md",
     "NLP/Lecture 10.md",
     "IR/Rank-Based Measures.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Evaluation of IR systems.md",
     "IR/Lecture 9.md",
     "IR/Set Based Measures.md",
