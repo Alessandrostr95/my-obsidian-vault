@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e23780f1373e9ba8",
+        "id": "49aa51036551a0ab",
         "type": "tabs",
         "children": [
           {
-            "id": "45eef67a5cdc8fa7",
+            "id": "4ad8f7271c5c9cde",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md",
+                "file": "IR/Set Based Measures.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md",
+                "file": "IR/Set Based Measures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md"
+                "file": "IR/Set Based Measures.md"
               }
             }
           },
@@ -122,17 +122,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "45eef67a5cdc8fa7",
+  "active": "4ad8f7271c5c9cde",
   "lastOpenFiles": [
     "IR/0 - Information Retrieval.md",
+    "IR/Rank-Based Measures.md",
+    "IR/Blocked sort-based indexing.md",
     "NLP/Lecture 11.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/Lecture 10.md",
-    "IR/Rank-Based Measures.md",
     "IR/Evaluation of IR systems.md",
     "IR/Lecture 9.md",
     "IR/Set Based Measures.md",
-    "IR/Variants of weighting.md",
-    "IR/Scoring, term weighting & the vector space model.md"
+    "IR/Variants of weighting.md"
   ]
 }
