@@ -25,4 +25,9 @@ Definiamo quindi il **guadagno cumulativo** (o **Cumulative Gain** o **CG**) la 
 
 Dato che abbiamo detto che più un documento è in fondo al rank e minore sarà la sua utilità, possiamo **scalare** il contributo dei documenti rispetto alla loro posizione nel rank.
 Definiamo quindi il **guadano cumulativo scontato** (o **Discounted Cumulative Gai** o **DCG**) come $$DCG = r_1 + \frac{r_2}{\log{2}} + \frac{r_3}{\log{3}} + ... + \frac{r_n}{\log{n}} = r_1 + \sum_{i = 2}^{n}\frac{r_i}{\log{i}}$$
-oppure in maniera molto simile $$DCG = \sum_{i=1}^{n} \frac{r_i}{\log{(i+1)}}$$
+
+```ad-info
+Un'altra formula usata da alcuni motori di ricerca è la seguente $$DCG = \sum_{i=1}^{n} \frac{2^{r_i} - 1}{\log{(i+1)}}$$
+```
+
+
