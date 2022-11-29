@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Beyond Binary Relevance.md",
+                "file": "IR/Lecture 9.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fe8ace458d06e2f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 10.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Beyond Binary Relevance.md",
+                "file": "Lecture 10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Beyond Binary Relevance.md"
+                "file": "Lecture 10.md"
               }
             }
           },
@@ -122,17 +135,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "0cd34dbc85962b1c",
+  "active": "fe8ace458d06e2f7",
   "lastOpenFiles": [
+    "IR/Lecture 9.md",
+    "Lecture 10.md",
+    "IR/Beyond Binary Relevance.md",
     "IR/Evaluation of IR systems.md",
     "IR/0 - Information Retrieval.md",
     "IR/Set Based Measures.md",
     "IR/Rank-Based Measures.md",
-    "IR/Beyond Binary Relevance.md",
     "IR/Single-pass in-memory indexing.md",
     "IR/Blocked sort-based indexing.md",
-    "NLP/Lecture 11.md",
-    "NLP/0 - Natural Language Processing.md",
-    "NLP/Lecture 10.md"
+    "NLP/Lecture 11.md"
   ]
 }
