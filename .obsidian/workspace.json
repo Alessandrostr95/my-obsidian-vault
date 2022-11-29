@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture 10.md",
+                "file": "IR/Lecture 10.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lecture 10.md",
+                "file": "IR/Lecture 10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lecture 10.md"
+                "file": "IR/Lecture 10.md"
               }
             }
           },
@@ -135,10 +135,10 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "fe8ace458d06e2f7",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
     "IR/Lecture 9.md",
-    "Lecture 10.md",
+    "IR/Lecture 10.md",
     "IR/Beyond Binary Relevance.md",
     "IR/Evaluation of IR systems.md",
     "IR/0 - Information Retrieval.md",
