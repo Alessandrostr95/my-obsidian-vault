@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "46f15ff8e42fe88c",
+        "id": "6e2627cc45b4ebde",
         "type": "tabs",
         "children": [
           {
-            "id": "0cd34dbc85962b1c",
+            "id": "6bd5c55dad8ced76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 9.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fe8ace458d06e2f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Lecture 10.md",
+                "file": "NLP/Lecture 12.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5
+    "width": 358.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -99,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Lecture 10.md",
+                "file": "NLP/Lecture 12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Lecture 10.md"
+                "file": "NLP/Lecture 12.md"
               }
             }
           },
@@ -135,17 +123,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "6bd5c55dad8ced76",
   "lastOpenFiles": [
-    "IR/Lecture 9.md",
+    "NLP/Lecture 12.md",
+    "NLP/0 - Natural Language Processing.md",
+    "IR/Lecture 11.md",
     "IR/Lecture 10.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Lecture 9.md",
     "IR/Beyond Binary Relevance.md",
     "IR/Evaluation of IR systems.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Set Based Measures.md",
-    "IR/Rank-Based Measures.md",
-    "IR/Single-pass in-memory indexing.md",
-    "IR/Blocked sort-based indexing.md",
-    "NLP/Lecture 11.md"
+    "IR/Rank-Based Measures.md"
   ]
 }

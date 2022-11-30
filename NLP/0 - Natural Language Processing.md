@@ -28,4 +28,4 @@ tags:
 - [[NLP/Lecture 7|Lecture 7]]
 - [[NLP/Lecture 9|Lecture 9]]
 - [[NLP/Lecture 10|Lecture 10]]
-- [[Lecture 11|Lecture 11]]
+- [[NLP/Lecture 11|Lecture 11]]
