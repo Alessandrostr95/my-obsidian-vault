@@ -64,3 +64,6 @@ tags:
 	- [[Set Based Measures]] (Precision, Recall, Accuracy, Error, F-Measure)
 	- [[Rank-Based Measures]]
 	- [[Beyond Binary Relevance]]
+- [[Probabilistic Approach]]
+	- [[Appendice Probabilità]]
+	- [[Probabilistic Ranking Principle]] (PRP)

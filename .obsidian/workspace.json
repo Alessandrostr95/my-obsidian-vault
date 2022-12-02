@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 12.md",
+                "file": "IR/0 - Information Retrieval.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c55c922e2705b6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Probabilistic Ranking Principle.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5,
-    "collapsed": true
+    "width": 358.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -87,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Lecture 12.md",
+                "file": "Probabilistic Ranking Principle.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Lecture 12.md"
+                "file": "Probabilistic Ranking Principle.md"
               }
             }
           },
@@ -123,17 +135,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "6bd5c55dad8ced76",
+  "active": "8c55c922e2705b6a",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "Probabilistic Ranking Principle.md",
+    "IR/Probabilistic Approach.md",
+    "IR/Appendice Probabilità.md",
+    "IR/Lecture 10.md",
     "NLP/Lecture 12.md",
     "NLP/0 - Natural Language Processing.md",
     "IR/Lecture 11.md",
-    "IR/Lecture 10.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Lecture 9.md",
-    "IR/Beyond Binary Relevance.md",
-    "IR/Evaluation of IR systems.md",
-    "IR/Set Based Measures.md",
-    "IR/Rank-Based Measures.md"
+    "IR/Beyond Binary Relevance.md"
   ]
 }
