@@ -21,12 +21,59 @@ Analogamente indichiamo con $\overline{R} \vert d,q$ l'evento $\lbrace R_{d,q} =
 Il **Probabilistic Ranking Principle** (in breve **PRP**) consiste nell'effettuare il ranking in base alle rispettive probabilità che i documenti ritornati siano rilevanti rispetto alla query: ordiniamo i documenti rispetto a $P(R \vert d,q)$.
 
 Usando la [[Appendice Probabilità#Bayes' Rule|regola di Bayes]] abbiamo quindi che
-$$P(R \vert d,q) = \frac{P(d \vert R, q) P(R \vert q)}{P(d \vert q)} = \frac{P(d \vert R, q) P(R \vert q)}{P(d)}$$
-dove
-- $P(d \vert R, q)$ è la probabilità di campionare un documento $d$  dal sottoinsieme dei soli documenti **rilevanti** rispetto a $q$.
+$$P(R \vert d,q) = \frac{P(d \vert R, q) P(R \vert q)}{P(d \vert q)} = \frac{P(d \vert R, q) P(R \vert q)}{P(d)}$$^87f37c
+
+dove 
+- $P(d \vert R, q)$ è la probabilità di campionare un documento $d$  dal sottoinsieme dei **soli documenti rilevanti** rispetto a $q$.
 - $P(R \vert q)$ è la probabilità di campionare a caso un qualsiasi documento rilevante rispetto a $q$.
-- $p(d)$ è la probabilità che il documento $d$ sia campionato dalla collezione.
+- $P(d)$ è la probabilità che il documento $d$ sia campionato dalla collezione.
 
 Una prima assunzione che stiamo facendo è che $d$ è campionato in maniera **indipendente** rispetto alla query $q$.
 
-[DA FINIRE]
+Un'altra assunzione è che i documenti sono **uniformemente campionati**, ovvero dati due documenti $d,d'$ abbiamo che $P(d) = P(d')$.
+
+Osserviamo che data la [[#^87f37c|precedente formula]] possiamo benissimo **ingorare** il fattore $P(R \vert q)$, visto che alla fine il nostro scopo è quello di fare un ranking dei documenti $d$.
+$$\overbrace{\frac{P(d \vert R, q)}{P(d)}}^{\text{depending on } d} \cdot \underbrace{P(R \vert q)}_{\text{uguale per ogni }d}$$
+
+L'idea sotto il **Probabilistic Ranking Principle** in breve può essere descirtta come:
+> Se l'insieme di documenti restituiti a seguito di una query sono ordinati rispetto alla loro **probabilità** di essere rilevanti (per la query) allora la qualità del sistema di IR è il **migliore ottenibile**.
+
+Dato che purtroppo non è possibile calcolare esplicitamente queste probabilità, è necessario **stimarle** al meglio possibile rispetto ai dati che il sistema ha a disposizione.
+
+## Proof of PRP
+L'obiettivo di un motore di IR è quello di ritornare il **miglior** insieme di documenti a seguito di una query, ordinati nella maniera **migliore**.
+
+Per modellizzare il concetto di *"migliore"*, definiamo una funzioni che misuri il **costo di errore**.
+Ovvero associamo un valore ad ogni documenti **non** rilevante restituito, e ad ogni documento rilevante **non** restituito.
+
+Più formalmente definiamo le due seguenti due funzioni
+$$C_1(d,q) =
+\begin{cases}
+1 &\text{if } d \text{ is relevant but not returned}\\
+0 &\text{if } d \text{ is relevant and returned}
+\end{cases}$$
+$$C_2(d,q) =
+\begin{cases}
+1 &\text{if } d \text{ is not relevant but returned}\\
+0 &\text{if } d \text{ is not relevant and not returned}
+\end{cases}$$
+
+O in altri termini
+- $C_1(d,q) = 1$ se $d$ è un **falso negativo**.
+- $C_2(d,q) = 1$ se $d$ è un **falso positivo**.
+
+Sia $D(q)$ l'insieme dei documenti restituiti dal sistema di IR in questione a fronte della query $q$, e sia il suo cost (in termini di funzine errore)
+$$err(D(q)) = \sum_{d \in D(q)} C_2(d,q) + \sum_{d \notin D(q)} C_1(d,q)$$
+
+Sfruttando un framework probabilistico possiamo calcolare l'errore solamente in **media**.
+Perciò avremo che
+$$\begin{align*}
+\mathbb{E}\left[ err(D(q)) \right]
+
+&= \sum_{d \in D(q)} C_2(d,q) \cdot P(\overline{R} \vert d,q) + \sum_{d \notin D(q)} C_1(d,q) \cdot P(R \vert d,q)\\
+&= \sum_{d \in D(q)}(1 - P(R \vert d,q)) + \sum_{d \notin D(q)} P(R \vert d,q)\\
+&= \vert D(q) \vert + \sum_{d \notin D(q)}P(R \vert d,q) - \sum_{d \in D(q)}P(R \vert d,q)
+\end{align*}$$
+
+Il sistema di IR "*migliore*" è quindi quello che **minimizza in media** l'errore del risultato $D(q)$.
+Tale media è quindi **minimizzata** quando è **massimizzata** la qunatità $$\sum_{d \notin D(q)}P(R \vert d,q) - \sum_{d \in D(q)}P(R \vert d,q)$$ e ciò accade quando in $D(q)$ sono riportati i $k$ documenti con probabilità più alta $\square$.
