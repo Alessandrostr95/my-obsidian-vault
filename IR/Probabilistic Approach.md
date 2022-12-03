@@ -12,3 +12,4 @@ $$P(d \text{ è rilevante rispetto a }q)$$
 
 - [[Appendice Probabilità]]
 - [[Probabilistic Ranking Principle]]
+- [[Binary Independent Model]]

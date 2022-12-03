@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "74f17362665c49b2",
+        "id": "a62fa064b0b7afce",
         "type": "tabs",
         "children": [
           {
-            "id": "b07d3ffb283dc922",
+            "id": "c7b0cb5387e71ef3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Probabilistic Approach.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -86,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Probabilistic Approach.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "IR/Probabilistic Approach.md"
-              }
+              "state": {}
             }
           },
           {
@@ -122,17 +115,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "b07d3ffb283dc922",
+  "active": "c7b0cb5387e71ef3",
   "lastOpenFiles": [
+    "IR/Binary Independent Model.md",
+    "IR/Probabilistic Approach.md",
     "IR/0 - Information Retrieval.md",
     "IR/Probabilistic Ranking Principle.md",
-    "IR/Probabilistic Approach.md",
     "IR/Appendice Probabilità.md",
     "IR/Lecture 10.md",
     "NLP/Lecture 12.md",
     "NLP/0 - Natural Language Processing.md",
     "IR/Lecture 11.md",
-    "IR/Lecture 9.md",
-    "IR/Beyond Binary Relevance.md"
+    "IR/Lecture 9.md"
   ]
 }

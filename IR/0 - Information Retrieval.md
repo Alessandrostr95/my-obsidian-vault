@@ -67,3 +67,4 @@ tags:
 - [[Probabilistic Approach]]
 	- [[Appendice Probabilità]]
 	- [[Probabilistic Ranking Principle]] (PRP)
+	- [[Binary Independent Model]] (BIM)
