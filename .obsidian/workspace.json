@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a62fa064b0b7afce",
+        "id": "66b7e92423f69e24",
         "type": "tabs",
         "children": [
           {
-            "id": "c7b0cb5387e71ef3",
+            "id": "5f79cc5a8548699f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,18 +20,18 @@
             }
           },
           {
-            "id": "edfeffaa46cf3693",
+            "id": "b0744583a366b6ab",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "IR/Probabilistic Ranking Principle.md",
-                "mode": "source",
-                "source": false
+                "file": "IR/Binary Independent Model.md",
+                "staged": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5
+    "width": 349.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Binary Independent Model.md",
+                "file": "IR/Lecture 12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Binary Independent Model.md"
+                "file": "IR/Lecture 12.md"
               }
             }
           },
@@ -134,17 +134,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "c7b0cb5387e71ef3",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IR/Probabilistic Ranking Principle.md",
     "IR/Binary Independent Model.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Lecture 12.md",
+    "IR/Probabilistic Ranking Principle.md",
     "IR/Probabilistic Approach.md",
     "IR/Appendice Probabilità.md",
     "IR/Lecture 10.md",
     "NLP/Lecture 12.md",
     "NLP/0 - Natural Language Processing.md",
-    "IR/Lecture 11.md",
-    "IR/Lecture 9.md"
+    "IR/Lecture 11.md"
   ]
 }

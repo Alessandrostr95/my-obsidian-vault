@@ -20,4 +20,12 @@ P(R \vert d,q)
 &= \prod_{i=1}^{n} P(f_i \vert R, q)
 \end{align*}$$
 Dove $P(f_i \vert R, q)$ è la probabilità che il termine $f_i$ è presente nel documento $d$ **sapendo** che $d$ è rilevante rispetto alla query $q$.
-In alternatica $P(f_i \vert R, q)$ è la probabilità che dato un documento rilevante per la query $q$ esso abbiamo il termine $f_i$.
+In alternativa $P(f_i \vert R, q)$ è la probabilità che dato un documento rilevante per la query $q$ esso abbiamo il termine $f_i$.
+
+```ad-note
+Sia $d$ un documento con rappresentazione **vettoriale** $v_d \in \lbrace 0,1 \rbrace^n$, tale che $v_d\left[i\right] = 1$ se e solo se il termine $t_i$ è presente nel documento $d$.
+
+Allora la probabilità $P(R \vert d,q) = P(R \vert v_d, v_q) \propto P(v_d \vert R, v_q)$ è la probabilità che campionato un documento $d$ rilevante per la query $q$ esso abbia rappresentazione vettoriale $v_d$.
+
+Per la **Naive Bayes conditional independence assumption** abbiamo che $$P(v_d \vert R, v_q) = \prod_{i=1}^{n} P(v_d \left[ i \right] \vert R, v_q)$$
+```

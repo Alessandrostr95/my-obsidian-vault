@@ -29,6 +29,8 @@ tags:
 - [[IR/Lecture 7|Lecture 7]]
 - [[IR/Lecture 9|Lecture 9]]
 - [[IR/Lecture 10|Lecture 10]]
+- [[IR/Lecture 11]]
+- [[IR/Lecture 12]]
 
 ---------
 ## Table of contents
