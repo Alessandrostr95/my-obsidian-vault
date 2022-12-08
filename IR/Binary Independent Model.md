@@ -3,15 +3,18 @@ Abbiamo discusso nel [[Probabilistic Ranking Principle|PRP]] che abbiamo bisogno
 L'apporccio più semplice è noto come **Bianary Independent Model**.
 
 In questo modello tutti i documenti (incluse le query) vengono rappresentati come dei **vettori binari** in cui la cella inerente al termine $t$ è pari ad 1 se il termine occorre almeno una volta nel documento, 0 altrimenti.
+Tale rappresentazione è simile a quella fatta nel [[Vector Space Model]].
 
 Con tale rappresentazione possono facilmente esserci documenti con la stessa rapressentazione (o comunque molto molto simile).
+> **Esempio** `Il cane mangia il gatto` e `Il gatto mangia il cane` avranno la stessa identica rappresentazione.
+
 Inoltre non si tiene conto della **frequenza** dei termini all'interno dei documenti (*term frequency*).
 
 Un'assunzione importante del **BIM** è che le occorrenze dei termini in un documento sono **indipendenti** tra loro.
 In realtà nel linguaggio naturale non è così, c'è dipendenza tra i termini in una frase, però all'atto pratico assumere l'indipendenza tra i termini ci aiuta moltissimo nei calcoli e in fine come modello funziona abbastanza bene.
 
 Grazie a questa assunzione possiamo ora **stiamare** la probabilità che un documento $d$ sia rilevante data una query $q$, come discusso nel [[Probabilistic Ranking Principle#^87f37c|PRP]].
-Ovvero, rappresentando un documento $d$ come un vettore di features $(f_1,...,f_n)$ avremo che
+Ovvero, rappresentando un documento $d$ come un vettore di features $(f_1,...,f_n)$, dove $n$ è il numero di termini e tale che $f_i = 1$ se il termine $t_i \in d$ ($0$ altrimenti), avremo che
 $$\begin{align*}
 P(R \vert d,q)
 &= \frac{P(d \vert R, q) P(R \vert q)}{P(d)}\\
@@ -19,13 +22,47 @@ P(R \vert d,q)
 \small{(\text{removing constant factors})}&\propto P(f_1,...,f_n \vert R, q)\\
 &= \prod_{i=1}^{n} P(f_i \vert R, q)
 \end{align*}$$
-Dove $P(f_i \vert R, q)$ è la probabilità che il termine $f_i$ è presente nel documento $d$ **sapendo** che $d$ è rilevante rispetto alla query $q$.
+Dove $P(f_i \vert R, q)$ è la probabilità che il termine $f_i$ è presente in un documento rilevante per la query $q$.
 In alternativa $P(f_i \vert R, q)$ è la probabilità che dato un documento rilevante per la query $q$ esso abbiamo il termine $f_i$.
 
 ```ad-note
-Sia $d$ un documento con rappresentazione **vettoriale** $v_d \in \lbrace 0,1 \rbrace^n$, tale che $v_d\left[i\right] = 1$ se e solo se il termine $t_i$ è presente nel documento $d$.
+title: Ricapitolando
+Sia $d$ un documento con rappresentazione **vettoriale** $v_d = (x_1,...,x_n) \in \lbrace 0,1 \rbrace^n$, tale che $x_i = 1$ se e solo se il termine $t_i$ è presente nel documento $d$.
 
-Allora la probabilità $P(R \vert d,q) = P(R \vert v_d, v_q) \propto P(v_d \vert R, v_q)$ è la probabilità che campionato un documento $d$ rilevante per la query $q$ esso abbia rappresentazione vettoriale $v_d$.
+Allora la probabilità $P(R \vert d,q) = P(R \vert v_d, v_q) \propto P(v_d \vert R, v_q)$ è la probabilità che campionato un documendo $d$ rilevante per la query $q$ esso abbia rappresentazione vettoriale $v_d$.
 
-Per la **Naive Bayes conditional independence assumption** abbiamo che $$P(v_d \vert R, v_q) = \prod_{i=1}^{n} P(v_d \left[ i \right] \vert R, v_q)$$
+Per la **Naive Bayes conditional independence assumption** abbiamo che $$P(v_d \vert R, v_q) = \prod_{i=1}^{n} P(x_i \vert R, v_q)$$
 ```
+
+Per stimare la probabilità $P(t_i \vert R, q)$ che il termine $t_i$ appaia in un documento rilevante avremmo bisogno di **annotatori** che indichino quali documenti sono rilevanti rispetto ad una query $q$, e fare questo per ogni possibile query risulta irragionevole.
+Abbiamo quindi bisogno di un modo che in qualche modo aprrossimi $P(t_i \vert R, q)$.
+
+## Approssimazione
+Partiamo col considerare l'[[Appendice Probabilità#Odds|odds]] dell'evento $R \vert d,q$ anziché la sua probabilità.
+Tanto ordinare per la probabilità che un documento sia rilevante oppure per il suo odds è **equivalente**.
+$$O(R \vert d,q) = \frac{P(R \vert d,q )}{P(\overline{R} \vert d,q )} \propto \frac{P(d \vert R,q)}{P(d \vert \overline{R}, q)} = \frac{P(v_d \vert R,v_q)}{P(v_d \vert \overline{R}, v_q)}$$
+Riapplicando la **Naive Bayes conditional independence assumption** $$\frac{P(v_d \vert R,v_q)}{P(v_d \vert \overline{R}, v_q)} = \prod_{i=1}^{n}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)}$$
+**Spazziamo** poi la produttoria poi tra i termini che appartengono e che non appartengono al documento $d$
+$$\prod_{i=1}^{n}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} = \prod_{i \,:\, x_i = 1}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} \cdot \prod_{i \,:\, x_i = 0}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)}$$
+
+Aggiungiamo ora una ulteriore semplificazione: assumiamo che per tutti quei termini $t \notin q$ che non appaiono nella query è **equiprobabile** che essi occorrano o meno in un documento rilevante, ovvero $$\forall t \notin q \left[ P(t \vert R,q) = P(t \vert \overline{R},q) \right] \implies \forall t \notin q \left[ \frac{P(t \vert R,q)}{P(t \vert \overline{R},q)} = 1 \right]$$
+Data questa semplificazione, nella produttoria "*sopravviveranno*" i soli termini che appartengono alla query
+$$\prod_{i=1}^{n}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} = \prod_{t_i \notin q \,:\, x_i = 1}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} \cdot \prod_{t_i \notin q \,:\, x_i = 0}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)}$$
+
+
+Per snellire la sintassi indichiamo con:
+- $p_t = P(t \vert R, q)$ la probabilità che il termine $t$ appaia in un documento rilevante per la query $q$
+- $u_t = P(t \vert \overline{R},q)$ la probabilità che un termine $t$ appaia in un documento **non** rilevante per la query $q$
+
+\ | relevant | non relevant
+--|--|--
+term present | $p_t$ | $u_t$
+term not present | $1-p_t$ | $1-u_t$
+
+Ricapitolando avremo $$O(R \vert d,q) = \prod_{t_i \notin q \,:\, x_i = 1}\frac{p_i}{u_i} \cdot \prod_{t_i \notin q \,:\, x_i = 0}\frac{1-p_i}{1-u_i}$$
+
+
+## Problemi
+BIM è estremamente semplice da applicare per via del suo approccio **bag-of-words**.
+Tale approccio però è anche svantaggioso perché non tiene conto della **frequenza** con cui appaiono le parole all'interno dei documenti.
+Un'altro svantaggio è che non prende in considerazione nemmeno la lunghezza dei documenti.
