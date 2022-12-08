@@ -37,7 +37,7 @@ Per la **Naive Bayes conditional independence assumption** abbiamo che $$P(v_d \
 Per stimare la probabilità $P(t_i \vert R, q)$ che il termine $t_i$ appaia in un documento rilevante avremmo bisogno di **annotatori** che indichino quali documenti sono rilevanti rispetto ad una query $q$, e fare questo per ogni possibile query risulta irragionevole.
 Abbiamo quindi bisogno di un modo che in qualche modo aprrossimi $P(t_i \vert R, q)$.
 
-## Approssimazione
+## Approssimazione - Retrieval Status Value
 Partiamo col considerare l'[[Appendice Probabilità#Odds|odds]] dell'evento $R \vert d,q$ anziché la sua probabilità.
 Tanto ordinare per la probabilità che un documento sia rilevante oppure per il suo odds è **equivalente**.
 $$O(R \vert d,q) = \frac{P(R \vert d,q )}{P(\overline{R} \vert d,q )} \propto \frac{P(d \vert R,q)}{P(d \vert \overline{R}, q)} = \frac{P(v_d \vert R,v_q)}{P(v_d \vert \overline{R}, v_q)}$$
@@ -47,7 +47,7 @@ $$\prod_{i=1}^{n}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)}
 
 Aggiungiamo ora una ulteriore semplificazione: assumiamo che per tutti quei termini $t \notin q$ che non appaiono nella query è **equiprobabile** che essi occorrano o meno in un documento rilevante, ovvero $$\forall t \notin q \left[ P(t \vert R,q) = P(t \vert \overline{R},q) \right] \implies \forall t \notin q \left[ \frac{P(t \vert R,q)}{P(t \vert \overline{R},q)} = 1 \right]$$
 Data questa semplificazione, nella produttoria "*sopravviveranno*" i soli termini che appartengono alla query
-$$\prod_{i=1}^{n}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} = \prod_{t_i \notin q \,:\, x_i = 1}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} \cdot \prod_{t_i \notin q \,:\, x_i = 0}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)}$$
+$$\prod_{i=1}^{n}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} = \prod_{t_i \in q \,:\, x_i = 1}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)} \cdot \prod_{t_i \in q \,:\, x_i = 0}\frac{P(x_i \; \vert R,v_q)}{P(x_i \; \vert \overline{R}, v_q)}$$
 
 
 Per snellire la sintassi indichiamo con:
@@ -59,8 +59,25 @@ Per snellire la sintassi indichiamo con:
 term present | $p_t$ | $u_t$
 term not present | $1-p_t$ | $1-u_t$
 
-Ricapitolando avremo $$O(R \vert d,q) = \prod_{t_i \notin q \,:\, x_i = 1}\frac{p_i}{u_i} \cdot \prod_{t_i \notin q \,:\, x_i = 0}\frac{1-p_i}{1-u_i}$$
+Ricapitolando avremo $$O(R \vert d,q) = \prod_{t_i \in q \,:\, x_i = 1}\frac{p_i}{u_i} \cdot \prod_{t_i \in q \,:\, x_i = 0}\frac{1-p_i}{1-u_i}$$
 
+Per ogni termine rilevante della query moltiplichiamo e dividiamo il tutto per $$(1-u_i)/(1-p_i)$$ ovvero
+$$\begin{align*}
+&\prod_{t_i \in q \,:\, x_i = 1}\frac{p_i}{u_i} \cdot \prod_{t_i \in q \,:\, x_i = 0}\frac{1-p_i}{1-u_i} \cdot \left [ \prod_{t_i \in q \,:\, x_i = 1}\frac{1-u_i}{1-p_i} \cdot \prod_{t_i \in q \,:\, x_i = 1}\frac{1-p_i}{1-u_i}  \right]\\
+\\
+=& \prod_{t_i \in q \,:\, x_i = 1}\frac{p_i(1-u_i)}{u_i(1-p_i)} \cdot \prod_{t_i \in q}\frac{1-p_i}{1-u_i}
+\end{align*}$$
+
+Osserviamo quindi che la prima produttoria continua a riferirsi a tutti quei *query-terms* presenti nel documento.
+La seconda produtorria riguarda i soli termini della query, perciò **costante** per ogni documento.
+Possiamo quindi **ignorare** la seconda produttoria ottenendo
+$$O(R \vert d,q) \propto \prod_{t \in q \cap d} \frac{p_t(1-u_t)}{u_t(1-p_t)}$$ ^3cba3b
+
+Per via della monotonicità del logaritmo, possiamo pensare di effetuare il ranking per il **logaritmo** della [[#^3cba3b|formula]] ottenuta.
+Tale valore è anche noto con il nome **Retrieval Status Value** (o **RSV**)
+$$RSV_d = \log{\prod_{t \in q \cap d} \frac{p_t(1-u_t)}{u_t(1-p_t)}} = \sum_{t \in q \cap d} \log{\frac{p_t(1-u_t)}{u_t(1-p_t)}} = \sum_{t \in q \cap d} c_t$$
+dove
+$$c_i = \log{\frac{p_t(1-u_t)}{u_t(1-p_t)}} = \log{\frac{p_t}{1-p_t}} - \log{\frac{u_t}{1-u_t}}$$
 
 ## Problemi
 BIM è estremamente semplice da applicare per via del suo approccio **bag-of-words**.
