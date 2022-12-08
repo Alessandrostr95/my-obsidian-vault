@@ -26,19 +26,22 @@ $$P(R \vert d,q) = \frac{P(d \vert R, q) P(R \vert q)}{P(d \vert q)} = \frac{P(d
 dove 
 - $P(d \vert R, q)$ è la probabilità di campionare un documento $d$  dal sottoinsieme dei **soli documenti rilevanti** rispetto a $q$.
 - $P(R \vert q)$ è la probabilità di campionare a caso un qualsiasi documento rilevante rispetto a $q$.
-- $P(d)$ è la probabilità che il documento $d$ sia campionato dalla collezione.
+- $P(d)$ è la probabilità che il documento $d$ sia campionato dalla collezione. Osservare che $P(d \vert q) = P(d)$ perché a priori un campionamento di un documento è indipendente dalla query $q$.
 
-Una prima assunzione che stiamo facendo è che $d$ è campionato in maniera **indipendente** rispetto alla query $q$.
-
+Una prima assunzione che stiamo facendo è che la rilevanza di ogni documento $d$ è **indipendente** dalla rilevanza degli altri documento, ovvero $$P(R_{d,q} \vert R_{d',q}) = P(R_{d,q})$$
 Un'altra assunzione è che i documenti sono **uniformemente campionati**, ovvero dati due documenti $d,d'$ abbiamo che $P(d) = P(d')$.
 
-Osserviamo che data la [[#^87f37c|precedente formula]] possiamo benissimo **ingorare** il fattore $P(R \vert q)$, visto che alla fine il nostro scopo è quello di fare un ranking dei documenti $d$.
-$$\overbrace{\frac{P(d \vert R, q)}{P(d)}}^{\text{depending on } d} \cdot \underbrace{P(R \vert q)}_{\text{uguale per ogni }d}$$
+Osserviamo che data la [[#^87f37c|precedente formula]] possiamo benissimo **ingorare** il fattore $P(R \vert q)$ e $P(d)$, visto che $P(R \vert q)$ è una costante per ogni $d$ dato che $d$ è **equiprobabile**.
+$$\overbrace{P(d \vert R, q)}^{\text{depending on } d} \cdot \underbrace{\frac{P(R \vert q)}{P(d)}}_{\text{uguale per ogni }d}$$
+Ci concentreremo quindi sulla sola probabilità $P(d \vert R,q)$.
 
 L'idea sotto il **Probabilistic Ranking Principle** in breve può essere descirtta come:
 > Se l'insieme di documenti restituiti a seguito di una query sono ordinati rispetto alla loro **probabilità** di essere rilevanti (per la query) allora la qualità del sistema di IR è il **migliore ottenibile**.
 
-Dato che purtroppo non è possibile calcolare esplicitamente queste probabilità, è necessario **stimarle** al meglio possibile rispetto ai dati che il sistema ha a disposizione.
+
+## Problemi
+Purtroppo non è possibile calcolare esplicitamente queste probabilità, dato che avremmo bisogno a priori di aver già incontrato ogni query possibile $q$.
+Perciò è necessario **stimarle** al meglio possibile rispetto ai dati che il sistema ha a disposizione, con degli stimatori appositi.
 
 ## Proof of PRP
 L'obiettivo di un motore di IR è quello di ritornare il **miglior** insieme di documenti a seguito di una query, ordinati nella maniera **migliore**.

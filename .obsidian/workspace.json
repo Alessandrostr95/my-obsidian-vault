@@ -13,20 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Binary Independent Model.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b0744583a366b6ab",
+            "id": "13a33aa4734a82b5",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "IR/Binary Independent Model.md",
-                "staged": false
+                "file": "IR/Probabilistic Ranking Principle.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Lecture 12.md",
+                "file": "IR/Probabilistic Ranking Principle.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Lecture 12.md"
+                "file": "IR/Probabilistic Ranking Principle.md"
               }
             }
           },
@@ -134,13 +135,13 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "13a33aa4734a82b5",
   "lastOpenFiles": [
-    "IR/Binary Independent Model.md",
+    "IR/Probabilistic Approach.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Binary Independent Model.md",
     "IR/Lecture 12.md",
     "IR/Probabilistic Ranking Principle.md",
-    "IR/Probabilistic Approach.md",
     "IR/Appendice Probabilità.md",
     "IR/Lecture 10.md",
     "NLP/Lecture 12.md",
