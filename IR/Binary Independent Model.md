@@ -37,6 +37,7 @@ Per la **Naive Bayes conditional independence assumption** abbiamo che $$P(v_d \
 Per stimare la probabilità $P(t_i \vert R, q)$ che il termine $t_i$ appaia in un documento rilevante avremmo bisogno di **annotatori** che indichino quali documenti sono rilevanti rispetto ad una query $q$, e fare questo per ogni possibile query risulta irragionevole.
 Abbiamo quindi bisogno di un modo che in qualche modo aprrossimi $P(t_i \vert R, q)$.
 
+--------
 ## Approssimazione - Retrieval Status Value
 Partiamo col considerare l'[[Appendice Probabilità#Odds|odds]] dell'evento $R \vert d,q$ anziché la sua probabilità.
 Tanto ordinare per la probabilità che un documento sia rilevante oppure per il suo odds è **equivalente**.
@@ -77,8 +78,53 @@ Per via della monotonicità del logaritmo, possiamo pensare di effetuare il rank
 Tale valore è anche noto con il nome **Retrieval Status Value** (o **RSV**)
 $$RSV_d = \log{\prod_{t \in q \cap d} \frac{p_t(1-u_t)}{u_t(1-p_t)}} = \sum_{t \in q \cap d} \log{\frac{p_t(1-u_t)}{u_t(1-p_t)}} = \sum_{t \in q \cap d} c_t$$
 dove
-$$c_i = \log{\frac{p_t(1-u_t)}{u_t(1-p_t)}} = \log{\frac{p_t}{1-p_t}} - \log{\frac{u_t}{1-u_t}}$$
+$$c_t = \log{\frac{p_t(1-u_t)}{u_t(1-p_t)}} = \log{\frac{p_t}{1-p_t}} - \log{\frac{u_t}{1-u_t}}$$ ^ab2996
 
+```ad-note
+title: Osservazione 1
+Osservare che:
+- $p_t/(1-p_t)$ è l'**odds ratio** dell'evento $t \vert R,q$ ($t$ apparte in un documento rilevante per la query $q$).
+- $u_t/(1-u_t)$ è l'**odds ratio** dell'evento $t \vert \overline{R},q$ ($t$ apparte in un documento non rilevante per la query $q$).
+
+Perciò $c_t$ può essere visto come la differenza dei logaritmi dei due precedenti odd ratio.
+```
+
+^29c28c
+
+```ad-note
+title: Osservazione 2
+In base alla [[#^29c28c|osservazione 1]] abbiamo che:
+- se $c_t = 1$ allora c'è uguale probabilità che $t$ appaia in un documento rilevante anziché uno non rilevante.
+- se $c_t > 1$ è più probabile che il termine $t$ appaia in un documento rilevante anziché uno non rilevante.
+- se $c_t < 1$ è più probabile che $t$ appaia in un documento non rilevante anziché uno rilevante.
+```
+
+### Stimare $p_t$ e $u_t$
+Che informazione possiamo usare per stimare la porbabilità che un documento $t$ appaia in un documento rilevante o uno non rilevante?
+
+Ci sono due possibili scenari:
+1. abbiamo un training set che (dato da degli annotatori o da un sistema di feedback).
+2. non abbiamo alcuna informazione a disposizione riguardo la rilavanza dei documenti.
+
+#### Caso 1
+Nel caso in cui abbiamo a disposizione un training set possiamo applicare un approccio **frequentista** per stimare l'[[#^ab2996|odds ratio]] $c_t$.
+
+Siano:
+- $N$ il numero **totale** di documenti nella collezione.
+- $R$ il numero di documenti **rilevanti** per la nostra query.
+- $r_i = \vert \lbrace d \in R : t_i \in d \rbrace \vert$ il numero di documenti <u>rilevanti</u> tali che contengono il termine $t_i$.
+- $\text{df}_{t_i}$ (*document frequency*) il numero di documenti che contengono il termine $t_i$.
+
+Dato che $p_i$ e $u_i$ sono **bernoulliane**, possiamo usare lo [[Stimatore di Massima Verosimiglianza]]
+- $$\hat{p}_i = \frac{r_i}{R}$$
+- $$1-\hat{p}_i = \frac{R - r_i}{R}$$
+- $$\hat{u}_i = \frac{\text{df}_{t_i} - r_i}{N - R}$$
+- $$1 - \hat{u}_i = \frac{(N - R) - (\text{df}_{t_i} - r_i)}{N - R}$$
+- $$\hat{c}_i = \log{\frac{\hat{p}_i(1-\hat{u}_i)}{\hat{u}_i(1-\hat{p}_i)}} = \log{\frac{\frac{r_i}{R - r_i}}{\frac{\text{df}_{t_i} - r_i}{(N - R) - (\text{df}_{t_i} - r_i)}}}$$
+
+
+
+------
 ## Problemi
 BIM è estremamente semplice da applicare per via del suo approccio **bag-of-words**.
 Tale approccio però è anche svantaggioso perché non tiene conto della **frequenza** con cui appaiono le parole all'interno dei documenti.
