@@ -122,7 +122,11 @@ Dato che $p_i$ e $u_i$ sono **bernoulliane**, possiamo usare lo [[Stimatore di M
 - $$1 - \hat{u}_i = \frac{(N - R) - (\text{df}_{t_i} - r_i)}{N - R}$$
 - $$\hat{c}_i = \log{\frac{\hat{p}_i(1-\hat{u}_i)}{\hat{u}_i(1-\hat{p}_i)}} = \log{\frac{\frac{r_i}{R - r_i}}{\frac{\text{df}_{t_i} - r_i}{(N - R) - (\text{df}_{t_i} - r_i)}}}$$
 
-
+```ad-warning
+Potrebbe capitare che un termine $t_i$ non appaia in nessun documento rilevante, perciò avremo che $r_i = 0$.
+In tal caso $\hat{c}_i$ non è ben definito.
+Per evitare tale situazione sommiamo una costante $\varepsilon > 0$ (piccola) al valore $r_i$.
+```
 
 ------
 ## Problemi
