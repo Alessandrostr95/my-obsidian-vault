@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5f79cc5a8548699f",
+            "id": "f5ed9fa00a2b6fa0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Binary Independent Model.md",
+                "file": "IR/Okapi BN25.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Binary Independent Model.md",
+                "file": "IR/Okapi BN25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Binary Independent Model.md"
+                "file": "IR/Okapi BN25.md"
               }
             }
           },
@@ -122,17 +122,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "5f79cc5a8548699f",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "IR/Vector Space Model.md",
+    "IR/Probabilistic Approach.md",
+    "IR/Okapi BN25.md",
     "IR/0 - Information Retrieval.md",
     "IR/Binary Independent Model.md",
+    "IR/Vector Space Model.md",
     "IR/TF-IDF weight.md",
-    "IR/Probabilistic Approach.md",
     "IR/Probabilistic Ranking Principle.md",
     "IR/Lecture 12.md",
     "IR/Appendice Probabilità.md",
-    "IR/Lecture 10.md",
-    "NLP/Lecture 12.md"
+    "IR/Lecture 10.md"
   ]
 }

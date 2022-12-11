@@ -70,3 +70,4 @@ tags:
 	- [[Appendice Probabilità]]
 	- [[Probabilistic Ranking Principle]] (PRP)
 	- [[Binary Independent Model]] (BIM)
+	- [[Okapi BN25]] (BestMatch 25)
