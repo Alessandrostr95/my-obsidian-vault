@@ -67,7 +67,7 @@ Come risultato di questa normalizzazione avremo che:
 $$\text{SIM}(q,d) = \cos{(\text{angle}(q,d))} = \frac{q}{\Vert q \Vert} \cdot \frac{d}{\Vert d \Vert} = \frac{\sum_{i = 1}^{\vert V \vert} q_i \cdot d_i}{\sqrt{\sum_{i = 1}^{\vert V \vert} q_i^2} \cdot \sqrt{\sum_{i = 1}^{\vert V \vert} d_i^2}}$$
 
 Tale misura di similitudine è anche detta **cosine similarity**.
-![](./img/IR_vector_space_model_3.png)
+![](./img/IR_vector_space_model_3.png) ^eef545
 
 
 ```julia

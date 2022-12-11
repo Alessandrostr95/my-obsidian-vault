@@ -128,8 +128,42 @@ In tal caso $\hat{c}_i$ non è ben definito.
 Per evitare tale situazione sommiamo una costante $\varepsilon > 0$ (piccola) al valore $r_i$.
 ```
 
+#### Caso 2
+Non abbiamo a disposizione alcuna informazione riguardo la rilevanza dei documenti (e riguardo il loro numero).
+
+È *ragionevole* penare però che il numero $R$ di documenti rilevanti per la query è una **piccolissima** frazione del numero complessivo $N$ di documenti.
+Infatti, anche se a seguito di una ricerca sul web otteniamo migliaia di pagine rilevanti, esse rappresenteranno una frazione infinitesima di tutti i documenti del web.
+
+Possiamo quindi **approssimare** $\hat{u}_t$ come $$\hat{u}_t = \frac{\text{df}_t - r_i}{N - R} \approx \frac{\text{df}_t}{N}$$
+$$\implies \log{\frac{1 - \hat{u}_t}{\hat{u}_t}} \approx \log{\frac{N}{\text{df}_t}}$$
+ovvero la [[TF-IDF weight#^3ca620|informative document frequency]] ($\text{idf}_t$).
+
+Riscriviamo il fattore $\hat{c}_t$ come
+$$\begin{align*}
+\hat{c}_t
+&= \log{\frac{\hat{p}_t}{1-\hat{p}_t}} - \log{\frac{\hat{u}_t}{1-\hat{u}_t}}\\
+&= \log{\frac{\hat{p}_t}{1-\hat{p}_t}} + \log{\frac{1-\hat{u}_t}{\hat{u}_t}}\\
+&\approx \log{\frac{\hat{p}_t}{1-\hat{p}_t}} + \text{idf}_t
+\end{align*}$$
+
+Non ci resta ora che trattare il fattore $\hat{p}_t$.
+Possiamo **assumere** che la probabilità che il termine $t$ appaia in un documento *rilevante* sia **costante** per ogni termine, ovvero assumiamo che $p_{t_i} = p_{t_j}$ per ogni coppia di termini $t_i, t_j$.
+
+Così facendo avremo che $$\log{\frac{\hat{p}_t}{1-\hat{p}_t}} = \log{\frac{\texttt{const}}{1-\texttt{const}}} = \texttt{const}$$
+Combinando queste due assunzione avremo che $$\text{RSV}_d \approx \sum_{t \in q \cap d} \hat{c}_t = \vert q \cap d \vert \cdot \texttt{const} + \sum_{t \in q \cap d}\text{idf}_{t}$$
+Perciò una stima del [[#^ab2996|RSV]] in mancanza di qualsiasi informazione riguardo la rilevanza dei documenti è la somma di tutte le [[TF-IDF weight#^3ca620|informative document frequency]] di tutti i termini in comune tra query e documento.
+
+```ad-note
+In pratica questo modello è molto simile al [[Vector Space Model]], con le differenze che:
+- si usa il solo IDF per le features, e non il [[TF-IDF weight]].
+- il ranking si fa sul IDF-score, e non con la [[Vector Space Model#^eef545|cosine similarity]]. La motivazione è dovuta al framework probabilistico usato.
+```
+
 ------
+## Vantaggi
+- BIM è estremamente semplice da applicare per via del suo approccio **bag-of-words**.
+- Funziona molto bene per testi <u>piccoli</u> come *Titoli* o *Abstract*, dove il numero di occorrenze di un termine è più o meno costante.
+
 ## Problemi
-BIM è estremamente semplice da applicare per via del suo approccio **bag-of-words**.
-Tale approccio però è anche svantaggioso perché non tiene conto della **frequenza** con cui appaiono le parole all'interno dei documenti.
-Un'altro svantaggio è che non prende in considerazione nemmeno la lunghezza dei documenti.
+- Non tiene conto della **frequenza** con cui appaiono le parole all'interno dei documenti. Un documento in cui appare più volte una parola chiave potrebbe essere più rilevante rispetto ad uno in cui appare una volta sola (magari per caso)
+- Non prende in considerazione nemmeno la **lunghezza** dei documenti. Più un documento è grande, più è probabile che appaiano termini rilevanti, perciò bisogna *penalizzarli* opportunamente.
