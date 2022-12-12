@@ -54,3 +54,8 @@ RSV_d
 &= \sum_{t \in q} n_t \log{\frac{\rho_t}{\gamma_t}}
 \end{align*}$$
 
+
+Questo modello funziona bene nel caso di termini poco descrittivi dell'information need.
+Ovvero tutti quei ternimi poco specifici.
+
+# Term occurrences as Poisson
