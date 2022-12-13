@@ -81,3 +81,29 @@ RSV_d
 }
 \end{align*}$$
 
+Purtroppo tale valore è complesso e dispendioso da calcolare.
+Possiamo quindi provare ad **approssimarlo** mediante una funzione più semplice avente le seguenti proprietà:
+1. per $n_t = 0$ il contributo del termine $t$ alla rilevanza del documento deve essere $0$.
+2. il contributo del termine $t$ alla rilevanza di un documento deve crescere in maniera **monotona** rispetto a $n_t$. ^c7675c
+3. per $n_t \to \infty$ tale funzione deve tendere asintoticamente a $$\log{\frac{\text{Odds}(E_t \vert R,q)}{\text{Odds}(E_t)}} = \log{\frac{P(E_t \vert R,q)(1-P(E_t))}{(1-P(E_t \vert R,q))P(E_t)}}$$ ^66b474
+
+Come già discusso potremmo non avere a disposizione informazione riguardo l'*eliteness* di un termine rispetto a un documento, perciò possiamo fare due assunzioni:
+1. $P(E_t \vert R,q) = 0.5$ la probabilità che un termine sia d'elite per un documento rilevante e pari alla probabilità che non sia d'elite.
+2. $P(E_t) \approx \dfrac{\text{df}_t}{N}$ possiamo assumere che la probabilità che un termine sia d'elite per un documento ($E_t = 1$) semplicemnte se esso appare nel documento.
+
+Perciò per il punto [[#^66b474|(3)]] possiamo approssimare
+$$\begin{align*}\log{\frac{\text{Odds}(E_t \vert R,q)}{\text{Odds}(E_t)}}
+&= \log{\frac{P(E_t \vert R,q)}{1-P(E_t \vert R,q)}} - \log{\frac{P(E_t)}{1-P(E_t)}}\\
+\\
+(\text{assumptions})&\approx \log{1} + \log{\frac{1 - \frac{\text{df}_t}{N}}{\frac{\text{df}_t}{N}}}\\
+\\
+&\approx \log{\frac{N}{\text{df}_t}}
+\end{align*}$$
+
+Per quanto riguarda invece il punto [[#^c7675c|(2)]] possiamo **scalare** il tutto per un valore in $(1,k)$ che cresce in maniera monotona al crescere di $n_t$, come per esempio $$\frac{(k+1)n_t}{k + n_t}$$ scegliendo un $k$ opportuno.
+
+
+In conclusione, come nuovo [[Introducing term frequency in BIM#^2d7816|Retrieva Status Value]] avremo $$RSV_d = \sum_{t \in q}\frac{(k+1)n_t}{k + n_t} \cdot \log{\frac{N}{\text{df}_t}}$$
+Il vantaggio di tale funzione è che è molto più semplice ed economica da calcolare.
+
+Questo sarà il punto di partenza per il [[Okapi BM25]].

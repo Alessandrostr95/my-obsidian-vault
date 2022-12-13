@@ -73,4 +73,4 @@ tags:
 	- [[Introducing term frequency in BIM]]
 		- [[Term occurrences as Poisson]]
 		- [[Term occurrences as 2-Poisson]]
-	- [[Okapi BN25]] (BestMatch 25)
+	- [[Okapi BM25]] (BestMatch 25)
