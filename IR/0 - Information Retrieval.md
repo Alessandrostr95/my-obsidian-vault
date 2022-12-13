@@ -70,4 +70,7 @@ tags:
 	- [[Appendice Probabilità]]
 	- [[Probabilistic Ranking Principle]] (PRP)
 	- [[Binary Independent Model]] (BIM)
+	- [[Introducing term frequency in BIM]]
+		- [[Term occurrences as Poisson]]
+		- [[Term occurrences as 2-Poisson]]
 	- [[Okapi BN25]] (BestMatch 25)
