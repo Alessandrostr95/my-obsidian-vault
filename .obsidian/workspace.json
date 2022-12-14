@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "783ceb32bad55eb8",
+        "id": "edcc211fa30557cc",
         "type": "tabs",
         "children": [
           {
-            "id": "418fe62a6a274468",
+            "id": "d3338b31fb3ab9ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Term occurrences as 2-Poisson.md",
+                "file": "IR/Lecture 13.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Term occurrences as 2-Poisson.md",
+                "file": "IR/Lecture 13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Term occurrences as 2-Poisson.md"
+                "file": "IR/Lecture 13.md"
               }
             }
           },
@@ -122,11 +122,11 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "418fe62a6a274468",
+  "active": "d3338b31fb3ab9ff",
   "lastOpenFiles": [
     "IR/0 - Information Retrieval.md",
-    "IR/Okapi BM25.md",
     "IR/Term occurrences as 2-Poisson.md",
+    "IR/Okapi BM25.md",
     "IR/Introducing term frequency in BIM.md",
     "IR/Term occurrences as Poisson.md",
     "IR/Binary Independent Model.md",
