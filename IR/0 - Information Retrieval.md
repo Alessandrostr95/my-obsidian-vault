@@ -32,6 +32,7 @@ tags:
 - [[IR/Lecture 11]]
 - [[IR/Lecture 12]]
 - [[Lecture 13]]
+- [[Lecture 14]]
 
 ---------
 ## Table of contents
