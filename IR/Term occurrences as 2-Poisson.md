@@ -104,6 +104,6 @@ Per quanto riguarda invece il punto [[#^c7675c|(2)]] possiamo **scalare** il tut
 
 
 In conclusione, come nuovo [[Introducing term frequency in BIM#^2d7816|Retrieva Status Value]] avremo $$RSV_d = \sum_{t \in q}\frac{(k+1)n_t}{k + n_t} \cdot \log{\frac{N}{\text{df}_t}}$$
-Il vantaggio di tale funzione è che è molto più semplice ed economica da calcolare.
+Il vantaggio di tale funzione è che è molto più semplice ed economica da calcolare. ^7a2ded
 
 Questo sarà il punto di partenza per il [[Okapi BM25]].
