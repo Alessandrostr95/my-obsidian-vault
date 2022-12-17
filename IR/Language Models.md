@@ -113,4 +113,34 @@ Perciò $$P(\text{tf}_{t,q} = k) \sim \text{Poisson}(\lambda_t \vert q \vert) \i
 Per l'intera query avremo quindi la [[Distribuzioni Multivariate#Joint PMF|distribuzione congiunta]] $$P(\text{tf}_{t_i,q} = k_i, \forall i=1,...,m \vert M_d) = \prod_{i=1}^{m} \frac{e^{-\lambda_i \vert q \vert}(\lambda_i \vert q \vert)^k_i}{k_i!}$$
 
 ----
-# Smoothing 0 occurances
+# Avoid zero occurrences - Jelinek-Mercer smoothing
+Che succede quando $P(t \vert M_d) = 0$?
+Ovvero che succede il termine $t$ non appare nel documento $d$?
+
+In questo caso accadrebbe che $P(q \vert M_d) = 0$.
+Ma ciò significa veramente che $d$ è totalmente non rilevante per la query $q$.
+
+Consideriamo un esempio.
+- $d$ = *"From Sam Doom"*
+- $q$ = *"Frodo goes to mount Doom"*
+
+Avremo quindi che
+$t$ | $P(t \vert M_d) = \text{tf}_{t,d}/\vert d \vert$
+--- | ---
+Frodo | 0.33
+Sam | 0.33
+Doom | 0.33
+goes | 0
+to | 0
+mount | 0
+
+Secondo questo lagnuage model avremo che $P(q \vert M_d) = 0$, nonostante il documento $d$ non sia del tutto irrilevante.
+
+Abbiamo quindi bisogno di fare uno **smoothing** di $P(q \vert M_d)$, cercando di evitare le occorrenze nulle.
+
+Come prima soluzione nel calcolo della **term frequency** potremmo sommare una quantità costante non nulla, come per esempio 1.
+$$\text{tf}_{t,d} + 1$$
+Così facendo avremo però che $\sum_{t \in d} \text{tf}_{t,d}+1 > \vert d \vert$, e che quindi $P(t \vert M_d)$ non è più una distribuzione (in quanto non avremmo somma 1).
+
+Dobbiamo quindi normalizzare opportunamente $$P(t \vert M_d) = \frac{\text{tf}_{t,d} + 1}{\vert d \vert + M}$$ dove $M$ è il numero totale di termini in $d$.
+
