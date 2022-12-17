@@ -12,7 +12,9 @@ $$P(R \vert d, q) = \frac{P(q \vert R,d) P(R \vert d)}{P(q \vert d)} = \frac{P(q
 dove:
 - $P(q \vert R,d)$ è la probabilità che dato un documento $d$ risaputo essere **rilevante** per l'information need, qual è la probabilità che $q$ sia la query fatta che ha **generato** $d$.
 - $P(R \vert d)$ è la probabilità che il documento $d$ sia rilevante.
-- $P(q)$ è la probabilità che venga fatta la query $q$ (dato come contesto un information need).
+- $P(q)$ è la probabilità che venga fatta la query $q$.
+
+Assumendo che $P(q)$ e $P(R \vert d)$ siano **uniformi**, siamo quindi interessati a stimare $$P(R \vert d, q) \propto P(q \vert R, d)$$ o più in generale $$P(q \vert d)$$ ovvero la probabilità che sia stata la query $q$ ad essere stata sottoposta, sapedo di aver ricevuto come risposta il documento $d$.
 
 ## Language Model
 Assumiamo di voler **generare** termine per termine un documento $d$.
@@ -43,5 +45,72 @@ P(d \vert M_d) &=\\
 
 Un modello parecchio più semplificato è quello in cui ho un **unico stato** e definisco quindi una distribuzione sull'occorrenza dei termini (in generale, indipendentemente da ciò che ho letto prima).
 
+Ovvero ogni termine $t$ ha una probabilità associata di essere il prossimo termine osservato, e tale probabilità è **indipendente** da ciò che è stato letto in precedenza.
+
 ![](./img/IR_language_model_3.png)
 
+```ad-warning
+Osservare che le probabilità di generare un documento nel modello semplificato diventano di ordini di grandezza più piccole.
+```
+
+
+Essendo una query un documento, possiamo sfruttare i *language model* per stimare la rilevanza dei documenti restituiti dal sistema di IR.
+Data una query $q$ e i documenti $d_1, ..., d_n$, definiamo per ciascuno i relativi language model $M_{d_1}, ..., M_{d_n}$.
+Il documento più rilevante sarà quel documento $d$ che massimizzerà la probabilità $$P(q \vert M_d) = P(\langle w_1, ..., w_{|q|} \rangle \vert M_d) = \prod_{i=1}^{|q|} P(w_i \vert M_d)$$
+L'assunzione di **indipendenza** dei termini $w_1, ..., w_{|q|}$ della query $q$ è anche nota come **Naive Bayes Conditional Independence assumption**.
+
+```ad-important
+Osserviamo che la probabilità $P(q \vert M_d)$ è uno [[Stimatore di Massima Verosimiglianza]].
+Infatti si calcola la probabilità che la query osservata sia $q$, fissati dei parametri (ovvero il language model $M_d$).
+In alternativa possiamo pensare a $P(q \vert M_d)$ come una misura che indica quanto il modello $M_d$ descrive la query $q$.
+```
+
+### Esempio
+Consideriamo due docuementi $d_1, d_2$ con relativi language model $M_{d_1}, M_{d_2}$.
+
+$t$ | $P(t \vert M_{d_1})$ | $P(t \vert M_{d_2})$
+---|---|---
+\[STOP\] | 0.1 | 0.2
+you | 0.2 | 0.1
+see | 0.05 | 0.15
+Frodo | 0.2 | 0.15
+I | 0.15 | 0.1
+am | 0.05 | 0.05
+saw | 0.05 | 0.2
+Sam | 0.2 | 0.05
+
+Consideriamo la seugente query $$q = \text{"Frodo saw Sam \texttt{[STOP]}"}$$ e calcoliamo la probabilità che venga generato dai precedenti language model
+$$\begin{align*}
+P(q \vert M_{d_1}) &= 0.2 \cdot 0.05 \cdot 0.2 \cdot 0.1 = 2 \cdot 10^{-4}\\
+P(q \vert M_{d_2}) &= 0.15 \cdot 0.2 \cdot 0.05 \cdot 0.2 = 3\cdot 10^{-4} 
+\end{align*}$$
+
+Dato che $P(q \vert M_{d_2}) > P(q \vert M_{d_1})$ allora $d_2$ è più rilevante rispetto al documenti $d_1$, perché è più probabile che $M_{d_2}$ abbia **generato** la query $q$.
+
+-------
+# Stimare $P(q \vert M_d)$
+
+## Multinomial
+In base a quanto visto [[#Language Model|prima]] vogliamo stiamre la probabilità che, all'interno della query $q$, un termine $t$ sia il prossimo ad essere osservato, **indipendentemente** da quanto letto in precedenza.
+
+Assumendo che tale probabilità segua una [[Distribuzioni#Bernoulli|Bernoulliana]] di parametro $p_t$, allora la probabilità che il termine $t$ appaia $k$ volte nella query $q$ seguirà una [[Distribuzioni#Binomiale|legge Binomiale]] $$P(\text{df}_{t,q} = k) \sim \text{Binom}(\vert q \vert, p_t) \implies \binom{\vert q \vert}{k}p_t^k (1-p_t)^{\vert q \vert - k}$$
+
+Combinando le probabilità di osservare $k_1, ..., k_{m}$ occorrenze dei termini $t_1, ..., t_m$ nella query $q$ può essere quindi modellato come [[Distribuzioni#Multinomiale (multivariata)|Multinomiale]]
+$$P(\text{df}_{t_i,q} = k_i \forall i = 1, ..., m) = \frac{\vert q \vert!}{k_1!\cdots k_m!} \prod_{i=1}^{m} p_{t_i}^{k_i}$$
+
+Dato che nel language model $M_d$ le probabilità $p_t$ sono date da $P(t \vert M_d)$ allora avremo che $$P(\text{df}_{t_i,q} = k_i \forall i = 1, ..., m \vert M_d) = \frac{\vert q \vert!}{\prod_{t \in q}\text{tf}_{t,q}!} \prod_{t \in q} P(t \vert M_d)^{\text{tf}_{t,q}}$$
+Dato che il fattore $$\frac{\vert q \vert!}{\prod_{t \in q}\text{tf}_{t,q}!}$$ è una costante **indipendente** dal documento $d$ (dipende solo dalla query), possiamo interessarci al solo prodotto $$\prod_{t \in q}P(t \vert M_d)^{\text{tf}_{t,q}}$$
+
+Dato che abbiamo detto che $P(t \vert M_d)$ è uno [[Stimatore di Massima Verosimiglianza]], sappiamo che il MLE di una **bernoulliana** equivale essattamente alla [[Random Sample#Media campionaria|media campionaria]].
+Perciò $$P(t \vert M_d) = \frac{\text{tf}_{t,d}}{\vert d \vert}$$
+
+In conclusione, data una query $q$ possiamo calcolare la **rilevanza** di un documento $d$ come $$P(d \vert q) \approx P(q \vert M_d) \approx \prod_{t \in q} \left( \frac{\text{tf}_{t,d}}{\vert d \vert} \right)^{\text{tf}_{t,q}}$$
+
+## Multiple Poisson
+Invece di assumere che $P(\text{tf}_{t,q} = k)$ segua una binomiale, possiamo assumere che c'è una dipendenza tra le occorrenze dei documenti, e quindi modellarla come una [[Distribuzioni#Poisson|Poisson]] di parametro $\lambda_t |q|$, dove $\lambda_t \vert q \vert$ è il numero atteso di occorrenze delt termine $t$ nella query $q$.
+
+Perciò $$P(\text{tf}_{t,q} = k) \sim \text{Poisson}(\lambda_t \vert q \vert) \implies \frac{e^{-\lambda_t \vert q \vert}(\lambda_t \vert q \vert)^k}{k!}$$
+Per l'intera query avremo quindi la [[Distribuzioni Multivariate#Joint PMF|distribuzione congiunta]] $$P(\text{tf}_{t_i,q} = k_i, \forall i=1,...,m \vert M_d) = \prod_{i=1}^{m} \frac{e^{-\lambda_i \vert q \vert}(\lambda_i \vert q \vert)^k_i}{k_i!}$$
+
+----
+# Smoothing 0 occurances
