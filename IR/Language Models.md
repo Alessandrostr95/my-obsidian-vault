@@ -144,3 +144,15 @@ Così facendo avremo però che $\sum_{t \in d} \text{tf}_{t,d}+1 > \vert d \vert
 
 Dobbiamo quindi normalizzare opportunamente $$P(t \vert M_d) = \frac{\text{tf}_{t,d} + 1}{\vert d \vert + M}$$ dove $M$ è il numero totale di termini in $d$.
 
+Possiamo poi considerare come fattore aggiuntivo la probabilità che un termine appaia rispetto all'**intera collezione**.
+Ovvero se un termine $t$ non appare molte volte in un documenti, ma è comunque un termine parecchio frequente, voglio che in qualche modo la probabilità che esso venga letto come prossima parola sia lontana dal valore zero.
+Definiamo quindi un *language model* $M_c$ relativo all'intera collezione $c$.
+$$P(t \vert M_c) = \frac{\text{cf}_t}{T}$$ dove:
+- $\text{cf}_t$ è la **collectione frequenty** del termine $t$, ovvero il numero di occorrenze all'interno dell'intera collezione $c$.
+- $T = \sum_{t}\text{cf}_t$ è un fattore di **normalizzazione**.
+
+Perciò possiamo stimare la probabilità che un termine $t$ appaia in un documento $d$ tramite una **combinazione lineare** dei due language model $M_d, M_c$
+$$P(t \vert d) = \alpha P(t \vert M_d) + (1-\alpha)P(t \vert M_c)$$
+dove $\alpha \in \left[0,1\right]$ è un **iper-parametro** che bilancia il peso tra $M_d$ e $M_c$.
+
+Perciò sempre assumendo la **Naive Bayas Conditional Independece** tra i termini avremo che $$P(q \vert d) = \prod_{i = 1}^{\vert q \vert} \left(\alpha P(t_i \vert M_d) + (1-\alpha)P(t_i \vert M_c)\right)$$
