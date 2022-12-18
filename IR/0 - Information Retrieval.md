@@ -77,3 +77,4 @@ tags:
 		- [[Term occurrences as 2-Poisson]]
 	- [[Okapi BM25]] (BestMatch 25)
 - [[Language Models]]
+- [[Efficient Scoring]]

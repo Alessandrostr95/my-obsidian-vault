@@ -4,34 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b1429d6e00f3ca28",
+        "id": "b42519393b8e58e9",
         "type": "tabs",
         "children": [
           {
-            "id": "472882b7553b0669",
+            "id": "f680d406f37b98be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Language Models.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "835dd718ef476fa8",
+            "id": "5aee4ec3b30c94c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Lecture 12.md",
+                "file": "IR/Efficient Scoring.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Language Models.md",
+                "file": "IR/Efficient Scoring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Language Models.md"
+                "file": "IR/Efficient Scoring.md"
               }
             }
           },
@@ -134,17 +135,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "472882b7553b0669",
+  "active": "5aee4ec3b30c94c6",
   "lastOpenFiles": [
-    "IR/Lecture 12.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Efficient Scoring.md",
     "IR/Language Models.md",
+    "root.md",
+    "IR/Lecture 12.md",
     "IR/Lecture 14.md",
     "IR/Lecture 13.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Probabilistic Approach.md",
     "IR/Probabilistic Ranking Principle.md",
-    "IR/Appendice Probabilità.md",
-    "Mining Data Stram.md",
-    "TODO.md"
+    "IR/Appendice Probabilità.md"
   ]
 }
