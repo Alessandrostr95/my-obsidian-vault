@@ -28,3 +28,14 @@ Abbiamo come miglioramento $$\Theta(N \log{N}) \to \Theta^*(N)$$
 
 L'unica operazione dalla quale non si scappa è quindi il calcolo dello score sull'intera collezione.
 Questo risulta essere il **bottleneck** (il collo di bottiglia).
+
+# Safe vs non-safe ranking
+Abbiamo appena visto che per migliorare le prestazioni del sistema di IR vogliamo trovare un metodo che non calcoli lo score su tutti i documenti, bensì su un **sottoinsieme** relativamente piccolo.
+
+I metodi si distinguono in:
+- **metodi safe**: ovvero quei metodi che garantiscono che i primi $k$ documenti restituiti dal sistema sono effettivamente i top $k$ con score più alto tra tutti.
+- **metodi non-safe**: ovvero che non garantiscono di restituire i top $k$ con score massimo.
+
+I metodi non safe sono però usati, in quanto a scapito della precisione garantiscono buone prestazioni.
+
+## [[Speeding Ranking Computation by Pruning]]

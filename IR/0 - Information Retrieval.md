@@ -78,3 +78,4 @@ tags:
 	- [[Okapi BM25]] (BestMatch 25)
 - [[Language Models]]
 - [[Efficient Scoring]]
+	- [[Speeding Ranking Computation by Pruning]]
