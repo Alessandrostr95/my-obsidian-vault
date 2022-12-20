@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2542bb89db4fd6b8",
+        "id": "907f1b0dd57a0404",
         "type": "tabs",
         "children": [
           {
-            "id": "a2e52e4de9142961",
+            "id": "9936dff8168a4e95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Query-Independent Document Scores.md",
+                "file": "IR/Efficient Scoring.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf38b5fbb8eeb084",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Cluster Pruning.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Query-Independent Document Scores.md",
+                "file": "IR/Cluster Pruning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Query-Independent Document Scores.md"
+                "file": "IR/Cluster Pruning.md"
               }
             }
           },
@@ -122,12 +135,12 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "a2e52e4de9142961",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "IR/Speeding Ranking Computation by Pruning.md",
+    "IR/Efficient Scoring.md",
     "IR/0 - Information Retrieval.md",
     "IR/Query-Independent Document Scores.md",
-    "IR/Efficient Scoring.md",
+    "IR/Speeding Ranking Computation by Pruning.md",
     "IR/Probabilistic Ranking Principle.md",
     "IR/Probabilistic Approach.md",
     "IR/Lecture 13.md",
