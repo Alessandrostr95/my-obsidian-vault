@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ea1c7990cc665360",
+            "id": "a2e52e4de9142961",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Speeding Ranking Computation by Pruning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "03223b1815f8a7e9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Query-Independent Document Scores.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Speeding Ranking Computation by Pruning.md",
+                "file": "IR/Query-Independent Document Scores.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Speeding Ranking Computation by Pruning.md"
+                "file": "IR/Query-Independent Document Scores.md"
               }
             }
           },
@@ -134,17 +122,17 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "ea1c7990cc665360",
+  "active": "a2e52e4de9142961",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Speeding Ranking Computation by Pruning.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Query-Independent Document Scores.md",
+    "IR/Efficient Scoring.md",
     "IR/Probabilistic Ranking Principle.md",
     "IR/Probabilistic Approach.md",
-    "IR/Efficient Scoring.md",
     "IR/Lecture 13.md",
     "IR/Language Models.md",
     "root.md",
-    "IR/Lecture 12.md",
-    "IR/Lecture 14.md"
+    "IR/Lecture 12.md"
   ]
 }

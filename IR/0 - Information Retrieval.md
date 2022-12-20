@@ -79,3 +79,4 @@ tags:
 - [[Language Models]]
 - [[Efficient Scoring]]
 	- [[Speeding Ranking Computation by Pruning]]
+	- [[Query-Independent Document Scores]]
