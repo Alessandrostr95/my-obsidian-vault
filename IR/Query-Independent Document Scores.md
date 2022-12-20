@@ -44,4 +44,4 @@ def score(query, k=10):
 ## Combine $g(d)$-ordering and [[Speeding Ranking Computation by Pruning#Champion lists|Champion list]]
 Possiamo **combinare** l'ordinamento per $g(d)$ con le [[Speeding Ranking Computation by Pruning#Champion lists|champion list]].
 Ovvero per ogni termine $t$ conserviamo una **champion list** degli $r$ documenti con valore $g(d) + \text{tf-idf}_{t,d}$ massimo.
-Possiamo quindi riddure lo scoring a questa champion list, anziché a tutti i documenti nella collezione.
+Possiamo quindi riddure lo scoring a questa champion list, anziché a tutti i documenti delle posting list.
