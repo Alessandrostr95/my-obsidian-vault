@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "907f1b0dd57a0404",
+        "id": "f105374acbe3d02a",
         "type": "tabs",
         "children": [
           {
-            "id": "9936dff8168a4e95",
+            "id": "5750a12eb34c3034",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Efficient Scoring.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bf38b5fbb8eeb084",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Cluster Pruning.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Cluster Pruning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "IR/Cluster Pruning.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,17 +115,26 @@
     "direction": "horizontal",
     "width": 323.5
   },
-  "active": "d83f1c6a68518c0b",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Apri riquadro comandi": false,
+      "markdown-importer:Apri importazione Markdown": false
+    }
+  },
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IR/Efficient Scoring.md",
+    "Senza nome.canvas",
     "IR/0 - Information Retrieval.md",
+    "IR/Lecture 15.md",
+    "IR/Efficient Scoring.md",
+    "IR/Cluster Pruning.md",
     "IR/Query-Independent Document Scores.md",
     "IR/Speeding Ranking Computation by Pruning.md",
     "IR/Probabilistic Ranking Principle.md",
     "IR/Probabilistic Approach.md",
-    "IR/Lecture 13.md",
-    "IR/Language Models.md",
-    "root.md",
-    "IR/Lecture 12.md"
+    "IR/Lecture 13.md"
   ]
 }

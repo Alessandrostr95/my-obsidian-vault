@@ -29,10 +29,11 @@ tags:
 - [[IR/Lecture 7|Lecture 7]]
 - [[IR/Lecture 9|Lecture 9]]
 - [[IR/Lecture 10|Lecture 10]]
-- [[IR/Lecture 11]]
-- [[IR/Lecture 12]]
+- [[IR/Lecture 11|Lecture 11]]
+- [[IR/Lecture 12|Lecture 12]]
 - [[Lecture 13]]
 - [[Lecture 14]]
+- [[Lecture 15|Lecture 15]]
 
 ---------
 ## Table of contents
