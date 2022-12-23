@@ -41,3 +41,4 @@ I metodi non safe sono però usati, in quanto a scapito della precisione garanti
 ## [[Speeding Ranking Computation by Pruning]]
 ## [[Query-Independent Document Scores]]
 ## [[Cluster Pruning]]
+## [[Tiered Indexes]]

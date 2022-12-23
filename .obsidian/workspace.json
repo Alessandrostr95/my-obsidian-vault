@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5750a12eb34c3034",
+            "id": "d615d79d11813441",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Cluster Pruning.md",
+                "file": "IR/Tiered Indexes.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Cluster Pruning.md",
+                "file": "IR/Tiered Indexes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Cluster Pruning.md"
+                "file": "IR/Tiered Indexes.md"
               }
             }
           },
@@ -131,15 +131,15 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5750a12eb34c3034",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "BWA/0 - Beyond Worst-Case Analysis.md",
-    "BWA/1 - Introduction.md",
-    "IR/Cluster Pruning.md",
+    "IR/Efficient Scoring.md",
     "IR/0 - Information Retrieval.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
+    "IR/Cluster Pruning.md",
+    "BWA/1 - Introduction.md",
     "Senza nome.canvas",
     "IR/Lecture 15.md",
-    "IR/Efficient Scoring.md",
     "IR/Query-Independent Document Scores.md",
     "IR/Speeding Ranking Computation by Pruning.md",
     "IR/Probabilistic Ranking Principle.md"

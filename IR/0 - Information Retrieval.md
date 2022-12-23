@@ -82,3 +82,4 @@ tags:
 	- [[Speeding Ranking Computation by Pruning]]
 	- [[Query-Independent Document Scores]]
 	- [[Cluster Pruning]]
+	- [[Tiered Indexes]]
