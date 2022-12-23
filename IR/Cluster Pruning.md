@@ -32,6 +32,10 @@ I vantaggi del campionare i leader in maniera **uniformemente a caso** sono:
 - è un metodo veloce.
 - dato che $\sqrt{N}$ è un campione sufficientemente grande, allora $L$ riflette abbastanza bene la distribuzione dei documenti.
 
+```ad-warning
+Osservare che questo metodo è [[Efficient Scoring#Safe vs non-safe ranking|non safe]] in quanto non c'è nessuna garanzia che nel cluster preso in considerazione siano presenti tutti i top $k$ documenti.
+```
+
 # Generalizzazione
 Nel precedente approccio precomputavamo cluster **disgiunti** tra loro: ogni follower è associato a un solo leader.
 

@@ -131,17 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "d615d79d11813441",
   "lastOpenFiles": [
     "IR/Efficient Scoring.md",
-    "IR/0 - Information Retrieval.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
     "IR/Cluster Pruning.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Tiered Indexes.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/1 - Introduction.md",
     "Senza nome.canvas",
     "IR/Lecture 15.md",
     "IR/Query-Independent Document Scores.md",
-    "IR/Speeding Ranking Computation by Pruning.md",
-    "IR/Probabilistic Ranking Principle.md"
+    "IR/Speeding Ranking Computation by Pruning.md"
   ]
 }
