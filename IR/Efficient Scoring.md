@@ -38,8 +38,12 @@ I metodi si distinguono in:
 
 I metodi non safe sono però usati, in quanto a scapito della precisione garantiscono buone prestazioni.
 
+# Non-Safe Methods
 ## [[Speeding Ranking Computation by Pruning]]
 ## [[Query-Independent Document Scores]]
 ## [[Cluster Pruning]]
 ## [[Tiered Indexes]]
 ## [[Impact-Ordered Postings]]
+
+# Safe Methods
+## [[Safe Scoring - WAND|WAND Scoring]]

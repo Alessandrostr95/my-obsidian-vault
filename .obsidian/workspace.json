@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Impact-Ordered Postings.md",
+                "file": "IR/Efficient Scoring.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1cfc5f1db5134afe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Safe Scoring - WAND.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Impact-Ordered Postings.md",
+                "file": "IR/Safe Scoring - WAND.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Impact-Ordered Postings.md"
+                "file": "IR/Safe Scoring - WAND.md"
               }
             }
           },
@@ -135,13 +148,13 @@
   "lastOpenFiles": [
     "IR/Efficient Scoring.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Impact-Ordered Postings.md",
     "IR/Tiered Indexes.md",
     "IR/Query-Independent Document Scores.md",
     "IR/Cluster Pruning.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/1 - Introduction.md",
     "Senza nome.canvas",
-    "IR/Lecture 15.md",
-    "IR/Speeding Ranking Computation by Pruning.md"
+    "IR/Lecture 15.md"
   ]
 }

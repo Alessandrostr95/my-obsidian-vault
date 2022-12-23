@@ -84,3 +84,4 @@ tags:
 	- [[Cluster Pruning]]
 	- [[Tiered Indexes]]
 	- [[Impact-Ordered Postings]]
+	- [[Safe Scoring - WAND]]
