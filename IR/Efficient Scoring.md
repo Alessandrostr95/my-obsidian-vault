@@ -42,3 +42,4 @@ I metodi non safe sono però usati, in quanto a scapito della precisione garanti
 ## [[Query-Independent Document Scores]]
 ## [[Cluster Pruning]]
 ## [[Tiered Indexes]]
+## [[Impact-Ordered Postings]]

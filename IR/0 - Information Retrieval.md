@@ -83,3 +83,4 @@ tags:
 	- [[Query-Independent Document Scores]]
 	- [[Cluster Pruning]]
 	- [[Tiered Indexes]]
+	- [[Impact-Ordered Postings]]
