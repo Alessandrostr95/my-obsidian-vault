@@ -30,6 +30,9 @@ dove
 - $X^{(d)}_1, ..., X^{(d)}_{\vert q \vert}$ sono variabili **indicatrici** della presenza di un query term nel documento $d$ ($X^{(d)}_i = 1$ se e solo se il query term $t_i$ è presente nel documento $d$, 0 altrimenti).
 - $\theta$ è una threshold che varia **dinamicamente** durante l'esecuzione dell'algoritmo.
 
+L'algoritmo WAND semplicemente calcola (in maniera efficiente) il predicato $\text{WAND}$ sui documenti della collezione, e per tutti quei documenti i quali il predicato è `true` verrà calcolato il ranking.
+Tutti quei documenti per i quali il predicato è `false` non verranno processati per il calcolo del ranking.
+
 
 # Implementing the WAND iterator
 
