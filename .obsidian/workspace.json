@@ -144,8 +144,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "1cfc5f1db5134afe",
   "lastOpenFiles": [
+    "IR/TF-IDF weight.md",
+    "IR/Safe Scoring - WAND.md",
     "IR/Efficient Scoring.md",
     "IR/0 - Information Retrieval.md",
     "IR/Impact-Ordered Postings.md",
@@ -153,8 +155,6 @@
     "IR/Query-Independent Document Scores.md",
     "IR/Cluster Pruning.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
-    "BWA/1 - Introduction.md",
-    "Senza nome.canvas",
-    "IR/Lecture 15.md"
+    "BWA/1 - Introduction.md"
   ]
 }
