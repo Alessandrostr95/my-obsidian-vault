@@ -146,9 +146,9 @@
   },
   "active": "1cfc5f1db5134afe",
   "lastOpenFiles": [
-    "IR/TF-IDF weight.md",
-    "IR/Safe Scoring - WAND.md",
     "IR/Efficient Scoring.md",
+    "IR/Safe Scoring - WAND.md",
+    "IR/TF-IDF weight.md",
     "IR/0 - Information Retrieval.md",
     "IR/Impact-Ordered Postings.md",
     "IR/Tiered Indexes.md",

@@ -33,7 +33,21 @@ dove
 L'algoritmo WAND semplicemente calcola (in maniera efficiente) il predicato $\text{WAND}$ sui documenti della collezione, e per tutti quei documenti i quali il predicato è `true` verrà calcolato il ranking.
 Tutti quei documenti per i quali il predicato è `false` non verranno processati per il calcolo del ranking.
 
+La *threshold* $\theta$ è <u>aggiornata dinamicamente</u> come il **minimo score** $m$ tra i top $k$ documenti trovati fino a quel momento.
+Più alto è il valore della threshold più documenti verranno **scartati**, e quindi calcoleremo lo score per meno documenti.
 
 # Implementing the WAND iterator
+Per sviluppare in maniera **efficiente** questo algoritmo non possiamo calcolare se l'operatore WAND è soddisfatto per <u>tutti</u> gli elementi di una posting list, in quanto risulta essere troppo dispendioso.
+Il **WAND-iterator** è un metodo che consente di trovare in maniera **efficiente** i soli posting che soddisfano il predicato WAND.
+
+Per prima cosa per le posting list dei query trem $t$ l'algoritmo tiene un **puntatore** (detto **finger**) che punta al posting corrente che è stato appena processato.
+Abbiamo quindi bisogno di un metodo $\text{next}(\theta)$ che presa in input la threshold $\theta$ **sposta** il *finger* al succesivo documento della posting list il cui **approximation score** $UB(d,q)$ è maggiore di $\theta$.
+$$\text{next}(\theta) \implies \text{finger}_t = \arg\min_{i \geq \text{finger}_t}{\lbrace \text{posting}_t\left[ i \right] \geq \theta \rbrace}$$
+
+Il WAND-iterator mantiene una **invariante** durante l'esecuzione dell'algoritmo:
+> tutti i documenti con docID $\leq \text{finger}_t$ sono stati considerati come possibili candidati.
+
+
+
 
 # Setting the WAND Threshold
