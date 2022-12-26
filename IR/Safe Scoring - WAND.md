@@ -47,7 +47,26 @@ $$\text{next}(\theta) \implies \text{finger}_t = \arg\min_{i \geq \text{finger}_
 Il WAND-iterator mantiene una **invariante** durante l'esecuzione dell'algoritmo:
 > tutti i documenti con docID $\leq \text{finger}_t$ sono stati considerati come possibili candidati.
 
+Il metodo efficiente per implementare l'iteratore è il seguente:
+1. Ordiniamo i query term $t_1, ..., t_{\vert q \vert}$ rispetto ai rispettivi *finger* (il termine con fingher più basso è il primo, il termine col finger più alto è l'utlimo).
+2. Calcoliamo un **termine pivot** $t_i$ tale che $$\sum_{j = 1}^{i} UB_{t_i} \geq \theta$$
+3. Il documento puntato del finger $\text{finger}_{t_i}$ del pivot è il minimo candidato possibile che soddisfa il WAND operator con parametri il $\theta$ corrente.
+4. Per tutti i termini $t_j \leq t_i$ poniamo il loro finger uguale al minimo posting tale che $\geq \text{finger}_{t_i}$ (è possibile farlo in tempo **logaritmico** con una ricerca dicotomica).
 
+Consideriamo come esempio la query $$q = \text{"catcher in the rye"}$$
+![](./img/IR_wand_1.png)
 
+![](./img/IR_wand_2.png)
+
+![](./img/IR_wand_3.png)
 
 # Setting the WAND Threshold
+Abbiamo detto che $\theta$ è aggiornato **dinamicamente** durante l'esecuzione dell'algoritmo pari al **minimo** score dei **top** $k$ documenti tra tutti quelli presi in considerazione come candidati fino a quel momento.
+
+Per fare ciò in maniera efficiente viene usato un (min-) **heap** che contiene i soli $k$ docuementi con score migliore trovati fino a quel momento.
+Così facendo si può recuperare in maniera efficiente il minimo tra questi, ed eventualmente aggiornalo.
+
+# WAND summary
+WAND è un metodo [[Efficient Scoring#Safe vs non-safe ranking|safe]] in quanto tutti i documenti con $UB(d,q) \leq \theta$ non vengono considerati come candidati, e dato che $\text{Score}(d,q) \leq UB(d,q)$ allora non c'era alcuna speranza che tali documenti potessero appartenere ai top $k$.
+
+Tale algoritmo da un miglioramento del $90\%$ nelle prestazioni del calcolo del [[Scoring, term weighting & the vector space model|ranking]].
