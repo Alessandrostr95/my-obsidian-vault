@@ -35,3 +35,29 @@ L'**algoritmo di Rocchio** è un **metodo iterativo** che implementa il relevanc
 
 Sia $\vec{q}_0$ la query **iniziale** dell'utente, e siano $D_r, D_{nr}$ il relevance feedback dell'utente.
 **Iterativamente** possiamo migliorare la query con la seguente formula $$\vec{q}_{k+1} = \alpha \cdot \vec{q}_k + \beta \cdot \vec{\mu}(D_r) - \gamma \cdot \vec{\mu}(D_{nr})$$ dove $\alpha, \beta, \gamma$ sono dei **pesi** che possono essere impostati a piacere, a seconda se si desidera dare più peso alla query ($\alpha$), più peso a quelli contrassegnati come rilevanti ($\beta$) o "*allontanarsi*" di più da quelli contrassegnati come non rilevanti ($\gamma$).
+
+# Quando funziona bene?
+Innanzitutto ragioniamo sotto quali **assunzioni** il relevance feedback aumenta la [[Set Based Measures#^eed895|recall]].
+
+Certamente tale metodo funziona bene qualora l'utente che espone la query al sistema conosce **bene** il vocabolario dei termini della nostra collezione.
+Infatti se nella query ci sono **sinonimi** che però non sono molto presenti nella collezione, potrebbe non migliorare di molto la situazione.
+
+Un'altra assunzione è che **documenti simili hanno molti termini in comune**.
+Se così fosse, allora è evidente che il relevance feedback è utile per migliorare la query.
+Questo però non è sempre detto, in quanto esistono svariati modi di dire uno stesso concetto, e potrebbe capitare che i documenti nella collezione esprimano concetti simili ma con termini totalmente differenti.
+
+# Problematiche
+Una delle principali problematiche è che tale metodo è **computazionalmente dispendioso**.
+Infatti, una query semplice ha generalmente una **dimensionalità bassa**, e quindi pochi termini da dover processare.
+Invece, le query generate usando il relevance feedback sono molto più dense di termini, perciò molto **dispendiose** da computare: devo processare troppe posting list.
+
+Un'altra problematica molto importante è che generalmente l'utente è riluttante del dare un feedback ai documenti.
+Infatti per dare un feedback necessità prima di leggere i documenti in questione, e ciò richiederebbe molto tempo.
+Per questo motivo tale metodo non è usato in pratica.
+
+# Pseudo-relevance feedback
+Si può quindi **simulare** il meccanismo di feedback umano sfruttando il [[Scoring, term weighting & the vector space model|ranking]].
+A seguito della query dell'utente prendiamo i top $k$ risultati nel ranking, e li contrassegnamo come **rilevanti** (come se fosse stato l'utente a farlo).
+Dopodiché applichiamo l'algoritmo di Rocchio per migliorare la query, quante volte vogliamo.
+
+In media questo metodo funziona molto bene, però è molto rischioso in quanto se il ranking non è fatto bene si rischia che la query **diverga** verso direzioni errate.
