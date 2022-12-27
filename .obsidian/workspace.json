@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "dd9b87cf391bea1e",
+        "id": "8bd90f519f9e01ba",
         "type": "tabs",
         "children": [
           {
-            "id": "a188259cb6dd5871",
+            "id": "6d19ae9977e10163",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "IR/Query Expansion.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -127,17 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "6d19ae9977e10163",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "IR/Query Expansion.md",
     "IR/Relevance feedback & Query expansion.md",
     "IR/Lecture 14.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Relevance Feedback.md",
     "IR/Introducing term frequency in BIM.md",
     "IR/Binary Independent Model.md",
     "root.md",
     "TODO.md",
-    "IR/Efficient Scoring.md",
-    "IR/Safe Scoring - WAND.md"
+    "IR/Efficient Scoring.md"
   ]
 }
