@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "5b085b7714b3faf2",
+        "id": "dd9b87cf391bea1e",
         "type": "tabs",
         "children": [
           {
-            "id": "726718a05b6bf8ad",
+            "id": "a188259cb6dd5871",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Relevance feedback & Query expansion.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "126c65441f32b8e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Lecture 14.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -98,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Relevance feedback & Query expansion.md",
+                "file": "IR/Query Expansion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Relevance feedback & Query expansion.md"
+                "file": "IR/Query Expansion.md"
               }
             }
           },
@@ -143,10 +127,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "726718a05b6bf8ad",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "IR/Lecture 14.md",
     "IR/Relevance feedback & Query expansion.md",
+    "IR/Lecture 14.md",
     "IR/0 - Information Retrieval.md",
     "IR/Relevance Feedback.md",
     "IR/Introducing term frequency in BIM.md",
