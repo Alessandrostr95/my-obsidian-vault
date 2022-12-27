@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Query Expansion.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Query Expansion.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Query Expansion.md"
+                "file": "IR/0 - Information Retrieval.md"
               }
             }
           },
@@ -133,8 +133,8 @@
   },
   "active": "6d19ae9977e10163",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
     "IR/Query Expansion.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Relevance feedback & Query expansion.md",
     "IR/Lecture 14.md",
     "IR/Relevance Feedback.md",
