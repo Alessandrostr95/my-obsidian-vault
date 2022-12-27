@@ -38,3 +38,10 @@ Un **tesauro** è una sorta di vocabolario di termini di un dominio, strutturati
 ```
 
 ^dcdf9e
+
+----
+```ad-important
+title: Obiettivo
+1. Aumentare i **true positive**
+2. Ridurre i **false negative**
+```

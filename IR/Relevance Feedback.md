@@ -60,4 +60,4 @@ Si può quindi **simulare** il meccanismo di feedback umano sfruttando il [[Scor
 A seguito della query dell'utente prendiamo i top $k$ risultati nel ranking, e li contrassegnamo come **rilevanti** (come se fosse stato l'utente a farlo).
 Dopodiché applichiamo l'algoritmo di Rocchio per migliorare la query, quante volte vogliamo.
 
-In media questo metodo funziona molto bene, però è molto rischioso in quanto se il ranking non è fatto bene si rischia che la query **diverga** verso direzioni errate.
+In media questo metodo funziona molto bene, però è molto rischioso in quanto se il ranking non è fatto bene si rischia che la query **diverga** verso direzioni errate, aumentando così di fatto i **falsi positivi**.
