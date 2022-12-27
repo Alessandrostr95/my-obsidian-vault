@@ -11,8 +11,24 @@
             "id": "dc569e92da945f2f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "IR/Relevance feedback & Query expansion.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c920a8a7e287feca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/0 - Information Retrieval.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -82,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Relevance feedback & Query expansion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "IR/Relevance feedback & Query expansion.md"
               }
             }
           },
@@ -129,15 +145,15 @@
   },
   "active": "dc569e92da945f2f",
   "lastOpenFiles": [
+    "IR/0 - Information Retrieval.md",
+    "IR/Relevance feedback & Query expansion.md",
+    "root.md",
+    "IR/Lecture 14.md",
+    "TODO.md",
     "IR/Efficient Scoring.md",
     "IR/Safe Scoring - WAND.md",
     "IR/TF-IDF weight.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Impact-Ordered Postings.md",
-    "IR/Tiered Indexes.md",
-    "IR/Query-Independent Document Scores.md",
-    "IR/Cluster Pruning.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
-    "BWA/1 - Introduction.md"
+    "IR/Tiered Indexes.md"
   ]
 }

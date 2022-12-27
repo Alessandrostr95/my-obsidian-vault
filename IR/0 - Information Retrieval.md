@@ -85,3 +85,4 @@ tags:
 	- [[Tiered Indexes]]
 	- [[Impact-Ordered Postings]]
 	- [[Safe Scoring - WAND]]
+- [[Relevance feedback & Query expansion]]
