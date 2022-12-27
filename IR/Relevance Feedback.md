@@ -29,3 +29,9 @@ Ovvero in queto framework la query ottima consiste in $$\vec{q}_{\text{opt}} \eq
 
 Tale equivalenza è ragionevole, in quanto teniamo in considerazione tutti i documenti rilevanti grazie al centroide $\vec{\mu}(C_r)$ e **scartiamo** quelli non rilevanti semplicemente **sottraendo** $\vec{\mu}(C_{nr})$.
 
+Purtroppo però in un contesto reale non conosciamo la partizione $C_r, C_{nr}$, perciò sfruttiamo il **relevance feedback** degli utenti.
+
+L'**algoritmo di Rocchio** è un **metodo iterativo** che implementa il relevance feedback nel [[Vector Space Model]].
+
+Sia $\vec{q}_0$ la query **iniziale** dell'utente, e siano $D_r, D_{nr}$ il relevance feedback dell'utente.
+**Iterativamente** possiamo migliorare la query con la seguente formula $$\vec{q}_{k+1} = \alpha \cdot \vec{q}_k + \beta \cdot \vec{\mu}(D_r) - \gamma \cdot \vec{\mu}(D_{nr})$$ dove $\alpha, \beta, \gamma$ sono dei **pesi** che possono essere impostati a piacere, a seconda se si desidera dare più peso alla query ($\alpha$), più peso a quelli contrassegnati come rilevanti ($\beta$) o "*allontanarsi*" di più da quelli contrassegnati come non rilevanti ($\gamma$).
