@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dc569e92da945f2f",
+            "id": "726718a05b6bf8ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Relevance feedback & Query expansion.md",
+                "file": "IR/Relevance Feedback.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c920a8a7e287feca",
+            "id": "126c65441f32b8e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Lecture 14.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Relevance feedback & Query expansion.md",
+                "file": "IR/Relevance Feedback.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Relevance feedback & Query expansion.md"
+                "file": "IR/Relevance Feedback.md"
               }
             }
           },
@@ -143,17 +143,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "dc569e92da945f2f",
+  "active": "726718a05b6bf8ad",
   "lastOpenFiles": [
-    "IR/0 - Information Retrieval.md",
-    "IR/Relevance feedback & Query expansion.md",
-    "root.md",
     "IR/Lecture 14.md",
+    "IR/Relevance Feedback.md",
+    "IR/Relevance feedback & Query expansion.md",
+    "IR/0 - Information Retrieval.md",
+    "root.md",
     "TODO.md",
     "IR/Efficient Scoring.md",
     "IR/Safe Scoring - WAND.md",
     "IR/TF-IDF weight.md",
-    "IR/Impact-Ordered Postings.md",
-    "IR/Tiered Indexes.md"
+    "IR/Impact-Ordered Postings.md"
   ]
 }

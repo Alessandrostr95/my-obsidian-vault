@@ -86,3 +86,5 @@ tags:
 	- [[Impact-Ordered Postings]]
 	- [[Safe Scoring - WAND]]
 - [[Relevance feedback & Query expansion]]
+	- [[Relevance Feedback]]
+	- [[Query Expansion]]
