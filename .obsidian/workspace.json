@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "NLP/Lecture 12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a4a6dd73c3910bfe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Grammatiche Formali.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "NLP/Grammatiche Formali.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/0 - Information Retrieval.md"
+                "file": "NLP/Grammatiche Formali.md"
               }
             }
           },
@@ -131,17 +144,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "6d19ae9977e10163",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "IR/Query Expansion.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/Relevance feedback & Query expansion.md",
-    "IR/Lecture 14.md",
-    "IR/Relevance Feedback.md",
-    "IR/Introducing term frequency in BIM.md",
-    "IR/Binary Independent Model.md",
-    "root.md",
-    "TODO.md",
-    "IR/Efficient Scoring.md"
+    "NLP/Lecture 12.md",
+    "NLP/Lecture 11.md",
+    "NLP/Lecture 10.md",
+    "NLP/Lecture 9.md",
+    "NLP/Lecture 8.md",
+    "NLP/Lecture 7.md",
+    "NLP/Lecture 6.md",
+    "NLP/Lecture 5.md",
+    "NLP/Lecture 4.md",
+    "NLP/Lecture 3.md"
   ]
 }
