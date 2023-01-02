@@ -86,3 +86,23 @@ Dopodiché, per ogni cella $(i,j)$ della diagonale $d=2$ di $M$ l'algoritmo tien
 Non è detto che tutte le celle della diagonale possono essere popolate.
 Potrebbe non esistere una produzione diretta che generi una seuqnza di simboli preterminali.
 ```
+
+Per una qualsiasi diagonale $d \geq 2$ si procede in maniera simile.
+Consideriamo le coppie di celle $(i,s), (s,j)$ con $s$ che va da $i-1$ a scendere fino a $j+1$ (questo è sempre vero in quanto $i \geq j$), e qualora trovassimo una produzione $A \to BC$ tale che $B \in M\left[ i,s \right]$ e $C \in M\left[ s,j \right]$ inseriamo $A$ nella cella $(i,j)$.
+
+![](./img/CYK_6_1.png)
+![](./img/CYK_6_2.png)
+![](./img/CYK_6_3.png)
+![](./img/CYK_6_4.png)
+![](./img/CYK_6_5.png)
+![](./img/CYK_6_6.png)
+![](./img/CYK_6_7.png)
+![](./img/CYK_6_8.png)
+![](./img/CYK_6_9.png)
+![](./img/CYK_6_10.png)
+![](./img/CYK_6_11.png)
+
+Iterando questo procedimento per tutte le *diagonali*, ci troveremo alla fine in due situazioni rispetto alla cella in alto a sinistra $(n,0)$ (ultima diagonale):
+1. Se $M\left[ n,0 \right] = S$ allora $I \in L(G)$
+2. Se $M\left[ n,0 \right] \neq S$ allora $I \notin L(G)$
+
