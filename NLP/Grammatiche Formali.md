@@ -136,7 +136,7 @@ Una [[#Tipo 2 - Grammatiche Context-Free|context-free]] è detta in forma normal
 - $A \to a$
 
 Dove $A,B,C \in N$ e $a \in \Sigma \cup \lbrace \varepsilon \rbrace$.
-Le produzioni del secondo tipo $A \to a$ sono anche dette **pre-terminali**.
+Le produzioni del secondo tipo $A \to a$ sono anche dette **pre-terminali**. ^c1b4a0
 
 È possibile dimostrare che qualsiasi grammatica context-free può essere espressa in forma normale di Chomsky.
 

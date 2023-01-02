@@ -1,5 +1,4 @@
 ---
----
 date: 2022-11-17
 draft: true
 ---
@@ -7,8 +6,6 @@ draft: true
 - Siamo nel contesto **context free** e vogliamo costruire un **parser**.
 
 Vedi [CYK](https://www.xarg.org/tools/cyk-algorithm/)
-
-
 
 ```julia
 # diagonale

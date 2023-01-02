@@ -4,35 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "8bd90f519f9e01ba",
+        "id": "b9286c954d2e2d32",
         "type": "tabs",
         "children": [
           {
-            "id": "6d19ae9977e10163",
+            "id": "47a03053eabed37b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Lecture 12.md",
+                "file": "NLP/CYK.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a4a6dd73c3910bfe",
+            "id": "e59a3d79986a6774",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Grammatiche Formali.md",
+                "file": "NLP/Lecture 10.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Grammatiche Formali.md",
+                "file": "NLP/CYK.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Grammatiche Formali.md"
+                "file": "NLP/CYK.md"
               }
             }
           },
@@ -144,17 +143,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "47a03053eabed37b",
   "lastOpenFiles": [
+    "NLP/Lecture 10.md",
+    "NLP/CYK.md",
+    "NLP/Lecture 9.md",
+    "NLP/Grammatiche Formali.md",
     "NLP/Lecture 12.md",
     "NLP/Lecture 11.md",
-    "NLP/Lecture 10.md",
-    "NLP/Lecture 9.md",
     "NLP/Lecture 8.md",
     "NLP/Lecture 7.md",
     "NLP/Lecture 6.md",
-    "NLP/Lecture 5.md",
-    "NLP/Lecture 4.md",
-    "NLP/Lecture 3.md"
+    "NLP/Lecture 5.md"
   ]
 }
