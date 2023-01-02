@@ -19,7 +19,7 @@ tags:
 - **Libro**: *Speech and Language Processing (3rd ed)* Dan Jurafsky & James H. Martin.
 
 ---------------------
-## Table of contents
+## Lecture Notes 
 - [[NLP/Lecture 2|Lecture 2]]
 - [[NLP/Lecture 3|Lecture 3]]
 - [[NLP/Lecture 4|Lecture 4]]
@@ -29,3 +29,8 @@ tags:
 - [[NLP/Lecture 9|Lecture 9]]
 - [[NLP/Lecture 10|Lecture 10]]
 - [[NLP/Lecture 11|Lecture 11]]
+
+-----
+# Contents
+- [[Grammatiche Formali]]
+- [[CYK]]

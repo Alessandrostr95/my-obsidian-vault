@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/CYK.md",
+                "file": "NLP/0 - Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/CYK.md",
+                "file": "NLP/0 - Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/CYK.md"
+                "file": "NLP/0 - Natural Language Processing.md"
               }
             }
           },
@@ -145,8 +145,8 @@
   },
   "active": "47a03053eabed37b",
   "lastOpenFiles": [
-    "NLP/Lecture 10.md",
     "NLP/CYK.md",
+    "NLP/Lecture 10.md",
     "NLP/Lecture 9.md",
     "NLP/Grammatiche Formali.md",
     "NLP/Lecture 12.md",

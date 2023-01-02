@@ -105,4 +105,3 @@ Consideriamo le coppie di celle $(i,s), (s,j)$ con $s$ che va da $i-1$ a scender
 Iterando questo procedimento per tutte le *diagonali*, ci troveremo alla fine in due situazioni rispetto alla cella in alto a sinistra $(n,0)$ (ultima diagonale):
 1. Se $M\left[ n,0 \right] = S$ allora $I \in L(G)$
 2. Se $M\left[ n,0 \right] \neq S$ allora $I \notin L(G)$
-
