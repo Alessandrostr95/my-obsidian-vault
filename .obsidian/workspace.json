@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Probabilistic Ranking Principle.md",
+                "file": "IR/Binary Independent Model.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Probabilistic Ranking Principle.md",
+                "file": "IR/Binary Independent Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Probabilistic Ranking Principle.md"
+                "file": "IR/Binary Independent Model.md"
               }
             }
           },
@@ -134,6 +134,7 @@
   "active": "f0c680192591032f",
   "lastOpenFiles": [
     "IR/Probabilistic Approach.md",
+    "IR/Probabilistic Ranking Principle.md",
     "IR/Appendice Probabilità.md",
     "IR/0 - Information Retrieval.md",
     "IR/Evaluation of IR systems.md",
@@ -141,7 +142,6 @@
     "IR/Rank-Based Measures.md",
     "IR/Set Based Measures.md",
     "NLP/0 - Natural Language Processing.md",
-    "NLP/CYK.md",
-    "NLP/Lecture 10.md"
+    "NLP/CYK.md"
   ]
 }
