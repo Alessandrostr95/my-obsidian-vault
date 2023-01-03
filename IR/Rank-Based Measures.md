@@ -1,6 +1,6 @@
 Misure come [[Set Based Measures|precision, recall ed F-measure]] sono basati solamente sugli **insiemi** dei documenti restituiti e sull'insieme dei documenti target.
 
-Abbiamo visto che un sistema di IR non si limita solo a restituire un sottoinsieme di documenti, bensì ne devinisce un [[Scoring, term weighting & the vector space model|ranking]] di significatibilità (rispetto alla query).
+Abbiamo visto che un sistema di IR non si limita solo a restituire un sottoinsieme di documenti, bensì ne definisce un [[Scoring, term weighting & the vector space model|ranking]] di significatibilità (rispetto alla query).
 Abbiamo perciò bisogno di estendere questi concetti di *misura della qualità* anche agli **score** delle pagine restituite.
 
 ----------
@@ -37,7 +37,7 @@ In pratica la funzione $P(r)$ definisce il valore di *precision* rispetto a qual
 Otterremo così un grafico **monotono non crescente**.
 
 Produciamo questo grafico per ogni query (nel nostro caso 2) e facciamo la **media**.
-Otterremo quindi una descrizione del mostro motore di IR tramite una **curva** (detta **curva precision/recall**) che rappresenta come **precision** e **racall** sono tra loro **bilanciate** nel notro motore di IR. ^656137
+Otterremo quindi una descrizione del nostro motore di IR tramite una **curva** (detta **curva precision/recall**) che rappresenta come **precision** e **racall** sono tra loro **bilanciate** nel nostro motore di IR. ^656137
 
 ```ad-info
 Ricoridamo che **precision** e **recall** sono mutuamente bilanciate.
