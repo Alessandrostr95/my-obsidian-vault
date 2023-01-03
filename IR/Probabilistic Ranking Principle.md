@@ -47,7 +47,7 @@ Perciò è necessario **stimarle** al meglio possibile rispetto ai dati che il s
 L'obiettivo di un motore di IR è quello di ritornare il **miglior** insieme di documenti a seguito di una query, ordinati nella maniera **migliore**.
 
 Per modellizzare il concetto di *"migliore"*, definiamo una funzioni che misuri il **costo di errore**.
-Ovvero associamo un valore ad ogni documenti **non** rilevante restituito, e ad ogni documento rilevante **non** restituito.
+Ovvero associamo un valore ad ogni documento **non** rilevante restituito, e ad ogni documento rilevante **non** restituito.
 
 Più formalmente definiamo le due seguenti due funzioni
 $$C_1(d,q) =

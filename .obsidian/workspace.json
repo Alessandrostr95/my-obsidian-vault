@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Beyond Binary Relevance.md",
-                "mode": "source",
+                "file": "IR/Probabilistic Ranking Principle.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Beyond Binary Relevance.md",
+                "file": "IR/Probabilistic Ranking Principle.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Beyond Binary Relevance.md"
+                "file": "IR/Probabilistic Ranking Principle.md"
               }
             }
           },
@@ -133,15 +133,15 @@
   },
   "active": "f0c680192591032f",
   "lastOpenFiles": [
+    "IR/Probabilistic Approach.md",
+    "IR/Appendice Probabilità.md",
+    "IR/0 - Information Retrieval.md",
     "IR/Evaluation of IR systems.md",
+    "IR/Beyond Binary Relevance.md",
     "IR/Rank-Based Measures.md",
     "IR/Set Based Measures.md",
-    "IR/0 - Information Retrieval.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/CYK.md",
-    "NLP/Lecture 10.md",
-    "NLP/Lecture 9.md",
-    "NLP/Grammatiche Formali.md",
-    "NLP/Lecture 12.md"
+    "NLP/Lecture 10.md"
   ]
 }
