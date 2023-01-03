@@ -44,12 +44,14 @@ $$F = \frac{1}{\frac{1}{2}(\frac{1}{P} + \frac{1}{R})} = \frac{2RP}{P + R}$$
 Quando $\alpha = 1/2$ è nota come **F1-measure**.
 
 Altri tipi di media tra precision e recall comuni sono:
+
 **Type** | **Value**
 ---|---
 maximum | $\max{\lbrace P, R \rbrace}$
 minimum | $\min{\lbrace P, R \rbrace}$
 arithmetic | $(P+R)/2$
 geometric | $\sqrt{PR}$
+
 
 ![](./img/IR_precision_recall_1.png)
 
