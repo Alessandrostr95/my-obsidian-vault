@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Evaluation of IR systems.md",
-                "mode": "preview",
+                "file": "IR/Beyond Binary Relevance.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Evaluation of IR systems.md",
+                "file": "IR/Beyond Binary Relevance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Evaluation of IR systems.md"
+                "file": "IR/Beyond Binary Relevance.md"
               }
             }
           },
@@ -133,8 +133,8 @@
   },
   "active": "f0c680192591032f",
   "lastOpenFiles": [
-    "IR/Rank-Based Measures.md",
     "IR/Evaluation of IR systems.md",
+    "IR/Rank-Based Measures.md",
     "IR/Set Based Measures.md",
     "IR/0 - Information Retrieval.md",
     "NLP/0 - Natural Language Processing.md",

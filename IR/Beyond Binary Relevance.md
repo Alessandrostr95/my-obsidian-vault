@@ -1,8 +1,6 @@
 Le metriche viste in [[Rank-Based Measures]] erano tutte metriche basate su un concetto **binario** di rilevanza: si teneva in considerazione se un termine era rilevante o meno.
 Più precisamente abbiamo visto misure basate solamente sulla [[Set Based Measures|precision e recall]].
 
-For many prominent applications, particularly web search, this may not be germane to users. What matters is rather how many good results there are on the first page or the first three pages.
-
 Per molte applicazioni reali, in particolare per il web, per un utente è più importante che ci siano buoni risultati sulla **prima pagina**, anziché sulle prime 3 o 10.
 Infatti nella realtà esistono varie sfumature di rilevanza, spesso associate alla semantica della query.
 
@@ -29,5 +27,3 @@ Definiamo quindi il **guadano cumulativo scontato** (o **Discounted Cumulative G
 ```ad-info
 Un'altra formula usata da alcuni motori di ricerca è la seguente $$DCG = \sum_{i=1}^{n} \frac{2^{r_i} - 1}{\log{(i+1)}}$$
 ```
-
-
