@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "11e8f8b8da22086e",
+        "id": "41c2917ada2da0d5",
         "type": "tabs",
         "children": [
           {
-            "id": "5ca823889452564f",
+            "id": "b0ee303f80cb4b74",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4fba39ba79baf683",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Hidden Markov Model Tagger.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5
+    "width": 209.5,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Part of Speach.md",
+                "file": "NLP/Hidden Markov Model Tagger.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Part of Speach.md"
+                "file": "NLP/Hidden Markov Model Tagger.md"
               }
             }
           },
@@ -131,12 +145,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ca823889452564f",
+  "active": "4fba39ba79baf683",
   "lastOpenFiles": [
+    "NLP/Part of Speach.md",
     "NLP/Grammatiche Formali.md",
     "NLP/CYK.md",
     "NLP/Earley Parser.md",
-    "NLP/Part of Speach.md",
     "IR/Binary Independent Model.md",
     "IR/0 - Information Retrieval.md",
     "IR/Introducing term frequency in BIM.md",
