@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Part of Speach.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4fba39ba79baf683",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/Hidden Markov Model Tagger.md",
+                "file": "Mining Data Stream.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5,
-    "collapsed": true
+    "width": 209.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Hidden Markov Model Tagger.md",
+                "file": "Mining Data Stream.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Hidden Markov Model Tagger.md"
+                "file": "Mining Data Stream.md"
               }
             }
           },
@@ -145,17 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "4fba39ba79baf683",
+  "active": "b0ee303f80cb4b74",
   "lastOpenFiles": [
+    "TODO.md",
     "NLP/Part of Speach.md",
+    "Senza nome.canvas",
+    "NLP/Hidden Markov Model Tagger.md",
     "NLP/Grammatiche Formali.md",
     "NLP/CYK.md",
     "NLP/Earley Parser.md",
     "IR/Binary Independent Model.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Introducing term frequency in BIM.md",
-    "IR/Probabilistic Ranking Principle.md",
-    "IR/Probabilistic Approach.md",
-    "IR/Appendice Probabilità.md"
+    "IR/Introducing term frequency in BIM.md"
   ]
 }
