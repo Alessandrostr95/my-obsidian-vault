@@ -26,4 +26,4 @@ la probabilità di un sottocammino che arriva fino alla parola $i$-esima è pari
 - la probabilità del sottocammino fino a $w_{i-1}$, moltiplicato per
 - la probabilità di transitare dallo stato precedente $t_{i-1}$ a quello attuale $t_i$.
 
-$$P(\langle t_1, ..., t_i \rangle) = \max_{t \in T} P(w_i \vert t) \cdot P(X_i = t\vert X_{i-1} = t_j) \cdot P(\langle t_1, ..., t_{i-1} \rangle)$$
+$$P(\langle t_1, ..., t_i \rangle) = \max_{t \in T} P(w_i \vert t) \cdot P(X_i = t\vert X_{i-1} = t_{i-1}) \cdot P(\langle t_1, ..., t_{i-1} \rangle)$$

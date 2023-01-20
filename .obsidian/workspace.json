@@ -13,31 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Algoritmo di Viterbi.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3309988bb649c655",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/Hidden Markov Model Tagger.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b0a133962a43160a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/Hidden Markov Model Tagger.md",
+                "file": "IC/RDF.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Algoritmo di Viterbi.md",
+                "file": "IC/RDF.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Algoritmo di Viterbi.md"
+                "file": "IC/RDF.md"
               }
             }
           },
@@ -157,15 +133,15 @@
   },
   "active": "aaac7a1b108eff79",
   "lastOpenFiles": [
-    "NLP/Hidden Markov Model Tagger.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/RDF.md",
     "NLP/Algoritmo di Viterbi.md",
+    "NLP/Hidden Markov Model Tagger.md",
     "NLP/0 - Natural Language Processing.md",
     "Mining Data Stream.md",
     "TODO.md",
     "NLP/Part of Speach.md",
     "Senza nome.canvas",
-    "NLP/Grammatiche Formali.md",
-    "NLP/CYK.md",
-    "NLP/Earley Parser.md"
+    "NLP/Grammatiche Formali.md"
   ]
 }

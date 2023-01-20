@@ -19,6 +19,10 @@ tags:
 - **Sito**: http://art.uniroma2.it/teaching/ke/
 
 ---------------------
-## Table of contents
+## Lecture Notes
 - [[IC/Lecture 1|Lecture 1]]
 - [[IC/Lecture 3|Lecture 3]]
+
+-----
+## Table of Content
+- [[RDF]]
