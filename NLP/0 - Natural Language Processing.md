@@ -32,5 +32,8 @@ tags:
 
 -----
 # Contents
+- [[Part of Speach]]
+- [[Hidden Markov Model Tagger]]
+- [[Algoritmo di Viterbi]]
 - [[Grammatiche Formali]]
 - [[CYK]]

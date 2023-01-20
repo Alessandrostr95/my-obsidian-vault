@@ -8,12 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b0ee303f80cb4b74",
+            "id": "aaac7a1b108eff79",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mining Data Stream.md",
+                "file": "NLP/Algoritmo di Viterbi.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3309988bb649c655",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Hidden Markov Model Tagger.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b0a133962a43160a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Hidden Markov Model Tagger.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mining Data Stream.md",
+                "file": "NLP/Algoritmo di Viterbi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mining Data Stream.md"
+                "file": "NLP/Algoritmo di Viterbi.md"
               }
             }
           },
@@ -131,17 +155,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "b0ee303f80cb4b74",
+  "active": "aaac7a1b108eff79",
   "lastOpenFiles": [
+    "NLP/Hidden Markov Model Tagger.md",
+    "NLP/Algoritmo di Viterbi.md",
+    "NLP/0 - Natural Language Processing.md",
+    "Mining Data Stream.md",
     "TODO.md",
     "NLP/Part of Speach.md",
     "Senza nome.canvas",
-    "NLP/Hidden Markov Model Tagger.md",
     "NLP/Grammatiche Formali.md",
     "NLP/CYK.md",
-    "NLP/Earley Parser.md",
-    "IR/Binary Independent Model.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/Introducing term frequency in BIM.md"
+    "NLP/Earley Parser.md"
   ]
 }
