@@ -102,20 +102,42 @@ Grazie all'espressività di XML è possibile mascherare la rigorosa notazione a 
 **Turtle** è una sintassi molto più semplice e meno espressiva di XML, che però consente solamente di definire grafi RDF validi.
 Grazie a queste caratteristiche Trutle è considerata essere un'alternativa molto migliore di RDF/XML.
 
-## Esempio RDF/XML
+## Esempio serializzazioni
+Consideriamo il seguente grafo di relazioni
+![](./img/rdf_4.png)
+
+La relativa serializzazione RDF/XML sarà
 ```xml
 <rdf:RDF
-	xmlns:rdf=“http://www.w3.org/1999/02/22-rdf-syntax-ns#”
-	xmlns:dc=“http://purl.org/dc/elements/1.1/” >
+	xml:base = "http://www.Batman.org"
+	xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:mySchema = "http://www.Batman.org/mySchema/">
 	
-	<rdf:Description
-		rdf:about = “http://art.uniroma2.it/stellato/index.html”>
-		
-		<dc:creator>
-			Armando Stellato
-		</dc:creator>
-		
+	<rdf:Description rdf:about = "http://www.Batman.org#Robin/"> 
+		<mySchema:employedBy rdf:resource = "#Batman"/>
 	</rdf:Description>
-
+	
+	<rdf:Description rdf:ID = "Batman">
+		<mySchema:HQ>Batcave</mySchema:HQ>  
+		<mySchema:Name>Bruce Wayne</mySchema:Name>
+		<mySchema:Email rdf:resource = "mailto:boss@batman.org" />
+	</rdf:Description>
+	
 </rdf:RDF>
+```
+
+Abbiamo che le risorse possono essere identificate da un `rdf:about` o un `rdf:ID`.
+L'`rdf:about` necessita di specificare l'itero IRI, mentre `rdf:ID` antecede al valore dell'id il path di base `xml:base`.
+Perciò nel nostro esempio `rdf:ID = "Batman"` sarà equivalente a `rdf:about = "http://www.Batman.org#Batman"`.
+
+La sintassi in Turtle sarà invece
+```turtle
+@base <http://www.Batman.org> .
+@prefix mySchema: <http://www.Batman.org/mySchema/> .
+
+<http://www.Batman.org#Robin> mySchema:employedBy <#Batman> .
+
+<#Batman> mySchema:HQ "Batcave" ;
+          mySchema:Name "Bruce Wayne" ;
+          mySchema:Email <mailto:boss@batman> .
 ```
