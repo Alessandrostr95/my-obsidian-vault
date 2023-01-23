@@ -21,5 +21,18 @@ Ad esempio, gli argomenti del verbo `preferire` (soggetto e complemento) sono **
 Allo stesso modo, `morning` e `Denver` [[Part of Speach#ADV - Avverbio|avverbi]] di `flight`, sono collegati ad esso direttamente nella struttura alle dipendenza.
 Perciò il vantaggio di una rappresentazione alle dipendenze è che vengono rappresentate importanti informazioni riguardo alle **relazioni semantiche** tra i predicati e i loro argomenti.
 
+Un altro vantaggio delle rappresentazioni alle dipendenze è che funzionano anche con grammatiche il cui ordine delle parole è **libero**.
+Per esempio l'inglese è una lingua detta SVC, necessariamente avremo la sequenza *soggetto-verbo-complemento*, mentre una lingua come l'italiano è molto più libera, e non specifica un unico ordine grammaticalmente corretto.
+In un albero ai costituenti questa sequenza è rigorosamente vincolata dalla grammatica in analisi, perciò esistono molti alberi per qualsiasi posizione assume una parola nella frase.
+Per gli alberi alle dipendenze invece non ci sono questi tipi di vincoli, rendondo quindi tali strutture molto più versatili.
+
+# Dependency Relations
+Per **dipendenza** grammatica si intende una **relazione binaria** i cui argomenti sono due parole, la **testa** e il **dipendente**.
+La testa indica la parola principale e il dipendente è una sorta di suo "modificatore", il cui effetto è definito dalla relazione.
+
+Una **grammatica alle dipendenze** definisce quindi una serie di **relazioni grammaticali** tra le parole, definendo il ruolo che gioca la parola dipendente con la parola testa.
+Per esempio in lingua inglese abbiamo relazioni come **subject**, **direct object** e **indirect object**.
+Queste relazioni definiscono solamente come interagiscono le parole tra di loro, indipendentemente dalla loro **posizione** nella frase o dal **[[Part of Speach|pos-tag]]**.
+
 
 
