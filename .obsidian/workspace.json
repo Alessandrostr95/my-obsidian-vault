@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Grammatiche Formali.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9af954fe89ac91d1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "NLP/Dependency Parsing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -144,17 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "9af954fe89ac91d1",
+  "active": "aaac7a1b108eff79",
   "lastOpenFiles": [
+    "NLP/img/CYK_1.png",
+    "NLP/Dependency Parsing.md",
     "NLP/Part of Speach.md",
     "NLP/Grammatiche Formali.md",
-    "NLP/Dependency Parsing.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/Earley Parser.md",
     "NLP/CYK.md",
     "NLP/Algoritmo di Viterbi.md",
     "IC/RDF.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "NLP/Hidden Markov Model Tagger.md"
+    "IC/0 - Ingegneria della Conoscenza.md"
   ]
 }
