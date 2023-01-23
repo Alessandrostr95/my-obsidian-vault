@@ -35,5 +35,7 @@ tags:
 - [[Part of Speach]]
 - [[Hidden Markov Model Tagger]]
 - [[Algoritmo di Viterbi]]
-- [[Grammatiche Formali]]
-- [[CYK]]
+- **Constituent Parsing**
+	- [[Grammatiche Formali]]
+	- [[CYK]]
+- **[[Dependency Parsing]]**

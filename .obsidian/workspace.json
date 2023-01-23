@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/RDF.md",
+                "file": "NLP/Grammatiche Formali.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9af954fe89ac91d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Dependency Parsing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5
+    "width": 270.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/RDF.md",
+                "file": "NLP/Dependency Parsing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/RDF.md"
+                "file": "NLP/Dependency Parsing.md"
               }
             }
           },
@@ -131,17 +144,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "aaac7a1b108eff79",
+  "active": "9af954fe89ac91d1",
   "lastOpenFiles": [
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IC/RDF.md",
-    "NLP/Algoritmo di Viterbi.md",
-    "NLP/Hidden Markov Model Tagger.md",
-    "NLP/0 - Natural Language Processing.md",
-    "Mining Data Stream.md",
-    "TODO.md",
     "NLP/Part of Speach.md",
-    "Senza nome.canvas",
-    "NLP/Grammatiche Formali.md"
+    "NLP/Grammatiche Formali.md",
+    "NLP/Dependency Parsing.md",
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/Earley Parser.md",
+    "NLP/CYK.md",
+    "NLP/Algoritmo di Viterbi.md",
+    "IC/RDF.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "NLP/Hidden Markov Model Tagger.md"
   ]
 }
