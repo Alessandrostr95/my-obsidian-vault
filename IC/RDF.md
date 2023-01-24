@@ -141,3 +141,13 @@ La sintassi in Turtle sarà invece
           mySchema:Name "Bruce Wayne" ;
           mySchema:Email <mailto:boss@batman> .
 ```
+
+# XML vs RDF
+In realtà ciò che propone RDF è una soluzione già risolvibile da XML e XML Schema.
+
+Ciò che però offre RDF uno **standard unico** per la definizione e l'interpretazione **semantica** dei dati.
+Per esempio, se ho a dispozione diverse informazioni di dati su una stessa entità possono **fondere** le infromazioni grazie al fatto che i dati sono rappresentati mediante una rappresentazione omogenea (quella a triple).
+![](./img/rdf_5.png)
+
+Invece in XML dati differenti sono rappresentati in maniera differente, perciò fare un'aggregazione delle informazioni risulta parecchio complesso, per via della loro eterogeneità.
+![](./img/rdf_6.png)
