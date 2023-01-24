@@ -12,8 +12,9 @@ Il vocabolario principale di RDFS introduce i seguenti termini principali:
 - **rdf:Property** Anche questo termine viene dal vocabolario RDF, e rappresenta il sottoinsieme di tutte le risorse RDF che sono proprietà di un'altra risorsa.
 - **rdfs:subClassOf** Questa è una relazione di **incusione** tra class. Se $A$ è `rdfs:subClassOf` $B$ allora $A$ è un **sottoinsieme** di $B$. È una proprietà transitiva.
 - **rdfs:subPropertyOf** Questa proprietà è usata per indicare che una proprietà è una specializzazione di un'altra proprietà.
-- **rdfs:range** Dichiara che tutti i valori che può assumere una certa proprietà appartengono ad una data classe. 
-- **rdfs:domain** Dichiara che tutte le risorse caratterizzate da una certa proprietà appartengono ad una data classe.
+- **rdfs:domain** Dichiara che tutte le risorse caratterizzate da una certa proprietà appartengono ad una data classe. In parole semplici indicano la classe **dominio** di una proprietà.
+- **rdfs:range** Dichiara che tutti i valori che può assumere una certa proprietà appartengono ad una data classe. In parole semplici indicano la classe **codominio** di una proprietà.
+
 
 Esistono anche dei termini utili per commentare/documentare una base di conoscenza, anche se non sono particolarmente utili per la semantica.
 - **rdfs:comment**: il modo più generale per commentare qualcosa. In genere fornisce una definizione in linguaggio naturale della risorsa che la contiene.
@@ -61,4 +62,31 @@ La codifica in RDF/XML sarà
 	rdfs:domain :Vehicle ;
 	rdfs:range :Company ;
 	rdfs:label "Vehicle Producer"@en .
+```
+
+# Limitazioni di RDFS
+Purtroppo RDFS non cattura con precisione alcune caratteristiche importanti.
+
+Innanzitutto non consente di definire in maniera **contestuale** i vincoli di range/domain.
+```ad-example
+Per esempio, consideriamo la proprietà `hasChild`.
+Se applicata alla classe `Person` vorrei il vincolo che `range` sia `Person`.
+Se invece applicata alla classe `Elephant` vorrei il vincolo che `range` sia `Elephant`.
+Si potrebbe pensare di assegnare la superclasse `Animal` a `Elephant` e a `Person`, e dire che un `Aniaml` ha `hasChild` un altro `Animal`.
+Purtroppo però potrei avere inconsistenze del tipo una persona che ha come figlio un elefante...
+Perciò è necessario definire le due proprietà distinte `hasChildPerson` e `hasChildElephant`.
+```
+
+Dopodichè non da nessun vincolo **quantificativo** (esistenzialità/cardinalità).
+```ad-example
+Non si può dire che tutte le istanze di `Person` hanno una madre che è anche una `Person`, o che tutte le persone hanno esattamente due genitori.
+```
+
+Ancora, nessuna proprietà **transitive**, **inverse** or **simmetriche**.
+```ad-example
+- Non si può affermare che la proprietà `isPartOf` è una proprietà **transitiva**: se $A$ ha un parte $B$, e $B$ ha una parte $C$, allora $A$ ha come parte anche $C$.
+
+- Non si può nemmeno dire che `hasPart` è l'**inversa** di `isPartOf`: se $A$ ha come parte $B$, allora $B$ è una parte di $A$.
+
+- Non si può definire che la proprietà `touches` è **simmetica**: se $A$ è in contatto con $B$ allora anche $B$ è in contatto con $A$.
 ```
