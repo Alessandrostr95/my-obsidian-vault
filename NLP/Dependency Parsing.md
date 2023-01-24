@@ -55,3 +55,11 @@ Una struttura alle dipendenze è definita come un **grafo diretto etichettato** 
 Esiste un nodo contrassegnato come **radice**, ed esiste un unico cammino dal nodo radice che collega un qualsiasi altro nodo.
 
 Unendo queste definizioni abbiamo che una struttura alle dipendenze è di fatto un **albero diretto radicato**.
+
+# Projectivity
+Un arco dei una struttura alle dipendenze è detto **proiettivo** se esiste un cammino dalla testa dell'arco verso tutte le parole comprese tra la testa e il dipendente.
+Analogamente una struttura alle dipendenze è detta **proiettiva** se tutti i suoi archi sono proiettivi.
+
+![](./img/dependency_6.png)
+La frase nell'esempio precedente NON è proiettiva: per esempio l'arco `flight -> was` è non proiettivo.
+Una importante proprietà è che se un albero alle dipendenze è proiettivo allora è anche **planare**.
