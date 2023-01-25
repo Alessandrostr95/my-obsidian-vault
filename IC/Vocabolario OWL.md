@@ -64,3 +64,20 @@ Ad esempio, OwnedBy può essere una proprietà del tipo di oggetto della classe 
 ```
 
 
+## Annotation Property
+Una **annotation property** è fuori dalla semantica dell’ontologia.
+Servono solo per commentare l’ontologia.
+
+## Esempio Descrizione 
+```xml
+<Persona rdf:ID="armando">  
+	<conosce rdf:resource="#manuel" />  
+	<nome rdf:datatype="&xsd;string">Armando</nome>
+</Persona>
+
+<owl:Thing rdf:ID="manuel">
+	<rdf:type rdf:resource="#Persona" />
+	<nome rdf:datatype="&xsd;string">Manuel</nome>
+</owl:Thing >
+```
+
