@@ -12,8 +12,8 @@ Il vocabolario principale di RDFS introduce i seguenti termini principali:
 - **rdf:Property** Anche questo termine viene dal vocabolario RDF, e rappresenta il sottoinsieme di tutte le risorse RDF che sono proprietà di un'altra risorsa.
 - **rdfs:subClassOf** Questa è una relazione di **incusione** tra class. Se $A$ è `rdfs:subClassOf` $B$ allora $A$ è un **sottoinsieme** di $B$. È una proprietà transitiva.
 - **rdfs:subPropertyOf** Questa proprietà è usata per indicare che una proprietà è una specializzazione di un'altra proprietà.
-- **rdfs:domain** Dichiara che tutte le risorse caratterizzate da una certa proprietà appartengono ad una data classe. In parole semplici indicano la classe **dominio** di una proprietà.
-- **rdfs:range** Dichiara che tutti i valori che può assumere una certa proprietà appartengono ad una data classe. In parole semplici indicano la classe **codominio** di una proprietà.
+- **rdfs:domain** Dichiara che tutte le risorse caratterizzate da una certa proprietà appartengono ad una data classe. In parole semplici indicano la classe **dominio** di una proprietà. ^70b359
+- **rdfs:range** Dichiara che tutti i valori che può assumere una certa proprietà appartengono ad una data classe. In parole semplici indicano la classe **codominio** di una proprietà. ^e58a30
 
 
 Esistono anche dei termini utili per commentare/documentare una base di conoscenza, anche se non sono particolarmente utili per la semantica.

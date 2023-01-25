@@ -8,18 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aa8664f8aed022c8",
+            "id": "aea629383b58b348",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/OWL.md",
+                "file": "IC/RDF Schema.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0bed2816ed982334",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IC/Vocabolario OWL.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 270.5
+    "width": 208.5
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/OWL.md",
+                "file": "IC/Vocabolario OWL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/OWL.md"
+                "file": "IC/Vocabolario OWL.md"
               }
             }
           },
@@ -131,17 +144,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "aa8664f8aed022c8",
+  "active": "0bed2816ed982334",
   "lastOpenFiles": [
     "IC/RDF Schema.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/Vocabolario OWL.md",
     "IC/OWL.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/RDF.md",
     "NLP/0 - Natural Language Processing.md",
     "Mining Data Stream.md",
-    "IC/RDF.md",
     "NLP/Dependency Parsing.md",
     "NLP/img/CYK_1.png",
-    "NLP/Part of Speach.md",
-    "NLP/Grammatiche Formali.md"
+    "NLP/Part of Speach.md"
   ]
 }

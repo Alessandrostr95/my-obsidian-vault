@@ -84,4 +84,3 @@ Si inferisce che `Duffy` è **anche** una `eg:Person`.
 
 Possiamo invece dire che `myDoc2` è un documento dato che come autore ha una `eg:Person`?
 Per OWA non possiamo saperlo.
-

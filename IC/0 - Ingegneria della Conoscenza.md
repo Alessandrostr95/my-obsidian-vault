@@ -28,3 +28,4 @@ tags:
 - [[RDF]]
 - [[RDF Schema]]
 - [[OWL]]
+- [[Vocabolario OWL]]
