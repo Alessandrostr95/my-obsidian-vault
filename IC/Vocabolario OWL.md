@@ -373,7 +373,246 @@ In DL $$\lnot \text{ Meat}$$
 
 ---------
 # Assiomi sulle classi
+OWL supporta i seguenti **assiomi** (o **relazioni**) tra classi
+- `rdfs:subClassOf`
+- `owl:equivalentClass`
+- `owl:disjointWith`
+
+## Sottoclasse
+Ereditato da [[RDF Schema]]
+```xml
+<owl:Class rdf:ID="aClass">
+	<rdfs:subClassOf>
+        <!-- class expression ... -->
+	</rdfs:subCassOf>
+</owl:Class>
+
+<owl:Class rdf:ID="aClass">  
+	<rdfs:subClassOf rdf:resource="[class IRI]" />
+</owl:Class>
+```
+
+```xml
+<!-- ESEMPIO: class expression -->
+<owl:Class rdf:ID="VinoBianco">
+	<rdfs:subClassOf>
+		<owl:Class>
+			<owl:intersectionOf parseType="Collection">
+				<owl:Class rdf:about="#Vino" />
+				<owl:Restriction>
+					<owl:onProperty rdf:resource="colore" />
+					<owl:hasValue rdf:datatype="&xsd;string">
+						bianco
+					</owl:hasValue>
+				</owl:Restriction>
+			</owl:intersectionOf>
+		</owl:Class>
+	</rdfs:subClassOf>
+</owl:Class>
+
+<!-- ESEMPIO: class reource -->
+<owl:Class rdf:id="VinoBianco">
+	<rdfs:subClassOf rdf:resource="Vino" />
+</owl:Class>
+```
+
+```turtle
+# ESEMPIO: class expression
+:VinoBianco rdfs:subClassOf [
+	rdf:type owl:Class ;
+	owl:intersectionOf (
+		:Vino
+		[
+			rdf:type owl:Restriction ;
+			owl:onProperty :colore ;
+			owl:hasValue :bianco
+		]
+	)
+] .
+
+# ESEMPIO: class reource
+:VinoBianco rdfs:subClassOf <http://other.com/WhiteWine>
+```
+
+In DL $$\text{VinoBianco} \sqsubseteq (\text{Vino } \sqcap (\text{colore} \ni \text{bianco}))$$
+
+## Equivalenza
+```xml
+<owl:Class rdf:ID="aClass">
+	<owl:equivalentClass>
+        <!-- class expression ... -->
+	</owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:ID="aClass">  
+	<owl:equivalentClass rdf:resource="[class IRI]" />
+</owl:Class>
+```
+
+```xml
+<!-- ESEMPIO: class expression -->
+<owl:Class rdf:id="VinoBianco">
+	<owl:equivalentClass>
+		<owl:Class>  
+			<owl:intersectionOf parseType="Collection">
+				<owl:Class rdf:about="#Vino" />
+				<owl:Restriction>
+					<owl:onProperty rdf:resource="colore" />
+					<owl:hasValue rdf:datatype="&xsd;string">
+						bianco
+					</owl:hasValue>
+				</owl:Restriction>
+			</ owl:intersectionOf>
+		</owl:Class>
+	</owl:equivalentClass>
+</owl:Class>
+
+<!-- ESEMPIO: class reource -->
+<owl:Class rdf:id="VinoBianco">  
+	<rdfs:owl:equivalentClass rdf:resource="http://other.com/WhiteWine" />
+</owl:Class>
+```
+
+```turtle
+# ESEMPIO: class expression
+:VinoBianco owl:equivalentClass [
+	rdf:type owl:Class ;
+	owl:intersectionOf (
+		:Vino
+		[
+			rdf:type owl:Restriction ;
+			owl:onProperty :colore ;
+			owl:hasValue :bianco
+		]
+	)
+] .
+
+# ESEMPIO: class reource
+:VinoBianco owl:equivalentClass <http://other.com/WhiteWine>
+```
+
+In DL $$\text{VinoBianco} \equiv (\text{Vino } \sqcap (\text{colore} \ni \text{bianco}))$$
 
 
+## Disgiunzione
+In OWL è possibile dire che due classi sono **disgiunte**, ovvero che NON hanno istanze in comune
+```xml
+<owl:Class rdf:ID="aClass">
+	<owl:owlDisjointWith>
+        <!-- class expression ... -->
+	</owl:owlDisjointWith>
+</owl:Class>
+
+<owl:Class rdf:ID="aClass">  
+	<owl:owlDisjointWith rdf:resource="[class IRI]" />
+</owl:Class>
+```
+
+```xml
+<owl:Class rdf:ID="Animale">  
+	<owl:disjointWith rdf:resource="#Vegetale" />
+	<owl:disjointWith rdf:resource="#Fungo" />
+</owl:Class>
+
+<owl:Class rdf:ID="Vegetale">
+	<owl:disjointWith rdf:resource="#Fungo" />
+</owl:Class>
+
+<owl:Class rdf:ID="Fungo" />
+```
 
 
+---------
+# Caratteristiche sulle proprietà
+Con OWL è possibile esprimere varie carateristiche sulle proprietà:
+- `owl:TransitiveProperty`
+- `owl:SymmetricProperty`
+- `owl:FunctionalProperty`
+- `owl:inverseOf`
+- `owl:InverseFunctionalProperty`
+
+## Transitività
+È possibile definire la proprietà di **transitività** di una proprietà.
+```xml
+<owl:TransitiveProperty rdf:ID="parteDi" />
+
+<owl:ObjectProperty rdf:ID="parteDi" >
+	<rdf:type rdf:resource="&owl;TransitiveProperty" />
+</owl:ObjectProperty>
+```
+
+```turtle
+:parteDi rdf:type owl:TransitiveProperty .
+```
+
+![](./img/owl_1.png)
+
+## Simmetria
+È possibile definire la proprietà di **simmetria** di una proprietà.
+```xml
+<owl:SymmetricProperty rdf:id="vicino" />
+
+<owl:ObjectProperty rdf:id="vicino" >
+	<rdf:type rdf:resource="&owl;SymmetricProperty" />
+</owl:ObjectProperty>
+```
+
+```turtle
+:vicino rdf:type owl:SymmetricProperty .
+```
+
+![](./img/owl_2.png)
+
+## Functional Property
+Una **proprietà funzionale** è una proprietà tale che può avere un **unico valore** $y$ per ogni istanza $x$.
+Perciò, se per una proprietà funzionale, abbiamo due coppie $(x,y)$ e $(x,z)$ allora deve essere necessariamente vero che $y \equiv z$.
+
+```xml
+<owl:FunctionalProperty rdf:ID="produttore" />
+
+<owl:ObjectProperty rdf:ID="produttore" >
+	<rdf:type rdf:resource="&owl;FunctionalProperty" />
+</owl:ObjectProperty>
+```
+
+```turtle
+:produttore rdf:type owl:ObjectProperty .
+```
+
+Ovviamente una relazione funzionale è una **object property**, in quanto un datatype non può essere funzionale.
+Infatti se ho due coppie $(x,1)$ e $(x,2)$ non posso dire che $1 \equiv 2$.
+
+![](./img/owl_3.png)
+
+## Inversa
+È anche possibile dire che una relazione è l'**inversa** di un'altra.
+Per esempio $$X \text{ hasChild } Y \iff Y \text{ hasParent } X$$
+
+```xml
+<owl:ObjectProperty rdf:ID="hasChild">
+	<owl:inverseOf rdf:resource="#hasParent"/>
+</owl:ObjectProperty>
+```
+
+```turtle
+:hasChild owl:inverseOf :hasParent .
+```
+
+## Inversa Funzionale
+Se una proprietà è definita **inversa funzionale** allora l'**oggetto** di una relazione definisce **univocamente** il **soggetto**.
+Perciò se per una relazione inversa funzionale abbiamo le coppie $(x_1,y)$ e $(x_2,y)$ allora necessariamente deve essere vero che $x_1 \equiv x_2$.
+
+```xml
+<owl:InverseFunctionalProperty rdf:ID="capitaleDi" />
+
+
+<owl:ObjectProperty rdf:ID="capitaleDi" >
+	<rdf:type rdf:resource="&owl;InverseFunctionalProperty" />
+</owl:ObjectProperty>
+```
+
+```turtle
+:capitaleDi rdf:type owl:InverseFunctionalProperty .
+```
+
+![](./img/owl_4.png)
