@@ -31,6 +31,9 @@ true.
 ```
 
 # Open World Assumption & No Unique Name Assumption
+
+^963225
+
 OWL invece si basa su due principi:
 - **Open World Assumption** (**OWA**), ovvero l'assunzione secondo cui la **verità** di una dichiarazione $A$ può essere positivo **indipendentemente** dal fatto che $A$ sia un fatto conosciuto essere vero nella base di dati in questione. Ovvero il fatto che non posso dedurre $A$ dalla mia base di conoscenza, non significa che sia falso.
 - **No Unique Name Assumption**
