@@ -255,4 +255,125 @@ In DL $$\text{hasParent} \ni \text{clinton}$$
 
 
 ### Restrizioni sulla cardinalità
+#### Massima cardinalità
+```xml
+<owl:Restriction>
+	<owl:onProperty rdf:resource="#hasParent" />
+	<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">
+		2
+	</owl:maxCardinality>
+</owl:Restriction>
+```
+
+```turtle
+:x owl:equivalentClass [
+	rdf:type owl:Restriction ;
+	owl:onProperty :hasParent ;
+	owl:maxCardinality "2"^^xsd:nonNegativeInteger 
+] .
+```
+
+In DL $$\leq 2 \text{ hasParent}$$
+
+#### Massima cardinalità
+```xml
+<owl:Restriction>
+	<owl:onProperty rdf:resource="#hasParent" />
+	<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">
+		2
+	</owl:minCardinality>
+</owl:Restriction>
+```
+
+```turtle
+:x owl:equivalentClass [
+	rdf:type owl:Restriction ;
+	owl:onProperty :hasParent ;
+	owl:minCardinality "2"^^xsd:nonNegativeInteger 
+] .
+```
+
+In DL $$\geq 2 \text{ hasParent}$$
+
+#### Specifica cardinalità
+```xml
+<owl:Restriction>
+	<owl:onProperty rdf:resource="#hasParent" />
+	<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">
+		2
+	</owl:cardinality>
+</owl:Restriction>
+```
+
+```turtle
+:x owl:equivalentClass [
+	rdf:type owl:Restriction ;
+	owl:onProperty :hasParent ;
+	owl:cardinality "2"^^xsd:nonNegativeInteger 
+] .
+```
+
+In DL $$= 2 \text{ hasParent}$$
+
+## Tramite operatori insiemistici
+### Intersezione
+```xml
+<owl:Class>
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="#LandVehicle" />
+		<owl:Class rdf:about="#SeaVehicle" />
+	</owl:intersectionOf>
+</owl:Class>
+```
+
+```turtle
+:x owl:equivalentClass [
+	rdf:type owl:Class ;
+	owl:intersectionOf ( :LandVehicle :SeaVehicle )
+] .
+```
+
+In DL $$\text{LandVehicle } \sqcap \text{ SeaVehicle}$$
+### Unione
+```xml
+<owl:Class>
+	<owl:unionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="#LandVehicle" />
+		<owl:Class rdf:about="#SeaVehicle" />
+	</owl:unionOf>
+</owl:Class>
+```
+
+```turtle
+:x owl:equivalentClass [
+	rdf:type owl:Class ;
+	owl:unionOf ( :LandVehicle :SeaVehicle )
+] .
+```
+
+In DL $$\text{LandVehicle } \sqcup \text{ SeaVehicle}$$
+
+### Complemento
+```xml
+<owl:Class>
+	<owl:complementOf>
+		<owl:Class rdf:about="#Meat"/>
+	</owl:complementOf>
+</owl:Class>
+```
+
+```turtle
+:x owl:equivalentClass [
+	rdf:type owl:Class ;
+	owl:complementOf :Meat
+] .
+```
+
+In DL $$\lnot \text{ Meat}$$
+
+---------
+# Assiomi sulle classi
+
+
+
 
