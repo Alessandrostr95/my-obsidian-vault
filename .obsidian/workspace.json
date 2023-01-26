@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/Vocabolario OWL.md",
+                "file": "IC/0 - Ingegneria della Conoscenza.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "da6454793c93098a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IC/OWL2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/Vocabolario OWL.md",
+                "file": "IC/OWL2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/Vocabolario OWL.md"
+                "file": "IC/OWL2.md"
               }
             }
           },
@@ -131,12 +144,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "0bed2816ed982334",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "IC/RDF Schema.md",
-    "IC/Vocabolario OWL.md",
-    "IC/OWL.md",
     "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/Vocabolario OWL.md",
+    "IC/RDF Schema.md",
+    "IC/OWL.md",
     "IC/RDF.md",
     "NLP/0 - Natural Language Processing.md",
     "Mining Data Stream.md",

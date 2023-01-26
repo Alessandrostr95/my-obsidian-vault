@@ -28,4 +28,5 @@ tags:
 - [[RDF]]
 - [[RDF Schema]]
 - [[OWL]]
-- [[Vocabolario OWL]]
+	- [[Vocabolario OWL]]
+- [[OWL2]]
