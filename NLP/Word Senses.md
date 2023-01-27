@@ -28,3 +28,5 @@ Allo stesso modo possiamo mette la relazione tra `red` e `colore`  e tra `blood`
 
 Le **relazioni** tra i sensi delle parole sono raccolte in [WordNet](https://wordnet.princeton.edu), un enorme database online che definisce le relazioni semantiche tra le parole e i loro possibili sensi.
 
+# Relations Between Senses
+
