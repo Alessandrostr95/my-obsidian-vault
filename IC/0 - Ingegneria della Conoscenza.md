@@ -36,3 +36,4 @@ tags:
 - [OWL](https://www.w3.org/TR/owl-ref/#FunctionalProperty-def)
 - [OWL2](https://www.w3.org/TR/owl2-syntax/)
 - [OWL Working Group](https://www.w3.org/2007/OWL/wiki/OWL_Working_Group)
+- [esempio trovato sul web](https://github.com/phillord/owl-api/blob/master/contract/src/test/resources/primer.turtle.rdf)

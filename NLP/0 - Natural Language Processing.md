@@ -32,6 +32,8 @@ tags:
 
 -----
 # Contents
+
+### Sintassi
 - [[Part of Speach]]
 - [[Hidden Markov Model Tagger]]
 - [[Algoritmo di Viterbi]]
@@ -39,3 +41,6 @@ tags:
 	- [[Grammatiche Formali]]
 	- [[CYK]]
 - **[[Dependency Parsing]]**
+
+### Semantica
+-[[Word Senses]]

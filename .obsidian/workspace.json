@@ -4,47 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "41c2917ada2da0d5",
+        "id": "508cbc746015cef2",
         "type": "tabs",
         "children": [
           {
-            "id": "0bed2816ed982334",
+            "id": "1d4061a188a4074c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/Vocabolario OWL.md",
+                "file": "NLP/Dependency Parsing.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6aab1a338332e409",
+            "id": "2b301b71c3825d95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/OWL2.md",
+                "file": "NLP/0 - Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "933753ba5d5147a7",
+            "id": "caf075f646b13440",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/0 - Ingegneria della Conoscenza.md",
+                "file": "NLP/Word Senses.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/OWL2.md",
+                "file": "NLP/Word Senses.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/OWL2.md"
+                "file": "NLP/Word Senses.md"
               }
             }
           },
@@ -156,17 +156,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "caf075f646b13440",
   "lastOpenFiles": [
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/Word Senses.md",
+    "NLP/Dependency Parsing.md",
     "IC/Vocabolario OWL.md",
     "IC/OWL2.md",
     "IC/0 - Ingegneria della Conoscenza.md",
     "IC/RDF Schema.md",
     "IC/OWL.md",
     "IC/RDF.md",
-    "NLP/0 - Natural Language Processing.md",
-    "Mining Data Stream.md",
-    "NLP/Dependency Parsing.md",
-    "NLP/img/CYK_1.png"
+    "Mining Data Stream.md"
   ]
 }
