@@ -141,7 +141,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -156,7 +156,7 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "6aab1a338332e409",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "IC/Vocabolario OWL.md",
     "IC/OWL2.md",
