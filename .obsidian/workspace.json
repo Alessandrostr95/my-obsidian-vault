@@ -141,7 +141,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -158,9 +158,9 @@
   },
   "active": "6aab1a338332e409",
   "lastOpenFiles": [
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IC/OWL2.md",
     "IC/Vocabolario OWL.md",
+    "IC/OWL2.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
     "IC/RDF Schema.md",
     "IC/OWL.md",
     "IC/RDF.md",

@@ -34,15 +34,15 @@ Le **datatype property** sono relazioni tra **istanze** di classi e **valori let
 <!-- classe Range, dove gli estremi di un intervallo sono dei float -->
 <owl:Class rdf:ID="Range" />
 
- <owl:DatatypeProperty rdf:ID="min">
-	  <rdfs:domain rdf:resource="#Range"/>
-	  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
- </owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:ID="min">
+	<rdfs:domain rdf:resource="#Range"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</owl:DatatypeProperty>
 
- <owl:DatatypeProperty rdf:ID="max">
-	  <rdfs:domain rdf:resource="#Range"/>
-	  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
- </owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:ID="max">
+	<rdfs:domain rdf:resource="#Range"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</owl:DatatypeProperty>
 ```
 
 ## Object Property
@@ -61,6 +61,14 @@ Ad esempio, OwnedBy può essere una proprietà del tipo di oggetto della classe 
 	<rdfs:range rdf:resource="#Persona" />
 	<rdfs:subPropertyOf rdf:resource="#conosce" />
 </owl:ObjectProperty>
+```
+
+```turtle
+:Persona rdf:type owl:Class .
+
+:conosce rdf:type rdfs:Property ;
+	rdfs:domain :Persona ;
+	rdfs:range :Persona .
 ```
 
 
@@ -300,7 +308,7 @@ In DL $$\text{hasParent} \ni \text{clinton}$$
 
 In DL $$\leq 2 \text{ hasParent}$$
 
-#### Massima cardinalità
+#### Minima cardinalità
 ```xml
 <owl:Restriction>
 	<owl:onProperty rdf:resource="#hasParent" />
