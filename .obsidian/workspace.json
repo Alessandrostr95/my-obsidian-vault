@@ -20,12 +20,24 @@
             }
           },
           {
-            "id": "da6454793c93098a",
+            "id": "6aab1a338332e409",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/Vocabolario OWL.md",
+                "file": "IC/OWL2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "933753ba5d5147a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IC/0 - Ingegneria della Conoscenza.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/Vocabolario OWL.md",
+                "file": "IC/OWL2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/Vocabolario OWL.md"
+                "file": "IC/OWL2.md"
               }
             }
           },
@@ -144,11 +156,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "6aab1a338332e409",
   "lastOpenFiles": [
+    "IC/0 - Ingegneria della Conoscenza.md",
     "IC/OWL2.md",
     "IC/Vocabolario OWL.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
     "IC/RDF Schema.md",
     "IC/OWL.md",
     "IC/RDF.md",

@@ -3,7 +3,7 @@ OWL2 introduce una serie di miglioramenti ad [[OWL]], tra cui l'inserimento di a
 -------
 # SYNTACTIC SUGAR
 
-## DisjointUnion
+## Disjoint Union
 Consideriamo la classe `:CarDoor`.
 Le porte delle macchine si possono suddividere in `:FrontDoor` (*porta anteriore*), `:RearDoor` (*porta posteriore*) e `:TrunkDoor` (*porta del bagliaio*).
 Ovviamente queste tre tipologie di porte **partizionano** la classe `:CarDoor`, perciò:
@@ -78,7 +78,43 @@ In OWL2 tutto ciò può essere semplificato col costrutto `owl:disjointUnionOf`.
 </owl:Class>
 ```
 
-## DisjointClasses
+## Disjoint Classes
 In [[OWL]] sono definiti i costruitti
 - [[Vocabolario OWL#All Different|owl:AllDifferent]] che consente di asserire che più di due individui sono **differenti** (a due a due).
 - [[Vocabolario OWL#Disgiunzione|owl:disjointWith]]  
+
+OWL2 introduce il costrutto `owl:AllDisjointClasses` per indicare che un insieme di *classi* sono disgiunte tra loro, a due a due.
+```turtle
+_:x rdf:type owl:AllDisjointClasses ;
+	owl:members ( :UpperLobeOfLung :MiddleLobeOfLung :LowerLobeOfLung ) .
+```
+
+```xml
+<owl:AllDisjointClasses>
+	<owl:members rdf:parseType="Collection">
+		<owl:Class rdf:about="#UpperLobeOfLung" />
+		<owl:Class rdf:about="#MiddleLobeOfLung" />
+		<owl:Class rdf:about="#LowerLobeOfLung" />
+	</owl:members>
+</owl:AllDisjointClasses>
+```
+
+## Negative Property Assertion
+OWL2 introduce la **Negative Property Assertion**, la quale asserisce esplicitamente che un dato individuo $w$ **non** è collegato al dato individuo $z$ tramite una certa [[Vocabolario OWL#Object Property|object property]] $y$.
+
+```turtle
+_:x rdf:type owl:NegativePropertyAssertion ;
+	owl:sourceIndividual w ;
+	owl:assertionProperty y ;  
+	owl:targetIndividual z .
+```
+
+```xml
+<owl:NegativePropertyAssertion>
+	<owl:sourceIndividual rdf:resource="#w" />
+	<owl:assertionProperty rdf:resource="#y" />
+	<owl:targetIndividual rdf:resource="#z" />
+</owl:NegativePropertyAssertion>
+```
+
+## Negative Property Assertion

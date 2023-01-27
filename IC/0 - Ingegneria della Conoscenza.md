@@ -35,3 +35,4 @@ tags:
 ## Link Utili
 - [OWL](https://www.w3.org/TR/owl-ref/#FunctionalProperty-def)
 - [OWL2](https://www.w3.org/TR/owl2-syntax/)
+- [OWL Working Group](https://www.w3.org/2007/OWL/wiki/OWL_Working_Group)
