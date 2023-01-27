@@ -81,6 +81,16 @@ Servono solo per commentare l’ontologia.
 </owl:Thing >
 ```
 
+```turtle
+:Armando rdf:type :Persona;
+	:conosce :Manuel ;
+	:nome "Armando"^^xsd:string .
+
+:Manuel a owl:Thing ;
+	rdf:type :Persona ;
+	:nome "Manuel"^^xsd:string .
+```
+
 # Different From
 La proprietà `owl:differentForm` collega risorse a risorse, e **specifica** che due IRI si riferiscono a due risorse **differenti**, definendo quindi dei sottoinsiemi di risorse in cui <u>non</u> vale la [[OWL#^963225|no-unique-name assumption]].
 
@@ -108,6 +118,16 @@ La proprietà `owl:differentForm` collega risorse a risorse, e **specifica** che
 </owl:Thing>
 
 <owl:Thing rdf:ID="andrea" />
+```
+
+```turtle
+:Armando rdf:type :Persona ;
+	owl:differentFrom :Manuel, :Andrea .
+
+:Manuel rdf:type owl:Thing ;
+	owl:differentFrom :Andrea .
+
+:Andrea rdf:type owl:Thing .
 ```
 
 # All Different
@@ -138,6 +158,11 @@ La proprietà `owl:distinctMembers` mette in relazione entità della classe `owl
 </owl:AllDifferent>
 ```
 
+```turtle
+:x rdf:type owl:AllDifferent ;
+	owl:distinctMembers (:Armando :Manuel :Andrea) .
+```
+
 # Descrizione di classi
 Ci sono molteplici modi per definire una [[#Classi|classe]] in OWL.
 -   In maniera implicita come se fosse una risorsa, usando un **IRI**.
@@ -148,7 +173,7 @@ Ci sono molteplici modi per definire una [[#Classi|classe]] in OWL.
 ## Descrizione tramite nome
 Il modo più semplice per definire una classe è in maniera implicita, come se fosse una risorsa
 ```xml
-<owl:Class rdf:ID="Human"
+<owl:Class rdf:ID="Human" />
 ```
 
 ```turtle
@@ -425,7 +450,7 @@ Ereditato da [[RDF Schema]]
 		[
 			rdf:type owl:Restriction ;
 			owl:onProperty :colore ;
-			owl:hasValue :bianco
+			owl:hasValue "bianco"^^xsd:string
 		]
 	)
 ] .
@@ -451,7 +476,7 @@ In DL $$\text{VinoBianco} \sqsubseteq (\text{Vino } \sqcap (\text{colore} \ni \t
 
 ```xml
 <!-- ESEMPIO: class expression -->
-<owl:Class rdf:id="VinoBianco">
+<owl:Class rdf:ID="VinoBianco">
 	<owl:equivalentClass>
 		<owl:Class>  
 			<owl:intersectionOf parseType="Collection">
@@ -482,7 +507,7 @@ In DL $$\text{VinoBianco} \sqsubseteq (\text{Vino } \sqcap (\text{colore} \ni \t
 		[
 			rdf:type owl:Restriction ;
 			owl:onProperty :colore ;
-			owl:hasValue :bianco
+			owl:hasValue "bianco"^^xsd:string
 		]
 	)
 ] .
@@ -498,13 +523,13 @@ In DL $$\text{VinoBianco} \equiv (\text{Vino } \sqcap (\text{colore} \ni \text{b
 In OWL è possibile dire che due classi sono **disgiunte**, ovvero che NON hanno istanze in comune
 ```xml
 <owl:Class rdf:ID="aClass">
-	<owl:owlDisjointWith>
+	<owl:disjointWith>
         <!-- class expression ... -->
-	</owl:owlDisjointWith>
+	</owl:disjointWith>
 </owl:Class>
 
 <owl:Class rdf:ID="aClass">  
-	<owl:owlDisjointWith rdf:resource="[class IRI]" />
+	<owl:disjointWith rdf:resource="[class IRI]" />
 </owl:Class>
 ```
 
@@ -521,6 +546,20 @@ In OWL è possibile dire che due classi sono **disgiunte**, ovvero che NON hanno
 <owl:Class rdf:ID="Fungo" />
 ```
 
+```turtle
+:Animale rdf:type owl:Class ;
+	owl:disjointWith :Vegetale, :Fungo .
+
+:Vegetale rdf:type owl:Class ;
+	owl:disjointWith :Vegetale, :Fungo .
+
+:Fungo rdf:type owl:Class .
+```
+
+In DL
+- $$(\text{Animale } \sqcap \text{ Vegetale}) \equiv \perp$$
+- $$(\text{Animale } \sqcap \text{ Fungo}) \equiv \perp$$
+- $$(\text{Vegetale } \sqcap \text{ Fungo}) \equiv \perp$$
 
 ---------
 # Caratteristiche sulle proprietà

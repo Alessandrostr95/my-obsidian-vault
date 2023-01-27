@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/0 - Ingegneria della Conoscenza.md",
+                "file": "IC/Vocabolario OWL.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/OWL2.md",
+                "file": "IC/Vocabolario OWL.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/OWL2.md",
+                "file": "IC/Vocabolario OWL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/OWL2.md"
+                "file": "IC/Vocabolario OWL.md"
               }
             }
           },
@@ -144,17 +144,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/OWL2.md",
     "IC/Vocabolario OWL.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
     "IC/RDF Schema.md",
     "IC/OWL.md",
     "IC/RDF.md",
     "NLP/0 - Natural Language Processing.md",
     "Mining Data Stream.md",
     "NLP/Dependency Parsing.md",
-    "NLP/img/CYK_1.png",
-    "NLP/Part of Speach.md"
+    "NLP/img/CYK_1.png"
   ]
 }

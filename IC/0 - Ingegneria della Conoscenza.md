@@ -30,3 +30,8 @@ tags:
 - [[OWL]]
 	- [[Vocabolario OWL]]
 - [[OWL2]]
+
+-------
+## Link Utili
+- [OWL](https://www.w3.org/TR/owl-ref/#FunctionalProperty-def)
+- [OWL2](https://www.w3.org/TR/owl2-syntax/)
