@@ -45,3 +45,4 @@ tags:
 ### Semantica
 - [[Word Senses]]
 	- [[WordNet]]
+- [[Semantic Role Labeling]]
