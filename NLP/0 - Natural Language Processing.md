@@ -43,4 +43,5 @@ tags:
 - **[[Dependency Parsing]]**
 
 ### Semantica
--[[Word Senses]]
+- [[Word Senses]]
+	- [[WordNet]]
