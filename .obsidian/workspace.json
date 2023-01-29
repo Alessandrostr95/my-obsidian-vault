@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d6b85a9a96ab6624",
+        "id": "50004c6a71d622aa",
         "type": "tabs",
         "children": [
           {
-            "id": "0ec76bc0b326e7dd",
+            "id": "21ef194bbde94aee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/0 - Natural Language Processing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3bdbf3771a94e9eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/Semantic Role Labeling.md",
+                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Semantic Role Labeling.md",
+                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Semantic Role Labeling.md"
+                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md"
               }
             }
           },
@@ -144,17 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "3bdbf3771a94e9eb",
+  "active": "21ef194bbde94aee",
   "lastOpenFiles": [
-    "NLP/0 - Natural Language Processing.md",
+    "Proprietà utili.md",
+    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+    "root.md",
     "NLP/Semantic Role Labeling.md",
+    "NLP/0 - Natural Language Processing.md",
     "NLP/WordNet.md",
     "NLP/Word Senses.md",
     "NLP/Dependency Parsing.md",
     "IC/Vocabolario OWL.md",
-    "IC/OWL2.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IC/RDF Schema.md",
-    "IC/OWL.md"
+    "IC/OWL2.md"
   ]
 }
