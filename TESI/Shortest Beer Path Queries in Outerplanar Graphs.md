@@ -1,3 +1,8 @@
+---
+draft: true
+desc: "alcuni appunti"
+---
+
 # Risultati
 
 > **Funzione di Ackermann**
