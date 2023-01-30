@@ -30,6 +30,7 @@ tags:
 - [[OWL]]
 	- [[Vocabolario OWL]]
 - [[OWL2]]
+- [[SPARQL]]
 
 -------
 ## Link Utili

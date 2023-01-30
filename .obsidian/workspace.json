@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+                "file": "IC/0 - Ingegneria della Conoscenza.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "726830646787fef8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IC/SPARQL.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+                "file": "IC/SPARQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md"
+                "file": "IC/SPARQL.md"
               }
             }
           },
@@ -131,17 +144,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "21ef194bbde94aee",
+  "active": "726830646787fef8",
   "lastOpenFiles": [
-    "NLP/Lecture 2.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IC/SPARQL.md",
+    "IC/RDF.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+    "NLP/Lecture 2.md",
     "Proprietà utili.md",
     "root.md",
     "NLP/Semantic Role Labeling.md",
     "NLP/0 - Natural Language Processing.md",
-    "NLP/WordNet.md",
-    "NLP/Word Senses.md",
-    "NLP/Dependency Parsing.md",
-    "IC/Vocabolario OWL.md"
+    "NLP/WordNet.md"
   ]
 }
