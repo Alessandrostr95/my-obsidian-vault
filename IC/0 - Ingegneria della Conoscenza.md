@@ -31,6 +31,7 @@ tags:
 	- [[Vocabolario OWL]]
 - [[OWL2]]
 - [[SPARQL]]
+- [[SPARQL 1.1]]
 
 -------
 ## Link Utili
@@ -39,3 +40,4 @@ tags:
 - [OWL Working Group](https://www.w3.org/2007/OWL/wiki/OWL_Working_Group)
 - [esempio trovato sul web](https://github.com/phillord/owl-api/blob/master/contract/src/test/resources/primer.turtle.rdf)
 - [SPARQL](https://www.w3.org/TR/rdf-sparql-query/)
+- [SPARQL 1.1](https://www.w3.org/TR/2013/REC-sparql11-query-20130321/)
