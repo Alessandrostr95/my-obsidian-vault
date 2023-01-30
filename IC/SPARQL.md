@@ -154,3 +154,77 @@ WHERE {
 ```
 In questo caso verranno restituite tutte le risorse definite come appartenenti alla classe `stx:Person` o anche alla classe `foaf:Person`.
 
+# Modificatori delle soluzioni
+## ORDER BY
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?name  
+WHERE {
+	?x foaf:name ?name ;
+		:empId ?emp
+}
+ORDER BY ?name DESC(?emp)
+```
+Seleziona tutti i `foaf:name` delle risorse, ordinate in maniera discendente di `foaf:empID`.
+
+## DISTINCT
+Rimuove tutte le soluzioni alternative con lo stesso valore.
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT DISTINCT ?name  
+WHERE { ?x foaf:name ?name }
+```
+Seleziona tutti i `foaf:name`, **senza replicati**.
+
+# LIMIT & OFFSET
+Il modificatore **LIMIT** mette un vincolo sulla cardinalità dell'insieme delle tripe risultanti.
+Il modificatore **OFFSET** indica invece da quale elemento iniziare a mostrare la soluzione (di default si parte dal primo).
+```sparql
+# restituisce tutti `foaf:name`, ordinati in senso alfabetico, limitando il risultato a soli 10 elementi, partendo dal quinto.
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?name  
+WHERE { ?x foaf:name ?name }
+ORDER BY ?name  
+LIMIT 5  
+OFFSET 10
+```
+
+# QUERY FORMS
+SPARQL fornisce quattro **query form**, ovvero dei selettori che costruiscono il risultato in maniera differente.
+
+I query form in SPARQL sono:
+- **SELECT**: Restituisce una tabella con tutto ciò che fa il match con la clausola WHERE. Le colonne della tabella vengono definiti dagli argomenti richiesti nella select: `SELECT $name $age` ritorna una tabella con nome ed età. `SELECT *` non effettua alcuna **proiezione** e restituisce tutte le variabili della query.
+- **CONSTRUCT**: costruisce letteralmente un nuovo grafo RDF. Prendendo tutte le triple che rispettano il pattern della query, le pone come triple che rispettano un **template** specificato. Tutte le triple che però non rispettano i costrutti "*legali*" per RDF (per esempio literal come soggeto di un predicato) non verranno riportate come risultato della CONSTRUCT.
+  ```sparql
+  # Questa query estrate tutti gli individui che sono definiti come `stx:Person`, e li converte in istanze della classe Person secondo l’ontologia `foaf`
+  PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+  PREFIX stx: <http://art.uniroma2.it/ontologies/st_example#>
+  CONSTRUCT {?p a foaf:Person} # TEMPLATE
+  WHERE {?p a stx:Person}
+  ```
+- **DESCRIBE**: describe è simile alla CONSTRUCT, non definisce un template. Semplicemente restituisce un nuovo grafo RDF con tutte le triple che rispettano il pattern della clausola WHERE.
+  ```sparql
+  # QUERY (SPARQL):
+  PREFIX ent: <http://org.example.com/employees#>
+  DESCRIBE ?x WHERE { ?x ent:employeeId "1234" }
+  ```
+  ```turtle
+  # RESULT (TURTLE):
+  @prefix foaf: <http://xmlns.com/foaf/0.1/> .  
+  @prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0> .
+  @prefix exOrg: <http://org.example.com/employees#> .
+  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+  @prefix owl: <http://www.w3.org/2002/07/owl#>
+  
+  _:a exOrg:employeeId "1234" ;
+	  foaf:mbox_sha1sum "ABCD1234" ;
+	  vcard:N [
+			vcard:Family "Smith" ;
+			vcard:Given "John"
+		] .
+			
+  foaf:mbox_sha1sum rdf:type owl:InverseFunctionalProperty.
+  ```
+- **ASK**: Restituisce un risultato booleano che indica se vi è stata almeno una unificazione con successo.
