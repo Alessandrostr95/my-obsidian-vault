@@ -114,7 +114,7 @@ Tra i più importanti:
 - `^^xsd:dateTime`
 
 Tra le **funzioni booleane** che si interrogano sullo **stato**/**natura** delle **variabili** abbiamo:
-- `BOUND`: true se la variabile è istanziata con un valore.
+- `BOUND`: true se la variabile è istanziata con un valore. ^1873d3
 - `ISURI` o `ISIRI`: ritorna true se la variabile è un iri o uri.
 - `ISLITERAL`: ritorna true se la variabile è un literal.
 - `ISBLANCK`: ritorna true se la variabile è un bnode.

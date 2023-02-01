@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "50004c6a71d622aa",
+        "id": "97101e6d8a42dc2c",
         "type": "tabs",
         "children": [
           {
-            "id": "3f87a1ec1afe1bc7",
+            "id": "83d520dfaef61672",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "IC/SPARQL 1.1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0bdc6eeb04d0f119",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IC/SPARQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -131,17 +143,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "3f87a1ec1afe1bc7",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IC/SPARQL 1.1.md",
     "IC/SPARQL.md",
+    "IC/SPARQL 1.1.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "IR/0 - Information Retrieval.md",
+    "IC/Vocabolario OWL.md",
+    "IC/OWL.md",
+    "IR/Relevance Feedback.md",
+    "IR/Query Expansion.md",
     "IC/RDF.md",
-    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
-    "NLP/Lecture 2.md",
-    "Proprietà utili.md",
-    "root.md",
-    "NLP/Semantic Role Labeling.md",
-    "NLP/0 - Natural Language Processing.md"
+    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md"
   ]
 }
