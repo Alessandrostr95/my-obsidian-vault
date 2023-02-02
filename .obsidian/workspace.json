@@ -4,22 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "2adb322887ad9a28",
+        "id": "28107881707e22b3",
         "type": "tabs",
         "children": [
           {
-            "id": "f0c680192591032f",
+            "id": "f3ed872bc726ff3c",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "IR/Term occurrences as 2-Poisson.md",
+                "staged": true
+              }
+            }
+          },
+          {
+            "id": "752666aeb051ed3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Binary Independent Model.md",
-                "mode": "preview",
+                "file": "IR/Term occurrences as 2-Poisson.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5
+    "width": 200
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Binary Independent Model.md",
+                "file": "IR/Term occurrences as 2-Poisson.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Binary Independent Model.md"
+                "file": "IR/Term occurrences as 2-Poisson.md"
               }
             }
           },
@@ -120,7 +132,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -131,17 +143,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "f0c680192591032f",
+  "active": "752666aeb051ed3b",
   "lastOpenFiles": [
-    "IR/Probabilistic Approach.md",
-    "IR/Probabilistic Ranking Principle.md",
-    "IR/Appendice Probabilità.md",
+    "IR/Term occurrences as 2-Poisson.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Evaluation of IR systems.md",
-    "IR/Beyond Binary Relevance.md",
-    "IR/Rank-Based Measures.md",
-    "IR/Set Based Measures.md",
-    "NLP/0 - Natural Language Processing.md",
-    "NLP/CYK.md"
+    "IR/Term occurrences as Poisson.md",
+    "IR/Binary Independent Model.md",
+    "IR/Probabilistic Ranking Principle.md",
+    "IR/Safe Scoring - WAND.md",
+    "IR/Efficient Scoring.md",
+    "IR/Impact-Ordered Postings.md",
+    "IR/Tiered Indexes.md",
+    "IR/Cluster Pruning.md"
   ]
 }
