@@ -32,5 +32,17 @@ tags:
 
 -----
 # Contents
-- [[Grammatiche Formali]]
-- [[CYK]]
+
+### Sintassi
+- [[Part of Speach]]
+- [[Hidden Markov Model Tagger]]
+- [[Algoritmo di Viterbi]]
+- **Constituent Parsing**
+	- [[Grammatiche Formali]]
+	- [[CYK]]
+- **[[Dependency Parsing]]**
+
+### Semantica
+- [[Word Senses]]
+	- [[WordNet]]
+- [[Semantic Role Labeling]]

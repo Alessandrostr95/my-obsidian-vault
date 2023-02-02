@@ -32,7 +32,7 @@ Consideriamo l'insieme $T = \lbrace T_1, ..., T_6 \rbrace$ l'insieme dei documen
 ------------
 # Accuracy and Error
 Altre due misure sono l'**accuracy** e l'**error**.
-- **Accuracy**: la frazione di pagine correttamente classificate come rilevanti e non rilevanti $$\text{acc} = \frac{tp + tn}{tp+tf+fp+fn}$$
+- **Accuracy**: la frazione di pagine correttamente classificate come rilevanti e non rilevanti $$\text{acc} = \frac{tp + tn}{tp+tf+fp+fn}$$ ^0fb052
 - **Error**: la frazione di pagine classificate in maniera sbagliata $$\text{err} = \frac{fp + fn}{tp+tf+fp+fn} = 1 - \text{acc}$$
 
 ----------

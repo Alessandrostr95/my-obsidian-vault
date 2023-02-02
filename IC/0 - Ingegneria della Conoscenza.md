@@ -19,6 +19,25 @@ tags:
 - **Sito**: http://art.uniroma2.it/teaching/ke/
 
 ---------------------
-## Table of contents
+## Lecture Notes
 - [[IC/Lecture 1|Lecture 1]]
 - [[IC/Lecture 3|Lecture 3]]
+
+-----
+## Table of Content
+- [[RDF]]
+- [[RDF Schema]]
+- [[OWL]]
+	- [[Vocabolario OWL]]
+- [[OWL2]]
+- [[SPARQL]]
+- [[SPARQL 1.1]]
+
+-------
+## Link Utili
+- [OWL](https://www.w3.org/TR/owl-ref/#FunctionalProperty-def)
+- [OWL2](https://www.w3.org/TR/owl2-syntax/)
+- [OWL Working Group](https://www.w3.org/2007/OWL/wiki/OWL_Working_Group)
+- [esempio trovato sul web](https://github.com/phillord/owl-api/blob/master/contract/src/test/resources/primer.turtle.rdf)
+- [SPARQL](https://www.w3.org/TR/rdf-sparql-query/)
+- [SPARQL 1.1](https://www.w3.org/TR/2013/REC-sparql11-query-20130321/)
