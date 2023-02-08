@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/0 - Natural Language Processing.md",
+                "file": "NLP/Semantic Role Labeling.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/0 - Natural Language Processing.md",
+                "file": "NLP/Semantic Role Labeling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/0 - Natural Language Processing.md"
+                "file": "NLP/Semantic Role Labeling.md"
               }
             }
           },
@@ -131,11 +131,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "83d520dfaef61672",
   "lastOpenFiles": [
+    "NLP/0 - Natural Language Processing.md",
     "NLP/Dependency Parsing.md",
     "NLP/CYK.md",
-    "NLP/0 - Natural Language Processing.md",
     "NLP/Shift-Reduce Parser.md",
     "NLP/Grammatiche Formali.md",
     "IC/SPARQL 1.1.md",
