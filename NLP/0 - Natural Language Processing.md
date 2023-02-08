@@ -40,6 +40,7 @@ tags:
 - **Constituent Parsing**
 	- [[Grammatiche Formali]]
 	- [[CYK]]
+	- [[Shift-Reduce Parser]]
 - **[[Dependency Parsing]]**
 
 ### Semantica

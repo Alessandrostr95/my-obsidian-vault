@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC/SPARQL 1.1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0bdc6eeb04d0f119",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IC/SPARQL.md",
+                "file": "NLP/0 - Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IC/SPARQL 1.1.md",
+                "file": "NLP/0 - Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC/SPARQL 1.1.md"
+                "file": "NLP/0 - Natural Language Processing.md"
               }
             }
           },
@@ -145,15 +133,15 @@
   },
   "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "IC/SPARQL.md",
+    "NLP/Dependency Parsing.md",
+    "NLP/CYK.md",
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/Shift-Reduce Parser.md",
+    "NLP/Grammatiche Formali.md",
     "IC/SPARQL 1.1.md",
+    "IC/SPARQL.md",
     "IC/0 - Ingegneria della Conoscenza.md",
     "IR/0 - Information Retrieval.md",
-    "IC/Vocabolario OWL.md",
-    "IC/OWL.md",
-    "IR/Relevance Feedback.md",
-    "IR/Query Expansion.md",
-    "IC/RDF.md",
-    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md"
+    "IC/Vocabolario OWL.md"
   ]
 }
