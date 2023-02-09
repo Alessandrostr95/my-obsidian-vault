@@ -6,6 +6,7 @@ draft: true
 vedi [[Lecture 5|note precedenti]].
 
 Abbiamo un **oracolo** $O$ e un sistema $S$ che interpretano delle frasi $f$
+
 index | $f$ | $I_S(f)$ | $I_O(f)$
 ---|---|---|---
 1 | $f_1$ | $S_1$ | $O_1$
@@ -28,6 +29,7 @@ Definiamo quindi
 - **F-measure** $$F = \frac{1}{\dfrac{\alpha}{R} + \dfrac{(1-\alpha)}{P}}$$
 
 Supponiamo di avere una base line **BL**, e due sistemi $S_1, S_2$, con misure di valutazione
+
 **Model** | **Measure**
 ---|---
 $S_1$ | $83.9\%$
@@ -41,6 +43,7 @@ Si desidera che $O$ descriva in maniera più realistica possibile la realtà rap
 
 L'ideale sarebbe di avere differenti oracoli, per vedere come si comporta un sistema nei diversi contesti.
 Per risparmiare, posso **partizionare** $O$ in $k$ parti, e computo la [[Random Sample|media e la varianza campionaria]] delle misure.
+
 **Model** | **Measure 1** | **Measure 2** | **...** | **mean** $\pm$ **bias**
 ---|---|---|---|---
 $S_1$ | $83.9\%$ | ... | ... | $.815 \pm .16$

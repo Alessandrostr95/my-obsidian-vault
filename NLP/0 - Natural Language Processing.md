@@ -48,3 +48,6 @@ tags:
 	- [[WordNet]]
 	- [[The WSD Algorithm - Contextual Embeddings]]
 - [[Semantic Role Labeling]]
+
+### Word Embedding
+- [[Word2Vec]]
