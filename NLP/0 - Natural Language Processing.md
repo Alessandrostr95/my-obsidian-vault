@@ -46,4 +46,5 @@ tags:
 ### Semantica
 - [[Word Senses]]
 	- [[WordNet]]
+	- [[The WSD Algorithm - Contextual Embeddings]]
 - [[Semantic Role Labeling]]

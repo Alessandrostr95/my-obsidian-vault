@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "97101e6d8a42dc2c",
+        "id": "5a95a38345b7fd66",
         "type": "tabs",
         "children": [
           {
-            "id": "83d520dfaef61672",
+            "id": "5c7684206f8aa015",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/WordNet.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e4a84fde7050ac56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/The WSD Algorithm - Contextual Embeddings.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "65269aff151c32ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/Part of Speach.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cf5bfbd762f377e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/Word Senses.md",
+                "file": "NLP/Semantic Role Labeling.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/The WSD Algorithm - Contextual Embeddings.md",
+                "file": "NLP/Semantic Role Labeling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/The WSD Algorithm - Contextual Embeddings.md"
+                "file": "NLP/Semantic Role Labeling.md"
               }
             }
           },
@@ -168,17 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "e4a84fde7050ac56",
+  "active": "5c7684206f8aa015",
   "lastOpenFiles": [
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/The WSD Algorithm - Contextual Embeddings.md",
     "NLP/WordNet.md",
     "NLP/Word Senses.md",
     "NLP/img/wordnet_1.png",
     "NLP/Part of Speach.md",
     "NLP/Dependency Parsing.md",
-    "NLP/0 - Natural Language Processing.md",
     "NLP/Semantic Role Labeling.md",
     "NLP/CYK.md",
-    "NLP/Shift-Reduce Parser.md",
-    "NLP/Grammatiche Formali.md"
+    "NLP/Shift-Reduce Parser.md"
   ]
 }
