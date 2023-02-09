@@ -12,3 +12,10 @@ I vettori densi possono anche essere utili per catturare la [[Word Senses#Sinoni
 Infatti con una rappresentazione **sparsa** le dimensioni in cui il vettore `car` e `automobile` sono <u>non nulle</u> sono *statisticamente* molto scorrelate, perciò non catturano la loro relazione di [[Word Senses#Sinonimia|sinonimia]].
 
 # Skip-Gram with Negative Sampling
+In realtà Word2Vec è un **pacchetto softoware** contente due algoritmi, uno dei quali è noto come **skip-gram with negative sampling** (in breve **SGNS**).
+
+```ad-info
+In realtà comunemente ci si riferisce all'algoritmo **SGNS** semplicemente con **word2vec**.
+```
+
+
