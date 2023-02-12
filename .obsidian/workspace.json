@@ -133,15 +133,15 @@
   },
   "active": "db0c7a79077fc361",
   "lastOpenFiles": [
-    "NLP/Shift-Reduce Parser.md",
-    "NLP/Word2Vec.md",
-    "NLP/Lecture 6.md",
+    "NLP/Semantic Role Labeling.md",
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/The WSD Algorithm - Contextual Embeddings.md",
+    "NLP/WordNet.md",
     "NLP/Word Senses.md",
-    "IR/Language Models.md",
-    "IR/Appendice Probabilità.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/Scoring, term weighting & the vector space model.md",
-    "NLP/Lecture 12.md",
-    "NLP/Lecture 11.md"
+    "NLP/Dependency Parsing.md",
+    "NLP/Algoritmo di Viterbi.md",
+    "NLP/Hidden Markov Model Tagger.md",
+    "NLP/Shift-Reduce Parser.md",
+    "NLP/Earley Parser.md"
   ]
 }
