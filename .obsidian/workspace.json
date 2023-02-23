@@ -4,46 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "28107881707e22b3",
+        "id": "1ca5fba5f557c2fd",
         "type": "tabs",
         "children": [
           {
-            "id": "f3ed872bc726ff3c",
+            "id": "40ddf497ce0158cb",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "IR/Term occurrences as 2-Poisson.md",
-                "staged": true
-              }
-            }
-          },
-          {
-            "id": "752666aeb051ed3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Term occurrences as 2-Poisson.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9c8f2e2d5b473fdb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "conflict-files-obsidian-git.md"
-              }
+              "state": {}
             }
           },
           {
@@ -144,28 +113,28 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 258.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:Crea nuova lavagna": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
-      "canvas:Create new canvas": false,
       "command-palette:Apri riquadro comandi": false,
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "9c8f2e2d5b473fdb",
+  "active": "40ddf497ce0158cb",
   "lastOpenFiles": [
+    "IC/SPARQL 1.1.md",
+    "IC/Vocabolario OWL.md",
+    "IC/OWL.md",
+    "IC/OWL2.md",
+    "IC/SPARQL.md",
+    "IC/RDF Schema.md",
+    "IC/0 - Ingegneria della Conoscenza.md",
+    "conflict-files-obsidian-git.md",
     "IR/Term occurrences as 2-Poisson.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/Term occurrences as Poisson.md",
-    "IR/Binary Independent Model.md",
-    "IR/Probabilistic Ranking Principle.md",
-    "IR/Safe Scoring - WAND.md",
-    "IR/Efficient Scoring.md",
-    "IR/Impact-Ordered Postings.md",
-    "IR/Tiered Indexes.md",
-    "IR/Cluster Pruning.md"
+    "IR/0 - Information Retrieval.md"
   ]
 }
