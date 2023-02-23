@@ -40,9 +40,14 @@ tags:
 - **Constituent Parsing**
 	- [[Grammatiche Formali]]
 	- [[CYK]]
+	- [[Shift-Reduce Parser]]
 - **[[Dependency Parsing]]**
 
 ### Semantica
 - [[Word Senses]]
 	- [[WordNet]]
+	- [[The WSD Algorithm - Contextual Embeddings]]
 - [[Semantic Role Labeling]]
+
+### Word Embedding
+- [[Word2Vec]]

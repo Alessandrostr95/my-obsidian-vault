@@ -15,7 +15,7 @@ Le regole che legano **agenti**, **azioni**, chi **subisce l'azione** e le **con
 Per esempio $\text{AGENT}$ può rappresentare la *regola tematicha* che rappresenta l'idea astratta di **casualità volontaria**.
 
 Similmente gli oggetti diretti **BrokenThing** e **OpenedThing** dei verbi nel nostro esempio sono **oggetti inanimati** che sono in qualche modo affetti dalle conseguenze delle azioni fatte dai soggetti.
-	In questo caso il ruolo semantico di questi partecipanti è detto $\text{THEME}$.
+In questo caso il ruolo semantico di questi partecipanti è detto $\text{THEME}$.
 
 ![](./img/framenet_1.png)
 

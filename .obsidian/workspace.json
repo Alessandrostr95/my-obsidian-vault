@@ -14,8 +14,20 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "b7a18ba1f0919fa5",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "NLP/0 - Natural Language Processing.md",
+                "staged": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,8 +136,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "40ddf497ce0158cb",
+  "active": "b7a18ba1f0919fa5",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "NLP/img/wordnet_5.png",
+    "NLP/img/wordnet_4.png",
+    "NLP/img/wordnet_3.png",
+    "NLP/img/wordnet_2.png",
+    "NLP/img/word2vec_1.png",
+    "NLP/Word2Vec.md",
+    "NLP/The WSD Algorithm - Contextual Embeddings.md",
+    "NLP/Shift-Reduce Parser.md",
     "IC/SPARQL 1.1.md",
     "IC/Vocabolario OWL.md",
     "IC/OWL.md",
@@ -133,7 +154,6 @@
     "IC/SPARQL.md",
     "IC/RDF Schema.md",
     "IC/0 - Ingegneria della Conoscenza.md",
-    "conflict-files-obsidian-git.md",
     "IR/Term occurrences as 2-Poisson.md",
     "IR/0 - Information Retrieval.md"
   ]
