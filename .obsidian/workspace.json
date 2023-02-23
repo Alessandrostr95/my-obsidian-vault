@@ -4,25 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "1ca5fba5f557c2fd",
+        "id": "e287452ac3556961",
         "type": "tabs",
         "children": [
           {
-            "id": "40ddf497ce0158cb",
+            "id": "aa9a4b11f992cbf8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
-            "id": "b7a18ba1f0919fa5",
+            "id": "222de15800a2bdc8",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "NLP/0 - Natural Language Processing.md",
-                "staged": true
+                "file": "TESI/Spanners.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -94,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "TESI/Spanners.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +115,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "TESI/Spanners.md"
+              }
             }
           },
           {
@@ -136,8 +144,13 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "b7a18ba1f0919fa5",
+  "active": "222de15800a2bdc8",
   "lastOpenFiles": [
+    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+    "TESI/Spanners.md",
+    "TESI/img/spanners_1.png",
+    "NLP/Dependency Parsing.md",
+    "NLP/0 - Natural Language Processing.md",
     "conflict-files-obsidian-git.md",
     "NLP/img/wordnet_5.png",
     "NLP/img/wordnet_4.png",
