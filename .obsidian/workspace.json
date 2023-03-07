@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2fc60d24527ff705",
+        "id": "03788e3781db1a16",
         "type": "tabs",
         "children": [
           {
-            "id": "e3cde2fcb3d64e54",
+            "id": "44c63eedf43f3d22",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "IR/0 - Information Retrieval.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b21350f99e7a5131",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IR/Binary Term-Document Incidence Matrix.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.50260543823242
+    "width": 238.50260543823242
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "IR/Binary Term-Document Incidence Matrix.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/0 - Machine Learning.md"
+                "file": "IR/Binary Term-Document Incidence Matrix.md"
               }
             }
           },
@@ -120,7 +133,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -131,18 +144,19 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "e3cde2fcb3d64e54",
+  "active": "b21350f99e7a5131",
   "lastOpenFiles": [
-    "NLP/0 - Natural Language Processing.md",
+    "IR/Boolean Retrieval.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Set Based Measures.md",
     "ML/0 - Machine Learning.md",
+    "NLP/0 - Natural Language Processing.md",
     "ML",
     "SSI/Note 1.md",
     "SSI/0 - SSI.md",
     "root.md",
     "SSI",
     "IR/Rank-Based Measures.md",
-    "IR/Set Based Measures.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "TESI/Spanners.md",
     "TESI/img/spanners_1.png",
