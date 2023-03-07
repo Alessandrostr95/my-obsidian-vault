@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0b42f3d9529cc513",
+        "id": "2fc60d24527ff705",
         "type": "tabs",
         "children": [
           {
-            "id": "7eac634deae3b554",
+            "id": "e3cde2fcb3d64e54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "root.md",
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "root.md",
+                "file": "ML/0 - Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "root.md"
+                "file": "ML/0 - Machine Learning.md"
               }
             }
           },
@@ -131,14 +131,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "7eac634deae3b554",
+  "active": "e3cde2fcb3d64e54",
   "lastOpenFiles": [
+    "NLP/0 - Natural Language Processing.md",
+    "IR/0 - Information Retrieval.md",
+    "ML/0 - Machine Learning.md",
+    "ML",
     "SSI/Note 1.md",
     "SSI/0 - SSI.md",
-    "NLP/0 - Natural Language Processing.md",
+    "root.md",
     "SSI",
     "IR/Rank-Based Measures.md",
-    "IR/0 - Information Retrieval.md",
     "IR/Set Based Measures.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "TESI/Spanners.md",
