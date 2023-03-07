@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSI/Note 1.md",
+                "file": "root.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSI/Note 1.md",
+                "file": "root.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSI/Note 1.md"
+                "file": "root.md"
               }
             }
           },
@@ -133,8 +133,8 @@
   },
   "active": "7eac634deae3b554",
   "lastOpenFiles": [
-    "SSI/0 - SSI.md",
     "SSI/Note 1.md",
+    "SSI/0 - SSI.md",
     "NLP/0 - Natural Language Processing.md",
     "SSI",
     "IR/Rank-Based Measures.md",

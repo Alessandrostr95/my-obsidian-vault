@@ -6,12 +6,12 @@ tags:
 # SSI
 --------------------------
 ## Info corso
-- **Docente**: Talamo - Dimitri
+- **Docente**: Maurizio Talamo - Andrea Dimitri
 - **A.A.**: 2022/2023
-- **Semestre**: 1°
+- **Semestre**: 2°
 - **CFU**: 9
 - **Università**: Tor Vergata
-- **Settore**: ING-INF/05
+- **Settore**: INF/01
 
 - **Libro**: 
 
