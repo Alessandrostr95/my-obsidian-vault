@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e287452ac3556961",
+        "id": "29e26ede484f5c4a",
         "type": "tabs",
         "children": [
           {
-            "id": "aa9a4b11f992cbf8",
+            "id": "0958747045f14f70",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "222de15800a2bdc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TESI/Spanners.md",
+                "file": "SSI/Note 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 249.50260543823242
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TESI/Spanners.md",
+                "file": "SSI/Note 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TESI/Spanners.md"
+                "file": "SSI/Note 1.md"
               }
             }
           },
@@ -144,13 +131,19 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "222de15800a2bdc8",
+  "active": "0958747045f14f70",
   "lastOpenFiles": [
+    "SSI/0 - SSI.md",
+    "NLP/0 - Natural Language Processing.md",
+    "SSI/Note 1.md",
+    "SSI",
+    "IR/Rank-Based Measures.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Set Based Measures.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "TESI/Spanners.md",
     "TESI/img/spanners_1.png",
     "NLP/Dependency Parsing.md",
-    "NLP/0 - Natural Language Processing.md",
     "conflict-files-obsidian-git.md",
     "NLP/img/wordnet_5.png",
     "NLP/img/wordnet_4.png",
@@ -167,7 +160,6 @@
     "IC/SPARQL.md",
     "IC/RDF Schema.md",
     "IC/0 - Ingegneria della Conoscenza.md",
-    "IR/Term occurrences as 2-Poisson.md",
-    "IR/0 - Information Retrieval.md"
+    "IR/Term occurrences as 2-Poisson.md"
   ]
 }

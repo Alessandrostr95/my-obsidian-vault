@@ -6,7 +6,7 @@ tags:
   - ArtificialIntelligence
   - NaturalLanguageProcessing
 ---
-# Ingegneria della Conoscenza
+# Natural Language Processing
 --------------------------
 ## Info corso
 - **Docente**: Fabio Massimo Zanzotto 
