@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "29e26ede484f5c4a",
+        "id": "0b42f3d9529cc513",
         "type": "tabs",
         "children": [
           {
-            "id": "0958747045f14f70",
+            "id": "7eac634deae3b554",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -131,11 +131,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "0958747045f14f70",
+  "active": "7eac634deae3b554",
   "lastOpenFiles": [
     "SSI/0 - SSI.md",
-    "NLP/0 - Natural Language Processing.md",
     "SSI/Note 1.md",
+    "NLP/0 - Natural Language Processing.md",
     "SSI",
     "IR/Rank-Based Measures.md",
     "IR/0 - Information Retrieval.md",
