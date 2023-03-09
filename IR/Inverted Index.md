@@ -5,7 +5,7 @@ Certamente per molti termini, come gli articoli, ci sono molti 1.
 Però generalemte non si fanno query in cui richiedo tutti i documenti con il termine `the`, perché certamente tutti i documenti saranno compresi nella risposta.
 ```
 
-Perciò, quello che si può fare per ottimizzare, possiamo pensare di usare un **dizionario** di termini (detto anche **vocabolario** o **lexicon**), dove per ogni termine conserviamo una **lista di documenti** nei quali occorrono.
+Perciò per ottimizzare possiamo pensare di usare un **dizionario** di termini (detto anche **vocabolario** o **lexicon**), dove per ogni termine conserviamo una **lista di documenti** nei quali occorrono.
 Tale lista è anche detta **posting list**. ^5dc20c
 
 ![](./img/IR_boolean_retrieval_1.png)

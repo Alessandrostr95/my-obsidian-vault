@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/0 - Information Retrieval.md",
+                "file": "IR/Blocked sort-based indexing.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Binary Term-Document Incidence Matrix.md",
-                "mode": "source",
+                "file": "IR/Inverted Index.md",
+                "mode": "preview",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Binary Term-Document Incidence Matrix.md",
+                "file": "IR/Blocked sort-based indexing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Binary Term-Document Incidence Matrix.md"
+                "file": "IR/Blocked sort-based indexing.md"
               }
             }
           },
@@ -144,19 +143,27 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "b21350f99e7a5131",
+  "active": "44c63eedf43f3d22",
   "lastOpenFiles": [
-    "IR/Boolean Retrieval.md",
+    "IR/Index construction.md",
     "IR/0 - Information Retrieval.md",
+    "IR/Positional postings and phrase queries.md",
+    "IR/Positional indexes.md",
+    "IR/Biword Indexes.md",
+    "IR/Inverted Index.md",
+    "IR/Beyond Binary Relevance.md",
+    "IR/Rank-Based Measures.md",
     "IR/Set Based Measures.md",
+    "IR/Binary Term-Document Incidence Matrix.md",
+    "SSI/Note 2.md",
+    "SSI/Note 1.md",
+    "IR/Boolean Retrieval.md",
     "ML/0 - Machine Learning.md",
     "NLP/0 - Natural Language Processing.md",
     "ML",
-    "SSI/Note 1.md",
     "SSI/0 - SSI.md",
     "root.md",
     "SSI",
-    "IR/Rank-Based Measures.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "TESI/Spanners.md",
     "TESI/img/spanners_1.png",
@@ -171,12 +178,6 @@
     "NLP/The WSD Algorithm - Contextual Embeddings.md",
     "NLP/Shift-Reduce Parser.md",
     "IC/SPARQL 1.1.md",
-    "IC/Vocabolario OWL.md",
-    "IC/OWL.md",
-    "IC/OWL2.md",
-    "IC/SPARQL.md",
-    "IC/RDF Schema.md",
-    "IC/0 - Ingegneria della Conoscenza.md",
-    "IR/Term occurrences as 2-Poisson.md"
+    "IC/Vocabolario OWL.md"
   ]
 }
