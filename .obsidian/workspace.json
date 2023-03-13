@@ -4,29 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "03788e3781db1a16",
+        "id": "97eeb9cf4c8b88b1",
         "type": "tabs",
         "children": [
           {
-            "id": "44c63eedf43f3d22",
+            "id": "f6d342977932460a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b21350f99e7a5131",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IR/Inverted Index.md",
-                "mode": "preview",
                 "source": false
               }
             }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md",
+                "file": "IR/0 - Information Retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IR/Blocked sort-based indexing.md"
+                "file": "IR/0 - Information Retrieval.md"
               }
             }
           },
@@ -132,7 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 349.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,41 +131,43 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "44c63eedf43f3d22",
+  "active": "f6d342977932460a",
   "lastOpenFiles": [
-    "IR/Index construction.md",
+    "IR/Okapi BM25.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Positional postings and phrase queries.md",
-    "IR/Positional indexes.md",
-    "IR/Biword Indexes.md",
-    "IR/Inverted Index.md",
+    "IR/Term occurrences as 2-Poisson.md",
+    "IR/Introducing term frequency in BIM.md",
+    "IR/Term occurrences as Poisson.md",
+    "IR/Binary Independent Model.md",
+    "IR/Probabilistic Approach.md",
+    "IR/Probabilistic Ranking Principle.md",
+    "IR/Language Models.md",
+    "IR/Query Expansion.md",
+    "IR/Tiered Indexes.md",
+    "IR/Relevance feedback & Query expansion.md",
+    "IR/Efficient Scoring.md",
+    "IR/Safe Scoring - WAND.md",
+    "IR/Impact-Ordered Postings.md",
+    "IR/Cluster Pruning.md",
+    "IR/Query-Independent Document Scores.md",
+    "IR/Speeding Ranking Computation by Pruning.md",
+    "IR/Blocked storage.md",
     "IR/Beyond Binary Relevance.md",
-    "IR/Rank-Based Measures.md",
-    "IR/Set Based Measures.md",
+    "IR/Scoring, term weighting & the vector space model.md",
+    "IR/Vector Space Model.md",
+    "IR/TF-IDF weight.md",
     "IR/Binary Term-Document Incidence Matrix.md",
-    "SSI/Note 2.md",
-    "SSI/Note 1.md",
-    "IR/Boolean Retrieval.md",
-    "ML/0 - Machine Learning.md",
-    "NLP/0 - Natural Language Processing.md",
+    "IR/Index Compression.md",
+    "IR/Variable byte codes.md",
+    "ML/img/ML_02_1.png",
+    "ML/img",
     "ML",
-    "SSI/0 - SSI.md",
-    "root.md",
     "SSI",
-    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
-    "TESI/Spanners.md",
     "TESI/img/spanners_1.png",
-    "NLP/Dependency Parsing.md",
-    "conflict-files-obsidian-git.md",
     "NLP/img/wordnet_5.png",
     "NLP/img/wordnet_4.png",
     "NLP/img/wordnet_3.png",
     "NLP/img/wordnet_2.png",
-    "NLP/img/word2vec_1.png",
-    "NLP/Word2Vec.md",
-    "NLP/The WSD Algorithm - Contextual Embeddings.md",
-    "NLP/Shift-Reduce Parser.md",
-    "IC/SPARQL 1.1.md",
-    "IC/Vocabolario OWL.md"
+    "NLP/img/word2vec_1.png"
   ]
 }

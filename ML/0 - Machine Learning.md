@@ -21,3 +21,4 @@ tags:
 
 ----------------
 ## Lecture Notes
+- [[ML/Lecture 2|Lecture 2]]
