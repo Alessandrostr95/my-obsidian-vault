@@ -63,7 +63,7 @@ Come parametri abbiamo
 - $T = \text{\# posting lists}$ (complessivo nell'intera collezione).
 - $n = \text{size of auxiliary index}$. (il numero di posting list che riesco a tenere in memoria in media).
 
-Perciò, il numerot totale di indici di ausiliari che si creeranno sarà $T/n$.
+Perciò, il numerot totale di indici ausiliari che si creeranno sarà $T/n$.
 
 Usando quindi $O(T/n)$ indici ausiliari, la costruzione di quello principale sarà $\Theta(T^2/n)$, in quanto nel caso peggiore ognuna delle $T$ posting list verrà modificata in ognuno dei $O(T/n)$ indici ausiliari.
 

@@ -11,8 +11,11 @@
             "id": "30b392ff57314caf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "diff-view",
+              "state": {
+                "file": "IR/Binary Term-Document Incidence Matrix.md",
+                "staged": true
+              }
             }
           }
         ]

@@ -10,7 +10,7 @@ Questo processo è noto come **grep** dei documenti.
 Finché siamo in un solo computer di un utente, il comando `grep` va più che bene.
 Invece, su sistemi con un'enorme quantità di dati (come il *web*), si richiede di più:
 1. Processare un'enorme quantità **molto** velocemente (<u>frazione di secondi</u>). E purtroppo sul web un approccio lineare come il *grepping* indurrebbe risultati disastrosi.
-2. La possibilità di avere operazioni più sofisticati. Per esempio abbiamo l'espressione "*Romans* **NEAR** *countrymen*" dove l'operatore **NEAR** può significare "*entro 5 parole*" oppure "*nella stessa frase*". Questo operatore è impraticabile con il grepping.
+2. La possibilità di avere operazioni più sofisticate. Per esempio abbiamo l'espressione "*Romans* **NEAR** *countrymen*" dove l'operatore **NEAR** può significare "*entro 5 parole*" oppure "*nella stessa frase*". Questo operatore è impraticabile con il grepping.
 3. Ottenere un **ranking** del risultato della query, in base alla "*significatibilità*" dei documenti rispetto a quanto richiesto.
 
 Un primo modo per evitare uno **scanning lineare** dei documenti è quello di **indicizzare** a priori ogni documento.
@@ -55,13 +55,13 @@ return brutus .& caesar .& (.! calpurnia)
 L'applicazione di un **operatore** booleano è **lineare** nel numero $N$ di documenti.
 La risoluzione di una espressione ha quindi una complessità di $O(kN)$, dove $k$ è il numero di operatori nella query.
 
-Per quanto riguarda invece la ricerca delle righe necessarie per la queri è lineare nel numero di termini $M$.
-Perciò abbiamo una complessità di $O(kNM)$.
+Per quanto riguarda invece la ricerca delle righe necessarie per la query è lineare nel numero di termini $M$.
+Perciò abbiamo una complessità di $O(kN + kM)$.
 
 Tale complessità non è per niente ragionevole, in quanto $M$ può crescere a dismisura.
 
 Perciò si può pensare di **ordinare** i termini in fase di costruzione della matrice d'incidenza.
-I tal caso si può effettuare una **ricerca dicotomica** sui termini, ottenendo una complessità di $O(kN\log{M})$ (decisamente più ragionevole).
+I tal caso si può effettuare una **ricerca dicotomica** sui termini, ottenendo una complessità di $O(kN + k\log{M})$ (decisamente più ragionevole).
 
 ## Efficienza - Spazio
 Purtroppo in termini di **spazio** tale struttura dati non è praticabile.
