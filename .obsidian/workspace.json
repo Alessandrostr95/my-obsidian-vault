@@ -4,18 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "37cb966d540afbb6",
+        "id": "2c8d1ce9d54d8381",
         "type": "tabs",
         "children": [
           {
-            "id": "30b392ff57314caf",
+            "id": "ba98c6b78f15f27d",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "IR/Binary Term-Document Incidence Matrix.md",
-                "staged": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -120,14 +117,14 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:Crea nuova lavagna": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
-      "canvas:Create new canvas": false,
       "command-palette:Apri riquadro comandi": false,
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "30b392ff57314caf",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "IR/Beyond Binary Relevance.md",
     "IR/0 - Information Retrieval.md",
