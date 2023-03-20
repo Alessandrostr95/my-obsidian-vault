@@ -88,6 +88,8 @@ Questa è una **generalizzazione** del VC dove:
 > Sia $C \subset U$ gli oggetti già coperti.
 > - **cost-effectiveness** di $S$ = $c(S) / (S \setminus C)$ (il rapporto tra il costo di $S$ e quanti nuovi oggetti esso ricopre).
 
+^489290
+
 > **Obs**: osserviamo che sommando i $\text{price}(e)$ otteniamo esattamente il costo della soluzione.
 
 ### Analisi

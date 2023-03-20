@@ -19,21 +19,24 @@ Quando $R \equiv V$ allora la soluzione è un **MST**.
 Quando $R \neq V$ il problema è NP-hard.
 
 
-- **Metric Steiner** instances:
+- **Metric Steiner** instances: ^09eb19
 	- $G$ è completo.
 	- vale la disuguaglianza triangolare su ogni coppia di vertici incidenti. Dati $u,v,w$ allora $c(u,v) \leq c(u,w) + c(w,v)$
 
 > **THM**
 > è possibili ridurre minimum steiner tree in minumum metric stiner tree a meno di un fattore di approssimazione.
 > **Proof**:
-> Sia $I$ l'istanza del minimum Steiner tree.
-> In tempo polinomiale possiamo ridurre $I$ a $I'$ (istanza metrica):
+> Sia $I=\langle G(V,E),c, R\subseteq V \rangle$ un'istanza del **MST** (*Minimum Steiner Tree*).
+> In **tempo polinomiale** possiamo ridurre l'istanza iniziale $I$ ad una [[#^09eb19|istanza metrica]] $I'$, come segue:
 > - $G'=(V,E')$ è un grafo **completo** dove $c'(u,v) = \text{dist}_G(u,v)$
 > - $R' \equiv R$
 > Dato che per ogni arco $(u,v) \in E$ vale che $c'(u,v) \leq c(u,v)$, allora $\text{OPT}(I') \leq\text{OPT}(I)$
 > 
-> Possiamo sempre convertire $T'$ in $T$ per $I$.
-> ==da finire==
+> Possiamo **sempre** convertire uno stainer tree $T'$ per $I'$ in uno steiner tree $T$ per $I$, con quasi lo stesso costo.
+> - rimpiazza ogni arco $(u,v) \in T'$ con lo *shortest path* tra $u$ e $v$ in $G$.
+> - prendi un qualsiasi spanning tree $T$ per il nuovo sottografo.
+> $$\text{cost}(T) \leq \text{cost}(T')$$
+
 
 D'ora in avanti parleremo di istanze sempre metriche.
 > **Alg1**
