@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2c8d1ce9d54d8381",
+        "id": "f494a277c1f8a999",
         "type": "tabs",
         "children": [
           {
-            "id": "ba98c6b78f15f27d",
+            "id": "35be178997b90173",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "d7e687cc69808495",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "conflict-files-obsidian-git.md"
-              }
+              "state": {}
             }
           },
           {
@@ -140,7 +124,7 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d7e687cc69808495",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
