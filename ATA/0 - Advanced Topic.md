@@ -26,5 +26,5 @@
 
 ---------------------
 ## Lecture notes
-- [[AT/Note 0|Note 0]]
-- [[AT/Note 1|Note 1]]
+- [[Note 0|Note 0]]
+- [[ATA/Note 1|Note 1]]

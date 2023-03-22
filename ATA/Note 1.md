@@ -13,7 +13,11 @@ content:
 	- $V \setminus R$ **steiner nodes**
 - **Output**:
 	- Uno spanning tree $T$ su che contiene tutti i nodi required $R$.
-- **Costo**: $$\sum_{e \in T} c(e)$$
+- **Costo**: $$\text{minimize COST}(t) = \sum_{e \in T} c(e)$$
+![](./img/note1-1.png)
+![](./img/note1-2.png)
+![](./img/note1-3.png)
+![](./img/note1-4.png)
 
 Quando $R \equiv V$ allora la soluzione è un **MST**.
 Quando $R \neq V$ il problema è NP-hard.

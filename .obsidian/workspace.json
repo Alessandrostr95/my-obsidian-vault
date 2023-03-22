@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AT/Note 1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "34423c8f2a866dac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AT/Note 2.md",
+                "file": "ATA/Note 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AT/Note 2.md",
+                "file": "ATA/Note 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AT/Note 2.md"
+                "file": "ATA/Note 1.md"
               }
             }
           },
@@ -144,15 +131,20 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "34423c8f2a866dac",
+  "active": "6b26479a5ddfc750",
   "lastOpenFiles": [
-    "AT/Note 1.md",
-    "AT/Note 2.md",
+    "ATA/img/note1-4.png",
+    "ATA/img/note1-3.png",
+    "ATA/img/note1-1.png",
+    "ATA/img/note1-2.png",
+    "ATA/img",
+    "ATA/Note 2.md",
+    "ATA/Note 1.md",
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
-    "AT/Note 0.md",
-    "AT/0 - Advanced Topic.md",
-    "AT",
+    "ATA/Note 0.md",
+    "ATA/0 - Advanced Topic.md",
+    "ATA",
     "IR/Beyond Binary Relevance.md",
     "IR/0 - Information Retrieval.md",
     "IR/Rank-Based Measures.md",
