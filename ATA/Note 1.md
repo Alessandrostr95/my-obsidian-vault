@@ -19,46 +19,61 @@ content:
 ![](./img/note1-3.png)
 ![](./img/note1-4.png)
 
-Quando $R \equiv V$ allora la soluzione è un **MST**.
-Quando $R \neq V$ il problema è NP-hard.
-
+Quando $R \equiv V$ allora la soluzione è un **MST**, e quindi risolvibile in **tempo polinomiale**.
+Quando $R \neq V$ il problema è invece NP-hard.
 
 - **Metric Steiner** instances: ^09eb19
 	- $G$ è completo.
 	- vale la disuguaglianza triangolare su ogni coppia di vertici incidenti. Dati $u,v,w$ allora $c(u,v) \leq c(u,w) + c(w,v)$
 
 > **THM**
-> è possibili ridurre minimum steiner tree in minumum metric stiner tree a meno di un fattore di approssimazione.
+> È possibili ridurre il *minimum steiner tree* nel *minumum metric stiner tree* a meno di un fattore di approssimazione.
+> 
 > **Proof**:
-> Sia $I=\langle G(V,E),c, R\subseteq V \rangle$ un'istanza del **MST** (*Minimum Steiner Tree*).
+> Sia $I=\langle G(V,E),c, R\subseteq V \rangle$ un'istanza del *Minimum Steiner Tree problem*.
 > In **tempo polinomiale** possiamo ridurre l'istanza iniziale $I$ ad una [[#^09eb19|istanza metrica]] $I'$, come segue:
 > - $G'=(V,E')$ è un grafo **completo** dove $c'(u,v) = \text{dist}_G(u,v)$
 > - $R' \equiv R$
 > Dato che per ogni arco $(u,v) \in E$ vale che $c'(u,v) \leq c(u,v)$, allora $\text{OPT}(I') \leq\text{OPT}(I)$
 > 
-> Possiamo **sempre** convertire uno stainer tree $T'$ per $I'$ in uno steiner tree $T$ per $I$, con quasi lo stesso costo.
+> Possiamo **sempre** convertire uno stainer tree $T'$ per l'istanza metrica $I'$ in uno steiner tree $T$ per l'istanza semplice $I$, con *quasi* lo stesso costo.
 > - rimpiazza ogni arco $(u,v) \in T'$ con lo *shortest path* tra $u$ e $v$ in $G$.
 > - prendi un qualsiasi spanning tree $T$ per il nuovo sottografo.
-> $$\text{cost}(T) \leq \text{cost}(T')$$
+> $$\text{cost}(T) \leq \text{cost}(T') \;\; \square$$
 
 
-D'ora in avanti parleremo di istanze sempre metriche.
+D'ora in avanti terremo in considerazione le sole **istanze metriche**.
 > **Alg1**
-> 1. Prendiamo il sottografo in $G$ **indotto** da $R$.
-> 2. Facciamo il **MST** sul sottografo indotto $G\left[ R \right]$.
+> 1. Prendiamo il sottografo $G\left[ R \right]$ **indotto** da $R$.
+> 2. Ritorna il **minimum spanning tree** sul sottografo indotto $G\left[ R \right]$.
+
+^b68da3
+
+![](./img/note1-5.png)
 
 > **THM**
-> Quella dell'algoritmo ALG1 è una soluzione 2-approssimante.
+> L'algoritmo [[#^b68da3|ALG1]] è 2-approssimante per il minimum steiner tree su **istanze metriche**.
+> 
 > **Proof**:
 > Sia $T$ la soluzione ottima, ed $M$ il minimum spannin tree restituito da ALG1.
-> **Raddoppiamo** gli archi in due bidirezionali in $T$ (chiamiamolo $T'$)
-> Siò nuovo grafo possiamo trovare un **cammino euleriano**.
-> Il costo di questo cammino euleriano sarà esattamente $cost(T') = 2OPT$.
-> Facciamo quindi degli shortcut, che passano dai soli nodi required, ed otteniamo un ciclo $C$ con $cost(C) \leq cost(T') = 2OPT$.
-> Togliendo un arco da $C$ otteniamo un albero ricoprente su $R$, il quale non può essere migliore di $M$.
-> $$cost(M) \leq cost(C) \leq cost(T') = 2OPT \; \; \square$$ 
+> **Raddoppiamo** gli archi di $T$ in due archi diretti ottenendo un **grafo Euleriano** $T'$.
+> 
+> ![](./img/note1-6.png)
+> Consideriamo il **ciclo Euleriano** su $T'$.
+> Il costo di questo cammino euleriano sarà esattamente $$\text{cost}(T') = \sum_{e \in T'} c(e) = 2 \cdot \sum_{e \in T} c(e) = 2 \cdot \text{cost}(T) = 2 \cdot \text{OPT}$$
+> Seguendo il ciclo Euleriano su $T'$, creiamo un **cammino Hamiltoniano** $C$ sui soli nodi requested $R$.
+> Essendo in una istanza metrica, possiamo prendere sempre un arco diretto tra due nodi, *"saltando"* i nodi non requested.
+> Chiamiamo questi salti **shortcut**.
+> 
+> ![](./img/note1-7.png)
+> 
+> Avendo $C$ al più gli stessi archi di $T'$ allora $$\text{cost}(C) \leq \text{cost}(T')$$
+> Togliendo un arco da $C$ otteniamo un albero ricoprente su tutto $R$, il quale però non può essere migliore di $M$ (in quanto $M$ è un minimum spanning tree su $R$).
+> Perciò
+> 	$$\text{cost}(M) \leq \text{cost}(C) \leq \text{cost}(T') = 2 \cdot \text{OPT} \; \; \square$$ 
 
 
+## Tight Example
 ==vedi esempio tight==
 
 ### State of the art
