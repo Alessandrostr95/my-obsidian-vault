@@ -1,4 +1,4 @@
-# Advanced Topic 
+# Advanced Topic on Algorithms
 --------------------------
 ## Info corso
 - **Docente**: Luciano Gualà
@@ -28,3 +28,5 @@
 ## Lecture notes
 - [[Note 0|Note 0]]
 - [[ATA/Note 1|Note 1]]
+- [[ATA/Note 2|Note 2]]
+- [[ATA/Note 3|Note 3]]

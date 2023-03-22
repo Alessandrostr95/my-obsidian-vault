@@ -70,4 +70,16 @@ Osservare che in questo caso si usa la LP **solo** per l'analisi, ma non per la 
 
 
 ## Steiner Forset
+- **Input**:
+	- $G(V,E, c \geq 0)$
+	- una collezione di **sottoinsiemi disgiunti** $S_1,...,S_k \subseteq V$
+- **Feasible Solution**
+	- una foresta $F$ t.c. per ogni $S_i$ abbiamo uno seiner tree $T_i$
+- **Misura** $$\text{minimze cost}(F) = \sum_{e \in F} c(e)$$
+
+
+==vedi esempio==
+
+
+
 
