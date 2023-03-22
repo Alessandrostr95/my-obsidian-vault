@@ -19,5 +19,5 @@ tags:
 ## Lecture Notes 
 - [[SSI/Note 1|Note 1]]
 - [[SSI/Note 2|Note 2]]
-- [[Note 3|Note 3]]
+- [[SSI/Note 3|Note 3]]
 

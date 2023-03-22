@@ -74,7 +74,17 @@ D'ora in avanti terremo in considerazione le sole **istanze metriche**.
 
 
 ## Tight Example
-==vedi esempio tight==
+Consideriamo un grafo con $n+1$ vertici come il seguente:
+
+![](./img/note1-8.png)
+
+- un nodo steiner centrale.
+- $n$ nodi requested sui bordi.
+
+La soluzione ottima è quella composta dalla **Stella** centrata nell'unico nodo *steiner*.
+Questa avrà valore $\text{OPT} = n$.
+
+L'algoritmo invece
 
 ### State of the art
 - 2 [Takahashi & Matsuyama]

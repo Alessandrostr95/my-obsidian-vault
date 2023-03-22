@@ -2,7 +2,9 @@
 date: 2023-03-20
 draft: true
 content:
-  - steiner tree
+  - linear programming
+  - rounding
+  - dual
 ---
 
 ## Minimum Set Cover Problem

@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ATA/Note 1.md",
+                "file": "ATA/Note 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cba036822efa5622",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ATA/Note 3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b86498824caa0be9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ATA/Note 2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 1.md",
+                "file": "ATA/Note 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 1.md"
+                "file": "ATA/Note 3.md"
               }
             }
           },
@@ -131,9 +156,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "6b26479a5ddfc750",
+  "active": "cba036822efa5622",
   "lastOpenFiles": [
+    "ATA/Note 2.md",
+    "ATA/Note 3.md",
     "ATA/Note 1.md",
+    "ATA/img/note1-8.png",
     "ATA/img/note1-7.png",
     "ATA/img/note1-6.png",
     "ATA/img/note1-5.png",
@@ -142,7 +170,6 @@
     "ATA/img/note1-1.png",
     "ATA/img/note1-2.png",
     "ATA/img",
-    "ATA/Note 2.md",
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
     "ATA/Note 0.md",
