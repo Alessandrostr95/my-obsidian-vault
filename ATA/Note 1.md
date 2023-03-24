@@ -13,7 +13,7 @@ content:
 	- $V \setminus R$ **steiner nodes**
 - **Output**:
 	- Uno spanning tree $T$ su che contiene tutti i nodi required $R$.
-- **Costo**: $$\text{minimize COST}(t) = \sum_{e \in T} c(e)$$
+- **Goal**: $$\text{minimize COST}(t) = \sum_{e \in T} c(e)$$
 ![](./img/note1-1.png)
 ![](./img/note1-2.png)
 ![](./img/note1-3.png)
@@ -78,55 +78,62 @@ Consideriamo un grafo con $n+1$ vertici come il seguente:
 
 ![](./img/note1-8.png)
 
-- un nodo steiner centrale.
-- $n$ nodi requested sui bordi.
+- un nodo steiner centrale, con tutti archi di costo 1.
+- $n$ nodi requested sui bordi, con i restanti archi di costo 2.
 
 La soluzione ottima è quella composta dalla **Stella** centrata nell'unico nodo *steiner*.
 Questa avrà valore $\text{OPT} = n$.
 
-L'algoritmo invece
+L'algoritmo invece, considerando il solo sottografo composto dai nodi di $R$, prenderà come soluzione il cammino di $n-1$ archi che percorre i bordi, con un costo totale di $2(n-1)$.
 
 ### State of the art
-- 2 [Takahashi & Matsuyama]
-- 11/6 [Zelikovsky]
-- 1.746 [Berman & Ramaiyer]
-- 1 + $\ln{2}$ + $\epsilon$ [Zelivsky]
-- 5/3 + $\epsilon$ []
-- 1.644
-- 1.598
-- $1 + (\ln{3})/2 + \varepsilon$
-- $\ln{4} + \varepsilon$
+![](./img/note1-9.png)
 
-# Traveling Salesman Problem
+----
+# Traveling Salesman Problem (TSP)
 - **Input**:
-	- un grafo completo $G(V,E)$
+	- un grafo **completo** $G(V,E)$, con pesi **non-negativi**.
 - **Output**:
-	- un ciclo hamiltoniano $C$
-- **misura (minimizzare)**:
-	- $\sum_{e \in E(C)}c(e)$
+	- un ciclo **hamiltoniano** $C$.
+- **Goal**: $$\text{minimize cost}(C) = \sum_{e \in E(C)}c(e)$$
+![](./img/note1-10.png)
 
+**Metric TSP**: è possibile definire una istanza metrica anche per il TSP come per [[#^09eb19|steiner tree problem]].
+Basta che i costi dei nodi rispettino la **disuguaglianza triangolare**. ^e43440
 
-- **Metric TSP**:
-	- quelle istanze di TSP che rispettano la **disuguaglianza triangolare**.
-
-Le istanze metriche sono computazionalmente **approcciabili** e **approssimabili**.
 
 > **THM**
-> Per qualsiasi funzione $\alpha(n)$, una $\alpha(n)$-apx di TSP è NP-hard.
+> Per qualsiasi funzione *polinomialmente computabile* $\alpha(n)$, trovare una $\alpha(n)$-apx di TSP è NP-hard.
+> 
 > **Proof**:
-> Riduciamo da Hamiltonian Cycle a TSP.
-> I pesi degli archi costano tutti 1.
-> Per gli archi mancanti inserisco un arco di peso $= n \cdot \alpha(n)$.
-> - Se $G$ ha un HC, allora l'algoritmo di TSP troverà una soluzione di valore $n$.
-> - Se $G$ non ha un HC, allora l'algoritmo per TSP troverà una soluzione di valore almeno $> n \cdot \alpha (n)$.
-> $\implies$ $G$ ha un HC se e solo se $G'$ ha un TSP di valore esattamente $n$ $\square$.
+> Supponiamo per assurdo di avere un algoritmo $A$ che computa in tempo polinomiale una $\alpha(n)$-approssimazione per il TSP.
+> 
+> Riduciamo ora il problema del **[[#^db583b|Ciclo Hamiltoniano]]** al TSP ed usiamo $A$ per risolvere il problema.
+> Sia $G=(V,E)$ un istanza per il problema del Ciclo Hamiltoniano.
+> Creiamo una nuova istanza $H = (V,F,c)$ per TSP, t.c.:
+> - $H = (V,F)$ è **completo**.
+> - $$c(u,v) = \begin{cases}1 &(u,c) \in E\\n\cdot \alpha(n) &(u,v) \notin E\end{cases}$$
+> Certamente avremo che:
+> - Se $G$ ha un ciclo hamiltoniano, allora una soluzione ottima al TSP per l'istanza $H$ avrà valore $n$. $$OPT(H) = n$$
+> - Se $G$ **non** ha un ciclo hamiltoniano, allora la soluzione ottima al TSP per l'istanza $H$ dovrà necessariamente usare un arco che non è in $G$, e quindi la soluzione avrà costo $> n \cdot \alpha (n)$. $$OPT(H) > n \cdot \alpha(n)$$
+> Abbiamo quindi trovato un algoritmo che in **tempo polinomiale** decide il problema del Ciclo Hamiltoniano (assurdo) $\square$
 
+
+```ad-tldr
+title: Hamiltonian Cycle Problem
+Dato un grafo $G=(V,E)$ **decidere** se esiste un ciclo che copre tutti i nodi.
+```
+
+^db583b
+
+Dato quindi che è inapprocciabile anche l'approssimazione per il TSP, consideriamo le [[#^e43440|istance metriche]].
+Esse infatti sono computazionalmente **approcciabili** e **approssimabili**.
 
 > **ALG2** (istanza metrica)
-> 1. Trova un MST di $G$.
-> 2. Raddoppia tutto gli archi di $T$ ottenendo un grafo euleriano.
+> 1. Trova un MST $T$ per $G$.
+> 2. Raddoppia tutti gli archi di $T$ ottenendo un **grafo euleriano**.
 > 3. Trova un **tour** euleriano $\tau$ su questo grafo.
-> 4. Ritornaimo un ciclo emiltoniano $C$ partendo da $\tau$, dove uso l'arco diretto (shortcut) dei nodi già visitati.
+> 4. Ritornaimo un ciclo emiltoniano $C$ che visita tutti i nodi di $G$ in ordine in cui appaiono in $\tau$.
 
 > **THM**
 > L'algoritmo è 2-approssimante.
