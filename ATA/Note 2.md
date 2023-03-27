@@ -17,7 +17,7 @@ content:
 - **Measure**: minimizzare $\text{cost}(\mathcal{C})$, ovvero $$\text{minimize} = \sum_{S \in \mathcal{C}} c(S)$$
 Definiamo i seguenti concetti:
 - la **frequenza** di un oggetto $e$ è il numero di insiemi che lo contengono, ovvero $$\text{freq}(e) = \vert \lbrace S \in \mathcal{S} : e \in S \rbrace \vert$$
-- sia $f$ la **frequenza massima** $$f = \max_{e \in U} \text{freq}(e)$$
+- sia $f$ la **frequenza massima** $$f = \max_{e \in U} \text{freq}(e)$$ ^46c19e
 
 
 Possiamo rappresentare questo problema come un problema di **Programmazione Lineare Intera** (*Integer LP*).
@@ -72,12 +72,18 @@ Per risolvere un problema di programmazine lineare possiamo usare i seguenti alg
 > 
 > **Proof**:
 > **La soluzione è ammissibile**.
-> Prendiamo un qualsiasi elemento $e$. Esso sarà in **al più** $\leq f$ insiemi.
-> Sicuramente $e$ è coperto nella soluzione **frazionaria**, perciò la somma degli $x_S$ che coprono $e$ fa **almeno** $\geq 1$.
-> E.s. $e \in S_1, S_2, S_3$, nella soluzione frazionaria avevamo che
-> $$x_{S_1} + x_{S_2} + x_{S_3} \geq 1 \implies x_{S_i} \geq \frac{1}{3} = \frac{1}{\text{freq}(e)} \geq \frac{1}{f} \;\; i =1,2,3$$
+> Prendiamo un qualsiasi elemento $e$.
+> Per [[#^46c19e|definizione]] di $f$, avremo che $e$ sarà contenuto in **al più** $\leq f$ insiemi.
+> <u>Sicuramente</u> $e$ è coperto nella soluzione **frazionaria**, perciò la somma degli $x_S$ che contengono $e$ fa **almeno** $\geq 1$.
 > 
-> **f-approssimazione**.
+> Esempio: consideriamo la seguente istanza 
+> 
+> ![](./img/note2-2.png)
+> 
+> Dato che $e \in S_1, S_2, S_3$, nella soluzione frazionaria *ottima* avevamo necessariamente che $$x_{S_1} + x_{S_2} + x_{S_3} \geq 1 \implies x_{S_i} \geq \frac{1}{3} = \frac{1}{\text{freq}(e)} \geq \frac{1}{f} \;\; i =1,2,3$$
+> Quindi almeno uno degli insiemi che contiene $e$ deve necessariamente essere incluso nella soluzione (e questo vale per qualsiasi elemento $e$ di qualsiasi istanza).
+> 
+> **La soluzione è f-approssimazione**.
 > Basta osservare che la nuova soluzione è $\leq f \cdot OPT_f \leq f \cdot OPT$ $\square$.
 
 ```ad-note
