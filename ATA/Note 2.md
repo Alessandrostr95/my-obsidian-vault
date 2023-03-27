@@ -40,16 +40,14 @@ L'idea della tecnica del **Rounding** è la seguente:
 Per esempio nel caso [[#Minimum Set Cover Problem]] possiamo sostituire il vincolo di interezza col vincolo $$x_S \geq 0 \land x_S \leq 1$$
 Osserviamo che il vincolo $x_S \leq 1$ è **ridondante**, perché per minimizzare non convieme mai avere $x_S \geq 1$.
 
-La nuova formalizzazione sarà quindi la seguente
-
-$$\begin{align}
+La nuova formalizzazione sarà quindi la seguente $$\begin{align}
 \text{minimize} &\sum_{S \in \mathcal{S}} c(S) \cdot x_S\\
 \text{subject to} &\sum_{S: e \in S} x_S \geq 1 &\forall e \in U\\
 & x_S \geq 0 &\forall S \in \mathcal{S}
-\end{align}$$
+\end{align}$$ ^c454d6
 
 
-Usa soluzione ammissibile per questo nuovo problema è detto anche **fractional set cover**.
+Usa soluzione ammissibile per questo nuovo problema è detta anche **fractional set cover**.
 
 Sia $OPT_f$ una soluzione frazionale ammissibile per il set cover frazionario, e $OPT$ un set cover ottimo per l'istanza origiale (intera).
 
@@ -57,13 +55,17 @@ Avremo quindi che $$OPT_f \leq OPT$$ perché una soluzione ottima per l'istanza 
 
 ![](./img/note2-1.png)
 
-Gli algoritmi conosciuti sono:
-- il **metodo del simplesso** (worst case **esponenziale**, ma quasi lineare in pratica).
-- il **metodo degli ellisoidi** (worst case **polinomiale**, ma in pratica peggiore del simplesso).
+```ad-important
+Per risolvere un problema di programmazine lineare possiamo usare i seguenti algoritmi:
+- il **metodo del simplesso**, il quale è esponenziale nel caso peggiore ma **quasi-lineare** in pratica (vedi [[1 - Introduction#Linear Programming]]).
+- il **metodo degli ellissoidi**, il quale è sempre polinomiale però in pratica poco efficiente (in pratica peggiore del simplesso, vedi [[1 - Introduction#^cebc7c|qui]]).
+```
+
+## Algoritmo f-approssimante per min-Set Cover
 
 > **ALG f-apx**
-> 1. trova una soluzione ottima per l'istanza LP-rilassata
-> 2. Prendi tutti gli insiemi $S$ per i quali $x_S \geq 1/f$.
+> 1. trova una soluzione ottima per l'[[#^c454d6|istanza LP-rilassata]].
+> 2. Includi nella soluzione tutti gli insiemi $S$ per i quali $x_S \geq 1/f$.
 
 > **TMH**
 > La soluzione dell'algoritmo è **ammissibile** ed $f$-approssimante.

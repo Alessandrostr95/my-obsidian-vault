@@ -98,7 +98,7 @@ Ovvero il simplesso è (pessimisticamente) inutilizzabile.
 Ma allora perché rimane l'algoritmo più usato in assoluto in pratica?
 
 Oltre al danno c'è anche la beffa:
-esistono algoritmi di programmazione lineare che hanno <u>complessità <b>polinomiale</b> nel caso peggiore</u> (per esempio l'[ellipsoid method](https://en.wikipedia.org/wiki/Ellipsoid_method)) ma empiricamente non riescono a competere con il metodo del simplesso.
+esistono algoritmi di programmazione lineare che hanno <u>complessità <b>polinomiale</b> nel caso peggiore</u> (per esempio l'[ellipsoid method](https://en.wikipedia.org/wiki/Ellipsoid_method)) ma empiricamente non riescono a competere con il metodo del simplesso. ^cebc7c
 
 Il [[#^cc27e3|precedente teorema]] ci suggerisce che l'analisi *worst-case* non va bene per l'analisi di algoritmi per problemi di programmazione lineare, in quanto non cattura le performance empiriche degli algoritmi di ottimizzazione lineare.
 

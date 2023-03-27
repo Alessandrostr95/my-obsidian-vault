@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ATA/Note 4.md",
+                "file": "BWA/1 - Introduction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "039717a8996db61b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ATA/Note 2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 4.md",
+                "file": "ATA/Note 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 4.md"
+                "file": "ATA/Note 2.md"
               }
             }
           },
@@ -131,14 +144,17 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "6b26479a5ddfc750",
+  "active": "039717a8996db61b",
   "lastOpenFiles": [
-    "ATA/0 - Advanced Topic on Algorithms.md",
-    "ATA/Note 4.md",
     "ATA/Note 3.md",
+    "BWA/1 - Introduction.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
+    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "ATA/Note 2.md",
-    "ATA/img/note2-1.png",
     "ATA/Note 1.md",
+    "ATA/Note 4.md",
+    "ATA/0 - Advanced Topic on Algorithms.md",
+    "ATA/img/note2-1.png",
     "ATA/img/note1-17.png",
     "ATA/img/note1-16.png",
     "ATA/img/note1-15.png",
