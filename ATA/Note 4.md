@@ -42,7 +42,7 @@ Parliamo quindi problemi di approssimazione.
 Un problema parametrizzato è detto **Fixed Parameter Tractable** (**FTP**) se ammette un algoritmo che lo risolve all'ottimo con complessità $$f(k) \cdot n^{O(1)}$$
 Dove l'esponente è **indipendente** da $n$ e da $k$.
 
-## Bounded-search tree algorithm
+# Bounded-search tree algorithm
 
 1. prendiamo un arco non coperto $e = (u,v)$ qualsiasi.
 2. perciò avremo che $u \in S \lor v \in S$.
@@ -60,4 +60,34 @@ Dove l'esponente è **indipendente** da $n$ e da $k$.
 
 **Running time**: ho $O(2^k)$ ricorsioni, ognuna delle quali ha complessità lineare. Ogni istanza la risolvi in tempo lineare, perciò ho complessità $$O(2^k n)$$
 
+==vedi toolbox per FPT==
+
+
+# Kernelizaton
+L'idea della **kernelization** è quella di prendere un'istanza grande, fare un **pre-processing** per ridurla ad un'istanza **equivalente** più piccola.
+
+**Kernelization** è un algoritmo polinomiale che converte un'istanza $(x,k)$ in un'istanza $(x',k')$ più piccola ed equivalente.
+
+**Equivalenza**: $(x,k)$ è un'istanza SI $\iff$ $(x',k')$ è un'istanza SI.
+**Piccola**: la dimensione di $(x',k')$ è $\leq f(k)$.
+
+
+> **THM** Un problema parametrizzato è $FTP$ se e solo se esso ammette una **kernelizzazione**.
+> 
+> **Proof**:
+> $(\Leftarrow)$
+> Prendiamo l'istanza e la carnelizziamo in tempo polinomaile in una di dimensione $n' \leq f(k)$.
+> Eseguiamo un algoritmo polinomiale per risolvere la nuova istanza in tempo $g(n)$.
+> La complessità per risolvere il problema sarà quindi $$\text{POLY(n)} + g(f(k))$$
+> $(\Rightarrow)$
+> Supponiamo di avere un alg $A$ che risolve il problema in tempo $f(k) \cdot n^c$.
+> Consideriamo due casi.
+> 
+> 1. se $n \leq f(k)$ allora l'istanza è già kernelizzata.
+> 2. se $f(k) \leq n$
+> 	- risolvo il problema con l'algoritmo $A$ in tempo $f(k)n^c \leq n^{c+1}$
+> 	- ritorno un'istanza di dimensione $O(1)$ in maniera appropriata $\square$
+
+
+## Polynomial kernel for k-Vertex Cover
 
