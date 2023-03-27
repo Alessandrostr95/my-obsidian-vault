@@ -3,6 +3,10 @@ date: 2024-03-27
 draft: true
 content:
   - parametrized algorithms
+  - k-vertex cover
+  - FTP
+  - bounded-search tree
+  - kernelization
 ---
 
 Noi vorremmo:
