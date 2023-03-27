@@ -26,7 +26,13 @@
 
 ---------------------
 ## Lecture notes
+
+### Algoritmi di approssimazione
 - [[Note 0|Note 0]]
 - [[ATA/Note 1|Note 1]]
 - [[ATA/Note 2|Note 2]]
 - [[ATA/Note 3|Note 3]]
+
+### Parametrized Algorithms
+- [[Note 4]]
+
