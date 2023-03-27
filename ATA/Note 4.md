@@ -90,4 +90,36 @@ L'idea della **kernelization** è quella di prendere un'istanza grande, fare un 
 
 
 ## Polynomial kernel for k-Vertex Cover
+Questo algoritmo è besata su alcune regole di riduzione.
 
+- **Regola 1**: ^dbc16a
+	- supponiamo di trovare un vertice $v$ di grado $\delta(v) \geq k+1$.
+	- Osserviamo che se ciò accade, allora $v$ appartiene al vertex cover di size $k$ (<u>necessariamente</u>).
+	- Rimuoviamo $v$ e consideriamo la nuova istanza **equivalente** $(G \setminus \lbrace v \rbrace, k-1)$.
+	- Iteriamo finché possibile.
+- **Regola 2**: ^4256ce
+	- Supponiamo di incorrere un nodo $v$ **isolato**.
+	- Rimuoviamo $v$ e consideriamo la nuova istanza **equivalente** $(G \setminus \lbrace v \rbrace, k)$.
+	- Iteriamo finché possibile.
+
+> **Lemma** Sia un'istanza SI $(G,k)$, e supponiamo che sia già **kernelizzata**. Allora è vero che $\vert E(G) \vert \leq k^2$ e $\vert V(G) \vert \leq 2k^2$.
+> 
+> **Proof**:
+> Se la [[#^dbc16a|regola 1]] non può essere più applicata, allora ogni vertice ha grado $\leq k$. Perciò $k$ nodi possono coprire al più $\leq k^2$ archi.
+> Se la [[#^4256ce|regola 2]] non può essere applicata, allora ==da finire==
+
+
+- **Regola 3**: sia $(G,k)$ l'istanza in cui non posso più applicare le altre due regole.
+	- se $k < 0$ o $G$ ha $E(G) > k^2$ oppure $V(G) > 2k^2$, allora $(G,k)$ è un'istanza NO.
+	- ritorna un'istanza NO canonica.
+
+**Running time**
+- naive implementation $O(n^2)$.
+- a clever implementation $O(n+m)$ se preservo il grado massimo.
+
+### Solving k-vertex cover
+- Prima kernelizziamo
+- Poi usiamo il [[#Bounded-search tree algorithm]]
+- $\implies$ running time $O(n + m + 2^k \cdot k^2)$
+
+## W\[1\]-hardness
