@@ -155,12 +155,14 @@ Esse infatti sono computazionalmente **approcciabili** e **approssimabili**.
 
 ![](./img/note1-14.png)
 
+## Algoritmo (3/2)-approssimante
+Una possibile ottimizzazione che si può fare per l'[[#Algoritmo 2-approssimante]] è quella di cercare di trovare un sottografo Euleriano "più economico".
+
 ```ad-note
 - un grafo ha un cammino euleriano se tutti i vertici hanno grado **pari**.
 - in ogni grafo non diretto, il numero di nodi di grado **dispari** è sempre **pari**.
 ```
 
-## Algoritmo (3/2)-approssimante
 
 > **ALG 3** (3/2-apx)
 > 1. Triva un MST $T$ di $G$.
