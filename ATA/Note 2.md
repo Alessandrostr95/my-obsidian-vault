@@ -7,51 +7,55 @@ content:
   - dual
 ---
 
-## Minimum Set Cover Problem
+# Minimum Set Cover Problem
 - **Inptu**
-	- abbiamo un universo $U$ di $n$ elementi.
-	- una collezione di sottoinsiemi di $U$, $\mathcal{S} = \lbrace S_1, ..., S_k \rbrace$
-	- Ogni insieme $S$ ha un costo $c(S)$
+	- un universo $U$ di $n$ elementi.
+	- una collezione di **sottoinsiemi** di $U$, $\mathcal{S} = \lbrace S_1, ..., S_k \rbrace$.
+	- ogni insieme $S$ ha un **costo positivo** $c(S)$.
 - **Feasible Solution**
-	- Una sottocollezione $\mathcal{C} \subseteq \mathcal{S}$ tale che ricopre tutto $U$
-- **Measure (min)**
-	- $$\sum_{S \in \mathcal{C}} c(S)$$
-
-- **frequenza** di un oggetto $e$ è il numero di insiemi che lo contengono
-- sia $f$ la **frequenza massima**.
+	- Una sottocollezione $\mathcal{C} \subseteq \mathcal{S}$ tale che ricopre tutto $U$. Ovvero $$U \equiv \bigcup_{S \in \mathcal{C}} S$$
+- **Measure**: minimizzare $\text{cost}(\mathcal{C})$, ovvero $$\text{minimize} = \sum_{S \in \mathcal{C}} c(S)$$
+Definiamo i seguenti concetti:
+- la **frequenza** di un oggetto $e$ è il numero di insiemi che lo contengono, ovvero $$\text{freq}(e) = \vert \lbrace S \in \mathcal{S} : e \in S \rbrace \vert$$
+- sia $f$ la **frequenza massima** $$f = \max_{e \in U} \text{freq}(e)$$
 
 
 Possiamo rappresentare questo problema come un problema di **Programmazione Lineare Intera** (*Integer LP*).
 
-$$\text{minimize} \sum_{S \in \mathcal{S}} c(S) \cdot x_S$$
-$$\text{subject to} \;\; \sum_{S: e \in S} x_S \geq 1 \;\; \forall e \in U$$
-$$x_S \in \lbrace 0,1 \rbrace \;\; \forall S \in \mathcal{S}$$
-
+$$\begin{align}
+\text{minimize} &\sum_{S \in \mathcal{S}} c(S) \cdot x_S\\
+\text{subject to} &\sum_{S: e \in S} x_S \geq 1 &\forall e \in U\\
+& x_S \in \lbrace 0,1 \rbrace &\forall S \in \mathcal{S}
+\end{align}$$
 
 
 # Tecnica del Roundig (LP-Relaxation)
-- Prendiamo il problema che ci interessa
-- Lo modelliamo come *Integer LP*
-- **Rilassiamo** il vincolo delle variabili **intere**.
-- Risolvo l'istanza rilassata
+L'idea della tecnica del **Rounding** è la seguente:
+- Prendiamo il problema che ci interessa.
+- Lo modelliamo come *Integer LP*.
+- **Rilassiamo** il vincolo di **iterezza**.
+- Risolvo l'istanza rilassata reale (si può fare in tempo polinomiale).
 - Alla fine faccio il **rounding del risultato**.
 
-Per esempio nel nostro caso possiamo creare il nuovo vincolo $$x_S \geq 0 \land x_S \leq 1$$
+Per esempio nel caso [[#Minimum Set Cover Problem]] possiamo sostituire il vincolo di interezza col vincolo $$x_S \geq 0 \land x_S \leq 1$$
 Osserviamo che il vincolo $x_S \leq 1$ è **ridondante**, perché per minimizzare non convieme mai avere $x_S \geq 1$.
 
-La nuova formalizzazione sarà quindi
+La nuova formalizzazione sarà quindi la seguente
 
-$$\text{minimize} \sum_{S \in \mathcal{S}} c(S) \cdot x_S$$
-$$\text{subject to} \;\; \sum_{S: e \in S} x_S \geq 1 \;\; \forall e \in U$$
-$$x_S \geq 0 \;\; \forall S \in \mathcal{S}$$
+$$\begin{align}
+\text{minimize} &\sum_{S \in \mathcal{S}} c(S) \cdot x_S\\
+\text{subject to} &\sum_{S: e \in S} x_S \geq 1 &\forall e \in U\\
+& x_S \geq 0 &\forall S \in \mathcal{S}
+\end{align}$$
 
 
-Usa soluzione ammissibile per questo nuovo problema è detto **fractional set cover**.
-Sia $OPT_f$ una soluzione ammissibile per il set cover frazionario, e $OPT$ un set cover ottimo per l'istanza origiale.
+Usa soluzione ammissibile per questo nuovo problema è detto anche **fractional set cover**.
+
+Sia $OPT_f$ una soluzione frazionale ammissibile per il set cover frazionario, e $OPT$ un set cover ottimo per l'istanza origiale (intera).
 
 Avremo quindi che $$OPT_f \leq OPT$$ perché una soluzione ottima per l'istanza frazionaria è anche una soluzione per l'istanza intera (ma non è detto il contrario).
 
-==vedi esempio==
+![](./img/note2-1.png)
 
 Gli algoritmi conosciuti sono:
 - il **metodo del simplesso** (worst case **esponenziale**, ma quasi lineare in pratica).

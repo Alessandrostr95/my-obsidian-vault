@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ATA/Note 1.md",
+                "file": "ATA/Note 2.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 1.md",
+                "file": "ATA/Note 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 1.md"
+                "file": "ATA/Note 2.md"
               }
             }
           },
@@ -133,6 +133,10 @@
   },
   "active": "6b26479a5ddfc750",
   "lastOpenFiles": [
+    "ATA/img/note2-1.png",
+    "ATA/0 - Advanced Topic on Algorithms.md",
+    "ATA/Note 2.md",
+    "ATA/Note 1.md",
     "ATA/img/note1-17.png",
     "ATA/img/note1-16.png",
     "ATA/img/note1-15.png",
@@ -141,14 +145,10 @@
     "ATA/img/note1-12.png",
     "ATA/img/note1-11.png",
     "ATA/img/note1-10.png",
-    "ATA/Note 2.md",
-    "ATA/0 - Advanced Topic on Algorithms.md",
-    "ATA/Note 1.md",
     "ATA/img/note1-9.png",
     "ATA/Note 3.md",
     "root.md",
     "ATA/img/note1-8.png",
-    "ATA/img/note1-7.png",
     "ATA/img",
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
