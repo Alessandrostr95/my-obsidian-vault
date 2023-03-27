@@ -159,39 +159,56 @@ Esse infatti sono computazionalmente **approcciabili** e **approssimabili**.
 Una possibile ottimizzazione che si può fare per l'[[#Algoritmo 2-approssimante]] è quella di cercare di trovare un sottografo Euleriano "più economico".
 
 ```ad-note
-- un grafo ha un cammino euleriano se tutti i vertici hanno grado **pari**.
+- un grafo è euleriano se tutti i vertici hanno grado **pari**.
 - in ogni grafo non diretto, il numero di nodi di grado **dispari** è sempre **pari**.
 ```
 
 
 > **ALG 3** (3/2-apx)
-> 1. Triva un MST $T$ di $G$.
-> 2. Calcola un **minimum cost perfect matching** $G$ per tutti i nodi $V'$ di grado **dispari** in $T$.
-> 3. Aggiungi gli archi di $M$ a $T$.
-> 4. Trova il tour euleriano $\tau$.
-> 5. Trova il ciclo $C$ con gli shortcut che visita tutti i nodi di $\tau$.
+> 1. Trova un MST (*minimum spanning tree*) $T$ per $G$.
+> 2. Calcola un **minimum cost perfect matching** $M$ sull'insieme $V'$ di tutti i nodi che hanno grado **dispari** all'interno dell'albero $T$.
+> 3. Aggiungi gli archi di $M$ a $T$, e raddoppia poi tutti gli archi per ottenere un grafo euleriano.
+> 4. Trova un **tour** euleriano $\tau$ su questo nuovo grafo.
+> 5. Ritornaimo un ciclo emiltoniano $C$ che visita tutti i nodi di $G$ in ordine in cui appaiono in $\tau$.
+
+^75a8eb
 
 > **Lemma**
-> Sia $V' \subseteq V$, tale che $\vert V' \vert$ è **pari**.
+> Sia $V' \subseteq V$ un qualsiasi sottoinsieme pari di nodi, ovvero con $\vert V' \vert$ **pari**.
 > Sia $M$ un minimum cost perfect matching su $V'$.
-> Allora $cost(M) \leq OPT/2$ del TSP.
-> **Proof**:
-> Partiamo da un $\tau^*$ soluzione ottima del TSP, e di cost OPT.
-> Sia $\tau'$ un tour su $V'$ facendo shortcut su $\tau^*$.
-> Allora $cost(\tau') \leq cost(t^*)$.
+> Sia $OPT$ il valore di una soluzione ottima per il TSP metrico.
+> Allora $$\text{cost}(M) \leq OPT/2$$
 > 
-> Osserviamo che $\tau'$ è un ciclo di numero pari di archi che compre $V'$.
-> Se alterniamo gli archi di $\tau'$, troviamo due perfect matching $M_1, M_2$ di $V'$.
-> Osserviamo che $$cost(M_1) + cost(M_2) = cost(\tau')$$
-> Allora avremo che $$cost(M) \leq \min(cost(M_1), cost(M_2)) \leq \frac{1}{2}cost(\tau') \leq \frac{1}{2} OPT \; \; \square$$ 
+> **Proof**:
+> Consideriamo una generica **tour ottimo** $\tau^*$ per il TSP, di cost $OPT$.
+> 
+> ![](./img/note1-15.png)
+> Prendiamo ora un sottoinsieme $V'$ con un numero pari di nodi, e troviamo un tour $\tau'$.
+> 
+> ![](./img/note1-16.png)
+> 
+> Essendo in una **istanza metrica**, abbiamo rispettata la disuguaglianza triangolare, perciò $$\text{cost}(\tau') \leq \text{cost}(\tau^*)$$
+> Osserviamo che il tour/ciclo $\tau'$ su $V'$ può sempre essere decomposto in due **perfect matching** $M_1, M_2$ (questo perché $V'$ ha un numero pari di nodi).
+> Perciò avremo che $$\text{cost}(M_1) + \text{cost}(M_2) = \text{cost}(\tau')$$
+> Sia $M$ il **perfect matching di costo minimo** $M$ su $V'$, allora $$\text{cost}(M) \leq \min\lbrace \text{cost}(M_1), \text{cost}(M_2)\rbrace \leq \frac{1}{2}\text{cost}(\tau') \leq \frac{1}{2}\text{cost}(\tau^*) = \frac{1}{2} OPT \; \; \square$$ 
+
+^210459
 
 > **THM**
-> L'algoritmo ALG3 è $3/2$-apx.
+> L'algoritmo [[#^75a8eb|ALG3]] è $3/2$-approssimante per il TSP metrico.
 > **Proof**
-> $$cost(C) \leq cost(M) + cost(T) \leq \frac{1}{2}OPT + OPT = \frac{3}{2}OPT \;\; \square$$
+> Usando il [[#^210459|precedente lemma]] avremo che $$\text{cost}(C) \leq \text{cost}(\tau) = \text{cost}(M) + \text{cost}(T) \leq \frac{1}{2}OPT + OPT = \frac{3}{2}OPT \;\; \square$$
 
-==vedi esempio tight==
+### Tight Example
 
+![](./img/note1-17.png) ^19771a
+
+Abbiamo un numero $n$ **dispari di nodi** disposti come in [[#^19771a|figura]].
+Notare che i nodi nella fila in basso sono **pari** mentre quelli nella fila in alto **dispari**.
+
+Il minimum spanning tree $T$ in questo grafo è il cammino "a zig-zag" tra la fila in alto e quella in basto, di costo $n-1$.
+
+==da finire==
 
 ### State of the art
 1. $3/2$
