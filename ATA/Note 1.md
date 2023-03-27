@@ -126,29 +126,41 @@ Dato un grafo $G=(V,E)$ **decidere** se esiste un ciclo che copre tutti i nodi.
 
 ^db583b
 
+## Algoritmo 2-approssimante
 Dato quindi che è inapprocciabile anche l'approssimazione per il TSP, consideriamo le [[#^e43440|istance metriche]].
 Esse infatti sono computazionalmente **approcciabili** e **approssimabili**.
 
 > **ALG2** (istanza metrica)
-> 1. Trova un MST $T$ per $G$.
+> 1. Trova un MST (*minimum spanning tree*) $T$ per $G$.
 > 2. Raddoppia tutti gli archi di $T$ ottenendo un **grafo euleriano**.
 > 3. Trova un **tour** euleriano $\tau$ su questo grafo.
 > 4. Ritornaimo un ciclo emiltoniano $C$ che visita tutti i nodi di $G$ in ordine in cui appaiono in $\tau$.
 
 > **THM**
-> L'algoritmo è 2-approssimante.
+> L'algoritmo è 2-approssimante per il TSP metrico.
+> 
 > **Proof**:
-> $cost(T) \leq OPT$
-> $$cost(C) \leq cost(\tau) \leq 2 \cdot COST(T) \leq 2 \cdot OPT$$
+> Osserviamo che rimuovendo un arco dal TSP ottimo per la nostra istanza, otterremo un **albero**, il quale avrà ovviamente un costo peggiore di un MST.
+> Ovvero $$\text{cost}(T) \leq OPT$$
+> Perciò $$\text{cost}(C) \leq \text{cost}(\tau) \leq 2 \cdot \text{cost}(T) \leq 2 \cdot OPT \;\; \square$$
+
+### Tight Example
+
+![](./img/note1-11.png)
 
 
-==esempi tight==
+![](./img/note1-12.png)
+
+![](./img/note1-13.png)
+
+![](./img/note1-14.png)
 
 ```ad-note
 - un grafo ha un cammino euleriano se tutti i vertici hanno grado **pari**.
 - in ogni grafo non diretto, il numero di nodi di grado **dispari** è sempre **pari**.
 ```
 
+## Algoritmo (3/2)-approssimante
 
 > **ALG 3** (3/2-apx)
 > 1. Triva un MST $T$ di $G$.
