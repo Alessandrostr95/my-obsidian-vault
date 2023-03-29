@@ -85,6 +85,69 @@ FALSE &\text{altrimenti}
 > - è corretto con probabilità arbitrariamente costante se l'istanza è YES
 
 ----
-# Kernelization
+# 2k kernel per il Vertex Cover
+
+## Integer-LP formula per VC
+$$\text{minimize}\sum_{v \in V} x_v$$
+$$\text{s.t.} x_u + x_v \geq 1 \;\; \forall (u,v) \in E$$
+$$x_v \in \lbrace 0,1 \rbrace \;\; \forall v \in V$$
+
+Ora lo **rilassiamo** ponendo il vincolo $$x_v \geq 0 \;\; \forall v \in V$$
+
+Ricordiamo che $$OPT_f \leq OPT$$
+Sia $x$ una soluzione frazionaria
+- $$V_0 = \lbrace v \in V: x_v < 0.5 \rbrace$$
+- $$V_{0.5} = \lbrace v \in V: x_v = 0.5 \rbrace$$
+- $$V_1 = \lbrace v \in V: x_v > 0.5 \rbrace$$
+
+> **THM**
+> Esiste un minimum vertex cover $S$ di $G$ tale che $$V_1 \subseteq S \subseteq V_1 \cup V_{0.5}$$
+> Ovvero il min vertex cover $S$ contiene tutti i vertici di $V_1$ e forse qualcuno di $V_{0.5}$.
 
 
+> **Proof**
+> Sia $S^*$ un minimum vertex cover.
+> Poniamo $S = (S^* \setminus V_0) \cup V_1$.
+> Vogio dimostrare che $\vert S^* \vert = \vert S \vert$.
+> 
+> Dimostriamo prima che $S$ è un VC.
+> Osserviamo che tutti i nodi in $V_0$ hanno necessariamente un vicino in $V_1$.
+> 
+> Dimostriamo che $S$ è minimo.
+> Assumiamo per assurdo che $\vert S \vert > \vert S^* \vert$.
+> $$\underbrace{\vert S^* \cap V_0 \vert}_{B} < \underbrace{\vert V_1 \setminus S^* \vert}_{A}$$
+> Aggiungiamo quindi $+\epsilon$ a nodi di $B$ e $-\epsilon$ ai nodi di $A$.
+> $$\epsilon = \min{\lbrace \vert x_v - 0.5 \vert: v \in V_0 \cup V_1 \rbrace}$$
+> Sia $y$ una nuova soluizione frazionaria valida, t.c.
+> $$y_v \begin{cases}
+x_v - \epsilon &v \in A\\
+x_v + \epsilon &v \in B\\
+x_v &\text{altrimenti}
+\end{cases}$$
+> Si può dimostrare che:
+> - $y$ è una soluzione **strettamente migliore** di $x$
+> - $y$ è ammissibile
+> contraddicendo l'ipotesi di ottimalita di $S^*$.
+> 
+> La soluzione $y$ è strettamente migliore semplicemente perché **guadagno** un $\epsilon$ per ogni elemento di $B$ ma **perdo** un $\epsilon$ per ogni elemento di $A$, però stiamo assumendo che $B < A$.
+> ==vedi i casi==
+
+
+### Kernelizzazione di size 2k
+- troviamo una soluzione frazionaria $x$ **rilassata**
+- troviamo gli insiemi $V_0, V_{0.5}, V_1$.
+- Se $\sum_{v \in V} x_v > k$ allora $(G,k)$ è una istanza no (perché $OPT_f \leq OPT$).
+- Altrimenti, in maniera greedy prendiamo i nodi di $V_1$ e li mettiamo in un vertex cover. La nuova istanza sarà $$(G' = G \setminus (V_1 \cup V_0), k' = k - \vert V_1 \vert)$$
+
+> **THM** $k$-vertex cover ammette un kernel di $2k$ vertici
+> **Proof**
+> $(G,k)$ è un'istanza SI se e solo se $(G', k')$ è un'istanza SI
+> ==da finire==
+
+-----
+### Party Problem
+- **problem**: invitare le persone a un party
+- **maximize**: massimizzare il **fattore di divertimento**. Ogni dipendente ha un numero che indica quanto è divertente.
+- **vincolo**: tutti si devono divertire. Se inviti il boss diretto di una persona questa non si diverte più.
+
+==maximum weighted independente set==
