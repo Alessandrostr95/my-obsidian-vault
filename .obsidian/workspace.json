@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f57bd824e8408961",
+        "id": "24c0cf7263ceb101",
         "type": "tabs",
         "children": [
           {
-            "id": "0eefae9dcf484eda",
+            "id": "9e2bca9d8e7ffd02",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "148dba4fa2ff99bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ATA/Note 6.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 5.md",
+                "file": "ATA/Note 6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 5.md"
+                "file": "ATA/Note 6.md"
               }
             }
           },
@@ -131,10 +144,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "0eefae9dcf484eda",
+  "active": "148dba4fa2ff99bf",
   "lastOpenFiles": [
-    "ATA/Note 4.md",
     "ATA/Note 5.md",
+    "ATA/Note 6.md",
+    "ATA/Note 4.md",
     "ATA/Note 2.md",
     "ATA/img/note2-2.png",
     "ATA/Note 3.md",

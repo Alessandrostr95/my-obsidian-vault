@@ -119,7 +119,7 @@ Sia $x$ una soluzione frazionaria
 > Aggiungiamo quindi $+\epsilon$ a nodi di $B$ e $-\epsilon$ ai nodi di $A$.
 > $$\epsilon = \min{\lbrace \vert x_v - 0.5 \vert: v \in V_0 \cup V_1 \rbrace}$$
 > Sia $y$ una nuova soluizione frazionaria valida, t.c.
-> $$y_v \begin{cases}
+> $$y_v = \begin{cases}
 x_v - \epsilon &v \in A\\
 x_v + \epsilon &v \in B\\
 x_v &\text{altrimenti}
