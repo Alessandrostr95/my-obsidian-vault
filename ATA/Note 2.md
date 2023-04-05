@@ -140,6 +140,7 @@ Una possibile soluzione frazionale ottima è $x_v = 1/k$ per ogni $V$, ottenendo
 Facendo il **rounding** della soluzione otterremo una soluzione intera con valore $k \cdot n$.
 È facile vedere che una soluzione intera ottima che ha costo $n$ è quella in cui abbiamo $x_v = 1$ per ogni $v \in V_1$.
 
+-----------
 # Tecnica della Dualità
 Prendiamo un problema di LP in **froma standard** (tutte le variabili $\geq 0$ e tutti i vincoli $\geq$).
 
