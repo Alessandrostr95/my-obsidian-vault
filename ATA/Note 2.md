@@ -9,15 +9,17 @@ content:
 
 # Minimum Set Cover Problem
 - **Inptu**
-	- un universo $U$ di $n$ elementi.
+	- un universo $U = \lbrace e_1, ..., e_n \rbrace$ di $n$ elementi.
 	- una collezione di **sottoinsiemi** di $U$, $\mathcal{S} = \lbrace S_1, ..., S_k \rbrace$.
 	- ogni insieme $S$ ha un **costo positivo** $c(S)$.
 - **Feasible Solution**
 	- Una sottocollezione $\mathcal{C} \subseteq \mathcal{S}$ tale che ricopre tutto $U$. Ovvero $$U \equiv \bigcup_{S \in \mathcal{C}} S$$
-- **Measure**: minimizzare $\text{cost}(\mathcal{C})$, ovvero $$\text{minimize} = \sum_{S \in \mathcal{C}} c(S)$$
+- **Measure**: minimizzare $\text{cost}(\mathcal{C})$, ovvero $$\text{minimize} \sum_{S \in \mathcal{C}} c(S)$$
 Definiamo i seguenti concetti:
-- la **frequenza** di un oggetto $e$ è il numero di insiemi che lo contengono, ovvero $$\text{freq}(e) = \vert \lbrace S \in \mathcal{S} : e \in S \rbrace \vert$$
-- sia $f$ la **frequenza massima** $$f = \max_{e \in U} \text{freq}(e)$$ ^46c19e
+
+> La **frequenza** di un oggetto $e$ è il numero di insiemi che lo contengono, ovvero $$\text{freq}(e) = \vert \lbrace S \in \mathcal{S} : e \in S \rbrace \vert$$
+
+> Sia $f$ la **frequenza massima** $$f = \max_{e \in U} \text{freq}(e)$$ ^46c19e
 
 
 Possiamo rappresentare questo problema come un problema di **Programmazione Lineare Intera** (*Integer LP*).
@@ -29,16 +31,19 @@ $$\begin{align}
 \end{align}$$
 
 
+Tale problema è di Integer LP perché abbiamo il vincolo di interezza $$x_S \in \lbrace 0,1 \rbrace \;\; \forall S \in \mathcal{S}$$ ^501cd9
+
 # Tecnica del Roundig (LP-Relaxation)
 L'idea della tecnica del **Rounding** è la seguente:
-- Prendiamo il problema che ci interessa.
-- Lo modelliamo come *Integer LP*.
-- **Rilassiamo** il vincolo di **iterezza**.
-- Risolvo l'istanza rilassata reale (si può fare in tempo polinomiale).
-- Alla fine faccio il **rounding del risultato**.
+1. Prendiamo il problema che ci interessa.
+2. Lo modelliamo come un problema di *Integer LP*.
+3. **Rilassiamo** il vincolo di **iterezza**.
+4. Risolvo l'istanza rilassata reale (si può fare in tempo polinomiale).
+5. Alla fine faccio il **rounding del risultato**.
 
-Per esempio nel caso [[#Minimum Set Cover Problem]] possiamo sostituire il vincolo di interezza col vincolo $$x_S \geq 0 \land x_S \leq 1$$
+Per esempio nel caso [[#Minimum Set Cover Problem]] possiamo sostituire il [[#^501cd9|vincolo di interezza]] col vincolo $$x_S \geq 0 \land x_S \leq 1$$
 Osserviamo che il vincolo $x_S \leq 1$ è **ridondante**, perché per minimizzare non convieme mai avere $x_S \geq 1$.
+Ovvero presa una qualsiasi soluzione ammissibile con un $x_S \geq 1$ possiamo ottenere un'altra soluzione ammissibile di valore migliore, semplicemente ponendo $x_S = 1$.
 
 La nuova formalizzazione sarà quindi la seguente $$\begin{align}
 \text{minimize} &\sum_{S \in \mathcal{S}} c(S) \cdot x_S\\
@@ -49,9 +54,9 @@ La nuova formalizzazione sarà quindi la seguente $$\begin{align}
 
 Usa soluzione ammissibile per questo nuovo problema è detta anche **fractional set cover**.
 
-Sia $OPT_f$ una soluzione frazionale ammissibile per il set cover frazionario, e $OPT$ un set cover ottimo per l'istanza origiale (intera).
+Sia $OPT_f$ una **soluzione frazionale** ammissibile per il set cover frazionario, e $OPT$ un set cover ottimo per l'istanza origiale (intera).
 
-Avremo quindi che $$OPT_f \leq OPT$$ perché una soluzione ottima per l'istanza frazionaria è anche una soluzione per l'istanza intera (ma non è detto il contrario).
+Ovviamente è vero che $$OPT_f \leq OPT$$ perché una soluzione ottima per l'istanza intera è anche una soluzione per l'istanza frazionale (ma non è detto il contrario).
 
 ![](./img/note2-1.png)
 
@@ -64,7 +69,7 @@ Per risolvere un problema di programmazine lineare possiamo usare i seguenti alg
 ## Algoritmo f-approssimante per min-Set Cover
 
 > **ALG f-apx**
-> 1. trova una soluzione ottima per l'[[#^c454d6|istanza LP-rilassata]].
+> 1. Trova una soluzione ottima per l'[[#^c454d6|istanza LP-rilassata]].
 > 2. Includi nella soluzione tutti gli insiemi $S$ per i quali $x_S \geq 1/f$.
 
 > **TMH**
@@ -72,42 +77,68 @@ Per risolvere un problema di programmazine lineare possiamo usare i seguenti alg
 > 
 > **Proof**:
 > **La soluzione è ammissibile**.
-> Prendiamo un qualsiasi elemento $e$.
-> Per [[#^46c19e|definizione]] di $f$, avremo che $e$ sarà contenuto in **al più** $\leq f$ insiemi.
+> Prendiamo un qualsiasi elemento $e \in U$.
+> Per [[#^46c19e|definizione]] di $f$, avremo che $e$ sarà contenuto in **al più** $\leq f$ insiemi, ovvero $$\text{freq}(e) \leq f$$
 > <u>Sicuramente</u> $e$ è coperto nella soluzione **frazionaria**, perciò la somma degli $x_S$ che contengono $e$ fa **almeno** $\geq 1$.
+> Ovvero è rispettato il vincolo $$\sum_{S \in \mathcal{S} \;:\; e \in S} x_S \geq 1$$
 > 
-> Esempio: consideriamo la seguente istanza 
+> **Esempio**: consideriamo la seguente istanza 
 > 
 > ![](./img/note2-2.png)
 > 
-> Dato che $e \in S_1, S_2, S_3$, nella soluzione frazionaria *ottima* avevamo necessariamente che $$x_{S_1} + x_{S_2} + x_{S_3} \geq 1 \implies x_{S_i} \geq \frac{1}{3} = \frac{1}{\text{freq}(e)} \geq \frac{1}{f} \;\; i =1,2,3$$
-> Quindi almeno uno degli insiemi che contiene $e$ deve necessariamente essere incluso nella soluzione (e questo vale per qualsiasi elemento $e$ di qualsiasi istanza).
+> Dato che $e \in S_1, S_2, S_3$, allora in una soluzione frazionaria ottima deve essere rispettato il vincolo $$x_{S_1} + x_{S_2} + x_{S_3} \geq 1$$
+> Ma se la somma di queste tre variabili fa almeno 1, allora **almeno** una di esse avrà avalore **almeno** $1/3$, ovvero 1 diviso $\text{freq}(e)$.
+> $$x_{S_1} + x_{S_2} + x_{S_3} \geq 1 \implies \exists i \in \lbrace1,2,3\rbrace \;:\; x_{S_i} \geq \frac{1}{3} = \frac{1}{\text{freq}(e)} \geq \frac{1}{f} \;\;$$
+> Per come costruiamo la soluzione intera, almeno uno tra $S_1,S_2,S_3$ verrà inserito nella soluzione (perché $x_{S_i} \geq 1/f$), e questo è vero per ogni $e \in U$.
+> Quindi tutti gli elementi verrano coperti dalla soluzione.
 > 
 > **La soluzione è f-approssimazione**.
-> Basta osservare che la nuova soluzione è $\leq f \cdot OPT_f \leq f \cdot OPT$ $\square$.
+> Basta osservare che la nuova soluzione ha valore $\leq f \cdot OPT_f \leq f \cdot OPT$ $\square$.
+
+
+## Weighted Vertex Cover Problem
+Osservare che il **Vertex Cover** è un caso particolare di **Set Cover**, dove:
+- gli archi sono gli elementi da coprire.
+- i nodi rappresentano gli insiemi di $\mathcal{S}$. Ovvero un nodo $v$ rappresenta l'insieme $S_v$ di tutti i suoi archi incidenti.
+
+Un altro caso più generale (e interessante), è il **Weighted Vertex Cover**.
+- **Inptu**
+	- un grafo non diretto $G = (V,E)$
+	- una funzione di costo sui <u>nodi</u> $c: V \to \mathbb{R}^+$
+- **Feasible Solution**
+	- Un sottoinsieme $U \subseteq V$ di nodi tale che ricopre tutti gli archi, ovver $$\forall (u,v) \in E \;\;\left[ u \in U \lor v \in U \right]$$
+- **Measure**: minimizzare $\text{cost}(U)$, ovvero $$\text{minimize} \sum_{v \in U} c(v)$$
 
 ```ad-note
-Rircordiamo che il Vertex Cover è un caso di Set Cover:
-- i nodi sono gli insiemi $S$
-- gli archi sono gli elementi $e \in U$.
+La frequenza $f$ di ogni elemento $e \in E$ è sempre $2$.
 ```
 
-==vedi weighted Vertex Cover==
+```ad-info
+Dato che il [[#Weighted Vertex Cover Problem]] è un caso particolare di [[#Minimum Set Cover Problem]], allora l'[[#Algoritmo f-approssimante per min-Set Cover|algoritmo f-approssimante]] è anche un algoritmo 2-approssimante per Weighted Vertex Cover.
+```
 
-### Tight Example
+## Tight Example
 La $f$-approssimazione è tight per l'algoritmo visto (non si può analizzare meglio).
 
-Osservare che Set Cover è equivalente al Vertex Cover su **ipergrafo**.
-Abbiamo che:
-- gli insiemi $S$ sono i nodi.
-- gli elementi $e$ sono gli **iperarchi**.
+Pensiamo a un'[[#Minimum Set Cover Problem|istanza di Set Cover]] come un **ipergrafo**, dove:
+- gli elementi corrispondono a **iperarchi**, ovvero un iperarco è un sottinsieme  $X \in \mathscr{P}(V)$
+- gli insiemi $S_1, S_2, ...$ sono i nodi.
 - un vertice copre un iperarco $X \subseteq V$ se $v \in X$.
 
-L'istanza è la seguente.
-- abbiamo una partizione $V_1, ..., V_k$ ciascuno con $n$ nodi.
-- abbiamo $n^k$ iperarchi, ognuno per ogni $k$-upla di nodi tra le partizione.
+L'istanza di esempio è la seguente.
 
-==da finire==
+Siano $V_1, ..., V_k$ dei sottoinsiemi di $n$ elementi ciascuno.
+L'ipergrafo corrispondente è tale che:
+- abbiamo che $V$ è **partizionato** in $V_1, ..., V_k$, ognuno composto da $n$ nodi.
+- abbiamo $n^k$ iperarchi, ognuno per ogni $k$-**upla** di nodi tra le partizione.
+- ogni nodo ha costo 1.
+
+Osserviamo che ogni iperarco $X$ (o elemento) è incidente ad **esattamente** $k$ nodi, perciò avremo **frequenza massima** esattamente $f = k$.
+
+Una possibile soluzione frazionale ottima è $x_v = 1/k$ per ogni $V$, ottenendo come valore $OPT_f = n$.
+
+Facendo il **rounding** della soluzione otterremo una soluzione intera con valore $k \cdot n$.
+È facile vedere che una soluzione intera ottima che ha costo $n$ è quella in cui abbiamo $x_v = 1$ per ogni $v \in V_1$.
 
 # Tecnica della Dualità
 Prendiamo un problema di LP in **froma standard** (tutte le variabili $\geq 0$ e tutti i vincoli $\geq$).
