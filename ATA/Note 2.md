@@ -144,36 +144,50 @@ Facendo il **rounding** della soluzione otterremo una soluzione intera con valor
 # Tecnica della Dualità
 Prendiamo un problema di LP in **froma standard** (tutte le variabili $\geq 0$ e tutti i vincoli $\geq$).
 
-$$\text{minimize} \;\; z = 7x_1 + x_2 + 5x_3$$
-$$y_1 = x_1 - x_2 + 3x_3 \geq 10$$
-$$y_2 = 5x_1 +2x_2 - 3x_3 \geq 6$$
-$$x_1, x_2, x_3 \geq 0$$
+$$\begin{align}
+\text{minimize } z &= 7x_1 + x_2 +5x_3\\
+y_1 &= x_1 - x_2 + 3x_3 \geq 10\\
+y_2 &= 5x_1 + 2x_2 - x_3 \geq 6\\
+&x_1, x_2, x_3 \geq 0
+\end{align}$$
 
-Sia $z$ l'ottimo di tale problema.
+Sia $z$ una soluzione ottima a tale problema di LP.
+
 Come posso stabilire un **upperbound** per $z$?
 Come posso dire che $z \leq \alpha$?
 
-Per esempio basta dire che $\alpha$ è una **soluzione ammissibile**.
-Infatti essendo $z$ sia ammissibile che ottima, allora certamente $z \leq \alpha$.
+Per esempio, consideriamo una generica **soluzione ammissibile** $x = (2,1,3)$.
+Il valore di $x$ è $7 \cdot 2 + 1 \cdot 1 + 3 \cdot 5 = 30$.
+Dato che $z$ è ottima, allora certamente avremo che $z \leq 30$.
 
-Assodato questo, mi chiedo se $z \geq \alpha$?
-Perché $\geq \alpha$: così ho uno **schema di lowerbound**.
+Come posso invece dire che $z \geq \alpha$?
+Porsi questa domanda, è utile per definire uno [[Note 0#^4eea88|schema di lower bound]].
 
+Come fare invece per trovare una soluzione di valore $= \alpha$?
+Questo modo non è pratico, perché sarebbe equivalente a trovare una soluzione ottima.
+È possibile fare questo sfruttando una **soluzione ammissibile** per il **problema duale**.
 
-==Per dire questo, mi basta trovare una **soluzione ammissibile** per il **problema duale**.==
+$$\begin{align}
+\text{maximize } w &= 10y_1 + 6y_2\\
+x_1 &= y_1 + 5y_2 \leq 7\\
+x_2 &= -y_1 + 2y_2 \leq 1\\
+x_3 &= 3y_1 - y_2 \leq 5\\
+&y_1, y_2 \geq 0
+\end{align}$$
 
-$$\text{maximize} \;\; 10y_1 + 6y_2$$
-$$y_1 + 5y_2 \leq 7$$
-$$-y_1 + 2y_2 \leq 1$$
-$$3y_1 - y_2 \leq 5$$
-$$y_1,y_2 \geq 0$$
-
-
-==vedi immagine==
+Si può dimostrare che le soluzioni ottime del primale e del duale hanno lo stesso valore ([[#^23547e|vedi dopo]]).
+Perciò:
+- sia $t$ una generica soluzione ammissibile del duale
+- sia $w$ una soluzione ottima del duale
+- sia $z$ una soluzione ottima del primale
+Allora avremo che $$t \leq w = z$$
+![](./img/note2-3.png)
 
 > **THM (LP-duality theorem)**
 > Il programma primale ha un **ottimo** finito iff il programma duale ha un **ottimo finito**, e inoltre i loro valori coincidono.
 > $$\sum_{j=1}^{n}c_j x_j = \sum_{i=1}^{m}b_i y_i$$
+
+^23547e
 
 
 > **Weak LP-duality theorem**

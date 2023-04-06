@@ -131,11 +131,15 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "fdf9ac5b7958d2ad",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
+    "ATA/img/note2-3.png",
     "ATA/Note 1.md",
+    "ATA/Note 0.md",
     "ATA/Note 2.md",
+    "NLP/Dependency Parsing.md",
+    "NLP/0 - Natural Language Processing.md",
+    "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/Note 7.md",
     "ATA/Note 5.md",
     "ATA/Note 6.md",
@@ -159,7 +163,6 @@
     "ATA/img",
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
-    "ATA/Note 0.md",
     "ATA",
     "IR/Beyond Binary Relevance.md",
     "IR/0 - Information Retrieval.md",
@@ -168,8 +171,6 @@
     "NLP/Grammatiche Formali.md",
     "NLP/Word2Vec.md",
     "NLP/Semantic Role Labeling.md",
-    "NLP/0 - Natural Language Processing.md",
-    "NLP/The WSD Algorithm - Contextual Embeddings.md",
-    "NLP/WordNet.md"
+    "NLP/The WSD Algorithm - Contextual Embeddings.md"
   ]
 }

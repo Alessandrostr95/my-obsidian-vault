@@ -43,6 +43,8 @@ title: Lower Bound Schema
 La dimensione di ogni matching massimale è un **lowerbound** alla soluzione di qualsiasi VC **ottimo**.
 ```
 
+^4eea88
+
 
 ### Questions
 1. Posso sempre **migliorare** il fattore di approssimazione di un **algoritmo fissato** facendo un'analisi migliore?
