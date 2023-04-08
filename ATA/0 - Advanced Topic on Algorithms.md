@@ -35,4 +35,8 @@
 
 ### Parametrized Algorithms
 - [[Note 4]]
+- [[Note 5]]
+- [[Note 6]]
+- [[Note 7]]
 
+### Algoritmi per Massive Data

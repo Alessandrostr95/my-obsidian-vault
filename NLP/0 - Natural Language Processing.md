@@ -29,6 +29,7 @@ tags:
 - [[NLP/Lecture 9|Lecture 9]]
 - [[NLP/Lecture 10|Lecture 10]]
 - [[NLP/Lecture 11|Lecture 11]]
+- [[NLP/Lecture 12|Lecture 12]]
 
 -----
 # Contents

@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "24c0cf7263ceb101",
+        "id": "a1eb4ebcb326b1ed",
         "type": "tabs",
         "children": [
           {
-            "id": "fdf9ac5b7958d2ad",
+            "id": "651cdb70177787ac",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ATA/Note 2.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ATA/Note 2.md"
-              }
+              "state": {}
             }
           },
           {
@@ -131,14 +124,23 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "651cdb70177787ac",
   "lastOpenFiles": [
-    "ATA/img/note2-3.png",
-    "ATA/Note 1.md",
+    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
+    "IC/Lecture 1.md",
+    "IC/Lecture 2.md",
+    "IC/Lecture 3.md",
+    "IC/Lecture 4.md",
+    "NLP/0 - Natural Language Processing.md",
+    "NLP/Lecture 12.md",
+    "ATA/0 - Advanced Topic on Algorithms.md",
+    "root.md",
     "ATA/Note 0.md",
     "ATA/Note 2.md",
+    "ATA/img/note2-4.png",
+    "ATA/img/note2-3.png",
+    "ATA/Note 1.md",
     "NLP/Dependency Parsing.md",
-    "NLP/0 - Natural Language Processing.md",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/Note 7.md",
     "ATA/Note 5.md",
@@ -149,7 +151,6 @@
     "BWA/1 - Introduction.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "BWA/2 - Instance-Optimal Geometric Algorithms.md",
-    "ATA/0 - Advanced Topic on Algorithms.md",
     "ATA/img/note2-1.png",
     "ATA/img/note1-17.png",
     "ATA/img/note1-16.png",
@@ -157,20 +158,12 @@
     "ATA/img/note1-14.png",
     "ATA/img/note1-13.png",
     "ATA/img/note1-12.png",
-    "ATA/img/note1-11.png",
-    "ATA/img/note1-10.png",
-    "root.md",
     "ATA/img",
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
     "ATA",
     "IR/Beyond Binary Relevance.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Rank-Based Measures.md",
-    "NLP/CYK.md",
-    "NLP/Grammatiche Formali.md",
-    "NLP/Word2Vec.md",
-    "NLP/Semantic Role Labeling.md",
-    "NLP/The WSD Algorithm - Contextual Embeddings.md"
+    "IR/Rank-Based Measures.md"
   ]
 }

@@ -85,7 +85,7 @@ Questa è una **generalizzazione** del VC dove:
 - i sottonsiemi $S$ sono gli archi incidenti a un nodo.
 
 > **Greedy Alg**
-> Ad ogni istante selezione il sottoinsieme $S$ che **minimizza** la **cost-effectiveness**.
+> Ad ogni istante selezionare il sottoinsieme $S$ che **minimizza** la **cost-effectiveness**.
 > 
 > Sia $C \subset U$ gli oggetti già coperti.
 > - **cost-effectiveness** di $S$ = $c(S) / (S \setminus C)$ (il rapporto tra il costo di $S$ e quanti nuovi oggetti esso ricopre).

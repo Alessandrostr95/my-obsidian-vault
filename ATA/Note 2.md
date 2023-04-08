@@ -56,7 +56,7 @@ Usa soluzione ammissibile per questo nuovo problema è detta anche **fractional 
 
 Sia $OPT_f$ una **soluzione frazionale** ammissibile per il set cover frazionario, e $OPT$ un set cover ottimo per l'istanza origiale (intera).
 
-Ovviamente è vero che $$OPT_f \leq OPT$$ perché una soluzione ottima per l'istanza intera è anche una soluzione per l'istanza frazionale (ma non è detto il contrario).
+Ovviamente è vero che $$OPT_f \leq OPT$$ perché una soluzione ottima per l'istanza intera è anche una soluzione per l'istanza frazionale (ma non è detto il contrario). ^84fc1f
 
 ![](./img/note2-1.png)
 
@@ -183,29 +183,64 @@ Perciò:
 Allora avremo che $$t \leq w = z$$
 ![](./img/note2-3.png)
 
+> **Problema Primale**
+> I problemi primali sono della forma
+> $$\begin{align}
+\text{minimize } &\sum_{j=1}^{n} c_j x_j\\
+\text{subject to } &\sum_{j=1}^{n} a_{i,j} x_j \geq b_i \;\; \forall i = 1,...,m\\
+&x_j \geq 0 \;\; \forall j=1,..., n
+\end{align}$$
+
+> **Problema Duale**
+> I problemi duali sono della forma
+> $$\begin{align}
+\text{maximize } &\sum_{i=1}^{m} b_i y_i\\
+\text{subject to } &\sum_{i=1}^{m} a_{i,j} y_i \leq c_j \;\; \forall j = 1,...,n\\
+&y_i \geq 0 \;\; \forall i=1,...,m
+\end{align}$$
+
+
 > **THM (LP-duality theorem)**
-> Il programma primale ha un **ottimo** finito iff il programma duale ha un **ottimo finito**, e inoltre i loro valori coincidono.
+> Il programma primale ha un **ottimo** finito <u>se e solo se</u> il suo duale ha un **ottimo finito**.
+> Inoltre, se $x = (x_1,...,x_n)$ e $y=(y_1,...,y_m)$ sono le due soluzioni **ottime** dei problemi primale e duale rispettivamente, allora concidono nel valore
 > $$\sum_{j=1}^{n}c_j x_j = \sum_{i=1}^{m}b_i y_i$$
 
 ^23547e
 
 
 > **Weak LP-duality theorem**
+> Siano $x = (x_1,...,x_n)$ e $y=(y_1,...,y_m)$ due soluzioni **ammissibili** dei problemi primale e duale rispettivamente, allora è vero che
 > $$\sum_{j=1}^{n}c_j x_j \geq \sum_{i=1}^{m}b_i y_i$$
+> 
+> **Proof**
+> Dato che le due soluzioni sono ammissibili, andiamo a sostituire $c_j$ e $b_i$ opportunamente (a seconda dei vincoli lineari).
+> $$\begin{align}
+\sum_{j=1}^{n} c_j x_j
+&\geq \sum_{j=1}^{n} \left[ \sum_{i=1}^{m} a_{i,j} y_i \right]x_j\\
+&\geq \sum_{i=1}^{m} \left[ \sum_{j=1}^{n} a_{i,j} x_j \right]y_j\\
+&\geq \sum_{i=1}^{m} b_iy_i \;\; \square
+\end{align}$$
 
+^a52246
+
+---------
 # Dual-Fitting
-Iniziamo con l'enuncirare il **duale** del set cover in LP-rilassato.
+Iniziamo col definire il **duale** del [[#Minimum Set Cover Problem]] in froma [[#Tecnica del Roundig (LP-Relaxation)|rilassata]].
 Il duale è
-$$\text{maximize} \;\; \sum_{e \in U} y_e$$
-$$\text{s.t.} \;\; \sum_{e: e \in S} y_e \leq \text{cost}(S) \;\; \forall S \in \mathcal{S}$$
-$$y_e \geq 0 \;\; \forall e \in U$$
 
+$$\begin{align}
+\text{maximize} &\sum_{e \in U} y_e\\
+\text{subject to} &\sum_{e \in S} y_e \leq c(S) &\forall S \in \mathcal{S}\\
+& y_e \geq 0 &\forall e \in U
+\end{align}$$
 
-Il duale in questo caso consiste nel **packing** degli oggetti:
-- vogliamo "mettere" più soldi possibili sugli oggetti $e \in U$.
-- però non possiamo superare la "capienza" degli insiemi che contengono gli elementi (fare **overpacking**)
+Possiamo vedere al problema duale come al **packing** degli oggetti di $U$, ovvero:
+- vogliamo *"mettere"* più soldi possibili sugli oggetti $e \in U$.
+- però non possiamo superare la *"capienza"* degli insiemi che contengono gli elementi (fare **overpacking**)
 
-Osserviamo quindi che, ogni soluzione ammissibile al duale sarà un lowerbound ad $OPT_f$, il quale è un lowerbound a $OPT$.
+Grazie al [[#^a52246|Weak LP-duality theorem]] ogni soluzione <u>ammissibile</u> al duale rilassato sarà un **lowerbound** all'ottimo rilassato del primale $OPT_f$, il quale è un [[#^84fc1f|lowerbound]] all'ottimo $OPT$.
+
+![](./img/note2-4.png)
 
 Analiziamo ora il [[Note 0#^489290|l'algoritmo greedy]] per min SetCover.
 
