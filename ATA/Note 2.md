@@ -242,24 +242,33 @@ Grazie al [[#^a52246|Weak LP-duality theorem]] ogni soluzione <u>ammissibile</u>
 
 ![](./img/note2-4.png)
 
-Analiziamo ora il [[Note 0#^489290|l'algoritmo greedy]] per min SetCover.
+Ricordiamo [[Note 0#^489290|l'algoritmo greedy]] per min SetCover, visto in [[Note 0]]. 
+
+![](./img/note2-5.png)
+
+Da tale solizione, ricaviamo ora una **soluzione ammissibile** per il duale come segue
+$$\forall e \in U \;\; y_e := \frac{\text{price}(e)}{H_n}$$ dove $H_n$ è l'$n$-esimo valore della serie armonica. ^5300bd
 
 > **Lemma**
-> Sia $y$ una **soluzione ammissibile** per il primale.
-> Definiamo quindi $\tilde{y} = y/H_n$.
-> Allora $\tilde{y}$ è una soluzione ammissibile per il duale.
+> La soluzione $\mathbf{y}$ definita [[#^5300bd|sopra]] è una **soluzione ammissibile** per il problema duale.
 
 > **Proof**
-> Basta dimostrare che nessun insieme è **overpacked** dagli elementi di $\tilde{y}$.
-> Sia $S$ un insieme di $k$ elementi, e consideriamo i suoi elementi $e_1, ..., e_k$ nell'ordine in cui l'algoritmo greedy li copre.
+> Basta dimostrare che nessun insieme $S \in \mathcal{S}$ è **overpacked** dagli elementi di $\mathbf{y}$.
 > 
-> Prendiamo l'elemento $e_i$ coperto per $i$-esimo in $S$.
-> In quel momento, in $S$ c'erano **almeno** $\geq k-i+1$ elementi non coperti.
+> Sia $S$ un qualsiasi insieme di $k$ elementi, e consideriamo i suoi elementi $e_1, ..., e_k$ nell'<u>ordine in cui l'algoritmo greedy li copre</u>. Ovvero prima viene coperto $e_1$ poi $e_2$, ecc...
+> 
+> Prendiamo l'elemento $e_i$ coperto per $i$-esimo.
+> In quel momento, in $S$ c'erano **almeno** $\geq k-i+1$ elementi **non coperti**.
 > 
 > $S$ può coprire $e_i$ ad un prezzo in media di **al più** $\leq \text{cost}(S)/(k-i+1)$.
-> Per via della politica greedy, noi abbiamo che $$\tilde{y}_{e_i} = \text{price}(e_i) \leq \text{cost}(S)/(k-i+1)$$
-> Perciò $$y_{e_i} \leq \frac{1}{H_n}\frac{\text{cost}(S)}{(k-i+1)}$$
-> In conclusione $$\sum_{e_i} y_{e_i} \leq \frac{OPT}{H_n} \;\; \square$$
+> Per via della politica greedy, noi abbiamo che $$y_{e_i} = \frac{\text{price}(e_i)}{H_n} =  \frac{1}{H_n}\frac{c(S)}{\vert S \setminus C \vert} \leq \frac{1}{H_n}\frac{c(S)}{(k-i+1)}$$
+> Applicando questa disuguaglianza a tutti gli elementi di $S$ avremo che $$\sum_{e_i \in S} y_{e_i} \leq \frac{c(S)}{H_n} \sum_{i=1}^{k}\frac{1}{i} \leq \underbrace{\frac{H_k}{H_n}}_{\leq 1} c(S) \leq c(S)$$ ovvero $S$ non è overpacked $\square$.
 
 
-==da finire==
+Analiziamo ora il fattore di approssimazione dell'[[Note 0#^489290|algoritmo greedy]] per min SetCover, sfruttando però la [[#Tecnica della Dualità]].
+
+> **THM**
+> L'[[Note 0#^489290|algoritmo greedy]] per il min SetCover ha un fattore di approssimazione di $H_n$.
+> 
+> **Proof**
+> Sia $\mathbf{y}$ una generica soluzione ammissibile per il problema duale. Allora $$\text{costo del cover} = \sum_{e \in U} \text{price}(e) = H_n \sum_{e \in U} y_e \leq H_n \cdot OPT_f \leq H_n \cdot OPT \;\; \square$$
