@@ -7,60 +7,73 @@ content:
   - dual
 ---
 
-# Tecnica Duale
-Idea:
-- modelliamo il problema come LP intera.
-- lo rilassiamo.
+# Schema Primale-Duale
+Un'idea intuitiva del **primal-dual schema** è la seguente:
+- Iniziamo con:
+	- una soluzione **non ammissibile** del problema **primale intero**.
+	- una soluzione **ammissibile** del suo **duale**.
+- Iterativamente:
+	- **miglioriamo** la soluzione duale.
+	- **miglioriamo** l'ammissibilità della soluzione primale.
+	- finché non otteniamo una soluzione primale **ammissibile**.
 
-
-Iniziamo con:
-- una soluzione **ammissibile** per il duale
-- prendiamo l'equivalente soluzione prima, che possibilmente non è ammissibile.
+Usiamo quindi il valore della soluzione duale come lowerbound al valore del primale, per garantire un fattore di approssimazione.
 
 ## Minimum Set Cover
-Esempio [[ATA/Note 2#Minimum Set Cover Problem|Minimum Set Cover]].
+Riconsideriamo il problema del [[ATA/Note 2#Minimum Set Cover Problem|Minimum Set Cover]].
 
-- **Primale** min SetCover (rilassato) (problema di covering)
-$$\text{minimize} \sum_{S \in \mathcal{S}} c(S) \cdot x_S$$
-$$\text{subject to} \;\; \sum_{S: e \in S} x_S \geq 1 \;\; \forall e \in U$$
-$$x_S \geq 0 \;\; \forall S \in \mathcal{S}$$
+La sua forma **primale intera** è
+$$\begin{align}
+\text{minimize} &\sum_{S \in \mathcal{S}} c(S) \cdot x_S\\
+\text{subject to} &\sum_{S: e \in S} x_S \geq 1 &\forall e \in U\\
+& x_S \in \lbrace 0,1 \rbrace &\forall S \in \mathcal{S}
+\end{align}$$
+La sua forma [[ATA/Note 2#Tecnica del Roundig (LP-Relaxation)|rilassata]] è invece
+$$\begin{align}
+\text{minimize} &\sum_{S \in \mathcal{S}} c(S) \cdot x_S\\
+\text{subject to} &\sum_{S: e \in S} x_S \geq 1 &\forall e \in U\\
+& x_S \geq 0 &\forall S \in \mathcal{S}
+\end{align}$$
+Infine la forma **duale rilassata** (ovvero il problema del [[ATA/Note 2#^86d69d|packing]]) è
+$$\begin{align}
+\text{maximize} &\sum_{e \in U} y_e\\
+\text{subject to} &\sum_{e \in S} y_e \leq c(S) &\forall S \in \mathcal{S}\\
+& y_e \geq 0 &\forall e \in U
+\end{align}$$
 
-- **Duale** (problema di packing)
-$$\text{maximize} \;\; \sum_{e \in U} y_e$$
-$$\text{s.t.} \;\; \sum_{e: e \in S} y_e \leq \text{cost}(S) \;\; \forall S \in \mathcal{S}$$
-$$y_e \geq 0 \;\; \forall e \in U$$
-
-
-Data una soluzione duale $y$, noi diciamo che un insieme $S$ è **tight** se $\sum_{e \in S} y_e = c(S)$ (abbiamo riempito tutto $S$).
+## Algoritmo f-approssimante
+Data una soluzione duale $y$, diciamo che un insieme $S$ è **tight** per la soluzione $y$ se $$\sum_{e \in S} y_e = c(S)$$ (abbiamo riempito tutto $S$ con i *"soldi dati"* ai suoi elementi).
 
 **Idea**: prendiamo i soli insiemi tight.
 
-> **ALG1**
+> **ALG1 (f-approssimante)** 
 > 1. Inizializza $x = 0, \;\; y = 0$.
 > 2. Finché non ho un cover, prendi un qualsiasi elemento $e$ **non coperto**.
 > 3. Alzo il valore $y_e$ finché non rendo tight un insieme $S$ che lo contiene.
-> 4. Prendi gli insiemi diventati tight grazie ad $e$, li toglo e li aggiungo nella soluzione $x$. (ovvero $x_S = 1$).
+> 4. Prendi gli insiemi diventati tight grazie ad $e$, li toglo e li aggiungo nella soluzione $x$. (ovvero pongo $x_S = 1$).
 > 5. Ritorno $x$.
 
+==vedi esempio slides==
 
 > **THM**
-> L'**ALG1** è una $f$-approssimazione.
+> L'**ALG1** è una $f$-approssimazione per il [[ATA/Note 2#Minimum Set Cover Problem|min Set Cover]].
 > 
 > **Proof**:
-> Sicuramente $x$ è una soluzione ammissibile.
-> Affermiamo che $$\sum_{S \in \mathcal{S}}c(s) x_s \leq f \sum_{e \in U} y_e$$
-> Pensiamo a $f \sum_{e \in U} y_e$ come dei **soldi** che possiamo spendere per comprare la soluzione ammissibile $x$.
-> Basta dimostrare che tali soldi sono sufficienti per comprare $x$.
+> Sicuramente $x$ è una soluzione ammissibile, in quanto per costruzione dell'algoritmo iteriamo finché non abbiamo ottenuto un cover.
+> 
+> Adesso affermiamo che $$\sum_{S \in \mathcal{S}}c(s) \cdot x_s \leq f \sum_{e \in U} y_e$$
+> > **Idea**: pensiamo a $f \sum_{e \in U} y_e$ come dei **soldi** che possiamo spendere per comprare la soluzione ammissibile $x$.
+> > Basta dimostrare che tali soldi sono sufficienti per comprare $x$.
 > 
 > Per ogni elemento $e$ distribuiamo $f \cdot y_e$ soldi.
-> Dopodiché l'elemento $e$ paga $y_e$ soldi per ogni insieme $S$ nella soluzione (dove $x_S = 1$ t.c. $e \in S$).
+> Dopodiché l'elemento $e$ paga $y_e$ soldi per ogni insieme $S$ nella soluzione $x$ che lo constiene (ovvero dove $x_S = 1$ t.c. $e \in S$).
 > Dato che la freqeunza di $e$ è **al più** $\leq f$, $e$ ha sempre abbastanza soldi per pagare i suoi insiemi che lo contengono.
 > 
-> Dato che ogni insieme $S$ è **tight**, allora $S$ sarà sempre pagato per intero dai suoi elementi.
+> Inoltre dato che ogni insieme $S$ inserito nella soluzione è **tight**, allora $S$ sarà sempre pagato per intero dai suoi elementi.
 > 
 > In fine dato che $y$ è ammissibile, allora $\text{cost}(y) \leq \text{OPT}$ $\square$.
 
-
+### Esempio tight
 
 ==vedi esempio tight==
 
@@ -68,8 +81,8 @@ Data una soluzione duale $y$, noi diciamo che un insieme $S$ è **tight** se $\s
 Osservare che in questo caso si usa la LP **solo** per l'analisi, ma non per la risoluzione.
 ```
 
-
-## Steiner Forset
+---------
+# Steiner Forset
 - **Input**:
 	- $G(V,E, c \geq 0)$
 	- una collezione di **sottoinsiemi disgiunti** $S_1,...,S_k \subseteq V$

@@ -234,7 +234,7 @@ $$\begin{align}
 & y_e \geq 0 &\forall e \in U
 \end{align}$$
 
-Possiamo vedere al problema duale come al **packing** degli oggetti di $U$, ovvero:
+Possiamo vedere al problema duale come al **packing** degli oggetti di $U$, ovvero: ^86d69d
 - vogliamo *"mettere"* più soldi possibili sugli oggetti $e \in U$.
 - però non possiamo superare la *"capienza"* degli insiemi che contengono gli elementi (fare **overpacking**)
 

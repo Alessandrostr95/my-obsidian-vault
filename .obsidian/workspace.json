@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "ATA/Note 3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "36a5b173dd7cdf03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "ATA/Note 2.md",
                 "mode": "source",
                 "source": false
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 2.md",
+                "file": "ATA/Note 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 2.md"
+                "file": "ATA/Note 3.md"
               }
             }
           },
@@ -133,11 +145,11 @@
   },
   "active": "651cdb70177787ac",
   "lastOpenFiles": [
-    "ATA/Note 0.md",
     "ATA/Note 2.md",
+    "ATA/Note 3.md",
+    "ATA/Note 0.md",
     "ATA/img/note2-5.png",
     "ATA/Note 4.md",
-    "ATA/Note 3.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "IC/Lecture 1.md",
     "IC/Lecture 2.md",
