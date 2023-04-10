@@ -53,6 +53,8 @@ Data una soluzione duale $y$, diciamo che un insieme $S$ è **tight** per la sol
 > 4. Prendi gli insiemi diventati tight grazie ad $e$, li toglo e li aggiungo nella soluzione $x$. (ovvero pongo $x_S = 1$).
 > 5. Ritorno $x$.
 
+^04612f
+
 ==vedi esempio slides==
 
 > **THM**
@@ -75,7 +77,13 @@ Data una soluzione duale $y$, diciamo che un insieme $S$ è **tight** per la sol
 
 ### Esempio tight
 
-==vedi esempio tight==
+![](./img/note3-1.png)
+
+Supponiamo che l'[[#^04612f|algoritmo f-approssimante]] consideri per primo l'elemento $e_n$.
+La variabile $y_{e_n}$ verrà alzata fino ad $1$, rendendo tight tutti gli $n-1$ isniemi di valore $1$.
+Dopodiché, dato che $e_{n+1}$ è rimasto scoperto, verrà posto $y_{e_{n+1}} = \varepsilon$, ottenendo una soluzione di valore $n-1+\varepsilon$.
+
+Ovviamente la soluzione ottima è qulla di costo $1 + \varepsilon$.
 
 ```ad-note
 Osservare che in questo caso si usa la LP **solo** per l'analisi, ma non per la risoluzione.
@@ -84,57 +92,65 @@ Osservare che in questo caso si usa la LP **solo** per l'analisi, ma non per la 
 ---------
 # Steiner Forset
 - **Input**:
-	- $G(V,E, c \geq 0)$
-	- una collezione di **sottoinsiemi disgiunti** $S_1,...,S_k \subseteq V$
+	- un grafo non diretto con costi non negativi, $G(V,E, c \geq 0)$.
+	- una collezione di **sottoinsiemi disgiunti** $S_1,...,S_k \subseteq V$.
 - **Feasible Solution**
-	- una foresta $F$ t.c. per ogni $S_i$ abbiamo uno seiner tree $T_i$
-- **Misura** $$\text{minimze cost}(F) = \sum_{e \in F} c(e)$$
+	- una foresta $F$ tale che per ogni coppia di nodi $u,v$ appartenente ad uno stesso $S_i$, essi risultano essere **connessi**
+- **Misura**: $$\text{minimze cost}(F) = \sum_{e \in E(F)} c(e)$$
 
+![](./img/note3-2.png)
 
-==vedi esempio==
-
+![](./img/note3-3.png)
 
 ```ad-note
-Possiamo riportare tale problema ad una **istanza metrica**:
-- $G$ diventa completo.
-- gli archi rispettano la disuguaglianza triangolare.
+Possiamo ricondure tale problema ad una **istanza metrica**, dove:
+- $G$ diventa **completo**.
+- gli archi rispettano la **disuguaglianza triangolare**.
 ```
 
-
-Introduciamo una *funzione di connettività* **connectivity requirement funcito** $r$ tale che
+Rappresentiamo una istanza del minimum Steiner Forest problem in *Integer LP*.
+Introduciamo innanzitutto una *funzione di connettività* **connectivity requirement funciton** $r$, definita come
 $$r(u,v) = \begin{cases}
 1 &\exists S_i : u,v \in S_i\\
 0 &\text{altrimenti}\\
 \end{cases}$$
 
 
-Definiamo una funzione $f$ per ogni **taglio** di $G$.
-Sia il taglio $(A, A'= V \setminus A)$.
-Allora
+Definiamo ora una funzione $f$ per ogni **taglio** del grafo $G$.
+Sia il taglio $\delta(A) := (A, \overline{A} \equiv V \setminus A)$.
+Allora abbiamo
 $$f(A) = \begin{cases}
-1 &\exists u\in A, v \in A' : r(u,v) = 1\\
+1 &\exists u\in A, v \in \overline{A} : r(u,v) = 1\\
 0 &\text{altrimenti}\\
 \end{cases}$$
 
-$$\text{minimize} \sum_{e \in E} c_e x_e$$
-$$\text{s.t.} \sum_{e: e \in \delta{(S)}} x_e \geq f(S) \;\; \forall S \in \mathcal{P}(S)$$
-$$x_e \in \lbrace 0,1 \rbrace \;\; \forall e \in E$$
+Formuliamo ora l'istanza in ILP
 
+$$\begin{align}
+\text{minimize } &\sum_{e \in E} c_e \cdot x_e\\
+\text{subject to } &\sum_{e \in \delta(S)} x_e \geq f(S) &\forall S \subset V\\
+&x_e \in \lbrace 0,1 \rbrace &\forall e \in E
+\end{align}$$
 
 Dove $\delta{(S)} = (S, V \setminus S)$.
 
 ```ad-note
-Osservare che il numero di vincoli è **esponenziale**.
+Osservare che il numero di vincoli è **esponenziale**, in quanto dobbiamo considerare tutti i possibili tagli di $V$. Quindia avremo $2^{\vert V \vert}$ vincoli.
 ```
 
 
-Ora **rilassiamo il vincolo di interezza** $$x_e \geq 0 \;\; \forall e \in E$$
-
-Facciamo ora il **duale**.
-
-$$\text{maximize} \sum_{S \in \mathcal{P}(S)} f(S) y_e$$
-$$\text{s.t.} \sum_{e: e \in \delta{(S)}} y_S \leq c(e) \;\; \forall e \in E$$
-$$y_e \geq 0 \;\; \forall S \in \mathcal{P}(S)$$
+Consideriamo ora la verionse **rilassata** 
+$$\begin{align}
+\text{minimize } &\sum_{e \in E} c_e \cdot x_e\\
+\text{subject to } &\sum_{e \in \delta(S)} x_e \geq f(S) &\forall S \subset V\\
+&x_e \geq 0 &\forall e \in E
+\end{align}$$
+e il rispettivo **duale**
+$$\begin{align}
+\text{maximize } &\sum_{S \subset V} f(S) \cdot y_S\\
+\text{subject to } &\sum_{S \; : \; e \in \delta(S)} y_S \leq c_e &\forall e \in E\\
+&y_e \geq 0 &\forall S \subset V
+\end{align}$$
 
 
 
