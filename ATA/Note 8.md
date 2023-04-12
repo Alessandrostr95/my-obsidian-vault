@@ -3,6 +3,7 @@ date: 2023-04-12
 draft: true
 content:
     - algorithm for big data
+    - hash table
 ---
 
 # Hash Tables
@@ -159,5 +160,4 @@ Tecnica del **doubling/halving** serve per mantere **dinamica** la dimensione de
 	- faccio il **re-hash** di tutti gli elementi (in tempo $O(n)$).
 
 
-
-
+Questa tecnica porta ad avere un **costo ammortizzato** costante $O(1)$ per ogni operazione.
