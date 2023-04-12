@@ -4,6 +4,7 @@ draft: true
 content:
     - algorithm for big data
     - hash table
+    - perfect hashing
 ---
 
 # Hash Tables
@@ -161,3 +162,88 @@ Tecnica del **doubling/halving** serve per mantere **dinamica** la dimensione de
 
 
 Questa tecnica porta ad avere un **costo ammortizzato** costante $O(1)$ per ogni operazione.
+
+
+------
+# Perfect Hashing
+Il problema del **dizionario statico** consiste in:
+- ho a priori $n$ elementi (ho $S$ non dinamico)
+- voglio fare solo operazioni di **look-up**
+
+Il perfect hashing ha prestazioni:
+- tempo $O(1)$ in worst case
+- spazio $O(n)$
+- il tempo di costruzione **quasi-lineare** $O(n)$ con **alta probabilità** (*whp*)
+
+**Idea**: 2-level hashing
+Per prima cosa faccio una hash-table classica sugli $n$ elementi.
+Poi per qualsiasi cella in cui ci stanno collisioni, gestisco la lista come un'altra **hash-table**.
+
+
+#### Step 1
+- prendo $h_1 : U \to \lbrace 0,..., m-1 \rbrace$ u.a.r. da una **famiglia universale** con $m = \Theta(n)$.
+- faccio l'hash di tutti gli $n$ elementi statici con $h_1$.
+
+#### Step 2
+Per ogni cella $j = 0,..., m-1$
+- $n_j$ il numero di elementi mappati nella casella $j$ da $h_1$.
+- campiono una nuova funzione hash $h_{2,j}: U \to \lbrace 0,1,..., m_j -1 \rbrace$, con $n_j^2 \leq m_j \leq  O(n_j^2)$.
+- rimpiazzo la cella $j$ con una tabella di secondo livello conla hashtable $h_{2,j}$.
+
+```ad-caution
+Nel caso pegiore possiamo avere un $n_j \in \theta(n)$ allora la dimensione della tabella di secondo livello avrà dimension $O(n^2)$.
+Però vogliamo dimensione $O(n)$.
+
+Perciò aggiungiamo lo step **1.5**, ovvero ripetiamo lo step 1 finché non abbiamo che per ogni $j$ abbiamo $n_j \in O(1)$.
+```
+
+```ad-caution
+Se dovesse capitare che $h_{2j}(u) = h_{2j}(v)$ per qualche $h_{1}(u) = h_{1}(v)$, allora eseguiamo lo step **2.5**, dove in pratica iteriamo lo step **2**.
+```
+
+
+### Building time
+Gli step 1 e 2 possono essere fatti in tempo **lineare**.
+
+#### Step 2.5
+$$\begin{align}
+P(h_{2j}(u) = h_{2j}(v) : u \neq v)
+&\leq \sum_{u,v \in S} P(h_{2j}(u) = h_{2j}(v))\\
+&\leq \frac{1}{2} n_j(n_j - 1)\frac{1}{n_j^2} \leq \frac{1}{2}
+\end{align}$$
+
+Perciò per ogni $j$ avremo che
+- $E\left[ \text{\# tentativi} \right] \leq 2$
+- con $O(\log{n})$ tentativi abbiamo l'alta probabilità
+- Ogni tentativo costa $O(n_j)$
+
+Perciò il costo della fase 2.5 sarà
+$$\sum_{j=0}^{m-1} (\text{\# tentativi per }j) \cdot O(n_j)$$
+
+#### Step 1.5
+Idea: dimostrare che 
+$$E \left[ \sum_{j=0}^{m-1} n_j^2 \right] \in \Theta(n)$$
+e poi usiamo la disuguaglianza di Markov.
+
+Per ogni coppia di elementi $u,v$ definiamo la v.a.
+$$X_{uv} = \begin{cases}
+1 &\text{se } h_1(u) = h_2(v)\\
+0 &\text{altrimenti}
+\end{cases}$$
+
+Definiamo quindi $$\sum_{j=0}^{m-1}n_j^2 = \sum_{u \in S}\sum_{v \in S} X_{uv}$$
+
+
+Per **linearità**
+$$\begin{align}
+E \left[ \sum_{j=0}^{m-1} n_j^2 \right]
+&= \sum_{u \in S}\sum_{v \in S} E \left[ X_{uv} \right]\\
+&= \sum_{u \in S}\sum_{v \in S} P(h_1(u) = h_1(v)) \leq n + \frac{n^2}{m} \leq 2n
+\end{align}$$
+
+Usando Markov bound avremo che
+$$P\left( \sum_{j=0}^{m-1} n_j^2 > cn \right) \leq \frac{E \left[ \sum_{j=0}^{m-1} n_j^2 \right]}{cn} \leq \frac{2n}{cn} \leq \frac{1}{2}$$
+
+- $E\left[ \text{\# tentativi} \right] \leq 2$
+- con $O(\log{n})$ tentativi abbiamo l'alta probabilità
+- ogni tentativo costa $O(n)$
