@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ATA/Note 7.md",
+                "file": "ATA/Note 8.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 7.md",
+                "file": "ATA/Note 8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 7.md"
+                "file": "ATA/Note 8.md"
               }
             }
           },
@@ -133,14 +133,20 @@
   },
   "active": "651cdb70177787ac",
   "lastOpenFiles": [
-    "ATA/Note 3.md",
+    "ATA/Note 7.md",
+    "ATA/0 - Advanced Topic on Algorithms.md",
+    "ATA/Note 8.md",
+    "ATA/Note 0.md",
+    "ATA/Note 1.md",
     "ATA/Note 2.md",
+    "ATA/Note 3.md",
+    "ATA/Note 4.md",
+    "ATA/Note 5.md",
+    "ATA/Note 6.md",
     "ATA/img/note3-3.png",
     "ATA/img/note3-2.png",
     "ATA/img/note3-1.png",
-    "ATA/Note 0.md",
     "ATA/img/note2-5.png",
-    "ATA/Note 4.md",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "IC/Lecture 1.md",
     "IC/Lecture 2.md",
@@ -148,16 +154,11 @@
     "IC/Lecture 4.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/Lecture 12.md",
-    "ATA/0 - Advanced Topic on Algorithms.md",
     "root.md",
     "ATA/img/note2-4.png",
     "ATA/img/note2-3.png",
-    "ATA/Note 1.md",
     "NLP/Dependency Parsing.md",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
-    "ATA/Note 7.md",
-    "ATA/Note 5.md",
-    "ATA/Note 6.md",
     "ATA/img/note2-2.png",
     "BWA/1 - Introduction.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
