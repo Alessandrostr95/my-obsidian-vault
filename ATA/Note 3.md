@@ -162,7 +162,6 @@ $$\begin{align}
 
 Osserviamo che il duale cerca di massimizzare la somma degli $y_S$ soggetto al vincolo che nessun arco è **over-tight**.
 
-
 Ad ogni iterazione, algoritmo tiene una foresta $F$ (magari non ancora ammissibile come soluzione).
 Diremo che un insieme $S$ è **non-soddisfatto** se
 - $f(S) = 1$

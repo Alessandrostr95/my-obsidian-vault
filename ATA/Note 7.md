@@ -2,7 +2,10 @@
 date: 2024-01-05
 draft: true
 content:
-    - treewidth
+    - multicolored-clique
+    - k-dominating-set
+    - ETH
+    - W-hardness
 ---
 
 - Si può dimostrare che un problema (e.g. **k-Clique**) è non FPT?
@@ -62,7 +65,7 @@ Questo problema
 
 SI può dimostrare che k-Clique può essere ridotto a Multicolored Independent Set.
 
-# k-Docinating Set
+# k-Dominating Set
 - **Input**
 	- un grafo $G(V,E)$
 	- un interno $k \geq 1$
