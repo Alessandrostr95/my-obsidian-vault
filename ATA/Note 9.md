@@ -122,3 +122,38 @@ Dimensione:
 
 La dimensione totale sarà quindi $O(\varepsilon^{-1}\log^2{N})$ bit.
 
+### Update
+Se $b = 0$, non fare niente.
+Se $b=1$ allora:
+1. crea un nuovo gruppo contenente un nuovo gruppo da un solo elemento, e lo metto in $\lambda_0$.
+2. Se $\lambda_0$ diventa grande $B+2$, allora faccio il **merge** di due elementi più a sinistra di $\lambda_0$, creando un nuovo gruppo di dimensione $2^1$ e lo inserisco in $\lambda_2$.
+3. Continuo su $\lambda_2, \lambda_3,...$ finché possibile.
+
+Il costo sarà:
+- **creazione/merge/spostamento** ha costo costante $O(1)$.
+- itero lo spostamento è il merge al più $O(\vert L \vert)$ volte
+
+Il costo complessivo darà $O(\log{N})$.
+
+### Query
+Data una query **query(n)**:
+1. trovo tutti i gruppi che **intersecano** gli ultimi $n$ bit dello stream.
+2. ritorna la somma delle dimensioni dei gruppi presi.
+
+Per trovare i gruppi che intersecano $n$ si può fare scorrendo tutti i gruppi da destra verso sinistra, finché non trovo l'ultimo.
+In totale avremo $O(\varepsilon^{-1}\log{n})$.
+
+
+Per $k$ un intero tale che il gurppo più a destra che interseca ha dimensione $2^{k}$.
+Siano gli eventi
+- $Y$ = risposta esatta
+- $X$ = risposta ritornata
+
+> **obs**
+> se $k = 0$, allora $X=Y$. Perciò assumiamo che $k > 0$.
+
+Ovviamente è sempre vero che $$X \leq Y + 2^{k} - 1$$
+Per un lowerbound ad $Y$ sarà $$Y \geq B \cdot 2^{k-1} + B \cdot 2^{k-2} + ... + B \cdot 2^{0} = B(2^k-1)$$
+
+Perciò $$\frac{X}{Y} \leq \frac{Y + 2^{k} - 1}{Y} \leq 1 + \frac{1}{B} \leq 1 + \varepsilon$$
+
