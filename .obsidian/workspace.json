@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a1eb4ebcb326b1ed",
+        "id": "e86e08c0fcd9a666",
         "type": "tabs",
         "children": [
           {
-            "id": "dc2cb825e2979527",
+            "id": "e643f979edf791e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -131,10 +131,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "dc2cb825e2979527",
+  "active": "e643f979edf791e2",
   "lastOpenFiles": [
-    "ATA/Note 8.md",
+    "Mining Data Stream.md",
     "ATA/Note 9.md",
+    "ATA/Note 8.md",
     "ATA/Note 7.md",
     "ATA/0 - Advanced Topic on Algorithms.md",
     "ATA/Note 0.md",
@@ -170,7 +171,6 @@
     "ATA/img",
     "conflict-files-obsidian-git.md",
     "SSI/Note 3.md",
-    "ATA",
-    "IR/Beyond Binary Relevance.md"
+    "ATA"
   ]
 }

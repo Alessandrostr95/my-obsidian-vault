@@ -3,7 +3,8 @@ date: 2023-04-17
 draft: true
 content:
     - algorithm for big data
-    - 
+    - bloom filters
+    - counting 1s in a windows
 ---
 
 # Bloom Filters
