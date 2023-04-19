@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ab992e41c7f93639",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ATA/Note 10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 9.md",
+                "file": "ATA/Note 10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 9.md"
+                "file": "ATA/Note 10.md"
               }
             }
           },
@@ -131,9 +144,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "e643f979edf791e2",
+  "active": "ab992e41c7f93639",
   "lastOpenFiles": [
     "Mining Data Stream.md",
+    "ATA/Note 10.md",
     "ATA/Note 9.md",
     "ATA/Note 8.md",
     "ATA/Note 7.md",
@@ -170,7 +184,6 @@
     "ATA/img/note1-16.png",
     "ATA/img",
     "conflict-files-obsidian-git.md",
-    "SSI/Note 3.md",
     "ATA"
   ]
 }
