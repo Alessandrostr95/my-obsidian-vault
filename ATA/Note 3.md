@@ -155,42 +155,51 @@ $$\begin{align}
 
 
 1. Prendiamo un arco $e$ ed una **qualsiasi** variabile $y_S$. Diciamo che $e$ **sente** $y_S$ se $y_S > 0$ ed $e \in \delta{(S)}$.
-2. Diremo che un insieme $S$ è **incrementato** in una soluzione **duale** se $y_S > 0$. Osserviamo che
+2. Diremo che un insieme $S$ è **incrementato** (**raised**) in una soluzione **duale** se $y_S > 0$. Osserviamo che
 	1. incrementare $S$ oppure $S'$ ha lo **stesso effetto** sia nei vincoli che nel costo.
 	2. non ho alcun vantaggio ad incrementare $S$ se $f(S) = 0$. Perciò per ogni $f(S) = 0$ assumiamo $y_S = 0$.
 3. Un arco $e$ è detto **tight** se la somma degli $y_S$ che lui **sente** è pari a $c(e)$.
 
 Osserviamo che il duale cerca di massimizzare la somma degli $y_S$ soggetto al vincolo che nessun arco è **over-tight**.
 
-Ad ogni iterazione, algoritmo tiene una foresta $F$ (magari non ancora ammissibile come soluzione).
+Ad un qualsiasi istante, l'[[#^e748e6|algoritmo per il calcolo della Steiner Forest]] tiene una foresta $F$ (magari non ancora ammissibile come soluzione).
+
 Diremo che un insieme $S$ è **non-soddisfatto** se
 - $f(S) = 1$
-- non ci sono archi nella foresta che attraversano il tagli $\delta{(S)}$.
+- non ci sono archi nella foresta che attraversano il tagli $\delta{(S)}$. ^5ae4aa
 
-Diremo che un insieme $S$ è **attivo** se
+Diremo che un insieme $S$ è **attivo** se ^678f95
 1. è **non-soddisfatto**
-2. è **minimale rispetto all'inclusione**. Non ci sono sottoinsiemi proprio di $S$ che sono non-soddisfatti.
+2. è **minimale rispetto all'inclusione**. Ovvero non ci sono sottoinsiemi propri di $S$ che sono non-soddisfatti.
 
-**OSS.** $F$ è **non ammissibile** IFF esiste un $S$ attivo.
-
+**OSS.** $F$ è **non ammissibile** $\iff$ esiste un sottoinsieme $S$ attivo.
 
 > **Lemma**
-> Un $S$ è attivo se e solo se $S$ è una **componente connessa** nella foreste corrente ed $f(S)=1$.
+> Un $S$ è [[#^678f95|attivo]] (i.e. non soddisfatto minimale) <u>se e solo se</u>
+> - $S$ è una **componente connessa** nella foreste $F$ corrente.
+> - $f(S) = 1$.
 > 
 > **Proof**
+> Sia $S \subseteq V$ un insieme ancora **attivo** durante l'esecuzione dell'algoritmo.
+> 
+> Dato che $S$ è attivo, per [[#^5ae4aa|definizione]] non ci sono archi da $S$ a $V \setminus S$, perciò non può far parte di una componente connessa.
+> Quindi necessariamente deve essere composta dall'unione di componenti connesse.
+> 
+> 
 > ==da vedere dopo==
 
 
 > **ALG2**
-> 1. $F = \emptyset$, $y_S = 0$.
-> 2. finché ci sono ancora:
-> 	1. prendi gli insiemi $S$ **attivi**
-> 	2. aumenta **simultaneamente** $y_e$ finché non staturo un arco $e$ (finché non diventa tight)
-> 	3. aggiungi $e$ ad $F$
-> 3. ritorna $F' = \lbrace e \in F \vert F \setminus \lbrace e \rbrace \text{ e' ammissibile per il primale} \rbrace$.
+> 1. $F = \emptyset$, $y_S = 0$ per ogni $S \subseteq V$.
+> 2. finché ci sono ancora insiemi **non-soddisfatti**:
+> 	1. prendi gli insiemi $S$ **attivi**.
+> 	2. aumenta **simultaneamente** $y_S$ finché non staturo un arco $e$ (finché non diventa tight)
+> 	3. aggiungi $e$ ad $F$, ovvero $F \leftarrow F \cup \lbrace e \rbrace$.
+> 3. ritorna $F' = \lbrace e \in F \vert F \setminus \lbrace e \rbrace \text{ é ammissibile per il primale} \rbrace$.
+^e748e6
 
 > **THM**
-> L'algoritmo ALG2 è 2-approssimante.
+> L'algoritmo [[#^e748e6|ALG2]] è 2-approssimante.
 > 
 > **Proof**
 > La soluzione duale è ammissibile per costruzione, perché non ci sono archi **over-tight**.

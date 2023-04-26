@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e643f979edf791e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ATA/Note 9.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ab992e41c7f93639",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "ATA/Note 10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3795ece742ca7250",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ATA/Note 11.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 10.md",
+                "file": "ATA/Note 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ATA/Note 10.md"
+                "file": "ATA/Note 11.md"
               }
             }
           },
@@ -133,7 +133,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 303.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -144,10 +144,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "ab992e41c7f93639",
+  "active": "3795ece742ca7250",
   "lastOpenFiles": [
-    "Mining Data Stream.md",
     "ATA/Note 10.md",
+    "ATA/Note 11.md",
+    "ATA/Note 3.md",
+    "Mining Data Stream.md",
     "ATA/Note 9.md",
     "ATA/Note 8.md",
     "ATA/Note 7.md",
@@ -155,7 +157,6 @@
     "ATA/Note 0.md",
     "ATA/Note 1.md",
     "ATA/Note 2.md",
-    "ATA/Note 3.md",
     "ATA/Note 4.md",
     "ATA/Note 5.md",
     "ATA/Note 6.md",
@@ -183,7 +184,6 @@
     "ATA/img/note1-17.png",
     "ATA/img/note1-16.png",
     "ATA/img",
-    "conflict-files-obsidian-git.md",
     "ATA"
   ]
 }
