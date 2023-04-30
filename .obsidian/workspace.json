@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0345cbaebe1de05b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Prediction Risk.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Prediction Risk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/0 - Machine Learning.md"
+                "file": "ML/Prediction Risk.md"
               }
             }
           },
@@ -131,10 +144,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "9468f1e52b522b7c",
+  "active": "0345cbaebe1de05b",
   "lastOpenFiles": [
-    "ML/Supervised Learning.md",
     "ML/0 - Machine Learning.md",
+    "ML/Prediction Risk.md",
+    "ML/Supervised Learning.md",
     "ML/img/ML_02_4.png",
     "ML/img/ML_02_3.png",
     "ML/img/ML_02_2.png",
@@ -168,7 +182,6 @@
     "root.md",
     "ATA/img/note2-4.png",
     "ATA/img/note2-3.png",
-    "NLP/Dependency Parsing.md",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img/note2-2.png",
     "ATA/img",

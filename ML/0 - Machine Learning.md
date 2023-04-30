@@ -22,3 +22,4 @@ tags:
 ----------------
 ## Lecture Notes
 - [[Supervised Learning]]
+	- [[Prediction Risk]]
