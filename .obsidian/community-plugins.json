@@ -7,5 +7,7 @@
   "obsidian-emoji-toolbar",
   "obsidian-mind-map",
   "obsidian-git",
-  "obsidian-image-caption"
+  "obsidian-image-caption",
+  "metadata-extractor",
+  "graph-analysis"
 ]

@@ -4,15 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "c0880958f2f8fee8",
+        "id": "7865a749a84a4230",
         "type": "tabs",
         "children": [
           {
-            "id": "af1010456ecbda40",
+            "id": "e343509a74cb4e5c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/plugins/metadata-extractor/main.js",
+                "staged": false
+              }
             }
           }
         ]
@@ -82,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "IR/Binary Independent Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,7 +101,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "IR/Binary Independent Model.md"
+              }
             }
           },
           {
@@ -107,13 +113,21 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "b7de017bdfad08a4",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 301.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -124,15 +138,20 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "af1010456ecbda40",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "NLP/Word2Vec.md",
+    "ISTI/Random Sample.md",
+    "BWA/0 - Beyond Worst-Case Analysis.md",
+    "IR/Bag of words model - Term Frequency tf.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Appendice Probabilità.md",
+    "ML/Supervised Learning.md",
+    "ML/Prediction Risk.md",
     "ML/From Learning to Optimization.md",
+    "ML/0 - Machine Learning.md",
+    "NLP/Word2Vec.md",
     "ML/img/ML_02_6.png",
     "ML/img/ML_02_5.png",
-    "ML/Prediction Risk.md",
-    "ML/0 - Machine Learning.md",
-    "ML/Supervised Learning.md",
     "ML/img/ML_02_4.png",
     "ML/img/ML_02_3.png",
     "ML/img/ML_02_2.png",
@@ -157,11 +176,6 @@
     "ATA/img/note3-1.png",
     "ATA/img/note2-5.png",
     "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
-    "IC/Lecture 1.md",
-    "IC/Lecture 2.md",
-    "IC/Lecture 3.md",
-    "IC/Lecture 4.md",
-    "NLP/0 - Natural Language Processing.md",
     "ATA/img/note2-4.png",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
