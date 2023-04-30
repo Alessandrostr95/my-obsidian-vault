@@ -32,7 +32,7 @@ Perciò d'ora in avanti ci riferiremo a word2vec per indicare l'algoritmo SGNS.
 Intuitivamente word2vec (SGNS) funziona nel seguente modo:
 1. Tratta la parola interessata $X$ e le sue parole *vicine* come **esempi positivi**.
 2. Uniformemente campiona altre parole dal vocabolario per ottenere **esempi negtivi**.
-3. Usa la [[Logistica Regression]] per **addestrare** il modello predittivo, e distinguere i casi casi positivo/negativo.
+3. Usa la [[Logistic Regression]] per **addestrare** il modello predittivo, e distinguere i casi casi positivo/negativo.
 4. Utilizza i parametri/pesi del modello addestrato come embedding di $X$.
 
 ## Il classificatore
