@@ -21,4 +21,4 @@ tags:
 
 ----------------
 ## Lecture Notes
-- [[ML/Lecture 2|Lecture 2]]
+- [[Supervised Learning|Lecture 2]]

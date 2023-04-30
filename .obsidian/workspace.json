@@ -11,8 +11,12 @@
             "id": "9468f1e52b522b7c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ML/Supervised Learning.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -82,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ML/Supervised Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,7 +102,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ML/Supervised Learning.md"
+              }
             }
           },
           {
@@ -124,8 +131,14 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "9468f1e52b522b7c",
   "lastOpenFiles": [
+    "ML/img/ML_02_4.png",
+    "ML/img/ML_02_3.png",
+    "ML/img/ML_02_2.png",
+    "ML/0 - Machine Learning.md",
+    "Senza nome.md",
+    "Senza nome",
     "ATA/Note 3.md",
     "ATA/Note 11.md",
     "ATA/Note 10.md",
@@ -157,12 +170,7 @@
     "NLP/Dependency Parsing.md",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img/note2-2.png",
-    "BWA/1 - Introduction.md",
-    "BWA/0 - Beyond Worst-Case Analysis.md",
-    "BWA/2 - Instance-Optimal Geometric Algorithms.md",
     "ATA/img/note2-1.png",
-    "ATA/img/note1-17.png",
-    "ATA/img/note1-16.png",
     "ATA/img",
     "ATA"
   ]
