@@ -23,3 +23,4 @@ tags:
 ## Lecture Notes
 - [[Supervised Learning]]
 	- [[Prediction Risk]]
+	- [[From Learning to Optimization]]

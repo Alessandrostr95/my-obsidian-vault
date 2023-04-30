@@ -8,19 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9468f1e52b522b7c",
+            "id": "c6dc57861d7b73c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/From Learning to Optimization.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "0345cbaebe1de05b",
+            "id": "94bb3fdae0bea919",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -144,10 +144,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "0345cbaebe1de05b",
+  "active": "94bb3fdae0bea919",
   "lastOpenFiles": [
-    "ML/0 - Machine Learning.md",
+    "ML/From Learning to Optimization.md",
     "ML/Prediction Risk.md",
+    "ML/0 - Machine Learning.md",
     "ML/Supervised Learning.md",
     "ML/img/ML_02_4.png",
     "ML/img/ML_02_3.png",
@@ -179,7 +180,6 @@
     "IC/Lecture 4.md",
     "NLP/0 - Natural Language Processing.md",
     "NLP/Lecture 12.md",
-    "root.md",
     "ATA/img/note2-4.png",
     "ATA/img/note2-3.png",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
