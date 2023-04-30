@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e86e08c0fcd9a666",
+        "id": "c10541f5a8ea9fc6",
         "type": "tabs",
         "children": [
           {
-            "id": "ab992e41c7f93639",
+            "id": "9468f1e52b522b7c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ATA/Note 10.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3795ece742ca7250",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ATA/Note 11.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/Note 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,9 +97,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ATA/Note 11.md"
-              }
+              "state": {}
             }
           },
           {
@@ -144,11 +124,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "3795ece742ca7250",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
-    "ATA/Note 10.md",
-    "ATA/Note 11.md",
     "ATA/Note 3.md",
+    "ATA/Note 11.md",
+    "ATA/Note 10.md",
     "Mining Data Stream.md",
     "ATA/Note 9.md",
     "ATA/Note 8.md",

@@ -166,7 +166,7 @@ Ad un qualsiasi istante, l'[[#^e748e6|algoritmo per il calcolo della Steiner For
 
 Diremo che un insieme $S$ è **non-soddisfatto** se
 - $f(S) = 1$
-- non ci sono archi nella foresta che attraversano il tagli $\delta{(S)}$. ^5ae4aa
+- non ci sono archi nella foresta $F$ che attraversano il tagli $\delta{(S)}$. ^5ae4aa
 
 Diremo che un insieme $S$ è **attivo** se ^678f95
 1. è **non-soddisfatto**
@@ -188,23 +188,30 @@ Diremo che un insieme $S$ è **attivo** se ^678f95
 > 
 > ==da vedere dopo==
 
-
 > **ALG2**
-> 1. $F = \emptyset$, $y_S = 0$ per ogni $S \subseteq V$.
-> 2. finché ci sono ancora insiemi **non-soddisfatti**:
+> 1. ==(**INIZIALIZATION**)== $F = \emptyset$, $y_S = 0$ per ogni $S \subseteq V$.
+> 2. ==(**EDGE AUGMENTATION**)== finché ci sono ancora insiemi **non-soddisfatti**:
 > 	1. prendi gli insiemi $S$ **attivi**.
 > 	2. aumenta **simultaneamente** $y_S$ finché non staturo un arco $e$ (finché non diventa tight)
 > 	3. aggiungi $e$ ad $F$, ovvero $F \leftarrow F \cup \lbrace e \rbrace$.
-> 3. ritorna $F' = \lbrace e \in F \vert F \setminus \lbrace e \rbrace \text{ é ammissibile per il primale} \rbrace$.
+> 3. ==(**PRUNING**)== ritorna $F' = \lbrace e \in F \vert F \setminus \lbrace e \rbrace \text{ é NON ammissibile per il primale} \rbrace$.
 ^e748e6
+
+```ad-info
+title: Pruning Phase
+Nella fase di **pruning**, rimuoviamo gli archi **ridondanti**.
+Un arco $e$ è **ridondante** (ovvero non necessario) se $F \setminus \lbrace e \rbrace$ rimane ancora una soluzione ammissibile per il primale. Perciò posso rimuovere $e$.
+```
+
 
 > **THM**
 > L'algoritmo [[#^e748e6|ALG2]] è 2-approssimante.
 > 
 > **Proof**
 > La soluzione duale è ammissibile per costruzione, perché non ci sono archi **over-tight**.
+> Perciò anche la soluzione primale $F'$ sarà ammissibile.
 > 
-> Affermiamo che $$\sum_{e \in F'} c(e) \leq 2 \sum_{S \in \mathcal{P}(S)} y_s$$
+> Affermiamo ora che $$\underbrace{\sum_{e \in F'} c(e)}_{\text{primal solution}} \leq 2 \cdot \underbrace{\sum_{S \in \mathcal{P}(S)} y_s}_{\text{dual solution}} \leq 2 \cdot OPT$$
 > $$\sum_{e \in F'}c(e) = \sum_{e \in F'} \sum_{S: e \in \delta{(S)}}y_e = \sum_{S \in \mathcal{P}(S)} \sum_{e \in F' \cap \delta{(S)}} y_e = \sum_{S \in \mathcal{P}(S)} \text{deg}_{F'}(S) y_s$$
 > dove $\text{deg}_{F'}(S)$ = numero di archi che appartengono al taglio $\delta{(S)}$ e sono stati inseriti in $F$.
 > 
