@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Supervised Learning.md",
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Supervised Learning.md",
+                "file": "ML/0 - Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Supervised Learning.md"
+                "file": "ML/0 - Machine Learning.md"
               }
             }
           },
@@ -133,10 +133,11 @@
   },
   "active": "9468f1e52b522b7c",
   "lastOpenFiles": [
+    "ML/Supervised Learning.md",
+    "ML/0 - Machine Learning.md",
     "ML/img/ML_02_4.png",
     "ML/img/ML_02_3.png",
     "ML/img/ML_02_2.png",
-    "ML/0 - Machine Learning.md",
     "Senza nome.md",
     "Senza nome",
     "ATA/Note 3.md",
@@ -170,7 +171,6 @@
     "NLP/Dependency Parsing.md",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img/note2-2.png",
-    "ATA/img/note2-1.png",
     "ATA/img",
     "ATA"
   ]
