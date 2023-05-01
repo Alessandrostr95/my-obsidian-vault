@@ -39,4 +39,9 @@ Quello che si vuole è definire delle funzioni loss tali che:
 2. non abbiamo *punti di sella* in cui il metodo può bloccarsi.
 3. sia fatta in modo tale che il metodo iterativo converga velocemente.
 
+Segliere una funzione loss $\mathcal{L}$ che sia [[Convessità|convessa]] risolve molti problemi, in qunato ogni punto di minimo locale di una funzione convessa è anche un minimo **globale**.
+Più precisamente, se la funzione è **strettamente convessa**, allora abbiamo un unico punto di minimo.
 
+Un altro vantaggio delle funzioni convesse è che la **combinazione lineare di funzioni convesse è ancora una funzione convessa**.
+
+# Some Loss Functions
