@@ -39,10 +39,4 @@ Quello che si vuole è definire delle funzioni loss tali che:
 2. non abbiamo *punti di sella* in cui il metodo può bloccarsi.
 3. sia fatta in modo tale che il metodo iterativo converga velocemente.
 
-## Convessità
-Un insieme di punti $S \subset \mathbb{R}^d$ è detto **convesso** se presi una qualsiasi coppia di punti $x_1,x_2 \in S$ riusciamo a tracciare un segmente tra $x_1$ e $x_2$ i cui punti sono ancora tutti in $S$.
-Più formalmente, $\forall x_1,x_2 \in S$ e $\forall \lambda \in (0,1)$ abbiamo che $$\lambda x_1 + (1-\lambda)x_2 \in S$$
-
-![](./img/ML_03_2.png)
-
 
