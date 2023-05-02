@@ -40,4 +40,7 @@
 - [[Note 7]]
 
 ### Algoritmi per Massive Data
-- [[Note 8]]
+- [[Note 8|Note 8]]
+- [[Note 9|Note 9]]
+- [[Note 10]]
+- [[Note 11|Note 11]]
