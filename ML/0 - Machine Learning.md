@@ -26,3 +26,4 @@ tags:
 	- [[From Learning to Optimization]]
 - [[Gradient Descent]]
 	- [[Convessità]]
+	- [[Some Loss Functions]]

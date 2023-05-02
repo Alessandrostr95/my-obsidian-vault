@@ -12,7 +12,7 @@ L'**approccio induttivo** all'apprendimento automatico cerca di identificare le 
 # Tipologie di problemi
 Nel ML esistono sostanzialmente due tipologie di problemi:
 
-1. **Supervised Learning**: dato un elemento $x$ del dominio rappresentato come un **vettore di caratteristiche**, si vuole **predire** una caratteristica sconosciuta $t$ detta **target**. Se $t \in \mathbb{R}$ si parla di **regressione**, se invece $t \in \lbrace 1, ..., k \rbrace$ si parla di **classificazione**. L'approccio a questo problema è quello di creare un **predittore**, sottoforma di **funzione** $y(x)$ oppure di **distribuzione** $p(t \vert x)$.
+1. **Supervised Learning**: dato un elemento $x$ del dominio rappresentato come un **vettore di caratteristiche**, si vuole **predire** una caratteristica sconosciuta $t$ detta **target**. Se $t \in \mathbb{R}$ si parla di **regressione**, se invece $t \in \lbrace 1, ..., k \rbrace$ si parla di **classificazione**. L'approccio a questo problema è quello di creare un **predittore**, sottoforma di **funzione** $y(x)$ oppure di **distribuzione** $p(t \vert x)$. ^42e3b6
 2. **Unsupervised Learning**: in questo caso abbiamo solamente un dataset $\mathbf{X} = \lbrace x_1, ..., x_n \rbrace \in \mathbb{R}^{d \times n}$, ma nessun target associato. Si vuole identificare qualche informazione implicita nei dati, come:
 	- **clusters**: sottoinsiemi di oggetti *simili*.
 	- **density estimation**: la distribuzione degli elementi nel dominio.
@@ -34,7 +34,7 @@ $$\mathcal{X} \subseteq \mathbb{R}^{d}$$
 Abbiamo anche un insieme di **classi** (o **etichette**) $\mathcal{Y}$ associate agli elementi di $\mathcal{X}$.
 Distinguiamo:
 - problema di **classificazione** quando $\mathcal{Y}$ è **dicreto**
-- problema di **regressione** quando $\mathcal{Y}$ è **discreto**
+- problema di **regressione** quando $\mathcal{Y}$ è **reale**
 
 
 ## Derivare un predittore

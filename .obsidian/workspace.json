@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gradient Descent.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bf0ecca3350ccca3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Some Loss Functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gradient Descent.md",
+                "file": "ML/Some Loss Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gradient Descent.md"
+                "file": "ML/Some Loss Functions.md"
               }
             }
           },
@@ -151,9 +139,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "61639d5cf541dade",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "ML/img/ML_03_4.png",
     "ML/0 - Machine Learning.md",
+    "ML/Supervised Learning.md",
+    "ML/Some Loss Functions.md",
     "ML/Gradient Descent.md",
     "ML/Convessità.md",
     "ML/img/ML_03_3.png",
@@ -165,7 +156,6 @@
     "IR/Bag of words model - Term Frequency tf.md",
     "IR/0 - Information Retrieval.md",
     "IR/Appendice Probabilità.md",
-    "ML/Supervised Learning.md",
     "ML/From Learning to Optimization.md",
     "NLP/Word2Vec.md",
     "ML/img/ML_02_6.png",
@@ -186,7 +176,6 @@
     "ATA/Note 1.md",
     "ATA/Note 2.md",
     "ATA/Note 4.md",
-    "ATA/Note 5.md",
     "ATA/img/note3-3.png",
     "ATA/img/note3-2.png",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
