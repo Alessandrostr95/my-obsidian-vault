@@ -117,3 +117,18 @@ Un altro modo invece è quello di considerare un sottoinsieme $B \subseteq \math
 Questo approccio è noto come **Mini-Batch Gradient Descent**.
 
 Perciò avremo $$\pmb{\theta}^{(k)} = \pmb{\theta}^{(k-1)} - \frac{\eta}{m} \sum_{(x,t) \in B} \nabla_{\pmb{\theta}^{(k-1)}} L(h_{\pmb{\theta}^{(k-1)}}(x), t)$$ o per le singole componenti $$\theta^{(k)}_i = \theta^{(k-1)}_i - \frac{\eta}{m} \sum_{(x,t) \in B} \dfrac{\partial}{\partial \theta^{(k-1)}_i} L(h_{\pmb{\theta}^{(k-1)}}(x), t)$$
+
+Questo approccio riesce a
+1. avere una convergenza più stabile rispetto al [[#Stochastic Gradient Descent]] perché considera un campione più ampio.
+2. riduce le risorse in quanto non considera l'intero dataset.
+
+```ad-note
+Osservare che:
+- quando $\vert B \vert = 1$ allora stiamo nel caso del [[#Stochastic Gradient Descent]].
+- quando $\vert B \vert = \vert \mathcal{T} \vert$ allora stiamo nel caso del [[#Batch Gradient Descent]].
+```
+
+![[ML/img/ML_03_14.png]]
+![[ML/img/ML_03_15.png]]
+
+
