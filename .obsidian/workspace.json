@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gradient Descent.md",
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gradient Descent.md",
+                "file": "ML/0 - Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gradient Descent.md"
+                "file": "ML/0 - Machine Learning.md"
               }
             }
           },
@@ -141,10 +141,10 @@
   },
   "active": "63aa243df42251dc",
   "lastOpenFiles": [
+    "ML/Gradient Descent.md",
     "ML/img/ML_03_15.png",
     "ML/img/ML_03_14.png",
     "ML/img/ML_03_11.png",
-    "ML/Gradient Descent.md",
     "ML/img/ML_03_13.png",
     "ML/img/ML_03_12.png",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",

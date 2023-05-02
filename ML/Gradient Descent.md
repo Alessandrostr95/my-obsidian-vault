@@ -131,4 +131,4 @@ Osservare che:
 ![[ML/img/ML_03_14.png]]
 ![[ML/img/ML_03_15.png]]
 
-
+# Momentum Gradient Descent
