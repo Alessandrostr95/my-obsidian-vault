@@ -66,7 +66,6 @@ Per fare ciò abbiamo bisogno di un **algoritmo di apprendimento** $\mathcal{A}$
 
 Un esempio di questo secondo approccio è la [[Linear Regression]].
 In sintesi, si predice il target $y$ di un qualisasi input $x = (x_1, ..., x_d) \in \mathcal{X}$ tramite una **combinazione lineare** delle sue features.
-
 $$y = w_0 + \sum_{i=0}^{d} w_i \cdot x_i$$
 
 I $d+1$ coefficienti $w_0, w_1, ..., w_d$ sono **appresi** da $\mathcal{A}$ mediante i dati $\mathcal{T}$.
