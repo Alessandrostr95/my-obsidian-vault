@@ -21,4 +21,39 @@ $$\begin{align}
 \end{align}$$
 
 
+# Absolute Loss
+La [[#Quadratic Loss]] è facile da gestire matematicamente, purtroppo però **penalizza troppo** i valori che si allontanano dal target $t$ (la penalità cresce in maniera quadratica).
 
+Perciò invece di far crescere la penalità in maniera quadratica, la si può far crescere in maniera **lineare**.
+Una funzione di questo tipo è la **absolute loss**.
+$$L(y,t) = |y-t|$$
+![](./img/ML_03_5.png)
+
+Nel punto $y = t$ la funzione non è derivabile, però per semplicità possiamo porla a 0.
+Per $y > t$ la derivata è sempre 1, mentre per $y < t$ la derivata è sempre -1.
+
+# Huber Loss
+Un'altra loss è la **Huber loss**, definita come
+$$L(y,t) = \begin{cases}
+\dfrac{1}{2}(y-t)^2 &\vert y-t \vert \leq \delta\\
+\\
+\delta \cdot \vert y-t \vert - \dfrac{\delta^2}{2} &\vert y-t \vert > \delta\\
+\end{cases}$$
+![](./img/ML_03_6.png)
+In questa funzione, penaliziamo in maniera quadratica tutti i valori in un intervallo $\pm \delta$ del target $t$, mentre in maniera lineare tutti i valori più distanti.
+
+# 0/1 Loss
+Supponiamo di essere nel caso della **classificazione binaria**, ovvero dove $t \in \mathcal{Y} \equiv \lbrace -1, 1 \rbrace$.
+Una funzione loss abbastanza naturale è la **0/1 Loss**
+$$L(y,t) = \begin{cases}
+1 &\text{sign}(y) \neq t\\
+0 &\text{sign}(y) = t
+\end{cases}$$
+
+Possiamo anche scriverlo come una **variabile indicatrice** $$\mathbf{1}\left[ \text{sign}(y) \neq t \right] \equiv \mathbf{1}\left[ ty < 0 \right]$$
+![](./img/ML_03_7.png)
+
+Purtroppo ci sono alcuni problemi con questa funzione:
+1. non è [[Convessità|convessa]]
+2. il gradiente è sempre 0, quindi non può essere applicato il [[Gradient Descent]]
+3. se consideriamo una famigli di funzioni lineari, con errore $$\overline{\mathcal{R}}_{\mathcal{T}}(h_{\mathbf{w},w_0}) = \sum_{(\mathbf{x}, t) \in \mathcal{T}} \mathbf{1}\left[ (\mathbf{w}^T\mathbf{x} + w_0)t < 0 \right]$$ bisogna trovare i valori dei coefficienti della combinazione lineare che minimizza il numero totale di errori: questo problema è noto essere **NP-Hard**.
