@@ -44,16 +44,45 @@ In questa funzione, penaliziamo in maniera quadratica tutti i valori in un inter
 
 # 0/1 Loss
 Supponiamo di essere nel caso della **classificazione binaria**, ovvero dove $t \in \mathcal{Y} \equiv \lbrace -1, 1 \rbrace$.
-Una funzione loss abbastanza naturale è la **0/1 Loss**
-$$L(y,t) = \begin{cases}
+Mentre le predizioni del modello sono un valore **reale**, $y \in \mathbb{R}$.
+Una funzione loss abbastanza naturale è la **0/1 Loss**  $$L(y,t) = \begin{cases}
 1 &\text{sign}(y) \neq t\\
 0 &\text{sign}(y) = t
-\end{cases}$$
+\end{cases}$$^213e05
 
 Possiamo anche scriverlo come una **variabile indicatrice** $$\mathbf{1}\left[ \text{sign}(y) \neq t \right] \equiv \mathbf{1}\left[ ty < 0 \right]$$
 ![](./img/ML_03_7.png)
 
 Purtroppo ci sono alcuni problemi con questa funzione:
-1. non è [[Convessità|convessa]]
-2. il gradiente è sempre 0, quindi non può essere applicato il [[Gradient Descent]]
+1. non è [[Convessità|convessa]].
+2. il gradiente è sempre 0, quindi non può essere applicato il [[Gradient Descent]].
 3. se consideriamo una famigli di funzioni lineari, con errore $$\overline{\mathcal{R}}_{\mathcal{T}}(h_{\mathbf{w},w_0}) = \sum_{(\mathbf{x}, t) \in \mathcal{T}} \mathbf{1}\left[ (\mathbf{w}^T\mathbf{x} + w_0)t < 0 \right]$$ bisogna trovare i valori dei coefficienti della combinazione lineare che minimizza il numero totale di errori: questo problema è noto essere **NP-Hard**.
+
+
+Vogliamo quindi una funzione che **approssimi** la [[Some Loss Functions#^213e05|0/1 loss]] e tale che:
+1. non sottostimi mai i reali errori 0/1.
+2. si possa applicare il gradient descent.
+
+# Perceptron Loss
+Questa funzione loss assegna una penalità che cresce in maniera **lineare** per tutti i valori non correttamente classificati.
+Invece, quando $\text{sign}(y) = t$ l'errore è 0.
+
+In altri termini $$L(y,t) = \begin{cases}
+yt &\text{sign(y)} \neq t\\
+0 &\text{sign(y)} = t\\
+\end{cases}$$
+O in forma compatta $$L(y,t) = \max(0, -yt)$$
+
+![](./img/ML_03_8.png)
+
+Un primo vantaggio è che la derivata non è semrpe nulla, quindi per $\text{sign(y)} \neq t$ il gradient descent può essere applicato.
+Purtroppo però non è **strettamente convessa**, quindi per $\text{sign(y)} = t$ ogni punto è un minimo.
+
+# Log Loss (Cross Entropy)
+Un funzione loss comune, usata spesso nella [[Logistic Regression]], è la **Log Loss**, nota anche come **Cross Entropy**.
+
+Essa è definita come $$L(y,t) = \frac{1}{\log{2}} \log{(1 + e^{-yt})}$$
+![](./img/ML_03_9.png)
+
+
+
