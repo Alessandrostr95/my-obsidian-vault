@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Some Loss Functions.md",
+                "file": "ML/Gradient Descent.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Some Loss Functions.md",
+                "file": "ML/Gradient Descent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Some Loss Functions.md"
+                "file": "ML/Gradient Descent.md"
               }
             }
           },
@@ -141,18 +141,18 @@
   },
   "active": "61639d5cf541dade",
   "lastOpenFiles": [
+    "ML/0 - Machine Learning.md",
+    "ML/Gradient Descent.md",
+    "ML/Some Loss Functions.md",
     "ML/img/ML_03_9.png",
     "ML/img/ML_03_8.png",
     "ML/img/ML_03_7.png",
     "ML/img/ML_03_6.png",
     "ML/img/ML_03_5.png",
-    "ML/Gradient Descent.md",
-    "ML/Some Loss Functions.md",
     "ML/Supervised Learning.md",
     "ML/Prediction Risk.md",
     "ML/From Learning to Optimization.md",
     "ML/img/ML_03_4.png",
-    "ML/0 - Machine Learning.md",
     "ML/Convessità.md",
     "ML/img/ML_03_3.png",
     "ML/img/ML_03_2.png",
@@ -164,7 +164,6 @@
     "IR/Appendice Probabilità.md",
     "NLP/Word2Vec.md",
     "ML/img/ML_02_6.png",
-    "ML/img/ML_02_5.png",
     "Senza nome",
     "ATA/Note 3.md",
     "ATA/Note 11.md",
