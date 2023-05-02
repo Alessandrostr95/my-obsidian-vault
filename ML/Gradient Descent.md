@@ -42,4 +42,4 @@ Quello che si vuole è definire delle funzioni loss tali che:
 Segliere una funzione loss $\mathcal{L}$ che sia [[Convessità|convessa]] risolve molti problemi, in qunato ogni punto di minimo locale di una funzione convessa è anche un minimo **globale**.
 Più precisamente, se la funzione è **strettamente convessa**, allora abbiamo un unico punto di minimo.
 
-Un altro vantaggio delle funzioni convesse è che la **combinazione lineare di funzioni convesse è ancora una funzione convessa**.
+Un altro vantaggio delle [[Convessità#^6cb9e0|funzioni convesse]] è che la **combinazione lineare di funzioni convesse è ancora una funzione convessa**.
