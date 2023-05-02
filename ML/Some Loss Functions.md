@@ -84,5 +84,8 @@ Un funzione loss comune, usata spesso nella [[Logistic Regression]], è la **Log
 Essa è definita come $$L(y,t) = \frac{1}{\log{2}} \log{(1 + e^{-yt})}$$
 ![](./img/ML_03_9.png)
 
+# Exponential Loss
+Un'altra loss simile è la **exponential loss**
+$$L(y,t) = e^{-yt}$$
 
-
+Questa funzione penalizza gli errori di più rispetto alla [[#Log Loss (Cross Entropy)|Log Loss]].
