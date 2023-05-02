@@ -99,3 +99,21 @@ Il **Batch Gradient Descent** è ciò che abbiamo visto fin ora, ovvero calcolo 
 ```ad-attention
 Ovviamente questa scelta di considerare l'intero dataset potrebbe essere dispendiosa per fare un singolo update, soprattutto per dataset di dimensioni eccessive e quando il numero di eterazioni è elevato.
 ```
+
+# Stochastic Gradient Descent
+Un altro approccio è quello di applicare il gradient descent però ogni volta campionando **u.a.r.** una coppia di elementi dal training set $(X,T) \in \mathcal{T}$.
+
+```ad-info
+$X$ e $T$ sono maiuscole perché denotano **variabili aleatorie**.
+```
+
+Perciò avremo $$\pmb{\theta}^{(k)} = \pmb{\theta}^{(k-1)} - \eta \nabla_{\pmb{\theta}^{(k-1)}} L(h_{\pmb{\theta}^{(k-1)}}(X), T)$$ o per le singole componenti $$\theta^{(k)}_i = \theta^{(k-1)}_i - \eta \dfrac{\partial}{\partial \theta^{(k-1)}_i} L(h_{\pmb{\theta}^{(k-1)}}(X), T)$$
+
+![[ML/img/ML_03_12.png]]
+![[ML/img/ML_03_13.png]]
+
+# Mini-Batch Gradient Descent
+Un altro modo invece è quello di considerare un sottoinsieme $B \subseteq \mathcal{T}$ di $m$ elementi ad ogni step.
+Questo approccio è noto come **Mini-Batch Gradient Descent**.
+
+Perciò avremo $$\pmb{\theta}^{(k)} = \pmb{\theta}^{(k-1)} - \frac{\eta}{m} \sum_{(x,t) \in B} \nabla_{\pmb{\theta}^{(k-1)}} L(h_{\pmb{\theta}^{(k-1)}}(x), t)$$ o per le singole componenti $$\theta^{(k)}_i = \theta^{(k-1)}_i - \frac{\eta}{m} \sum_{(x,t) \in B} \dfrac{\partial}{\partial \theta^{(k-1)}_i} L(h_{\pmb{\theta}^{(k-1)}}(x), t)$$
