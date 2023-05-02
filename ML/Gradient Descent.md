@@ -91,4 +91,11 @@ i- t \right)^2
 \end{align}$$
 
 # Batch Gradient Descent
-Il **Batch Gradient Descent** è ciò che abbiamo visto fin ora, ovvero 
+Il **Batch Gradient Descent** è ciò che abbiamo visto fin ora, ovvero calcolo i parametri ad ogni step sfruttando sempre **tutti** i dati presenti nel mio dataset $\mathcal{T}$.
+
+![](./img/ML_03_10.png)
+![[./img/ML_03_11.png]]
+
+```ad-attention
+Ovviamente questa scelta di considerare l'intero dataset potrebbe essere dispendiosa per fare un singolo update, soprattutto per dataset di dimensioni eccessive e quando il numero di eterazioni è elevato.
+```

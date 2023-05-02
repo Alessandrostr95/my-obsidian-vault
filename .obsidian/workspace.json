@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "abb702efaf86707e",
+        "id": "d1c502247525c483",
         "type": "tabs",
         "children": [
           {
-            "id": "61639d5cf541dade",
+            "id": "66beaa62448388f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 208.5
+    "width": 290.50390243530273
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -139,12 +139,14 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "61639d5cf541dade",
+  "active": "66beaa62448388f8",
   "lastOpenFiles": [
-    "ML/Some Loss Functions.md",
-    "ML/Gradient Descent.md",
+    "ML/img/ML_03_11.png",
     "ML/0 - Machine Learning.md",
+    "ML/img/ML_03_10.png",
     "ML/img/ML_03_9.png",
+    "ML/Gradient Descent.md",
+    "ML/Some Loss Functions.md",
     "ML/img/ML_03_8.png",
     "ML/img/ML_03_7.png",
     "ML/img/ML_03_6.png",
@@ -163,7 +165,6 @@
     "IR/0 - Information Retrieval.md",
     "IR/Appendice Probabilità.md",
     "NLP/Word2Vec.md",
-    "ML/img/ML_02_6.png",
     "Senza nome",
     "ATA/Note 3.md",
     "ATA/Note 11.md",
