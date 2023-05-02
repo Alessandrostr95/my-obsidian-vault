@@ -24,5 +24,5 @@ tags:
 - [[Supervised Learning]]
 	- [[Prediction Risk]]
 	- [[From Learning to Optimization]]
-- [[Loss Function]]
+- [[Gradient Descent]]
 	- [[Convessità]]

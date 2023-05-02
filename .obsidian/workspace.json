@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Loss Function.md",
+                "file": "ML/Gradient Descent.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf0ecca3350ccca3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Loss Function.md",
+                "file": "ML/Gradient Descent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Loss Function.md"
+                "file": "ML/Gradient Descent.md"
               }
             }
           },
@@ -142,8 +154,8 @@
   "active": "61639d5cf541dade",
   "lastOpenFiles": [
     "ML/0 - Machine Learning.md",
+    "ML/Gradient Descent.md",
     "ML/Convessità.md",
-    "ML/Loss Function.md",
     "ML/img/ML_03_3.png",
     "ML/img/ML_03_2.png",
     "ML/img/ML_03_1.png",

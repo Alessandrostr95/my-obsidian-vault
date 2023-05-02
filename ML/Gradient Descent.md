@@ -21,7 +21,7 @@ I problemi di questo approccio però sono:
 1. bisogna vedere la derivata seconda per distinguere punti minimo, massimo o sella.
 2. un minimo locale potrebbe non essere molto buono rispetto a quello globale.
 
-Un approccio più ragionevole è quello **numerico**, ovvero tramite un metodo **iterativo** noto come **[[Gradient Descent]]**.
+Un approccio più ragionevole è quello **numerico**, ovvero tramite un metodo **iterativo** noto come **Gradient Descent**.
 
 Si parte da un punto iniziale $$\pmb{\theta}^{(0)} = (\theta_1^{(0)}, ..., \theta_d^{(0)})$$
 
@@ -43,5 +43,3 @@ Segliere una funzione loss $\mathcal{L}$ che sia [[Convessità|convessa]] risolv
 Più precisamente, se la funzione è **strettamente convessa**, allora abbiamo un unico punto di minimo.
 
 Un altro vantaggio delle funzioni convesse è che la **combinazione lineare di funzioni convesse è ancora una funzione convessa**.
-
-# Some Loss Functions
