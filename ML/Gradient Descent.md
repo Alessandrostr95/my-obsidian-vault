@@ -40,7 +40,6 @@ Dove $\eta$ è un **parametro di tutning**, che indica quanto deve essere ampio 
 ![](./img/ML_03_1.png)
 
 
-
 Quello che si vuole è definire delle funzioni loss tali che:
 1. abbiano un solo punto di minimo.
 2. non abbiamo *punti di sella* in cui il metodo può bloccarsi.
@@ -82,4 +81,14 @@ x_j &j = 1, ..., d\\
 \\
 1 &j = 0
 \end{cases}$$
+Se indichiamo con $\pmb{\theta} = (w_0, \mathbf{w})$ i parametri che caratterizzano lo spazio $\mathcal{H}$, avremo che il gradient descent sarà 
+$$\begin{align}
+\pmb{\theta}^{(k)}
+&= \pmb{\theta}^{(k-1)} - \eta \nabla_{\pmb{\theta}^{(k-1)}}\mathcal{L}( \pmb{\theta}^{(k-1)} ; \mathcal{T})\\\\
+&= \pmb{\theta}^{(k-1)} - \frac{\eta}{\vert T \vert} \sum_{(x,t) \in \mathcal{T}} \nabla_{\pmb{\theta}^{(k-1)}} L( h_{\pmb{\theta}^{(k-1)}}(x), t)\\\\
+&= \pmb{\theta}^{(k-1)} - \frac{\eta}{\vert T \vert} \sum_{(x,t) \in \mathcal{T}} \nabla_{\pmb{\theta}^{(k-1)}} \left( w_0^{(k-1)} + \sum_{i=1}^{d} w_i^{(k-1)}x_u
+i- t \right)^2
+\end{align}$$
 
+# Batch Gradient Descent
+Il **Batch Gradient Descent** è ciò che abbiamo visto fin ora, ovvero 
