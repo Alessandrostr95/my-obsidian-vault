@@ -18,3 +18,11 @@ Infine, dato un input $x$ applichiamo la distribuzione $p^*( \;\cdot\; \vert x)$
 
 Il problema è quindi quello di definire la classe $\mathcal{P}$.
 Come fatto in precedenza, possiamo adottare in [[From Learning to Optimization|approccio parametrico]], ovvero $\mathcal{P}$ è la famiglia di tutte quelle disrtibuzioni condizionate della **stessa forma**, ma che dipendono da un **insieme di parametri** $\pmb{\theta}$.
+
+Per esempio, consideriamo la *classificazione binaria*.
+Possiamo modellare $p(t \vert x)$, con $t \in \lbrace 0,1 \rbrace$, come una [[Distribuzioni#Bernoulli|bernoulliana]] di parametro $\pi(x)$.
+$$p(t \vert x) = \pi(x)^t(1-\pi(x))^{1-t}$$
+Modelliziamo la probabilità di successo $\pi(x)$ come $$\pi(x) = \frac{1}{1+e^{-\sum_{i=1}^d w_ix_i + b}}$$
+In questo caso quindi i parametri sono i coefficienti $(b,w_1, ..., w_d)$, rappresentati quindi come un punto nello spazio $\mathbb{R}^{d+1}$.
+Definito il modello, si potrebbero inferire i migliori parametri con metodi come il [[Gradient Descent]].
+
