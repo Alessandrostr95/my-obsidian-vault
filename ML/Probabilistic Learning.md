@@ -98,3 +98,15 @@ $$\begin{align}
 
 Generalmente è preferibile considerare la **log-verosimiglianza** $$l(\pmb{\theta} \vert \mathcal{T}) = \log{L(\pmb{\theta} \vert \mathcal{T})}$$
 È preferibile perché la produttoria diventa una sommatoria la quale è più semplice da gestire e *derivare*, preservando però lo stesso **stimatore** $\pmb{\theta}^*$.
+
+Infatti, grazie all'applicazione del logaritmo, è più semplice calcolare la derivata della verosimiglianza, rendendo fattibile l'applicazione del [[Gradient Descent]]
+
+$$\begin{align}
+\nabla_{\pmb{\theta}} \; l(\pmb{\theta} \vert \mathcal{T}) \rightarrow \dfrac{\partial}{\partial \theta_i} l(\pmb{\theta} \vert \mathcal{T})
+&= \dfrac{\partial}{\partial \theta_i} \log{L(\pmb{\theta} \vert \mathcal{T})}\\\\
+&= \dfrac{\partial}{\partial \theta_i} \log{ \left( \prod_{(x,t) \in \mathcal{T}} p( t \vert x, \pmb{\theta}) \right)}\\\\
+&= \dfrac{\partial}{\partial \theta_i} \log{ \left( \prod_{(x,t) \in \mathcal{T}} p( t \vert x, \pmb{\theta}) \right)}\\\\
+&= \dfrac{\partial}{\partial \theta_i} \sum_{(x,t) \in \mathcal{T}} \log{p( t \vert x, \pmb{\theta})}\\\\
+&= \sum_{(x,t) \in \mathcal{T}} \dfrac{\partial}{\partial \theta_i} \log{p( t \vert x, \pmb{\theta})}\\\\
+\end{align}$$
+

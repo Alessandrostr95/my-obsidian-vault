@@ -128,7 +128,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 316.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -139,7 +139,7 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "4a5e7f5a064661b5",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "ML/Supervised Learning.md",
     "ML/Probabilistic Learning.md",
