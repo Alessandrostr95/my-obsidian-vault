@@ -110,3 +110,7 @@ $$\begin{align}
 &= \sum_{(x,t) \in \mathcal{T}} \dfrac{\partial}{\partial \theta_i} \log{p( t \vert x, \pmb{\theta})}\\\\
 \end{align}$$
 
+### Esempio Bernoulli
+
+### Esempio Normale
+

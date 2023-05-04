@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.50390243530273
+    "width": 200
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -139,7 +139,7 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "4a5e7f5a064661b5",
   "lastOpenFiles": [
     "ML/Supervised Learning.md",
     "ML/Probabilistic Learning.md",
