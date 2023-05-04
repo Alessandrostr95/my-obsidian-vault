@@ -5,6 +5,9 @@ tags:
   - IA
   - ArtificialIntelligence
   - MachineLearning
+  - Math
+  - Statistics
+  - Probability
 ---
 # Machine Learning
 --------------------------
