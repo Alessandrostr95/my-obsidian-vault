@@ -19,6 +19,7 @@ Infine, dato un input $x$ applichiamo la distribuzione $p^*( \;\cdot\; \vert x)$
 Il problema è quindi quello di definire la classe $\mathcal{P}$.
 Come fatto in precedenza, possiamo adottare in [[From Learning to Optimization|approccio parametrico]], ovvero $\mathcal{P}$ è la famiglia di tutte quelle disrtibuzioni condizionate della **stessa forma**, ma che dipendono da un **insieme di parametri** $\pmb{\theta}$.
 
+### Esempio
 Per esempio, consideriamo la *classificazione binaria*.
 Possiamo modellare $p(t \vert x)$, con $t \in \lbrace 0,1 \rbrace$, come una [[Distribuzioni#Bernoulli|bernoulliana]] di parametro $\pi(x)$.
 $$p(t \vert x) = \pi(x)^t(1-\pi(x))^{1-t}$$
@@ -26,3 +27,74 @@ Modelliziamo la probabilità di successo $\pi(x)$ come $$\pi(x) = \frac{1}{1+e^{
 In questo caso quindi i parametri sono i coefficienti $(b,w_1, ..., w_d)$, rappresentati quindi come un punto nello spazio $\mathbb{R}^{d+1}$.
 Definito il modello, si potrebbero inferire i migliori parametri con metodi come il [[Gradient Descent]].
 
+
+## Misura di qualità $q$
+Per inferire il miglior $p \in \mathcal{P}$ ci vuole una **misura** $q(p, \mathcal{T})$ della **qualità** di $p$ rispetto al training set $\mathcal{T}$.
+Questa misura $q$ è correlata alla *probabilità* che il nostro dataset $\mathcal{T} = (\mathbf{X}, \mathbf{t})$ è stato generato dalle seguenti ipotesi:
+1. $\mathcal{T} = n$, ed ogni elementi $(x_i,t_i)$ è stato campionato in maniera **indipendente**.
+2. ogni $x_i \in \mathbf{X}$ è campionato secondo una distribuzione nota $p_1$ (generalmente uniforme).
+3. $t_i$ è campionato dalla nostra distribuzione $p( \;\cdot\; \vert x)$.
+
+Perciò sia $$p(\mathcal{T}) = p((\mathbf{X}, \mathbf{t}))$$ la probabilità secondo le **precedenti** assuzioni (indipendenza, $\mathbf{X} \sim p_1$ e $\mathbf{t} \sim p( \;\cdot\; \vert \mathbf{X})$ invece di $\mathbf{t} \sim p_2$).
+
+**Ragionevolmente** la distribuzione migliore $p^*$ di $\mathcal{P}$ è quella che **massimizza la probabilità** $p^*(\mathcal{T})$.
+Perciò possiamo usare questa probabilità come misura $q$.
+
+Secondo le nostre assunzioni, possiamo quindi definire $$q(\hat{p}, \mathcal{T}) = \hat{p}(\mathcal{T}) = \prod_{i=1}^{n}\hat{p}(x_i,t_i) = \prod_{i=1}^{n}\hat{p}(t_i \vert x_i) p_1(x_i)$$
+Se assumiamo che $p_1$ è **uniforme**, allora $$q(\hat{p},\mathcal{T}) \propto \prod_{i=1}^{n}\hat{p}(t_i \vert x_i)$$
+In altri termini, se $\mathcal{T}$ è un **campione indipendente** e **uniforme**, la distribuzione ottima $p^*$ è quella che **massimizza** la [[Distribuzioni Multivariate|distribuzione congiunta]] $$p^*(\mathbf{t} \vert \mathbf{X}) = \prod_{i=1}^{n}p^*(t_i \vert x_i)$$
+
+```ad-note
+Trovare il $p^* \in \mathcal{P}$ che massimizza la **distribuzione congiunta** di $\mathcal{T}$ è l'equivalente probabilistico del trovare la funzione $h^* \in \mathcal{H}$ che massimizza il [[Prediction Risk#^9cd1a0|rischio empirico]] $\overline{\mathcal{R}}_{\mathcal{T}}(h^*)$.
+```
+
+
+----------
+# Second Approach
+Supponiamo di essere in una stanza $\mathcal{P}$, e di chiedere se la nostra squadra di calcio preferita questa serà farà un *pareggio*, *sconfitta* o *vittoria*.
+
+Ogni persona nella stanza fornisce una **distribuzione** $p$ sull'esito $t$ della partita $x$ di questa sera.
+
+Nel [[#First Approach|precedente approccio]] sceglievamo la **persona più affidabile**, ovvero quella che massimizzava la [[#Misura di qualità $q$|misura di qualità]] $q( \;\cdot\;, \mathcal{T})$.
+
+Supponiamo che la persona più affidabile dice che c'è il 100% di probabilità che la squadra vinca, mentre <u>tutti</u> gli altri danno lo 0% di vittoria.
+A chi credere? A uno solo molto affidabile, o a tutti quanti?
+Se quasi tutti credono in qualcosa, vuol dire che hanno un'informazione mancante al più affidabile. Oppure la persona più affidabile ha un'informazione in più che manca alla massa.
+
+Si può quindi fare una **media pesata** delle diverse distribuzioni, pesandole rispetto alle relative misure di qualità $q$.
+
+$$p^*(\mathbf{t} \vert \mathbf{X}) = \dfrac{\sum_{p \in \mathcal{P}} q(p, \mathcal{T})\cdot p(\mathbf{t} \vert \mathbf{X})}{\sum_{p \in \mathcal{P}} q(p, \mathcal{T})}$$
+
+
+-----
+# [[Verosimiglianza]]
+Abbiamo visto che la [[#Misura di qualità $q$|misura di qualità]] $q$ rispetto a una distribuzione condizionata $p$ e un dataset $\mathcal{T}$ può essere definita come la probabilità condizionata $$q(p, \mathcal{T}) = p(\mathcal{T})$$ Ovvero la probabilità di campionare il campione $\mathcal{T}$ assumendo che i campioni siano **uniformi**, **indipendenti** e i target seguono la distribuzione $p$.
+
+Assumiamo che $p$ dipensa dai parametri $\pmb{\theta}$, ovvero $$p(\mathcal{T}) = p_{\pmb{\theta}}(\mathcal{T}) = p(\mathcal{T} \vert \pmb{\theta})$$
+Ovvero, **sapendo** che $p$ dipenda dai parametri $\pmb{\theta}$, abbiamo la distribuzione congiunta su $\mathcal{T}$.
+
+La [[Distribuzioni Multivariate|probabilità congiunta]] $p(\mathcal{T} \vert \pmb{\theta})$ è anche nota come [[Verosimiglianza]].
+$$\begin{align}
+L(\pmb{\theta} \vert \mathcal{T})
+&= p(\mathcal{T} \vert \pmb{\theta})\\\\
+&= p(\mathbf{X}, \mathbf{t} \vert \pmb{\theta})\\\\
+&= \prod_{(x,t) \in \mathcal{T}} p(x,t \vert \pmb{\theta})\\\\
+&= \prod_{(x,t) \in \mathcal{T}} p(t \vert x, \pmb{\theta}) \cdot p(x \vert \pmb{\theta})\\\\
+&= \left( \prod_{(x,t) \in \mathcal{T}} p(t \vert x, \pmb{\theta}) \right) \cdot \left( \prod_{(x,t) \in \mathcal{T}} p(x \vert \pmb{\theta}) \right)\\\\
+&= p(\mathbf{t} \vert \mathbf{X}, \pmb{\theta}) \cdot  p(\mathbf{X} \vert \pmb{\theta})\\\\
+(\mathbf{X} \text{ uniforme}) &= p(\mathbf{t} \vert \mathbf{X}, \pmb{\theta}) \cdot  p(\mathbf{X})\\\\
+&\propto p(\mathbf{t} \vert \mathbf{X}, \pmb{\theta})
+\end{align}$$
+
+
+Seguendo quindi l'**approccio frequentista** la distribuzione ottima $p^*$ è definita dallo [[Stimatore di Massima Verosimiglianza]] 
+$$\begin{align}
+\pmb{\theta}^*
+&= \arg \max_{\pmb{\theta} \in \Theta} L(\pmb{\theta} \vert \mathcal{T})\\\\
+&= \arg \max_{\pmb{\theta} \in \Theta} p( \mathcal{T} \vert \pmb{\theta})\\\\
+&\propto \arg \max_{\pmb{\theta} \in \Theta} p(\mathbf{t} \vert \mathbf{X}, \pmb{\theta})\\\\
+&= \arg \max_{\pmb{\theta} \in \Theta} \prod_{(x,t) \in \mathcal{T}} p(t \vert x, \pmb{\theta})
+\end{align}$$
+
+Generalmente è preferibile considerare la **log-verosimiglianza** $$l(\pmb{\theta} \vert \mathcal{T}) = \log{L(\pmb{\theta} \vert \mathcal{T})}$$
+È preferibile perché la produttoria diventa una sommatoria la quale è più semplice da gestire e *derivare*, preservando però lo stesso **stimatore** $\pmb{\theta}^*$.
