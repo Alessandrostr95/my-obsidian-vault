@@ -64,6 +64,14 @@
               "type": "graph",
               "state": {}
             }
+          },
+          {
+            "id": "18e5447b4cb84b4f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
