@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Probabilistic Learning.md",
+                "file": "AR/19 - Web Search - Part 3.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 255.50390243530273
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Probabilistic Learning.md",
+                "file": "AR/19 - Web Search - Part 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Probabilistic Learning.md"
+                "file": "AR/19 - Web Search - Part 3.md"
               }
             }
           },
@@ -149,8 +149,10 @@
   },
   "active": "4a5e7f5a064661b5",
   "lastOpenFiles": [
-    "ML/Supervised Learning.md",
+    "AR/18 - Web Search - Part 2.md",
+    "AR/17 - Web Search - Part 1.md",
     "ML/Probabilistic Learning.md",
+    "ML/Supervised Learning.md",
     "ML/From Learning to Optimization.md",
     "ML/img/ML_04_1.png",
     "ML/0 - Machine Learning.md",
@@ -184,7 +186,6 @@
     "ATA/Note 9.md",
     "ATA/Note 8.md",
     "ATA/Note 7.md",
-    "ATA/Note 1.md",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
     "ATA"
