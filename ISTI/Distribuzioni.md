@@ -179,7 +179,7 @@ $$k$$
 $$2k$$
 
 ## Funzione generatrice dei momenti
-$$M_X(t) = (1 - 2t)^{}-k/2 \;\; \forall t \in \left[ -\frac{1}{2}, \frac{1}{2} \right]$$
+$$M_X(t) = (1 - 2t)^{-k/2} \;\; \forall t \in \left[ -\frac{1}{2}, \frac{1}{2} \right]$$
 
 ## Proprietà
 - La somma di due v.a. $\chi^2_n, \chi^2_m$ è una $\chi^2_{n+m}$
@@ -231,6 +231,38 @@ Siano $X_1, ..., X_n$ **indipendenti** tali che $X_i \sim \Gamma(k_i, \theta)$, 
 4. Il momento $n$-esimo di una gamma è $$\mathbb{E}\left[ X^n \right] = \theta^n\frac{\Gamma(n+k)}{\Gamma(k)}$$
 5. La somma $X_1, ..., X_n$ v.a. $\Gamma(k_i, \theta)$ **indipententi** ha distribuzione $$X_1 + ... + X_n \sim \Gamma(k_1 + ... + k_n, \theta)$$
 6. Per valori di $k$ abbastanza grandi avremo che la distribuzione gamma converge ad una normale con $\mu = k\theta$ e $\sigma = k \theta^2$.
+
+--------------
+# Beta
+## Notazione
+$$B(\alpha, \beta)$$
+
+## Parametri
+$$\alpha, \beta > 0$$
+## Supporto
+$$\left[ 0, 1 \right]$$
+
+## Funzione di ripartizione
+La funzione di ripartizione di una Beta è la [funzione beta incompleta regolarizzata](https://it.wikipedia.org/wiki/Funzione_beta_di_Eulero#Funzione_beta_incompleta)
+$$F(x) = I_x(\alpha, \beta)$$ dove $$I_x(\alpha, \beta) = \frac{\pmb{\beta}(x; \alpha, \beta)}{\pmb{\beta}(\alpha, \beta)}$$ e
+$$\begin{align}
+\pmb{\beta}(x; \alpha, \beta) &= \int_0^x t^{\alpha -1}(1-t)^{\beta - 1} \, dt\\
+\pmb{\beta}(\alpha, \beta) &= \frac{\Gamma{(\alpha)} \cdot \Gamma{(\beta)}}{\Gamma{(\alpha + \beta)}}
+\end{align}$$
+
+## Funzione di densità
+$$f(x) = \frac{x^{\alpha -1}(1-x)^{\beta -1}}{\pmb{\beta}(\alpha, \beta)}$$
+
+## Media
+$$\frac{\alpha}{\alpha + \beta}$$
+
+## Varianza
+$$\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha + \beta + 1)}$$
+
+## Funzione generatrice dei momenti
+$$M_X(t) = 1 +\sum_{k=0}^{\infty}\left( \prod_{r=0}^{k-1} \frac{\alpha + r}{\alpha+\beta+r} \right)\frac{t^k}{k!}$$
+
+## Proprietà
 
 --------------
 # Distribuzione $t$ di Stundet

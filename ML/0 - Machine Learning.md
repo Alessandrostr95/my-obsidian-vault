@@ -31,3 +31,4 @@ tags:
 	- [[Convessità]]
 	- [[Some Loss Functions]]
 - [[Probabilistic Learning]]
+	- [[Maximum a Posteriori - Bayesian Approach]]

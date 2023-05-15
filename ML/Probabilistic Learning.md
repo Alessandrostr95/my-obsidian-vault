@@ -68,7 +68,7 @@ $$p^*(\mathbf{t} \vert \mathbf{X}) = \dfrac{\sum_{p \in \mathcal{P}} q(p, \mathc
 
 -----
 # [[Verosimiglianza]]
-Abbiamo visto che la [[#Misura di qualità $q$|misura di qualità]] $q$ rispetto a una distribuzione condizionata $p$ e un dataset $\mathcal{T}$ può essere definita come la probabilità condizionata $$q(p, \mathcal{T}) = p(\mathcal{T})$$ Ovvero la probabilità di campionare il campione $\mathcal{T}$ assumendo che i campioni siano **uniformi**, **indipendenti** e i target seguono la distribuzione $p$.
+Abbiamo visto che la [[#Misura di qualità $q$|misura di qualità]] $q$ rispetto a una distribuzione condizionata $p$ e un dataset $\mathcal{T}$ può essere definita come la probabilità congiunta $$q(p, \mathcal{T}) = p(\mathcal{T})$$ Ovvero la probabilità di campionare il campione $\mathcal{T}$ assumendo che i campioni siano **uniformi**, **indipendenti** e i target seguono la distribuzione $p$.
 
 Assumiamo che $p$ dipensa dai parametri $\pmb{\theta}$, ovvero $$p(\mathcal{T}) = p_{\pmb{\theta}}(\mathcal{T}) = p(\mathcal{T} \vert \pmb{\theta})$$
 Ovvero, **sapendo** che $p$ dipenda dai parametri $\pmb{\theta}$, abbiamo la distribuzione congiunta su $\mathcal{T}$.
@@ -111,6 +111,27 @@ $$\begin{align}
 \end{align}$$
 
 ### Esempio Bernoulli
+Supponiamo che di avere un *campione* $X$ di $n$ eventi binari, secondo una [[Distribuzioni#Bernoulli|distribuzione bernoulliana]] di parametro $\phi$ **sconosciuto**.
 
-### Esempio Normale
+$$p(x \vert \phi) = \phi^{x}(1-x)^{1-\phi}$$
 
+Avremo
+- verosimiglianza $$L(\phi \vert X) = \prod_{i=1}^{n}\phi^{x_i}(1-\phi)^{1-x_i}$$
+- log-verosimiglianza $$l(\phi \vert X) = \sum_{i=1}^{n}\left(x_i\ln{\phi} + (1-x_i)\ln{(1-\phi)} \right) = n_1 \ln{\phi} + n_0\ln{(1-\phi)}$$ dove $n_1$ è il numero di successi, ed $n_0 = n - n_1$.
+
+Si può trovare semplicemente il punto di minimo in maniera analitica
+
+$$\frac{d}{d \phi}l(\phi \vert X) = \frac{n_1}{\phi} - \frac{n_0}{1 - \phi} = 0 \implies \phi_{ML} = \frac{n_1}{n_1 + n_0} = \frac{n_1}{n}$$
+ 
+
+## ML and Overfitting
+Osservare che lo stimatore di massima verosimiglianza dipende totalmente dai dati osservati, e quindi tende all'[[From Learning to Optimization#Bias vs Varianza|overfitting]].
+
+Lo stimatore infatti è buono per descrivere il campione osservato, ma troppo specifico per poter utilizzare lo stesso modello su altri dataset.
+
+Perciò in genere quello che si fa è cercare di *limitare* la dipendenza dai dati, introducendo una **funzione di penalità** $P(\pmb{\theta})$ che non dipende dai dati.
+Perciò la [[#Misura di qualità $q$|misura di qualità]] $q$ diventa 
+$$q(p( \;\cdot\; \vert \pmb{\theta}), \mathcal{T}) = l(\pmb{\theta} \vert \mathbf{X}) - P(\pmb{\theta})$$
+
+Una funzione di penalità comune è $$P(\pmb{\theta}) = \frac{\gamma}{2} \Vert \pmb{\theta} \Vert^2$$ con $\gamma > 0$ detto **parametro di tuning**.
+Questo esempio di funzione di penalità penalizza maggiormente i modelli troppo complessi, limitando quindi la possibilità di overfitting.
