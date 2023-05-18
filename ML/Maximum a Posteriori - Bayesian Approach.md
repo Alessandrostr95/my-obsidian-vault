@@ -32,9 +32,10 @@ Osservare che tale quantità è equivalente alla [[Probabilistic Learning#Misura
 ------
 ## Esempio: Beta-Bernoulli
 Supponiamo di avere il campione $X$ di $n$ eventi binari distribuiti secondo una [[Distribuzioni#Bernoulli|bernoulliana]] di **parametro sconosciuto** $\phi$.
+Ovvero $$p(x = \vert \phi) = \phi^x(1-\phi)^{1-x}$$
 
 Come conoscenza iniziale abbiamo che $\phi$ è distribuito seguendo una [[Distribuzioni#Beta|beta]] $$p(\phi) \sim B(\phi \vert \alpha, \beta) = \frac{\Gamma{(\alpha+\beta)}}{\Gamma{(\alpha)} \cdot \Gamma{(\beta)}} \cdot\phi^{\alpha-1}(1-\phi)^{\beta-1}$$
-
+Applicando la regola di Bayes avremo che $$p(\phi \vert X) = \frac{p(X \vert \phi)p(\phi)}{p(X)} \propto \frac{\Gamma{(\alpha+\beta)}}{\Gamma{(\alpha)} \cdot \Gamma{(\beta)}} \cdot\phi^{\alpha-1}(1-\phi)^{\beta-1} \prod_{i=1}^{n} \phi^x (1-\phi)^{1-x}$$
 Il [[#^fa0dbd|MAP]] sarà quel valore di $\phi$ per il quale si **annulla** la derivata
 
 $$\frac{d}{d\phi}\left[ l(\phi \vert \mathcal{T})+\ln{B(\phi \vert \alpha,\beta)} \right] = \frac{n_1}{\phi}-\frac{n_0}{1 -\phi} + \frac{\alpha - 1}{\phi} - \frac{\beta - 1}{1 - \phi} = 0$$
