@@ -18,18 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6987cb476b83604c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Prediction Risk.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -161,13 +149,15 @@
   },
   "active": "db1889a3f5d0ea45",
   "lastOpenFiles": [
-    "ML/img/ML_04_4.png",
+    "ML/img/ML_04_5.png",
+    "ML/Gradient Descent.md",
+    "ML/Linear Regression.md",
+    "ML/Some Loss Functions.md",
     "ML/Prediction Risk.md",
     "ML/0 - Machine Learning.md",
     "ML/From Learning to Optimization.md",
-    "ML/Linear Regression.md",
+    "ML/img/ML_04_4.png",
     "ML/img/ML_04_3.png",
-    "ML/Some Loss Functions.md",
     "ML/img/ML_04_1.png",
     "ML/img/ML_04_2.png",
     "ML/Maximum a Posteriori - Bayesian Approach.md",
@@ -178,7 +168,6 @@
     "ISTI/Processo empirico e Statistiche d'ordine.md",
     "ISTI/Trasformazioni Bivariate.md",
     "ISTI/Distribuzioni Multivariate.md",
-    "ML/Gradient Descent.md",
     "AR/19 - Web Search - Part 3.md",
     "AR/18 - Web Search - Part 2.md",
     "AR/17 - Web Search - Part 1.md",
@@ -192,7 +181,6 @@
     "ML/img/ML_03_13.png",
     "ML/img/ML_03_12.png",
     "ML/img/ML_03_10.png",
-    "ML/img/ML_03_9.png",
     "ML/Convessità.md",
     "ISTI/Random Sample.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",

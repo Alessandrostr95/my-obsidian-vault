@@ -63,3 +63,26 @@ Una delle funzioni di loss più comuni per la regressione lineare è la [[Some L
 $$E(\mathbf{w}) = \frac{1}{2}\sum_{i=1}^{n}\left(t_i - y(\mathbf{x}_i, \mathbf{w})\right)^2 = \frac{1}{2}\sum_{i=1}^{n}\left(t_i - \sum_{j=0}^{m}w_j\phi_j(\mathbf{x})\right)^2 = \frac{1}{2}\sum_{i=1}^{n}\left(t_i - \mathbf{w}^T\mathbf{x}\right)^2$$
 
 ![[ML_04_4.png]]
+
+Per **minimizzare** l'errore $E(\mathbf{w})$ possiamo il classico **approccio analitico**, trovando il valore di $\mathbf{w}$ che rende la **deriviata** di $E(\mathbf{w})$ **nulla**, tramite tecniche di [[Gradient Descent]].
+
+Essendo la [[Some Loss Functions#Quadratic Loss|quadratic loss]] una funzione [[Convessità|strettamente convessa]], abbiamo un **unico** punto di minimo globale, perciò è sufficiente annullare la derivata.
+
+Ricordiamo che la [[Gradient Descent#^4c1ed4|derivata della quadratic loss]] è $$\dfrac{\partial}{\partial w_k}E(\mathbf{w}) = 2 \sum_{i=1}^n(t_i - \mathbf{w}^T\Phi(\mathbf{x}_i)) \cdot \phi_k(\mathbf{x}_i) = 2 \sum_{i=1}^n\left(t_i - \sum_{j=0}^{m}w_j\phi_j(\mathbf{x}_i)\right) \cdot \phi_k(\mathbf{x}_i)$$
+```ad-important
+title: Closed Form Solution
+È possibile trovare il $\mathbf{w}^*$ che annulla il gradiente $\nabla_{\mathbf{w}}E(\mathbf{w}) = \mathbf{0}$ mediante una **singola forma chiusa** $$\mathbf{w}^* = (\mathbf{\Phi}^T\mathbf{\Phi})^{-1}\mathbf{\Phi}^T\mathbf{t}$$
+con $$\mathbf{\Phi} = \mathbf{\Phi}(\mathbf{X})$$
+```
+
+## Model Selection
+La scelta del grado $m$ del polinomio determina l'**espressività** del nostro **modello**.
+Infatti mentre con $m = 1$ abbiamo a disposizione la famiglia di tutte le **rette**, con $m =3$ abbiamo a disposizione tutti i polinomi di grado 3, inclusi anche le parabole e tutte le rette.
+
+Ovviamente con $m$ grande si può stimare meglio la funzione reale che si desidera approssimare, però quando $m$ è molto grande si può incorrere in due problemi:
+1. $m$ troppo grande implica un numero molto grande di parametri da apprendere, e quindi un costo eccessivo in termini di computazionali
+2. quando $m$ è troppo grande rispetto alla dimensione $n$ del dataset $\mathcal{T}$ si rischia l'[[From Learning to Optimization#Problemi con $ mathcal{H}$ grande|overfitting]]. 
+
+![[ML_04_5.png]]
+
+
