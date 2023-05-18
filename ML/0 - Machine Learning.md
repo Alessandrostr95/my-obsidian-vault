@@ -32,3 +32,4 @@ tags:
 	- [[Some Loss Functions]]
 - [[Probabilistic Learning]]
 	- [[Maximum a Posteriori - Bayesian Approach]]
+- [[Linear Regression]]

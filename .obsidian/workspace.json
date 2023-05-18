@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "72913f167a04a51f",
+        "id": "b6811e7f0e3a7306",
         "type": "tabs",
         "children": [
           {
-            "id": "618126d54b448e54",
+            "id": "db1889a3f5d0ea45",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Maximum a Posteriori - Bayesian Approach.md",
+                "file": "ML/Linear Regression.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Maximum a Posteriori - Bayesian Approach.md",
+                "file": "ML/Linear Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Maximum a Posteriori - Bayesian Approach.md"
+                "file": "ML/Linear Regression.md"
               }
             }
           },
@@ -147,9 +147,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "618126d54b448e54",
+  "active": "db1889a3f5d0ea45",
   "lastOpenFiles": [
     "ML/0 - Machine Learning.md",
+    "ML/img/ML_04_1.png",
+    "ML/Linear Regression.md",
+    "ML/img/ML_04_2.png",
     "ML/Maximum a Posteriori - Bayesian Approach.md",
     "ISTI/CLT - Central Limit Theorem.md",
     "ISTI/Distribuzioni.md",
@@ -165,7 +168,6 @@
     "AR/18 - Web Search - Part 2.md",
     "AR/17 - Web Search - Part 1.md",
     "ML/Supervised Learning.md",
-    "ML/img/ML_04_1.png",
     "ATA/0 - Advanced Topic on Algorithms.md",
     "ATA/Note 0.md",
     "ATA/Note 10.md",
@@ -177,14 +179,11 @@
     "ML/img/ML_03_10.png",
     "ML/img/ML_03_9.png",
     "ML/img/ML_03_8.png",
-    "ML/img/ML_03_7.png",
     "ML/Prediction Risk.md",
     "ML/Convessità.md",
     "ISTI/Random Sample.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
     "IR/Bag of words model - Term Frequency tf.md",
-    "IR/0 - Information Retrieval.md",
-    "IR/Appendice Probabilità.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
