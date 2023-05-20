@@ -61,5 +61,13 @@ Quindi abbiamo che la qualità della soluzione dipenderà dall'**iper-parametri*
 
 ![[ML/img/ML_04_8.png]]
 
+Ci si aspetta quindi che:
+- per valori troppo **piccoli** di $\lambda$ c'è troppa dipendenza dai dati, e quindi si tende all'overfitting.
+- per valori troppo **grandi** di $\lambda$ si è troppo **indipendenti** dai dati, tendo quindi all'**underfitting**.
+
+![[ML/img/ML_04_9.png]] ^20d9ca
+
+Infatti come si può vedere dalla [[#^20d9ca|figura]], il modello è **poco generale** sia per valori troppo piccoli che troppo grandi di $\lambda$ (fissato un $m$).
 
 
+# Esempio
