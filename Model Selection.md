@@ -69,5 +69,4 @@ Ci si aspetta quindi che:
 
 Infatti come si può vedere dalla [[#^20d9ca|figura]], il modello è **poco generale** sia per valori troppo piccoli che troppo grandi di $\lambda$ (fissato un $m$).
 
-
-# Esempio
+## [[Esempio utilizzo Regolarizzazione]]

@@ -33,4 +33,6 @@ tags:
 - [[Probabilistic Learning]]
 	- [[Maximum a Posteriori - Bayesian Approach]]
 - [[Linear Regression]]
+	- [[Some Basic Function]]
 	- [[Model Selection]]
+		- [[Esempio utilizzo Regolarizzazione]]

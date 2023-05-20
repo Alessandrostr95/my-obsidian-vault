@@ -3,7 +3,7 @@ Ovvero ad ogni vettore $x_i \in \mathbb{R}^d$ è associato un valore reale (il *
 
 Supponiamo che i valori target seguano una **funzione** (*sconosciuta*), per esempio $\sin(2\pi x)$, più un **rumore** distribuito come $\varepsilon \sim \mathcal{N}(0, \sigma^2)$. 
 Quindi $$t_i = \sin(2\pi x_i) + \varepsilon_i$$
-![[ML/img/ML_04_2.png]]
+![[ML/img/ML_04_2.png]] ^db2e08
 
 L'obiettivo della **regressione lineare** è quella di approssimare al meglio possibile la **relazione deterministica** $t = \sin(2\pi x)$, in base all'analisi dei dati presenti nel traning set $\mathcal{T}$.
 
@@ -76,3 +76,5 @@ con $$\mathbf{\Phi} = \mathbf{\Phi}(\mathbf{X})$$
 ```
 
 
+## [[Model Selection]]
+### [[Esempio utilizzo Regolarizzazione]]
