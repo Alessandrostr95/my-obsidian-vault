@@ -1,7 +1,7 @@
 Per semplicità, restringiamoci al [[Supervised Learning#Secondo Approccio|secondo approccio]].
 
 Dato un qualsiasi elemento $x \in \mathcal{X}$, il suo target $t \in \mathcal{Y}$ e un **predittore** $h$, definiamo:
-- **Error**: l'errore derivante dal confronto tra $h(x)$ e $t$.
+- **Error**: l'errore derivante dal confronto tra $h(x)$ e $t$. ^350fae
 - **Loss**: é una **funzione** usata per misurare un **errore** $$L: \mathcal{Y} \times \mathcal{Y} \to \mathbb{R}$$ $$L(h(x), t) \in \mathbb{R}$$ ^0b44e2
 - **Prediction Risk**: Il **rischio** di una predizione $h(x)$ è semplicemente l'applicazione della funzione loss $$\mathcal{R}(h(x),x)=L(h(x),t)$$
   Nel caso in cui invece non esiste una funzione che definisce la relazione $f(x) = t$, bensì abbiamo una distribuzione $p(t \vert x)$ (per ogni valore di $t$), allora possiamo definire il rischio $\mathcal{R}$ in termini probabilistici come la media $$\mathcal{R}(h(x),x) = \mathbb{E} \left[ L(h(x),t) \right] = \int_{\mathcal{Y}} L(h(x),t) \cdot p(t \vert x) \,dt$$ o nel caso di classificazione $$\mathcal{R}(h(x),x) = \mathbb{E} \left[ L(h(x),t) \right] = \sum_{t \in \mathcal{Y}} L(h(x),t) \cdot p(t \vert x)$$ ^04c36e
