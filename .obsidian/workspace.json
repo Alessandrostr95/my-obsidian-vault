@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3b5b461e8b15d380",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/From Learning to Optimization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -136,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 316.5
+    "width": 286.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,14 +161,15 @@
   },
   "active": "db1889a3f5d0ea45",
   "lastOpenFiles": [
-    "ML/img/ML_04_6.png",
-    "ML/Prediction Risk.md",
-    "ML/Linear Regression.md",
-    "ML/img/ML_04_5.png",
-    "ML/Gradient Descent.md",
-    "ML/Some Loss Functions.md",
+    "ML/img/ML_04_7.png",
     "ML/0 - Machine Learning.md",
     "ML/From Learning to Optimization.md",
+    "ML/Some Loss Functions.md",
+    "ML/Linear Regression.md",
+    "ML/img/ML_04_6.png",
+    "ML/Prediction Risk.md",
+    "ML/img/ML_04_5.png",
+    "ML/Gradient Descent.md",
     "ML/img/ML_04_4.png",
     "ML/img/ML_04_3.png",
     "ML/img/ML_04_1.png",
@@ -180,7 +193,6 @@
     "ML/img/ML_03_14.png",
     "ML/img/ML_03_11.png",
     "ML/img/ML_03_13.png",
-    "ML/img/ML_03_12.png",
     "ML/Convessità.md",
     "ISTI/Random Sample.md",
     "BWA/0 - Beyond Worst-Case Analysis.md",
