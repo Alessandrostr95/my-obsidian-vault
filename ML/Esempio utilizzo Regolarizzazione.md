@@ -5,5 +5,19 @@ Ora per ogni *training set* $\mathcal{T}_i$ definiamo un **predittore** $y_i(\ma
 
 Osserviamo come si comportano mediamente i predittori a variare del [[Model Selection#^49f3ad|coefficiente di regolarizzazione]] $\lambda$.
 
-![[ML/img/ML_04_10.png]]
+![[ML/img/ML_04_10.png]] ^f4c576
 
+Abbiamo a sinistra della [[#^f4c576|figura]] tutti le $L$ regressioni $y_1, ..., y_L$, mentre a destra abbiamo in verde la funzione desiderata e in rosso la **media** degli $L$ predittori.
+
+Per esempio, per $\lambda = 13.46$, abbiamo tutte le funzioni non differiscono molto tra di loro [[From Learning to Optimization#Bias vs Varianza|bassa varianza]].
+Però purtroppo la loro media è una brutta approssimazione della funzione ignota, ovvero abbiamo [[From Learning to Optimization#Bias vs Varianza|alto bias]].
+
+![[ML/img/ML_04_11.png]]
+
+Viceversa, con un valore basso $\lambda = 0.09$, abbiamo che i predittori $y_1,...,y_L$ sono tutti **molto differenti** tra di loro (ovvero [[From Learning to Optimization#Bias vs Varianza|alta varianza]]), però **in media** approssimano bene l'obiettivo (ovvero [[From Learning to Optimization#Bias vs Varianza|basso bias]]).
+
+![[ML/img/ML_04_12.png]]
+Più in generale possiamo [[#^ed3a2f|empiricamente osservare]] che:
+1. al crescere di $\lambda$ aumenta il bias e diminusce la varianza.
+2. al decrescere di $\lambda$ dimiuisce il bias e aumenta la varianza.
+3. il punto di minimo della somma bias+varianza corrisponde allo stesso valore di $\lambda$ per cui l'**errore è minimo**.
