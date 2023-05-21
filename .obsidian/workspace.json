@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "59dc66eab19debe6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Some Basic Function.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Some Basic Function.md",
+                "file": "ML/0 - Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Some Basic Function.md"
+                "file": "ML/0 - Machine Learning.md"
               }
             }
           },
@@ -160,10 +147,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "59dc66eab19debe6",
+  "active": "904857d13fae0f1b",
   "lastOpenFiles": [
-    "ML/0 - Machine Learning.md",
     "Some Basic Function.md",
+    "ML/0 - Machine Learning.md",
     "ML/Linear Regression.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "Model Selection.md",
