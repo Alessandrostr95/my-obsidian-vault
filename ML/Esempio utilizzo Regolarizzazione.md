@@ -6,3 +6,4 @@ Ora per ogni *training set* $\mathcal{T}_i$ definiamo un **predittore** $y_i(\ma
 Osserviamo come si comportano mediamente i predittori a variare del [[Model Selection#^49f3ad|coefficiente di regolarizzazione]] $\lambda$.
 
 ![[ML/img/ML_04_10.png]]
+
