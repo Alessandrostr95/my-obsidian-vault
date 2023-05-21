@@ -41,7 +41,7 @@ Quindi quello che si vuole è trovare un valore abbastanza alto di $m$ senza per
 
 Un possibile approccio è quello di **regolare** la [[Prediction Risk#^9cd1a0|funzione di costo]], riscrivendola come una funzione del tipo $$E(\mathbf{w}) = E_D(\mathbf{w}) + \lambda E_W(\mathbf{w})$$ dove $E_D(\mathbf{w})$ dipende dai parametri e dal dataset, mentre $E_W(\mathbf{w})$ dipende dai **soli parametri**.
 
-Il coefficiente $\lambda \geq 0$ indica l'**importanza** che si vuole dare ai due valori, ed è detto **coefficiente di regolarizzazione**.
+Il coefficiente $\lambda \geq 0$ indica l'**importanza** che si vuole dare ai due valori, ed è detto **coefficiente di regolarizzazione**. ^49f3ad
 
 Una possibile funzione $E_W(\mathbf{w})$ è $$E_W(\mathbf{w}) = \frac{1}{2} \mathbf{w}^T\mathbf{w} = \frac{1}{2}\sum_{j=0}^{m} w_j^2 = \frac{1}{2}\Vert \mathbf{w} \Vert^2$$
 

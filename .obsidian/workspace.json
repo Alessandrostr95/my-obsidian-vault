@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Esempio utilizzo Regolarizzazione.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Esempio utilizzo Regolarizzazione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/0 - Machine Learning.md"
+                "file": "ML/Esempio utilizzo Regolarizzazione.md"
               }
             }
           },
@@ -149,11 +149,12 @@
   },
   "active": "904857d13fae0f1b",
   "lastOpenFiles": [
-    "Some Basic Function.md",
+    "ML/img/ML_04_10.png",
+    "Model Selection.md",
+    "ML/Esempio utilizzo Regolarizzazione.md",
+    "Some Base Function.md",
     "ML/0 - Machine Learning.md",
     "ML/Linear Regression.md",
-    "ML/Esempio utilizzo Regolarizzazione.md",
-    "Model Selection.md",
     "ML/img/ML_04_9.png",
     "ML/img/ML_04_7.png",
     "ML/img/ML_04_8.png",
@@ -184,7 +185,6 @@
     "ATA/Note 10.md",
     "ML/img/ML_03_15.png",
     "ML/Convessità.md",
-    "ISTI/Random Sample.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
