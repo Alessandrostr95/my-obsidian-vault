@@ -54,11 +54,10 @@ Un altro vantaggio delle [[Convessità#^6cb9e0|funzioni convesse]] è che la **c
 Nella [[Linear Regression]] abbiamo uno spazio di funzioni predditore del tipo $$h_{\mathbf{w},w_0}(x) = w_0 + \sum_{i=1}^{d} w_ix_i = w_0 + \mathbf{w}^Tx$$ dove i parametri sono i $d+1$ coefficienti della combinazione lineare.
 
 Consideriamo come loss la [[Some Loss Functions#Quadratic Loss|Qaudratic Loss]] $$L(h_{\mathbf{w},w_0}(x),t) = (h_{\mathbf{w},w_0}(x) - t)^2 = \left(w_0 + \sum_{i=1}^{d} w_ix_i - t \right)^2$$
-Si può dimostrare che le derivate parziali sono 
-$$\begin{align}
+Si può dimostrare che le derivate parziali sono  $$\begin{align}
 \dfrac{\partial}{\partial w_j} L(h_{\mathbf{w},w_0}(x),t) &= 2 x_j \cdot (w_0 + \mathbf{w}^Tx - t) &\forall j = 1, ..., d\\
 \dfrac{\partial}{\partial w_0} L(h_{\mathbf{w},w_0}(x),t) &= 2 \cdot (w_0 + \mathbf{w}^Tx - t)
-\end{align}$$
+\end{align}$$^f0316c
 
 $$\begin{align}
 \dfrac{\partial}{\partial w_j} L(h_{\mathbf{w},w_0}(x),t)
