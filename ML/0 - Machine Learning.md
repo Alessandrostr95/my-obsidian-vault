@@ -36,3 +36,4 @@ tags:
 	- [[Some Base Function]]
 	- [[Model Selection]]
 		- [[Esempio utilizzo Regolarizzazione]]
+- [[Probabilistic Model for Regression]]
