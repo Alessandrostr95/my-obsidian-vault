@@ -75,6 +75,8 @@ title: Closed Form Solution
 con $$\mathbf{\Phi} = \mathbf{\Phi}(\mathbf{X})$$
 ```
 
+^6eecde
+
 
 ## [[Model Selection]]
 ### [[Esempio utilizzo Regolarizzazione]]

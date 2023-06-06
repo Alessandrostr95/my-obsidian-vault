@@ -21,10 +21,10 @@ Assumiamo che $\pmb{\theta} \in \mathbb{R}^d$ sia distribuito come una [[CLT - C
 
 Avremo quindi $$\mathbb{E} \left[ \pmb{\theta} \right] = \mathbf{0}$$ e $$\Sigma = \sigma^2 \cdot I_d$$
 
-Ovvero la nostra **distribuzione a priori** di $\pmb{\theta}$ sarà $$p(\pmb{\theta}) \sim \mathcal{N}(\pmb{\theta} \vert \mathbf{0}, \sigma^2I_d) = \frac{1}{(2\pi)^{d/2} \cdot \sigma^d} e^{-\dfrac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2}} \propto e^{-\dfrac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2}}$$
+Ovvero la nostra **distribuzione a priori** di $\pmb{\theta}$ sarà $$p(\pmb{\theta}) \sim \mathcal{N}(\pmb{\theta} \vert \mathbf{0}, \sigma^2I_d) = \frac{1}{(2\pi)^{d/2} \cdot \sigma^d} e^{-\tfrac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2}} \propto e^{-\tfrac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2}}$$
 
 Date queste **iptesi** calcoliamo lo stimatore MAP
-$$\pmb{\theta}_{MAP} = \arg \max_{\theta \in \Theta} \left( l(\theta \vert \mathcal{T}) + \ln{e^{-\dfrac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2}}} \right) = \max_{\theta \in \Theta} \left( l(\theta \vert \mathcal{T}) - \frac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2} \right)$$
+$$\pmb{\theta}_{MAP} = \arg \max_{\theta \in \Theta} \left( l(\theta \vert \mathcal{T}) + \ln{\left(e^{-\tfrac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2}}\right)} \right) = \max_{\theta \in \Theta} \left( l(\theta \vert \mathcal{T}) - \frac{\Vert \pmb{\theta} \Vert^2}{2\sigma^2} \right)$$
 
 Osservare che tale quantità è equivalente alla [[Probabilistic Learning#Misura di qualità $q$|misura di qualità]] con [[Probabilistic Learning#ML and Overfitting|funzione di penalità]] $P(\pmb{\theta})$ con **parametro di tuning** $\gamma = \dfrac{1}{\sigma^2}$.
 

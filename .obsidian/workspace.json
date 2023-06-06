@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "99041717a7088762",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Gradient Descent.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "586e463633766b4a",
             "type": "leaf",
             "state": {
@@ -30,9 +18,20 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2b850063f737cea2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Linear Regression.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -162,13 +161,14 @@
   },
   "active": "586e463633766b4a",
   "lastOpenFiles": [
-    "ML/Gradient Descent.md",
+    "ML/Linear Regression.md",
     "ML/Probabilistic Model for Regression.md",
-    "ML/img/ML_04_14.png",
     "ML/0 - Machine Learning.md",
-    "ML/From Learning to Optimization.md",
-    "ML/Probabilistic Learning.md",
     "ML/Maximum a Posteriori - Bayesian Approach.md",
+    "ML/Probabilistic Learning.md",
+    "ML/Gradient Descent.md",
+    "ML/img/ML_04_14.png",
+    "ML/From Learning to Optimization.md",
     "ML/img/ML_04_13.png",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/img/ML_04_12.png",
@@ -177,7 +177,6 @@
     "ML/img/ML_04_10.png",
     "ML/Model Selection.md",
     "ML/Some Base Function.md",
-    "ML/Linear Regression.md",
     "ML/img/ML_04_9.png",
     "ML/img/ML_04_7.png",
     "ML/img/ML_04_8.png",
