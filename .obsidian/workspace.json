@@ -148,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 335.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,7 +159,7 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "586e463633766b4a",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "ML/Linear Regression.md",
     "ML/Probabilistic Model for Regression.md",
