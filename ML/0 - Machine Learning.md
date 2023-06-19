@@ -33,6 +33,7 @@ tags:
 - [[Probabilistic Learning]]
 	- [[Maximum a Posteriori - Bayesian Approach]]
 	- [[ML/Language Models|Language Models]]
+	- [[Naive Bayes Classifier]]
 - [[Linear Regression]]
 	- [[Some Base Function]]
 	- [[Model Selection]]
