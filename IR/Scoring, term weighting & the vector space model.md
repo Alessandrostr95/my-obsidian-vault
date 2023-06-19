@@ -35,5 +35,7 @@ frequency | $\text{tf}_{t,d}$ | number of occurrences of $t$ in $d$
 document frequency | $\text{df}_{t}$ | number of documents in the collection that $t$ occurs in
 collection frequency | $\text{cf}_{t}$ | total number of occurrences of $t$ in the collection
 
+^433f1d
+
 - [[Vector Space Model]]
 - [[Variants of weighting]]

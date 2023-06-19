@@ -4,7 +4,7 @@ In particolare abbiamo visto approcci volti al massimizzare la [[Verosimiglianza
 Un altro approccio è invece quello **Bayesiano**.
 Ovvero noi supponiamo di avere una **conoscenza a priori** sui parametri $\pmb{\theta}$, e in particolare supponiamo che essi siano distribuiti secondo una **distribuzione** $p(\pmb{\theta})$.
 
-Data quindi questa conoscenza a priori, e date le osservazioni del training set $\mathcal{T}$, possiamo cercare di *migliorare* la nostra conoscenza cercando i valori del parametro $\pmb{\theta}$ che massimizza la probabilità a **posteriori** del parametro stesso.
+Data quindi questa conoscenza a priori, e date le osservazioni del training set $\mathcal{T}$, possiamo cercare di *migliorare* la nostra conoscenza cercando i valori del parametro $\pmb{\theta}$ che massimizza la probabilità a **posteriori** del parametro stesso. ^7ee03b
 
 In altre parole, sfruttando la regola di Bayes $$p(\pmb{\theta} \vert \mathcal{T}) = \frac{p(\mathcal{T} \vert \pmb{\theta})p(\pmb{\theta})}{p(\mathcal{T})}$$ possiamo definire uno **Maximum a Posteriori (MAP) Estimator** come segue  ^fa0dbd
 $$\begin{align}

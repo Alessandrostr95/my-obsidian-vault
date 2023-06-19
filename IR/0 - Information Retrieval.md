@@ -77,7 +77,7 @@ tags:
 		- [[Term occurrences as Poisson]]
 		- [[Term occurrences as 2-Poisson]]
 	- [[Okapi BM25]] (BestMatch 25)
-- [[Language Models]]
+- [[IR/Language Models]]
 - [[Efficient Scoring]]
 	- [[Speeding Ranking Computation by Pruning]]
 	- [[Query-Independent Document Scores]]

@@ -264,6 +264,36 @@ $$M_X(t) = 1 +\sum_{k=0}^{\infty}\left( \prod_{r=0}^{k-1} \frac{\alpha + r}{\alp
 
 ## Proprietà
 
+
+------
+# Distribuzione di Dirichlet
+
+## Notazione
+$$\text{Dir}(x_1, ..., x_n \vert \alpha_1, ..., \alpha_n) = \text{Dir}(\mathbf{x} \vert \pmb{\alpha})$$
+
+## Parametri
+Numero di categorie $$n > 2$$
+Conecntrazione dei parametri
+$$\alpha_1, ..., \alpha_n > 0$$
+
+## Supporto
+$$\left[ 0, 1 \right]^n$$
+$$x_1, ..., x_n \in \left[ 0,1 \right]$$
+$$x_1 + ... + x_n = 1$$
+
+## Funzione di densità
+$$f(x_1,...,x_n \vert \alpha_1, ..., \alpha_n) = \frac{\Gamma(\alpha)}{\prod_{i=1}^{n}\Gamma(\alpha_i)} \prod_{i=1}^{n}x_i^{\alpha_i - 1} = \frac{1}{\Delta(\alpha_1, ..., \alpha_n)} \prod_{i=1}^{n}x_i^{\alpha_i - 1}$$ dove $\alpha = \alpha_1 + ... + \alpha_n$
+
+## Media
+$$\mathbb{E}\left[ X_i \right] = \frac{\alpha_i}{\alpha}$$
+
+## Varianza
+$$\text{Var}(X_i) = \frac{(\alpha - \alpha_i)\alpha_i}{\alpha^2(\alpha+1)}$$
+
+## Covarianza
+$$\text{Cov}(X_i, X_j) = - \frac{\alpha_i\alpha_j}{\alpha^2(\alpha+1)}$$
+
+
 --------------
 # Distribuzione $t$ di Stundet
 ## Notazione

@@ -32,6 +32,7 @@ tags:
 	- [[Some Loss Functions]]
 - [[Probabilistic Learning]]
 	- [[Maximum a Posteriori - Bayesian Approach]]
+	- [[ML/Language Models|Language Models]]
 - [[Linear Regression]]
 	- [[Some Base Function]]
 	- [[Model Selection]]
