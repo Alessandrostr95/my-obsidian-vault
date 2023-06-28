@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "43ddbad1c4913294",
+            "id": "ea241d3cabb131a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Maximum a Posteriori - Bayesian Approach.md",
+                "file": "ML/Language Models.md",
                 "mode": "source",
                 "source": false
               }
@@ -161,11 +161,11 @@
   },
   "active": "9e2fff76bccf5093",
   "lastOpenFiles": [
-    "ML/Maximum a Posteriori - Bayesian Approach.md",
+    "ML/Language Models.md",
     "ML/Naive Bayes Classifier.md",
+    "ML/Maximum a Posteriori - Bayesian Approach.md",
     "ML/0 - Machine Learning.md",
     "ML/Probabilistic Model for Regression.md",
-    "ML/Language Models.md",
     "ML/Probabilistic Learning.md",
     "ISTI/Distribuzioni.md",
     "IR/Scoring, term weighting & the vector space model.md",
