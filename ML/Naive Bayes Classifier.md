@@ -34,3 +34,4 @@ Possiamo farlo per **massima verosimiglianza** $$p(t \vert C_k) \approx \frac{\t
 Oppure possiamo stimarlo usando lo [[ML/Language Models#Bayesian learning of Language Models|smoothing di dirichelet]].
 ```
 
+
