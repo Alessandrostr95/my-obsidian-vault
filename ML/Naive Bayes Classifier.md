@@ -33,5 +33,3 @@ Per calcolare $p(t \vert C_k)$ facciamo riferimento ai [[ML/Language Models|Lang
 Possiamo farlo per **massima verosimiglianza** $$p(t \vert C_k) \approx \frac{\text{cf}_t(D_k)}{\vert D_k \vert}$$ dove $\text{cf}_t(D_k)$ è la [[Scoring, term weighting & the vector space model#^433f1d|collection frequency]] del termine $t$ nella collezione $D_k$.
 Oppure possiamo stimarlo usando lo [[ML/Language Models#Bayesian learning of Language Models|smoothing di dirichelet]].
 ```
-
-
