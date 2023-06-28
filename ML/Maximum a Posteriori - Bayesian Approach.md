@@ -2,7 +2,7 @@ Abbiamo visto [[Probabilistic Learning|due approcci frequentisti]] per definire 
 In particolare abbiamo visto approcci volti al massimizzare la [[Verosimiglianza]].
 
 Un altro approccio è invece quello **Bayesiano**.
-Ovvero noi supponiamo di avere una **conoscenza a priori** sui parametri $\pmb{\theta}$, e in particolare supponiamo che essi siano distribuiti secondo una **distribuzione** $p(\pmb{\theta})$.
+Ovvero noi supponiamo di avere una **conoscenza a priori** sui parametri $\pmb{\theta}$, e in particolare supponiamo che essi siano distribuiti secondo una **distribuzione** $p(\pmb{\theta})$. ^8ea705
 
 Data quindi questa conoscenza a priori, e date le osservazioni del training set $\mathcal{T}$, possiamo cercare di *migliorare* la nostra conoscenza cercando i valori del parametro $\pmb{\theta}$ che massimizza la probabilità a **posteriori** del parametro stesso. ^7ee03b
 
