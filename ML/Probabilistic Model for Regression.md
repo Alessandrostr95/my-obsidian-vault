@@ -94,3 +94,9 @@ Assumiamo **a priori** che $(w_0, w_1)$ sono campionati dalla gaussiana bivariat
 
 In [[#^04a809|figura]] abbiamo a sinistra la distribuzione iniziale di $(w_0, w_1)$ e a destra 6 rette campionate da $\mathcal{N}(\mathbf{0}, 0.04I)$.
 
+Supponiamo di osservare $(x_1, t_1)$.
+Possiamo quindi calcolare la **probabilità a posteriori** come visto prima
+$$p(w_0, w_1 \vert (x_1, t_1)) \propto p(t_1 \vert x_1, w_0,w_1) \cdot p(w_0,w_1)$$
+Questa sappiamo essere una gaussiana.
+![[ML/img/ML_04_16.png]]
+
