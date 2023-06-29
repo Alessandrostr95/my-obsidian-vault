@@ -77,6 +77,11 @@ $$\begin{align}
 &= \arg \min_{\mathbf{w}} \frac{\beta}{2}\sum_{i=1}^{n}(t_i - \mathbf{w}^Tw_i)^2 + \frac{\alpha}{2}\Vert\mathbf{w}\Vert^2\\
 \end{align}$$
 
+```ad-note
+Per quanto riguarda il valore della varianza $\beta$, possiamo tranquillamente stimarlo come la [[Random Sample#Varianza campionaria|varianza campionaria]] sulle nostre osservazioni $\mathcal{T}$.
+$$\beta = \frac{1}{n-1}\sum_{i=1}^{n}(t_i - \overline{t})^2$$
+il quale è facile dimostrare corrispondere allo [[Stimatore di Massima Verosimiglianza]].
+```
 
 ----
 ## Esempio
