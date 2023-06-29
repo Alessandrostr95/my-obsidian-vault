@@ -48,4 +48,32 @@ Osservare che quando $\alpha \to 0$ avremo che $$\Sigma_p \to (\beta\mathbf{\Phi
 
 Ovvero che $m_p$ equivale alla [[Linear Regression#^6eecde|formula chiusa]] che azzera il gradiente per la [[Linear Regression#Regression Loss|Regression Loss]].
 ```
- 
+
+## Maximum a Posteriori
+Ricapitolando, abbiamo che $$p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta) \propto p(\mathbf{t} \,\vert\, \mathbf{X}, \mathbf{w}, \beta) \cdot p(\mathbf{w} \,\vert\, \alpha)$$
+Stiamo assumendo inoltre che 
+$$\mathbf{w} \sim \mathcal{N}(\mathbf{0}, \alpha^{-1}I)$$ e $$\mathbf{t} \sim \mathcal{N}(\mathbf{w}^T\mathbf{X}, \beta^{-1}I)$$
+
+Perciò abbiamo che $$p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta) \propto \left(\prod_{i=1}^{n}\sqrt{\frac{\beta}{2\pi}}e^{-\tfrac{\beta}{2}(t_i - \mathbf{w}^Tx_i)^2}\right)\left(\frac{\alpha}{2}\right)^{\tfrac{M+1}{2}}e^{-\tfrac{\alpha}{2}\mathbf{w}^T\mathbf{w}}$$
+Abbiamo anche [[#Gausian a Priori 2 Gaussian a Posteriori|visto prima]] che tale distribuzione è ancora una gaussiana con matrice di caovarianza $$\Sigma = (\alpha\mathbf{I} + \beta\mathbf{X}^{T}\mathbf{X})^{-1}$$ e media $$m = \beta\Sigma\mathbf{X}^{T}\mathbf{t}$$
+
+Vogliamo ora trovare il valore di $\mathbf{w}$ che **massimizzi** la sua **probabilità a posteriori** $$\begin{align}
+\mathbf{w}_{MAP}
+&= \arg \max_{\mathbf{w}} p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta)\\
+&= \arg \max_{\mathbf{w}} \left(\prod_{i=1}^{n}\sqrt{\frac{\beta}{2\pi}}e^{-\tfrac{\beta}{2}(t_i - \mathbf{w}^Tx_i)^2}\right)\left(\frac{\alpha}{2}\right)^{\tfrac{M+1}{2}}e^{-\tfrac{\alpha}{2}\mathbf{w}^T\mathbf{w}}
+\end{align}$$
+
+
+
+
+----
+## Esempio
+Supponiamo di avere in input un valore reale $x$ e di voler predire il suo valore target $t$, tramite una **regressione lineare** $y(x,w_0,w_1) = w_0 + w_1 x$.
+Assumiamo che la reale funzione target è $$y(x) = a_0 + a_1 x$$ con $a_i$ campionato **uniformemente** in $\left[ -1, 1\right]$ con un **rumore gaussiano** campionato da $\mathcal{N}(0, 0.2)$.
+
+Assumiamo **a priori** che $(w_0, w_1)$ sono campionati dalla gaussiana bivariata $$\sim \mathcal{N}(\mathbf{0}, 0.04I)$$
+
+![[ML/img/ML_04_15.png]] ^04a809
+
+In [[#^04a809|figura]] abbiamo a sinistra la distribuzione iniziale di $(w_0, w_1)$ e a destra 6 rette campionate da $\mathcal{N}(\mathbf{0}, 0.04I)$.
+
