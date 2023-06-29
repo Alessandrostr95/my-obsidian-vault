@@ -1,20 +1,20 @@
-Supponiamo che dato un punto $\mathbf{x} \in \mathcal{X}$ il relativo target sconoscituo $t$ sia **distribuito** nell'intorno del valore dato dal modello $\mathbf{w}^T\mathbf{x}$, con una **fissata** varianza $\sigma^2=\beta^{-1}$ $$t_i \sim \mathcal{N}(y(x_i, \mathbf{w}), \beta^{-1})$$ o $$p(t \;\vert\; x_i, \mathbf{w}, \beta) = \mathcal{N}(t \;\vert\; y(x_i, \mathbf{w}), \beta^{-1})$$
+Supponiamo che dato un punto $\mathbf{x} \in \mathcal{X}$ il relativo target $t$ (*sconosciuto*) sia **distribuito** nell'intorno del valore dato dal modello $\mathbf{w}^T\mathbf{x}$, con una **fissata** varianza $\sigma^2=\beta^{-1}$ $$t_i \sim \mathcal{N}(y(x_i, \mathbf{w}), \beta^{-1})$$ o $$p(t \;\vert\; x_i, \mathbf{w}, \beta) = \mathcal{N}(t \;\vert\; y(x_i, \mathbf{w}), \beta^{-1})$$
 
 ![[ML/img/ML_04_13.png]]
 
 
-Con questo approccio si vogliono quindi stiamare i migliori valori dei parametri $\mathbf{x}, \beta$ che minimizzino una [[Probabilistic Learning#Misura di qualità $q$|misura di qualità]].
+Con questo approccio si vogliono quindi stimare i migliori valori dei parametri $\mathbf{w}, \beta$ che minimizzino una [[Probabilistic Learning#Misura di qualità $q$|misura di qualità]].
 
 # Approccio frequentista
-Con un approccio frequentista si assume che $\mathbf{w}, \beta$ sono parametri ignoti da stimare mediate le nostre osservazioni $\mathcal{T}$.
-In genere si cerca di identificare uno [[Stimatore di Massima Verosimiglianza]] $$L(\mathbf{t} \;\vert\; \mathbf{X}, \mathbf{w}, \beta) = p(\mathbf{t} \;\vert\; \mathbf{X}, \mathbf{w}, \beta) = \prod_{i=1}^{n} \mathcal{N}(t_i \;\vert\; \mathbf{w}^T\Phi(x_i), \beta^{-1})$$ o in alternativa la log-verosimiglianza $$\begin{align}
+Con un approccio *frequentista* si assume che $\mathbf{w}, \beta$ sono parametri ignoti da stimare mediate le nostre osservazioni $\mathcal{T}$.
+In genere si cerca di identificare uno [[Stimatore di Massima Verosimiglianza]] $$L(\mathbf{t} \;\vert\; \mathbf{X}, \mathbf{w}, \beta) = p(\mathbf{t} \;\vert\; \mathbf{X}, \mathbf{w}, \beta) = \prod_{i=1}^{n} \mathcal{N}(t_i \;\vert\; \mathbf{w}^T\Phi(x_i), \beta^{-1})$$ o in alternativa la *log-verosimiglianza* $$\begin{align}
 l(\mathbf{t} \;\vert\; \mathbf{X}, \mathbf{w}, \beta)
 &= \log{L(\mathbf{t} \;\vert\; \mathbf{X}, \mathbf{w}, \beta)}\\
 &= \sum_{i=1}^{n} \log{\mathcal{N}(t_i \;\vert\; \mathbf{w}^T\Phi(x_i), \beta^{-1})}\\
 &= -\frac{\beta}{2}\sum_{i=1}^{n}(t_i - \mathbf{w}^T\Phi(x_i))^2 + \frac{n}{2}\log{\beta} + \text{const}
 \end{align}$$
 
-La massimizzazione rispetto al solo paremtro $\mathbf{w}$ è data dalla massimizzazione della sola funzione $$\frac{1}{2}\sum_{i=1}^{n}(t_i - y(x_i, \mathbf{w}))^2$$ ovvero minimizzando gli [[Gradient Descent#^f0316c|scarti quadratici]].
+La massimizzazione rispetto al solo parametro $\mathbf{w}$ è data dalla massimizzazione della sola funzione $$\frac{1}{2}\sum_{i=1}^{n}(t_i - y(x_i, \mathbf{w}))^2$$ ovvero minimizzando gli [[Gradient Descent#^f0316c|scarti quadratici]].
 
 ```ad-note
 Ricorda che $$y(x_i, \mathbf{w}) = \mathbf{w}^T\Phi(x_i)$$

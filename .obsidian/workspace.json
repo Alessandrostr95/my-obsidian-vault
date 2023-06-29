@@ -11,8 +11,12 @@
             "id": "4a778af26dbc1232",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ML/Probabilistic Model for Regression.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Naive Bayes Classifier.md",
+                "file": "ML/Probabilistic Model for Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Naive Bayes Classifier.md"
+                "file": "ML/Probabilistic Model for Regression.md"
               }
             }
           },
@@ -143,12 +147,15 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "4a778af26dbc1232",
   "lastOpenFiles": [
+    "ML/0 - Machine Learning.md",
+    "ML/Linear Regression.md",
+    "ML/Model Selection.md",
+    "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/Language Models.md",
     "ML/Naive Bayes Classifier.md",
     "ML/Maximum a Posteriori - Bayesian Approach.md",
-    "ML/0 - Machine Learning.md",
     "ML/Probabilistic Model for Regression.md",
     "ML/Probabilistic Learning.md",
     "ISTI/Distribuzioni.md",
@@ -159,10 +166,7 @@
     "IR/Positional indexes.md",
     "IR/Biword Indexes.md",
     "IR/Language Models.md",
-    "ML/Esempio utilizzo Regolarizzazione.md",
-    "ML/Model Selection.md",
     "ML/Some Base Function.md",
-    "ML/Linear Regression.md",
     "ML/Gradient Descent.md",
     "ML/img/ML_04_14.png",
     "ML/From Learning to Optimization.md",
