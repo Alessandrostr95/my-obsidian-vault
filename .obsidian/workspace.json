@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Fully Bayesian Approach.md",
+                "file": "ML/Probabilistic Model for Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Fully Bayesian Approach.md"
+                "file": "ML/Probabilistic Model for Regression.md"
               }
             }
           },
@@ -160,10 +159,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "71c3b08263da6174",
+  "active": "4a778af26dbc1232",
   "lastOpenFiles": [
-    "ML/Probabilistic Model for Regression.md",
     "ML/Fully Bayesian Approach.md",
+    "ML/Probabilistic Model for Regression.md",
     "ML/0 - Machine Learning.md",
     "ML/img/ML_04_18.png",
     "ML/img/ML_04_17.png",
