@@ -100,3 +100,8 @@ $$p(w_0, w_1 \vert (x_1, t_1)) \propto p(t_1 \vert x_1, w_0,w_1) \cdot p(w_0,w_1
 Questa sappiamo essere una gaussiana.
 ![[ML/img/ML_04_16.png]]
 
+Continuando, avremo la seguente distribuzione osservando i campioni $(x_1, t_1), (x_2, t_2)$.
+![[ML/img/ML_04_17.png]]
+
+Così via, sempre meglio al crescere dei campioni
+![[ML_04_18.png]]
