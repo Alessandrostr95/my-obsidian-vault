@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "71c3b08263da6174",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Fully Bayesian Approach.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Probabilistic Model for Regression.md",
+                "file": "ML/Fully Bayesian Approach.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Probabilistic Model for Regression.md"
+                "file": "ML/Fully Bayesian Approach.md"
               }
             }
           },
@@ -147,13 +160,14 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "71c3b08263da6174",
   "lastOpenFiles": [
+    "ML/Probabilistic Model for Regression.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/0 - Machine Learning.md",
     "ML/img/ML_04_18.png",
     "ML/img/ML_04_17.png",
-    "ML/Probabilistic Model for Regression.md",
     "ML/img/ML_04_16.png",
-    "ML/0 - Machine Learning.md",
     "ML/img/ML_04_15.png",
     "ML/Linear Regression.md",
     "ML/Model Selection.md",
@@ -179,7 +193,6 @@
     "AGT/img/Pasted image 20230521181736.png",
     "ML/img/ML_04_11.png",
     "ML/img/ML_04_10.png",
-    "ML/img/ML_04_9.png",
     "ML/Some Loss Functions.md",
     "ML/Prediction Risk.md",
     "ISTI/CLT - Central Limit Theorem.md",

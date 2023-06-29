@@ -39,3 +39,4 @@ tags:
 	- [[Model Selection]]
 		- [[Esempio utilizzo Regolarizzazione]]
 - [[Probabilistic Model for Regression]]
+	- [[Fully Bayesian Approach]] 

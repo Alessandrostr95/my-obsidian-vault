@@ -55,9 +55,9 @@ Stiamo assumendo inoltre che
 $$\mathbf{w} \sim \mathcal{N}(\mathbf{0}, \alpha^{-1}I)$$ e $$\mathbf{t} \sim \mathcal{N}(\mathbf{w}^T\mathbf{X}, \beta^{-1}I)$$
 
 Perciò abbiamo che $$p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta) \propto \left(\prod_{i=1}^{n}\sqrt{\frac{\beta}{2\pi}}e^{-\tfrac{\beta}{2}(t_i - \mathbf{w}^Tx_i)^2}\right)\left(\frac{\alpha}{2}\right)^{\tfrac{M+1}{2}}e^{-\tfrac{\alpha}{2}\mathbf{w}^T\mathbf{w}}$$
-Abbiamo anche [[#Gausian a Priori 2 Gaussian a Posteriori|visto prima]] che tale distribuzione è ancora una gaussiana con matrice di caovarianza $$\Sigma = (\alpha\mathbf{I} + \beta\mathbf{X}^{T}\mathbf{X})^{-1}$$ e media $$m = \beta\Sigma\mathbf{X}^{T}\mathbf{t}$$
+Abbiamo anche [[#Gausian a Priori 2 Gaussian a Posteriori|visto prima]] che tale distribuzione è ancora una gaussiana con matrice di covarianza $$\Sigma = (\alpha\mathbf{I} + \beta\mathbf{X}^{T}\mathbf{X})^{-1}$$ e media $$m = \beta\Sigma\mathbf{X}^{T}\mathbf{t}$$
 
-Vogliamo ora trovare il valore di $\mathbf{w}$ che **massimizzi** la sua **probabilità a posteriori** $$\begin{align}
+Vogliamo ora trovare il valore di $\mathbf{w}$ che **massimizzi** la sua **[[Maximum a Posteriori - Bayesian Approach#^7ee03b|probabilità a posteriori]]** $$\begin{align}
 \mathbf{w}_{MAP}
 &= \arg \max_{\mathbf{w}} p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta)\\
 &= \arg \max_{\mathbf{w}} \left(\prod_{i=1}^{n}\sqrt{\frac{\beta}{2\pi}}e^{-\tfrac{\beta}{2}(t_i - \mathbf{w}^Tx_i)^2}\right)\left(\frac{\alpha}{2\pi}\right)^{\tfrac{M+1}{2}}e^{-\tfrac{\alpha}{2}\mathbf{w}^T\mathbf{w}}

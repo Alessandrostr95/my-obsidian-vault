@@ -1,0 +1,2 @@
+Abbiamo visto che nell'[[Probabilistic Model for Regression#Approccio Bayesiano|approccio baiesiano]] alla regressione l'obiettivo è quello di stimare la [[Maximum a Posteriori - Bayesian Approach#^7ee03b|probabilità a posteriori]] $\mathbf{w}$, assumendo che **a priori** $\mathbf{w}$ sia distribuito secondo una gaussiana e che anche i target $\mathbf{t}$ siano distribuiti secondo una gaussiana con media $\mathbf{w}^T\mathbf{x}$.
+
