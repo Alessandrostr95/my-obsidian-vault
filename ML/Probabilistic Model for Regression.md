@@ -60,10 +60,22 @@ Abbiamo anche [[#Gausian a Priori 2 Gaussian a Posteriori|visto prima]] che tale
 Vogliamo ora trovare il valore di $\mathbf{w}$ che **massimizzi** la sua **probabilità a posteriori** $$\begin{align}
 \mathbf{w}_{MAP}
 &= \arg \max_{\mathbf{w}} p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta)\\
-&= \arg \max_{\mathbf{w}} \left(\prod_{i=1}^{n}\sqrt{\frac{\beta}{2\pi}}e^{-\tfrac{\beta}{2}(t_i - \mathbf{w}^Tx_i)^2}\right)\left(\frac{\alpha}{2}\right)^{\tfrac{M+1}{2}}e^{-\tfrac{\alpha}{2}\mathbf{w}^T\mathbf{w}}
+&= \arg \max_{\mathbf{w}} \left(\prod_{i=1}^{n}\sqrt{\frac{\beta}{2\pi}}e^{-\tfrac{\beta}{2}(t_i - \mathbf{w}^Tx_i)^2}\right)\left(\frac{\alpha}{2\pi}\right)^{\tfrac{M+1}{2}}e^{-\tfrac{\alpha}{2}\mathbf{w}^T\mathbf{w}}
 \end{align}$$
 
+Per comodità possiamo considerare di massimizzare il **logaritmo** della probabilità a posteriori, ovvero massimizzare
+$$\begin{align}
+&\log(p(\mathbf{w} \,\vert\, \mathbf{t}, \mathbf{X}, \alpha, \beta))\\
+\\
+=&\frac{n}{2}\log{\frac{\beta}{2\pi}} - \frac{\beta}{2}\sum_{i=1}^{n}(t_i - \mathbf{w}^Tw_i)^2 + \frac{M+1}{2}\log{\frac{\alpha}{2\pi}} - \frac{\alpha}{2}\mathbf{w}^T\mathbf{w}
+\end{align}$$
 
+Possiamo ignorare tutti gli elementi che **non** dipendono da $\mathbf{w}$ e quindi considerare di massimizzare la sola funzione
+$$\begin{align}
+\mathbf{w}_{MAP}
+&= \arg \max_{\mathbf{w}} - \frac{\beta}{2}\sum_{i=1}^{n}(t_i - \mathbf{w}^Tw_i)^2 - \frac{\alpha}{2}\mathbf{w}^T\mathbf{w}\\
+&= \arg \min_{\mathbf{w}} \frac{\beta}{2}\sum_{i=1}^{n}(t_i - \mathbf{w}^Tw_i)^2 + \frac{\alpha}{2}\Vert\mathbf{w}\Vert^2\\
+\end{align}$$
 
 
 ----
