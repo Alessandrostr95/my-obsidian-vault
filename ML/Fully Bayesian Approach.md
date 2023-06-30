@@ -21,6 +21,12 @@ $$y \vert x, \mathbf{X}, \mathbf{t}, \alpha, \beta \sim \mathcal{N}(\mu(x), \sig
 - media $$\mu(x) = \beta \phi(x)^TS \mathbf{\Phi}^T\mathbf{t}$$
 - varianza $$\sigma^2(x) = \beta^{-1} + \phi(x)^T S \phi(x)$$
 
+```ad-important
+**Importante** notare che il calcolo della *posterior predictive mean* non diepnde da alcun parametro $\mathbf{w}$.
+Per questo, è considerato un approccio **non parametrico**.
+```
+
+
 Nella [[#^0b25b4|figura]] possiamo vedere gli **intervalli di confidenza** della *posterior predictive mean* per ogni punto, al crescere delle osservazioni.
 
 ![[ML_04_20.png]] ^0b25b4
