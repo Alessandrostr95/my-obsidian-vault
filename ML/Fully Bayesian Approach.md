@@ -37,3 +37,7 @@ Nella [[#^0b25b4|figura]] precedente sono state utilizzate 9 [[Some Base Functio
 Ovvero, per ogni putni $x$ abbiamo la retta di regressione
 $$y(x,\mathbf{w}) = w_0 + w_1\phi_1(x) + ... + w_9\phi_9(x)$$ con $$\phi_i(x) = \exp{\left( -\frac{1}{2}\left( \frac{x - \mu_i}{\sigma} \right)^2\right)}$$
 ```
+
+
+## Esempio
+![[ML_04_21.png]]

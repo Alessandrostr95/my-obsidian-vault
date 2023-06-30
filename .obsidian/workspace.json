@@ -11,8 +11,12 @@
             "id": "5ac356bf95102989",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ML/Fully Bayesian Approach.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ML/Fully Bayesian Approach.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +110,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ML/Fully Bayesian Approach.md"
+              }
             }
           },
           {
@@ -140,10 +147,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "5ac356bf95102989",
   "lastOpenFiles": [
-    "ML/Nonparametric Regression.md",
+    "ML/img/ML_04_21.png",
     "ML/0 - Machine Learning.md",
+    "ML/Nonparametric Regression.md",
     "ML/Probabilistic Model for Regression.md",
     "ML/Fully Bayesian Approach.md",
     "ML/Some Base Function.md",
@@ -177,7 +185,6 @@
     "AGT/img/Pasted image 20230521181736.png",
     "ML/Some Loss Functions.md",
     "ML/Prediction Risk.md",
-    "ISTI/CLT - Central Limit Theorem.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
