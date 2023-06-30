@@ -4,3 +4,8 @@ Per fare ciò, viene calcolata la [[Fully Bayesian Approach#^73334c|posterior pr
 - varianza $$\sigma^2(x) = \beta^{-1} + \phi(x)^T S \phi(x)$$
 dove $$S = (\beta\Phi^T\Phi + \alpha I)^{-1}$$
 
+
+Un'idea potrebbe essere quella di identificare il valore target $y(x)$ dell'osservazione $x$ come la **media** della sua predizione, ovvero $$y(x) = \mu(x) = \beta \phi(x)^TS \mathbf{\Phi}^T\mathbf{t}$$
+
+
+

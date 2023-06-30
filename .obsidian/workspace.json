@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Fully Bayesian Approach.md",
+                "file": "ML/Nonparametric Regression.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Fully Bayesian Approach.md",
+                "file": "ML/Nonparametric Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Fully Bayesian Approach.md"
+                "file": "ML/Nonparametric Regression.md"
               }
             }
           },
@@ -149,8 +149,8 @@
   },
   "active": "95c711abe88683f9",
   "lastOpenFiles": [
-    "ML/Nonparametric Regression.md",
     "ML/Fully Bayesian Approach.md",
+    "ML/Nonparametric Regression.md",
     "ML/0 - Machine Learning.md",
     "ML/Probabilistic Learning.md",
     "ML/img/ML_04_21.png",
