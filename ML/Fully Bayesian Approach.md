@@ -10,9 +10,24 @@ Così facendo, si può stimare **direttamente** la probabilità di una predizion
 
 Perciò, assumendo di avere i campioni del dataset $\mathcal{T} = (\mathbf{X}, \mathbf{t})$ e di aver osservato un nuovo elemento $x$, vogliamo stimare la probabilità che $y$ sia il suo target, e possiamo farlo nel seguente modo.
 $$p(y \vert x, \mathbf{X}, \mathbf{t}, \alpha, \beta) = \int \underbrace{p(y \vert x, \mathbf{w}, \beta)}_{\text{likelihood } L(\mathbf{w}\vert x,t,\beta)} \cdot \underbrace{p(\mathbf{w} \vert \mathbf{t}, \mathbf{X}, \alpha, \beta)}_{\text{posterior distribution}} \,d\mathbf{w}$$
+Tale valore è anche detto **posterior predictive mean**.
 
 ```ad-info
 Ricordiamo che con $\mathbf{\Phi}$ si intende la matrice ottenuta applicando delle [[Some Base Function|funzioni base]] agli elementi $\mathbf{X}$.
 ```
 
+È possibile dimostrare che tale distribuzione è ancora una **gaussiana**
+$$y \vert x, \mathbf{X}, \mathbf{t}, \alpha, \beta \sim \mathcal{N}(\mu(x), \sigma^2(x))$$ con:
+- media $$\mu(x) = \beta \phi(x)^TS \mathbf{\Phi}^T\mathbf{t}$$
+- varianza $$\sigma^2(x) = \beta^{-1} + \phi(x)^T S \phi(x)$$
 
+Nella [[#^0b25b4|figura]] possiamo vedere gli **intervalli di confidenza** della *posterior predictive mean* per ogni punto, al crescere delle osservazioni.
+
+![[ML_04_20.png]] ^0b25b4
+
+
+```ad-note
+Nella [[#^0b25b4|figura]] precedente sono state utilizzate 9 [[Some Base Function#Gaussian|base function gaussiane]], perciò i parametri da stimare erano 10.
+Ovvero, per ogni putni $x$ abbiamo la retta di regressione
+$$y(x,\mathbf{w}) = w_0 + w_1\phi_1(x) + ... + w_9\phi_9(x)$$ con $$\phi_i(x) = \exp{\left( -\frac{1}{2}\left( \frac{x - \mu_i}{\sigma} \right)^2\right)}$$
+```

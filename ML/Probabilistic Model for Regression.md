@@ -104,4 +104,14 @@ Continuando, avremo la seguente distribuzione osservando i campioni $(x_1, t_1),
 ![[ML/img/ML_04_17.png]]
 
 Così via, sempre meglio al crescere dei campioni
-![[ML_04_18.png]]
+![[ML/img/ML_04_18.png]]
+
+Nella [[#^6e6bb0|seguente figura]] possiamo vedere delle funzioni campionate dalla **distribuzione a posteriori**, al crescere delle osservazioni.
+
+![[ML/img/ML_04_19.png]]
+
+```ad-note
+Nella [[#^6e6bb0|figura]] precedente sono state utilizzate 9 [[Some Base Function#Gaussian|base function gaussiane]], perciò i parametri da stimare erano 10.
+Ovvero, per ogni putni $x$ abbiamo la retta di regressione
+$$y(x,\mathbf{w}) = w_0 + w_1\phi_1(x) + ... + w_9\phi_9(x)$$ con $$\phi_i(x) = \exp{\left( -\frac{1}{2}\left( \frac{x - \mu_i}{\sigma} \right)^2\right)}$$
+```
