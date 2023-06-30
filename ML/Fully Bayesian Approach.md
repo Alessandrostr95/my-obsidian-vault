@@ -9,7 +9,7 @@ A differenza della regressione lineare classica, in cui si stima un unico set di
 Così facendo, si può stimare **direttamente** la probabilità di una predizione $y$ semplicemente facendo la **media** rispetto a tutti i possibili parametri $\mathbf{w}$.
 
 Perciò, assumendo di avere i campioni del dataset $\mathcal{T} = (\mathbf{X}, \mathbf{t})$ e di aver osservato un nuovo elemento $x$, vogliamo stimare la probabilità che $y$ sia il suo target, e possiamo farlo nel seguente modo.
-$$p(y \vert x, \mathbf{X}, \mathbf{t}, \alpha, \beta) = \int p(y \vert \mathbf{X}, \mathbf{w}, \beta) \cdot p(\mathbf{w} \vert \mathbf{X}, \mathbf{t},\alpha, \beta) \,d\mathbf{w}$$
+$$p(y \vert x, \mathbf{X}, \mathbf{t}, \alpha, \beta) = \int p(y \vert \mathbf{X}, \mathbf{w}, \beta) \cdot p(\mathbf{w} \vert \mathbf{t}, \mathbf{X}, \alpha, \beta) \,d\mathbf{w}$$
 
 ```ad-info
 Ricordiamo che con $\mathbf{\Phi}$ si intende la matrice ottenuta applicando delle [[Some Base Function|funzioni base]] agli elementi $\mathbf{X}$.
