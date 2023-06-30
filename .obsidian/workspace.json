@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271.50390243530273
+    "width": 266.50390243530273
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -147,8 +147,9 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "95c711abe88683f9",
   "lastOpenFiles": [
+    "ML/img/ML_05_2.png",
     "ML/Gradient Descent.md",
     "ML/Nonparametric Regression.md",
     "ML/img/ML_05_1.png",

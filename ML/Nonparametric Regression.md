@@ -19,3 +19,8 @@ A sinistra invece i valori che possono assumere le funzioni $\kappa(\cdot , x_i)
 ![[ML/img/ML_05_1.png]]
 
 Possiamo osservare che la funzione kernel $\kappa(x,x_i)$ tende a dare valori più alti per valori di $x$ che si avvicinano di più ad $x_i$.
+
+Possiamo anche notare come cambia la funzione kernel equivalente al cambiare delle [[Some Base Function|base function]] che definiscono $\Phi$.
+![[ML/img/ML_05_2.png]]
+
+
