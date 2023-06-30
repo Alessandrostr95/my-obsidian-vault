@@ -31,7 +31,7 @@ La [[#^0e14e6|funzione kernel equivalente]] può anche essere vista come la **co
 
 ==Più due punti $x,x'$ sono **simili/vicini** maggiore è la loro correlazione==.
 Perciò, invece di utilizzare una serie di **base function** per definire una funzione kernel, possiamo definire una funzione kernel in **maniera diretta** e utilizzarla per fare predizioni.
-L'importante è che rispetti questo rapporto tra **località** e **correlazione** tra coppie di punti.
+L'importante è che rispetti questo rapporto tra **località** e **correlazione** tra coppie di punti. ^23c639
 
 ----
 # [[Kernel Regression]]
