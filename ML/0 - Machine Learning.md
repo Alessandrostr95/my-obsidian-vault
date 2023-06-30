@@ -42,3 +42,4 @@ tags:
 	- [[Fully Bayesian Approach]]
 - [[Nonparametric Regression]]
 	- [[Kernel Regression]]
+	- [[Locally Weighted Regression]]

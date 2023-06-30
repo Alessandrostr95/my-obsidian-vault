@@ -35,3 +35,4 @@ L'importante è che rispetti questo rapporto tra **località** e **correlazione*
 
 ----
 # [[Kernel Regression]]
+# [[Locally Weighted Regression]]
