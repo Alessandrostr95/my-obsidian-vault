@@ -1,3 +1,4 @@
+# Equivalent Kernel
 Nella [[Fully Bayesian Approach|Fully Bayesian Regression]] si vuole stimare la probabilità $p(y \vert x)$ di un qualsiasi valore target $y$ data un'osservazione $x$.
 Per fare ciò, viene calcolata la [[Fully Bayesian Approach#^73334c|posterior predictive distribution]], la quale sappiamo essere una **gaussiana** con
 - media $$\mu(x) = \beta \phi(x)^TS \mathbf{\Phi}^T\mathbf{t}$$
@@ -22,5 +23,5 @@ Possiamo osservare che la funzione kernel $\kappa(x,x_i)$ tende a dare valori pi
 
 Possiamo anche notare come cambia la funzione kernel equivalente al cambiare delle [[Some Base Function|base function]] che definiscono $\Phi$.
 ![[ML/img/ML_05_2.png]]
-
+A sinistra vediamo $\kappa(0,x)$ nel caso di [[Some Base Function#Polynomial|base function polinomiali]], e a destra nel caso di [[Some Base Function#Gaussian|base function gaussiane]].
 
