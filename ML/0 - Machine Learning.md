@@ -41,3 +41,4 @@ tags:
 - [[Probabilistic Model for Regression]]
 	- [[Fully Bayesian Approach]]
 - [[Nonparametric Regression]]
+	- [[Kernel Regression]]
