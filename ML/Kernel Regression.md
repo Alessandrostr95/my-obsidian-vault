@@ -24,3 +24,4 @@ Se assumiamo che la funzione kernel $\kappa_h$ sia una **distribuzione** allora 
 
 In conclusione, la media risulterà essere $$y(x) = \mathbb{E}\left[ t \vert x\right] \approx \frac{\sum_{i=1}^{n}\kappa_h(x-x_i) t_i}{\sum_{i=1}^{n}\kappa_h(x-x_i)}$$
 
+Osservare che se poniamo $$w_i(x) = \frac{\kappa_h(x-x_i)}{\sum_{j=1}^{n}\kappa_h(x-x_j)}$$ avremo che la predizione risulta essere una **combinazione lineare** dei **valori target del dataset** $$y(x) = \sum_{i=1}^{n}w_i(x) \cdot t_i$$ dove però i coefficienti dipendono anche dall'osservazione in input $x$.
