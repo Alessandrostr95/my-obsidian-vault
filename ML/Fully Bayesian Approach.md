@@ -10,7 +10,7 @@ Così facendo, si può stimare **direttamente** la probabilità di una predizion
 
 Perciò, assumendo di avere i campioni del dataset $\mathcal{T} = (\mathbf{X}, \mathbf{t})$ e di aver osservato un nuovo elemento $x$, vogliamo stimare la probabilità che $y$ sia il suo target, e possiamo farlo nel seguente modo.
 $$p(y \vert x, \mathbf{X}, \mathbf{t}, \alpha, \beta) = \int \underbrace{p(y \vert x, \mathbf{w}, \beta)}_{\text{likelihood } L(\mathbf{w}\vert x,t,\beta)} \cdot \underbrace{p(\mathbf{w} \vert \mathbf{t}, \mathbf{X}, \alpha, \beta)}_{\text{posterior distribution}} \,d\mathbf{w}$$
-Tale valore è anche detto **posterior predictive mean**.
+Tale valore è anche detto **posterior predictive mean**. ^73334c
 
 ```ad-info
 Ricordiamo che con $\mathbf{\Phi}$ si intende la matrice ottenuta applicando delle [[Some Base Function|funzioni base]] agli elementi $\mathbf{X}$.
