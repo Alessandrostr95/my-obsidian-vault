@@ -25,3 +25,36 @@ Se assumiamo che la funzione kernel $\kappa_h$ sia una **distribuzione** allora 
 In conclusione, la media risulterà essere $$y(x) = \mathbb{E}\left[ t \vert x\right] \approx \frac{\sum_{i=1}^{n}\kappa_h(x-x_i) t_i}{\sum_{i=1}^{n}\kappa_h(x-x_i)}$$
 
 Osservare che se poniamo $$w_i(x) = \frac{\kappa_h(x-x_i)}{\sum_{j=1}^{n}\kappa_h(x-x_j)}$$ avremo che la predizione risulta essere una **combinazione lineare** dei **valori target del dataset** $$y(x) = \sum_{i=1}^{n}w_i(x) \cdot t_i$$ dove però i coefficienti dipendono anche dall'osservazione in input $x$.
+
+```julia
+using Plots
+using Distributions
+using LaTeXStrings
+
+# real function to predict
+f(x) = sin(2x) + rand(Normal(0, .1))
+
+# gaussian kernel function RBF
+κ(x, h=.5) = ℯ^(-(abs(x)^2)/(2h^2))
+
+Σ = sum
+𝑤(x, i, X, h=.5) = κ(x-X[i], h)/(Σ([κ(x - xᵢ, h) for xᵢ ∈ X]))
+y(x, X, t, h=.5) = Σ([𝑤(x, i, X, h)*t[i] for i ∈ 1:length(X)])
+
+function kernel_regression(n::Int)
+    X = rand(0:0.001:2, n)
+    t = f.(X)
+    scatter(X, t, label=:none)
+    plot!(0:0.01:2, x -> sin(2x), label=L"\sin(2x)", w=2)
+    plot!(0:0.01:2, x -> y(x,X,t, 0.1), label=L"y(x), h=0.1", w=2)
+    plot!(0:0.01:2, x -> y(x,X,t, 0.25), label=L"y(x), h=0.25", w=2)
+    plot!(0:0.01:2, x -> y(x,X,t, 0.5), label=L"y(x), h=0.5", w=2)
+    plot!(title="\$ n = $n \$")
+end
+
+kernel_regression(50)
+```
+
+![[ML/img/ML_05_4.png]] ^836c80
+
+[[#^836c80|Notare]] come per valori piccoli di $h$ il predittore tende ad andare in [[Prediction Risk|overfitting]], mentre viceversa per valori grandi di $h$ va in underfitting.
