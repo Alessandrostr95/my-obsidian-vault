@@ -37,7 +37,7 @@ Allora il vettore $\mathbf{X} = \mu + A \mathbf{Z}$ avrà **distribuzione multiv
 ### Densità normale multivariata
 Sia il vettore $\mathbf{Z} = (Z_1, ..., Z_n)$ composto da sole $N(0,1)$.
 Siano un $\mu \in \mathbb{R}^n$  e $A \in \mathbb{R}^{n \times n}$.
-Il vettore $\mathbf{X} = \mu + A \mathbf{Z}$ con media $\mu$ e matrice di covarianza $\Sigma = AA^T$ avrà densità $$\frac{1}{(2\pi)^{n} \cdot \vert \det{(\Sigma)}\vert}\exp\left(-\frac{1}{2}(\mathbf{X} - \mu)\Sigma(\mathbf{X} - \mu)^T \right)$$
+Il vettore $\mathbf{X} = \mu + A \mathbf{Z}$ con media $\mu$ e matrice di covarianza $\Sigma = AA^T$ avrà densità $$\frac{1}{(2\pi)^{n/2} \cdot \vert \det{(\Sigma)}\vert^{1/2}}\exp\left(-\frac{1}{2}(\mathbf{X} - \mu)\Sigma^{-1}(\mathbf{X} - \mu)^T \right)$$
 
 
 ----------------------------------
