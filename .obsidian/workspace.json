@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5af09c72d6978b4b",
+        "id": "579004c96c439316",
         "type": "tabs",
         "children": [
           {
-            "id": "40a052c35c984ec8",
+            "id": "68256530dab0e3fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Local Logistic Regression.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4ed35f28c9433dbe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Some Base Function.md",
+                "file": "ML/Gaussian Processes.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Local Logistic Regression.md",
+                "file": "ML/Gaussian Processes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Local Logistic Regression.md"
+                "file": "ML/Gaussian Processes.md"
               }
             }
           },
@@ -159,11 +147,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "40a052c35c984ec8",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "ML/Some Base Function.md",
     "ML/0 - Machine Learning.md",
+    "ML/Gaussian Processes.md",
     "ML/Local Logistic Regression.md",
+    "ML/Some Base Function.md",
     "ML/Locally Weighted Regression.md",
     "ML/Prediction Risk.md",
     "ML/Some Loss Functions.md",
@@ -196,7 +185,6 @@
     "ISTI/Distribuzioni.md",
     "IR/Scoring, term weighting & the vector space model.md",
     "IR/0 - Information Retrieval.md",
-    "IR/Index construction.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
