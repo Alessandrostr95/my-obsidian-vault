@@ -20,7 +20,7 @@ Consideriamo l'insieme di punti $\mathbf{X} = (x_1, ..., x_m) \subseteq \mathbb{
 Indichiamo con $\mathbf{f} = f(\mathbf{X}) = (f(x_1), ..., f(x_m)) \in \mathbb{R}^m$ come il vettore $m$-dimensionale dei valori assegnati da $f$ agli elementi di $X$.
 
 Per semplicità, al momento assumiamo che $p(\mathbf{f})$ segua una [[CLT - Central Limit Theorem#Normali Multivariate|distribuzione gaussiana multivariata]] con media $\mathbf{0} = (0, ..., 0)$ e matrice di covarianza $\sigma^2I$.
-$$p(\mathbf{f} \vert \mathbf{X}, \sigma^2) = \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\tfrac{f(x_i)^2}{2\sigma^2}} =\frac{1}{(2\pi\sigma^2)^{m/2}}e^{-\tfrac{1}{2\sigma^2}\Vert \mathbf{f} \Vert^2}$$
+$$p(\mathbf{f}) = p(\mathbf{f} \vert \mathbf{X}, \sigma^2) = \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\tfrac{f(x_i)^2}{2\sigma^2}} =\frac{1}{(2\pi\sigma^2)^{m/2}}e^{-\tfrac{1}{2\sigma^2}\Vert \mathbf{f} \Vert^2}$$
 
 ```ad-attention
 title: Warning
@@ -30,5 +30,12 @@ Per modellare la **dipendenza** tra le predizioni, basta generalizzare utilizzan
 
 Assumiamo ora di avere a disposizione i valori target $\mathbf{t} = (t_1, ..., t_m)$ corrispondenti ai punti $\mathbf{X}$.
 
+Come per il [[Fully Bayesian Approach|fully bayesian regression]] possiamo **aggiornare** la distribuzione $p(\mathbf{f})$ utilizzando la **formula di bayes** $$p(\mathbf{f} \vert \mathbf{X}, \mathbf{t}) \propto \underbrace{p(\mathbf{t} \vert \mathbf{X}, \mathbf{f})}_{\text{likelihood}} \cdot \underbrace{p(\mathbf{f}  \vert \mathbf{X})}_{\text{prior}}$$
 
+Affinché la **distribuzione a posteriori** sia una **gaussiana** è necessario assumere che anche la verosimiglianza $p(\mathbf{t} \vert \mathbf{X}, \mathbf{f})$ sia **gaussiana**.
+Perciò, assumendo che dato un valore $x$ il suo target $t$ segua la gaussiana $$t \vert x, \beta \sim \mathcal{N}(f(x), \beta^{-1})$$ avremo che $$p(\mathbf{t} \vert \mathbf{X}, \mathbf{f}) = \prod_{i=1}^{m} p(t_i \vert x_i, f(x_i))$$
+
+In conclusione, come [[Fully Bayesian Approach|già visto]], sarà anch'essa una **gaussiana** con:
+- varianza $$S = (\beta\mathbf{X}^T\mathbf{X} + \sigma^2 I)^{-1}$$
+- media $$\mu = \beta S\mathbf{X}^T \mathbf{t}$$
 
