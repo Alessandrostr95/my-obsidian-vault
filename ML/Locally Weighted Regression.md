@@ -17,4 +17,9 @@ $$\Psi(\mathbf{x}) = \begin{pmatrix}
 0 &0 &... &\kappa_h(\mathbf{x}-\mathbf{x}_n)
 \end{pmatrix}$$
 
+La predizione di un qualsiasi input $\mathbf{x}$ sarà effettuata come il prodotto $$y(\mathbf{x}) = \mathbf{w}(\mathbf{x})^T \mathbf{x}$$
 
+```ad-attention
+Questo metodo non è del tutto **non parametrico**, in quanto bisogna calcolare il miglior valore dei parametri $\mathbf{w}(\mathbf{x})$. 
+D'altra parte non è nemmeno parametrico, perché non si calcola un insieme di parametri che valga per qualsiasi **input**, bensì dipende ogni volta dall'inptu che si riceve.
+```
