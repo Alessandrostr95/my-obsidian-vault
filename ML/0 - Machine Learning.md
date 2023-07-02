@@ -44,4 +44,4 @@ tags:
 	- [[Kernel Regression]]
 	- [[Locally Weighted Regression]]
 	- [[Local Logistic Regression]]
-- [[Gaussian Processes]]
+- [[Gaussian Processes Regression]]

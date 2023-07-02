@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gaussian Processes.md",
+                "file": "ML/Gaussian Processes Regression.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gaussian Processes.md",
+                "file": "ML/Gaussian Processes Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gaussian Processes.md"
+                "file": "ML/Gaussian Processes Regression.md"
               }
             }
           },
@@ -147,10 +147,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "68256530dab0e3fd",
   "lastOpenFiles": [
+    "ML/Nonparametric Regression.md",
     "ML/0 - Machine Learning.md",
-    "ML/Gaussian Processes.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/Gaussian Processes Regression.md",
     "ML/Local Logistic Regression.md",
     "ML/Some Base Function.md",
     "ML/Locally Weighted Regression.md",
@@ -164,9 +166,7 @@
     "ML/From Learning to Optimization.md",
     "ML/img/ML_05_4.png",
     "AGT/img/Pasted image 20230702120011.png",
-    "ML/Nonparametric Regression.md",
     "ML/img/ML_05_3.png",
-    "ML/Fully Bayesian Approach.md",
     "ML/img/ML_05_2.png",
     "ML/img/ML_05_1.png",
     "ML/Probabilistic Learning.md",
