@@ -7,7 +7,7 @@ $$x \mapsto (1,x,x^2,...,x^d)$$
 $$\phi_j(x) = \exp{\left( -\frac{1}{2}\left( \frac{x - \mu}{\sigma} \right)^2\right)}$$
 
 # Sigmoid
-$$\phi_j(x) = \sigma{\left(\frac{x-\mu_j}{s}\right)} = \frac{1}{1+e^{-\dfrac{x-\mu_j}{s}}}$$
+$$\phi_j(x) = \sigma{\left(\frac{x-\mu_j}{s}\right)} = \frac{1}{1+e^{-\tfrac{x-\mu_j}{s}}}$$
 $$\Phi: \mathcal{X} \to \mathbb{R}^d$$
 $$x \mapsto \begin{pmatrix}
 \sigma{((x-\mu_1)/s)}\\

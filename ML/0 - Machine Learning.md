@@ -43,3 +43,4 @@ tags:
 - [[Nonparametric Regression]]
 	- [[Kernel Regression]]
 	- [[Locally Weighted Regression]]
+	- [[Local Logistic Regression]]
