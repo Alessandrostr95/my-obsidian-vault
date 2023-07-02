@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "358e01ab0d1c033e",
+        "id": "5af09c72d6978b4b",
         "type": "tabs",
         "children": [
           {
-            "id": "1f9cf3bac5e9f261",
+            "id": "d37331ac9f3bbe64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Kernel Regression.md",
+                "file": "ML/Locally Weighted Regression.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "303b040e40a0fea9",
+            "id": "95216d21778403d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/From Learning to Optimization.md",
+                "file": "ML/Prediction Risk.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Kernel Regression.md",
+                "file": "ML/Locally Weighted Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Kernel Regression.md"
+                "file": "ML/Locally Weighted Regression.md"
               }
             }
           },
@@ -148,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 335.5
+    "width": 302.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,21 +159,25 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "1f9cf3bac5e9f261",
+  "active": "d37331ac9f3bbe64",
   "lastOpenFiles": [
-    "ML/From Learning to Optimization.md",
-    "ML/Kernel Regression.md",
+    "ML/Prediction Risk.md",
     "ML/0 - Machine Learning.md",
+    "ML/Some Loss Functions.md",
+    "ML/Supervised Learning.md",
+    "ML/Locally Weighted Regression.md",
+    "ML/Convessità.md",
+    "ML/Gradient Descent.md",
+    "ML/Linear Regression.md",
+    "ML/Kernel Regression.md",
+    "ML/From Learning to Optimization.md",
     "ML/img/ML_05_4.png",
     "AGT/img/Pasted image 20230702120011.png",
-    "ML/Locally Weighted Regression.md",
     "ML/Nonparametric Regression.md",
     "ML/img/ML_05_3.png",
-    "ML/Gradient Descent.md",
     "ML/Fully Bayesian Approach.md",
     "ML/img/ML_05_2.png",
     "ML/img/ML_05_1.png",
-    "ML/Prediction Risk.md",
     "ML/Probabilistic Learning.md",
     "ML/img/ML_04_21.png",
     "ML/Probabilistic Model for Regression.md",
@@ -183,7 +187,6 @@
     "ISTI/Stimatore di Massima Verosimiglianza.md",
     "ML/img/ML_04_18.png",
     "ML/img/ML_04_17.png",
-    "ML/Linear Regression.md",
     "ML/Model Selection.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/Language Models.md",
@@ -194,8 +197,6 @@
     "IR/0 - Information Retrieval.md",
     "IR/Index construction.md",
     "IR/Positional postings and phrase queries.md",
-    "IR/Positional indexes.md",
-    "IR/Biword Indexes.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
