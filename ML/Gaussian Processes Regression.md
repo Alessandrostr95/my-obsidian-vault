@@ -60,15 +60,26 @@ Come **distribuzione a priori** abbiamo $$\mathbf{f} \vert \mathbf{X} \sim \math
 
 Supponiamo ora di ottenere un nuovo set di osservazioni $\mathbf{X}^* = (x^*_1, ..., x^*_r)$.
 Allora la distribuzione del vettore $(\mathbf{f}, \mathbf{f}^*)$, con $\mathbf{f} = f(\mathbf{X})$ e $\mathbf{f}^* = f(\mathbf{X}^*)$, segue sempre una **gaussiana** con media $$\mu(\mathbf{X},\mathbf{X}^*) = (\mu(\mathbf{X}), \mu(\mathbf{X}^*))$$ e matrice di covarianza
-$$\Sigma(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
+$$\Sigma(\mathbf{X},\mathbf{X}^*) = \begin{bmatrix}
 \kappa(\mathbf{X}) &\kappa(\mathbf{X},\mathbf{X}^*)\\
 \kappa(\mathbf{X},\mathbf{X}^*)^T &\kappa(\mathbf{X}^*)\\
-\end{pmatrix}$$ dove $$\kappa(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
+\end{bmatrix}$$ dove $$\kappa(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
 \kappa(x_1,x^*_1) &\kappa(x_1,x^*_2) &... &\kappa(x_1,x^*_r)\\
 \kappa(x_2,x^*_1) &\kappa(x_2,x^*_2) &... &\kappa(x_2,x^*_r)\\
 \vdots &\vdots &\ddots &\vdots\\
 \kappa(x_m,x^*_1), &\kappa(x_m,x^*_2), &..., &\kappa(x_m,x^*_r)\\
 \end{pmatrix}$$
 
+In sostaza $$\begin{bmatrix} \mathbf{f}\\ \mathbf{f}^*\end{bmatrix} \sim \mathcal{N}\left( \begin{bmatrix}
+\mu(\mathbf{X})\\
+\mu(\mathbf{X}^*)\\
+\end{bmatrix} \;\Bigg\vert\; \begin{bmatrix}
+\kappa(\mathbf{X}) &\kappa(\mathbf{X},\mathbf{X}^*)\\
+\kappa(\mathbf{X},\mathbf{X}^*)^T &\kappa(\mathbf{X}^*)\\
+\end{bmatrix}\right)$$
 
+Usando la formula di Bayes, avremo che i valori della funzione $\mathbf{f}^*$ saranno distribuiti come
+$$\mathbf{f}^* \vert \mathbf{X}, \mathbf{X}^*, \mathbf{f} \sim \mathcal{N}(,)$$
 
+$$\tilde\mu = \mu(\mathbf{X}^*) + \kappa(\mathbf{X},\mathbf{X}^*)^T\kappa(\mathbf{X},\mathbf{X})^{-1}(\mathbf{f} - \mu(\mathbf{X}))$$
+$$\tilde\Sigma = \kappa(\mathbf{X}^*) - \kappa(\mathbf{X}^*, \mathbf{X})\kappa(\mathbf{X})^{-1}\kappa(\mathbf{X}^*, \mathbf{X})^T$$
