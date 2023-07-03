@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1863d2af849542c7",
+        "id": "3eddddb17e850713",
         "type": "tabs",
         "children": [
           {
-            "id": "3409a52cae2fb73f",
+            "id": "5a12456e215e1dda",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gaussian Processes Regression.md",
+                "file": "ML/Linear Classification.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gaussian Processes Regression.md",
+                "file": "ML/Linear Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gaussian Processes Regression.md"
+                "file": "ML/Linear Classification.md"
               }
             }
           },
@@ -147,24 +147,25 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "5a12456e215e1dda",
   "lastOpenFiles": [
+    "ML/Supervised Learning.md",
+    "ML/0 - Machine Learning.md",
+    "ML/Linear Classification.md",
+    "ML/Nonparametric Regression.md",
+    "ML/Gaussian Processes Regression.md",
     "ML/img/ML_05_8.png",
     "ML/img/ML_05_7.png",
     "ML/img/ML_05_6.png",
     "Pasted image 20230703173510.png.md",
-    "ML/Gaussian Processes Regression.md",
     "ML/img/ML_05_5.png",
     "ML/Fully Bayesian Approach.md",
     "ISTI/CLT - Central Limit Theorem.md",
-    "ML/Nonparametric Regression.md",
-    "ML/0 - Machine Learning.md",
     "ML/Local Logistic Regression.md",
     "ML/Some Base Function.md",
     "ML/Locally Weighted Regression.md",
     "ML/Prediction Risk.md",
     "ML/Some Loss Functions.md",
-    "ML/Supervised Learning.md",
     "ML/Convessità.md",
     "ML/Gradient Descent.md",
     "ML/Linear Regression.md",
@@ -178,7 +179,6 @@
     "ML/Probabilistic Learning.md",
     "ML/img/ML_04_21.png",
     "ML/Probabilistic Model for Regression.md",
-    "ML/img/ML_04_20.png",
     "ISTI/Stimatore di Massima Verosimiglianza.md",
     "ML/Model Selection.md",
     "ML/Esempio utilizzo Regolarizzazione.md",

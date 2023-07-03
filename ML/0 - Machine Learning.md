@@ -45,3 +45,4 @@ tags:
 	- [[Locally Weighted Regression]]
 	- [[Local Logistic Regression]]
 - [[Gaussian Processes Regression]]
+- [[Linear Classification]]
