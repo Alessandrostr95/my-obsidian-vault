@@ -46,3 +46,4 @@ tags:
 	- [[Local Logistic Regression]]
 - [[Gaussian Processes Regression]]
 - [[Linear Classification]]
+	- [[Linear Discriminant Function in Binary Classification]]

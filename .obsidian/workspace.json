@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "597177b4daf6301b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Linear Discriminant Function in Binary Classification.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Linear Classification.md",
+                "file": "ML/Linear Discriminant Function in Binary Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Linear Classification.md"
+                "file": "ML/Linear Discriminant Function in Binary Classification.md"
               }
             }
           },
@@ -147,11 +160,13 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5a12456e215e1dda",
+  "active": "597177b4daf6301b",
   "lastOpenFiles": [
-    "ML/Supervised Learning.md",
     "ML/0 - Machine Learning.md",
+    "IR/0 - Information Retrieval.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Linear Classification.md",
+    "ML/Supervised Learning.md",
     "ML/Nonparametric Regression.md",
     "ML/Gaussian Processes Regression.md",
     "ML/img/ML_05_8.png",
@@ -183,8 +198,6 @@
     "ML/Model Selection.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/Language Models.md",
-    "ML/Naive Bayes Classifier.md",
-    "ML/Maximum a Posteriori - Bayesian Approach.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
