@@ -83,3 +83,4 @@ $$\mathbf{f}^* \vert \mathbf{X}, \mathbf{X}^*, \mathbf{f} \sim \mathcal{N}(,)$$
 
 $$\tilde\mu = \mu(\mathbf{X}^*) + \kappa(\mathbf{X},\mathbf{X}^*)^T\kappa(\mathbf{X},\mathbf{X})^{-1}(\mathbf{f} - \mu(\mathbf{X}))$$
 $$\tilde\Sigma = \kappa(\mathbf{X}^*) - \kappa(\mathbf{X}^*, \mathbf{X})\kappa(\mathbf{X})^{-1}\kappa(\mathbf{X}^*, \mathbf{X})^T$$
+![[ML_05_8.png]]
