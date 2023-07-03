@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "579004c96c439316",
+        "id": "1863d2af849542c7",
         "type": "tabs",
         "children": [
           {
-            "id": "68256530dab0e3fd",
+            "id": "3409a52cae2fb73f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "ML/Gaussian Processes Regression.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d8fa13db831c88ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Fully Bayesian Approach.md",
                 "mode": "source",
                 "source": false
               }
@@ -159,10 +147,14 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "68256530dab0e3fd",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "ML/Fully Bayesian Approach.md",
+    "ML/img/ML_05_7.png",
+    "ML/img/ML_05_6.png",
+    "Pasted image 20230703173510.png.md",
     "ML/Gaussian Processes Regression.md",
+    "ML/img/ML_05_5.png",
+    "ML/Fully Bayesian Approach.md",
     "ISTI/CLT - Central Limit Theorem.md",
     "ML/Nonparametric Regression.md",
     "ML/0 - Machine Learning.md",
@@ -188,15 +180,11 @@
     "ML/img/ML_04_20.png",
     "ML/img/ML_04_19.png",
     "ISTI/Stimatore di Massima Verosimiglianza.md",
-    "ML/img/ML_04_18.png",
-    "ML/img/ML_04_17.png",
     "ML/Model Selection.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/Language Models.md",
     "ML/Naive Bayes Classifier.md",
     "ML/Maximum a Posteriori - Bayesian Approach.md",
-    "ISTI/Distribuzioni.md",
-    "IR/Scoring, term weighting & the vector space model.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",

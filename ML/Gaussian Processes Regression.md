@@ -17,7 +17,10 @@ Ricapitolando, i concetti chiave sono:
 3. la **media** delle funzioni secondo la distribuzioni a posteriori è usata come funzione per fare predizioni.
 
 Consideriamo l'insieme di punti $\mathbf{X} = (x_1, ..., x_m) \subseteq \mathbb{R}^d$, e sia $\mathcal{H}$ la **famiglia di funazioni** $f: \mathbb{R}^d \to \mathbb{R}$ (la famiglia di tutti i possibili predittori).
-Indichiamo con $\mathbf{f} = f(\mathbf{X}) = (f(x_1), ..., f(x_m)) \in \mathbb{R}^m$ come il vettore $m$-dimensionale dei valori assegnati da $f$ agli elementi di $X$.
+**Per semplicità**, assumiamo che le funzioni in $\mathcal{H}$ abbiano un dominio **finito**, ovvero che $f: \mathbf{X} \to \mathbb{R}$.
+Questa assunzione verrà poi rimossa e la descrizione **generalizzata in seguito**.
+Perciò per descrivere una qualsiasi funzione $f \in \mathcal{H}$ possiamo usare il **vettore** $m$-dimensionale $\mathbf{f} = f(\mathbf{X}) = (f(x_1), ..., f(x_m)) \in \mathbb{R}^m$.
+Così facendo abbiamo definito una **biezione** tra $\mathcal{H}$ e $\mathbb{R}^m$.
 
 Per semplicità, al momento assumiamo che $p(\mathbf{f})$ segua una [[CLT - Central Limit Theorem#Normali Multivariate|distribuzione gaussiana multivariata]] con media $\mathbf{0} = (0, ..., 0)$ e matrice di covarianza $\sigma^2I$.
 $$p(\mathbf{f}) = p(\mathbf{f} \vert \mathbf{X}, \sigma^2) = \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\tfrac{f(x_i)^2}{2\sigma^2}} =\frac{1}{(2\pi\sigma^2)^{m/2}}e^{-\tfrac{1}{2\sigma^2}\Vert \mathbf{f} \Vert^2}$$
@@ -38,4 +41,20 @@ Perciò, assumendo che dato un valore $x$ il suo target $t$ segua la gaussiana $
 In conclusione, come [[Fully Bayesian Approach|già visto]], sarà anch'essa una **gaussiana** con:
 - varianza $$S = (\beta\mathbf{X}^T\mathbf{X} + \sigma^2 I)^{-1}$$
 - media $$\mu = \beta S\mathbf{X}^T \mathbf{t}$$
+## Generalization
+Nel caso più generale  $p(\mathbf{f}) = p(f(\mathbf{X}))$ segue una distribuzione gaussiana multivariata $$\mathbf{f} \vert \mathbf{X} \sim \mathcal{N}(\mu(\mathbf{X}), \Sigma(\mathbf{X}))$$
+
+In un processo gaussiano, la matrice di covarianza è definita come $$\Sigma(\mathbf{X}) = \kappa(\mathbf{X}) + \varepsilon \mathbf{I}$$ dove
+$$\kappa(\mathbf{X}) = \begin{pmatrix}
+\kappa(x_1,x_1) &\kappa(x_1,x_2) &... &\kappa(x_1,x_m)\\
+\kappa(x_2,x_1) &\kappa(x_2,x_2) &... &\kappa(x_2,x_m)\\
+\vdots &\vdots &\ddots &\vdots\\
+\kappa(x_m,x_1), &\kappa(x_m,x_2), &..., &\kappa(x_m,x_m)\\
+\end{pmatrix}$$ e $$\kappa(x_i,x_j) = \sigma^2 \exp\left(-\frac{1}{2\ell^2}(x_i-x_j)^2\right)$$
+I **meta parametri** $\sigma^2, \ell, \varepsilon$ possono essere interpretati nel seguente modo:
+- $\ell$ è un **fattore di stretch orizzontale**. Più è alto il suo valore, più la funzione risulta **morbida** ![[ML/img/ML_05_5.png]]
+-  $\sigma^2$ è un **fattore di stretch verticale**. Più è alto il suo valore, più la funzione risulta assumi valori "**ampi**" ![[ML/img/ML_05_6.png]]
+- $\varepsilon$ è un **rumore** ![[ML/img/ML_05_7.png]]
+
+Come **distribuzione a priori** abbiamo $$\mathbf{f} \vert \mathbf{X} \sim \mathcal{N}(\mathbf{0} \vert \Sigma(\mathbf{X}))$$
 
