@@ -58,3 +58,17 @@ I **meta parametri** $\sigma^2, \ell, \varepsilon$ possono essere interpretati n
 
 Come **distribuzione a priori** abbiamo $$\mathbf{f} \vert \mathbf{X} \sim \mathcal{N}(\mathbf{0} \vert \Sigma(\mathbf{X}))$$
 
+Supponiamo ora di ottenere un nuovo set di osservazioni $\mathbf{X}^* = (x^*_1, ..., x^*_r)$.
+Allora la distribuzione del vettore $(\mathbf{f}, \mathbf{f}^*)$, con $\mathbf{f} = f(\mathbf{X})$ e $\mathbf{f}^* = f(\mathbf{X}^*)$, segue sempre una **gaussiana** con media $$\mu(\mathbf{X},\mathbf{X}^*) = (\mu(\mathbf{X}), \mu(\mathbf{X}^*))$$ e matrice di covarianza
+$$\Sigma(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
+\kappa(\mathbf{X}) &\kappa(\mathbf{X},\mathbf{X}^*)\\
+\kappa(\mathbf{X},\mathbf{X}^*)^T &\kappa(\mathbf{X}^*)\\
+\end{pmatrix}$$ dove $$\kappa(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
+\kappa(x_1,x^*_1) &\kappa(x_1,x^*_2) &... &\kappa(x_1,x^*_r)\\
+\kappa(x_2,x^*_1) &\kappa(x_2,x^*_2) &... &\kappa(x_2,x^*_r)\\
+\vdots &\vdots &\ddots &\vdots\\
+\kappa(x_m,x^*_1), &\kappa(x_m,x^*_2), &..., &\kappa(x_m,x^*_r)\\
+\end{pmatrix}$$
+
+
+
