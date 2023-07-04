@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3eddddb17e850713",
+        "id": "f0e3742f2271c149",
         "type": "tabs",
         "children": [
           {
-            "id": "597177b4daf6301b",
+            "id": "046b845ff6fb74d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md",
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md",
+                "file": "ML/0 - Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md"
+                "file": "ML/0 - Machine Learning.md"
               }
             }
           },
@@ -147,11 +147,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "597177b4daf6301b",
+  "active": "046b845ff6fb74d5",
   "lastOpenFiles": [
+    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Nonparametric Regression.md",
     "ML/Locally Weighted Regression.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/0 - Machine Learning.md",
     "ML/Fully Bayesian Approach.md",
