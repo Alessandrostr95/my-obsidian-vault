@@ -7,7 +7,7 @@ Il caso più semplice è la **classificazione binaria**, in cui ogni elemento $x
 Una codifica, in questo caso, può essere un singolo valore numerico $t \in \lbrace 0,1 \rbrace$, dove $t = 0$ se $x \in C_0$ e $t = 1$ se $x \in C_1$.
 
 Nel caso più generale in cui abbiamo $K > 2$ classi, è preferibile usare la codifica **one-hot**, ovvero $t \in \lbrace 0, 1\rbrace^K$ è un vettore con $K-1$ zeri ed un solo $1$.
-Se $x \in C_i$ allora calle con $1$ è quella in posizione $i$.
+Se $x \in C_i$ allora calle con $1$ è quella in posizione $i$. ^85e2b9
 
 $C_i$ | $t$
 ---|---
