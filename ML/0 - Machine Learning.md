@@ -41,7 +41,7 @@ tags:
 - [[Probabilistic Model for Regression]]
 	- [[Fully Bayesian Approach]]
 - [[Nonparametric Regression]]
-	- [[Kernel Regression]]
+	- [[Kernel Regression - Nadaraya-Watson Model]]
 	- [[Locally Weighted Regression]]
 	- [[Local Logistic Regression]]
 - [[Gaussian Processes Regression]]

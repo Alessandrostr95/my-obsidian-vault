@@ -1,4 +1,4 @@
-Nella [[Kernel Regression]] la predizione viene fatta come una **media pesata e normalizzata** dei valori target, pesandoli in base a quanto i corrispettivi campioni $x_i \in X$ sono simili al valore in input $x$.
+Nella [[Kernel Regression - Nadaraya-Watson Model]] la predizione viene fatta come una **media pesata e normalizzata** dei valori target, pesandoli in base a quanto i corrispettivi campioni $x_i \in X$ sono simili al valore in input $x$.
 
 La **Locally Weighted Regression** migliora la Kernel Rergession, considerando come **[[Prediction Risk#^0b44e2|funaione loss]]** una media pesata degli **[[Some Loss Functions#Quadratic Loss|scarti quadratici]]** anziché dei valori target.
 

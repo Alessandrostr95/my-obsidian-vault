@@ -34,6 +34,6 @@ Perciò, invece di utilizzare una serie di **base function** per definire una fu
 L'importante è che rispetti questo rapporto tra **località** e **correlazione** tra coppie di punti. ^23c639
 
 ----
-# [[Kernel Regression]]
+# [[Kernel Regression - Nadaraya-Watson Model]]
 # [[Locally Weighted Regression]]
 # [[Local Logistic Regression]]

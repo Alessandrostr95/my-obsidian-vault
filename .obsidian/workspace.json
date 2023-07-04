@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Linear Classification.md",
+                "file": "ML/Locally Weighted Regression.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md",
+                "file": "ML/Locally Weighted Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md"
+                "file": "ML/Locally Weighted Regression.md"
               }
             }
           },
@@ -160,32 +159,32 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "597177b4daf6301b",
+  "active": "5a12456e215e1dda",
   "lastOpenFiles": [
-    "ML/img/ML_06_1.png",
-    "ML/Linear Discriminant Function in Binary Classification.md",
-    "ML/0 - Machine Learning.md",
-    "IR/0 - Information Retrieval.md",
-    "ML/Linear Classification.md",
-    "ML/Supervised Learning.md",
     "ML/Nonparametric Regression.md",
+    "ML/Kernel Regression - Nadaraya-Watson Model.md",
+    "ML/Locally Weighted Regression.md",
+    "ML/0 - Machine Learning.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/Linear Classification.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
+    "ML/img/ML_06_1.png",
+    "IR/0 - Information Retrieval.md",
+    "ML/Supervised Learning.md",
     "ML/Gaussian Processes Regression.md",
     "ML/img/ML_05_8.png",
     "ML/img/ML_05_7.png",
     "ML/img/ML_05_6.png",
     "Pasted image 20230703173510.png.md",
     "ML/img/ML_05_5.png",
-    "ML/Fully Bayesian Approach.md",
     "ISTI/CLT - Central Limit Theorem.md",
     "ML/Local Logistic Regression.md",
     "ML/Some Base Function.md",
-    "ML/Locally Weighted Regression.md",
     "ML/Prediction Risk.md",
     "ML/Some Loss Functions.md",
     "ML/Convessità.md",
     "ML/Gradient Descent.md",
     "ML/Linear Regression.md",
-    "ML/Kernel Regression.md",
     "ML/From Learning to Optimization.md",
     "ML/img/ML_05_4.png",
     "AGT/img/Pasted image 20230702120011.png",

@@ -65,6 +65,8 @@ x_1\\
 x_D
 \end{bmatrix}$$
 
+Sarebbe desiderabile che 
+
 
 ## Generalized discriminant functions
 Un approccio **generalizzato** consiste nell'applicare delle [[Some Base Function|base function]] $\phi_1, ..., \phi_m: \mathbb{R}^D \to \mathbb{R}$, così ottenendo la funzione lineare $$y(\mathbf{x}) = w_0 + \sum_{i=1}^{m}w_i\phi_i(\mathbf{x})$$
