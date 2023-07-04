@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f0e3742f2271c149",
+        "id": "90ff4f16efc31169",
         "type": "tabs",
         "children": [
           {
-            "id": "046b845ff6fb74d5",
+            "id": "482d2e634db9cf08",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/0 - Machine Learning.md"
+                "file": "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md"
               }
             }
           },
@@ -147,15 +147,19 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "046b845ff6fb74d5",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "Pasted image 20230703173510.png.md",
+    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/img/ML_06_3.png",
+    "ML/img/ML_06_2.png",
+    "ML/Linear Classification.md",
+    "ML/0 - Machine Learning.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Nonparametric Regression.md",
     "ML/Locally Weighted Regression.md",
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
-    "ML/0 - Machine Learning.md",
     "ML/Fully Bayesian Approach.md",
-    "ML/Linear Classification.md",
     "ML/img/ML_06_1.png",
     "IR/0 - Information Retrieval.md",
     "ML/Supervised Learning.md",
@@ -163,7 +167,6 @@
     "ML/img/ML_05_8.png",
     "ML/img/ML_05_7.png",
     "ML/img/ML_05_6.png",
-    "Pasted image 20230703173510.png.md",
     "ML/img/ML_05_5.png",
     "ISTI/CLT - Central Limit Theorem.md",
     "ML/Local Logistic Regression.md",
@@ -177,13 +180,10 @@
     "ML/img/ML_05_4.png",
     "AGT/img/Pasted image 20230702120011.png",
     "ML/img/ML_05_3.png",
-    "ML/img/ML_05_2.png",
-    "ML/img/ML_05_1.png",
     "ML/Probabilistic Learning.md",
     "ML/Probabilistic Model for Regression.md",
     "ISTI/Stimatore di Massima Verosimiglianza.md",
     "ML/Model Selection.md",
-    "ML/Esempio utilizzo Regolarizzazione.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
