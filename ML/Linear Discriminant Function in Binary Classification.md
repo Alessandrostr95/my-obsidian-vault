@@ -97,9 +97,14 @@ y_2(\mathbf{x}_1) &y_2(\mathbf{x}_2) &\cdots &y_2(\mathbf{x}_n)\\
 y_K(\mathbf{x}_1) &y_K(\mathbf{x}_2) &\cdots &y_K(\mathbf{x}_n)
 \end{bmatrix}$$
 
-Dato che è desiderabile che $y_i(\mathbf{x}_j)$ sia una **[[#^226f81|stima della media]]** 
+Dato che è desiderabile che $y_i(\mathbf{x}_j)$ sia una **stima del valore atteso** di $t_{j,i}$, allora possiamo esprimere lo **scarto** $(y_i(\mathbf{x}_j) - t_{j,i})$ in **forma matriciale** come
+$$(\mathbf{Y} - \mathbf{T}^T) = (\mathbf{X}\mathbf{W} - \mathbf{T}^T) \in \mathbb{R}^{K \times n}$$
 
+Consideriamo ora la **diagonale** della matrice $$(\mathbf{Y} - \mathbf{T}^T)^T(\mathbf{Y} - \mathbf{T}^T) \in\mathbb{R}^{n \times n}$$
+È facile verificare che gli elementi sulla diagonale corrispondono agli **scarti quadratici** $$((\mathbf{Y} - \mathbf{T}^T)^T(\mathbf{Y} - \mathbf{T}^T))_{\ell,\ell} = \sum_{i=1}^{n}(y_\ell(\mathbf{x}_i) - t_{i, \ell})^2$$
+Perciò, si vuole che la matrice $\mathbf{W}$ **minimizzi** gli scarti quadratici tra predizione e valore reale della classe, o in termini matriciali 
+$$\mathbf{W}^* := \arg\min_{\mathbf{W} \in \mathbb{R}^{(D+1) \times K}} \sum \text{tr}\left( (\mathbf{X}\mathbf{W} - \mathbf{T}^T)^T(\mathbf{X}\mathbf{W} - \mathbf{T}^T) \right)$$
 
-
+In **forma chiusa** la soluzione risulta essere $$\mathbf{W} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{T}$$
 ## Generalized discriminant functions
 Un approccio **generalizzato** consiste nell'applicare delle [[Some Base Function|base function]] $\phi_1, ..., \phi_m: \mathbb{R}^D \to \mathbb{R}$, così ottenendo la funzione lineare $$y(\mathbf{x}) = w_0 + \sum_{i=1}^{m}w_i\phi_i(\mathbf{x})$$
