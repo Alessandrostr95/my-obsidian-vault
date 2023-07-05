@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Perceptron.md",
-                "mode": "source",
+                "file": "ML/Linear Discriminant Function in Binary Classification.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Perceptron.md",
+                "file": "ML/Linear Discriminant Function in Binary Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Perceptron.md"
+                "file": "ML/Linear Discriminant Function in Binary Classification.md"
               }
             }
           },

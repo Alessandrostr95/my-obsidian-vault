@@ -31,7 +31,8 @@ w_{10} + \mathbf{w}_1^T\mathbf{x}\\
 w_{20} + \mathbf{w}_2^T\mathbf{x}\\
 \vdots\\
 w_{K0} + \mathbf{w}_K^T\mathbf{x}\\
-\end{bmatrix}$$ tali che $$z_i = 1 \iff i = \arg \max_{1 \leq i \leq K} y_i(\mathbf{x})$$ e vale 0 altrimenti.
+\end{bmatrix}$$
+tali che $$z_i = 1 \iff i = \arg \max_{1 \leq i \leq K} y_i(\mathbf{x})$$ e vale 0 altrimenti.
 
 ```ad-info
 In parole povere, $\mathbf{z}$ è il vettore che contiene un solo 1 nella posizione in cui si trova l'indice del **valore massimo** tra le funzioni discriminative $y_i$.
@@ -63,7 +64,8 @@ w_{K0} &w_{K2} & \cdots &w_{KD}
 x_1\\
 \vdots\\
 x_D
-\end{bmatrix}$$ con $\mathbf{W} \in \mathbb{R}^{(D+1) \times K}$.
+\end{bmatrix}$$
+con $\mathbf{W} \in \mathbb{R}^{(D+1) \times K}$.
 
 Sarebbe desiderabile che $$\begin{align}
 y_i(\mathbf{x})
