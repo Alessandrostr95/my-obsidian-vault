@@ -48,3 +48,4 @@ tags:
 - [[Linear Classification]]
 	- [[Linear Discriminant Function in Binary Classification]]
 	- [[Linear Discriminant Analysis - Fisher Linear Discriminant]]
+	- [[Perceptron]]
