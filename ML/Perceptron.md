@@ -22,7 +22,7 @@ In questo caso invece indicheremo con $t = 0$ la classe $C_1$ e con $t = -1$ la 
 
 ^132e5b
 
-Il percettrone è quindi un **[[Linear Discriminant Function in Binary Classification#Generalized discriminant functions|generalized linear model]]** dove $\phi$ che equivale alla **funzione identità**.
+Il percettrone è quindi un **[[Generalized Linear Model|generalized linear model]]** dove $\phi$ che equivale alla **funzione identità**.
 
 ## Cost Function
 Come al solito, si vuole trovare il valore dei parametri $\mathbf{w}$ che [[Prediction Risk#^9cd1a0|minimizzi un rischio empirico]].
