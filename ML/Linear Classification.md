@@ -42,3 +42,5 @@ Comprando un elemento alle classi, possiamo poi identificare quella classe che m
 
 ----
 # [[Linear Discriminant Function in Binary Classification]]
+# [[Linear Discriminant Analysis - Fisher Linear Discriminant]]
+# [[Perceptron]]
