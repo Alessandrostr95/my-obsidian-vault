@@ -1,4 +1,4 @@
-Un **Language Model** è una **distribuzione di probabilità** di parole.
+Un **Language Model** è una **distribuzione di probabilità categorica** su un vocabolario di termini (per esempio tutte le parole che appaiono in una collezione di documenti).
 Sia quindi $\mathcal{T} = \lbrace t_1, ..., t_n \rbrace$ l'insieme di **termini** (parole) che occorrono in una collezione di documenti $\mathcal{C}$.
 Perciò, data la sequenza di parole $w_1, ..., w_k \in \mathcal{T}$, il language model è utilizzato per stimare la probabilità $$P(w_1, ..., w_k \vert \mathcal{C})$$
 
@@ -24,7 +24,15 @@ Una volta osservato il corpus $\mathcal{C}$, e avendo ricavato tutte le [[Scorin
 $$\pmb{\alpha}' = (\alpha_1 + m_1, ..., \alpha_n + m_n)$$
 Ottenendo quindi $$p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha}) = p(\phi_1, ..., \phi_n \vert \pmb{\alpha}') = \frac{1}{\Delta(\alpha_1 + m_1, ..., \alpha_n + m_n)} \prod_{i=1}^{n}\phi_i^{\alpha_i + m_i - 1} = \text{Dir}(\pmb{\phi} \vert \pmb{\alpha}')$$ dove $\pmb{\phi} = (\phi_1, ..., \phi_n)$.
 
-Per ricavare la singola probabilità a posteriori $\hat{\phi}_i$ basterà calcolare $$\hat{\phi}_i = p(t_i \vert \mathcal{C}, \pmb{\alpha}) = \int p(t_i \vert\pmb{\phi}) \cdot p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha}) \,d\pmb{\phi} = \int \phi_i \cdot \text{Dir}(\pmb{\phi} \vert \pmb{\alpha}') \,d\pmb{\phi} = \mathbb{E}_{\pmb{\alpha}'}\left[ \phi_i \right]$$
+Per ricavare la singola probabilità a posteriori $\hat{\phi}_i$ basterà calcolare
+$$\begin{align}
+\hat{\phi}_i
+&= p(t_i \vert \mathcal{C}, \pmb{\alpha})\\
+&= p(t_i \vert \pmb{\phi}) \cdot p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha})\\
+&= \int p(t_i \vert\pmb{\phi}) \cdot p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha}) \,d\pmb{\phi}\\
+&= \int \phi_i \cdot \text{Dir}(\pmb{\phi} \vert \pmb{\alpha}') \,d\pmb{\phi}\\
+&= \mathbb{E}_{\pmb{\alpha}'}\left[ \phi_i \right]
+\end{align}$$
 Questa media può esse calcolata in maniera diretta come $$\hat{\phi}_i = \frac{\alpha_i'}{\sum_{k=1}^{n}\alpha_k'} = \frac{\alpha_i + m_i}{\sum_{k=1}^{n}\alpha_k + m_k} = \frac{\alpha_i + m_i}{\alpha + N}$$
 Dato che i parametri $\alpha_i > 0$ nelle distribuzioni di Dirichlet, è quindi impossibile ottenere una probabilità nulla.
 Questo è anche noto come **smoothing di Dirichlet**.
@@ -32,5 +40,5 @@ Questo è anche noto come **smoothing di Dirichlet**.
 ```ad-note
 title: Non informative prior
 Nel caso in cui inizialmente $\alpha_i = \alpha^*$ per ogni $i$, non avremo alcuna informazione a priori.
-In questo caso la probabilità a posteriori sarà quindi $$\hat{\phi}_i = \frac{m_i + \alpha}{\alpha n + N}$$
+In questo caso la probabilità a posteriori sarà quindi $$\hat{\phi}_i = \frac{m_i + \alpha^*}{\alpha^* n + N}$$
 ```

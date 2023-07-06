@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md",
-                "mode": "preview",
+                "file": "ML/Language Models.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md",
+                "file": "ML/Language Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Linear Discriminant Function in Binary Classification.md"
+                "file": "ML/Language Models.md"
               }
             }
           },
@@ -150,11 +150,11 @@
   "active": "178c8aad22d314a8",
   "lastOpenFiles": [
     "ML/0 - Machine Learning.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Perceptron.md",
     "ML/Gradient Descent.md",
     "ML/img/ML_06_6.png",
     "ML/Linear Classification.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/img/ML_06_5.png",
     "ML/img/ML_06_4.png",
