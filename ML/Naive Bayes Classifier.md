@@ -33,3 +33,29 @@ Per calcolare $p(t \vert C_k)$ facciamo riferimento ai [[ML/Language Models|Lang
 Possiamo farlo per **massima verosimiglianza** $$p(t \vert C_k) \approx \frac{\text{cf}_t(D_k)}{\vert D_k \vert}$$ dove $\text{cf}_t(D_k)$ è la [[Scoring, term weighting & the vector space model#^433f1d|collection frequency]] del termine $t$ nella collezione $D_k$.
 Oppure possiamo stimarlo usando lo [[ML/Language Models#Bayesian learning of Language Models|smoothing di dirichelet]].
 ```
+
+## Deriving Posterior distribution $p(C_k \vert d)$
+Consideriamo il caso generale di punti $\mathbf{x}$ in uno **spazio delle features**, anziché di documenti.
+Infatti nel modello **bag of words** infatti i documenti $d$ sono visti come **punti** all'interno dello spazio dei termini.
+
+Applicando la regola di bayes e quella delle **probabilità totali** calcoliamo
+$$p(C_1 \vert \mathbf{x}) = \frac{p(\mathbf{x} \vert C_1)p(C_1)}{p(\mathbf{x})} = \frac{p(\mathbf{x} \vert C_1)p(C_1)}{p(\mathbf{x} \vert C_1)p(C_1) + p(\mathbf{x} \vert C_2)p(C_2)} = \frac{1}{1+\frac{p(\mathbf{x} \vert C_2)p(C_2)}{p(\mathbf{x} \vert C_1)p(C_1)}}$$
+
+Per comodità indichiamo con $$a = \log\frac{p(\mathbf{x} \vert C_1)p(C_1)}{p(\mathbf{x} \vert C_2)p(C_2)} = \log\frac{p(\mathbf{x} \vert C_1)}{p(\mathbf{x} \vert C_2)}$$
+
+Possiamo quindi riscrivere le probabilità a posteriori come 
+$$p(C_1 \vert \mathbf{x}) = \frac{1}{1+e^{-a}}$$
+$$p(C_2 \vert \mathbf{x}) = 1 - \frac{1}{1+e^{-a}} = \frac{1}{1 + e^a}$$
+
+Tale funzione è anche nota come **logistic funciton** o **sigmoide** $$\sigma(x) = \frac{1}{1+e^{-x}}$$
+
+![[ML_06_7.png]]
+
+```ad-tldr
+Alcune proprietà molto utili della **funzione logistica** sono:
+- $\sigma(-x) = 1 - \sigma(x)$
+- $\frac{d}{dx}\sigma(x) = \sigma(x)(1 - \sigma(x)) = \sigma(x)\cdot\sigma(-x)$
+```
+
+
+
