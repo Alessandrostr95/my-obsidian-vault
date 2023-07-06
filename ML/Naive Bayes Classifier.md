@@ -49,7 +49,7 @@ $$p(C_2 \vert \mathbf{x}) = 1 - \frac{1}{1+e^{-a}} = \frac{1}{1 + e^a}$$
 
 Tale funzione è anche nota come **logistic funciton** o **sigmoide** $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 
-![[ML_06_7.png]]
+![[ML_07_1.png]]
 
 ```ad-tldr
 Alcune proprietà molto utili della **funzione logistica** sono:
@@ -59,7 +59,7 @@ Alcune proprietà molto utili della **funzione logistica** sono:
 
 ^0f34d2
 
-
+# Caso Multiclasse - Softmax Regression
 Generalizzando per $K > 2$ abbiamo la seguente formula per la probabilità a posteriori
 $$p(C_k \vert \mathbf{x}) = \frac{p(\mathbf{x} \vert C_k)p(C_k)}{\sum_{i=1}^{K} p(\mathbf{x} \vert C_i)p(C_i)}$$ ^b61e37
 

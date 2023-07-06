@@ -1,6 +1,6 @@
 Nella **Gaussian Discriminant Analysis** (**GDA**) si assume che ogni probabilità $p(\mathbf{x} \vert C_k)$ degli elementi $\mathbf{x} \in \mathbb{R}^d$ rispetto alla classe $C_k$ sia una [[CLT - Central Limit Theorem#Normali Multivariate|gaussiana multivariata]].
 
-Sia quindi $\mu_k$ il punto medio della classe $C_k$ e $\Sigma \in \mathbb{R}^{d \times d}$ la **matrice di covarianza**, allora la probabilità di $\mathbf{x} \vert C_k$ avrà *densità* $$p(\mathbf{x} \vert C_k) = \frac{1}{(2\pi)^{d/2}\vert \text{det}(\Sigma) \vert^{1/2}} \exp{\left(-\frac{1}{2}(\mathbf{x} - \mu_k)^T\Sigma^{-1}(\mathbf{x} - \mu_k)\right)}$$
+Sia quindi $\mu_k$ il punto medio della classe $C_k$ e $\Sigma \in \mathbb{R}^{d \times d}$ la **matrice di covarianza**, allora la probabilità di $\mathbf{x} \vert C_k$ avrà *densità* $$p(\mathbf{x} \vert C_k) = \frac{1}{(2\pi)^{d/2}\vert \text{det}(\Sigma) \vert^{1/2}} \exp{\left(-\frac{1}{2}(\mathbf{x} - \mu_k)^T\Sigma^{-1}(\mathbf{x} - \mu_k)\right)}$$ ^cfba72
 
 Ricordiamo che per il [[Naive Bayes Classifier|caso binario]] abbiamo che $$p(C_1 \vert \mathbf{x}) = \sigma(a(\mathbf{x}))$$ con
 $$\begin{align}
@@ -32,7 +32,7 @@ w_0 &= \frac{1}{2}(\mu_2^T\Sigma^{-1}\mu_2 - \mu_1^T\Sigma^{-1}\mu_1) + \log{\fr
 Perciò, assumendo $p(\mathbf{x} \vert C_k)$ sia gaussiana, allora la probabilità $p(C_k \vert \mathbf{x})$ sarò un [[Generalized Linear Model]].
 Infatti $$p(C_k \vert \mathbf{x}) = \sigma(a(\mathbf{x})) = \sigma(\mathbf{w}^T\mathbf{x} + w_0)$$ ovvero un'applicazione **non lineare** sulla **combinazione lineare** del punto $\mathbf{x}$.
 
-![[ML/img/ML_06_8.png]] ^e433ad
+![[ML_07_2.png]] ^e433ad
 
 
 Nella [[#^e433ad|figura]] a sinistra, possiamo vedere le distribuzioni di $p(\mathbf{x} \vert C_1)$ (in rosso) e $p(\mathbf{x} \vert C_2)$ (in blu), mentre a destra vediamo la distribuzione $p(C_k \vert \mathbf{x})$.
@@ -51,4 +51,45 @@ $$\lambda^{-1}(\mu_1 - \mu_2)^T\mathbf{x} + \frac{\lambda^{-1}}{2}(\Vert \mu_2 \
 
 
 # Multiple Classes
+Consideriamo il caso [[Naive Bayes Classifier#Caso Multiclasse - Softmax Regression|multiclasse]].
+In questo caso abbiamo che $$p(C_k \vert \mathbf{x}) = s(a_k(\mathbf{x}))$$ con $$a_k(\mathbf{x}) = \log(p(\mathbf{x}\vert C_k)p(C_k))$$
 
+Come prima, se assumiamo che $p(\mathbf{x} \vert C_k)$ sia una **gaussiana** multivariata con media $\mu_k$ allora è facile derivare che
+$$\begin{align}
+a_k(\mathbf{x})
+&= \log{\frac{1}{(2\pi)^{d/2}\vert \Sigma \vert^{1/2}}}-\frac{1}{2}(\mathbf{x} - \mu_k)^T\Sigma^{-1}(\mathbf{x}-\mu_k) + \log p(C_k)\\
+&= \mu_k^{T}\Sigma^{-1}\mathbf{x} - \frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k - + \frac{d}{2}\log{(2\pi)} + \frac{1}{2}\log(\Sigma) + \log p(C_k)\\
+&= \mathbf{w}_k^T\mathbf{x} + w_{k0}
+\end{align}$$
+
+Perciò anche il caso multiclasse $p(C_k \vert \mathbf{x}) = \sigma(\mathbf{w}_k^T\mathbf{x} + w_{k0})$ è un [[Generalized Linear Model]].
+
+## Funzione discrimante per Classi Multiple
+Come prima, l'iperpiano che separa due classi $C_i,C_j$ è definito da tutti quei punti $\mathbf{x}$ tali che
+$$\begin{align}
+p(C_i \vert \mathbf{x}) &= p(C_j \vert \mathbf{x})\\
+\\
+\implies s(a_i(\mathbf{x})) &= s(a_j(\mathbf{x}))\\
+\\
+\implies \frac{e^{a_i(\mathbf{x})}}{\sum_{k=1}^{K}e^{a_k(\mathbf{x})}} &= \frac{e^{a_j(\mathbf{x})}}{\sum_{k=1}^{K}e^{a_k(\mathbf{x})}}\\
+\\
+\implies e^{a_i(\mathbf{x})} &= e^{a_j(\mathbf{x})}\\
+\\
+\implies a_i(\mathbf{x}) &=a_j(\mathbf{x})\\
+\\
+\implies  \mathbf{w}_i^T\mathbf{x} + w_{i0} &=  \mathbf{w}_j^T\mathbf{x} + w_{j0}
+\end{align}$$
+
+E da come si evince, tali bordi sono **lineari**.
+
+# General Covariance Matrices
+Nel caso iniziale assumevamo che entrambe le distribuzioni $\mathbf{x} \vert C_1$ e $\mathbf{x} \vert C_2$ avevano [[#^cfba72|stessa matrice di covarianza]] $\Sigma \in \mathbb{R}^{d \times d}$.
+
+Generalizzando, assumiamo che $$\mathbf{x} \vert C_1 \sim \mathcal{N}(\mu_1 \vert \Sigma_1)$$ e che $$\mathbf{x} \vert C_2 \sim \mathcal{N}(\mu_2 \vert \Sigma_2)$$ con $\Sigma_1, \Sigma_2$ non necessariamente uguali.
+
+In questo caso avremo $$a(\mathbf{x}) = \frac{1}{2}\left( (\mathbf{x} - \mu_2)^T\Sigma_2(\mathbf{x} - \mu_1) - (\mathbf{x} - \mu_1)^T\Sigma_1(\mathbf{x} - \mu_1) \right) + \frac{1}{2}\log\frac{\vert \Sigma_2 \vert}{\vert \Sigma_1 \vert} + \log\frac{p(C_1)}{p(C_2)}$$
+Si può dimostrare che in questo caso i **decision boundary** non sono necessariamente **lineari**.
+
+Infatti lo si può osservare dalla [[#^e350eb|figura]], nel caso multiclasse con $K = 3$.
+
+![[ML_07_3.png]] ^e350eb
