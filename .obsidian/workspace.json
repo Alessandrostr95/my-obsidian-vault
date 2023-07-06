@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Naive Bayes Classifier.md",
+                "file": "ML/0 - Machine Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "58db1c176b2ca486",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Probabilistic classification - generative models.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Naive Bayes Classifier.md",
+                "file": "ML/Probabilistic classification - generative models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Naive Bayes Classifier.md"
+                "file": "ML/Probabilistic classification - generative models.md"
               }
             }
           },
@@ -147,12 +160,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "58db1c176b2ca486",
   "lastOpenFiles": [
+    "ML/0 - Machine Learning.md",
+    "ML/Naive Bayes Classifier.md",
     "ML/img/ML_06_7.png",
     "ML/Language Models.md",
-    "ML/Naive Bayes Classifier.md",
-    "ML/0 - Machine Learning.md",
     "ML/Probabilistic classification - generative models.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Perceptron.md",
@@ -176,7 +189,6 @@
     "ML/Gaussian Processes Regression.md",
     "ML/img/ML_05_8.png",
     "ML/img/ML_05_7.png",
-    "ML/img/ML_05_6.png",
     "ISTI/CLT - Central Limit Theorem.md",
     "ML/Local Logistic Regression.md",
     "ML/Some Base Function.md",

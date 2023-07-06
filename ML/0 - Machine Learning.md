@@ -51,3 +51,4 @@ tags:
 	- [[Perceptron]]
 - [[Probabilistic classification - generative models]]
 	- [[ML/Language Models|Language Models]]
+	- [[Naive Bayes Classifier]]
