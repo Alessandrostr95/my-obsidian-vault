@@ -47,7 +47,7 @@ $$a(\mathbf{x}) = - a(\mathbf{x})\implies 2a(\mathbf{x}) = 0 \implies a(\mathbf{
 $$\implies (\mu_1 - \mu_2)^T\Sigma^{-1}\mathbf{x} + \frac{1}{2}(\mu_2^T\Sigma^{-1}\mu_2 - \mu_1^T\Sigma^{-1}\mu_1) + \log{\frac{C_1}{C_2}} = 0$$
 
 Per esempio, quando abbiamo un caso semplice del tipo $\Sigma = \lambda I$ allora basta risolvere l'equazione
-$$\lambda^{-1}(\mu_1 - \mu_2)\mathbf{x} + \frac{\lambda^{-1}}{2}(\Vert \mu_2 \Vert^2 - \Vert \mu_1 \Vert^2) + \log\frac{p(C_1)}{p(C_2)} = 0$$
+$$\lambda^{-1}(\mu_1 - \mu_2)^T\mathbf{x} + \frac{\lambda^{-1}}{2}(\Vert \mu_2 \Vert^2 - \Vert \mu_1 \Vert^2) + \log\frac{p(C_1)}{p(C_2)} = 0$$
 
 
 # Multiple Classes
