@@ -42,3 +42,16 @@ title: Non informative prior
 Nel caso in cui inizialmente $\alpha_i = \alpha^*$ per ogni $i$, non avremo alcuna informazione a priori.
 In questo caso la probabilità a posteriori sarà quindi $$\hat{\phi}_i = \frac{m_i + \alpha^*}{\alpha^* n + N}$$
 ```
+
+## Classification with Language Model
+Il language model può essere esteso anche nel caso di $k \geq 2$ classi.
+Consideriamo per semplicità due classi $C_1, C_2$.
+
+Possiamo usare i language model per **classificare** un documento $d$.
+%% Come [[#Bayesian learning of Language Models|visto prima]] possiamo stimare la probabilità $\phi_i(C_k) = p(t_i \vert C_k)$, ovvero la probabilità di un termine $t_i$ all'interno della collezione $C_k$.%%
+
+Usando la **formula di Bayes** posso calcola la probabilità a posteriori $$p(C_k \vert d) \propto p(d \vert C_k)p(C_k) \;\;\; \forall k=1,2$$
+
+Assegnamo quindi il documento $d$ alla classe $C_k$ che massimizza la precedente probabilità.
+
+[[Naive Bayes Classifier|Vedremo dopo]] come stimare le probabilità $p(d \vert C_k)$ e $p(C_k)$.

@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "4343b5c335905046",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Language Models.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Language Models.md",
+                "file": "ML/Naive Bayes Classifier.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Language Models.md"
+                "file": "ML/Naive Bayes Classifier.md"
               }
             }
           },
@@ -160,10 +147,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "4343b5c335905046",
+  "active": "178c8aad22d314a8",
   "lastOpenFiles": [
-    "ML/Naive Bayes Classifier.md",
     "ML/Language Models.md",
+    "ML/Naive Bayes Classifier.md",
     "ML/0 - Machine Learning.md",
     "ML/Probabilistic classification - generative models.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
