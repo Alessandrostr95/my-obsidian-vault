@@ -57,5 +57,17 @@ Alcune proprietà molto utili della **funzione logistica** sono:
 - $\frac{d}{dx}\sigma(x) = \sigma(x)(1 - \sigma(x)) = \sigma(x)\cdot\sigma(-x)$
 ```
 
+^0f34d2
 
 
+Generalizzando per $K > 2$ abbiamo la seguente formula per la probabilità a posteriori
+$$p(C_k \vert \mathbf{x}) = \frac{p(\mathbf{x} \vert C_k)p(C_k)}{\sum_{i=1}^{K} p(\mathbf{x} \vert C_i)p(C_i)}$$ ^b61e37
+
+Definiamo per ogni $k = 1,...,K$ la quantità $$a_k(\mathbf{x}) = \log{(p(\mathbf{x} \vert C_k)p(C_k))} = \log{p(\mathbf{x} \vert C_k)} + \log p(C_k)$$
+
+Possiamo quindi riscrivere la [[#^b61e37|precedente probabilità]] come segue $$p(C_k \vert\mathbf{x}) = \frac{e^{a_k(\mathbf{x})}}{\sum_{i=1}^{K} e^{a_i(\mathbf{x})}} = s(a_{k}(\mathbf{x}))$$
+Questa probabilità è anche nota come **softmax function** (o **funzione esponenziale normalizzata**), definita come
+$$s_i: \mathbb{R}^n \to \mathbb{R}$$
+$$s_i(\mathbf{x}) = \frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}$$
+
+Questa funzione può essere vista come una **generalizzazione** della [[#^0f34d2|funzione sigmoide]], oppure come una versione **smoothed** della funzione $\max$.
