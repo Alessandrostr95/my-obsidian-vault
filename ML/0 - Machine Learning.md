@@ -50,3 +50,4 @@ tags:
 	- [[Linear Discriminant Analysis - Fisher Linear Discriminant]]
 	- [[Perceptron]]
 - [[Probabilistic classification - generative models]]
+	- [[ML/Language Models|Language Models]]

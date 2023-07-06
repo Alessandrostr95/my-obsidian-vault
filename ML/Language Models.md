@@ -28,7 +28,7 @@ Per ricavare la singola probabilità a posteriori $\hat{\phi}_i$ basterà calcol
 $$\begin{align}
 \hat{\phi}_i
 &= p(t_i \vert \mathcal{C}, \pmb{\alpha})\\
-&= p(t_i \vert \pmb{\phi}) \cdot p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha})\\
+%&= p(t_i \vert \pmb{\phi}) \cdot p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha})\\
 &= \int p(t_i \vert\pmb{\phi}) \cdot p(\pmb{\phi} \vert \mathcal{C}, \pmb{\alpha}) \,d\pmb{\phi}\\
 &= \int \phi_i \cdot \text{Dir}(\pmb{\phi} \vert \pmb{\alpha}') \,d\pmb{\phi}\\
 &= \mathbb{E}_{\pmb{\alpha}'}\left[ \phi_i \right]
