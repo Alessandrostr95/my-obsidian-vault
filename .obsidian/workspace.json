@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "90ff4f16efc31169",
+        "id": "479e628746def23c",
         "type": "tabs",
         "children": [
           {
-            "id": "e721b4765261283d",
+            "id": "7775272922186891",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Gaussian Discriminant Analysis.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gaussian Discriminant Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,9 +105,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ML/Gaussian Discriminant Analysis.md"
-              }
+              "state": {}
             }
           },
           {
@@ -147,11 +140,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "e721b4765261283d",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
     "ML/0 - Machine Learning.md",
-    "ML/Probabilistic classification - generative models.md",
     "ML/Gaussian Discriminant Analysis.md",
+    "ML/Probabilistic classification - generative models.md",
     "ML/Naive Bayes Classifier.md",
     "ML/img/ML_07_3.png",
     "ML/img/ML_07_2.png",
