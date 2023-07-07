@@ -1,4 +1,4 @@
-Nella **Gaussian Discriminant Analysis** (**GDA**) si assume che ogni probabilità $p(\mathbf{x} \vert C_k)$ degli elementi $\mathbf{x} \in \mathbb{R}^d$ rispetto alla classe $C_k$ sia una [[CLT - Central Limit Theorem#Normali Multivariate|gaussiana multivariata]].
+t:iNella **Gaussian Discriminant Analysis** (**GDA**) si assume che ogni probabilità $p(\mathbf{x} \vert C_k)$ degli elementi $\mathbf{x} \in \mathbb{R}^d$ rispetto alla classe $C_k$ sia una [[CLT - Central Limit Theorem#Normali Multivariate|gaussiana multivariata]].
 
 Sia quindi $\mu_k$ il punto medio della classe $C_k$ e $\Sigma \in \mathbb{R}^{d \times d}$ la **matrice di covarianza**, allora la probabilità di $\mathbf{x} \vert C_k$ avrà *densità* $$p(\mathbf{x} \vert C_k) = \frac{1}{(2\pi)^{d/2}\vert \text{det}(\Sigma) \vert^{1/2}} \exp{\left(-\frac{1}{2}(\mathbf{x} - \mu_k)^T\Sigma^{-1}(\mathbf{x} - \mu_k)\right)}$$ ^cfba72
 
@@ -93,3 +93,61 @@ Si può dimostrare che in questo caso i **decision boundary** non sono necessari
 Infatti lo si può osservare dalla [[#^e350eb|figura]], nel caso multiclasse con $K = 3$.
 
 ![[ML_07_3.png]] ^e350eb
+
+# Deriving $p(\mathbf{x} \vert C_k)$ from dataset
+La probabilità $p(\mathbf{x} \vert C_k)$ può essere derivata dal dataset mediante [[Stimatore di Massima Verosimiglianza]].
+
+Per semplicità assumiamo di avere solo $K=2$ classi.
+Dato che assumiamo la probabilità a priori nota $p(C_1) = \pi$ (e $p(C_2) = 1 - \pi$) dobbiamo solo stimare $\mu_1, \mu_2, \Sigma$.
+
+Osservando il dataset $\mathcal{T}$ avremo la verosimiglianza
+$$\begin{align}
+L(\pi,\mu_1,\mu_2, \Sigma \vert \mathcal{T})
+&= \prod_{i=1}^{n} p(x_i,t_i \vert\pi,\mu_1,\mu_2,\Sigma)\\
+&= \prod_{i=1}^{n} p(x_i \vert t_i,\pi,\mu_1,\mu_2,\Sigma) \cdot p(t_i \vert\pi)\\
+&= \prod_{i=1}^{n} (\pi \cdot\mathcal{N}(x_i \vert \mu_1, \Sigma_1))^{t_i}((1-\pi) \cdot\mathcal{N}(x_i \vert \mu_2, \Sigma_2))^{1-t_i}
+\end{align}$$
+
+```ad-tldr
+Dato che possiamo codificare in **binario** i valori target
+$$t_i = \begin{cases}
+0 &\text{if } x_i \notin C_1\\
+1 &\text{if } x_i \in C_1\\
+\end{cases}$$
+
+Allora possiamo esprimere la probabilità $$p(t_i) = p(C_1)^{t_1}\cdot p(C_2)^{1-t_i}$$
+
+Infatti,
+$$x_i \in C_1 \implies p(t_i = 1) = p(C_1)^1 \cdot p(C_2)^{1-1} = p(C_1)$$
+$$x_i \in C_2 \implies p(t_i = 0) = p(C_1)^0 \cdot p(C_2)^{1-0} = p(C_2)$$
+```
+
+```ad-tldr
+Ossevare che $$p(x_i, t_i) = p(x_i \vert t_i) \cdot p(t_i) = (p(x_i \vert C_1)p(C_1))^{t_i} \cdot (p(x_i \vert C_2) p(C_2))^{1- t_i}$$
+```
+
+La verosimiglianza corrispondente sarà invece
+$$\begin{align}
+l(\pi, \mu_1, \mu_2, \Sigma \vert \mathcal{T})
+&= \sum_{i=1}^{n}t_i\log(\pi \cdot\mathcal{N}(x_i \vert \mu_1, \Sigma_1)) +  \sum_{i=1}^{n}(1-t_i)\cdot\log((1-\pi) \cdot\mathcal{N}(x_i \vert \mu_2, \Sigma_2))\\
+&= \sum_{i=1}^{n}t_i\log\pi + t_i\log \mathcal{N}(x_i \vert \mu_1, \Sigma_1) +  \sum_{i=1}^{n}(1-t_i)\cdot\log(1-\pi) + (1-t_i)\cdot\log\mathcal{N}(x_i \vert \mu_2, \Sigma_2)
+\end{align}$$
+
+Se deriviamo in $\pi$ possiamo trovare il punto di massimo
+$$\frac{\partial}{\partial\pi}l(\pi,\mu_1,\mu_2, \Sigma \vert\mathcal{T}) = \sum_{i=1}^{n} \left( \frac{t_i}{\pi} - \frac{1-t_i}{1-\pi}\right) = \sum_{t_i=1}\frac{1}{\pi} - \sum_{t_i=0}\frac{1}{1-\pi} = \frac{\vert C_1 \vert}{\pi} - \frac{\vert C_2 \vert}{1-\pi}$$
+Tale derivata si annulla per
+$$\begin{align}
+\vert C_1 \vert(1-\pi) &= \pi\vert C_2 \vert\\
+\vert C_1 \vert &= \pi(\vert C_2 \vert + \vert C_1\vert)\\
+\pi &= \frac{\vert C_1 \vert}{\vert C_1 \vert + \vert C_2 \vert} = \frac{\vert C_1 \vert}{n}
+\end{align}$$
+come [[Naive Bayes Classifier#^bf4983|già visto]].
+
+
+Per quanto riguarda $\mu_1, \mu_2$ dobbiamo vedere quando si annulla
+$$\frac{\partial l}{\partial \mu_1} = \frac{\partial }{\partial \mu_1}\sum_{i=1}^{n}t_i \log(\mathcal{N}(x_i \vert\mu_1, \Sigma))= \Sigma^{-1}\sum_{i=1}^{n}t_i(x_i - \mu_1)$$
+il quale si annulla per
+$$\sum_{i=1}^{n}t_ix_i = \sum_{i=1}^{n}t_i\mu_1 = \mu_1\sum_{i=1}^{n}t_i = \mu_1 \cdot \vert C_1 \vert$$
+ovvero $$\mu_1 = \frac{1}{\vert C_1 \vert} \sum_{x \in C_1}x$$
+Analogamente per $\mu_2$ avremo $$\mu_2 = \frac{1}{\vert C_2 \vert}\sum_{x \in C_2}x$$
+

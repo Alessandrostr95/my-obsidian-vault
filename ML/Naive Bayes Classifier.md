@@ -11,7 +11,7 @@ La formula di Bayes in realtà è $$p(C_k \vert d) = \frac{p(d \vert C_k) \cdot 
 
 Assumiamo di avere a disposizione una collezione di documenti $D_1$ di documenti appartenenti alla classe $C_1$, e una collezione $D_2$ di documenti appartenenti alla classe $C_2$.
 
-Per calcolare la [[Maximum a Posteriori - Bayesian Approach#^8ea705|probabilità a priori]] $p(C_k)$ possiamo usare uno [[Stimatore di Massima Verosimiglianza]] $$p(C_k) = \frac{\vert D_k \vert}{\vert D_1 \vert + \vert D_2 \vert}$$ con $k = 1,2$.
+Per calcolare la [[Maximum a Posteriori - Bayesian Approach#^8ea705|probabilità a priori]] $p(C_k)$ possiamo usare uno [[Stimatore di Massima Verosimiglianza]] $$p(C_k) = \frac{\vert D_k \vert}{\vert D_1 \vert + \vert D_2 \vert}$$ con $k = 1,2$. ^bf4983
 
 Per quanto $p(d \vert C_k)$ osserviamo che, in accordo al [[Bag of words model - Term Frequency tf|modello bag-of-words]] $d$ può essere visto come l'**insieme** dei termini che lo compongono $$d = \lbrace t_1, t_2,..., t_{n_d} \rbrace$$
 Applicando la **chain rule** abbiamo che
