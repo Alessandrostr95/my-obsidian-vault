@@ -151,3 +151,10 @@ $$\sum_{i=1}^{n}t_ix_i = \sum_{i=1}^{n}t_i\mu_1 = \mu_1\sum_{i=1}^{n}t_i = \mu_1
 ovvero $$\mu_1 = \frac{1}{\vert C_1 \vert} \sum_{x \in C_1}x$$
 Analogamente per $\mu_2$ avremo $$\mu_2 = \frac{1}{\vert C_2 \vert}\sum_{x \in C_2}x$$
 
+Per quanto riguarda $\Sigma$ invece abbiamo
+$$\Sigma = \frac{S_1 + S_2}{n}$$
+$$S_1 = \sum_{x \in C_1} (x - \mu_1)^T(x - \mu_1)$$
+$$S_2 = \sum_{x \in C_2} (x - \mu_2)^T(x - \mu_2)$$
+
+
+
