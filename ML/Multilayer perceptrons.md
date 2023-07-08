@@ -59,6 +59,7 @@ Ciò che cambia è la definizione di $m_D$ e della funzione $h_D$ che dipendono 
 2. Per il problema della classificazione binaria avremo che $m_D = 1$ e che $h_D$ è la [[Naive Bayes Classifier#^8e0f70|funzione logistica]] $\sigma$ 
    ![[ML/img/ML_10_10.png]]
 3. Per il problema della classificazione multiclasse invece avremo che $m_D = K$ dove $K$ è il numero di classi, mentre $h_D$ è la [[Naive Bayes Classifier#^3e232f|funzione softmax]] $s$
-   ![[ML_10_11.png]]
+   ![[ML/img/ML_10_11.png]]
 
-
+Di seguito un esempio di rete neurale a 3 livelli per la classificazione multiclasse
+![[ML/img/ML_10_12.png]]
