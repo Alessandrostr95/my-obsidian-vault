@@ -27,7 +27,7 @@ Perciò possiamo approssimare anche $$P_x \approx \frac{k}{n}$$
 
 **Uguagliando** le due approssimazioni di $P_x$ avremo che $$\frac{k}{n} \approx P_x \approx V \cdot p(x)$$
 $$\implies p(x) \approx \frac{k}{V n}$$
-Abbiamo quindi ottenuto un modo per **stimare** la densità ignota $p(x)$ senza alcun parametro.
+Abbiamo quindi ottenuto un modo per **stimare** la densità ignota $p(x)$ senza alcun parametro. ^e8d899
 
 Esistono due approcci per stimare $p$
 1. **Kernel density estimation**: fissare un valore di $V$ e derivare $k$ dai dati.
@@ -35,3 +35,24 @@ Esistono due approcci per stimare $p$
 Può essere dimostrato per entrambi i metodi, sotto condizioni ragionevoli, la stima tende alla reale densità $p$, al crescere di $n \to \infty$.
 
 ## Kernel density estimation: Parzen windows
+Supponiamo che la regione $\mathcal{R}(x)$ sia un **ipercubo** $d$-dimensionale di lato $h$ e centrato in $x$.
+Tale regione avrà quindi volume $V = h^d$.
+Consideriamo come [[Nonparametric Regression#^0e14e6|funzione kernel]] la **Parzend window** definita come
+$$\forall \mathbf{z} = (z_1, ..., z_d) \in \mathbb{R}^d\;\;  \kappa(\mathbf{z}) = \begin{cases}
+1 &\text{if } \vert z_i \vert \leq \frac{1}{2}\\\\
+0 &\text{otherwise}
+\end{cases}$$
+
+Come conseguenza, per ogni punto $x' \in \mathbb{R}^d$ avremo che $$\kappa\left(\frac{x-x'}{h}\right) = 1 \iff x' \in \mathcal{R}(x)$$
+Indichiamo con $K$ il numero di elementi presenti nell'ipercubo $\mathcal{R}(x)$, ovvero $$K = \sum_{i = 1}^{n} \kappa\left(\frac{x-x_i}{h}\right)$$
+
+Perciò possiamo calcolare la [[#^e8d899|densità]] $p(x)$ come $$p(x) \approx \frac{1}{nV}\sum_{i=1}^{n}\kappa\left(\frac{x-x_i}{h}\right) = \frac{K}{nh^d}$$
+
+![[ML_09_2.png]]
+
+
+Ci sono però due contro derivanti dall'utilizzo di questo metodo:
+1. per valori di $h$ troppo piccoli possono esserci delle **discontinuità** della distribuzione $p$.
+2. tutti gli elementi $x_i \in \mathbf{X}$ presenti nella regione $\mathcal{R}(x)$ hanno esattamente lo **stesso peso**, sarebbe ideale che punti più marginali rispetto al centro $x$ abbiano un peso minore.
+
+Per risolvere questo problema possiamo usare una funzione kernel **smoothed**.
