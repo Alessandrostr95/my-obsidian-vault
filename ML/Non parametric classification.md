@@ -35,3 +35,5 @@ Esistono due approcci per stimare $p$
 Può essere dimostrato per entrambi i metodi, sotto condizioni ragionevoli, la stima tende alla reale densità $p$, al crescere di $n \to \infty$.
 
 # [[Kernel density estimation - Parzen windows]]
+
+# [[K-nearest neighbor]]

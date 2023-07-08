@@ -55,3 +55,4 @@ tags:
 	- [[Gaussian Discriminant Analysis]]
 - [[Non parametric classification]]
 	- [[Kernel density estimation - Parzen windows]]
+	- [[K-nearest neighbor]]
