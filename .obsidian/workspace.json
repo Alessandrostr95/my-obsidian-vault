@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Naive Bayes Classifier.md",
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -161,14 +161,17 @@
   },
   "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "ML/img/ML_10_8.png",
+    "ML/img/ML_10_7.png",
+    "ML/0 - Machine Learning.md",
+    "ML/Probabilistic classification - generative models.md",
+    "ML/Naive Bayes Classifier.md",
+    "ML/Multilayer perceptrons.md",
+    "ML/img/ML_10_6.png",
     "ML/img/ML_10_5.png",
     "ML/img/ML_10_4.png",
     "ML/img/ML_10_3.png",
-    "ML/Naive Bayes Classifier.md",
-    "ML/Multilayer perceptrons.md",
     "ML/img/ML_10_2.png",
-    "ML/Probabilistic classification - generative models.md",
-    "ML/0 - Machine Learning.md",
     "ML/Perceptron.md",
     "ML/Linear Classification.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
@@ -182,9 +185,6 @@
     "ML/Kernel density estimation - Parzen windows.md",
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/img/ML_09_7.png",
-    "ML/img/ML_09_6.png",
-    "ML/img/ML_09_5.png",
-    "ML/img/ML_09_4.png",
     "ML/Nonparametric Regression.md",
     "ML/Gaussian Discriminant Analysis.md",
     "ML/Language Models.md",
