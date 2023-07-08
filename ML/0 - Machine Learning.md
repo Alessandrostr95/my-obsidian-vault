@@ -54,3 +54,4 @@ tags:
 	- [[Naive Bayes Classifier]]
 	- [[Gaussian Discriminant Analysis]]
 - [[Non parametric classification]]
+	- [[Kernel density estimation - Parzen windows]]

@@ -20,18 +20,19 @@
             }
           },
           {
-            "id": "877784bbc99f6e7b",
+            "id": "59f4096df1fbabf3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Kernel Regression - Nadaraya-Watson Model.md",
+                "file": "ML/Kernel density estimation - Parzen windows.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Non parametric classification.md",
+                "file": "ML/Kernel density estimation - Parzen windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Non parametric classification.md"
+                "file": "ML/Kernel density estimation - Parzen windows.md"
               }
             }
           },
@@ -159,26 +160,26 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "59f4096df1fbabf3",
   "lastOpenFiles": [
+    "ML/Non parametric classification.md",
+    "ML/Kernel density estimation - Parzen windows.md",
+    "ML/0 - Machine Learning.md",
+    "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/img/ML_09_7.png",
     "ML/img/ML_09_6.png",
     "ML/img/ML_09_5.png",
     "ML/img/ML_09_4.png",
     "ML/img/ML_09_3.png",
     "ML/img/ML_09_2.png",
-    "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/Nonparametric Regression.md",
-    "ML/Non parametric classification.md",
     "ML/img/ML_09_1.png",
-    "ML/0 - Machine Learning.md",
     "ML/Gaussian Discriminant Analysis.md",
     "ML/Naive Bayes Classifier.md",
     "ML/Probabilistic classification - generative models.md",
     "ML/img/ML_07_3.png",
     "ML/img/ML_07_2.png",
     "ML/img/ML_07_1.png",
-    "ML/img/ML_06_6.png",
     "ML/Language Models.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Perceptron.md",
