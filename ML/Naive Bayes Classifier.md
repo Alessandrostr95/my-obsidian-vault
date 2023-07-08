@@ -47,7 +47,7 @@ Possiamo quindi riscrivere le probabilità a posteriori come
 $$p(C_1 \vert \mathbf{x}) = \frac{1}{1+e^{-a}}$$
 $$p(C_2 \vert \mathbf{x}) = 1 - \frac{1}{1+e^{-a}} = \frac{1}{1 + e^a}$$
 
-Tale funzione è anche nota come **logistic funciton** o **sigmoide** $$\sigma(x) = \frac{1}{1+e^{-x}}$$
+Tale funzione è anche nota come **logistic funciton** o **sigmoide** $$\sigma(x) = \frac{1}{1+e^{-x}}$$ ^8e0f70
 
 ![[ML_07_1.png]]
 
@@ -68,6 +68,6 @@ Definiamo per ogni $k = 1,...,K$ la quantità $$a_k(\mathbf{x}) = \log{(p(\mathb
 Possiamo quindi riscrivere la [[#^b61e37|precedente probabilità]] come segue $$p(C_k \vert\mathbf{x}) = \frac{e^{a_k(\mathbf{x})}}{\sum_{i=1}^{K} e^{a_i(\mathbf{x})}} = s(a_{k}(\mathbf{x}))$$
 Questa probabilità è anche nota come **softmax function** (o **funzione esponenziale normalizzata**), definita come
 $$s_i: \mathbb{R}^n \to \mathbb{R}$$
-$$s_i(\mathbf{x}) = \frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}$$
+$$s_i(\mathbf{x}) = \frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}$$ ^3e232f
 
 Questa funzione può essere vista come una **generalizzazione** della [[#^0f34d2|funzione sigmoide]], oppure come una versione **smoothed** della funzione $\max$.

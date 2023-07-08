@@ -7,8 +7,8 @@ A livello visivo possiamo rappresentare nel seguente modo i modelli visti in pre
   ![[ML_10_2.png]]
 - [[Naive Bayes Classifier#Caso Multiclasse - Softmax Regression|Softmax Regression]] $y_i(\mathbf{x}) = s_i(\mathbf{w}_i^T\mathbf{x} + w_{i0})$ 
   ![[ML/img/ML_10_3.png]] 
-  - Applicazione di [[Some Base Function|base function]] a modello lineare
-    ![[ML/img/ML_10_4.png]]
+- Applicazione di [[Some Base Function|base function]] a modello lineare 
+  ![[ML/img/ML_10_4.png]]
 
 Volendo, possiamo **iterare** l'applicazione di base function e di applicazioni lineari
 ![[ML/img/ML_10_5.png]]
@@ -51,6 +51,14 @@ Perciò al livello $r > 1$ riceviamo in input il vettore $\mathbf{z}^{(r-1)}$, a
 
 ![[ML/img/ML_10_8.png]]
 
-
+## Output layer
+Riguardo l'ultimo layer, diciamo $D$, esso avrà esattamente come tutti gli altri layer.
+Ciò che cambia è la definizione di $m_D$ e della funzione $h_D$ che dipendono dal tipo di problema.
+1. Per il problema della regressione abbiamo che $m_D = 1$ e che $h_D$ è la **funzione identità**. 
+   ![[ML/img/ML_10_9.png]]
+2. Per il problema della classificazione binaria avremo che $m_D = 1$ e che $h_D$ è la [[Naive Bayes Classifier#^8e0f70|funzione logistica]] $\sigma$ 
+   ![[ML/img/ML_10_10.png]]
+3. Per il problema della classificazione multiclasse invece avremo che $m_D = K$ dove $K$ è il numero di classi, mentre $h_D$ è la [[Naive Bayes Classifier#^3e232f|funzione softmax]] $s$
+   ![[ML_10_11.png]]
 
 
