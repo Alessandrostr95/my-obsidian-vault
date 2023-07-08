@@ -66,7 +66,6 @@ Di seguito un esempio di rete neurale a 3 livelli per la classificazione multicl
 
 ```ad-info
 È possibile dimostrare che con un multilayerd perceptron è possibile **approssimare** qualsiasi **funzione continua**.
-La precisione dell'approssimazione può essere precisa a piacere, e migliora al crescere dei livelli.
+La precisione dell'approssimazione può essere precisa a piacere, e migliora al crescere deil numero di livelli e della loro profondità.
 ```
-
 
