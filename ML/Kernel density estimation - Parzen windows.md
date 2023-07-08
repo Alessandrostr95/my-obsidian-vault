@@ -9,7 +9,7 @@ $$\forall \mathbf{z} = (z_1, ..., z_d) \in \mathbb{R}^d\;\;  \kappa(\mathbf{z}) 
 Come conseguenza, per ogni punto $x' \in \mathbb{R}^d$ avremo che $$\kappa\left(\frac{x-x'}{h}\right) = 1 \iff x' \in \mathcal{R}(x)$$
 Indichiamo con $K$ il numero di elementi presenti nell'ipercubo $\mathcal{R}(x)$, ovvero $$K = \sum_{i = 1}^{n} \kappa\left(\frac{x-x_i}{h}\right)$$
 
-Perciò possiamo calcolare la [[Non parametric classification#^e8d899|densità]] $p(x)$ come $$p(x) \approx \frac{1}{nV}\sum_{i=1}^{n}\kappa\left(\frac{x-x_i}{h}\right) = \frac{K}{nh^d}$$
+Perciò possiamo calcolare la [[Non parametric classification#^e8d899|densità]] $p(x)$ come $$p(x) \approx \frac{1}{nV}\sum_{i=1}^{n}\kappa\left(\frac{x-x_i}{h}\right) = \frac{K}{nh^d}$$ ^3d98e7
 
 ![[ML_09_2.png]]
 
@@ -38,3 +38,23 @@ $$p(x) \approx \frac{1}{nV}\sum_{i=1}^{n}\kappa\left(\frac{x-x_i}{h}\right) = \f
 
 ![[ML/img/ML_09_7.png]]
 
+# KDE and Classification
+La stima della densità $p(x)$ può essere applicata per **classificare** un qualsiasi punto.
+Partizioniamo il dataset in $\mathbf{X}_1, ..., \mathbf{X}_K$, ovvero nei punti che appartengono alle rispettive classi $C_1, ..., C_K$.
+Stimando la [[#^3d98e7|kernel density]] rispetto al solo insieme $\mathbf{X}_i$ possiamo avere una **stima** della probabilità $p(x \vert C_i)$.
+Infatti
+$$p(x \vert C_i) = p_i(x) = \frac{1}{n_i \cdot h^d}\sum_{j=1}^{n_i}\kappa\left(\frac{x-x_j}{h}\right)$$
+
+Perciò applicando la regola di bayes avremo che la **classe** $i$ di un input $x$ può essere derivata come 
+$$\begin{align}
+i
+&= \arg\max_{1\leq i \leq K}p(C_i \vert x)\\
+\\
+&= \arg\max_{1\leq i \leq K}p(x \vert C_i) \cdot p(C_i)\\
+\\
+&= \arg\max_{1\leq i \leq K}p(x \vert C_i) \cdot p(C_i)\\
+\\
+&= \arg\max_{1\leq i \leq K}\frac{1}{n_i \cdot h^d}\sum_{j=1}^{n_i}\kappa\left(\frac{x-x_j}{h}\right) \cdot p(C_i)\\
+\\
+&= \arg\max_{1\leq i \leq K}\sum_{j=1}^{n_i}\kappa\left(\frac{x-x_j}{h}\right)
+\end{align}$$
