@@ -57,3 +57,5 @@ tags:
 	- [[Kernel density estimation - Parzen windows]]
 	- [[K-nearest neighbor]]
 - [[Multilayer perceptrons]]
+	- [[Backpropagation]]
+- [[Support Vector Machines]]

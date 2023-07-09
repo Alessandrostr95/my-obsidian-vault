@@ -64,8 +64,13 @@ Ciò che cambia è la definizione di $m_D$ e della funzione $h_D$ che dipendono 
 Di seguito un esempio di rete neurale a 3 livelli per la classificazione multiclasse
 ![[ML/img/ML_10_12.png]]
 
+$$\mathbf{y} = \mathbf{z}^{(2)} = h_2\left( \mathbf{w}^{(2)} \cdot h_1(\mathbf{w}^{(1)} \cdot \mathbf{x}) \right)$$
+$$y_j = z^{(2)}_j = s\left( \sum_{i=1}^{m_1} w_{ji}^{(2)} \cdot h_1\left( \sum_{k=1}^{d}w_{ik}^{(1)} \cdot x_k + w_{i0}^{(1)} \right)  + w_{j0}\right)$$ ^e5d110
+
+
 ```ad-info
 È possibile dimostrare che con un multilayerd perceptron è possibile **approssimare** qualsiasi **funzione continua**.
 La precisione dell'approssimazione può essere precisa a piacere, e migliora al crescere deil numero di livelli e della loro profondità.
 ```
 
+# [[Backpropagation]]
