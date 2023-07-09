@@ -93,7 +93,7 @@ $$\implies \min_{x \in \Omega}f(x) = \min_{x \in \Omega}\max_{\pmb\lambda\,:\, \
 
 Per il teorema della **dualità forte** abbiamo che $$\min_{x \in \Omega}f(x) = \min_{x \in \Omega}\max_{\pmb\lambda\,:\, \lambda_i \geq0}L(x, \pmb\lambda) = \max_{\pmb\lambda\,:\, \lambda_i \geq0} \min_{x \in \Omega} L(x, \pmb\lambda)$$ ^1a63c9
 
-### Karus-Kuhn-Tucker
+### Karus-Kuhn-Tucker conditions
 Le condizioni necessarie e sufficienti a finché **esista una soluzione ottima** $(x^*,\pmb\lambda^*)$ per il [[#^1a63c9|problema]] sono:
 1. $$\frac{\partial}{\partial x}L(x, \pmb\lambda) \Bigg\vert_{x^*, \pmb\lambda^*} = 0$$
 2. $$\frac{\partial}{\partial \lambda}L(x, \pmb\lambda_i) \Bigg\vert_{x^*, \pmb\lambda^*} = g_i(x^*)\geq 0 \;\; \forall i=1,...,n$$
@@ -108,4 +108,31 @@ Poniamo
 
 Il rispettivo [[#Lagrangiano]] sarà $$L(\mathbf{w},\pmb\lambda) = \frac{1}{2}\Vert\mathbf{w}\Vert^2 - \sum_{i=1}^{n} \lambda_i\left(t_i(\mathbf{w}\cdot\mathbf{x}_i + w_0) - 1\right) = \frac{1}{2}\Vert\mathbf{w}\Vert^2 - \sum_{i=1}^{n} \lambda_it_i\mathbf{w}\cdot\mathbf{x}_i - w_0\sum_{i=1}^{n} \lambda_it_i + \sum_{i=1}^{n} \lambda_i$$
 L'ottimo al [[#^d4c925|problema di ottimizzazione iniziale]] avrò ottimo equivalente all'ottimo di $$\max_{\pmb\lambda \,:\, \lambda_i}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda)$$
+
+Applicando le [[#Karus-Kuhn-Tucker conditions|condizioni di Karus-Kuhri-Tucker]] deve necessariamente essere che una soluzione ottima $\mathbf{w}^*$ deve rispettare i vincoli
+- $$\frac{\partial}{\partial \mathbf{w}}L(\mathbf{w}, \pmb\lambda) \Bigg\vert_{\mathbf{w}^*} = \mathbf{w}^* - \sum_{i=1}^{n}\lambda_it_i\mathbf{x}_i = \pmb{0}$$
+- $$\frac{\partial}{\partial w_0}L(\mathbf{w}, \pmb\lambda) \Bigg\vert_{w_0^*} = -\sum_{i=1}^{n}\lambda_it_i = 0$$
+- $$t_i(\mathbf{w}^*\cdot\mathbf{x}_i + w_0^*) - 1 \geq 0$$
+- $$\lambda_i \geq 0$$
+- $$\lambda_i\left(t_i(\mathbf{w}^*\cdot\mathbf{x}_i + w_0^*) - 1\right) \geq 0$$
+
+
+Ciò implica che $$\mathbf{w}^* = \sum_{i=1}^{n}\lambda_it_i\mathbf{x}_i$$
+
+Calcoliamo il lagrangiano $L(\mathbf{w}^*, \pmb\lambda)$ coi parametri ottimi
+$$\begin{align}
+\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda)
+&= L(\mathbf{w}^*, \pmb\lambda)\\
+&= \frac{1}{2}\Vert \mathbf{w}^* \Vert^2 - \sum_{i=1}^{n} \lambda_it_i\mathbf{w}^*\cdot\mathbf{x}_i - w_0^*\underbrace{\sum_{i=1}^{n} \lambda_it_i}_{=0} + \sum_{i=1}^{n}\lambda_i\\
+&= \frac{1}{2}\left(\sum_{i=1}^{n}\lambda_it_i\mathbf{x}_i\right)\cdot\left(\sum_{i=1}^{n}\lambda_it_i\mathbf{x}_i\right) - \sum_{i=1}^{n} \lambda_it_i\cdot\left(\sum_{i=1}^{n}\lambda_it_i\mathbf{x}_i\right)\cdot\mathbf{x}_i + \sum_{i=1}^{n}\lambda_i\\
+&= \frac{1}{2}\left(\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j(\mathbf{x}_i \cdot \mathbf{x}_j)\right) - \sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j(\mathbf{x}_i \cdot \mathbf{x}_j) + \sum_{i=1}^{n}\lambda_i\\
+&= \sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j(\mathbf{x}_i \cdot \mathbf{x}_j)\\
+&= L(\pmb\lambda)
+\end{align}$$
+Abbiamo quindi espresso il problema in funzione dei soli parametri $\pmb\lambda$.
+
+Ovviamente il tuo vale anche nel caso di applicazioni di [[Some Base Function|base function]] sugli elementi $\mathbf{x}_i$.
+Definendo la seguente funzione kernel $$\kappa(\mathbf{x}_i, \mathbf{x}_j) = \phi(\mathbf{x}_i) \cdot \phi(\mathbf{x}_j)$$ ridefiniamo quindi il lagrangiano come
+$$\max_{\pmb\lambda \,:\, \lambda_i}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}L(\pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}\left(\sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j\kappa(\mathbf{x}_i \cdot \mathbf{x}_j)\right)$$
+
 

@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "227df5cb25c0b1a9",
+        "id": "ecf0ea71559bcaaf",
         "type": "tabs",
         "children": [
           {
-            "id": "cd6a808053e8dbbe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/0 - Machine Learning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06c242fb4eec8801",
+            "id": "b309e0530f6d8bd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,11 +147,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "b309e0530f6d8bd8",
   "lastOpenFiles": [
+    "ML/0 - Machine Learning.md",
     "ML/img/ML_11_2.png",
     "ML/img/ML_11_1.png",
-    "ML/0 - Machine Learning.md",
     "ML/Support Vector Machines.md",
     "ML/Backpropagation.md",
     "ML/Multilayer perceptrons.md",
@@ -178,7 +165,6 @@
     "ML/Naive Bayes Classifier.md",
     "ML/img/ML_10_6.png",
     "ML/img/ML_10_5.png",
-    "ML/img/ML_10_4.png",
     "ML/Perceptron.md",
     "ML/Linear Classification.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
