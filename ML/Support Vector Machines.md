@@ -143,7 +143,7 @@ Abbiamo quindi espresso il problema in funzione dei soli parametri $\pmb\lambda$
 
 Ovviamente il tuo vale anche nel caso di applicazioni di [[Some Base Function|base function]] sugli elementi $\mathbf{x}_i$.
 Definendo la seguente funzione kernel $$\kappa(\mathbf{x}_i, \mathbf{x}_j) = \phi(\mathbf{x}_i) \cdot \phi(\mathbf{x}_j)$$ ridefiniamo quindi il lagrangiano come
-$$\max_{\pmb\lambda \,:\, \lambda_i}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}L(\pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}\left(\sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j\kappa(\mathbf{x}_i \cdot \mathbf{x}_j)\right)$$ ^c9f4f7
+$$\max_{\pmb\lambda \,:\, \lambda_i \geq 0}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i \geq 0}L(\pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i \geq 0}\left(\sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j\kappa(\mathbf{x}_i \cdot \mathbf{x}_j)\right)$$ ^c9f4f7
 
 ```ad-info
 title: Passing from primal to dual
