@@ -59,3 +59,4 @@ tags:
 - [[Multilayer perceptrons]]
 	- [[Backpropagation]]
 - [[Support Vector Machines]]
+	- [[SVM - removing separability assumption]]
