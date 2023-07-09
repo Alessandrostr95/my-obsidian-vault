@@ -78,6 +78,12 @@ O in forma compatta $$L(y,t) = \max(0, -yt)$$
 Un primo vantaggio è che la derivata non è semrpe nulla, quindi per $\text{sign(y)} \neq t$ il gradient descent può essere applicato.
 Purtroppo però non è **strettamente convessa**, quindi per $\text{sign(y)} = t$ ogni punto è un minimo.
 
+# Hinge Loss
+Definita come $$L_H(t, y) = \max(0, 1-ty)$$
+![[ML/img/ML_03_16.png]]
+
+Simile alla [[#Perceptron Loss]], penalizza alcune predizioni se **deboli** (ovvero per bassi valori di $y$).
+
 # Log Loss (Cross Entropy)
 Un funzione loss comune, usata spesso nella [[Logistic Regression]], è la **Log Loss**, nota anche come **Cross Entropy**.
 

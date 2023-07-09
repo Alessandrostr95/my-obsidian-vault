@@ -3,7 +3,7 @@ Infatti, in tal caso, non è possibile trovare una soluzione che soddisfi tutti 
 
 Perciò, per ottenere un separatore, è necessario **rilassare** questi vincoli, aggiungendo però un **errore** alla funzione da minimizzare.
 
-Introduciamo delle **variabili di slack** $\xi_i$ per ogni vincolo, per fornire una misura di quanto il vincolo non è verificato.
+Introduciamo delle **variabili di slack** $\xi_i$ per ogni vincolo, per fornire una misura di quanto il vincolo non è verificato. ^4c4a92
 
 Definiamo quindi una nuova versione del problema di minimizzazione
 $$\begin{align}

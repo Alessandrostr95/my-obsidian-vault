@@ -60,3 +60,4 @@ tags:
 	- [[Backpropagation]]
 - [[Support Vector Machines]]
 	- [[SVM - removing separability assumption]]
+	- [[SVM and Gradient Descent]]

@@ -176,3 +176,7 @@ $$w^*_0 = \frac{1}{\vert \mathcal{S} \vert} \sum_{\mathbf{x}_k \in \mathcal{S}}\
 ## Classification through SVM
 Un qualsiasi punto $\mathbf{x}$ del dominio può essere classificato, data una funzione base $\phi$ e una funzione kernel $\kappa$ come segue
 $$y(\mathbf{x}) = \text{sign}\left( \mathbf{w}^* \cdot \phi(\mathbf{x}) + w_0^*\right) = \text{sign}\left( \sum_{i=1}^{n}\lambda^*_it_i\phi(\mathbf{x}_i) \cdot \phi(\mathbf{x}) + w_0^*\right) = \text{sign}\left( \sum_{\mathbf{x}_i \in \mathcal{S}}\lambda^*_it_i\kappa(\mathbf{x}_i,\mathbf{x}) + w_0^*\right)$$
+
+-------
+# [[SVM - removing separability assumption]]
+# [[SVM and Gradient Descent]]
