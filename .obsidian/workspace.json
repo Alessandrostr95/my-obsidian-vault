@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "ecf0ea71559bcaaf",
+        "id": "8093f32ead5b73fb",
         "type": "tabs",
         "children": [
           {
-            "id": "ef985fa76bd204ae",
+            "id": "8d94117533027743",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "ML/SVM - removing separability assumption.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "662f2a6c633b4cda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Support Vector Machines.md",
                 "mode": "source",
                 "source": false
               }
@@ -147,11 +159,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "8d94117533027743",
   "lastOpenFiles": [
-    "ML/0 - Machine Learning.md",
-    "ML/SVM - removing separability assumption.md",
     "ML/Support Vector Machines.md",
+    "ML/SVM - removing separability assumption.md",
+    "ML/0 - Machine Learning.md",
     "ML/img/ML_11_2.png",
     "ML/img/ML_11_1.png",
     "ML/Backpropagation.md",
