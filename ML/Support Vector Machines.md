@@ -31,6 +31,7 @@ $$\gamma_i = t_i \cdot \left( \frac{c\mathbf{w}}{\Vert c\mathbf{w} \Vert} \cdot 
 Geometricamente possiamo interpretare $\gamma$ come meta della larghezza della striscia più larga possibile, centrata in $\mathbf{w}\cdot\mathbf{x} + w_0 = 0$, che non contiene nessun punto di $\mathcal{T}$.
 ![[ML_11_2.png]]
 
+Tutti i punti $\mathbf{x}$ presenti lungo i *margini* sono detti **vettori di supporto**, da cui il nome del modello. ^38a5d9
 
 # Optimal Margin Classifier
 Dato un dataset $\mathcal{T}$, assumendo per ora **linearmente separabile**, si vuole trovare un iperpiano di separazione $\mathbf{w}\cdot \mathbf{x} + w_0 = 0$ che **massimizzi** il [[#^6abbe9|margine di separazione]].
@@ -108,6 +109,15 @@ Poniamo
 
 Il rispettivo [[#Lagrangiano]] sarà $$L(\mathbf{w},\pmb\lambda) = \frac{1}{2}\Vert\mathbf{w}\Vert^2 - \sum_{i=1}^{n} \lambda_i\left(t_i(\mathbf{w}\cdot\mathbf{x}_i + w_0) - 1\right) = \frac{1}{2}\Vert\mathbf{w}\Vert^2 - \sum_{i=1}^{n} \lambda_it_i\mathbf{w}\cdot\mathbf{x}_i - w_0\sum_{i=1}^{n} \lambda_it_i + \sum_{i=1}^{n} \lambda_i$$
 L'ottimo al [[#^d4c925|problema di ottimizzazione iniziale]] avrò ottimo equivalente all'ottimo di $$\max_{\pmb\lambda \,:\, \lambda_i}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda)$$
+```ad-warning
+title: Important
+Osservare che, quando un elemento $\mathbf{x}_i$ è un [[#^38a5d9|vettore di supporto]], allora il vincolo $t_i(\mathbf{w}\cdot \mathbf{x}_i + w_0) - 1 \geq 0$ è **saturato**, ovvero $$t_i(\mathbf{w}\cdot \mathbf{x}_i + w_0) - 1 = 0$$
+Per tutti gli altri punti non vettori di supporto invece avremo la disuguaglianza stretta $> 0$.
+
+Ciò significa che per i vettori non di supporto $x_i$ deve essere necessariamente vero che $\lambda^*_i = 0$.
+```
+
+^6ff4f5
 
 Applicando le [[#Karus-Kuhn-Tucker conditions|condizioni di Karus-Kuhri-Tucker]] deve necessariamente essere che una soluzione ottima $\mathbf{w}^*$ deve rispettare i vincoli
 - $$\frac{\partial}{\partial \mathbf{w}}L(\mathbf{w}, \pmb\lambda) \Bigg\vert_{\mathbf{w}^*} = \mathbf{w}^* - \sum_{i=1}^{n}\lambda_it_i\mathbf{x}_i = \pmb{0}$$
@@ -129,10 +139,40 @@ $$\begin{align}
 &= \sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j(\mathbf{x}_i \cdot \mathbf{x}_j)\\
 &= L(\pmb\lambda)
 \end{align}$$
-Abbiamo quindi espresso il problema in funzione dei soli parametri $\pmb\lambda$.
+Abbiamo quindi espresso il problema in funzione dei soli parametri $\pmb\lambda$, ovvero risolviamo il solo **problema duale**.
 
 Ovviamente il tuo vale anche nel caso di applicazioni di [[Some Base Function|base function]] sugli elementi $\mathbf{x}_i$.
 Definendo la seguente funzione kernel $$\kappa(\mathbf{x}_i, \mathbf{x}_j) = \phi(\mathbf{x}_i) \cdot \phi(\mathbf{x}_j)$$ ridefiniamo quindi il lagrangiano come
-$$\max_{\pmb\lambda \,:\, \lambda_i}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}L(\pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}\left(\sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j\kappa(\mathbf{x}_i \cdot \mathbf{x}_j)\right)$$
+$$\max_{\pmb\lambda \,:\, \lambda_i}\min_{\mathbf{w}}L(\mathbf{w}, \pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}L(\pmb\lambda) = \max_{\pmb\lambda \,:\, \lambda_i}\left(\sum_{i=1}^{n}\lambda_i - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\lambda_i\lambda_jt_it_j\kappa(\mathbf{x}_i \cdot \mathbf{x}_j)\right)$$ ^c9f4f7
+
+```ad-info
+title: Passing from primal to dual
+- **Svantaggi**: il numero di variabili da ottimizzare aumentano da $d$ (o $m$ se si usano funzioni base) ad $n$.
+- **Vantaggi**: dato che però $\lambda_i^* = 0$ per ogni elemento del dataset che **non** è un vettore di supporto, allora il numero di parametri da stimare è $\vert \mathcal{S} \vert \leq n$, dove $\mathcal{S}$ è l'insieme dei vettori di supporto.
+```
 
 
+## Deriving coefficients
+Supponiamo di aver ottenuto il vettore ottimo $\pmb\lambda^*$ che massimizza il [[#^c9f4f7|duale]].
+Da $\pmb\lambda^*$ possiamo ricavare i coefficienti
+$$\mathbf{w}^* = \sum_{i=1}^{n}\lambda^*_it_i\phi(\mathbf{x}_i)$$
+
+Per quanto riguarda $w_0^*$ [[#^6ff4f5|ricordiamo]] che, per ogni vettore di supporto $\mathbf{x}_k$ deve essere **saturata** il vincolo
+$$\begin{align}
+1
+&= t_k(\mathbf{w}^*\cdot\phi(\mathbf{x}_k) + w_0^*)\\\\
+&= t_k\left(\sum_{i=1}^{n}\lambda^*_it_i\phi(\mathbf{x}_i)\cdot\phi(\mathbf{x}_k) + w_0^*\right)\\\\
+&= t_k\left(\sum_{i=1}^{n}\lambda^*_it_i\kappa(\mathbf{x}_i,\mathbf{x}_k) + w_0^*\right)\\\\
+&= t_k\left(\sum_{\mathbf{x} \in \mathcal{S}}\lambda^*_it_i\kappa(\mathbf{x},\mathbf{x}_k) + w_0^*\right)
+\end{align}$$ dove $\mathcal{S}$ è l'insieme dei vettori di supporto.
+
+Dato che $t_k = \pm 1$ allora $1/t_k = t_k$, perciò
+$$t_k = \mathbf{w}^*\cdot\phi(\mathbf{x}_k) + w_0^*$$
+$$\implies w_0^* = t_k - \mathbf{w}^*\cdot\phi(\mathbf{x}_k) = t_k - \sum_{\mathbf{x} \in \mathcal{S}}\lambda^*_it_i\kappa(\mathbf{x},\mathbf{x}_k)$$
+
+Una soluzione più precisa si può ottenere tramite la media 
+$$w^*_0 = \frac{1}{\vert \mathcal{S} \vert} \sum_{\mathbf{x}_k \in \mathcal{S}}\left( t_k - \sum_{\mathbf{x}_i \in \mathcal{S}}\lambda^*_it_i\kappa(\mathbf{x}_i,\mathbf{x}_k) \right)$$
+
+## Classification through SVM
+Un qualsiasi punto $\mathbf{x}$ del dominio può essere classificato, data una funzione base $\phi$ e una funzione kernel $\kappa$ come segue
+$$y(\mathbf{x}) = \text{sign}\left( \mathbf{w}^* \cdot \phi(\mathbf{x}) + w_0^*\right) = \text{sign}\left( \sum_{i=1}^{n}\lambda^*_it_i\phi(\mathbf{x}_i) \cdot \phi(\mathbf{x}) + w_0^*\right) = \text{sign}\left( \sum_{\mathbf{x}_i \in \mathcal{S}}\lambda^*_it_i\kappa(\mathbf{x}_i,\mathbf{x}) + w_0^*\right)$$
