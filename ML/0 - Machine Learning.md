@@ -62,3 +62,5 @@ tags:
 	- [[SVM - removing separability assumption]]
 	- [[SVM and Gradient Descent]]
 - [[Decision Trees]]
+- [[Ensemble methods]]
+	- [[Bagging]]
