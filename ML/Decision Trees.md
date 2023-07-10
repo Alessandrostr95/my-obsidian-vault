@@ -54,3 +54,24 @@ Osservare che l'entropia è **minima** (ovvero pari a 0), quando tutti gli eleme
 
 Se usiamo l'entropia come **misura di inpurità** avremo come **goodness** della partizione $s_1, ..., s_r$ una quantità nota come **information gain** (**guadagno informativo**)
 $$IG(S, f) = H_S - \sum_{i=1}^{r} \frac{\vert s_i \vert}{\vert S \vert}H_{s_i}$$
+
+Un'altra misura di inpurità usata è il **gini index**, definito come $$G_S = 1- \sum_{i=1}^{K} \left( \frac{\vert S_i \vert}{\vert S \vert}\right)^2$$
+In tal caso la goodness è nota come **gini gain**
+$$GG(S,f) = G_S - \sum_{i=1}^{r} \frac{\vert s_i \vert}{\vert S \vert} G_{s_i}$$
+
+Perciò, fissata una misura di goodnes si partiziona $S$ scegliendo al feature e la funzione $f$ che massimizza $\Delta_{\phi}(S,f)$.
+
+## Leavs
+Ovviamente se non diamo un limite al numero di partizioni, la partizione ottima è quella che, per ogni elemento del dataset, abbiamo una regione differente (ovvero si va in **overfittinig**).
+Alcune politiche per limitare l'overfitting sono:
+1. limitare la **profondità** dell'albero.
+2. limitare il **numero di foglie**.
+3. definire un **numero minimo** di elementi per regione.
+
+Una volta identificato quando una regione è una foglia, possiamo associargli la classe di maggioranza presente al suo interno.
+
+Osservare che:
+- fermare troppo presto la creazione dell'albero tende all'**underfitting**.
+- fermare troppo tardi invece fa tendere all'**overfitting**.
+
+Perciò, un'ulteriore tecnica per ridurre l'overfitting è quella di applicare tecniche di **pruning**.
