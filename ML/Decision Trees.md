@@ -19,5 +19,38 @@ Perciò per fare la classificazione di una qualsiasi input $x$, basta percorrere
 
 ![[ML/img/ML_12_7.png]]
 
+# Construction
+Lo spazio delle feature è **partizionato ricorsivamente** costruendo l'albero decisionale dalla radice alle foglie.
+Ciò che ci serve sapere ad ogni nodo è:
+1. Come eseguire una partizione della regione corrispondente (scelta la feature da partizionare e la funzione)?
+2. Quando interrompere il partizionamento? Come assegnare le classi alle foglie?
 
+## Partitioning at each node
+Ciò che si vuole fare, ad ogni nodo, è selezionare la **feature/dimensione** sulla quale effettuare la partizione della regione, e la **funzione/soglia** secondo la quale assegnare i punti alle sottoregioni.
+È desiderabile scegliere questa coppia **feature-soglia** in modo tale da **minimizzare** una **misura di impurità** delle sottoregioni, o analogamente da **massimizzare una misura di qualità**.
 
+Definiamo come deve essere fatta una **misura di impurità**.
+Consideriamo una variabile aleatoria multidimensionale con **dominio discreto** e vettore di probabilità $\vec p = (p_1, ..., p_k)$.
+Una **misura di impurtià** è una funzione $\phi: \vec p \to \mathbb{R}$ tale che valgono le seguenti proprietà:
+1. $\phi(\vec p) \geq 0$ per ogni possibile $\vec{p}$.
+2. $\phi(\vec{p})$ è **minimizzata** quando *esiste* un $p_i \in \vec{p}$ tale che $p_i = 1$.
+3. $\phi(\vec{p})$ è **massimizzata** quando *per ogni* $p_i \in \vec{p}$ vale che $p_i = 1/k$.
+4. $\phi(\vec{p}) = \phi(\vec{p}^*)$ per ogni **permutazione** $\vec{p}^*$ di $\vec{p}$.
+5. $\phi(\vec{p})$ è **differenziabile** ovunque.
+
+Consideriamo il problema della classificazione $K \geq 2$ classi, e prendiamo una qualsiasi **regione** $S$.
+Associamo ad $S$ il vettore di probabilità $$p_S = \left(\frac{\vert S_1 \vert}{\vert S \vert}, ..., \frac{\vert S_K \vert}{\vert S \vert}\right)$$ dove $$S_h \equiv \lbrace x \in S \cap \mathcal{T} : x \in C_h \rbrace$$ è l'insieme di elementi dentro la regione $S$ che appartengono alla classe $C_h$.
+Definiamo la funzione $$f: S \to \lbrace 1, ..., r \rbrace$$ e definiamo con $$s_i \equiv \lbrace x \in S : f(x) = i \rbrace$$
+La funzione $f$ di fatto esegue una **partizione** di $S$ in $s_1, ..., s_r$ regioni.
+La **goodness** della partizione $s_1, ..., s_r$ di $S$ (fatta mediante la funzione $f$) è definita come $$\Delta_{\phi}(S,f) := \phi(p_S) - \sum_{i=1}^{r}\frac{\vert s_i \vert}{\vert S \vert} \cdot \phi(p_{s_i})$$ dove $p_{s_i}$ è la probabilità della partizione $s_i$ fatta mediante $f$.
+La goodness può anche essere vista come la differenza tra l'**impurità** di $S$ e la media pesata delle impurità dei sottoinsiemi $s_1, ..., s_r$ generati mediante $f$.
+
+> [!tldr]
+> Più precisamente, data una sottoregione $s_i$ avremo il vettore di probabilità 
+> $$p_{s_i} = \left(\frac{\vert \lbrace x \in s_i : x \in C_1 \rbrace \vert}{\vert s_i \vert}, ..., \frac{\vert \lbrace x \in s_i : x \in C_K \rbrace \vert}{\vert s_i \vert}\right)$$
+
+Indichiamo con $H_S$ l'**entropia** della classe $S$ come $$H_S = - \sum_{i=1}^{K}\frac{\vert S_i \vert}{\vert S \vert}\log_2\frac{\vert S_i \vert}{\vert S \vert}$$
+Osservare che l'entropia è **minima** (ovvero pari a 0), quando tutti gli elementi appartengono ad una stessa classe, ed è **massima** (ovvero pari a $\log_2K$) quando invece sono equamente distribuiti tra le $K$ classi.
+
+Se usiamo l'entropia come **misura di inpurità** avremo come **goodness** della partizione $s_1, ..., s_r$ una quantità nota come **information gain** (**guadagno informativo**)
+$$IG(S, f) = H_S - \sum_{i=1}^{r} \frac{\vert s_i \vert}{\vert S \vert}H_{s_i}$$
