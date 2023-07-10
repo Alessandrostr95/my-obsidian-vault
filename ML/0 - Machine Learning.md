@@ -64,3 +64,4 @@ tags:
 - [[Decision Trees]]
 - [[Ensemble methods]]
 	- [[Bagging]]
+	- [[Boosting]]
