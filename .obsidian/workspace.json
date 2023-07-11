@@ -160,8 +160,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "8028dd4cf483dafe",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "ML/img/ML_13_3.png",
+    "ML/img/ML_13_2.png",
     "ML/0 - Machine Learning.md",
     "ML/img/ML_13_1.png",
     "ML/img/ML_12_7.png",
@@ -180,7 +182,6 @@
     "ML/img/ML_03_16.png",
     "ML/Support Vector Machines.md",
     "ML/SVM - removing separability assumption.md",
-    "ML/img/ML_11_3.png",
     "ML/Backpropagation.md",
     "ML/Multilayer perceptrons.md",
     "ML/Probabilistic classification - generative models.md",
