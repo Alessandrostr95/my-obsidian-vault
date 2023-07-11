@@ -65,3 +65,5 @@ tags:
 - [[Ensemble methods]]
 	- [[Bagging]]
 	- [[Boosting]]
+		- [[Adaboost]]
+		- [[Gradient Boosting]]

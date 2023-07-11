@@ -95,3 +95,5 @@ Un'altra loss simile è la **exponential loss**
 $$L(y,t) = e^{-yt}$$
 
 Questa funzione penalizza gli errori di più rispetto alla [[#Log Loss (Cross Entropy)|Log Loss]].
+
+![[ML/img/ML_03_17.png]]

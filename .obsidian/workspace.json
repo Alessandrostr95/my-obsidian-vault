@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b85bcf62af5d803f",
+            "id": "acc49409f294826d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8028dd4cf483dafe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Boosting.md",
+                "file": "ML/Gradient Boosting.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Boosting.md",
+                "file": "ML/Gradient Boosting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Boosting.md"
+                "file": "ML/Gradient Boosting.md"
               }
             }
           },
@@ -160,14 +147,18 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "acc49409f294826d",
   "lastOpenFiles": [
+    "ML/Adaboost.md",
+    "ML/Gradient Boosting.md",
+    "ML/0 - Machine Learning.md",
+    "ML/Boosting.md",
+    "ML/Some Loss Functions.md",
+    "ML/img/ML_03_17.png",
     "ML/img/ML_13_3.png",
     "ML/img/ML_13_2.png",
-    "ML/0 - Machine Learning.md",
     "ML/img/ML_13_1.png",
     "ML/img/ML_12_7.png",
-    "ML/Boosting.md",
     "ML/Ensemble methods.md",
     "ML/Bagging.md",
     "ML/Decision Trees.md",
@@ -176,10 +167,7 @@
     "ML/img/ML_12_4.png",
     "ML/img/ML_12_3.png",
     "ML/img/ML_12_2.png",
-    "ML/img/ML_12_1.png",
     "ML/SVM and Gradient Descent.md",
-    "ML/Some Loss Functions.md",
-    "ML/img/ML_03_16.png",
     "ML/Support Vector Machines.md",
     "ML/SVM - removing separability assumption.md",
     "ML/Backpropagation.md",
@@ -197,7 +185,6 @@
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/Nonparametric Regression.md",
     "ML/Gaussian Discriminant Analysis.md",
-    "ML/Language Models.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
