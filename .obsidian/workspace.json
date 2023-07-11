@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1dbee470ec6dbf18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Some Loss Functions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -149,11 +161,11 @@
   },
   "active": "acc49409f294826d",
   "lastOpenFiles": [
-    "ML/Adaboost.md",
+    "ML/Some Loss Functions.md",
     "ML/Gradient Boosting.md",
+    "ML/Adaboost.md",
     "ML/0 - Machine Learning.md",
     "ML/Boosting.md",
-    "ML/Some Loss Functions.md",
     "ML/img/ML_03_17.png",
     "ML/img/ML_13_3.png",
     "ML/img/ML_13_2.png",
