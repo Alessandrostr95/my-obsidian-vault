@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/PCA - Principal Component Analysis.md",
-                "mode": "source",
+                "file": "ML/Probabilistic Model for Regression.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/PCA - Principal Component Analysis.md",
+                "file": "ML/Probabilistic Model for Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/PCA - Principal Component Analysis.md"
+                "file": "ML/Probabilistic Model for Regression.md"
               }
             }
           },
@@ -136,7 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5
+    "width": 334.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,21 +147,32 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "7d0d76a6a3b9fc09",
   "lastOpenFiles": [
+    "ML/0 - Machine Learning.md",
+    "ML/Linear Regression.md",
+    "ML/Esempio utilizzo Regolarizzazione.md",
+    "ML/Model Selection.md",
+    "ML/Language Models.md",
+    "ML/Maximum a Posteriori - Bayesian Approach.md",
+    "ML/Probabilistic Learning.md",
+    "ML/Some Loss Functions.md",
+    "ML/Convessità.md",
+    "ML/Gradient Descent.md",
+    "ML/From Learning to Optimization.md",
+    "ML/Prediction Risk.md",
+    "ML/Kernel Regression - Nadaraya-Watson Model.md",
+    "ML/PCA - Principal Component Analysis.md",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
     "AGT/img/Pasted image 20230712203245.png",
     "ML/img/ML_15_2.png",
     "ML/img/ML_15_1.png",
-    "ML/0 - Machine Learning.md",
     "ML/Dimensionality Reduction.md",
-    "ML/PCA - Principal Component Analysis.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
     "ISTI/Trasformazioni Univariate.md",
     "ISTI/Trasformazioni Bivariate.md",
     "ML/Gradient Boosting.md",
-    "ML/Some Loss Functions.md",
     "ML/Adaboost.md",
     "ML/Boosting.md",
     "ML/img/ML_03_17.png",
@@ -172,19 +183,8 @@
     "ML/Ensemble methods.md",
     "ML/Bagging.md",
     "ML/Decision Trees.md",
-    "ML/img/ML_12_6.png",
     "ML/SVM and Gradient Descent.md",
     "ML/Support Vector Machines.md",
-    "ML/SVM - removing separability assumption.md",
-    "ML/Backpropagation.md",
-    "ML/Multilayer perceptrons.md",
-    "ML/Probabilistic classification - generative models.md",
-    "ML/Naive Bayes Classifier.md",
-    "ML/Perceptron.md",
-    "ML/Linear Classification.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
-    "ML/Linear Regression.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",

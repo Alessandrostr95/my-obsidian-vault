@@ -51,7 +51,7 @@ Questo tipo di regressione è anche nota come **Ridge Regression**.
 
 > [!tldr] Lasso
 > Una versione **generalizzata** di $E_W(\mathbf{w})$ è la seguente $$E_W(\mathbf{w}) = \frac{1}{2}\sum_{j=0}^{m}\vert w_j \vert^q$$
-> Quando $q=0$, tale funzione è denotata come **lasso**. In questo caso sono favoriti **modelli sparsi**, ovvero con molti parametri posti a 0.
+> Quando $q=1$, tale funzione è denotata come **lasso**. In questo caso sono favoriti **modelli sparsi**, ovvero con molti parametri posti a 0.
 > 
 
 L'idea della regolarizzazione è quella che quando ci sono molti parametri è facile andare in overfitting sul training set, perciò si penalizzano soluzioni con eccessivi parametri.

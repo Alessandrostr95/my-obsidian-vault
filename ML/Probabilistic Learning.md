@@ -113,7 +113,7 @@ $$\begin{align}
 ### Esempio Bernoulli
 Supponiamo che di avere un *campione* $X$ di $n$ eventi binari, secondo una [[Distribuzioni#Bernoulli|distribuzione bernoulliana]] di parametro $\phi$ **sconosciuto**.
 
-$$p(x \vert \phi) = \phi^{x}(1-x)^{1-\phi}$$
+$$p(x \vert \phi) = \phi^{x}(1-\phi)^{1-x}$$
 
 Avremo
 - verosimiglianza $$L(\phi \vert X) = \prod_{i=1}^{n}\phi^{x_i}(1-\phi)^{1-x_i}$$
