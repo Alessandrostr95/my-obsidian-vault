@@ -47,5 +47,42 @@ J(\mathbf{u}_1)
 &= - \sum_{i=1}^{n}\mathbf{u}_1^T (\mathbf{x}_i - \mathbf{m})(\mathbf{x}_i - \mathbf{m})^T\mathbf{u}_1  + \sum_{i=1}^{n} \Vert\mathbf{x}_i - \mathbf{m}\Vert^2\\
 &= -n\mathbf{u}_1^T S\mathbf{u}_1  + \sum_{i=1}^{n} \Vert\mathbf{x}_i - \mathbf{m}\Vert^2
 \end{align}$$
-> [!info] Note
-> 
+
+Osservare quindi che **minimizzare** $J(\mathbf{u}_1)$ equivale al **massimizzare** $\mathbf{u}_1^T S\mathbf{u}_1$.
+Perciò questo si trasforma nel seguente problema di ottimizzazione
+$$\begin{align}
+u = \max_{\mathbf{u}_1} &\;\; \mathbf{u}_1^TS\mathbf{u}_1\\
+s.t. &\;\; \Vert \mathbf{u}_1 \Vert^2 = 1
+\end{align}$$
+Applicando l'opportuno [[Support Vector Machines#Lagrangiano|moltiplicatore lagrangiano]] avremo
+$$\max_{\mathbf{u}_1} \mathbf{u}_1^TS\mathbf{u}_1 - \lambda_1(\mathbf{u}_1\cdot\mathbf{u}_1 - 1)$$
+
+Possiamo ottenere il punto di massimo annullando la derivata prima
+$$\frac{\partial u}{\partial\mathbf{u}_1} = 2S\mathbf{u}_1 - 2 \lambda_1\mathbf{u}_1 = 0$$
+$$\implies S\mathbf{u}_1 = \lambda_1\mathbf{u}_1$$
+
+In altri termini $\mathbf{u}_1$ massimizza $J$ quando è un **autovettore** della matrice di covarianza $S$.
+Inoltre, la varianza totale della proiezione equivale all'**autovalore** $\lambda_1$, infatti
+$$\mathbf{u}_1^TS\mathbf{u}_1 = \mathbf{u}_1^T\lambda_1\mathbf{u}_1 = \lambda_1\mathbf{u}_1^T\mathbf{u}_1 = \lambda_1$$
+Osservare inoltre che la varianza della proiezione è massimizzata, se si sceglie un autovettore $\mathbf{u}_1$ con **autovalore massimo**.
+
+# PCA - $d' > 1$
+In questo caso vogliamo un iperpiano definito da $d'$ vettori unitari $\mathbf{u}_1, ...,\mathbf{u}_{d'}$.
+L'errore è **minimizzato** quando $\mathbf{u}_1, ...,\mathbf{u}_{d'}$ sono gli autovettore di $S$ con **autovalori massimi**.
+
+Analogamente, se assumiamo che il dati siano distribuiti secondo una [[CLT - Central Limit Theorem#Densità normale multivariata|gaussiana multivariata]] $d$-dimensionale con media $\mu$ e matrice di covarianza $\Sigma$, possiamo tranquillamente considerare l'iperpiano $d'$-dimensionale definito dagli autovalori $\mathbf{u}_1, ...,\mathbf{u}_{d'}$ di $\Sigma$ con **autovalori massimi**.
+
+![[ML/img/ML_15_3.png]]
+
+# Choosing $d'$
+La distribuzione della dimensione dell'autovalore è solitamente caratterizzata da una rapida diminuzione iniziale seguita poi da una **lenta diminuzione**.
+Ciò significa che esiste un certo valore di $d'$ per il quale, anche aumentando la dimensione del sottospazio, non si ottengono informazioni aggiuntive.
+
+![[ML/img/ML_15_4.png]]
+
+Possiamo quindi identificare quante dimensioni ci servono, in base a quanta "*fedeltà*" dei dati voglio preservare.
+
+Abbiamo detto che gli autovalori misurano la **quantità di varianza** mantenuta nella proiezione.
+Per ogni $k < d$, definiamo il valore $$r_k := \frac{\sum_{i=1}^{k}\lambda_i^2}{\sum_{i=1}^{n}\lambda_i^2}$$ il quale ci fornisce una **misura** di quanta varianza preserviamo se utilizziamo i primi $k$ autovalori più grandi.
+
+Quando abbiamo noti $r_1 < ... < r_d$, possiamo identificare $$d' = \arg \min_{k = 1,...,d} \lbrace r_k : r_k > p \rbrace$$ dove $p$ è la quantità minima di varianza che desideriamo preservare.
