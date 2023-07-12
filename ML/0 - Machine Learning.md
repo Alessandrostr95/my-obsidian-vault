@@ -67,3 +67,5 @@ tags:
 	- [[Boosting]]
 		- [[Adaboost]]
 		- [[Gradient Boosting]]
+- [[Dimensionality Reduction]]
+	- [[PCA - Principal Component Analysis]]
