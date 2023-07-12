@@ -8,7 +8,9 @@ Data la biettività, allora esiste l'inversa $x = g^{-1}(x)$.
 
 
 Sia la v.a. $Y \sim g(X)$.
-Allora avremo che
+
+In termini di **funzione di ripartizione** abbiamo che $$F_Y(y) = F_X(g^{-1}(y))$$
+Dato che $$f_X(x) = \frac{d}{dx}F_X(x)$$ allora avremo che
 $$f_Y(y) = f_X(g^{-1}(y)) \cdot \left\vert \frac{d}{dy} g^{-1}(y) \right\vert$$
 
 ### Esempio I 

@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a47c8d3e050a7494",
+        "id": "d765706f479dc738",
         "type": "tabs",
         "children": [
           {
-            "id": "acc49409f294826d",
+            "id": "1be05164e0c42030",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gradient Boosting.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1dbee470ec6dbf18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Some Loss Functions.md",
+                "file": "ISTI/Trasformazioni Univariate.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gradient Boosting.md",
+                "file": "ISTI/Trasformazioni Univariate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gradient Boosting.md"
+                "file": "ISTI/Trasformazioni Univariate.md"
               }
             }
           },
@@ -159,10 +147,13 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "acc49409f294826d",
+  "active": "1be05164e0c42030",
   "lastOpenFiles": [
-    "ML/Some Loss Functions.md",
+    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "ISTI/Trasformazioni Bivariate.md",
+    "ISTI/Trasformazioni Univariate.md",
     "ML/Gradient Boosting.md",
+    "ML/Some Loss Functions.md",
     "ML/Adaboost.md",
     "ML/0 - Machine Learning.md",
     "ML/Boosting.md",
@@ -194,9 +185,6 @@
     "ML/K-nearest neighbor.md",
     "ML/Non parametric classification.md",
     "ML/Kernel density estimation - Parzen windows.md",
-    "ML/Kernel Regression - Nadaraya-Watson Model.md",
-    "ML/Nonparametric Regression.md",
-    "ML/Gaussian Discriminant Analysis.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
