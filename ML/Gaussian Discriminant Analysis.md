@@ -1,4 +1,4 @@
-t:iNella **Gaussian Discriminant Analysis** (**GDA**) si assume che ogni probabilità $p(\mathbf{x} \vert C_k)$ degli elementi $\mathbf{x} \in \mathbb{R}^d$ rispetto alla classe $C_k$ sia una [[CLT - Central Limit Theorem#Normali Multivariate|gaussiana multivariata]].
+Nella **Gaussian Discriminant Analysis** (**GDA**) si assume che ogni probabilità $p(\mathbf{x} \vert C_k)$ degli elementi $\mathbf{x} \in \mathbb{R}^d$ rispetto alla classe $C_k$ sia una [[CLT - Central Limit Theorem#Normali Multivariate|gaussiana multivariata]].
 
 Sia quindi $\mu_k$ il punto medio della classe $C_k$ e $\Sigma \in \mathbb{R}^{d \times d}$ la **matrice di covarianza**, allora la probabilità di $\mathbf{x} \vert C_k$ avrà *densità* $$p(\mathbf{x} \vert C_k) = \frac{1}{(2\pi)^{d/2}\vert \text{det}(\Sigma) \vert^{1/2}} \exp{\left(-\frac{1}{2}(\mathbf{x} - \mu_k)^T\Sigma^{-1}(\mathbf{x} - \mu_k)\right)}$$ ^cfba72
 
