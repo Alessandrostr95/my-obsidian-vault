@@ -79,7 +79,7 @@ In sostaza $$\begin{bmatrix} \mathbf{f}\\ \mathbf{f}^*\end{bmatrix} \sim \mathca
 \end{bmatrix}\right)$$
 
 Usando la formula di Bayes, avremo che i valori della funzione $\mathbf{f}^*$ saranno distribuiti come
-$$\mathbf{f}^* \vert \mathbf{X}, \mathbf{X}^*, \mathbf{f} \sim \mathcal{N}(,)$$
+$$\mathbf{f}^* \vert \mathbf{X}, \mathbf{X}^*, \mathbf{f} \sim \mathcal{N}(\tilde\mu, \tilde\Sigma)$$
 
 $$\tilde\mu = \mu(\mathbf{X}^*) + \kappa(\mathbf{X},\mathbf{X}^*)^T\kappa(\mathbf{X},\mathbf{X})^{-1}(\mathbf{f} - \mu(\mathbf{X}))$$
 $$\tilde\Sigma = \kappa(\mathbf{X}^*) - \kappa(\mathbf{X}^*, \mathbf{X})\kappa(\mathbf{X})^{-1}\kappa(\mathbf{X}^*, \mathbf{X})^T$$

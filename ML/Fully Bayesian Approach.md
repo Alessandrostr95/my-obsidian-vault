@@ -29,7 +29,7 @@ Per questo, è considerato un approccio **non parametrico**.
 
 Nella [[#^0b25b4|figura]] possiamo vedere gli **intervalli di confidenza** della *posterior predictive mean* per ogni punto, al crescere delle osservazioni.
 
-![[ML_04_20.png]] ^0b25b4
+![[ML/img/ML_04_20.png]] ^0b25b4
 
 
 ```ad-note

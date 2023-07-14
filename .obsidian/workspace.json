@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Probabilistic Model for Regression.md",
+                "file": "ML/Gaussian Processes Regression.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Probabilistic Model for Regression.md",
+                "file": "ML/Gaussian Processes Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Probabilistic Model for Regression.md"
+                "file": "ML/Gaussian Processes Regression.md"
               }
             }
           },
@@ -150,6 +150,12 @@
   "active": "7d0d76a6a3b9fc09",
   "lastOpenFiles": [
     "ML/0 - Machine Learning.md",
+    "ML/Local Logistic Regression.md",
+    "ML/Locally Weighted Regression.md",
+    "ML/Nonparametric Regression.md",
+    "ML/Kernel Regression - Nadaraya-Watson Model.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/Probabilistic Model for Regression.md",
     "ML/Linear Regression.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/Model Selection.md",
@@ -161,7 +167,6 @@
     "ML/Gradient Descent.md",
     "ML/From Learning to Optimization.md",
     "ML/Prediction Risk.md",
-    "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/PCA - Principal Component Analysis.md",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
@@ -180,11 +185,6 @@
     "ML/img/ML_13_2.png",
     "ML/img/ML_13_1.png",
     "ML/img/ML_12_7.png",
-    "ML/Ensemble methods.md",
-    "ML/Bagging.md",
-    "ML/Decision Trees.md",
-    "ML/SVM and Gradient Descent.md",
-    "ML/Support Vector Machines.md",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
