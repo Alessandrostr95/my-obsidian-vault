@@ -7,5 +7,7 @@ Osserviamo che dati dei parametri $\mathbf{w}, w_0$ qualsiasi, le [[SVM - removi
 $$\min \mathbf{\xi}_i = \begin{cases}
 0 &\text{if } t_i(\mathbf{w}\cdot\mathbf{x}_i + w_0) \geq 1\\
 1 - t_i(\mathbf{w}\cdot\mathbf{x}_i + w_0)  &\text{otherwise}
-\end{cases}$$ ovvero $$\min \mathbf{\xi}_i = \max(0, 1 - t_i(\mathbf{w}\cdot\mathbf{x}_i + w_0))$$
+\end{cases}$$
+ovvero
+$$\min \mathbf{\xi}_i = \max(0, 1 - t_i(\mathbf{w}\cdot\mathbf{x}_i + w_0))$$
 Questa quantità equivale alla [[Some Loss Functions#Hinge Loss|Hinge Loss]]. 

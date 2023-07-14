@@ -164,7 +164,8 @@ $$\begin{align}
 &= t_k\left(\sum_{i=1}^{n}\lambda^*_it_i\phi(\mathbf{x}_i)\cdot\phi(\mathbf{x}_k) + w_0^*\right)\\\\
 &= t_k\left(\sum_{i=1}^{n}\lambda^*_it_i\kappa(\mathbf{x}_i,\mathbf{x}_k) + w_0^*\right)\\\\
 &= t_k\left(\sum_{\mathbf{x} \in \mathcal{S}}\lambda^*_it_i\kappa(\mathbf{x},\mathbf{x}_k) + w_0^*\right)
-\end{align}$$ dove $\mathcal{S}$ è l'insieme dei vettori di supporto.
+\end{align}$$
+dove $\mathcal{S}$ è l'insieme dei vettori di supporto.
 
 Dato che $t_k = \pm 1$ allora $1/t_k = t_k$, perciò
 $$t_k = \mathbf{w}^*\cdot\phi(\mathbf{x}_k) + w_0^*$$

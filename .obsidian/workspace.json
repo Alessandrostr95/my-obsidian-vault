@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gaussian Discriminant Analysis.md",
-                "mode": "source",
+                "file": "ML/Decision Trees.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gaussian Discriminant Analysis.md",
+                "file": "ML/Decision Trees.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gaussian Discriminant Analysis.md"
+                "file": "ML/Decision Trees.md"
               }
             }
           },
@@ -149,15 +149,22 @@
   },
   "active": "7d0d76a6a3b9fc09",
   "lastOpenFiles": [
+    "ML/0 - Machine Learning.md",
+    "ML/Support Vector Machines.md",
+    "ML/SVM and Gradient Descent.md",
+    "ML/SVM - removing separability assumption.md",
+    "ML/Multilayer perceptrons.md",
+    "ML/Non parametric classification.md",
+    "ML/K-nearest neighbor.md",
+    "ML/Kernel density estimation - Parzen windows.md",
     "ML/Probabilistic classification - generative models.md",
+    "ML/Gaussian Discriminant Analysis.md",
     "ML/Language Models.md",
     "ML/Naive Bayes Classifier.md",
-    "ML/0 - Machine Learning.md",
     "ML/Perceptron.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Gaussian Processes Regression.md",
-    "ML/Gaussian Discriminant Analysis.md",
     "ML/Linear Classification.md",
     "ML/Decision Trees.md",
     "ML/Local Logistic Regression.md",
@@ -168,13 +175,6 @@
     "ML/Probabilistic Model for Regression.md",
     "ML/Linear Regression.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
-    "ML/Model Selection.md",
-    "ML/Maximum a Posteriori - Bayesian Approach.md",
-    "ML/Probabilistic Learning.md",
-    "ML/Some Loss Functions.md",
-    "ML/Convessità.md",
-    "ML/Gradient Descent.md",
-    "ML/From Learning to Optimization.md",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
     "AGT/img/Pasted image 20230712203245.png",
