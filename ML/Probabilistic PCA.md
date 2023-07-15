@@ -16,3 +16,36 @@ Avendo campionato la variabile latente $\mathbf{z}$, allora il nuovo punto $\mat
 
 ![[ML/img/ML_15_5.png]]
 
+Osserviamo che la [[Distribuzioni Multivariate#Joint PDF|distribuzione congiunta]] di $\mathbf{x}, \mathbf{z}$ sarà
+$$\begin{bmatrix}
+\mathbf{z}\\
+\mathbf{x}
+\end{bmatrix} \sim \mathcal{N}\left(\mu_{\mathbf{zx}}, \Sigma\right)$$
+con
+$$\mu_{\mathbf{zx}} =
+\begin{bmatrix}
+\mu_{\mathbf{z}}\\
+\mu_{\mathbf{x}}
+\end{bmatrix}$$
+Osserviamo che dato che $\mathbf{z} \sim \mathcal{N}(\mathbf{0}, I)$ allora $\mu_{\mathbf{z}} = \mathbf{0}$.
+Perciò
+$$\mu_{\mathbf{x}} = \mathbb{E}\left[ \mathbf{x} \right] = \mathbb{E}\left[ \mathbf{Wz^T} + \pmb\mu + \pmb\epsilon \right] = \pmb\mu$$
+e quindi
+$$\mu_{\mathbf{zx}} =
+\begin{bmatrix}
+\mathbf{0}\\
+\pmb\mu
+\end{bmatrix}$$
+
+Per quanto riguarda la matrice di covarianza abbiamo
+$$\Sigma =
+\begin{bmatrix}
+\Sigma_{\mathbf{zz}} & \Sigma_{\mathbf{zx}}\\
+\Sigma_{\mathbf{xz}} & \Sigma_{\mathbf{xx}}
+\end{bmatrix}$$
+dove
+$$\begin{align}
+\Sigma_{\mathbf{zz}} &= I\\
+\Sigma_{\mathbf{zx}} &= \mathbf{W}^T = \Sigma_{\mathbf{xz}}^T\\
+\Sigma_{\mathbf{xx}} &= \mathbf{W}\mathbf{W}^T + \sigma^2I
+\end{align}$$
