@@ -69,3 +69,4 @@ tags:
 		- [[Gradient Boosting]]
 - [[Dimensionality Reduction]]
 	- [[PCA - Principal Component Analysis]]
+	- [[Probabilistic PCA]]

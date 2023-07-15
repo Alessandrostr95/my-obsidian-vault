@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d0d76a6a3b9fc09",
+            "id": "66ce002deaa57212",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Decision Trees.md",
-                "mode": "preview",
+                "file": "ML/Probabilistic PCA.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Decision Trees.md",
+                "file": "ML/Probabilistic PCA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Decision Trees.md"
+                "file": "ML/Probabilistic PCA.md"
               }
             }
           },
@@ -147,9 +147,19 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "7d0d76a6a3b9fc09",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "ML/img/ML_15_5.png",
     "ML/0 - Machine Learning.md",
+    "ML/Probabilistic PCA.md",
+    "ML/PCA - Principal Component Analysis.md",
+    "ML/Dimensionality Reduction.md",
+    "ML/Ensemble methods.md",
+    "ML/Boosting.md",
+    "ML/Gradient Boosting.md",
+    "ML/Adaboost.md",
+    "ML/Bagging.md",
+    "ML/Decision Trees.md",
     "ML/Support Vector Machines.md",
     "ML/SVM and Gradient Descent.md",
     "ML/SVM - removing separability assumption.md",
@@ -165,16 +175,6 @@
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Gaussian Processes Regression.md",
-    "ML/Linear Classification.md",
-    "ML/Decision Trees.md",
-    "ML/Local Logistic Regression.md",
-    "ML/Locally Weighted Regression.md",
-    "ML/Nonparametric Regression.md",
-    "ML/Kernel Regression - Nadaraya-Watson Model.md",
-    "ML/Fully Bayesian Approach.md",
-    "ML/Probabilistic Model for Regression.md",
-    "ML/Linear Regression.md",
-    "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
     "AGT/img/Pasted image 20230712203245.png",

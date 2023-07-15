@@ -16,3 +16,4 @@ Esistono due approcci principali:
 - **feature extraction**: identificare una **proiezione** del dataset in uno spazio con dimensione minore, in modo da preservare la varianza dei dati. ^2abcdd
 
 # [[PCA - Principal Component Analysis]]
+## [[Probabilistic PCA]]

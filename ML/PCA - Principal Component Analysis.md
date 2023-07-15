@@ -86,3 +86,6 @@ Abbiamo detto che gli autovalori misurano la **quantità di varianza** mantenuta
 Per ogni $k < d$, definiamo il valore $$r_k := \frac{\sum_{i=1}^{k}\lambda_i^2}{\sum_{i=1}^{n}\lambda_i^2}$$ il quale ci fornisce una **misura** di quanta varianza preserviamo se utilizziamo i primi $k$ autovalori più grandi.
 
 Quando abbiamo noti $r_1 < ... < r_d$, possiamo identificare $$d' = \arg \min_{k = 1,...,d} \lbrace r_k : r_k > p \rbrace$$ dove $p$ è la quantità minima di varianza che desideriamo preservare.
+
+------
+# [[Probabilistic PCA]]
