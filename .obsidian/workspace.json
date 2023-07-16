@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gaussian Processes Regression.md",
+                "file": "ML/0 - Machine Learning.md",
                 "mode": "preview",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gaussian Processes Regression.md",
+                "file": "ML/0 - Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gaussian Processes Regression.md"
+                "file": "ML/0 - Machine Learning.md"
               }
             }
           },
@@ -149,7 +149,13 @@
   },
   "active": "66ce002deaa57212",
   "lastOpenFiles": [
+    "ML/Backpropagation.md",
     "ML/0 - Machine Learning.md",
+    "ML/Linear Classification.md",
+    "ML/Perceptron.md",
+    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
+    "ML/Gaussian Processes Regression.md",
     "ML/Locally Weighted Regression.md",
     "ML/Ensemble methods.md",
     "ML/Bagging.md",
@@ -161,11 +167,6 @@
     "ML/Gaussian Discriminant Analysis.md",
     "ML/Naive Bayes Classifier.md",
     "ML/Language Models.md",
-    "ML/Linear Classification.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
-    "ML/Perceptron.md",
-    "ML/Gaussian Processes Regression.md",
     "ML/Local Logistic Regression.md",
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/Fully Bayesian Approach.md",
@@ -174,7 +175,6 @@
     "ML/Maximum a Posteriori - Bayesian Approach.md",
     "ML/Some Loss Functions.md",
     "ML/Probabilistic Learning.md",
-    "ML/Probabilistic PCA.md",
     "ML/img/ML_15_5.png",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
