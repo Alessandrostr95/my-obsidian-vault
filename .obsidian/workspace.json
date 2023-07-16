@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Probabilistic PCA.md",
-                "mode": "source",
+                "file": "ML/Gaussian Processes Regression.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Probabilistic PCA.md",
+                "file": "ML/Gaussian Processes Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Probabilistic PCA.md"
+                "file": "ML/Gaussian Processes Regression.md"
               }
             }
           },
@@ -147,34 +147,35 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "66ce002deaa57212",
   "lastOpenFiles": [
-    "ML/img/ML_15_5.png",
     "ML/0 - Machine Learning.md",
-    "ML/Probabilistic PCA.md",
-    "ML/PCA - Principal Component Analysis.md",
-    "ML/Dimensionality Reduction.md",
+    "ML/Locally Weighted Regression.md",
     "ML/Ensemble methods.md",
-    "ML/Boosting.md",
-    "ML/Gradient Boosting.md",
-    "ML/Adaboost.md",
     "ML/Bagging.md",
     "ML/Decision Trees.md",
-    "ML/Support Vector Machines.md",
-    "ML/SVM and Gradient Descent.md",
-    "ML/SVM - removing separability assumption.md",
-    "ML/Multilayer perceptrons.md",
     "ML/Non parametric classification.md",
     "ML/K-nearest neighbor.md",
     "ML/Kernel density estimation - Parzen windows.md",
     "ML/Probabilistic classification - generative models.md",
     "ML/Gaussian Discriminant Analysis.md",
-    "ML/Language Models.md",
     "ML/Naive Bayes Classifier.md",
-    "ML/Perceptron.md",
+    "ML/Language Models.md",
+    "ML/Linear Classification.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
+    "ML/Perceptron.md",
     "ML/Gaussian Processes Regression.md",
+    "ML/Local Logistic Regression.md",
+    "ML/Kernel Regression - Nadaraya-Watson Model.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/Linear Regression.md",
+    "ML/Model Selection.md",
+    "ML/Maximum a Posteriori - Bayesian Approach.md",
+    "ML/Some Loss Functions.md",
+    "ML/Probabilistic Learning.md",
+    "ML/Probabilistic PCA.md",
+    "ML/img/ML_15_5.png",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
     "AGT/img/Pasted image 20230712203245.png",
@@ -184,7 +185,6 @@
     "ML/img/ML_13_3.png",
     "ML/img/ML_13_2.png",
     "ML/img/ML_13_1.png",
-    "ML/img/ML_12_7.png",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",

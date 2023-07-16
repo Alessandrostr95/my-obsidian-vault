@@ -50,7 +50,9 @@ $$\kappa(\mathbf{X}) = \begin{pmatrix}
 \kappa(x_2,x_1) &\kappa(x_2,x_2) &... &\kappa(x_2,x_m)\\
 \vdots &\vdots &\ddots &\vdots\\
 \kappa(x_m,x_1), &\kappa(x_m,x_2), &..., &\kappa(x_m,x_m)\\
-\end{pmatrix}$$ e $$\kappa(x_i,x_j) = \sigma^2 \exp\left(-\frac{1}{2\ell^2}(x_i-x_j)^2\right)$$
+\end{pmatrix}$$
+e
+$$\kappa(x_i,x_j) = \sigma^2 \exp\left(-\frac{1}{2\ell^2}(x_i-x_j)^2\right)$$
 I **meta parametri** $\sigma^2, \ell, \varepsilon$ possono essere interpretati nel seguente modo:
 - $\ell$ è un **fattore di stretch orizzontale**. Più è alto il suo valore, più la funzione risulta **morbida** ![[ML/img/ML_05_5.png]]
 -  $\sigma^2$ è un **fattore di stretch verticale**. Più è alto il suo valore, più la funzione risulta assumi valori "**ampi**" ![[ML/img/ML_05_6.png]]
@@ -63,7 +65,9 @@ La distribuzione del vettore $(\mathbf{f}, \mathbf{f}^*)$, con $\mathbf{f} = f(\
 $$\Sigma(\mathbf{X},\mathbf{X}^*) = \begin{bmatrix}
 \kappa(\mathbf{X}) &\kappa(\mathbf{X},\mathbf{X}^*)\\
 \kappa(\mathbf{X},\mathbf{X}^*)^T &\kappa(\mathbf{X}^*)\\
-\end{bmatrix}$$ dove $$\kappa(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
+\end{bmatrix}$$
+dove
+$$\kappa(\mathbf{X},\mathbf{X}^*) = \begin{pmatrix}
 \kappa(x_1,x^*_1) &\kappa(x_1,x^*_2) &... &\kappa(x_1,x^*_r)\\
 \kappa(x_2,x^*_1) &\kappa(x_2,x^*_2) &... &\kappa(x_2,x^*_r)\\
 \vdots &\vdots &\ddots &\vdots\\
