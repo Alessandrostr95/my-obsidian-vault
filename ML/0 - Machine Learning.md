@@ -67,6 +67,10 @@ tags:
 	- [[Boosting]]
 		- [[Adaboost]]
 		- [[Gradient Boosting]]
+
+## Unsupervised Learning
 - [[Dimensionality Reduction]]
 	- [[PCA - Principal Component Analysis]]
 	- [[Probabilistic PCA]]
+- [[Clustering]]
+	- [[K-mean clustering]]
