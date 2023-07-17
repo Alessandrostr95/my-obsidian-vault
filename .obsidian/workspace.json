@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
-                "mode": "preview",
+                "file": "ML/Gradient Descent.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/0 - Machine Learning.md",
+                "file": "ML/Gradient Descent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/0 - Machine Learning.md"
+                "file": "ML/Gradient Descent.md"
               }
             }
           },
@@ -147,10 +147,18 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "66ce002deaa57212",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
-    "ML/Backpropagation.md",
+    "ML/img/ML_03_18.png",
+    "ML/Gradient Descent.md",
+    "ML/img/ML_03_20.png",
+    "ML/img/ML_03_19.png",
     "ML/0 - Machine Learning.md",
+    "ML/Support Vector Machines.md",
+    "ML/SVM - removing separability assumption.md",
+    "ML/SVM and Gradient Descent.md",
+    "ML/Gaussian Discriminant Analysis.md",
+    "ML/Backpropagation.md",
     "ML/Linear Classification.md",
     "ML/Perceptron.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
@@ -164,17 +172,11 @@
     "ML/K-nearest neighbor.md",
     "ML/Kernel density estimation - Parzen windows.md",
     "ML/Probabilistic classification - generative models.md",
-    "ML/Gaussian Discriminant Analysis.md",
     "ML/Naive Bayes Classifier.md",
     "ML/Language Models.md",
     "ML/Local Logistic Regression.md",
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
     "ML/Fully Bayesian Approach.md",
-    "ML/Linear Regression.md",
-    "ML/Model Selection.md",
-    "ML/Maximum a Posteriori - Bayesian Approach.md",
-    "ML/Some Loss Functions.md",
-    "ML/Probabilistic Learning.md",
     "ML/img/ML_15_5.png",
     "ML/img/ML_15_4.png",
     "ML/img/ML_15_3.png",
@@ -182,9 +184,6 @@
     "ML/img/ML_15_2.png",
     "ML/img/ML_15_1.png",
     "ML/img/ML_03_17.png",
-    "ML/img/ML_13_3.png",
-    "ML/img/ML_13_2.png",
-    "ML/img/ML_13_1.png",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",

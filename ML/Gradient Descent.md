@@ -132,4 +132,73 @@ Osservare che:
 ![[ML/img/ML_03_14.png]]
 ![[ML/img/ML_03_15.png]]
 
+```ad-warning
+title: Problemi aperti
+Scegliere un buon *learning rate* $\eta$ risulta essere un problema difficile.
+Perciò si potrebbero applicare dei meccanismi per **regolare il learning rate** durante l'addestramento, riducendolo secondo un metodo predefinito o quando la funzione di *loss* scende al di sotto di una soglia.
+```
+
+
 # Momentum Gradient Descent
+Questo metodo si ispira ad una **interpretazione fisica** del processo di ottimizzazione.
+Supponiamo di avere un corpo di **massa** $m = 1$, il quale si **muove** sulla superficie definita da una **funzione costo** $J(\theta)$.
+Tale corpo ha
+- **energia potenziale** al punto $\theta$ pari a $$U(\theta) = \eta J(\theta)$$
+- **forza peso** al punto $\theta$ pari a $$F(\theta) = m \cdot\vec{a} = -\nabla U(\theta) = - \eta J'(\theta)$$
+
+Nel gradient descent classico il movimento è determinato solamente dall'**accelerazione** in un punto $\theta$, il quale è pari al gradiente $J'(\theta)$.
+
+Nel **momentum gradient descent** viene considerata anche una **velocità** $v(\theta)$ del nostro corpo nel punto $\theta$.
+Perciò la posizione del nostro corpo può essere definita come 
+$$\theta^{(k+1)} = \theta^{(k)} + \gamma v^{(k+1)}$$ dove
+$$v^{(k+1)} = v^{(k)} - \eta J'(\theta) \bigg\vert_{\theta = \theta^{(k)}}$$
+In pratica si applica la discesa del gradiente alla velocità, la quale a sua volta va ad influire sulla posizione.
+
+![[ML/img/ML_03_18.png]]
+
+![[ML/img/ML_03_19.png]]
+
+![[ML/img/ML_03_20.png]]
+
+# Nesterov Gradient Descent #todo 
+
+-----
+# Dynamically updating the learning rate
+Il learning rate $\eta$ è un parametro cruciale per il gradient descent.
+- se troppo **largo** potrebbe capitare di saltare il minimo locale, aumentando la loss anziché diminuendola.
+- se troppo **piccolo** si potrebbe incorrere in una convergenza troppo lenta.
+
+Un'idea potrebbe essere quella di **diminuire dinamicamente** il learning rate: perché ci si aspetta che man mano ci si avvicina sempre di più al minimo e quindi si vuole essere più precisi.
+
+Alcune euristiche sono le seguenti:
+- **Decadimento graduale**: periodicamente (ogni poche epoche) facciamo **decadere** il valore di $\eta$ di un fattore 2.
+- **Decadimento esponenziale**: facciamo decadere $\eta$ dividendolo per $e^{-\alpha}$. Perciò, dopo $k$ epoche avremo $$\eta^{(k)} = \eta^{(0)} e^{-\alpha k}$$
+
+----
+# Adagrad
+Riscriviamo la formula del gradiente descent
+$$\theta^{(k+1)}_j = \theta^{(k)}_j - \eta \frac{\partial}{\partial \theta_j^{(k)}}J(\theta)$$
+nel seguente modo
+$$\theta^{(k+1)}_j = \theta^{(k)}_j + \Delta_{j,k}$$
+dove
+- $$\Delta_{j,k} = - \eta g_{j,k}$$
+- $$g_{j,k} = \frac{\partial}{\partial \theta_j^{(k)}}J(\theta)$$
+
+**Adagrad** modifica questo comportamento per ciò che riguarda il calcolo di $\Delta_{j,k}$ **adattando** il learning rate $\eta$ ai singoli parametri $\theta_1, ..., \theta_d$, eseguendo aggiornamenti più grandi per i parametri *rari* e aggiornamenti più piccoli per i parametri frequenti.
+
+Perciò in Adagrad si associa un **learning rate dinamico** $\eta^{(k)}_j$ per ogni parametro $\theta^{(k)}_j$.
+Più $g_{j,k}$ è piccolo, più sarà grande $\eta^{(k)}_j$, e viceversa.
+
+Definiamo quindi
+$$\eta^{(k)}_j = \frac{\eta}{\sqrt{G_{j,k} + \varepsilon}}$$
+dove
+$$G_{j,k} = \sum_{t = 1}^{k} g^2_{j,t}$$
+
+In forma estesa avremo il seguente aggiornamento
+$$\theta^{(k+1)}_j = \theta^{(k)}_j - \frac{\eta}{\sqrt{\sum_{t=1}^{k}g^2_{j,t} + \varepsilon}}g_{j,k}$$
+
+Intuitivamente, se il punto in cui mi trovo è quasi piano, vorrei fare un "*salto*" più lunto.
+Viceversa, se il punto è molto ripido, Adagrad fa fare salti più "*piccoli*".
+
+La principale debolezza di Adagrad è il suo accumulo dei gradienti quadratici nel denominatore: poiché ogni termine aggiunto è positivo, la somma accumulata continua a crescere durante l'allenamento. Questo a sua volta, come osservato sopra, fa sì che il tasso di apprendimento si riduca e alla fine diventi infinitamente piccolo, a quel punto l'algoritmo non è più in grado di acquisire ulteriori conoscenze.
+
