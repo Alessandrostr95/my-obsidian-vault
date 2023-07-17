@@ -17,3 +17,11 @@ $$\frac{\partial J}{\partial \mathbf{m}_j} = 2 \sum_{i=1}^{n} r_{ij} \cdot (\mat
 ![[ML/img/ML_14_4.png]]
 
 # How to choose $K$
+Un modo intuitivo per scegliere il miglior $K$ è quello di fare **validazione**.
+Ovvero eseguo l'algoritmo per diversi valori, e ne valuto la qualità della soluzione.
+
+Esistono due modi per misurare la qualità di un clustering:
+1. tramite la **distanza media** dei punti dai rispettivi prototipi.
+2. la [[Verosimiglianza|log-verosimiglianza]] degli elementi rispetto alle **misture** risultanti dal modello.
+
+Osservare che al crescere di $K$ ovviamente la qualità del modello aumenta, tendendo per all'**overfitting**.

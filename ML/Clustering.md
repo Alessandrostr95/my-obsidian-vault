@@ -11,4 +11,5 @@ Esistono due tipologie di clustering:
 1. **Clustering Partizionale**: nel quale vogliamo assegnare ogni elemento di $\mathbf{X}$ ad una partizione in modo tale massimizzare (o minimizzare) una funzione di costo $J$. Il numero di partizioni $k$ può essere dato o computato.
 2. **Clustering Gerarchico**: si parte da una partizione in cui ogni elemento di $\mathbf{X}$ è una partizione a se stante (un **singleton**). A partire da queste trovare partizioni con più elementi composto da altre sottopartizioni.
 
-# [[K-mean clustering]]
+# [[Clustering Partizionale - K-mean clustering]]
+# [[Clustering Gerarchico]]

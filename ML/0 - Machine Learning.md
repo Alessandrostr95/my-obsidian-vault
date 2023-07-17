@@ -73,4 +73,5 @@ tags:
 	- [[PCA - Principal Component Analysis]]
 	- [[Probabilistic PCA]]
 - [[Clustering]]
-	- [[K-mean clustering]]
+	- [[Clustering Partizionale - K-mean clustering]]
+	- [[Clustering Gerarchico]]
