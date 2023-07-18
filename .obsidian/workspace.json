@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Some Loss Functions.md",
+                "file": "ML/Gradient Descent.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Some Loss Functions.md",
+                "file": "ML/Gradient Descent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Some Loss Functions.md"
+                "file": "ML/Gradient Descent.md"
               }
             }
           },
@@ -161,10 +161,10 @@
   },
   "active": "0da7382bdeb78ac6",
   "lastOpenFiles": [
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/0 - Machine Learning.md",
-    "ML/Naive Bayes Classifier.md",
     "ML/Some Loss Functions.md",
+    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/Naive Bayes Classifier.md",
     "ML/Gaussian Discriminant Analysis.md",
     "ML/Bagging.md",
     "ML/Boosting.md",

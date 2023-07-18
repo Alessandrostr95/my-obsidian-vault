@@ -160,7 +160,14 @@ In pratica si applica la discesa del gradiente alla velocità, la quale a sua vo
 
 ![[ML/img/ML_03_20.png]]
 
-# Nesterov Gradient Descent #todo 
+# Nesterov Gradient Descent
+In termini di [[#Momentum Gradient Descent]], possiamo esprimere il gradiente descent classico come
+$$\tilde{\theta}^{(k+1)} = \theta^{(k)} + \gamma v^{(k)}$$
+Nel **MGD** invece si aggiurno $v^{(k)}$ in $v^{(k+1)}$ ottenendo il nuovo punto
+$$\theta^{(k+1)} = \theta^{(k)} + \gamma v^{(k+1)}$$
+
+L'idea del **Nesterov Gradient Descent** è quella di mantenere una **quantità di moto**, definendo quindi
+$$\theta^{(k+1)} = \tilde{\theta}^{(k+1)} + \gamma v^{(k+1)}$$
 
 -----
 # Dynamically updating the learning rate
@@ -202,3 +209,14 @@ Viceversa, se il punto è molto ripido, Adagrad fa fare salti più "*piccoli*".
 
 La principale debolezza di Adagrad è il suo accumulo dei gradienti quadratici nel denominatore: poiché ogni termine aggiunto è positivo, la somma accumulata continua a crescere durante l'allenamento. Questo a sua volta, come osservato sopra, fa sì che il tasso di apprendimento si riduca e alla fine diventi infinitamente piccolo, a quel punto l'algoritmo non è più in grado di acquisire ulteriori conoscenze.
 
+# RMSprop
+**RMSprop** cerca di ridurre l'aggressività di [[#Adagrad]].
+L'idea è quella di non definire $G_{j,k}$ come la somma dei quadrati di $g_{jk}$, ma facendolo decrescere esponenzialmente
+$$\begin{align}
+\tilde{G}_{jk}
+&= \gamma \tilde{G}_{j, k-1} + (1-\gamma)g_{j,k}\\
+\\
+&= \gamma (\gamma\tilde{G}_{j, k-2} (1-\gamma)g_{j,k-1}) + (1-\gamma)g_{j,k}\\
+\\
+&= (1-\gamma)\sum_{i=1}^{k}\gamma^{k-i}g_{ji}
+\end{align}$$
