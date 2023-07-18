@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Clustering Gerarchico.md",
+                "file": "ML/Some Loss Functions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df46ab4908a61a67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Clustering Gerarchico.md",
+                "file": "ML/Some Loss Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Clustering Gerarchico.md"
+                "file": "ML/Some Loss Functions.md"
               }
             }
           },
@@ -147,22 +159,28 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "0da7382bdeb78ac6",
   "lastOpenFiles": [
+    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/0 - Machine Learning.md",
+    "ML/Naive Bayes Classifier.md",
+    "ML/Some Loss Functions.md",
+    "ML/Gaussian Discriminant Analysis.md",
+    "ML/Bagging.md",
+    "ML/Boosting.md",
+    "ML/Adaboost.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
+    "ML/PCA - Principal Component Analysis.md",
+    "ML/Clustering Gerarchico.md",
     "ML/img/ML_14_5.png",
     "ML/Clustering.md",
-    "ML/0 - Machine Learning.md",
-    "ML/Clustering Gerarchico.md",
     "ML/Clustering Partizionale - K-mean clustering.md",
-    "ML/PCA - Principal Component Analysis.md",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
     "ML/img/ML_14_2.png",
     "ML/img/ML_14_1.png",
     "ML/Dimensionality Reduction.md",
     "ML/Gradient Boosting.md",
-    "ML/Adaboost.md",
-    "ML/Bagging.md",
     "ML/Decision Trees.md",
     "ML/SVM and Gradient Descent.md",
     "ML/Gradient Descent.md",
@@ -171,20 +189,14 @@
     "ML/img/ML_03_19.png",
     "ML/Support Vector Machines.md",
     "ML/SVM - removing separability assumption.md",
-    "ML/Gaussian Discriminant Analysis.md",
     "ML/Backpropagation.md",
     "ML/Linear Classification.md",
     "ML/Perceptron.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Gaussian Processes Regression.md",
     "ML/Locally Weighted Regression.md",
     "ML/Ensemble methods.md",
-    "ML/Non parametric classification.md",
-    "ML/K-nearest neighbor.md",
     "ML/img/ML_15_5.png",
     "ML/img/ML_15_4.png",
-    "ML/img/ML_15_3.png",
     "Senza nome",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
