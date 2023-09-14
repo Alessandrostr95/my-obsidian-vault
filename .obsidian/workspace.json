@@ -4,34 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "03410607a478515b",
+        "id": "65a695b31f41d30b",
         "type": "tabs",
         "children": [
           {
-            "id": "0da7382bdeb78ac6",
+            "id": "ae6008ef3e587176",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Gradient Descent.md",
+                "file": "ML/PCA - Principal Component Analysis.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "df46ab4908a61a67",
+            "id": "712d69011df428a1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.4.12"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Gradient Descent.md",
+                "file": "ML/PCA - Principal Component Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Gradient Descent.md"
+                "file": "ML/PCA - Principal Component Analysis.md"
               }
             }
           },
@@ -159,17 +158,30 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "0da7382bdeb78ac6",
+  "active": "712d69011df428a1",
   "lastOpenFiles": [
+    "ML/Dimensionality Reduction.md",
     "ML/0 - Machine Learning.md",
-    "ML/Some Loss Functions.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/Linear Regression.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/K-nearest neighbor.md",
+    "ML/Kernel density estimation - Parzen windows.md",
     "ML/Naive Bayes Classifier.md",
+    "ML/Convessità.md",
+    "ML/SVM and Gradient Descent.md",
+    "ML/Perceptron.md",
+    "ML/Gaussian Processes Regression.md",
+    "ML/SVM - removing separability assumption.md",
     "ML/Gaussian Discriminant Analysis.md",
+    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
+    "ML/Locally Weighted Regression.md",
+    "ML/Kernel Regression - Nadaraya-Watson Model.md",
+    "ML/Gradient Descent.md",
+    "ML/Some Loss Functions.md",
     "ML/Bagging.md",
     "ML/Boosting.md",
     "ML/Adaboost.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/PCA - Principal Component Analysis.md",
     "ML/Clustering Gerarchico.md",
     "ML/img/ML_14_5.png",
@@ -179,22 +191,9 @@
     "ML/img/ML_14_3.png",
     "ML/img/ML_14_2.png",
     "ML/img/ML_14_1.png",
-    "ML/Dimensionality Reduction.md",
-    "ML/Gradient Boosting.md",
-    "ML/Decision Trees.md",
-    "ML/SVM and Gradient Descent.md",
-    "ML/Gradient Descent.md",
     "ML/img/ML_03_18.png",
     "ML/img/ML_03_20.png",
     "ML/img/ML_03_19.png",
-    "ML/Support Vector Machines.md",
-    "ML/SVM - removing separability assumption.md",
-    "ML/Backpropagation.md",
-    "ML/Linear Classification.md",
-    "ML/Perceptron.md",
-    "ML/Gaussian Processes Regression.md",
-    "ML/Locally Weighted Regression.md",
-    "ML/Ensemble methods.md",
     "ML/img/ML_15_5.png",
     "ML/img/ML_15_4.png",
     "Senza nome",
