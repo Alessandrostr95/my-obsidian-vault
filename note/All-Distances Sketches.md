@@ -29,3 +29,11 @@ Più precisamente $ADS(i)$ è formato dall'unione di tutti i [[MinHash Sketches]
 
 Un ADS è definito rispetto a [[MinHash Sketches#^c7e4f7|permutazioni random]] dei nodi di $G$, è può avere le stesse tre varianti del MinHas Sketch: [[MinHash Sketches#$k$-min sketch|k-min]] ADS, [[MinHash Sketches#bottom-$k$ sketch|bottom-k]] ADS e [[MinHash Sketches#$k$-partition sketch|k-partition]] ADS.
 
+> [!warning]
+> Per semplicità assumiamo che $d_{ij}$ è **unica** per $j$ differenti.
+
+## [[MinHash Sketches#bottom-$k$ sketch|bottom-k ADS]]
+Un bottom-$k$ ADS è definito rispetto a una sola permutazione random $r(V)$ di $V$.
+Osserviamo che $j \in ADS(i)$ se e solo se il rank $r(j)$ è tra i primi $k$ più piccoli dei nodi che sono più vicini ad $i$.
+$$j \in ADS(i) \iff r(j) < k^{th}_r(\Phi_{<j}(i))$$
+
