@@ -12,15 +12,15 @@ Esistono tre varianti:
 
 Uno sketch è definito rispetto ad una o più **permutazioni random** del dominio $U$.
 Definiamo una permutazione random di $U$ assegnando un [[Random Sample|rank casuale]] $r(j) \sim U\left[0,1\right]$  ad ogni elemento $j \in U$.
-Una permutazione quindi e una **sequenza ordinata** di rank $r(1) < r(2) < ...$.
+Una permutazione quindi e una **sequenza ordinata** di rank $r(1) < r(2) < ...$. ^c7e4f7
 
 > [!note]
 > Essendo $U\left[0,1\right]$ una [[Distribuzioni#Uniforme|uniforme continua]] avremo che $$P(r(i) = r(j)) = 0$$ per ogni $i \neq j$.
 > 
 
-## $k$-mean sketch
-Un $k$-mean sketch consiste nel considerare $k$ **permutazioni indipendenti** e selezionando i rank **minimi** da ciascune di queste.
-Essa equivale quindi a $k$ campionamenti **con rimpiazzo**.
+## $k$-min sketch
+Un $k$-min sketch consiste nel considerare $k$ **permutazioni indipendenti** e selezionando i rank **minimi** da ciascune di queste.
+Essa equivale quindi a $k$ campionamenti **con rimpiazzo**. ^ba3b96
 
 ## bottom-$k$ sketch
 Un bottom-$k$ sketch consiste nel prelevare i $k$ rank più piccoli di una data permutazione.
@@ -48,5 +48,3 @@ Definiamo
 - $$n_d(i) := \vert N_d(i) \vert$$
 - $$\Phi_{<j}(i) \equiv \lbrace \ell \in V : d_{i\ell} < d_{ij} \rbrace$$
 - $$\pi_{ij} := 1 + \vert \Phi_{<j}(i) \vert$$ ovvero la posizione di $j$ nel vicinato di $i$.
-- 
-
