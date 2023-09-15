@@ -26,9 +26,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f4b943b060afe919",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "note/All-Distances Sketches.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -103,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "note/MinHash Sketches.md",
+                "file": "note/All-Distances Sketches.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "note/MinHash Sketches.md"
+                "file": "note/All-Distances Sketches.md"
               }
             }
           },
@@ -156,9 +168,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "2c7be918fa932bcd",
+  "active": "f4b943b060afe919",
   "lastOpenFiles": [
     "note/MinHash Sketches.md",
+    "note/All-Distances Sketches.md",
     "note",
     "ML/Dimensionality Reduction.md",
     "ML/0 - Machine Learning.md",
@@ -185,7 +198,6 @@
     "ML/PCA - Principal Component Analysis.md",
     "ML/Clustering Gerarchico.md",
     "ML/img/ML_14_5.png",
-    "ML/Clustering.md",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
     "ML/img/ML_14_2.png",
