@@ -51,11 +51,27 @@ Osservare che un $k$-min ADS è semplicemente l'unione di $k$ bottom-1 **indipen
 
 ------
 # Proprietà
-> **Lemma**: la dimensione **media** di un bottom-$k$ ADS è $$k + k(H_n - H_k) \approx k(1+\ln{n} - \ln{k})$$
+> **Lemma**: la dimensione **media** di un bottom-$k$ $ADS(v)$ è $$k + k(H_{n_v} - H_k) \approx k(1+\ln{n_v} - \ln{k})$$ dove $n_v$ è il numero di nodi raggiungibili da $v$.
+> La dimensione **media** di un $k$-partition $ADS(v)$ è $$kH_{n_v/k} \approx k(\ln{n} -\ln{k})$$
+
 
 ```ad-info
 title: Serie armonica
 $$H_n = \sum_{j=1}^{n} \frac{1}{j} \approx 1 + \log{n}$$
 ```
 
+> **Proof**: consideriamo i nodi in ordine di vicinanza da $v$, ovvero $i$ è l'i-esimo nodo più vicino a $v$.
+> Per semplicità assumiamo le distanze tutte differenti, e consideriamo $i > k$, altrimenti $P(i \in ASD(v)) = 1$.
+> Ricordiamo che in un bottom-$k$ ASD abbiamo che $$i \in ADS(v) \iff r(i) < k^{th}_r(\Phi_{<i}(v))$$
+> Consideriamo ora il vettore $R$ che contiene tutti i rank degli elementi.
+> Per semplicità possiamo ignorare tutti i rank dei nodi $> i$.
+> Avremo quindi che $$P(r(i) < k_r^{th}(\Phi_{< i}(v))) = P\left( \bigcup_{j=1}^{k} R\left[ j \right] = r(i) \right) =  \sum_{j=1}^{k} P\left( R\left[ j \right] = r(i) \right) = \sum_{j=1}^{k}\frac{1}{i} = \frac{k}{i}$$
+> Avremo quindi che
+> $$\begin{align}
+\mathbb{E}\left[ \vert ADS(v) \vert \right]
+&= \mathbb{E}\left[ \Big\vert \bigcup_{i \in V} \lbrace i \in ADS(v) \rbrace  \Big\vert \right]\\
+&= \sum_{i=1}^{n} P(i \in ADS(v))\\
+&= \sum_{i=1}^{k} 1 + \sum_{i=k+1}^{n} P(r(i) < k_r^{th}(\Phi_{< i}(v)))\\
+&= k + k(H_n - H_k)
+\end{align}$$
 
