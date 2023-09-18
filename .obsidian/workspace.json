@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "085830d61f662c91",
+        "id": "d5b1b4e0dc78762a",
         "type": "tabs",
         "children": [
           {
-            "id": "3ead942f6b7a0d3f",
+            "id": "7296c02b93c43e70",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "note/MinHash Cardinality Estimator.md",
+                "file": "note/MinHash Sketches.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#AGT",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "note/MinHash Cardinality Estimator.md",
+                "file": "note/MinHash Sketches.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "note/MinHash Cardinality Estimator.md"
+                "file": "note/MinHash Sketches.md"
               }
             }
           },
@@ -147,8 +147,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "3ead942f6b7a0d3f",
+  "active": "7296c02b93c43e70",
   "lastOpenFiles": [
+    "Senza nome.canvas",
+    "Senza nome 1.canvas",
     "note/MinHash Sketches.md",
     "note/MinHash Cardinality Estimator.md",
     "note/HIP Estimator.md",
@@ -175,7 +177,6 @@
     "ML/Some Loss Functions.md",
     "ML/Bagging.md",
     "ML/Boosting.md",
-    "ML/Adaboost.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
