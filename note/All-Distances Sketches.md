@@ -37,3 +37,25 @@ Un bottom-$k$ ADS è definito rispetto a una sola permutazione random $r(V)$ di 
 Osserviamo che $j \in ADS(i)$ se e solo se il rank $r(j)$ è tra i primi $k$ più piccoli dei nodi che sono più vicini ad $i$.
 $$j \in ADS(i) \iff r(j) < k^{th}_r(\Phi_{<j}(i))$$
 
+## [[MinHash Sketches#$k$-partition sketch|k-partition ADS]]
+Un $k$-partition ADS è definito rispetto a una **permutazione random** $r$ e rispetto ad una **partizione random**
+$$\text{BUCKET}: V \to \left[ k \right]$$
+che mappa i nodi nei sottoinsiemi
+$$V_h \equiv \lbrace i \in V \vert \text{BUCKET}(i) = h\rbrace$$
+
+Osserviamo che un nodo $j \in ADS(i)$ se e solo se il rank $r(j)$ è tra i $k$ rank più piccoli tra i nodi del suo bucket, i quali sono più vicini ad $i$.
+$$j \in ADS(i) \iff r(j) < \min \lbrace r(\ell) \vert \text{BUCKET}(j) = \text{BUCKET}(\ell) \land \ell \in \Phi_{<j}(i)\rbrace$$
+
+## [[MinHash Sketches#$k$-min sketch|k-min ADS]]
+Osservare che un $k$-min ADS è semplicemente l'unione di $k$ bottom-1 **indipendenti** tra di loro, rispetto a $k$ permutazioni differenti e **indipendenti**.
+
+------
+# Proprietà
+> **Lemma**: la dimensione **media** di un bottom-$k$ ADS è $$k + k(H_n - H_k) \approx k(1+\ln{n} - \ln{k})$$
+
+```ad-info
+title: Serie armonica
+$$H_n = \sum_{j=1}^{n} \frac{1}{j} \approx 1 + \log{n}$$
+```
+
+
