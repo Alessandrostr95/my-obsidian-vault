@@ -50,7 +50,7 @@ $$j \in ADS(i) \iff r(j) < \min \lbrace r(\ell) \vert \text{BUCKET}(j) = \text{B
 Osservare che un $k$-min ADS è semplicemente l'unione di $k$ bottom-1 **indipendenti** tra di loro, rispetto a $k$ permutazioni differenti e **indipendenti**.
 
 ------
-# Proprietà
+# Size
 > **Lemma**: la dimensione **media** di un bottom-$k$ $ADS(v)$ è $$k + k(H_{n_v} - H_k) \approx k(1+\ln{n_v} - \ln{k})$$ dove $n_v$ è il numero di nodi raggiungibili da $v$.
 > La dimensione **media** di un $k$-partition $ADS(v)$ è $$kH_{n_v/k} \approx k(\ln{n} -\ln{k})$$
 
@@ -75,4 +75,7 @@ $$H_n = \sum_{j=1}^{n} \frac{1}{j} \approx 1 + \log{n}$$
 &= k + k(H_n - H_k)
 \end{align}$$
 > Per quanto riguarda il $k$-partition, osserviamo che ogni bucket ha size **in media** $n/k$.
-> 
+
+
+-----
+# ADS computation
