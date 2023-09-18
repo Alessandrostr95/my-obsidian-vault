@@ -74,4 +74,5 @@ $$H_n = \sum_{j=1}^{n} \frac{1}{j} \approx 1 + \log{n}$$
 &= \sum_{i=1}^{k} 1 + \sum_{i=k+1}^{n} P(r(i) < k_r^{th}(\Phi_{< i}(v)))\\
 &= k + k(H_n - H_k)
 \end{align}$$
-
+> Per quanto riguarda il $k$-partition, osserviamo che ogni bucket ha size **in media** $n/k$.
+> 
