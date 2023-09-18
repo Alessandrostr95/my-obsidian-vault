@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "note/All-Distances Sketches.md",
+                "file": "note/MinHash Cardinality Estimator.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "note/All-Distances Sketches.md",
+                "file": "note/MinHash Cardinality Estimator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "note/All-Distances Sketches.md"
+                "file": "note/MinHash Cardinality Estimator.md"
               }
             }
           },
@@ -149,8 +149,8 @@
   },
   "active": "3ead942f6b7a0d3f",
   "lastOpenFiles": [
-    "note/MinHash Cardinality Estimator.md",
     "note/All-Distances Sketches.md",
+    "note/MinHash Cardinality Estimator.md",
     "note/MinHash Sketches.md",
     "note",
     "ML/Dimensionality Reduction.md",
