@@ -18,6 +18,9 @@ Definiamo
 - $$\Phi_{<j}(i) \equiv \lbrace \ell \in V : d_{i\ell} < d_{ij} \rbrace$$
 - $$\pi_{ij} := 1 + \vert \Phi_{<j}(i) \vert$$ ovvero la posizione di $j$ nel vicinato di $i$.
 
+# Coefficient of Variation
+Il **coefficiente di variazione** $CV$ di uno stimatore $\tilde{X}$ di un valore $X$ è definito come $$CV = \frac{\sigma}{\mu} = \frac{\sqrt{\mathbb{E}\left[ (X-\tilde{X})^2\right]}}{X}$$
+
 -----
 # ADS
 Sia un grafo $G = (V,E)$ (pesato o non, diretto o non).
@@ -79,3 +82,8 @@ $$H_n = \sum_{j=1}^{n} \frac{1}{j} \approx 1 + \log{n}$$
 
 -----
 # ADS computation
+È possibile calcolare tutti gli $ADS(v)$ in tempo $O(km\log{n})$
+
+------
+## [[MinHash Cardinality Estimator]]
+## [[HIP Estimator]]

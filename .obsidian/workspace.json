@@ -8,19 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2c7be918fa932bcd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "note/MinHash Sketches.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f4b943b060afe919",
+            "id": "3ead942f6b7a0d3f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,10 +147,11 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "f4b943b060afe919",
+  "active": "3ead942f6b7a0d3f",
   "lastOpenFiles": [
-    "note/MinHash Sketches.md",
+    "note/MinHash Cardinality Estimator.md",
     "note/All-Distances Sketches.md",
+    "note/MinHash Sketches.md",
     "note",
     "ML/Dimensionality Reduction.md",
     "ML/0 - Machine Learning.md",
@@ -188,7 +176,6 @@
     "ML/Boosting.md",
     "ML/Adaboost.md",
     "ML/PCA - Principal Component Analysis.md",
-    "ML/Clustering Gerarchico.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
