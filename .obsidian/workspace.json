@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "d5b1b4e0dc78762a",
+        "id": "ccced58c1657f150",
         "type": "tabs",
         "children": [
           {
-            "id": "7296c02b93c43e70",
+            "id": "06399ae205d04562",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "note/MinHash Sketches.md",
+                "file": "note/HIP Estimator.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0549fe900a176171",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "note/MinHash Cardinality Estimator.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "note/MinHash Sketches.md",
+                "file": "note/HIP Estimator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "note/MinHash Sketches.md"
+                "file": "note/HIP Estimator.md"
               }
             }
           },
@@ -136,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5
+    "width": 438.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,14 +159,15 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "7296c02b93c43e70",
+  "active": "06399ae205d04562",
   "lastOpenFiles": [
-    "Senza nome.canvas",
-    "Senza nome 1.canvas",
-    "note/MinHash Sketches.md",
     "note/MinHash Cardinality Estimator.md",
     "note/HIP Estimator.md",
+    "note/MinHash Sketches.md",
     "note/All-Distances Sketches.md",
+    "NLP/Earley Parser.md",
+    "Senza nome.canvas",
+    "Senza nome 1.canvas",
     "note",
     "ML/Dimensionality Reduction.md",
     "ML/0 - Machine Learning.md",

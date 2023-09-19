@@ -20,4 +20,7 @@ Infatti esso equivale all'insieme
 $$MHS_d(v) \equiv ASD(v) \cap \lbrace u | d_{u,v} \leq d \rbrace$$
 
 Lo stimatore per $n_d(v) = \vert N_d(v) \vert$ sarà quindi definito come
-$$\tilde{n}_d(v) = \frac{k-1}{\tau_k}$$ dove $$\tau_k = k^{th}_r(MHS_d(v))$$
+$$\tilde{n}_d(v) = \frac{k-1}{\tau_k}$$ dove $$\tau_k = k^{th}_r(MHS_d(v))$$ ^1594b9
+
+## Coefficiente di Variazione
+Il [[#^1594b9|k-bottom estimator]] ha [[All-Distances Sketches#Coefficient of Variation|coefficiente di variazione]] $$CV \leq \frac{1}{\sqrt{k-2}}$$
