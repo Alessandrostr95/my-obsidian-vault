@@ -1,3 +1,19 @@
+---
+date: 2023-09-19
+draft: true
+tags:
+  - Math
+  - Algorithm
+  - ComputerScience
+  - Probability
+  - NetworkAnalysis
+  - BigData
+  - Statistics
+  - DataScience
+  - DataMining
+content:
+  - algorithm for big data
+---
 Sia $ADS(v)$ l'[[All-Distances Sketches|ADS]] di un nodo $v \in V$.
 Consideriamo i nodi in **ordine di distanza** da $v$.
 Per ogni nodo $u$ vogliamo calcolare la probabilità che $u$ sia raggiungibile da $v$.
@@ -37,3 +53,5 @@ Sia $N_d(v)$ l'insieme di tutti i nodi raggiungibili da $v$ a distanza al più $
 Lo stimatore per $n_d(v) = \vert N_d(v) \vert$ sarà quindi definito come
 $$\tilde{n}_d(v) = \sum_{u \in ADS(v) \;:\; d_{uv} \leq d} a_{uv}$$
 
+## Coefficiente di Variazione
+L'[[#HIP Cardinality Estimator|HIP k-bottom estimator]] ha [[All-Distances Sketches#Coefficient of Variation|coefficiente di variazione]] $$CV \leq \frac{1}{\sqrt{2(k-1)}}$$ ovvero meglio di un fattore $\sqrt{2}$ rispetto al [[MinHash Cardinality Estimator]]

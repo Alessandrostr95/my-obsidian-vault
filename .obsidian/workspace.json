@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "note/HIP Estimator.md",
+                "file": "ISTI/Stimatori Puntuali.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "note/HIP Estimator.md",
+                "file": "ISTI/Stimatori Puntuali.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "note/HIP Estimator.md"
+                "file": "ISTI/Stimatori Puntuali.md"
               }
             }
           },
@@ -148,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 438.5
+    "width": 316.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -161,10 +161,14 @@
   },
   "active": "06399ae205d04562",
   "lastOpenFiles": [
-    "note/MinHash Cardinality Estimator.md",
+    "ISTI/Cramer-Rao Inequality.md",
+    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "ISTI/Statistiche Sufficienti.md",
+    "ISTI/Stimatori Puntuali.md",
     "note/HIP Estimator.md",
-    "note/MinHash Sketches.md",
+    "note/MinHash Cardinality Estimator.md",
     "note/All-Distances Sketches.md",
+    "note/MinHash Sketches.md",
     "NLP/Earley Parser.md",
     "Senza nome.canvas",
     "Senza nome 1.canvas",
@@ -186,10 +190,6 @@
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Locally Weighted Regression.md",
     "ML/Kernel Regression - Nadaraya-Watson Model.md",
-    "ML/Gradient Descent.md",
-    "ML/Some Loss Functions.md",
-    "ML/Bagging.md",
-    "ML/Boosting.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
