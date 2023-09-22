@@ -19,7 +19,7 @@ Perciò a prescindere dal valore del parametro, uno stiamtore non distorto in me
 Un'altra proprietà desiderata è che la stiame $T(\mathbf{X})$ sia il più possibile **concentrata** attorno al suo valore atteso.
 Perciò si vuole minimizzare la sua varianza $$\text{minimize Var}_{\theta}(T(\mathbf{X}))$$
 
-Più in generale uno stiamtore è detto **UMVUE** (**uniformly minimum variance unbiased estimator**) se è **un-biased** e se per ogni $\theta$ possibile abbia una varianza più piccola rispetto a tutti gli altri stimatori (ovvero la minimizza).
+Più in generale uno stiamatore è detto **UMVUE** (**uniformly minimum variance unbiased estimator**) se è **un-biased** e se per ogni $\theta$ possibile abbia una varianza più piccola rispetto a tutti gli altri stimatori (ovvero la minimizza).
 
 Altri termini utili sono:
 - il **bias** o **distorsione** $$\text{bias}(T) = \mathbb{E}_{\theta} \left[ T(\mathbf{X}) \right] - \theta$$ Ovviamente se $\text{bias}(T) = 0$ allora $T$ è non distorto. ^401481
