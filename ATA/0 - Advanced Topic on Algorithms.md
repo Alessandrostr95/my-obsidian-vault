@@ -1,3 +1,15 @@
+---
+tags:
+  - Algorithm
+  - ComputerScience
+  - BigData
+  - Probability
+  - Math
+  - DataMining
+content:
+  - info
+---
+
 # Advanced Topic on Algorithms
 --------------------------
 ## Info corso

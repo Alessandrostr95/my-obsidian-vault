@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ABD/0 - Algoritmi per Big Data.md",
+                "file": "ATA/0 - Advanced Topic on Algorithms.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ABD/0 - Algoritmi per Big Data.md",
+                "file": "ATA/0 - Advanced Topic on Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ABD/0 - Algoritmi per Big Data.md"
+                "file": "ATA/0 - Advanced Topic on Algorithms.md"
               }
             }
           },
@@ -145,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.5
+    "width": 337.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,8 +158,8 @@
   },
   "active": "16789dda1bca8c2d",
   "lastOpenFiles": [
-    "root.md",
     "ABD/0 - Algoritmi per Big Data.md",
+    "root.md",
     "ML/0 - Machine Learning.md",
     "ABD",
     "note/All-Distances Sketches.md",
