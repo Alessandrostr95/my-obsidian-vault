@@ -79,7 +79,6 @@ $$H_n = \sum_{j=1}^{n} \frac{1}{j} \approx 1 + \log{n}$$
 \end{align}$$
 > Per quanto riguarda il $k$-partition, osserviamo che ogni bucket ha size **in media** $n/k$.
 
-
 -----
 # ADS computation
 È possibile calcolare tutti gli $ADS(v)$ in tempo $O(km\log{n})$
