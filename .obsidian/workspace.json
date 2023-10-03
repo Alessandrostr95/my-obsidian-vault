@@ -140,8 +140,10 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "41b61ee04b415fbd",
+  "active": "5ea6e3d7a465e6a1",
   "lastOpenFiles": [
+    "get_edges.sh",
+    "edges",
     "IR/TF-IDF weight.md",
     "IR/0 - Information Retrieval.md",
     "ABD/0 - Algoritmi per Big Data.md",
@@ -171,7 +173,6 @@
     "ML/SVM and Gradient Descent.md",
     "ML/Perceptron.md",
     "ML/Gaussian Processes Regression.md",
-    "ML/SVM - removing separability assumption.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",

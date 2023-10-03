@@ -3,3 +3,6 @@ TODO.md
 .nvimlog
 .DS_Store
 some_notes/
+
+get_edges.sh
+edges
