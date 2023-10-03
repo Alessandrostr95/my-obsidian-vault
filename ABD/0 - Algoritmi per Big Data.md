@@ -19,7 +19,10 @@ content:
 - **Università**: Tor Vergata
 - **Settore**: INF/01
 
-- **Libro**: 
+- **Libro**:
+	- **Probability and Computing**: Randomized Algorithms and Probabilistic Analysis (Mitzenmacher-Upfal)
+	- **Algorithm Design** (Kleinberg-Tardos)
+	- [**Mining of Massive Datasets**](http://www.mmds.org/) ([Jure Leskovec](http://cs.stanford.edu/~jure/), [Anand Rajaraman](https://twitter.com/anand_raj), [Jeff Ullman](http://infolab.stanford.edu/~ullman/))
 - **Sito:** 
 
 ----------------
