@@ -13,3 +13,7 @@
 - [[0 - SSI|Sicurezza dei Sistemi Informativi]]
 - [[0 - Machine Learning|Machine Learning]]
 - [[0 - Advanced Topic on Algorithms|Advanced Topic on Algorithms]]
+
+# PHD
+## Anno I
+- [[0 - Algoritmi per Big Data|Algoritmi per Big Data]]

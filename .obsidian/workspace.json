@@ -158,8 +158,9 @@
   },
   "active": "16789dda1bca8c2d",
   "lastOpenFiles": [
-    "ML/0 - Machine Learning.md",
+    "root.md",
     "ABD/0 - Algoritmi per Big Data.md",
+    "ML/0 - Machine Learning.md",
     "ABD",
     "note/All-Distances Sketches.md",
     "note/MinHash Cardinality Estimator.md",
@@ -187,7 +188,6 @@
     "ML/Gaussian Discriminant Analysis.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
-    "ML/Locally Weighted Regression.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",

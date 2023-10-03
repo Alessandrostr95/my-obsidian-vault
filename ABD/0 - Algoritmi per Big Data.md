@@ -1,4 +1,15 @@
-Algoritmi per Big Data
+---
+tags:
+  - Algorithm
+  - ComputerScience
+  - BigData
+  - DataScience
+  - DataMining
+content:
+  - info
+---
+
+# Algoritmi per Big Data
 --------------------------
 ## Info corso
 - **Docente**: Andrea Clementi
