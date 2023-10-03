@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "4e70591f4256e812",
+        "id": "16d076623f9efeac",
         "type": "tabs",
         "children": [
           {
-            "id": "215a8e173b6fbd41",
+            "id": "41b61ee04b415fbd",
             "type": "leaf",
             "state": {
               "type": "graph",
               "state": {}
             }
-          },
-          {
-            "id": "16789dda1bca8c2d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ATA/0 - Advanced Topic on Algorithms.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ATA/0 - Advanced Topic on Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,9 +105,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ATA/0 - Advanced Topic on Algorithms.md"
-              }
+              "state": {}
             }
           },
           {
@@ -156,9 +140,12 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "16789dda1bca8c2d",
+  "active": "41b61ee04b415fbd",
   "lastOpenFiles": [
+    "IR/TF-IDF weight.md",
+    "IR/0 - Information Retrieval.md",
     "ABD/0 - Algoritmi per Big Data.md",
+    "ATA/0 - Advanced Topic on Algorithms.md",
     "root.md",
     "ML/0 - Machine Learning.md",
     "ABD",
@@ -185,9 +172,6 @@
     "ML/Perceptron.md",
     "ML/Gaussian Processes Regression.md",
     "ML/SVM - removing separability assumption.md",
-    "ML/Gaussian Discriminant Analysis.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",

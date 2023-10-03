@@ -8,7 +8,6 @@ tags:
 content:
   - info
 ---
-
 # Algoritmi per Big Data
 --------------------------
 ## Info corso
