@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "16d076623f9efeac",
+        "id": "607e1fb4d9bce4b4",
         "type": "tabs",
         "children": [
           {
-            "id": "41b61ee04b415fbd",
+            "id": "92ace8451024d629",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -140,8 +140,9 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "5ea6e3d7a465e6a1",
+  "active": "92ace8451024d629",
   "lastOpenFiles": [
+    "Senza nome.canvas",
     "get_edges.sh",
     "edges",
     "IR/TF-IDF weight.md",
@@ -160,7 +161,6 @@
     "ISTI/Statistiche Sufficienti.md",
     "note/MinHash Sketches.md",
     "NLP/Earley Parser.md",
-    "Senza nome.canvas",
     "Senza nome 1.canvas",
     "note",
     "ML/Dimensionality Reduction.md",
