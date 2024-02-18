@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "7e05cdecbb6a0696",
+        "id": "b09efcefb5d27c3a",
         "type": "tabs",
         "children": [
           {
-            "id": "8c6377342e6cbe07",
+            "id": "aa6809fcb8138f8b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "AMD/Rabin's hash function for Identity.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AMD/Rabin's hash function for Identity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +110,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "AMD/Rabin's hash function for Identity.md"
+              }
             }
           },
           {
@@ -140,8 +147,18 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "8c6377342e6cbe07",
+  "active": "aa6809fcb8138f8b",
   "lastOpenFiles": [
+    "AMD/Rabin's hash function for Identity.md",
+    "AMD/0 - Algorithms for Massive Data.md",
+    "Mining Data Stream.md",
+    "Proprietà utili.md",
+    "root.md",
+    "ATA/0 - Advanced Topic on Algorithms.md",
+    "ATA/Note 0.md",
+    "TESI/Spanners.md",
+    "AMD",
+    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
     "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Linear Classification.md",
@@ -154,8 +171,6 @@
     "IR/TF-IDF weight.md",
     "IR/0 - Information Retrieval.md",
     "ABD/0 - Algoritmi per Big Data.md",
-    "ATA/0 - Advanced Topic on Algorithms.md",
-    "root.md",
     "ABD",
     "note/All-Distances Sketches.md",
     "note/MinHash Cardinality Estimator.md",
@@ -165,15 +180,8 @@
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
     "ISTI/Statistiche Sufficienti.md",
     "note/MinHash Sketches.md",
-    "NLP/Earley Parser.md",
     "Senza nome 1.canvas",
     "note",
-    "ML/Dimensionality Reduction.md",
-    "ML/Linear Regression.md",
-    "ML/Fully Bayesian Approach.md",
-    "ML/K-nearest neighbor.md",
-    "ML/Kernel density estimation - Parzen windows.md",
-    "ML/Naive Bayes Classifier.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
