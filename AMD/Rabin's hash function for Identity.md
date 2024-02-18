@@ -49,4 +49,3 @@ In conclusione, dato che campioniamo $z$ in maniera **uniforme** su $\left[ 0,q 
 > [!corollary]
 > Data una qualsiasi costante $c$, scegliamo un primo $n^{c+1} \leq q \leq 2n^{c+1}$.
 > Allora $\kappa_{q,z}(x)$ userà $\Theta(\log{n})$ bit di spazio e per ogni coppia di stringhe differenti $x \neq y$ avremo che $$P(\kappa_{q,z}(x) = \kappa_{q,z}(y)) \leq n^{-c}$$
-> 
