@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "607e1fb4d9bce4b4",
+        "id": "7e05cdecbb6a0696",
         "type": "tabs",
         "children": [
           {
-            "id": "92ace8451024d629",
+            "id": "8c6377342e6cbe07",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -140,8 +140,14 @@
       "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "92ace8451024d629",
+  "active": "8c6377342e6cbe07",
   "lastOpenFiles": [
+    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
+    "ML/Linear Discriminant Function in Binary Classification.md",
+    "ML/Linear Classification.md",
+    "ML/0 - Machine Learning.md",
+    "ML/Some Base Function.md",
+    "ML/Adaboost.md",
     "Senza nome.canvas",
     "get_edges.sh",
     "edges",
@@ -150,7 +156,6 @@
     "ABD/0 - Algoritmi per Big Data.md",
     "ATA/0 - Advanced Topic on Algorithms.md",
     "root.md",
-    "ML/0 - Machine Learning.md",
     "ABD",
     "note/All-Distances Sketches.md",
     "note/MinHash Cardinality Estimator.md",
@@ -169,10 +174,6 @@
     "ML/K-nearest neighbor.md",
     "ML/Kernel density estimation - Parzen windows.md",
     "ML/Naive Bayes Classifier.md",
-    "ML/Convessità.md",
-    "ML/SVM and Gradient Descent.md",
-    "ML/Perceptron.md",
-    "ML/Gaussian Processes Regression.md",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
