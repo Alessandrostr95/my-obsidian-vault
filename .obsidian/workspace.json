@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AMD/Porat-porta's algorithm.md",
+                "file": "AMD/Rabin's hash function for Identity.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AMD/Porat-porta's algorithm.md",
+                "file": "AMD/Rabin's hash function for Identity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AMD/Porat-porta's algorithm.md"
+                "file": "AMD/Rabin's hash function for Identity.md"
               }
             }
           },
@@ -149,11 +149,11 @@
   },
   "active": "9a23e4e5a7fa08be",
   "lastOpenFiles": [
+    "AMD/Porat-porta's algorithm.md",
     "ML/Naive Bayes Classifier.md",
     "ML/0 - Machine Learning.md",
     "ML/Local Logistic Regression.md",
     "ML/Gaussian Discriminant Analysis.md",
-    "AMD/Porat-porta's algorithm.md",
     "AMD/Rabin's hash function for Identity.md",
     "AMD/0 - Algorithms for Massive Data.md",
     "Mining Data Stream.md",

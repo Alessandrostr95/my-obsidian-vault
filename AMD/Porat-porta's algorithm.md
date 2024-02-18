@@ -18,3 +18,12 @@ date: 2024-02-18
 > > Infatti, per assurdo assumiamo che c'è un altro match di $P$ all'indice $i < i+j < i + l$.
 > > Se fosse vero allora $p_1 = p_j, p_2 = p_{j+1}, ...$, ovvero avremo trovato un periodo di lunghezza $j < l$ (contraddicendo la minimalità di $P_l$). $\square$
 
+------
+Abbiamo una sequenza $x =x_1 ... x_m$e un pattern $y = y_1 ... y_n$ (con $n \leq m$). 
+Vogliamo sapere quante volte $y$ occorre in $x$.
+Assumiamo per semplicità che $n = 2^e$ per qualche valore di $e$.
+Indichiamo con $y^{(i)} = y_1 ... y_{2^i}$ un **prefisso** lungo $2^i$ di $y$.
+
+Manteniamo gli hash di tutti i prefissi $y^{(0)}, y^{(1)}, ..., y^{(e)}$.
+In totale abbiamo $1+e = 1 + \log{n}$ hash.
+
