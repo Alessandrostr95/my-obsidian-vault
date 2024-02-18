@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AMD/Rabin's hash function for Identity.md",
+                "file": "AMD/Porat-porta's algorithm.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AMD/Rabin's hash function for Identity.md",
+                "file": "AMD/Porat-porta's algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AMD/Rabin's hash function for Identity.md"
+                "file": "AMD/Porat-porta's algorithm.md"
               }
             }
           },
@@ -150,6 +150,7 @@
   "active": "aa6809fcb8138f8b",
   "lastOpenFiles": [
     "AMD/Rabin's hash function for Identity.md",
+    "AMD/Porat-porta's algorithm.md",
     "AMD/0 - Algorithms for Massive Data.md",
     "Mining Data Stream.md",
     "Proprietà utili.md",
@@ -179,7 +180,6 @@
     "ISTI/Cramer-Rao Inequality.md",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
     "ISTI/Statistiche Sufficienti.md",
-    "note/MinHash Sketches.md",
     "Senza nome 1.canvas",
     "note",
     "ML/img/ML_14_5.png",

@@ -1,3 +1,6 @@
+---
+date: 2024-02-18
+---
 Sia $\Sigma = \left[0,M-1\right]$ un *alfabeto* di $M$ simboli.
 Osserviamo che possiamo vedere una qualsiasi *stringa* $x \in \Sigma^n$ di $n$ simboli come un **numero** di $n$ cifre in base $M$.
 **Rabin’s hashing** è una [[Hashing|funzione hash]] $\phi$ su stringhe con le seguenti proprietà:
