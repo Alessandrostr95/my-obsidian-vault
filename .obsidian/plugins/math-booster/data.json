@@ -34,9 +34,9 @@
       "insertSpace": true
     },
     "AMD/Rabin's hash function for Identity.md": {
-      "theoremCalloutStyle": "MathWiki",
       "refFormat": "[title] ([type] [number]) if title exists, [type] [number] otherwise",
-      "noteMathLinkFormat": "[title] ([type] [number]) if title exists, [type] [number] otherwise"
+      "noteMathLinkFormat": "[title] ([type] [number]) if title exists, [type] [number] otherwise",
+      "theoremCalloutStyle": "MathWiki"
     }
   },
   "extraSettings": {

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AMD/Rabin's hash function for Identity.md",
+                "file": "AMD/Porat-porta's algorithm.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AMD/Rabin's hash function for Identity.md",
+                "file": "AMD/Porat-porta's algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AMD/Rabin's hash function for Identity.md"
+                "file": "AMD/Porat-porta's algorithm.md"
               }
             }
           },
@@ -130,6 +130,14 @@
               "type": "graph-analysis",
               "state": {}
             }
+          },
+          {
+            "id": "707c89d49a6abea2",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
@@ -140,21 +148,23 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:Crea nuova lavagna": false,
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
-      "command-palette:Apri riquadro comandi": false,
-      "markdown-importer:Apri importazione Markdown": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "9a23e4e5a7fa08be",
+  "active": "d83f1c6a68518c0b",
   "lastOpenFiles": [
+    "AMD/img/amd_01.jpeg",
+    "AMD/img",
+    "AMD/Rabin's hash function for Identity.md",
     "AMD/Porat-porta's algorithm.md",
     "ML/Naive Bayes Classifier.md",
     "ML/0 - Machine Learning.md",
     "ML/Local Logistic Regression.md",
     "ML/Gaussian Discriminant Analysis.md",
-    "AMD/Rabin's hash function for Identity.md",
     "AMD/0 - Algorithms for Massive Data.md",
     "Mining Data Stream.md",
     "Proprietà utili.md",
@@ -179,7 +189,6 @@
     "note/All-Distances Sketches.md",
     "note/MinHash Cardinality Estimator.md",
     "note/HIP Estimator.md",
-    "ISTI/Stimatori Puntuali.md",
     "Senza nome 1.canvas",
     "note",
     "ML/img/ML_14_5.png",

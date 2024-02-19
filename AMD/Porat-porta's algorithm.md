@@ -3,6 +3,20 @@ draft: true
 date: 2024-02-18
 ---
 
+# Preliminari
+> [!definition] Periodo di una stringa
+> Sia $S = s_1 \dots s_n$ una **stringa** lunga $n$ simboli dell'alfabeto $\Sigma$.
+> Diremo che $S$ ha un **periodo** di lunghezza $1 \leq p \leq n$ se $s_i = s_{i+p}$ per ogni $1 \leq i \leq n-p$.
+> > [!example]
+> > Consideriamo la stringa $S = abcabcabcabca$, con lunghezza $n = 13$ e con simboli dell'alfabeto $\Sigma = \{a,b,c\}$.
+> > $S$ ha periodi $3,6,9,12$.
+> > ![[amd_01.jpeg]]
+
+> [!theorem] Wilf's theorem
+> Sia $S \in \Sigma^n$ una stringa lunga $n$.
+> Se $S$ ha periodi $p,q$ a lunghezza $n \geq p+q-gdc(p,q)$ allora ha anche periodo $gdc(p,q)$.
+
+
 > [!definition] Periodo
 > Sia $S = s_1 \dots s_n$ una stringa di lunghezza $n$.
 > Un prefisso $S_l = s_1 \dots s_l$ di $S$ è detto **periodo** di $S$ se e solo se $s_i = s_{i+l}$ per ogni $1 \leq i \leq n-l$.
