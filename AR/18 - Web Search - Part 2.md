@@ -181,7 +181,7 @@ Dalla parte precedente sappiamo che esiste almeno un vettore $y$ a coordinate po
 Scriviamo $y$ come combinazione lineare della base ortonormale composta dagli autovettori di $MM^T$.
 $$y = p_1z_1 + p_2z_2 + ... + p_nz_n$$
 
-Come già visto prima avremo che l'esressione $\frac{(MM^T)^k y}{c_1^k}$ **converge** a $p_1z_1$.
+Come già visto prima avremo che l'espressione $\frac{(MM^T)^k y}{c_1^k}$ **converge** a $p_1z_1$.
 
 Inoltre dato che $\frac{(MM^T)^k y}{c_1^k}$ contiene solo coordinate **non negative** avremo che anche $p_1z_1$ avrà coordinate **non negative**.
 

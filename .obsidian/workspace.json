@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "728fb7045f3d5061",
+        "id": "db0579150558732d",
         "type": "tabs",
         "children": [
           {
-            "id": "9a23e4e5a7fa08be",
+            "id": "63a74f0b02a6dbec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AMD/Porat-porta's algorithm.md",
+                "file": "IOC/Lecture 4.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 215.50043487548828
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AMD/Porat-porta's algorithm.md",
+                "file": "IOC/Lecture 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AMD/Porat-porta's algorithm.md"
+                "file": "IOC/Lecture 4.md"
               }
             }
           },
@@ -124,14 +124,6 @@
             }
           },
           {
-            "id": "b7de017bdfad08a4",
-            "type": "leaf",
-            "state": {
-              "type": "graph-analysis",
-              "state": {}
-            }
-          },
-          {
             "id": "707c89d49a6abea2",
             "type": "leaf",
             "state": {
@@ -140,11 +132,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 302.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -155,40 +147,42 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "d83f1c6a68518c0b",
+  "active": "63a74f0b02a6dbec",
   "lastOpenFiles": [
+    "IOC/Lecture 4.md",
+    "AR/18 - Web Search - Part 2.md",
+    "IOC/Lecture 3.md",
+    "IOC/0 - Indices of Centrality for Complex Networks and their Efficient Computation.md",
+    "IOC/Lecture 2.md",
+    "ML/Clustering Gerarchico.md",
+    "Mining Data Stream.md",
+    "ML/Adaboost.md",
+    "IOC",
+    "ML/Nonparametric Regression.md",
+    "ML/Fully Bayesian Approach.md",
+    "ML/Kernel density estimation - Parzen windows.md",
+    "ML/Non parametric classification.md",
+    "ML/0 - Machine Learning.md",
+    "IR/Relevance Feedback.md",
+    "IR/0 - Information Retrieval.md",
+    "IR/Query Expansion.md",
+    "IR/TF-IDF weight.md",
+    "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
+    "ML/Decision Trees.md",
+    "ML/K-nearest neighbor.md",
+    "AMD/0 - Algorithms for Massive Data.md",
+    "ABD/0 - Algoritmi per Big Data.md",
+    "IR/Inverted Index.md",
+    "AMD/Porat-porta's algorithm.md",
     "AMD/img/amd_01.jpeg",
     "AMD/img",
     "AMD/Rabin's hash function for Identity.md",
-    "AMD/Porat-porta's algorithm.md",
     "ML/Naive Bayes Classifier.md",
-    "ML/0 - Machine Learning.md",
-    "ML/Local Logistic Regression.md",
-    "ML/Gaussian Discriminant Analysis.md",
-    "AMD/0 - Algorithms for Massive Data.md",
-    "Mining Data Stream.md",
-    "Proprietà utili.md",
-    "root.md",
-    "ATA/0 - Advanced Topic on Algorithms.md",
-    "ATA/Note 0.md",
-    "TESI/Spanners.md",
     "AMD",
-    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-    "ML/Linear Discriminant Function in Binary Classification.md",
-    "ML/Linear Classification.md",
-    "ML/Some Base Function.md",
-    "ML/Adaboost.md",
     "Senza nome.canvas",
     "get_edges.sh",
     "edges",
-    "IR/TF-IDF weight.md",
-    "IR/0 - Information Retrieval.md",
-    "ABD/0 - Algoritmi per Big Data.md",
     "ABD",
-    "note/All-Distances Sketches.md",
-    "note/MinHash Cardinality Estimator.md",
-    "note/HIP Estimator.md",
     "Senza nome 1.canvas",
     "note",
     "ML/img/ML_14_5.png",
@@ -200,7 +194,6 @@
     "ML/img/ML_03_20.png",
     "ML/img/ML_03_19.png",
     "ML/img/ML_15_5.png",
-    "ML/img/ML_15_4.png",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
     "ATA"
