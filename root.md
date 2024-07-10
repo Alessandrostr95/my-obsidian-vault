@@ -16,4 +16,4 @@
 
 # PHD
 ## Anno I
-- [[0 - Algoritmi per Big Data|Algoritmi per Big Data]]
+- [[AMS/0 - Algorithms For Massive Data|Algoritmi per Big Data]]

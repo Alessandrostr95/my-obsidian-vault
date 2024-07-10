@@ -6,7 +6,11 @@ tags:
   - DataMining
   - DataScience
 ---
-# Lecture Notes
+# Index
+
+## Recall of Probability Theory
+- [[Basic concept and properties]]
+- [[Concentration Inequalities]]
 
 ### [[Hashing]]
 - [[k-wise independet hashing]]

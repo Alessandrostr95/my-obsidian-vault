@@ -3,7 +3,7 @@ date: 2022-10-26
 draft: true
 ---
 
-vedi [[Lecture 5|note precedenti]].
+vedi [[NLP/Lecture 5|note precedenti]].
 
 Abbiamo un **oracolo** $O$ e un sistema $S$ che interpretano delle frasi $f$
 
