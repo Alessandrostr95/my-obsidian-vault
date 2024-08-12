@@ -141,4 +141,31 @@ Allora per ogni valore $0 < \varepsilon < 1$ abbiamo le seguenti disuguaglianze:
 - **Lato destro**: $$P(Y \geq (1+\varepsilon)\mu) \leq e^{-\mu\tfrac{\varepsilon^2}{3}}$$
 - **Lato sinistro**: $$P(Y \leq (1-\varepsilon)\mu) \leq e^{-\mu\tfrac{\varepsilon^2}{2}}$$
 - **Entrambi i lati**: $$P(|Y - \mu | \geq \varepsilon\mu ) \leq 2e^{-\tfrac{\varepsilon^2}{3}}$$
+- **Lato destro (alternativo)**: $$P(Y \geq (1+\varepsilon)) \leq \left(\frac{e^\varepsilon}{(1+\varepsilon)^{(1+\varepsilon)}}\right)^{\mu}$$ ^528e9a
+
+#### Proof:
+Dato che $e^x$ è una funzione monotona e convessa, possiamo applicare il [[#Markov's inequality|Markov bound]]
+$$P(Y \geq t) = P(e^{sY} \geq e^{st}) \leq \frac{E \left[ e^{sY}\right]}{e^{st}} = \frac{E \left[ \prod\limits_{i=1}^{n} e^{sY_i}\right]}{e^{st}}$$
+Dato che $Y$ è la **somma** di v.a. **i.i.d.**, allora abbiamo che $$P(Y \geq t) \leq \frac{\left( E \left[ e^{sY_i}\right] \right)^n}{e^{st}}$$
+Poniamo ora $t = (1+\varepsilon)\mu = (1+\varepsilon)np$. Allora $$P(Y \geq (1+\varepsilon)\mu) \leq\left( \frac{E \left[ e^{sY_1}\right] }{e^{sp(1+\varepsilon)}}\right)^n$$
+
+Dato che $1+x \leq e^x$ per ogni $x \in \mathbb{R}$, possiamo limitare la media $E\left[ e^{sY_1}\right]$ come segue
+$$\begin{align*}
+E\left[ e^{sY_1} \right]
+&= p \cdot e^{s \cdot 1} + (1-p) \cdot e^{s\cdot 0}\\
+&= p\cdot e^{s} + 1 - p\\
+&= 1 + p \cdot (e^{s}-1)\\
+&\leq e^{e^s - 1}
+\end{align*}$$
+
+Riscrivendo la formula avremo quindi
+$$P(Y \geq (1+\varepsilon)\mu) \leq \left( e^{p(e^s-1)} \cdot e^{-sp (1+\varepsilon)} \right)^n = \left( e^{e^s-1} \cdot e^{-s(1+\varepsilon)} \right)^\mu$$
+Troviamo ora il miglior valore di $s$ che *minimizza* il bound.
+Per monotonia di $e^x$ si vuole quindi minimizzare l'esponente $e^s-1-s(1+\varepsilon)$.
+Derivando la funzione in $s$, otterremo $e^s - (1+\varepsilon)$.
+Il punto di minimo è quindi per il valore $s = \log(1+\varepsilon)$, ottenendo quindi
+$$P(Y \geq (1+\varepsilon)\mu) \leq \left( \frac{e^{\varepsilon}}{(1+\varepsilon)^{(1+\varepsilon)}}\right)^\mu$$
+Dimostrando quindi il [[#^528e9a|lato destro alternativo]].
+
+
 

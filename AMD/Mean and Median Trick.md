@@ -1,0 +1,4 @@
+# Mean Trick
+
+
+# Median Trick

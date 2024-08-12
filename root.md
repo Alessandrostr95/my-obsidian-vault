@@ -16,4 +16,4 @@
 
 # PHD
 ## Anno I
-- [[AMS/0 - Algorithms For Massive Data|Algoritmi per Big Data]]
+- [[AMD/0 - Algorithms for Massive Data|Algorithms for Massive Data]]

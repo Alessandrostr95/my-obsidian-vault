@@ -11,6 +11,7 @@ tags:
 ## Recall of Probability Theory
 - [[Basic concept and properties]]
 - [[Concentration Inequalities]]
+- [[Mean and Median Trick]]
 
 ### [[Hashing]]
 - [[k-wise independet hashing]]

@@ -6,10 +6,12 @@
   "obsidian-admonition",
   "obsidian-emoji-toolbar",
   "obsidian-mind-map",
-  "obsidian-git",
   "obsidian-image-caption",
   "metadata-extractor",
   "graph-analysis",
   "mathlinks",
-  "math-booster"
+  "math-booster",
+  "latex-algorithms",
+  "obsidian-git",
+  "cmdr"
 ]
