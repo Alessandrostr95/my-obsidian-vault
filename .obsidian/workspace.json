@@ -11,8 +11,24 @@
             "id": "45985c3c803f2a53",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "AMD/Flajolet-Martin's counter.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "466fc96764abd1f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AMD/Morris' counter.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -90,6 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AMD/Flajolet-Martin's counter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "AMD/Flajolet-Martin's counter.md"
+              }
             }
           },
           {
@@ -142,10 +161,12 @@
   },
   "active": "45985c3c803f2a53",
   "lastOpenFiles": [
+    "AMD/Morris' counter.md",
+    "AMD/Flajolet-Martin's counter.md",
+    "AMD/0 - Algorithms for Massive Data.md",
+    "AGT/0 - Algorithmic game theory.md",
     "AMD/Basic concept and properties.md",
     "AMD/Concentration Inequalities.md",
-    "AMD/0 - Algorithms for Massive Data.md",
-    "AMD/Morris' counter.md",
     "ISTI/Stimatori Puntuali.md",
     "AMD/Mean and Median Trick.md",
     "root.md",
@@ -168,7 +189,6 @@
     "AMS",
     "AMD/Rabin's hash function for Identity.md",
     "AMD/Porat-porta's algorithm.md",
-    "ISTI/Random Sample.md",
     "IOC",
     "AMD/img/amd_01.jpeg",
     "AMD/img",

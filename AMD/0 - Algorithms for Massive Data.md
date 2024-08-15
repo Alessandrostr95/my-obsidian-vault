@@ -38,6 +38,7 @@ tags:
 ### [[Probabilistic counting]]
 - [[Morris' counter]]
 - [[Flajolet-Martin's counter]]
+- [[Bottom-k counter]]
 - [[LogLog counter]]
 
 ### [[Counting ones in a window]]

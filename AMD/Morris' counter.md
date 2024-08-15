@@ -25,8 +25,8 @@ In questo algoritmo lo stimatore $\tilde{n}$  è $2^X-1$.
 ## Analisi
 Sia $X_n$ il valore del contatore $X$ a seguito di $n$ operazioni di update.
 
-> **Claim 1.** $$E[ 2^{X_n} ] = n+1$$
-
+> [!claim]
+>   $$E[ 2^{X_n} ] = n+1$$
 ^d58e3d
 
 Il [[#^d58e3d|Claim 1]] si può dimostrare per *induzione* su $n$.
@@ -57,8 +57,8 @@ P(\vert \tilde{n} - n \vert \geq \varepsilon n)
 
 ^ad5899
 
-> **Claim 2.** $$E[ 2^{2X_n} ] = \frac{3}{2}n^2 + \frac{3}{2}n+1$$
-
+> [!claim]
+> $$E[ 2^{2X_n} ] = \frac{3}{2}n^2 + \frac{3}{2}n+1$$
 ^610e3d
 
 Anche il [[#^610e3d|Calim 2]] può essere dimostrato per induzione su $n$.
@@ -167,7 +167,7 @@ Perciò la probabilità che esso venga incrementato *in uno dei successivi* $n$ 
 Applicando **union bound** su tutte le $st$ ripetizioni, abbiamo che la probabilità che almeno uno dei contatori ecceda la quantità $\log{(stn/\delta)}$ nei successivi $n$ updates è $\delta$.
 Quindi con probabilità $1-\delta$ tutti i contatori hanno come valore nel contatore $X \leq \log{(stn/\delta)}$, ovvero ognuno di essi utilizza al più $O(\log\log{(stn/\delta)})$ bit di spazio.
 
-> **Theorem Morris++ Space**
+> [!theorem] Morris++ Space
 > Per ogni errore $\varepsilon > 0$ e probabilità di fallimento $\delta > 0$, dopo $n$ operazioni di updates l'algoritmo Morris++ utilizza
 > $$O\left(\varepsilon^{-2}\log\frac{1}{\delta} \cdot\log\log{\frac{n\log{(1/\delta)}}{\varepsilon\delta}}\right)$$
 > bits di memroia con probabilità $1-\delta$.
@@ -178,7 +178,7 @@ Una analisi più semplice è tramite la media.
 Sappiamo che ogni contatore $X$ in media ha come valore $\log{n}$ (vedi [[#^d58e3d|Claim 1]]).
 Perciò abbiamo il seguente risultato
 
-> **Theorem Morris++ Space (in expectation)**
+> [!theorem] Morris++ Space in expectation
 > Per ogni errore $\varepsilon > 0$ e probabilità di fallimento $\delta > 0$, dopo $n$ operazioni di updates l'algoritmo Morris++ utilizza
 > $$O\left(\varepsilon^{-2}\log\frac{1}{\delta} \cdot\log\log{n}\right)$$
 > bits di memroia **in media**.
