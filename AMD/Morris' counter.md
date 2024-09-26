@@ -63,17 +63,20 @@ P(\vert \tilde{n} - n \vert \geq \varepsilon n)
 
 Anche il [[#^610e3d|Calim 2]] può essere dimostrato per induzione su $n$.
 Per $n = 0$ è chiaro che $E[2^0]= 1$.
+Assumiamo quindi per ipotesi induttiva che il [[#^610e3d|Calim 2]] sia vero.
+Perciò deve essere vero anche che $$E[2^{2X_{n+1}}] = \frac{3}{2}(n+1)^2 + \frac{3}{2}(n+1) + 1 = \frac{3}{2}n^2 + \frac{9}{2}n + 4$$
 Per la [[Basic concept and properties#Law of Total Expectation|Law of Total Expectation]] segue il passo induttivo
 $$\begin{align*}
-E[2^{2X_n}]
-&= \sum_{j\geq 0} P(X_j=j) \cdot E[2^{2X_{j+1}} \mid X_j=j]\\
-&= \sum_{j\geq 0} P(X_j=j) \cdot (2^{2(j+1)}2^{-j} + 2^{2j}(1-2^{-j}))\\
-&= \sum_{j\geq 0} P(X_j=j) \cdot (2^{j+2} + 2^{2j}-2^{j})\\
-&= 4 \cdot \sum_{j\geq 0} P(X_j = j) \cdot 2^j + \sum_{j \geq 0} P(X_j = j)\cdot2^{2j}- \sum_{j\geq 0} P(X_j = j) \cdot 2^j\\
-&= 3 \cdot E[2^{X_{n-1}}] + E[2^{2X_{n-1}}]\\
-&= 3 n + \frac{3}{2}(n-1)^2+ \frac{3}{2}(n-1)+1\\
-&= 3n + \frac{3}{2}n^2 -3n +\frac{3}{2} + \frac{3}{2}n - \frac{3}{2}+1\\
-&= \frac{3}{2}n^2+\frac{3}{2}n + 1
+E[2^{2X_{n+1}}]
+&= \sum_{j\geq 0} P(X_n=j) \cdot E[2^{2X_{n+1}} \mid X_n=j]\\
+&= \sum_{j\geq 0} P(X_n=j) \cdot (2^{2(j+1)}2^{-j} + 2^{2j}(1-2^{-j}))\\
+&= \sum_{j\geq 0} P(X_n=j) \cdot (2^{j+2} + 2^{2j}-2^{j})\\
+&= 4 \cdot \sum_{j\geq 0} P(X_n = j) \cdot 2^j + \sum_{j \geq 0} P(X_n = j)\cdot2^{2j}- \sum_{j\geq 0} P(X_n = j) \cdot 2^j\\
+&= 3 \cdot E[2^{X_{n}}] + E[2^{2X_{n}}]\\
+&= 3(n+1) + \frac{3}{2}n^2 + \frac{3}{2}n + 1 \\
+&= 3n + 3 + \frac{3}{2}n^2 + \frac{3}{2}n + 1\\
+&= \frac{3}{2}n^2 + \frac{9}{2}n + 4\\
+&= \frac{3}{2}(n+1)^2 + \frac{3}{2}(n+1) + 1 &\square
 \end{align*}$$
 
 
@@ -93,12 +96,12 @@ Questo risultato non è particolarmente informativo, dato che la probabilità ch
 Per diminuire la probabilità di errore del Morris' Counter, dobbiamo usare il [MEAN TRICK].
 Istanziamo quindi $s$ copie (**almeno**) [[#k-wise indipendence|pair-wise indipendenti]] dell'algoritmo di Morris, e facciamo la **media** dei loro output.
 Siano $\tilde{n}_1, \dots, \tilde{n}_s$ gli stimatori restituiti dalle $s$ istanze indipendenti, e definiamo il nuovo stimatore
-$$\tilde{n} = \frac{1}{s}\sum_{i=1}^{s}\tilde{n}_i$$
-Dato che ogni $\tilde{n}_i$ è uno [[Stimatori Puntuali#^a1f3b4|stimatore unbiased]] di $n$ (vedi [[#^d58e3d|Claim 1]]), allora anche la loro media aritmetica $\tilde{n}$ è uno stimatore unbiased di $n$.
-Il vantaggio di usare $\tilde{n}$ è la sua varianza più piccola.
+$$\hat{n} = \frac{1}{s}\sum_{i=1}^{s}\tilde{n}_i$$
+Dato che ogni $\tilde{n}_i$ è uno [[Stimatori Puntuali#^a1f3b4|stimatore unbiased]] di $n$ (vedi [[#^d58e3d|Claim 1]]), allora anche la loro media aritmetica $\hat{n}$ è uno stimatore unbiased di $n$.
+Il vantaggio di usare $\hat{n}$ è la sua varianza più piccola.
 Dato che la [[Basic concept and properties#Varianza di somma di v.a. indipendenti|varianza della somma]] di v.a. [[#k-wise indipendence|pair-wise indipendenti]] è esattamente la somma delle varianze, allora avremo che
 $$\begin{align*}
-\text{Var}(\tilde{n})
+\text{Var}(\hat{n})
 &= \text{Var}\left( \frac{1}{s}\sum_{i=1}^{s}\tilde{n}_i\right)\\
 &= \frac{1}{s^2}\sum_{i=1}^{s}\text{Var}(\tilde{n}_i)\\
 &= \frac{1}{s}\text{Var}(\tilde{n}_1)
@@ -112,7 +115,7 @@ $$\begin{align*}
 \end{align*}$$
 
 Perciò avremo che la probabilità di errore ora è 
-$$P(\vert \tilde{n} - n \vert \geq \varepsilon n) \leq \frac{1}{2s\varepsilon^2} \leq \delta$$
+$$P(\vert \hat{n} - n \vert \geq \varepsilon n) \leq \frac{1}{2s\varepsilon^2} \leq \delta$$
 Per sapere quanto deve valere $s$ affinché tale probabilità sia minore di un certo valore $\delta$ basta porre $s \geq \dfrac{1}{2\delta \varepsilon^2} \in \Omega\left( \delta^{-1}\varepsilon^{-2} \right)$.
 
 -----
