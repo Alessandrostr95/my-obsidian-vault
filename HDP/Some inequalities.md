@@ -102,4 +102,24 @@ $$\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t \} \leq \frac{\text{Var}(X)}{t^2
 
 
 
+------
+
+### Strong law of large numbers
+Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with mean $\mu$.
+Let $S_N = S_1+...+S_N$ allora $$S_N/N \xrightarrow{a.s.} \mu$$ ([[Convergence of random variables#Almost sure convergence|almost surely]]) .
+
+### Lindeberg-Lévy central limit theorem
+Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with [[Some definitions#Mean|mean]] $\mu$ and [[Some definitions#Variance|variance]] $\sigma^2$.
+Let $S_N = S_1 + \dots + S_N$, and define the random variable $$Z_N = \frac{S_N - \mathbb{E}S_N}{\sqrt{\text{Var}(S_N)}} = \frac{1}{\sigma\sqrt{N}}\sum_{i=1}^{N}(X_i - \mu)$$
+Then $Z_N$ [[Convergence of random variables#Convergence in distribution|converges in distribution]] to the **norma distribution** $N(0,1)$, i.e.,
+$$Z_N \xrightarrow{d}N(0,1)$$
+$$\lim_{N \to \infty} \mathbb{P}\{Z_N \geq t\} = \Phi(t) = \frac{1}{\sqrt{2\pi}}\int_{t}^{\infty} e^{-x^2/2}\,dx$$
+#### Alternative version
+Let $$Z_N = \frac{S_N/N - \mu}{\sqrt{\text{Var}(S_N/N)}} = \frac{S_N/N - \mu}{\sigma\sqrt{1/N}} = \sqrt{N} \frac{S_N/N - \mu}{\sigma}$$
+Then $Z_N$ [[Convergence of random variables#Convergence in distribution|converges in distribution]] to the **norma distribution** $N(0,1)$.
+It follow that $$\sqrt{N}\left( S_N/N - \mu\right) \xrightarrow{d}N(0, \sigma^2)$$
+since $Z_N \xrightarrow{d} N(0,1)$, then $\sigma Z_N$ as varince $\sigma^2$ as $N \to \infty$, in fact
+$$\text{Var}(\sigma Z) = \sigma^2\text{Var}(Z_N) \to \sigma^2\cdot 1$$
+
+
 
