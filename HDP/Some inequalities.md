@@ -23,7 +23,8 @@ $$\Vert X + Y \Vert_{L^p} \leq \Vert X \Vert_{L^p} + \Vert Y \Vert_{L^p}$$
 
 ### Cauchy-Schwarz inequality
 For any random variable $X,Y \in L^2$, we have that
-$$\vert \mathbb{E} XY \vert \leq \Vert X \Vert_{L^2} \cdot \Vert Y \Vert_{L^2}$$
+$$\vert \mathbb{E} XY \vert \leq \Vert X \Vert_{L^2} \cdot \Vert Y \Vert_{L^2} = \sqrt{\mathbb{E}X^2 \cdot \mathbb{E}Y^2}$$
+In particular $$\vert \mathbb{E}X\vert \leq \sqrt{\mathbb{E}X^2}$$ when $Y=1$.
 
 
 #### Holder’s inequality
@@ -46,7 +47,7 @@ Let $X \in \mathbb{R}^+$ be a **non-negative** random variable, then $$\mathbb{E
 > \end{align*}$$
 
 
-#### Generalization of integral identity
+#### Generalization of integral identity #exercise
 Let $X$ be a real random variable (not necessarily non-negative).
 Then $$\mathbb{E}X = \int_{0}^{\infty}\mathbb{P}\{X > t\}\,dt - \int_{-\infty}^{0}\mathbb{P}\{X < t\}\,dt$$
 
@@ -61,7 +62,7 @@ Then $$\mathbb{E}X = \int_{0}^{\infty}\mathbb{P}\{X > t\}\,dt - \int_{-\infty}^{
 > \end{align*}$$
 
 
-### $p$-moments via tails
+### $p$-moments via tails #exercise
 Let $X$ be a random variable and $p \in (0, \infty)$.
 Then $$\mathbb{E}\vert X \vert^p = \int_{0}^{\infty}pt^{p-1}\mathbb{P}\{\vert X \vert > t\}\, dt$$
 > **Proof**
@@ -121,5 +122,22 @@ It follow that $$\sqrt{N}\left( S_N/N - \mu\right) \xrightarrow{d}N(0, \sigma^2)
 since $Z_N \xrightarrow{d} N(0,1)$, then $\sigma Z_N$ as varince $\sigma^2$ as $N \to \infty$, in fact
 $$\text{Var}(\sigma Z) = \sigma^2\text{Var}(Z_N) \to \sigma^2\cdot 1$$
 
+
+#### Exercise 1.3.3 #exercise
+Let $X_1, X_2, ...$ be a sequence of i.i.d. random variables with mean $\mu$ and finite variance $\sigma^2$. Show that $$\mathbb{E} \left\vert \frac{1}{N}\sum_{i=1}^{N}X_i - \mu \right\vert = O\left( \frac{1}{\sqrt{N}} \right)$$ as $N \to \infty$.
+
+> By [[#Jensen's inequality]] we have that $$\mathbb{E} \left\vert \frac{1}{N}\sum_{i=1}^{N}X_i - \mu \right\vert \leq \left\vert \mathbb{E} \frac{1}{N}\sum_{i=1}^{N}X_i - \mu \right\vert$$
+> By [[#Cauchy-Schwarz inequality]] we have that
+> $$\begin{align*}
+> \left\vert \mathbb{E} \frac{1}{N}\sum_{i=1}^{N}X_i - \mu \right\vert
+> &\leq \sqrt{\mathbb{E} \left( \frac{1}{N}\sum_{i=1}^{N}X_i - \mu \right)^2}\\
+> &= \sqrt{\text{Var}\left(\frac{1}{N}\sum_{i=1}^{N}X_i\right)}\\
+> &= \sqrt{\frac{\sigma^2}{N}} = \frac{\sigma}{\sqrt{N}}
+> \end{align*}$$
+> Since $\sigma$ is a finite fixed value independent from $N$, whe have that $$\frac{\sigma}{\sqrt{N}} = O\left( \frac{1}{\sqrt{N}} \right) \;\; \square$$
+> 
+
+### de Moivre-Laplace central limit theorem
+Let $X_1, X_2, \dots$ a sequence of 
 
 
