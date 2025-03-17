@@ -144,7 +144,7 @@ Ricordiamo che l'output $\tilde{n}$ di una istanza di Morris+ è una buona stima
 
 Per avere che il valore *mediano* sia una **cattiva stima** (ovvero lo scarto eccede $\varepsilon n$), deve essere vero che **non più** di $t/2$ istanze di Morris+ restituiscono una buona stima.
 Questo equivale a dire che il numero di istanze che danno una buona stima si discosta dal numero atteso di istanze che danno una buona di stima di una quantità $t/6$.
-Più formalmente, definiamo la variabile aleatoria *indicatrice*
+Più formalmente, definiamo la  qvariabile aleatoria *indicatrice*
 $$Y_i = \begin{cases}
 1 &\text{se la $i$-esima istanza di Morris+ da una bunoa stima}\\
 0 &\text{altrimenti}
@@ -152,8 +152,8 @@ $$Y_i = \begin{cases}
 Come discusso in precedenza il valore mediamo restituito da Morris++ è una cattiva stima di $n$ **se e solo se** al più $t/2$ delle istanze ritornano una buona stima, ovvero se $Y = \sum_{i=1}^{t}Y_i \leq t/2$.
 Utilizzando il [[Concentration Inequalities#Multiplicative Chenroff's Bound]], con $\mu = 2t/3$ e $\varepsilon = 1/4$, avremo che
 $$\begin{align*}
-P\left( Y \leq (1-\varepsilon) \frac{2t}{3}\right)
-&=  P\left( \sum_{i=1}^{t} Y_i \leq \frac{t}{2}\right)\\
+P(err) = P\left( \sum_{i=1}^{t} Y_i \leq \frac{t}{2}\right)
+&= P\left( Y \leq (1-\varepsilon) \frac{2t}{3}\right)\\
 &\leq e^{-\tfrac{2t}{3}\cdot\tfrac{1}{32}}\\
 &= e^{- \tfrac{t}{48}} \leq \delta
 \end{align*}$$

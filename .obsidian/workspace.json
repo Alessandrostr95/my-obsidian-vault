@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8e8b44a00ea449d4",
+        "id": "415e1ff1654bea3d",
         "type": "tabs",
         "children": [
           {
-            "id": "dfdb953308a2caca",
+            "id": "ca40b4072bb24a96",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "root.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "root"
             }
           }
         ]
@@ -53,7 +57,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -126,10 +131,10 @@
             "id": "707c89d49a6abea2",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           },
           {
@@ -141,13 +146,23 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "7c7c1db3444494d5",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
           }
         ],
         "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 400.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,20 +173,30 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "dfdb953308a2caca",
+  "active": "ca40b4072bb24a96",
   "lastOpenFiles": [
+    "Proprietà utili.md",
+    "other/Spanners.md",
+    "other/HIP Estimator.md",
+    "other/MinHash Sketches.md",
+    "other/MinHash Cardinality Estimator.md",
+    "other/All-Distances Sketches.md",
+    "other/Shortest Beer Path Queries in Outerplanar Graphs.md",
+    "other/img/outerplanar_3.png",
+    "other/img/outerplanar_2.png",
+    "other/img/outerplanar_1.png",
+    "AMD/Morris' counter.md",
+    "AMD/Flajolet-Martin's counter.md",
+    "AMD/0 - Algorithms for Massive Data.md",
+    "root.md",
     "IOC/Lecture 5.md",
     "IOC/Lecture 4.md",
     "IOC/Lecture 3.md",
     "IOC/Lecture 2.md",
-    "root.md",
     "AR/2 - Power Law.md",
-    "AMD/Morris' counter.md",
     "IR/Front Coding.md",
     "IR/0 - Information Retrieval.md",
     "IR/Gap encoding.md",
-    "AMD/Flajolet-Martin's counter.md",
-    "AMD/0 - Algorithms for Massive Data.md",
     "AGT/0 - Algorithmic game theory.md",
     "AMD/Basic concept and properties.md",
     "AMD/Concentration Inequalities.md",
@@ -180,13 +205,6 @@
     "AMS/0 - Algorithms For Massive Data.md",
     "Untitled.canvas",
     "ISTI/0 - Inferenza Statistica e Teoria dell'Informazione.md",
-    "Untitled.md",
-    "ISTI/Distribuzioni.md",
-    "Proprietà utili.md",
-    "TESI/Spanners.md",
-    "TESI/Shortest Beer Path Queries in Outerplanar Graphs.md",
-    "SSI/Note 3.md",
-    "SSI/Note 2.md",
     "AMS",
     "IOC",
     "AMD/img/amd_01.jpeg",
@@ -196,16 +214,13 @@
     "get_edges.sh",
     "edges",
     "Senza nome 1.canvas",
-    "note",
+    "other",
     "ML/img/ML_14_5.png",
     "ML/img/ML_14_4.png",
     "ML/img/ML_14_3.png",
     "ML/img/ML_14_2.png",
     "ML/img/ML_14_1.png",
     "ML/img/ML_03_18.png",
-    "ML/img/ML_03_20.png",
-    "ML/img/ML_03_19.png",
-    "ML/img/ML_15_5.png",
     "ATA/img/note2-2.png.sb-986a7f45-JrAD8y",
     "ATA/img",
     "ATA"

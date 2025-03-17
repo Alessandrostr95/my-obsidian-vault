@@ -61,7 +61,7 @@ Tutte le *facce* di $G$ sono triangoli, e tutti gli archi esterni formano un **c
 Il **duale** di $G$ è un **albero** $D(G)$ dove l'insieme dei nodi è equivalente all'insieme delle facce di $G$.
 Esiste un arco $(F,F')$ in $D(G)$ se e solo se le facce $F$ ed $F'$ condividono un arco in $G$.
 $D(G)$ ha $n-2$ nodi, ognuno dei quali con grado al più $3$.
-![](./img/outerplanar_1.png)
+![](outerplanar_1.png)
 
 ----
 # Query problem on Tree
@@ -83,7 +83,7 @@ Assumiamo inoltre che ogni nodo $u$ può appartenere al più a un numero **costa
 
 In una **clostest-color query** noi abbiamo due nodi $u,v \in T$, un colore $c \in \mathcal{C}$ tale che $u \in P_c$ e vogliamo sapere qual è il nodo $w \in P_c$ più vicino a $v$, ovvero tale che $$w = \arg \min_{x \in P_c} d(x,v)$$ ^361256
 
-![](./img/outerplanar_2.png)
+![](outerplanar_2.png)
 
 ### Lemma 4
 È possibile preprocessare $T$ in tempo **lineare** $O(n)$ in modo tale da poter rispondere a qualsiasi *[[#^361256|closest-pair query]]* in tempo **costante** $O(1)$.
@@ -177,7 +177,7 @@ Dato che $(u,w,\text{dist}(u,w), D) \in Q_{F,F'}$ e $(w, v,\text{dist}(w,v), D) 
 
 Con lo stesso ragionamento possiamo dire che
 $$\text{dist}(u,v) = \min_{w \in F'}\lbrace \min(\texttt{beer\_dist}(u,w) + \text{dist}(w,v),\; \text{dist}(u,w) + \texttt{beer\_dist}(w,v) ) \rbrace$$
-![](./img/outerplanar_3.png)
+![](outerplanar_3.png)
 
 ## Step 2
 A questo punto definiamo il semigruppo $(W,\oplus)$ come

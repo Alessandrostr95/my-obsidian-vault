@@ -36,7 +36,7 @@ $$\gamma(n,k) = O\left(n^{1 +\frac{1}{\lfloor k/2 \rfloor}}\right)$$
 
 # Greedy Alg for Multiplicative Spanners
 
-![](./img/spanners_1.png) ^ecccd6
+![](spanners_1.png) ^ecccd6
 
 - Questo algoritmo è basato sull'algrotimo di Kruskal, con la differenza che **rilassa** il vincolo sulla mancanza di cicli.
 
