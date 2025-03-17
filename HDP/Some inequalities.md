@@ -110,7 +110,7 @@ Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed ran
 Let $S_N = S_1+...+S_N$ allora $$S_N/N \xrightarrow{a.s.} \mu$$ ([[Convergence of random variables#Almost sure convergence|almost surely]]) .
 
 ### Lindeberg-Lévy central limit theorem
-Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with [[Some definitions#Mean|mean]] $\mu$ and [[Some definitions#Variance|variance]] $\sigma^2$.
+Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with [[Some definitions#Mean|mean]] $\mu$ and finite [[Some definitions#Variance|variance]] $\sigma^2 < \infty$.
 Let $S_N = S_1 + \dots + S_N$, and define the random variable $$Z_N = \frac{S_N - \mathbb{E}S_N}{\sqrt{\text{Var}(S_N)}} = \frac{1}{\sigma\sqrt{N}}\sum_{i=1}^{N}(X_i - \mu)$$
 Then $Z_N$ [[Convergence of random variables#Convergence in distribution|converges in distribution]] to the **norma distribution** $N(0,1)$, i.e.,
 $$Z_N \xrightarrow{d}N(0,1)$$
@@ -138,6 +138,29 @@ Let $X_1, X_2, ...$ be a sequence of i.i.d. random variables with mean $\mu$ and
 > 
 
 ### de Moivre-Laplace central limit theorem
-Let $X_1, X_2, \dots$ a sequence of 
+Let $X_1, X_2, \dots$ a sequence of **bernoulli** variables with parameter $p$.
+Recall that $$\mathbb{E}X_i = p,\;\;\; \text{Var}(X_i) = p(1-p)$$
+and that the sum $S_N = X_1 + ... + X_N$ has **binomial distribution** $\text{Bin}(N,p)$ with $$\mathbb{E}S_N = Np,\;\;\; \text{Var}(S_N) = Np(1-p)$$
+
+Then $$\frac{S_N - Np}{\sqrt{Np(1-p)}} \xrightarrow{d} N(0,1)$$
+
+### Poisson Limit Theorem
+Let $X_1, X_2, \dots$ a sequence of **i.i.d.** random variables $X_i \sim \text{Ver}(p_i)$.
+Let $S_N = X_1 + \dots + X_N$, with mean $$\mathbb{E}S_N = \sum_{i=1}^{N} p_i$$
+Assume that as $N \to \infty$ the probabilities $p_i$ are s.t. the mean $\mathbb{E}S_N$ is **constant** independent from $N$, say $\mathbb{E}S_N \to \lambda$, then $$S_N \xrightarrow{d} \text{Pois}(\lambda)$$ 
+Remark that $\text{Pois}(\lambda)$ is the **Poisson distribution**, and $Z \sim \text{Pois}(\lambda)$ we have $$\mathbb{P}\{Z = k\} = e^{-\lambda}\frac{\lambda^k}{k!},\;\; \forall k \in \mathbb{N}$$
+
+This theorem shows that if we have a very large number of independent trials ($N$), and the probability of success in each trial ($p_i$) is very small but such that the expected number of successes $\sum_{i=1}^{N}p_i$​ remains constant, then the total number of successes approximately follows a *Poisson distribution*.
+
+### Berry-Esseen Central Limit Theorem
+Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with [[Some definitions#Mean|mean]] $\mu$ and finite [[Some definitions#Variance|variance]] $\sigma^2 < \infty$.
+Let $S_N = S_1 + \dots + S_N$, and define the random variable $$Z_N = \frac{S_N - \mathbb{E}S_N}{\sqrt{\text{Var}(S_N)}} = \frac{1}{\sigma\sqrt{N}}\sum_{i=1}^{N}(X_i - \mu)$$
+
+For **every** $N$ and **every** $t \in \mathbb{R}$, we have that
+$$\vert \mathbb{P}\{Z_n \geq t\} - \mathbb{P}\{g \geq t\}\vert \leq \frac{\rho}{\sqrt{N}}$$
+where $g \sim N(0,1)$, and $\rho = \mathbb{E}\vert X_1 - \mu \vert^3/\sigma^3$.
+
+
+
 
 
