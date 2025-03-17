@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6dbede8f0b025469",
+        "id": "4818b75ef9b9c230",
         "type": "tabs",
         "children": [
           {
-            "id": "46387f9165663c50",
+            "id": "a22708d749fad848",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDP/Convergence of random variables.md",
+                "file": "HDP/Why concentration inequalities?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Convergence of random variables"
+              "title": "Why concentration inequalities?"
             }
           }
         ]
@@ -172,7 +172,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 442.5
+    "width": 206.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,13 +183,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "96848cdb501232ac",
+  "active": "a22708d749fad848",
   "lastOpenFiles": [
-    "Untitled.canvas",
     "HDP/Some inequalities.md",
+    "HDP/Why concentration inequalities?.md",
     "HDP/Some definitions.md",
     "HDP/Convergence of random variables.md",
-    "HDP/Why concentration inequalities?.md",
+    "Untitled.canvas",
     "ISTI/Delta Method.md",
     "Word Embedding.md",
     "NLP/Earley Parser.md",

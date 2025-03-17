@@ -4,7 +4,6 @@ tags:
 date: 2025-03-17
 desc: some classical inequalities for high dimensional probability
 ---
-
 ### Jensen's inequality
 Let $f: \mathbb{R} \to \mathbb{R}$ be a **convex** function, i.e., such that $f(\lambda x + (1-\lambda)y) \leq \lambda f(x) + (1-\lambda)f(y)$, for each $x,y \in \mathbb{R}$ and $\lambda \in \left[ 0,1\right]$.
 Then, for every random variable $X$ we have that $$f(\mathbb{E}X) \leq \mathbb{E}f(X)$$

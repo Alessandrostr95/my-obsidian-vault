@@ -4,7 +4,6 @@ tags:
 date: 2025-03-17
 desc: some definition for high dimensional probability
 ---
-
 ### Mean
 $$\mathbb{E}X$$
 The men is  **linear function**, i.e., $$\mathbb{E}(aX +Y) = a\mathbb{E}X + \mathbb{E}Y$$
