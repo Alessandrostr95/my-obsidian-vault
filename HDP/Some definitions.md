@@ -6,16 +6,26 @@ desc: some definition for high dimensional probability
 ---
 
 ### Mean
-$$\mathbb{E}X$$
+	$$\mathbb{E}X$$
+The men is  **linear function**, i.e., $$\mathbb{E}(aX +Y) = a\mathbb{E}X + \mathbb{E}Y$$
 ### Variance
-$$\text{Var}(X) = \mathbb{E}(X-\mathbb{E}X)^2$$
+$$\text{Var}(X) = \mathbb{E}(X-\mathbb{E}X)^2 = \mathbb{E}X^2 - (\mathbb{E}X)^2$$
 
+Some properties:
+- $\text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{cov}(X,Y)$, (see [[#Covariance]]);
+- If $X$ and $Y$ are **independent**, then $\text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y)$;
+- $\text{Var}(aX) = a^2 \text{Var}(X)$;
+- Let $X_1, \dots, X_n$ be random variable from the **same distribution**. Then $$\text{Var}\left( \frac{1}{n} \sum_{i=1}^{n}X_i\right) = \frac{\text{Var}(X_1)}{n}.$$
 ### Standard Deviation
 $$\sigma(X) = \sqrt{\text{Var}(X)}$$
 
 ### Covariance
 $$\text{cov}(X,Y) = \mathbb{E}(X-\mathbb{E}X)(Y-\mathbb{E}Y)$$
+If $X$ and $Y$ are **independent**, then $\text{cov}(X,Y) = 0$.
 
+### CMF - Cumulative Distribution Function
+$$F_X(t) = \mathbb{P}\{ X \geq t\},\;\; \forall t \in \mathbb{R}$$
+As a consequence, $$\mathbb{P}\{X < t\} = 1 - F_X(t)$$
 ### MGF - Moment Generating Function
 $$M_X(t) := \mathbb{E}\;e^{tX}, \;\; \forall t \in \mathbb{R}$$
 
@@ -29,13 +39,13 @@ $$\mathbb{E}\vert X \vert^p\;\; \forall p > 0$$
 $$\Vert X \Vert_{L^p} := (\mathbb{E}\vert X \vert^p)^{1/p},\;\; p \in (0, \infty)$$
 
 When $p = \infty$, the definition is the **[essential supremum](https://en.wikipedia.org/wiki/Essential_infimum_and_essential_supremum)** of $\vert X \vert$, i.e.,
-$$\Vert X \Vert_{L^p} := \text{ess}\sup \vert X \vert$$
+$$\Vert X \Vert_{L^p} := \text{ess}\sup \vert X \vert = \sup \Omega$$
 
 ### $L^p$ norm of a probability space
 For fixed $p$ and probability space $(\Omega, \Sigma, \mathbb{P})$, the $L^p$-norm space of $(\Omega, \Sigma, \mathbb{P})$, say $L^p=L^p(\Omega, \Sigma, \mathbb{P})$, consists of all random variable $X \in \Omega$ with **finite** [[#$L p$ norm of a random variable|$L^p$ norm]], i.e.,
 $$L^p := \{ X \in \Sigma \mid \Vert X \Vert_{L^p} < \infty\}.$$
 
-For $p \in \left[ 1, \infty \right]$,  we have that $\Vert \cdot \Vert_{L^p}$ is a [[#Norm|norm]],  and $L^p$ is a [Banach space](https://en.wikipedia.org/wiki/Banach_space) (follow from [[|Minkowski's inequality]]).
+For $p \in \left[ 1, \infty \right]$,  we have that $\Vert \cdot \Vert_{L^p}$ is a [[#Norm|norm]],  and $L^p$ is a [Banach space](https://en.wikipedia.org/wiki/Banach_space) (follow from [[Some inequalities#Minkowski's inequality|Minkowski's inequality]]).
 
 For $p < 1$, the triangular inequality fails and then $\Vert \cdot \Vert_{L^p}$ is not a [[#Norm|norm]].
 
@@ -61,7 +71,6 @@ $$\begin{align*}
 &= \mathbb{E}(X-\mathbb{E}X)(Y - \mathbb{E}Y)\\
 &= \text{cov}(X,Y)
 \end{align*}$$
-
 
 ---
 
