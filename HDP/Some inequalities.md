@@ -98,7 +98,7 @@ Let $X$ any random variable.
 Then, for every $t > 0$ we have
 $$\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t \} \leq \frac{\text{Var}(X)}{t^2}$$
 
-> **Proof**
+> **Proof** #exercise
 > By using [[#Markov's inequality]] on the non-negative random variable $(X - \mathbb{E}X)^2$ we have $$\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t\} = \mathbb{P}\{(X - \mathbb{E}X)^2 \geq t^2\} \leq \frac{\mathbb{E}(X-\mathbb{E}X)^2}{t^2} = \frac{\text{Var}(X)}{t^2} \;\; \square$$
 
 
@@ -107,7 +107,7 @@ $$\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t \} \leq \frac{\text{Var}(X)}{t^2
 
 ### Strong law of large numbers
 Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with mean $\mu$.
-Let $S_N = S_1+...+S_N$ allora $$S_N/N \xrightarrow{a.s.} \mu$$ ([[Convergence of random variables#Almost sure convergence|almost surely]]) .
+Let $S_N = S_1+...+S_N$ then [[Convergence of random variables#Almost sure convergence|almost surely]] $$S_N/N \xrightarrow{a.s.} \mu$$
 
 ### Lindeberg-Lévy central limit theorem
 Let $X_1, X_2, \dots$ be a sequence of independent and identical distributed random variables with [[Some definitions#Mean|mean]] $\mu$ and finite [[Some definitions#Variance|variance]] $\sigma^2 < \infty$.
