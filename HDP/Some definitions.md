@@ -39,8 +39,28 @@ For $p \in \left[ 1, \infty \right]$,  we have that $\Vert \cdot \Vert_{L^p}$ is
 
 For $p < 1$, the triangular inequality fails and then $\Vert \cdot \Vert_{L^p}$ is not a [[#Norm|norm]].
 
+For $p=2$, the space $L^2$ is an [Hilbert space](https://it.wikipedia.org/wiki/Spazio_di_Hilbert).
+The [[#Mean|mean]] of the product of two random variable $XY$ can be expressed as the [[#Inner product $ langle cdot, cdot rangle$|inner product]] $\langle \cdot, \cdot \rangle_{L^2}$, in fact
+$$\begin{align*}
+\mathbb{E}XY
+&= \int_{\mathbb{R}}\int_{\mathbb{R}} xy \cdot f_{X,Y}(x,y)\,dx\,dy\\
+&= \int_{\Omega}X(w)Y(w)dP(w)\\
+&= \langle X,Y \rangle_{L^2}
+\end{align*}$$ where $X(\cdot), Y(\cdot)$ belong to the space $(\Omega = \mathbb{R}, \Sigma = \mathbb{R} \times \mathbb{R}, \mathbb{P} = P(\cdot) = f_{X,Y}(\cdot, \cdot))$.
 
 
+Observe that the [[#Standard Deviation|standard deviation]] of $X$ che be express with the $L^2$ norm, i.e., 
+$$\Vert X - \mathbb{E}X \Vert_{L_2} = \sqrt{\mathbb{E}(X- \mathbb{E}X)^2} = \sqrt{\text{Var}(X)} = \sigma(X)$$
+
+Similarly, that the [[#Covariance|covariance]] che be express with the [[#Inner product $ langle cdot, cdot rangle$|inner product]] $\langle \cdot, \cdot \rangle_{L^2}$, i.e.,
+$$\begin{align*}
+\langle X-\mathbb{E}X, Y - \mathbb{E}Y \rangle_{L^2}
+&= \langle \widetilde{X}, \widetilde{Y} \rangle_{L^2}\\
+&= \int_{\mathbb{R}}\int_{\mathbb{R}}xy\cdot f_{\widetilde{X},\widetilde{Y}}(x,y)\,dx\,dy\\
+&= \mathbb{E}\widetilde{X}\widetilde{Y}\\
+&= \mathbb{E}(X-\mathbb{E}X)(Y - \mathbb{E}Y)\\
+&= \text{cov}(X,Y)
+\end{align*}$$
 
 
 ---
@@ -73,3 +93,5 @@ Some example of inner products are:
 - **Dot-product** over the vector space $\mathbb{R}^n$, i.e., $$\langle x, y \rangle = x^Ty = \sum_{i=1}^{n}x_iy_i, \;\; \forall x,y \in \mathbb{R}^n$$
 - The **mean of product of random variables**, i.e., $$\langle X, Y \rangle = \mathbb{E}XY$$
 
+### Canonical $L^2$-inner product
+Let $f,g$ two function over a measurable space $(\mathcal{X},\mathcal{A}, \mu)$ , then $$\langle f,g \rangle_{L^2} := \int_{\mathcal{X}}f(x)g(x)\,d\mu(x) = \int_{\mathcal{X}}(f \cdot g)(x)\,d\mu(x)$$
