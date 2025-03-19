@@ -54,12 +54,37 @@ Let $X_1, ... , X_N$ be **independent** random variables, with $X_i \in \left[ m
 Then, for every $t > 0$, we have
 $$\mathbb{P}\left\lbrace \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \geq t\right\rbrace \leq \exp\left( - \frac{2t^2}{\sum_{i=1}^N{}(M_i-m_i)^2} \right)$$
 
-#### Proof
+#### Proof #exercise
 
 ```ad-warning
-TODO
+WORK IN PROGRESS
 ```
 
+As before, we multiply by a constant $\lambda > 0$, then exponentiate, then apply Markov's bound, and finally optimize with $\lambda$.
+
+First 
+$$\mathbb{P}\left\lbrace \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \geq t\right\rbrace \leq e^{-\lambda t} \prod_{i=1}^{N}\mathbb{E}e^{\lambda(X_i - \mathbb{E}X_i)}$$
+
+Now, let $f(x) = e^{\lambda x}$, with $x \in \left[ a, b \right]$.
+Since $f$ is increasing monotone, we have that $f(a) \leq f(b)$.
+Moreovere, $f$ is **convex** then,  for every $0 < \alpha < 1$, we have
+$$f(x) = f(\alpha x + (1-\alpha)x) \leq \alpha f(x) + (1-\alpha)f(x) \leq \alpha f(b) + (1-\alpha)f(a)$$
+Set $\alpha = \frac{x -a}{b-a} \in (0,1)$.
+Then, for every $x \in \left[ a,b \right]$ $$e^{\lambda x} \leq \frac{x - a}{b-a}e^{\lambda b} + \frac{b-x}{b-a}e^{\lambda a}$$
+
+As a consequence, since $\mathbb{E}(X_i - \mathbb{E}X_i) = 0$, we have
+$$\begin{align*}
+\mathbb{E}e^{\lambda (X_i - \mathbb{E}X_i)}
+&\leq \mathbb{E} \left(\frac{\mathbb{E}(X_i - \mathbb{E}X_i) -m_i}{M_i - m_i}e^{\lambda M_i} + \frac{M_i - \mathbb{E}(X_i - \mathbb{E}X_i)}{M_i - m_i}e^{\lambda m_i} \right)\\
+&= \frac{\mathbb{E}(X_i - \mathbb{E}X_i) -m_i}{M_i - m_i}e^{\lambda M_i} + \frac{M_i - \mathbb{E}(X_i - \mathbb{E}X_i)}{M_i - m_i}e^{\lambda m_i}\\
+&= \frac{-m_i}{M_i - m_i}e^{\lambda M_i} + \frac{M_i}{M_i - m_i}e^{\lambda m_i}\\
+&= \frac{M_ie^{\lambda m_i} - m_ie^{\lambda M_i}}{M_i - m_i}
+\end{align*}$$
+
+
+
+-----
+## other things
 
 Let $Z_i = X_i - m_i$.
 Since $X_i \in \left[ m_i, M_i \right]$, then $Y_i \in \left[ 0, M_i - m_i \right]$.
