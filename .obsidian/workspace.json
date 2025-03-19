@@ -11,10 +11,14 @@
             "id": "9b34efe86236a824",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "HDP/Hoeffding’s inequality.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Hoeffding’s inequality"
             }
           }
         ]
@@ -85,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -167,6 +172,16 @@
             "id": "9b9f083c836fb10a",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "cb7e6ba1d7f2f67b",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -178,7 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5
+    "width": 498.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,9 +206,9 @@
   },
   "active": "96848cdb501232ac",
   "lastOpenFiles": [
-    "HDP/Why concentration inequalities?.md",
-    "HDP/Hoeffding’s inequality.md",
     "HDP/Some inequalities.md",
+    "HDP/Hoeffding’s inequality.md",
+    "HDP/Why concentration inequalities?.md",
     "HDP/Some definitions.md",
     "HDP/Convergence of random variables.md",
     "Untitled.canvas",
