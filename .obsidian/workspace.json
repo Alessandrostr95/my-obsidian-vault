@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDP/Hoeffding’s inequality.md",
+                "file": "HDP/Why concentration inequalities?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hoeffding’s inequality"
+              "title": "Why concentration inequalities?"
             }
           }
         ]
@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -193,7 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 498.5
+    "width": 256.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,12 +203,12 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "96848cdb501232ac",
+  "active": "9b34efe86236a824",
   "lastOpenFiles": [
+    "HDP/Some definitions.md",
     "HDP/Some inequalities.md",
     "HDP/Hoeffding’s inequality.md",
     "HDP/Why concentration inequalities?.md",
-    "HDP/Some definitions.md",
     "HDP/Convergence of random variables.md",
     "Untitled.canvas",
     "ISTI/Delta Method.md",

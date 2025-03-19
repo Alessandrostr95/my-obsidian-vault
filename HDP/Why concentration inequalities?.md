@@ -49,6 +49,8 @@ By  [[Some inequalities#Berry-Esseen Central Limit Theorem]], we can see that th
 > Let $g \sim N(0,1)$. Show that, for each $t \geq 1$, we have
 > $$\mathbb{E}g^2\mathbb{1}\{g > t\} = t \frac{1}{\sqrt{2\pi}}e^{-t^2/2} + \mathbb{P}\{g > t\} \leq \left(t + \frac{1}{t} \right)\frac{1}{\sqrt{2\pi}}e^{-t^2/2}$$
 > **Solution**
+> Remark that $$\int xe^{-x^2/2}\,dx = -e^{-x^2/2} + c$$
+> Therefore, integrating by parts, we have
 > $$\begin{align*}
 > \mathbb{E}g^2\mathbb{1}\{g > t\}
 > &= \int_{t}^{\infty}x^2\phi(x)\,dx = \int_{t}^{\infty}x^2\frac{1}{\sqrt{2\pi}}e^{-x^2/2}\,dx\\
@@ -56,5 +58,7 @@ By  [[Some inequalities#Berry-Esseen Central Limit Theorem]], we can see that th
 > &= t\frac{1}{\sqrt{2\pi}}e^{-t^2/2} + \mathbb{P}\{g > t\}
 > \leq \left(t + \frac{1}{t} \right)\frac{1}{\sqrt{2\pi}}e^{-t^2/2} \;\; \square
 > \end{align*}$$
+
+
 
 
