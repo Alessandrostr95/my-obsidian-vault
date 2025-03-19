@@ -35,7 +35,8 @@
               "title": "Sub-gaussian distributions"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -216,7 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.5
+    "width": 283.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,10 +228,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "9b34efe86236a824",
+  "active": "7d7b0585af65fb4e",
   "lastOpenFiles": [
-    "HDP/Sub-gaussian distributions.md",
     "HDP/Chernoff's inequality.md",
+    "HDP/Sub-gaussian distributions.md",
     "HDP/Some inequalities.md",
     "HDP/Some definitions.md",
     "HDP/Hoeffding’s inequality.md",
