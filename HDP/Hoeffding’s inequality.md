@@ -43,5 +43,6 @@ Then, for every $t \geq 0$, we have
 $$\mathbb{P}\left\lbrace \left\vert\sum_{i=1}^{N}a_iX_i \right\vert \geq t \right\rbrace \leq 2\exp\left( - \frac{t^2}{2 \Vert a \Vert_2^2} \right)$$
 
 #### Proof
+Let $S_N = \sum_{i=1}^{N}a_iX_i$.
 We can simply apply the Hoeffding’s inequality for the variables $-X_i$ instead of $X_i$, and obtain the same bound for $\mathbb{P}\{-S_N \geq t\}$. Then $$\mathbb{P}\{\vert S_N \vert \geq t\} = \mathbb{P}\{S_N \geq t\} + \mathbb{P}\{- S_N \geq t\} \;\; \square$$
 
