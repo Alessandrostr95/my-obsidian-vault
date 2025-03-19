@@ -56,6 +56,25 @@ $$\mathbb{P}\left\lbrace \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \geq t\right\rbrace 
 
 #### Proof
 
+```ad-warning
+TODO
+```
+
+
 Let $Z_i = X_i - m_i$.
 Since $X_i \in \left[ m_i, M_i \right]$, then $Y_i \in \left[ 0, M_i - m_i \right]$.
+Let's compute the [[Some definitions#Variance|variance]] of $Z_i$.
+$$\begin{align*}
+\text{Var}(Z_i)
+&= \mathbb{E}Z_i^2 - (\mathbb{E}Z_i)^2\\
+(\text{since } Z_i \leq M_i-m_i ) &\leq \mathbb{E}(Z_i \cdot (M_i-m_i)) -(\mathbb{E}Z_i)^2\\
+&= (M_i-m_i) \cdot \mathbb{E}Z_i -(\mathbb{E}Z_i)^2\\
+&=\mathbb{E}Z_i \cdot ((M_i-m_i) - \mathbb{E}Z_i)
+\end{align*}$$
+Observe that the function $x(t - x)$ is a **concave function**, then it's maximum is when $x = t/2$.
+Then we have $$\text{Var}(Z_i) \leq \frac{(M_i -m_i)^2}{2} - \frac{(M_i -m_i)^2}{4} = \frac{(M_i - m_i)^2}{4}$$
+By properties of the variance we have that $\text{Var}(Z_i) = \text{Var}(X_i - m_i) = \text{Var}(X_i)$, therefore $\text{Var}(X_i) \leq \frac{(M_i-m_i)^2}{4}$.
+
+
+
 

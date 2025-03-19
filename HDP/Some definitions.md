@@ -14,6 +14,7 @@ Some properties:
 - $\text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{cov}(X,Y)$, (see [[#Covariance]]);
 - If $X$ and $Y$ are **independent**, then $\text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y)$;
 - $\text{Var}(aX) = a^2 \text{Var}(X)$;
+- $\text{Var}(X + c) = \text{Var}(X)$;
 - Let $X_1, \dots, X_n$ be random variable from the **same distribution**. Then $$\text{Var}\left( \frac{1}{n} \sum_{i=1}^{n}X_i\right) = \frac{\text{Var}(X_1)}{n}.$$
 ### Standard Deviation
 $$\sigma(X) = \sqrt{\text{Var}(X)}$$
