@@ -44,6 +44,22 @@ Since this function is convex, we can minimize the bound finding the value of $\
 By monotonicity, it holds when the first derivative of the $(e^\lambda - 1) \mu  - \lambda t$ is $0$, i.e., when
 $$e^\lambda \mu - t = 0 \iff \lambda = \ln \frac{t}{\mu}$$
 
+Finally
+$$\begin{align*}
+\mathbb{P}\{ S_N \geq t\}
+&\leq \exp\left( \left(\frac{t}{\mu} - 1 \right) \mu  - t\ln\frac{t}{\mu}\right)\\
+&= \exp\left( t- \mu  - t\ln\frac{t}{\mu}\right)\\
+&= e^t e^{-\mu}\left( \frac{t}{\mu}\right)^t\\
+&= e^{-\mu}\left( \frac{e t}{\mu}\right)^t\\
+\end{align*}$$
 
 
+
+-------
+
+### Chernoff's inequality: lower tails #exercise 
+
+### Poisson tails #exercise 
+
+### Chernoff's inequality: small deviations #exercise
 
