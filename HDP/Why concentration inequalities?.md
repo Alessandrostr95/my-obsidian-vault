@@ -60,5 +60,20 @@ By  [[Some inequalities#Berry-Esseen Central Limit Theorem]], we can see that th
 > \end{align*}$$
 
 
+We can use the [[Hoeffding’s inequality]] to provide a good upperbound that decrease exponentially, but the holds **for every** $N$, and not only asympotically.
 
+```ad-note
+If $X \in \{0,1\}$, then $$Z = 2X -1 \in \{-1,1\}$$
+In the same way, if $Z \in \{-1,1\}$, then $$X = \frac{Z + 1}{2} \in \{0,1\}$$
+```
+
+Let $Z_i = 2X_i - 1$ be a **symmetric bernoulli** random variable.
+Therefore we can apply the [[Hoeffding’s inequality]]
+$$\begin{align*}
+\mathbb{P}\left\lbrace S_N \geq \frac{3}{4}N \right\rbrace
+&= \mathbb{P}\left\lbrace \sum_{i=1}^{N}\frac{Z_N+1}{2} \geq \frac{3}{4}N \right\rbrace\\
+&= \mathbb{P}\left\lbrace \sum_{i=1}^{N}\frac{1}{2}Z_N \geq \frac{1}{4}N \right\rbrace\\
+&\leq \exp\left(-\frac{\frac{N^2}{16}}{2 \frac{N}{4}}\right)\\
+&= e^{-N/8}
+\end{align*}$$
 

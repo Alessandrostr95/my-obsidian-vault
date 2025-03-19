@@ -34,3 +34,14 @@ The derivative is $-t + \lambda \Vert a \Vert_2^2$, and it's equal to $0$ when $
 Therefore,
 $$\mathbb{P}\left\lbrace \sum_{i=1}^{N}a_iX_i \geq t \right\rbrace \leq \exp\left(-\frac{t^2}{\Vert a \Vert_2^2} + \frac{1}{2}\frac{t^2}{\Vert a \Vert_2^2} \right) = \exp\left(-\frac{t^2}{2\Vert a \Vert_2^2}\right) \;\; \square$$
 
+
+-----
+# Hoeffding’s inequality, two-sided
+Let $X_1, ... , X_N$ be independent **symmetric Bernoulli** random variables, i.e., random binary random variables that assumes value $1$ or $-1$ with probability $1/2$.
+Let $a = (a_1, \dots, a_N) \in \mathbb{R}^N$.
+Then, for every $t \geq 0$, we have
+$$\mathbb{P}\left\lbrace \left\vert\sum_{i=1}^{N}a_iX_i \right\vert \geq t \right\rbrace \leq 2\exp\left( - \frac{t^2}{2 \Vert a \Vert_2^2} \right)$$
+
+#### Proof
+We can simply apply the Hoeffding’s inequality for the variables $-X_i$ instead of $X_i$, and obtain the same bound for $\mathbb{P}\{-S_N \geq t\}$. Then $$\mathbb{P}\{\vert S_N \vert \geq t\} = \mathbb{P}\{S_N \geq t\} + \mathbb{P}\{- S_N \geq t\} \;\; \square$$
+
