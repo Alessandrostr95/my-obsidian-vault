@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDP/Sub-gaussian distributions.md",
+                "file": "HDP/Chernoff's inequality.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sub-gaussian distributions"
+              "title": "Chernoff's inequality"
             }
           }
         ],
@@ -206,6 +206,26 @@
             "id": "18a9fa0cd82f82ca",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fb64fd7a930c8a2c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fef91553462f553a",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -228,10 +248,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "c9f280539da193b7",
+  "active": "96848cdb501232ac",
   "lastOpenFiles": [
-    "HDP/Some definitions.md",
     "HDP/Sub-gaussian distributions.md",
+    "HDP/Some definitions.md",
     "HDP/Some inequalities.md",
     "HDP/Chernoff's inequality.md",
     "HDP/Hoeffding’s inequality.md",
