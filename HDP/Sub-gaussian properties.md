@@ -140,10 +140,55 @@ It holds when $K_4 \geq \sqrt{1/\ln{2}}$.
 Assume that [[#^51fe83|property 4]] holds.
 
 Assume that $K_4 = 1$.
-
-==TODO==
+Then, by using [[Some inequalities#Markov's inequality]]
+$$
+\begin{align*}
+\mathbb{P}\{\vert X \vert \geq t\}
+&= \mathbb{P}\left\lbrace e^{X^2}\geq e^{t^2} \right\rbrace\\
+&\leq \frac{\mathbb{E}e^{X^2}}{e^{t^2}}\\
+&\leq 2e^{-t^2}
+\end{align*}
+$$
+This proves [[#^b5dd62|property 1]], with $K_1 = 1$.
 
 #### $(3 \implies 5)$
+As before, assume that [[#^32045f|property 3]] holds and $K_3 = 1$, and that $\mathbb{E}X = 0$.
+
+> [!note] Remark
+> $$e^x \leq x+e^{x^2}\;\; \forall x \in \mathbb{R}$$
+
+Then
+$$
+\begin{align*}
+\mathbb{E}e^{\lambda X}
+&\leq \mathbb{E}(\lambda X + e^{\lambda^2 X^2})\\
+&= \mathbb{E}e^{\lambda^2 X^2}\\
+&\leq e^{\lambda^2}
+\end{align*}
+$$
+The last inequality holds if $\vert \lambda \vert \leq 1$, by requirement of [[#^32045f|property 3]].
+Thus, if $\vert \lambda \vert \leq 1$ the [[#^32045f|property 3]] implies the [[#^70f6af|property 5]] with $K_5 = 1$.
+
+Now, assume $\vert \lambda \vert \geq 1$.
+
+> [!note] Remark
+> $$
+> 2\lambda x \leq \lambda^2 + x^2\;\;\; \forall \lambda, x \in \mathbb{R}
+> $$
+
+Therefore
+$$
+\begin{align*}
+\mathbb{E}e^{\lambda X}
+&\leq \mathbb{E}e^{(\lambda^2 + X^2)/2}\\
+&= e^{\lambda^2/2}\mathbb{E}e^{X^2/2}\\
+&\leq e^{\lambda^2/2} \cdot e^{1/2}\\
+(\text{since } \vert \lambda \vert \geq 1)&\leq e^{\lambda^2}
+\end{align*}
+$$
+And this implies the [[#^70f6af|property 5]] with $K_5 = 1$.
 
 #### $(5 \implies 1)$
+Assume that [[#^70f6af|property 5]] holds.
 
+==TODO==
