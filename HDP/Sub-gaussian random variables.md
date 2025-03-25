@@ -29,10 +29,14 @@ More precisely we have
 - [[Sub-gaussian properties#^b5dd62|Property 1]]: $\mathbb{P} \{\vert X \vert \geq t\} \leq 2 \exp(-ct^2/\Vert X \Vert_{\psi^2})$, for every $t \geq 0$;
 - [[Sub-gaussian properties#^51312a|Property 2]]: $\Vert X \Vert_{L^p} = (\mathbb{E}\vert X \vert^p)^{1/p} \leq C \Vert X \Vert_{\psi^2} \sqrt{p}$, for every $p \geq 1$;
 - [[Sub-gaussian properties#^51fe83|Property 4]]: $\mathbb{E}\exp(X^2/\Vert X \Vert_{\psi^2}^2) \leq 2$;
-- [[Sub-gaussian properties#^70f6af|Property 5]]: if $\mathbb{E}X = 0$ then $M_X(\lambda) = \mathbb{E}\exp(\lambda X) \leq \exp(\lambda^2 C \Vert X \Vert_{\psi^2}^2)$.
+- [[Sub-gaussian properties#^70f6af|Property 5]]: if $\mathbb{E}X = 0$ then $M_X(\lambda) = \mathbb{E}\exp(\lambda X) \leq \exp(\lambda^2 C \Vert X \Vert_{\psi^2}^2)$. ^7ff2f7
 
 where $C,c > 0$ are [[Sub-gaussian properties#^47bb35|absolute constants]].
-Moreover, up to absolute constant factors, $\Vert X \vert_{\psi2}$  is the **smallest possible number** that makes each of these inequalities valid.
+
+> [!important] 
+> Up to absolute constant factors, $\Vert X \Vert_{\psi2}$  is the **smallest possible number** that makes each of these inequalities valid.
+
+^e7688e
 
 
 

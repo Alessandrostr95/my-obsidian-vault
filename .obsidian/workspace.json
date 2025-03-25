@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDP/Sub-gaussian properties.md",
+                "file": "HDP/Sums of independent sub-gaussians.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sub-gaussian properties"
+              "title": "Sums of independent sub-gaussians"
             }
           }
         ]
@@ -221,6 +221,16 @@
             "id": "4bff01808acfee4e",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "f9f96a73b9ab2331",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -245,14 +255,15 @@
   },
   "active": "96848cdb501232ac",
   "lastOpenFiles": [
-    "Example and definition of sub-gaussian distributions.md",
-    "HDP/Sub-gaussian properties.md",
-    "HDP/Some definitions.md",
-    "HDP/Sub-gaussian distributions.md",
-    "HDP/Chernoff's inequality.md",
+    "HDP/Sums of independent sub-gaussians.md",
+    "HDP/Sub-gaussian random variables.md",
     "HDP/Some inequalities.md",
+    "HDP/Sub-gaussian distributions.md",
     "HDP/Hoeffding’s inequality.md",
     "HDP/Convergence of random variables.md",
+    "HDP/Chernoff's inequality.md",
+    "HDP/Sub-gaussian properties.md",
+    "HDP/Some definitions.md",
     "HDP/Why concentration inequalities?.md",
     "Word Embedding.md",
     "Untitled.canvas",
@@ -275,7 +286,6 @@
     "AMD/0 - Algorithms for Massive Data.md",
     "IOC/Lecture 5.md",
     "IOC/Lecture 4.md",
-    "IOC/Lecture 3.md",
     "AMS",
     "IOC",
     "AMD/img/amd_01.jpeg",
