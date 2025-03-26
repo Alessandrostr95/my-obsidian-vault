@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "991b3c276efc7e21",
+            "id": "d618144d8205d686",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,31 +22,17 @@
             }
           },
           {
-            "id": "557639664a3b8cee",
+            "id": "991b3c276efc7e21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDP/Sums of independent sub-gaussians.md",
+                "file": "HDP/Hoeffding’s inequality.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sums of independent sub-gaussians"
-            }
-          },
-          {
-            "id": "f70ba00d5043a83e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HDP/Some definitions.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Some definitions"
+              "title": "Hoeffding’s inequality"
             }
           }
         ]
@@ -196,13 +182,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "991b3c276efc7e21",
+  "active": "d618144d8205d686",
   "lastOpenFiles": [
-    "HDP/Some definitions.md",
+    "HDP/Hoeffding’s inequality.md",
     "HDP/General Hoeffding's inequality.md",
+    "HDP/Some definitions.md",
     "HDP/Sums of independent sub-gaussians.md",
     "HDP/Chernoff's inequality.md",
-    "HDP/Hoeffding’s inequality.md",
     "HDP/Sub-gaussian properties.md",
     "HDP/Sub-gaussian random variables.md",
     "HDP/Some inequalities.md",

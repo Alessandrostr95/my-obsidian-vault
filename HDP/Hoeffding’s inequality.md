@@ -7,18 +7,23 @@ desc: Hoeffding's inequality
 Let $X_1, ... , X_N$ be independent **symmetric Bernoulli** random variables, i.e., random binary random variables that assumes value $1$ or $-1$ with probability $1/2$.
 Let $a = (a_1, \dots, a_N) \in \mathbb{R}^N$.
 Then, for every $t \geq 0$, we have
-$$\mathbb{P}\left\lbrace \sum_{i=1}^{N}a_iX_i \geq t \right\rbrace \leq \exp\left( - \frac{t^2}{2 \Vert a \Vert_2^2} \right)$$
+$$
+\mathbb{P}\left\lbrace \sum_{i=1}^{N}a_iX_i \geq t \right\rbrace \leq \exp\left( - \frac{t^2}{2 \Vert a \Vert_2^2} \right)
+$$
 
 
 #### Proof
 We start multiplying both sides of the inequality by a value $\lambda>0$ and and exponentiate them (as for the proof of [[Some inequalities#Chebyshev's inequality|Chebyshev's inequality]]), and then we apply [[Some inequalities#Markov's inequality|Markov's inequality]].
-$$\begin{align*}
+$$
+\begin{align*}
 \mathbb{P}\left\lbrace \sum_{i=1}^{N}a_iX_i \geq t \right\rbrace
 &= \mathbb{P}\left\lbrace \exp\left(\lambda\sum_{i=1}^{N}a_iX_i \right)\geq \exp(\lambda t) \right\rbrace\\
 &\leq \frac{\mathbb{E}\exp\left(\lambda\sum_{i=1}^{N}a_iX_i \right)}{e^{\lambda t}}\\
 &= e^{-\lambda t} \mathbb{E} \prod_{i=1}^{N}e^{\lambda a_i X_i}\\
 &= e^{-\lambda t} \prod_{i=1}^{N} \mathbb{E} e^{\lambda a_i X_i}
-\end{align*}$$ where the last inequality holds by the indipendence of the random variables.
+\end{align*}
+$$
+where the last inequality holds by the indipendence of the random variables.
 
 For every $i$, since $X_i \in \{-1, 1\}$, we have that $$\mathbb{E}e^{\lambda a_i X_i} = \frac{e^{\lambda a_i} + e^{-\lambda a_i}}{2} = \cosh(\lambda a_i)$$ (see [hyperbolic functions](https://en.wikipedia.org/wiki/Hyperbolic_functions#Exponential_definitions)).
 
@@ -52,7 +57,9 @@ We can simply apply the Hoeffding’s inequality for the variables $-X_i$ instea
 
 Let $X_1, ... , X_N$ be **independent** random variables, with $X_i \in \left[ m_i, M_i \right]$ for every $i$.
 Then, for every $t > 0$, we have
-$$\mathbb{P}\left\lbrace \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \geq t\right\rbrace \leq \exp\left( - \frac{2t^2}{\sum_{i=1}^N{}(M_i-m_i)^2} \right)$$
+$$
+\mathbb{P}\left\lbrace \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \geq t\right\rbrace \leq \exp\left( - \frac{2t^2}{\sum_{i=1}^N{}(M_i-m_i)^2} \right)
+$$
 
 #### Proof #exercise
 

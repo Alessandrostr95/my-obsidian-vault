@@ -46,3 +46,17 @@ $$
 $$
 
 
+> [!note] Exercise 2.6.4. #exercise
+> Deduce [[Hoeffding’s inequality#Hoeffding's inequality for general bounded random variables]].
+>  
+> 
+> $$
+> \begin{align*}
+> \mathbb{P}\left\lbrace \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \geq t\right\rbrace
+> &= \frac{1}{2} \mathbb{P}\left\lbrace \left\vert \sum_{i=1}^{N}(X_i- \mathbb{E}X_i) \right\vert \geq \vert t \vert \right\rbrace\\
+> &= \exp\left(-\frac{ct^2}{N K^2}\right)
+> \end{align*}
+> $$
+> where $K = \max_i \Vert X_i - \mathbb{E}X_i \Vert_{\psi_2}$.
+> ==TODO==
+
