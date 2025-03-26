@@ -12,6 +12,8 @@ $$
 \left\Vert \sum_{i=1}^{N}X_i \right\Vert_{\psi^2}^2 \leq C \sum_{i=1}^{N} \Vert X \Vert_{\psi^2}^2
 $$
 
+^690103
+
 where $C$ is an **absolute constant**.
 
 ### Proof

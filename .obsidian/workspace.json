@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "68a6bcdd2f0dd714",
+        "id": "d6ffb79e0b6eaf16",
         "type": "tabs",
         "children": [
           {
-            "id": "f5d35a1ccee6d743",
+            "id": "991b3c276efc7e21",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HDP/General Hoeffding's inequality.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "General Hoeffding's inequality"
+            }
+          },
+          {
+            "id": "557639664a3b8cee",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,6 +33,20 @@
               },
               "icon": "lucide-file",
               "title": "Sums of independent sub-gaussians"
+            }
+          },
+          {
+            "id": "f70ba00d5043a83e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HDP/Some definitions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Some definitions"
             }
           }
         ]
@@ -122,19 +150,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "HDP/General Hoeffding's inequality.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-list",
-              "title": "Outline"
-            }
-          },
-          {
-            "id": "707c89d49a6abea2",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Outline of General Hoeffding's inequality"
             }
           },
           {
@@ -148,87 +171,7 @@
             }
           },
           {
-            "id": "7c7c1db3444494d5",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "cc556d1fb2675ff5",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "9b9f083c836fb10a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "cb7e6ba1d7f2f67b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "18a9fa0cd82f82ca",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "fb64fd7a930c8a2c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "fef91553462f553a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "4bff01808acfee4e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "f9f96a73b9ab2331",
+            "id": "1284c4a2278778f5",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -238,11 +181,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 325.5
+    "width": 264.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -253,17 +196,18 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "96848cdb501232ac",
+  "active": "991b3c276efc7e21",
   "lastOpenFiles": [
+    "HDP/Some definitions.md",
+    "HDP/General Hoeffding's inequality.md",
     "HDP/Sums of independent sub-gaussians.md",
+    "HDP/Chernoff's inequality.md",
+    "HDP/Hoeffding’s inequality.md",
+    "HDP/Sub-gaussian properties.md",
     "HDP/Sub-gaussian random variables.md",
     "HDP/Some inequalities.md",
     "HDP/Sub-gaussian distributions.md",
-    "HDP/Hoeffding’s inequality.md",
     "HDP/Convergence of random variables.md",
-    "HDP/Chernoff's inequality.md",
-    "HDP/Sub-gaussian properties.md",
-    "HDP/Some definitions.md",
     "HDP/Why concentration inequalities?.md",
     "Word Embedding.md",
     "Untitled.canvas",
@@ -285,7 +229,6 @@
     "AMD/Flajolet-Martin's counter.md",
     "AMD/0 - Algorithms for Massive Data.md",
     "IOC/Lecture 5.md",
-    "IOC/Lecture 4.md",
     "AMS",
     "IOC",
     "AMD/img/amd_01.jpeg",
