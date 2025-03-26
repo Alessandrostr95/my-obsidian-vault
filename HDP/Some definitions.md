@@ -39,7 +39,7 @@ $$\mathbb{E}\vert X \vert^p\;\; \forall p > 0$$
 $$\Vert X \Vert_{L^p} := (\mathbb{E}\vert X \vert^p)^{1/p},\;\; p \in (0, \infty)$$
 
 When $p = \infty$, the definition is the **[essential supremum](https://en.wikipedia.org/wiki/Essential_infimum_and_essential_supremum)** of $\vert X \vert$, i.e.,
-$$\Vert X \Vert_{L^p} := \text{ess}\sup \vert X \vert = \sup \Omega$$
+$$\Vert X \Vert_{L^\infty} := \text{ess}\sup \vert X \vert = \sup \Omega$$
 
 ### $L^p$ norm of a probability space
 For fixed $p$ and probability space $(\Omega, \Sigma, \mathbb{P})$, the $L^p$-norm space of $(\Omega, \Sigma, \mathbb{P})$, say $L^p=L^p(\Omega, \Sigma, \mathbb{P})$, consists of all random variable $X \in \Omega$ with **finite** [[#$L p$ norm of a random variable|$L^p$ norm]], i.e.,

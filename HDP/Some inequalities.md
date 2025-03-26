@@ -11,7 +11,7 @@ Then, for every random variable $X$ we have that $$f(\mathbb{E}X) \leq \mathbb{E
 In the same way, when $f$ is **concave**, we have that $$f(\mathbb{E}X) \geq \mathbb{E}f(X)$$
 
 As a consequence, the [[Some definitions#$L p$ norm of a random variable|$L^p$ norm]] of $X$ is **increasing** in $p$, i.e.
-$$\Vert X \Vert_{L^p} \leq \Vert X \Vert_{L^q},\;\; \text{for any } 0 < p \leq p \leq \infty$$
+$$\Vert X \Vert_{L^p} \leq \Vert X \Vert_{L^q},\;\; \text{for any } 0 < p \leq q \leq \infty$$
 
 > **Proof**
 > Since $\vert X \vert^{q/p}$ is **convex** (because $q/p > 1$), we have
