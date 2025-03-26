@@ -23,6 +23,8 @@ date: 2025-03-23
 > Since $K_4$ is greather then $0$ by [[Sub-gaussian properties#^51fe83|definition]], then $\Vert X \Vert_{\psi^2} \geq 0$ for every random variable $X$.
 > ==TODO==
 
+^ceb40a
+
 
 We can restate the [[Sub-gaussian properties]] in terms of [[#^2d6cf4|sub-gaussian norm]].
 More precisely we have
