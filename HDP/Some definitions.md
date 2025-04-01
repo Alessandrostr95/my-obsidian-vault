@@ -51,12 +51,15 @@ For $p < 1$, the triangular inequality fails and then $\Vert \cdot \Vert_{L^p}$ 
 
 For $p=2$, the space $L^2$ is an [Hilbert space](https://it.wikipedia.org/wiki/Spazio_di_Hilbert).
 The [[#Mean|mean]] of the product of two random variable $XY$ can be expressed as the [[#Inner product $ langle cdot, cdot rangle$|inner product]] $\langle \cdot, \cdot \rangle_{L^2}$, in fact
-$$\begin{align*}
+$$
+\begin{align*}
 \mathbb{E}XY
 &= \int_{\mathbb{R}}\int_{\mathbb{R}} xy \cdot f_{X,Y}(x,y)\,dx\,dy\\
 &= \int_{\Omega}X(w)Y(w)dP(w)\\
 &= \langle X,Y \rangle_{L^2}
-\end{align*}$$ where $X(\cdot), Y(\cdot)$ belong to the space $(\Omega = \mathbb{R}, \Sigma = \mathbb{R} \times \mathbb{R}, \mathbb{P} = P(\cdot) = f_{X,Y}(\cdot, \cdot))$.
+\end{align*}
+$$
+where $X(\cdot), Y(\cdot)$ belong to the space $(\Omega = \mathbb{R}, \Sigma = \mathbb{R} \times \mathbb{R}, \mathbb{P} = P(\cdot) = f_{X,Y}(\cdot, \cdot))$.
 
 
 Observe that the [[#Standard Deviation|standard deviation]] of $X$ che be express with the $L^2$ norm, i.e., 
