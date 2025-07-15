@@ -50,57 +50,93 @@ Let $X \in \mathbb{R}^+$ be a **non-negative** random variable, then $$\mathbb{E
 
 #### Generalization of integral identity #exercise
 Let $X$ be a real random variable (not necessarily non-negative).
-Then $$\mathbb{E}X = \int_{0}^{\infty}\mathbb{P}\{X > t\}\,dt - \int_{-\infty}^{0}\mathbb{P}\{X < t\}\,dt$$
+Then
+$$
+\mathbb{E}X = \int_{0}^{\infty}\mathbb{P}\{X > t\}\,dt - \int_{-\infty}^{0}\mathbb{P}\{X < t\}\,dt
+$$
 
 > **Proof**
-> We can represent any non-negative random variable $x$ with the integral $$x = \int_{0}^x\,dt - \int_{x}^0\,dt = \int_{0}^{\infty}\mathbb{1}\{x > t\} \,dt - \int_{-\infty}^{0}\mathbb{1}\{x < t\} \,dt$$
+> We can represent any non-negative random variable $x$ with the integral
+> $$
+> x = \int_{0}^x\,dt - \int_{x}^0\,dt = \int_{0}^{\infty}\mathbb{1}\{x > t\} \,dt - \int_{-\infty}^{0}\mathbb{1}\{x < t\} \,dt
+> $$
 > Therefore
-> $$\begin{align*}
+> $$
+> \begin{align*}
 > \mathbb{E}X
 > &= \mathbb{E} \left(\int_{0}^{\infty}\mathbb{1}\{X > t\} \,dt - \int_{-\infty}^{0}\mathbb{1}\{X < t\} \,dt \right)\\
 > &= \int_{0}^{\infty}\mathbb{E}\mathbb{1}\{X > t\}\, dt - \int_{-\infty}^{0}\mathbb{E}\mathbb{1}\{X < t\}\, dt\\
 > &= \int_{0}^{\infty} \mathbb{P}\{X > t\} \,dt - \int_{-\infty}^{0} \mathbb{P}\{X < t\} \,dt \;\; \square
-> \end{align*}$$
+> \end{align*}
+> $$
 
 
 ### $p$-moments via tails #exercise
 Let $X$ be a random variable and $p \in (0, \infty)$.
-Then $$\mathbb{E}\vert X \vert^p = \int_{0}^{\infty}pt^{p-1}\mathbb{P}\{\vert X \vert > t\}\, dt$$
+Then
+$$
+\mathbb{E}\vert X \vert^p = \int_{0}^{\infty}pt^{p-1}\mathbb{P}\{\vert X \vert > t\}\, dt
+$$
 > **Proof**
-> By [[#Integral Identity|integral inequality]] we have that $$\mathbb{E}|X|^p = \int_{0}^{\infty}\mathbb{P}\{|X|^p \geq u\}\,du$$
+> By [[#Integral Identity|integral inequality]] we have that
+> $$
+> \mathbb{E}|X|^p = \int_{0}^{\infty}\mathbb{P}\{|X|^p \geq u\}\,du
+> $$
 > Set $t = g(u) = u^{1/p}$, or equivalently $u = g^{-1}(t) = t^p$.
 > By changing the base, we have that
-> $$\frac{du}{dt} = \frac{d}{dt}g^{-1}(t) = \frac{d}{dt}t^p = pt^{p-1} \implies du = pt^{p-1} dt$$
+> $$
+> \frac{du}{dt} = \frac{d}{dt}g^{-1}(t) = \frac{d}{dt}t^p = pt^{p-1} \implies du = pt^{p-1} dt
+> $$
 > Therefore
-> $$\begin{align}
+> $$
+> \begin{align}
 > \mathbb{E}|X|^p
 > &= \int_{0}^{\infty}\mathbb{P}\{|X|^p \geq u\}\,du\\
 > &= \int_{0}^{\infty}pt^{p-1}\mathbb{P}(\vert X \vert \geq u^{1/p})dt\\
 > &= \int_{0}^{\infty}pt^{p-1}\mathbb{P}(\vert X \vert \geq t)dt\;\; \square
-> \end{align}$$
+> \end{align}
+> $$
 
 
 ### Markov's inequality
-For any **non-negative** random variable $X$ and $t > 0$, we have $$\mathbb{P}\{X \geq t\} \leq \frac{\mathbb{E}X}{t}$$
+For any **non-negative** random variable $X$ and $t > 0$, we have
+$$
+\mathbb{P}\{X \geq t\} \leq \frac{\mathbb{E}X}{t}
+$$
 
 > **Proof**
 > Fix any $t > 0$.
-> We can represent any real number as $$x = x \cdot \mathbb{1}\{x \geq t\} + x \cdot \mathbb{1}\{x < t\}$$
+> We can represent any real number as
+> $$
+> x = x \cdot \mathbb{1}\{x \geq t\} + x \cdot \mathbb{1}\{x < t\}
+> $$
 > Then we have
-> $$\begin{align*}
+> $$
+> \begin{align*}
 > \mathbb{E}X
 > &= \mathbb{E}(X\cdot\mathbb{1}\{X \geq t\}) + \mathbb{E}(X\cdot\mathbb{1}\{X < t\})\\
 > &\geq \mathbb{E}(t\cdot\mathbb{1}\{X \geq t\})\\
 > &= t\cdot \mathbb{E}\mathbb{1}\{X \geq t\} =  t \cdot \mathbb{P}\{X \geq t\} \;\; \square
-> \end{align*}$$
+> \end{align*}
+> $$
 
+> **Alternative proof**
+> By definition $\mathbb{P}\{X \geq t\} = \sum_{x \geq t}\mathbb{P}\{X = x\}$. Since $X \geq t > 0$, we have that $X/t \geq 1$, therefore
+> $$
+> \mathbb{P}\{X \geq t\} =\sum_{x \geq t}\mathbb{P}\{X = x\} \leq \sum_{x \geq t}\mathbb{P}\{X = x\} \cdot x/t \leq \sum_{x \geq 0}\mathbb{P}\{X = x\}\cdot x/t = \frac{\mathbb{E}X}{t}. \;\;\; \square
+> $$.
 ### Chebyshev's inequality
 Let $X$ any random variable.
 Then, for every $t > 0$ we have
-$$\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t \} \leq \frac{\text{Var}(X)}{t^2}$$
+$$
+\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t \} \leq \frac{\text{Var}(X)}{t^2}
+$$
 
 > **Proof** #exercise
-> By using [[#Markov's inequality]] on the non-negative random variable $(X - \mathbb{E}X)^2$ we have $$\mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t\} = \mathbb{P}\{(X - \mathbb{E}X)^2 \geq t^2\} \leq \frac{\mathbb{E}(X-\mathbb{E}X)^2}{t^2} = \frac{\text{Var}(X)}{t^2} \;\; \square$$
+> By using [[#Markov's inequality]] on the non-negative random variable $(X - \mathbb{E}X)^2$ we have
+> $$
+> \mathbb{P}\{\vert X - \mathbb{E}X\vert \geq t\} = \mathbb{P}\{(X - \mathbb{E}X)^2 \geq t^2\} \leq \frac{\mathbb{E}(X-\mathbb{E}X)^2}{t^2} = \frac{\text{Var}(X)}{t^2}. \;\; \square
+> $$
 
 
 

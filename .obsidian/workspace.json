@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDP/Hoeffding’s inequality.md",
+                "file": "IT/Shannon's Source Coding Theorem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hoeffding’s inequality"
+              "title": "Shannon's Source Coding Theorem"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/Shannon's Source Coding Theorem.md",
+                "file": "HDP/Some inequalities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Shannon's Source Coding Theorem"
+              "title": "Some inequalities"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 217.5086555480957
+    "width": 291.5086555480957
   },
   "right": {
     "id": "cd71f91ddb1a2186",
@@ -162,6 +161,16 @@
             "id": "4691bb468d21e1b2",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "61c97cfd3a45faa4",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -187,14 +196,19 @@
   "active": "96848cdb501232ac",
   "lastOpenFiles": [
     "IT/Shannon's Source Coding Theorem.md",
-    "HDP/Hoeffding’s inequality.md",
-    "IT",
-    "HDP/General Hoeffding's inequality.md",
-    "HDP/Khintchine's inequality.md",
-    "HDP/Bernstein's inequality.md",
-    "HDP/Centering Sub-gaussians.md",
-    "HDP/Chernoff's inequality.md",
     "HDP/Some inequalities.md",
+    "HDP/Some definitions.md",
+    "HDP/Hoeffding’s inequality.md",
+    "HDP/Khintchine's inequality.md",
+    "HDP/General Hoeffding's inequality.md",
+    "HDP/Convergence of random variables.md",
+    "HDP/Concentration of the norm.md",
+    "HDP/Chernoff's inequality.md",
+    "HDP/Centering Sub-gaussians.md",
+    "HDP/Bernstein's inequality.md",
+    "HDP/Sums of independent sub-gaussians.md",
+    "HDP/Sub-exponential Random Variables.md",
+    "IT",
     "ML/Linear Discriminant Function in Binary Classification.md",
     "ML/Linear Classification.md",
     "ML/0 - Machine Learning.md",
@@ -208,11 +222,6 @@
     "ML/Linear Regression.md",
     "ML/Esempio utilizzo Regolarizzazione.md",
     "ML/Model Selection.md",
-    "ML/Naive Bayes Classifier.md",
-    "ML/Language Models.md",
-    "ML/Linear Discriminant Analysis - Fisher Linear Discriminant.md",
-    "ML/Decision Trees.md",
-    "HDP/Concentration of the norm.md",
     "Untitled.canvas",
     "HDP",
     "other/img/outerplanar_3.png",
