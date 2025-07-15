@@ -38,7 +38,8 @@
       "noteMathLinkFormat": "[title] ([type] [number]) if title exists, [type] [number] otherwise",
       "theoremCalloutStyle": "MathWiki"
     },
-    "HDP/Some inequalities.md": {}
+    "HDP/Some inequalities.md": {},
+    "IT/Shannon's Source Coding Theorem.md": {}
   },
   "extraSettings": {
     "foldDefault": "",
