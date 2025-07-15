@@ -68,4 +68,15 @@ tags:
 > $$
 > $H_0(X)$ is also a **lower bound** for the number of **binary question** that are always guaranteed to identify an outcome from the ensamble $X$.
 
+> [!note] Observation
+> The raw information content is an additive quantity.
+> Let consider the ordered pair $xy \in A_X \times A_Y$. The raw information content of $xy$ is
+> $$
+> H_0(XY) = \log_2(\vert A_X \vert \cdot \vert A_Y \vert) = \log_2\vert A_X \vert + \log_2 \vert A_Y \vert = H_0(X) + H_0(Y).
+> $$
+
+-----------
+
+
+
 
