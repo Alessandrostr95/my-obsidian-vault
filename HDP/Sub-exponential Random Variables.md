@@ -75,3 +75,12 @@ $$
 
 ==TODO==
 
+
+------
+# Centering sub-exponential
+Let $X$ a [[#Sub-exponential Random Variables|sub-exponential random variable]], with [[Some definitions#Mean|mean]] $\mathbb{E}X$.
+Then
+$$
+\Vert X - \mathbb{E}X \Vert_{\psi_1} \leq C \Vert X \Vert_{\psi_1}
+$$
+for some absolute constant $C$.
