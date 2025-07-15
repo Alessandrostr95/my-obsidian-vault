@@ -60,6 +60,8 @@ tags:
 > H(X^N) = \sum_{i=1}^{N} H(X_i) = N H(X).
 > $$
 
+^d038d3
+
 
 > [!definition] Raw Bit Content
 > The *raw bit content* of an examble $X=(x, A_X, P_X)$ is defined as 
@@ -76,7 +78,50 @@ tags:
 > $$
 
 -----------
+# Lossy compression
+Let assume we want to encode of a symbol from an ensamble $X = (x, A_X, P_X)$, but we hope to use less then $H_0(X)$ bits.
+For semplicty, assume
+$$
+\begin{aligned}
+A_X &= \{a,b,c,d,e,f,g,h\}\\
+P_X &= \{ {\textstyle \frac{1}{4}, \frac{1}{4}, \frac{1}{4},\frac{3}{16}, \frac{1}{64}, \frac{1}{64}, \frac{1}{64}, \frac{1}{64}}\}
+\end{aligned}
+$$
+and $H_0(X) = 3$ bits.
+A simple way to encode $X$ with less than $3$ bits is to *prune* $A_X$, selecting only the most likely elements.
+More formally, let $S \subset A_X$ any subset of $A_X$.
+The encode of an element $x \in A_X$ is defined as
+$$
+c(x) := \begin{cases}
+\texttt{bin}_S(x) &\text{if } x \in S,\\
+\texttt{undefined} &\text{if } x \notin S.
+\end{cases}
+$$
+where $\texttt{bin}_S(\cdot)$ is a **binary encoding** of the elements of $S$.
+Notice that $\log_2\vert S \vert < \log_2 \vert A_X \vert = H_0(X)$ bits are sufficient for $\texttt{bin}_S(\cdot)$.
+
+By doing so, we introduced an encode of $X$ with fewer bits, but we also introduce a **risk** of not being able to decode an outcome $x$ of $X$ given its encoding $c(x)$.
+The idea is to introduce a parameter $\delta$ and choose $S$ such that the probability of not being able to decode $c(x)$ is at most $\delta$, i.e.
+$$
+\mathbb{P}\{ c(x) \neq \texttt{undefined} \} = \mathbb{P}\{ x \notin S \} \leq \delta.
+$$
+
+> [!definition] Smallest $\delta$-suficcient subset
+> The *smallest $\delta$-sufficient subset* of $A_X$ is the **smallest subset** $S_\delta \subseteq A_X$ such that
+> $$
+> P(x \in S_\delta) \geq 1- \delta. 
+> $$
+
+> [!definition] The essential bit content
+> The ($\delta$-)*essential bit content* of an ensambe $X$ is defined as 
+> $$
+> H_\delta(X) = \log_2 \vert S_\delta \vert.
+> $$
+
+> [!note] Observation
+> Observe that $H_0$ is a special case of $H_\delta$, when $\delta = 0$. In fact, for $\delta = 0$, the set $A_X$ itself a smallest $\delta$-sufficient subset of $A_X$.
 
 
-
+Now let us consider the case in which we want to encode a string $x = (x_1, \dots, x_N)$ of $N$ **independent** symbols and **identically distributed**.
+We denote with $X^N = (X_1, \dots, X_N)$ the ensamble of the outcome $x$, with entropy $H(X^N) = NH(X)$ (see [[#^d038d3|here]]).
 
