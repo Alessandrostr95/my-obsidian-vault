@@ -9,6 +9,8 @@ tags:
 > [!definition] Ensamble
 > An ensamble $X$ is a triple $(x, A_X, P_x)$ where $x$ is a random variable which outcome comes from the set $A_X = \{a_1, \dots, a_n\}$ , having probabilities $P_X = \{p_1, \dots, p_n\}$ where $P(x= a_i) = p_i$, $p_i \geq 0$ for every $i = 1, \dots n$, and $\sum_{i=1}^{n}p_i = 1$.
 
+^6980d9
+
 > [!definition] The Shannon Information Content
 > Let $x$ be an outcome from and ensamble $X$. Then, the *information content* of the outcome $x$ is defined as
 > $$
